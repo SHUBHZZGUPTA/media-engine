@@ -1,0 +1,24 @@
+{
+ "job": "quota-probe",
+ "items": [
+  {
+   "name": "flash25_sadaltager",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 12.49,
+   "took": 8.6
+  },
+  {
+   "name": "pro25_schedar",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-2.5-pro-preview-tts",
+     "status": 429,
+     "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro-tts\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro-tts\\n* Quota exceeded for metric: generat"
+    }
+   ]
+  }
+ ]
+}
