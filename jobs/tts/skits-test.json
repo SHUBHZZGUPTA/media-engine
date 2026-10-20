@@ -1,0 +1,21 @@
+{
+ "id": "skits-test",
+ "models": ["gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"],
+ "items": [
+  {"name": "skit_a",
+   "direction": "A quick comedy skit for a YouTube Short. Animated, characterful cartoon voices, snappy comic timing, a short beat between lines.",
+   "speakers": {"Farmer": "Puck", "Pharaoh": "Algenib"},
+   "lines": [["Farmer", "[cheerful, delighted] Another flood? Perfect. Free fertiliser!"],
+             ["Pharaoh", "[dry, smug, unimpressed] Wonderful. Then you can pay double tax."]]},
+  {"name": "skit_b",
+   "direction": "A quick comedy skit for a YouTube Short. Animated, characterful cartoon voices, snappy comic timing, a short beat between lines.",
+   "speakers": {"Mapmaker": "Iapetus", "Captain": "Fenrir"},
+   "lines": [["Mapmaker", "[nervous, worried] Captain... the coast just keeps going south."],
+             ["Captain", "[booming, overconfident] Then make the map longer!"]]},
+  {"name": "skit_c",
+   "direction": "A quick comedy skit for a YouTube Short. Animated, characterful cartoon voices, snappy comic timing, a short beat between lines.",
+   "speakers": {"Tourist": "Leda", "Camel": "Enceladus"},
+   "lines": [["Tourist", "[exhausted, parched, desperate] Excuse me... where is the nearest water?"],
+             ["Camel", "[slow, bored, deadpan, chewing] About four days... that way."]]}
+ ]
+}
