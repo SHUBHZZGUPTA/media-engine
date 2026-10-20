@@ -1,0 +1,13 @@
+{
+ "job": "roswell-hi",
+ "items": [
+  {
+   "name": "narration_hi",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 77.77,
+   "took": 33.2
+  }
+ ]
+}
