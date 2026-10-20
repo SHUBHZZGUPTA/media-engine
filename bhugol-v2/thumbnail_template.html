@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:BSD;font-weight:900;src:url(file:///home/claude/budapest/proj/assets/bsd900.woff2)}
+@font-face{font-family:Emo;src:url(file:///home/claude/budapest/proj/assets/emoji.ttf)}
+body{margin:0;background:#111} .f{position:relative;overflow:hidden;background:#02070D;margin-bottom:20px}
+.map{position:absolute;left:0;top:0;width:1024px;height:1536px;transform-origin:0 0}
+.map img{position:absolute;inset:0;width:100%;height:100%;filter:saturate(1.35) contrast(1.08)}
+.map svg{position:absolute;inset:0;overflow:visible}
+.lbl{font-family:BSD;font-weight:900;fill:#fff;stroke:#000;paint-order:stroke fill;letter-spacing:.04em}
+.h{position:absolute;font-family:BSD;font-weight:900;color:#000;line-height:1;white-space:nowrap;background:#FFE81A;border:8px solid #000;padding:4px 22px 8px;box-shadow:12px 12px 0 #000,0 0 40px rgba(255,232,26,.7);transform:rotate(-3deg)}
+.emo{position:absolute;font-family:Emo;line-height:1;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6))}
+.badge{position:absolute;filter:drop-shadow(0 4px 8px rgba(0,0,0,.6))}
+.fade{position:absolute;inset:0}
+</style></head><body>
+<template id="MAP"><div class="map"><img src="file:///home/claude/budapest/proj/assets/plate_aerial.jpg"><svg viewBox="0 0 1024 1536" width="1024" height="1536">
+ <defs><filter id="gl"><feGaussianBlur stdDeviation="6"/></filter></defs>
+ <path d="M0,0 L460,0 470,128 540,256 455,384 410,512 390,640 300,768 290,896 330,1000 270,1152 180,1280 250,1400 270,1536 0,1536Z" fill="#E0202E" opacity=".58" style="mix-blend-mode:multiply"/>
+ <path d="M0,0 L460,0 470,128 540,256 455,384 410,512 390,640 300,768 290,896 330,1000 270,1152 180,1280 250,1400 270,1536 0,1536Z" fill="#FF2D3C" opacity=".22"/>
+ <path d="M640,0 665,128 710,256 690,384 660,512 640,640 680,768 690,896 700,1024 730,1152 770,1280 840,1408 900,1536 1024,1536 1024,0Z" fill="#14A043" opacity=".62" style="mix-blend-mode:multiply"/>
+ <path d="M640,0 665,128 710,256 690,384 660,512 640,640 680,768 690,896 700,1024 730,1152 770,1280 840,1408 900,1536 1024,1536 1024,0Z" fill="#2BD45F" opacity=".2"/>
+ <path d="M460,0 470,128 540,256 455,384 410,512 390,640 300,768 290,896 330,1000 270,1152 180,1280 250,1400 270,1536 900,1536 840,1408 770,1280 730,1152 700,1024 690,896 680,768 640,640 660,512 690,384 710,256 665,128 640,0Z" fill="#fff" opacity=".42"/>
+ <path d="M460,0 470,128 540,256 455,384 410,512 390,640 300,768 290,896 330,1000 270,1152 180,1280 250,1400 270,1536" fill="none" stroke="#FF3B47" stroke-width="10" filter="url(#gl)"/>
+ <path d="M640,0 665,128 710,256 690,384 660,512 640,640 680,768 690,896 700,1024 730,1152 770,1280 840,1408 900,1536" fill="none" stroke="#3BFF7A" stroke-width="10" filter="url(#gl)"/>
+</svg></div></template>
+<div class="f" id="v" style="width:1080px;height:1920px">
+ <div class="slot" data-t="translate(-100px,0) scale(1.25)"></div>
+ <div class="fade" style="background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,0) 22%)"></div>
+ <svg width="1080" height="1920" style="position:absolute;left:0;top:0;overflow:visible">
+  <text class="lbl" x="200" y="1180" font-size="150" stroke-width="26" text-anchor="middle" transform="rotate(-6 200 1180)">BUDA</text>
+  <text class="lbl" x="885" y="1000" font-size="150" stroke-width="26" text-anchor="middle" transform="rotate(5 885 1000)">PEST</text>
+  <g fill="none" stroke="#FF1A1A" stroke-width="17" stroke-linecap="round" style="filter:drop-shadow(0 0 10px rgba(255,30,30,.9))">
+   <ellipse cx="560" cy="860" rx="150" ry="330" transform="rotate(-6 560 860)"/><ellipse cx="566" cy="868" rx="142" ry="322" transform="rotate(4 566 868)"/>
+   <path d="M820,420 Q760,470 700,560"/><path d="M700,560 l46,-8 M700,560 l6,-46"/></g>
+ </svg>
+ <img class="badge" src="file:///home/claude/budapest/proj/assets/bhugol_badge.png" style="left:36px;top:36px;width:140px">
+ <div class="h" style="left:205px;top:150px;font-size:150px;background:none;border:none;box-shadow:none;color:#fff;-webkit-text-stroke:18px #000;paint-order:stroke fill;padding:0">TWO RIVAL</div><div class="h" style="left:300px;top:320px;font-size:170px">CITIES</div>
+ <div class="emo" style="left:500px;top:780px;font-size:150px">🤯</div>
+ <div class="emo" style="left:820px;top:1150px;font-size:150px">😱</div>
+ <div class="emo" style="left:60px;top:720px;font-size:130px">🇭🇺</div>
+</div>
+<div class="f" id="w" style="width:1280px;height:720px">
+ <div class="slot" data-t="translate(1280px,-120px) rotate(90deg) scale(0.92)"></div>
+ <div class="fade" style="background:linear-gradient(90deg,rgba(0,0,0,.6),rgba(0,0,0,0) 45%)"></div>
+ <img class="badge" src="file:///home/claude/budapest/proj/assets/bhugol_badge.png" style="left:22px;top:22px;width:96px">
+ <div class="h" style="left:30px;top:150px;font-size:130px;background:none;border:none;box-shadow:none;color:#fff;-webkit-text-stroke:14px #000;paint-order:stroke fill;padding:0">TWO RIVAL</div><div class="h" style="left:60px;top:320px;font-size:150px;border-width:6px;box-shadow:9px 9px 0 #000,0 0 30px rgba(255,232,26,.7)">CITIES</div>
+ <svg width="1280" height="720" style="position:absolute;left:0;top:0;overflow:visible">
+  <text class="lbl" x="1040" y="150" font-size="96" stroke-width="18" text-anchor="middle">BUDA</text>
+  <text class="lbl" x="1040" y="660" font-size="96" stroke-width="18" text-anchor="middle">PEST</text>
+  <g fill="none" stroke="#FF1A1A" stroke-width="13" stroke-linecap="round" style="filter:drop-shadow(0 0 8px rgba(255,30,30,.9))">
+   <ellipse cx="960" cy="385" rx="200" ry="100" transform="rotate(-3 960 385)"/><ellipse cx="964" cy="389" rx="193" ry="94" transform="rotate(2 964 389)"/><path d="M560,560 Q680,600 760,450"/><path d="M760,450 l-6,46 M760,450 l-40,22"/></g>
+ </svg>
+ <div class="emo" style="left:915px;top:330px;font-size:100px">🤯</div>
+ <div class="emo" style="left:600px;top:60px;font-size:96px">😱</div>
+ <div class="emo" style="left:1150px;top:300px;font-size:90px">🇭🇺</div>
+</div>
+<script>
+for (const s of document.querySelectorAll('.slot')) { const n = document.getElementById('MAP').content.cloneNode(true).firstElementChild; n.style.transform = s.dataset.t; s.replaceWith(n); }
+</script></body></html>

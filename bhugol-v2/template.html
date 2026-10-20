@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Budapest</title>
+<script src="./gsap.min.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+:root { --mari: #FFC23A; --white: #F4F8FB; --water: #4FD3F2; --ink: #03101A; --red: #FF4D4D; }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #02070D; }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+.push { position: absolute; inset: 0; }
+.cam { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.cam img.plate { position: absolute; left: 0; top: 0; display: block; }
+.cam svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.chars { position: absolute; inset: 0; }
+.char { position: absolute; opacity: 0; }
+.char img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.shadow { position: absolute; height: 54px; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(0,0,0,.45), rgba(0,0,0,0) 70%); opacity: 0; }
+.lbl { font-family: 'BSD', sans-serif; font-weight: 900; fill: var(--white); stroke: var(--ink); paint-order: stroke fill; letter-spacing: .06em; }
+#vig { background: radial-gradient(ellipse 75% 60% at 50% 45%, rgba(2,7,13,0) 55%, rgba(2,7,13,.7) 100%); }
+#topFade { height: 560px; bottom: auto; background: linear-gradient(rgba(2,7,13,.8) 0%, rgba(2,7,13,.4) 45%, rgba(2,7,13,0) 100%); }
+#capFade { top: 1170px; height: 520px; bottom: auto; background: linear-gradient(rgba(2,7,13,0), rgba(2,7,13,.55) 45%, rgba(2,7,13,0)); }
+#dim { background: #02070D; opacity: 0; }
+#flash { background: #fff8e6; opacity: 0; }
+#snow { opacity: 0; }
+.flake { position: absolute; left: 0; top: 0; border-radius: 50%; background: #fff; }
+#eng { opacity: 0; }
+.emo { position: absolute; font-family: 'Emo', sans-serif; font-size: 230px; line-height: 1; }
+.ttl, .cap { position: absolute; inset: 0; opacity: 0; }
+.tl { position: absolute; left: 60px; width: 960px; text-align: center; white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; color: var(--white); line-height: 1; }
+.tl.big { font-family: 'BSD', sans-serif; font-weight: 900; letter-spacing: .01em; }
+.tl.small { font-family: 'Arch', sans-serif; font-weight: 800; letter-spacing: .12em; }
+.k { color: var(--mari); }
+.cl { position: absolute; left: 195px; width: 740px; text-align: center; white-space: nowrap; font-family: 'BSD', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #02070D; line-height: 1; }
+.cl span { opacity: 0; }
+#badgeWrap { position: absolute; left: 230px; top: 450px; width: 620px; height: 620px; opacity: 0; transform-origin: 0 0; }
+#badgeShadow { position: absolute; inset: 4% 3% -4% 3%; border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(8px); }
+#badge { position: absolute; inset: 0; width: 100%; height: 100%; }
+#follow { position: absolute; left: 220px; top: 1125px; width: 640px; height: 130px; opacity: 0; }
+#folBtn { position: absolute; inset: 0; border-radius: 65px; background: var(--water); box-sizing: border-box; }
+#folTxt, #folTxt2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 66px; letter-spacing: .05em; color: var(--ink); }
+#folTxt2 { color: var(--water); opacity: 0; }
+#tapDot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.85); border: 3px solid var(--ink); opacity: 0; }
+#ripple { position: absolute; left: 20px; top: -235px; width: 600px; height: 600px; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(255,255,255,.6); opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="scenes" class="scr"></div></div>
+    <div id="snow" class="scr"></div>
+    <div id="eng" class="scr"></div>
+    <div id="vig" class="scr"></div>
+    <div id="dim" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <div id="topFade" class="scr"></div>
+    <div id="capFade" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="badgeWrap"><div id="badgeShadow"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
+    <div id="follow"><div id="folBtn"></div><div id="folTxt"></div><div id="folTxt2"></div><div id="ripple"></div><div id="tapDot"></div></div>
+  </div>
+</div>
+<script>
+const D = __DATA__;
+const NS = 'http://www.w3.org/2000/svg';
+const $ = id => document.getElementById(id);
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const LN = D.LN;
+
+/* ---------- scenes (one DOM instance per shot) ---------- */
+const H = 760, FEET = 1215, POS = { L: 300, R: 790, M: 545 };
+function scene(plate) {
+  const [iw, ih] = D.pl[plate]; const s0 = Math.max(1080 / iw, 1920 / ih) * 1.02;
+  const el = mk('div', { class: 'scene' }, $('scenes')); const push = mk('div', { class: 'push' }, el);
+  const cam = mk('div', { class: 'cam' }, push); Object.assign(cam.style, { width: iw + 'px', height: ih + 'px' });
+  const img = mk('img', { class: 'plate', src: `assets/${plate}.jpg`, alt: '', width: iw, height: ih }, cam);
+  const svg = mk('svg', { width: iw, height: ih, viewBox: `0 0 ${iw} ${ih}` }, cam, true);
+  const chars = mk('div', { class: 'chars' }, push);
+  return { el, push, cam, img, svg, chars, iw, ih, s0, st: { x: iw / 2, y: ih / 2, z: 1 } };
+}
+function camApply(S) { const s = S.s0 * S.st.z; let L = 540 - S.st.x * s, T = 900 - S.st.y * s;
+  L = Math.min(0, Math.max(1080 - S.iw * s, L)); T = Math.min(0, Math.max(1920 - S.ih * s, T));
+  S.cam.style.transform = `translate(${L.toFixed(2)}px,${T.toFixed(2)}px) scale(${s.toFixed(5)})`; }
+function addChar(S, name, side) { const w = Math.min(560, H * D.ar[name]); const x = POS[side];
+  const sh = mk('div', { class: 'shadow' }, S.chars); Object.assign(sh.style, { left: (x - w * .42) + 'px', top: (FEET - 30) + 'px', width: (w * .84) + 'px' });
+  const c = mk('div', { class: 'char' }, S.chars); Object.assign(c.style, { left: (x - w / 2) + 'px', top: (FEET - H) + 'px', width: w + 'px', height: H + 'px' });
+  mk('img', { src: `assets/${name}.png`, alt: '' }, c); return { c, sh, x }; }
+const P = (S, d, a) => mk('path', Object.assign({ d, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, a), S.svg, true);
+const T = (S, txt, x, y, fs, a) => { const e = mk('text', Object.assign({ x, y, 'font-size': fs, 'text-anchor': 'middle', class: 'lbl', 'stroke-width': fs * .2, opacity: 0 }, a), S.svg, true); e.textContent = txt; return e; };
+const xMark = (S, x, y, r) => { const g = mk('g', { opacity: 0 }, S.svg, true);
+  mk('path', { d: `M${x - r},${y - r} L${x + r},${y + r} M${x + r},${y - r} L${x - r},${y + r}`, stroke: '#03101A', 'stroke-width': r * .55, 'stroke-linecap': 'round' }, g, true);
+  mk('path', { d: `M${x - r},${y - r} L${x + r},${y + r} M${x + r},${y - r} L${x - r},${y + r}`, stroke: '#FF4D4D', 'stroke-width': r * .36, 'stroke-linecap': 'round' }, g, true); return g; };
+
+const RIVER = 'M550,0 C600,120 640,260 590,390 C555,480 525,560 520,640 C512,740 470,820 488,940 C500,1030 480,1160 470,1280 C465,1400 520,1480 560,1536';
+function aerial() { const S = scene('plate_aerial');
+  S.glow = P(S, RIVER, { stroke: '#4FD3F2', 'stroke-width': 150, opacity: 0, style: 'filter: blur(14px)' });
+  S.sight = P(S, 'M240,450 Q520,330 790,470', { stroke: '#FFC23A', 'stroke-width': 12, 'stroke-dasharray': '30 22', opacity: 0 });
+  S.sightHead = P(S, 'M760,440 L795,472 L752,488', { stroke: '#FFC23A', 'stroke-width': 12, opacity: 0 });
+  S.buda = T(S, 'BUDA', 225, 340, 92); S.pest = T(S, 'PEST', 830, 560, 92);
+  S.danube = T(S, 'DANUBE', 0, 0, 62, { transform: 'translate(565,480) rotate(-78)', fill: '#4FD3F2' });
+  S.x = xMark(S, 512, 700, 58);
+  return S; }
+
+const A1 = aerial(), R1 = scene('plate_river'), EU = scene('europe'), R2 = scene('plate_river'), A2 = aerial(), TL = scene('plate_toll'), A3 = aerial();
+// characters
+A1.cBuda = addChar(A1, 'c_buda', 'L'); A1.cPest = addChar(A1, 'c_pest', 'R');
+R2.cCount = addChar(R2, 'c_count', 'L');
+TL.cToll = addChar(TL, 'c_toll', 'L'); TL.cNoble = addChar(TL, 'c_noble', 'R');
+A3.cBuda = addChar(A3, 'c_buda', 'L'); A3.cPest = addChar(A3, 'c_pest', 'R'); A3.cOb = addChar(A3, 'c_obuda', 'M');
+// bridge of boats + ice (river shot 1)
+R1.boats = []; for (let k = 0; k < 7; k++) { const t = k / 6, y = 860 - t * 340, s = 1.7 - t * 1.1, x = 512 + Math.sin(k * 1.7) * 8;
+  const g = mk('g', { opacity: 0, transform: `translate(${x},${y}) scale(${s})` }, R1.svg, true);
+  mk('path', { d: 'M-70,0 Q0,34 70,0 L56,-16 L-56,-16 Z', fill: '#5B3A1E', stroke: '#2A1A0C', 'stroke-width': 5 }, g, true);
+  mk('rect', { x: -78, y: -26, width: 156, height: 12, fill: '#8A6236', stroke: '#2A1A0C', 'stroke-width': 4 }, g, true);
+  R1.boats.push(g); }
+R1.x = xMark(R1, 512, 650, 90);
+// Europe map: pins + dimension line
+const bud = D.eu.bud, vie = D.eu.vie;
+EU.pinB = mk('circle', { cx: bud.x, cy: bud.y, r: 16, fill: '#FFC23A', stroke: '#03101A', 'stroke-width': 6, opacity: 0 }, EU.svg, true);
+EU.ringB = mk('circle', { cx: bud.x, cy: bud.y, r: 16, fill: 'none', stroke: '#FFC23A', 'stroke-width': 5, opacity: 0 }, EU.svg, true);
+EU.pinV = mk('circle', { cx: vie.x, cy: vie.y, r: 16, fill: '#F4F8FB', stroke: '#03101A', 'stroke-width': 6, opacity: 0 }, EU.svg, true);
+EU.vie = T(EU, 'VIENNA', vie.x, vie.y - 40, 72);
+const dl = Math.hypot(bud.x - vie.x, bud.y - vie.y);
+EU.dim = P(EU, `M${bud.x},${bud.y} L${vie.x},${vie.y}`, { stroke: '#FFC23A', 'stroke-width': 9, 'stroke-dasharray': dl, 'stroke-dashoffset': dl, opacity: 0 });
+EU.km = T(EU, '250 KM', (bud.x + vie.x) / 2 + 10, (bud.y + vie.y) / 2 + 80, 64, { fill: '#FFC23A' });
+// chain bridge drawn across the river (aerial shots 2 and 3)
+for (const S of [A2, A3]) {
+  const d = 'M385,624 L655,624 M392,612 L440,586 Q520,642 600,586 L648,612';
+  S.brO = P(S, d, { stroke: '#03101A', 'stroke-width': 16, 'stroke-dasharray': 900, 'stroke-dashoffset': S === A2 ? 900 : 0 });
+  S.br = P(S, d, { stroke: '#FFC23A', 'stroke-width': 8, 'stroke-dasharray': 900, 'stroke-dashoffset': S === A2 ? 900 : 0 });
+  S.towers = mk('g', { opacity: S === A2 ? 0 : 1 }, S.svg, true);
+  for (const tx of [440, 600]) mk('rect', { x: tx - 9, y: 578, width: 18, height: 56, fill: '#FFC23A', stroke: '#03101A', 'stroke-width': 5 }, S.towers, true);
+}
+A3.warm = [P(A3, 'M90,520 L300,520', { stroke: '#FFC23A', 'stroke-width': 260, opacity: 0, style: 'filter: blur(40px)' }),
+           P(A3, 'M720,620 L960,620', { stroke: '#FFC23A', 'stroke-width': 300, opacity: 0, style: 'filter: blur(40px)' })];
+A3.ob = T(A3, 'ÓBUDA', 175, 262, 76); A3.obSub = T(A3, '“OLD BUDA”', 175, 312, 40, { fill: '#FFC23A' });
+A3.obRing = mk('ellipse', { cx: 175, cy: 225, rx: 185, ry: 125, fill: 'none', stroke: '#FFC23A', 'stroke-width': 9, 'stroke-dasharray': 960, 'stroke-dashoffset': 960, opacity: 0 }, A3.svg, true);
+// toll sign
+TL.sign = mk('g', { opacity: 0 }, TL.svg, true);
+mk('rect', { x: 120, y: 420, width: 200, height: 84, rx: 8, fill: '#8A5A2B', stroke: '#2A1A0C', 'stroke-width': 7 }, TL.sign, true);
+{ const t = mk('text', { x: 220, y: 482, 'font-size': 62, 'text-anchor': 'middle', fill: '#FFE2A8', 'font-family': 'BSD', 'font-weight': 900, 'letter-spacing': '.08em' }, TL.sign, true); t.textContent = 'TOLL'; }
+// engineers
+const eng = $('eng');
+const e1 = mk('div', { class: 'emo' }, eng), e2 = mk('div', { class: 'emo' }, eng); e1.textContent = e2.textContent = '👷‍♂️';
+Object.assign(e1.style, { left: '200px', top: '360px' }); Object.assign(e2.style, { left: '650px', top: '360px' });
+const esvg = mk('svg', { width: 1080, height: 1920, viewBox: '0 0 1080 1920', style: 'position:absolute;left:0;top:0' }, eng, true);
+const linkL = mk('path', { d: 'M440,500 L540,500', stroke: '#FFC23A', 'stroke-width': 14, 'stroke-dasharray': '24 16', 'stroke-linecap': 'round' }, esvg, true);
+const linkR = mk('path', { d: 'M540,500 L640,500', stroke: '#FFC23A', 'stroke-width': 14, 'stroke-dasharray': '24 16', 'stroke-linecap': 'round' }, esvg, true);
+// snow (deterministic)
+const FL = []; for (let k = 0; k < 70; k++) { const f = mk('div', { class: 'flake' }, $('snow')); const r = 3 + ((k * 37) % 9);
+  Object.assign(f.style, { width: r * 2 + 'px', height: r * 2 + 'px', opacity: .5 + ((k * 13) % 5) / 10 }); FL.push({ f, x: (k * 157) % 1080, y0: (k * 263) % 1920, sp: 140 + ((k * 71) % 160), r }); }
+
+/* ---------- titles + captions ---------- */
+const TT = {};
+for (const t of D.titles) { const g = mk('div', { class: 'ttl', id: t.id }, $('titles')); const lines = [];
+  t.lines.forEach((ln0, i) => { const small = ln0.startsWith('~'); const ln = small ? ln0.slice(1) : ln0; const size = small ? 58 : 132;
+    const d = mk('div', { class: 'tl ' + (small ? 'small' : 'big') }, g); const base = 300 + (i === 0 ? 0 : (small ? 74 : 124));
+    Object.assign(d.style, { fontSize: size + 'px', top: (base - size * .8) + 'px', webkitTextStrokeWidth: (size * .14) + 'px' }); markup(ln, d); lines.push(d); });
+  TT[t.id] = { g, t, lines }; }
+const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps'));
+  const lines = c.txt.split('|').map(ln => { const d = mk('div', { class: 'cl' }, g); markup(ln, d); return d; });
+  return { c, g, lines, words: [...g.querySelectorAll('span')] }; });
+$('folTxt').textContent = D.end.button; $('folTxt2').textContent = '✓ ' + D.end.following;
+function layout() {
+  for (const K of CAPS) { let fs = 92; K.g.style.opacity = 1;
+    for (const d of K.lines) { d.style.fontSize = '92px'; const w = d.scrollWidth; if (w > 740) fs = Math.min(fs, 92 * 740 / w); }
+    K.g.style.opacity = 0; const n = K.lines.length;
+    K.lines.forEach((d, i) => Object.assign(d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .17).toFixed(1) + 'px', top: (1385 + (i - (n - 1) / 2) * fs - fs * .5).toFixed(1) + 'px' })); }
+  for (const id in TT) { const { g, lines } = TT[id]; g.style.opacity = 1;
+    for (const d of lines) { const w = d.scrollWidth, fs = parseFloat(d.style.fontSize); if (w > 960) d.style.fontSize = (fs * 960 / w).toFixed(1) + 'px'; }
+    g.style.opacity = 0; }
+}
+
+/* ---------- timeline ---------- */
+function build() {
+  layout();
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false };
+  const camTo = (S, x, y, z, at, dur, ease) => { const from = Object.assign({}, S.st); S.st = { x, y, z };
+    const o = Object.assign({}, from); tl.fromTo(o, from, { x, y, z, duration: dur, ease: ease || 'power2.inOut', ...IR, onUpdate: () => { Object.assign(S._live || (S._live = {}), o); S.st2 = o; camApplyLive(S, o); } }, at); };
+  const camApplyLive = (S, o) => { const keep = S.st; S.st = o; camApply(S); S.st = keep; };
+  const camSet = (S, x, y, z) => { S.st = { x, y, z }; camApplyLive(S, { x, y, z }); };
+  // shots: [scene, in, out]
+  const shots = [[A1, 0, C(7, 0, -.15)], [R1, C(7, 0, -.15), C(7, 4, -.25)], [EU, C(7, 4, -.25), C(8, 0, -.2)], [R2, C(8, 0, -.2), C(10, 0, -.2)],
+    [A2, C(10, 0, -.2), C(12, 0, -.2)], [TL, C(12, 0, -.2), C(14, 0, -.2)], [A3, C(14, 0, -.2), D.dur + 1]];
+  shots.forEach(([S, a, b], i) => {
+    if (i === 0) tl.set(S.el, { opacity: 1, x: 0 }, 0);
+    else tl.fromTo(S.el, { opacity: 1, x: 1080 }, { opacity: 1, x: 0, duration: .35, ease: 'power3.out', ...IR }, a);
+    if (i < shots.length - 1) { tl.to(S.el, { x: -1080, duration: .35, ease: 'power3.in' }, b); tl.set(S.el, { opacity: 0 }, b + .36); }
+  });
+  const talk = (ch, a, b) => { const n = Math.max(2, Math.floor((b - a) / .32));
+    tl.fromTo(ch.c, { scaleY: 1, rotation: 0, transformOrigin: '50% 100%' }, { keyframes: Array.from({ length: n }, (_, i) => [{ scaleY: 1.05, rotation: i % 2 ? 2.2 : -2.2, duration: .16 }, { scaleY: 1, rotation: 0, duration: .16 }]).flat(), ...IR }, a); };
+  const enter = (ch, at, from) => { tl.fromTo(ch.c, from === 'L' ? { opacity: 0, x: -520 } : from === 'R' ? { opacity: 0, x: 520 } : { opacity: 0, y: 420 }, { opacity: 1, x: 0, y: 0, duration: .5, ease: 'back.out(1.7)', ...IR }, at);
+    tl.to(ch.sh, { opacity: 1, duration: .3 }, at + .1); };
+  const leave = (ch, at, to) => { tl.to(ch.c, to === 'L' ? { x: -600, opacity: 0, duration: .35, ease: 'power3.in' } : to === 'R' ? { x: 600, opacity: 0, duration: .35, ease: 'power3.in' } : { y: 500, opacity: 0, duration: .35, ease: 'power3.in' }, at);
+    tl.to(ch.sh, { opacity: 0, duration: .2 }, at); };
+  const zoomTo = (S, ch, a, b) => { tl.to(S.push, { scale: 1.22, x: (540 - ch.x) * .5, y: -40, duration: .28, ease: 'power3.out', transformOrigin: '540px 900px' }, a - .18);
+    tl.to(S.push, { scale: 1, x: 0, y: 0, duration: .35, ease: 'power2.inOut' }, b + .1); };
+  const pop = (el, at, s0) => tl.fromTo(el, { opacity: 0, scale: s0 || .5, transformOrigin: '50% 50%', transformBox: 'fill-box' }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(2.4)', ...IR }, at);
+  const fade = (el, at, d) => tl.to(el, { opacity: 0, duration: d || .3 }, at);
+  const shake = at => tl.fromTo($('shake'), { x: 0, y: 0 }, { keyframes: [{ x: -20, y: 12, duration: .05 }, { x: 16, y: -10, duration: .05 }, { x: -10, y: 7, duration: .06 }, { x: 6, y: -4, duration: .06 }, { x: 0, y: 0, duration: .08 }], ...IR }, at);
+  const draw = (el, at, dur) => tl.to(el, { attr: { 'stroke-dashoffset': 0 }, duration: dur, ease: 'power1.inOut' }, at);
+
+  // ===== A1: hook + rivals + Danube =====
+  camSet(A1, 520, 660, 1.75, 0);
+  camTo(A1, 520, 560, 1.0, .1, C(0, 1) - .1, 'sine.inOut');
+  camTo(A1, 520, 640, 1.3, C(0, 2), 1.0, 'power3.inOut');
+  camTo(A1, 520, 700, 1.05, C(0, 3), C(1, 0) - C(0, 3), 'sine.inOut');
+  camTo(A1, 215, 360, 1.75, C(1, 0), .9, 'power3.inOut');
+  camTo(A1, 185, 260, 2.1, C(1, 0, .9), C(2, 0) - C(1, 0, .9), 'sine.inOut');
+  camTo(A1, 820, 640, 1.75, C(2, 0), .9, 'power3.inOut');
+  camTo(A1, 840, 720, 2.05, C(2, 0, .9), C(3, 0, -.35) - C(2, 0, .9), 'sine.inOut');
+  camTo(A1, 520, 660, 1.1, C(3, 0, -.35), .6, 'power3.inOut');
+  camTo(A1, 520, 700, 1.15, C(3, 0, .25), C(5, 0) - C(3, 0, .25), 'sine.inOut');
+  camTo(A1, 520, 700, 1.4, C(5, 0), 1.0, 'power3.inOut');
+  camTo(A1, 520, 640, 1.85, C(5, 1), .7, 'power3.inOut');
+  camTo(A1, 520, 720, 1.0, C(6, 0), C(7, 0) - C(6, 0), 'sine.inOut');
+  pop(A1.buda, C(0, 1, .7)); pop(A1.pest, C(0, 1, .35));
+  tl.to([A1.sight, A1.sightHead], { opacity: 1, duration: .2 }, C(0, 1, .2));
+  tl.fromTo(A1.sight, { attr: { 'stroke-dashoffset': 400 } }, { attr: { 'stroke-dashoffset': 0 }, duration: 1.2, ease: 'none', ...IR }, C(0, 1, .2));
+  fade([A1.sight, A1.sightHead], C(0, 2, .4)); fade([A1.buda, A1.pest], C(0, 2, .2), .2); tl.to([A1.buda, A1.pest], { opacity: 1, duration: .3 }, C(1, 0, -.4));
+  pop(A1.x, C(0, 2, .5)); fade(A1.x, C(0, 3));
+  tl.to(A1.glow, { opacity: .35, duration: .3 }, C(0, 2, .4)); tl.to(A1.glow, { attr: { stroke: '#FF4D4D' }, duration: .2 }, C(0, 2, .5)); fade(A1.glow, C(0, 3));
+  tl.set(A1.glow, { attr: { stroke: '#4FD3F2' } }, C(0, 3, .35));
+  tl.to(A1.buda, { scale: 1.25, transformOrigin: '50% 50%', transformBox: 'fill-box', duration: .3, yoyo: true, repeat: 1 }, C(1, 0, .2));
+  tl.to(A1.pest, { scale: 1.25, transformOrigin: '50% 50%', transformBox: 'fill-box', duration: .3, yoyo: true, repeat: 1 }, C(2, 0, .2));
+  fade([A1.buda, A1.pest], C(3, 0, -.4));
+  enter(A1.cBuda, C(3, 0, -.3), 'L'); talk(A1.cBuda, LN[3].a, LN[3].b); zoomTo(A1, A1.cBuda, LN[3].a, LN[3].b);
+  enter(A1.cPest, C(4, 0, -.35), 'R'); talk(A1.cPest, LN[4].a, LN[4].b); zoomTo(A1, A1.cPest, LN[4].a, LN[4].b);
+  tl.fromTo(A1.cBuda.c, { scaleY: 1, scaleX: 1 }, { keyframes: [{ scaleY: .86, scaleX: 1.08, duration: .12 }, { scaleY: 1.06, scaleX: .96, duration: .14 }, { scaleY: 1, scaleX: 1, duration: .14 }], ...IR }, LN[4].b + .15);
+  leave(A1.cBuda, C(5, 0, -.1), 'L'); leave(A1.cPest, C(5, 0, -.1), 'R');
+  tl.to(A1.glow, { opacity: .5, duration: .5 }, C(5, 0, .3)); pop(A1.danube, C(5, 0, .6));
+  pop(A1.x, C(5, 1, .25)); shake(C(5, 1, .25));
+  fade(A1.danube, C(5, 1, .05), .2); fade(A1.x, C(6, 0, .2)); tl.to(A1.glow, { opacity: .25, duration: .4 }, C(6, 0, .2));
+  tl.set(A1.buda, { attr: { x: 300 } }, C(6, 0)); tl.set(A1.pest, { attr: { x: 740 } }, C(6, 0)); tl.to(A1.buda, { opacity: 1, scale: 1, duration: .3 }, C(6, 0, .1)); tl.to(A1.pest, { opacity: 1, scale: 1, duration: .3 }, C(6, 0, .1));
+  tl.to(A1.buda, { attr: { x: 390 }, duration: 1.2, ease: 'power2.inOut' }, C(6, 0, .4)); tl.to(A1.pest, { attr: { x: 650 }, duration: 1.2, ease: 'power2.inOut' }, C(6, 0, .4));
+
+  // ===== R1: frozen river, boats =====
+  camSet(R1, 512, 900, 1.0, C(7, 0, -.15));
+  camTo(R1, 512, 760, 1.35, C(7, 1), 1.0, 'power3.inOut');
+  camTo(R1, 512, 700, 1.55, C(7, 2), C(7, 4) - C(7, 2), 'sine.inOut');
+  R1.boats.forEach((g, k) => tl.to(g, { opacity: 1, duration: .25 }, C(7, 2, .1 + k * .08)));
+  R1.boats.forEach((g, k) => tl.to(g, { rotation: k % 2 ? 24 : -20, y: 30, svgOrigin: '0 0', duration: .35, ease: 'power2.in' }, C(7, 3, .05 + k * .03)));
+  pop(R1.x, C(7, 3, .3)); shake(C(7, 3, .2));
+  tl.to($('snow'), { opacity: .9, duration: .5 }, C(7, 1)); tl.to($('snow'), { opacity: 0, duration: .25 }, C(7, 4, -.25));
+
+  // ===== EU: Vienna 250 km =====
+  camSet(EU, bud.x, bud.y, 3.6, C(7, 4, -.25));
+  camTo(EU, bud.x, bud.y, 3.0, C(7, 4, -.25), C(7, 5) - C(7, 4, -.25), 'sine.inOut');
+  camTo(EU, (bud.x + vie.x) / 2, (bud.y + vie.y) / 2 + 40, 1.25, C(7, 5), 1.0, 'power3.inOut');
+  camTo(EU, (bud.x + vie.x) / 2, (bud.y + vie.y) / 2 + 40, 1.4, C(7, 5, 1.0), C(8, 0) - C(7, 5, 1.0), 'sine.inOut');
+  pop(EU.pinB, C(7, 4, .05)); tl.fromTo(EU.ringB, { opacity: .9, attr: { r: 16 } }, { opacity: 0, attr: { r: 70 }, duration: .9, repeat: 3, ease: 'power2.out', ...IR }, C(7, 4, .1));
+  pop(EU.pinV, C(7, 5, .2)); pop(EU.vie, C(7, 5, .3));
+  tl.set(EU.dim, { opacity: 1 }, C(7, 6, -.1)); draw(EU.dim, C(7, 6, -.1), 1.0); pop(EU.km, C(7, 6, .5));
+
+  // ===== R2: Count Széchenyi at the ice =====
+  camSet(R2, 512, 860, 1.05, C(8, 0, -.2));
+  camTo(R2, 512, 800, 1.18, C(8, 0, -.2), C(9, 0) - C(8, 0, -.2), 'sine.inOut');
+  camTo(R2, 512, 650, 1.5, C(9, 0), .8, 'power3.inOut');
+  camTo(R2, 512, 760, 1.15, C(9, 1), C(10, 0) - C(9, 1), 'sine.inOut');
+  enter(R2.cCount, C(8, 0, .2), 'L');
+  tl.to(R2.cCount.c, { x: 120, duration: 2.2, ease: 'sine.inOut' }, C(8, 2, -.2));
+  tl.to(R2.cCount.sh, { x: 120, duration: 2.2, ease: 'sine.inOut' }, C(8, 2, -.2));
+  shake(C(9, 0, .1));
+  tl.to($('snow'), { opacity: .6, duration: .4 }, C(8, 0)); tl.to($('snow'), { opacity: 1, duration: .6 }, C(9, 1));
+  tl.to(R2.img, { filter: 'brightness(.62) saturate(.7)', duration: .8 }, C(9, 1));
+  tl.to(R2.cCount.c, { keyframes: [{ scaleY: .82, scaleX: 1.06, duration: .5, ease: 'power2.out' }], transformOrigin: '50% 100%' }, C(9, 2, .2));
+  tl.to($('dim'), { opacity: .35, duration: .5 }, C(9, 2)); tl.to($('dim'), { opacity: 0, duration: .3 }, C(10, 0, -.2));
+  tl.to($('snow'), { opacity: 0, duration: .25 }, C(10, 0, -.2));
+
+  // ===== A2: the bridge, the Clarks =====
+  camSet(A2, 520, 640, 1.75, C(10, 0, -.2));
+  camTo(A2, 520, 630, 2.1, C(10, 0, -.2), C(11, 0) - C(10, 0, -.2), 'sine.inOut');
+  camTo(A2, 520, 640, 1.3, C(11, 0), 1.0, 'power3.inOut');
+  camTo(A2, 520, 650, 1.45, C(11, 0, 1.0), C(12, 0) - C(11, 0, 1.0), 'sine.inOut');
+  tl.to(A2.towers, { opacity: 1, duration: .3 }, C(10, 0, .1));
+  draw(A2.brO, C(10, 0, .2), 1.3); draw(A2.br, C(10, 0, .2), 1.3);
+  tl.to(eng, { opacity: 1, duration: .01 }, C(11, 0, -.05));
+  tl.fromTo(e1, { opacity: 0, y: 300, scale: .4 }, { opacity: 1, y: 0, scale: 1, duration: .45, ease: 'back.out(2)', ...IR }, C(11, 0));
+  tl.fromTo(e2, { opacity: 0, y: 300, scale: .4 }, { opacity: 1, y: 0, scale: 1, duration: .45, ease: 'back.out(2)', ...IR }, C(11, 0, .25));
+  tl.fromTo([linkL, linkR], { opacity: 0 }, { opacity: 1, duration: .25, ...IR }, C(11, 1));
+  tl.to(linkL, { x: -60, y: 40, rotation: -35, opacity: 0, svgOrigin: '440 500', duration: .45, ease: 'power2.in' }, C(11, 2, .05));
+  tl.to(linkR, { x: 60, y: 40, rotation: 35, opacity: 0, svgOrigin: '640 500', duration: .45, ease: 'power2.in' }, C(11, 2, .05));
+  tl.to([e1, e2], { keyframes: [{ rotation: -8, duration: .1 }, { rotation: 8, duration: .1 }, { rotation: 0, duration: .1 }] }, C(11, 2, .05));
+  tl.to(eng, { opacity: 0, duration: .25 }, C(12, 0, -.3));
+
+  // ===== TL: Chain Bridge toll =====
+  camSet(TL, 512, 760, 1.0, C(12, 0, -.2));
+  camTo(TL, 512, 820, 1.2, C(12, 0, -.2), C(12, 1) - C(12, 0, -.2), 'sine.inOut');
+  camTo(TL, 512, 860, 1.08, C(12, 1), .6, 'power3.inOut');
+  camTo(TL, 512, 880, 1.16, C(12, 1, .6), C(14, 0) - C(12, 1, .6), 'sine.inOut');
+  enter(TL.cToll, C(12, 1, -.1), 'L'); enter(TL.cNoble, C(12, 1, .2), 'R');
+  pop(TL.sign, C(12, 2, .1));
+  tl.to(TL.cToll.c, { keyframes: [{ rotation: -4, duration: .15 }, { rotation: 0, duration: .15 }], transformOrigin: '50% 100%' }, C(12, 2, .3));
+  talk(TL.cNoble, LN[13].a, LN[13].b); zoomTo(TL, TL.cNoble, LN[13].a, LN[13].b);
+  tl.fromTo(TL.cNoble.c, { scaleY: 1 }, { keyframes: [{ scaleY: 1.12, duration: .1 }, { scaleY: .95, duration: .12 }, { scaleY: 1, duration: .12 }], transformOrigin: '50% 100%', ...IR }, LN[13].a - .05);
+
+  // ===== A3: merge, the twist, Óbuda =====
+  camSet(A3, 520, 720, 1.0, C(14, 0, -.2));
+  camTo(A3, 520, 680, 1.15, C(14, 0, -.2), C(14, 1) - C(14, 0, -.2), 'sine.inOut');
+  camTo(A3, 520, 640, 1.35, C(14, 1), C(14, 3) - C(14, 1), 'power1.inOut');
+  camTo(A3, 520, 700, 1.05, C(15, 0), .5, 'power3.out');
+  camTo(A3, 180, 260, 1.7, C(16, 0), 1.0, 'power3.inOut');
+  camTo(A3, 175, 250, 1.95, C(16, 0, 1.0), C(17, 0) - C(16, 0, 1.0), 'sine.inOut');
+  camTo(A3, 520, 720, 1.0, D.end.start - .3, 1.2, 'power2.inOut');
+  A3.warm.forEach((w, k) => tl.to(w, { keyframes: [{ opacity: .55, duration: .6 }, { opacity: .3, duration: .6 }] }, C(14, 0, .2 + k * .3)));
+  fade(A3.warm, C(14, 3, .3), .5);
+  enter(A3.cBuda, C(14, 2, -.1), 'L'); enter(A3.cPest, C(14, 2, .25), 'R');
+  tl.to(A3.cBuda.c, { x: 110, duration: .35, ease: 'power3.in' }, C(14, 3, -.15)); tl.to(A3.cPest.c, { x: -110, duration: .35, ease: 'power3.in' }, C(14, 3, -.15));
+  tl.to([A3.cBuda.sh, A3.cPest.sh], { opacity: 0, duration: .2 }, C(14, 3, -.15));
+  tl.to($('flash'), { keyframes: [{ opacity: .85, duration: .1 }, { opacity: 0, duration: .5 }] }, C(14, 3, .2)); shake(C(14, 3, .2));
+  tl.to([A3.cBuda.c, A3.cPest.c], { keyframes: [{ scaleY: .88, duration: .1 }, { scaleY: 1.04, duration: .12 }, { scaleY: 1, duration: .12 }], transformOrigin: '50% 100%' }, C(14, 3, .2));
+  tl.to(A3.cBuda.c, { rotation: -6, transformOrigin: '50% 100%', duration: .15 }, C(15, 0)); tl.to(A3.cPest.c, { rotation: 6, transformOrigin: '50% 100%', duration: .15 }, C(15, 0));
+  leave(A3.cBuda, C(16, 0, -.2), 'L'); leave(A3.cPest, C(16, 0, -.2), 'R');
+  pop(A3.ob, C(16, 1, -.05)); pop(A3.obSub, C(16, 2, -.05)); tl.to([A3.brO, A3.br, A3.towers], { opacity: 0, duration: .3 }, C(16, 0)); tl.to([A3.brO, A3.br, A3.towers], { opacity: 1, duration: .3 }, D.end.start); tl.set(A3.obRing, { opacity: 1 }, C(16, 1)); draw(A3.obRing, C(16, 1), .6);
+  tl.fromTo(A3.cOb.c, { opacity: 0, y: 420 }, { opacity: 1, y: 0, duration: .45, ease: 'back.out(2)', ...IR }, LN[17].a - .35);
+  tl.to(A3.cOb.sh, { opacity: 1, duration: .3 }, LN[17].a - .3);
+  fade([A3.ob, A3.obSub, A3.obRing], LN[17].a - .45, .25); talk(A3.cOb, LN[17].a, LN[17].b); zoomTo(A3, A3.cOb, LN[17].a, LN[17].b);
+  leave(A3.cOb, D.end.start - .2, 'B'); fade([A3.obRing, A3.ob, A3.obSub], D.end.start - .2);
+
+  // titles
+  for (const id in TT) { const { g, t } = TT[id];
+    tl.fromTo(g, { opacity: 0, scale: .82, transformOrigin: '540px 340px' }, { opacity: 1, scale: 1, duration: .3, ease: 'back.out(2)', ...IR }, t.a);
+    tl.to(g, { opacity: 0, duration: .25 }, t.b); }
+  // captions
+  for (const K of CAPS) { const c = K.c;
+    tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { scale: .84, transformOrigin: '565px 1385px' }, { scale: 1, duration: .22, ease: 'back.out(2.2)', ...IR }, c.sn);
+    K.words.forEach((w, i) => tl.to(w, { opacity: 1, duration: .09 }, c.wt[Math.min(i, c.wt.length - 1)])); }
+  // snow motion (seeded, deterministic)
+  const sp = { t: 0 }; tl.fromTo(sp, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => {
+    for (const F of FL) { const y = (F.y0 + sp.t * F.sp) % 2000 - 40; const x = F.x + Math.sin(sp.t * 1.3 + F.y0) * 24; F.f.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`; } } }, 0);
+  // badge + end card
+  const BW = $('badgeWrap'); const E = D.end; const bs = 108 / 620;
+  tl.fromTo(BW, { opacity: 0, x: 44 - 230, y: 1332 - 450, scale: bs }, { opacity: 1, x: 44 - 230, y: 1332 - 450, scale: bs, duration: .5 }, .2);
+  tl.fromTo(BW, { x: 44 - 230, y: 1332 - 450, scale: bs }, { x: 0, y: 0, scale: 1, duration: .9, ease: 'power2.inOut', ...IR }, E.start);
+  tl.to($('dim'), { opacity: .55, duration: .5 }, E.start);
+  const F = $('follow');
+  tl.fromTo(F, { opacity: 0, scale: .2 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2)', ...IR }, E.btn);
+  const TD = $('tapDot');
+  tl.fromTo(TD, { opacity: 0, x: 470, y: 120 }, { opacity: 1, x: 430, y: 50, duration: .6, ease: 'power2.out', ...IR }, E.tap - .6);
+  tl.to(F, { keyframes: [{ scale: .94, duration: .1 }, { scale: 1, duration: .1 }] }, E.tap);
+  tl.fromTo($('ripple'), { opacity: .5, scale: .05 }, { opacity: 0, scale: 1, duration: .8, ease: 'power2.out', ...IR }, E.tap + .1);
+  tl.set($('folBtn'), { backgroundColor: '#0B2A40', border: '5px solid #4FD3F2' }, E.tap + .2);
+  tl.set($('folTxt'), { opacity: 0 }, E.tap + .2); tl.set($('folTxt2'), { opacity: 1 }, E.tap + .2);
+  tl.to(TD, { opacity: 0, duration: .3 }, E.tap + .5);
+  return tl;
+}
+document.fonts.ready.then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>
