@@ -1,0 +1,87 @@
+[
+ {
+  "name": "bankrun_1931.jpg",
+  "ok": true,
+  "bytes": 1295444
+ },
+ {
+  "name": "song_plate.jpg",
+  "ok": true,
+  "bytes": 4868915
+ },
+ {
+  "name": "bw_room.jpg",
+  "ok": true,
+  "bytes": 667051
+ },
+ {
+  "name": "miners_1850.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "camp_david.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "lydia_trite_cng.jpg",
+  "ok": true,
+  "bytes": 86337
+ },
+ {
+  "name": "eo6102.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "fortknox_vault.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "fortknox_postcard.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "lydia_trite_bm.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "boe_hall_1808.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "yukon_1898.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "nixon_campdavid.jpg",
+  "ok": true,
+  "bytes": 76647
+ },
+ {
+  "name": "nyse_old.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)'>"
+ },
+ {
+  "name": "supertanker.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)'>"
+ },
+ {
+  "name": "mtwashington.jpg",
+  "ok": true,
+  "bytes": 57100
+ },
+ {
+  "name": "yuan_note.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)'>"
+ }
+]
