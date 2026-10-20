@@ -1,0 +1,95 @@
+{
+ "id": "centralia-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline; quieter and serious for the line about the boy. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Under your feet here, a fire has burned for sixty-four years. Population: five. So why did nobody stop it?"
+    ],
+    [
+     "Narrator",
+     "Rewind to nineteen sixty-two. Centralia, Pennsylvania. A coal town of about fourteen hundred people."
+    ],
+    [
+     "Narrator",
+     "The story goes, the town burned its trash in an old mining pit."
+    ],
+    [
+     "Narrator",
+     "But that pit sat on old coal mines. And the fire got in."
+    ],
+    [
+     "Chars",
+     "[cheeky, crackly, delighted little ember, fast and greedy] Ooh. Coal? For me?"
+    ],
+    [
+     "Narrator",
+     "So they dug. They flushed. About forty-two thousand dollars later, the money ran out... The fire didn't."
+    ],
+    [
+     "Narrator",
+     "So how bad could it get?"
+    ],
+    [
+     "Narrator",
+     "By nineteen seventy-nine, petrol in an underground tank hit seventy-eight degrees Celsius."
+    ],
+    [
+     "Chars",
+     "[grumpy old coal-town, sweaty and suspicious, slow] Is it just me... or the ground?"
+    ],
+    [
+     "Narrator",
+     "In nineteen eighty-one, the ground opened under a twelve-year-old boy. A hole about forty-five metres deep."
+    ],
+    [
+     "Narrator",
+     "His cousin pulled him out. Now America was watching."
+    ],
+    [
+     "Narrator",
+     "Putting the fire out? One study said about six hundred and sixty-three million dollars."
+    ],
+    [
+     "Narrator",
+     "Moving everyone out? Forty-two million. Yes... that number again."
+    ],
+    [
+     "Narrator",
+     "So America didn't put out the fire... it put out the town."
+    ],
+    [
+     "Narrator",
+     "Over five hundred homes and shops were bought and torn down. In two thousand two, even the ZIP code went."
+    ],
+    [
+     "Narrator",
+     "Today, a handful of people still live there. Steam still rises through the cracks."
+    ],
+    [
+     "Narrator",
+     "And the twist? At this rate, it could burn for another two hundred and fifty years."
+    ],
+    [
+     "Chars",
+     "[cheeky, crackly, delighted little ember, fast and greedy] Relax. I'm only sixty-four."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
