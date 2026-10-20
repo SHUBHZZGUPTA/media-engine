@@ -20,11 +20,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install -q faster-whisper
+      - run: pip install -q faster-whisper 2>&1 | tail -5
       - name: Transcribe
         run: |
           CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'jobs/align/*.json' || true)
-          for f in $CHANGED; do [ -f "$f" ] && python3 tools/whisper_words.py "$f"; done
+          for f in $CHANGED; do [ -f "$f" ] || continue; id=$(basename "$f" .json); mkdir -p outputs/align/$id; python3 tools/whisper_words.py "$f" > outputs/align/$id/log.txt 2>&1 || echo "FAILED $?" >> outputs/align/$id/log.txt; done
       - name: Commit outputs
         if: always()
         run: |
