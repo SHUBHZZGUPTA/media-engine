@@ -14,7 +14,10 @@
   "c_tourist": "Modern tourist: sun hat, backpack, empty bottle; exhausted; faces right. (skit test)",
   "c_camel": "Camel: striped saddle blanket, chewing; bored; faces left. (skit test)",
   "c_starman": "Mannequin astronaut (generic Starman-type): white-and-black spacesuit, visor up, calm deadpan smile, one hand waving; faces right. (Roadster, 2026-10-20)",
-  "c_astro": "Young astronomer: round glasses, curly brown hair, navy cardigan, brass handheld telescope + star notebook; excited, mouth open; faces right. (Roadster)"
+  "c_astro": "Young astronomer: round glasses, curly brown hair, navy cardigan, brass handheld telescope + star notebook; excited, mouth open; faces right. (Roadster)",
+  "c_corona": "Corona, NM personified: adobe-clay village body with door+window, battered cowboy hat, red bandana, grey walrus moustache, holds foil scrap; grumpy; faces right. (Roswell, 2026-10-21)",
+  "c_roswell": "Roswell personified: silver water-tower hat with green alien-antenna headband, sheriff star, vest, thumbs up; smug grin; faces left-ish/front. (Roswell)",
+  "c_mogul": "Project Mogul balloon personified: silver balloon head, foil-and-tape body, dangling microphone, round spy sunglasses; deadpan; faces left. (Roswell)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -28,6 +31,10 @@
   "launch": "Triple-core heavy rocket on seaside pad at dawn, tower right; centre-core nose ~512,150.",
   "dash": "Red convertible interior in space, steering wheel left, blank green dashboard screen centre 742,640, Earth through windscreen.",
   "stars": "Dark starfield, purple/blue nebula edges, empty centre (diagram background).",
-  "obs": "Mountaintop observatory at night, dome lower right, Milky Way sky, rocky ground lower middle."
+  "obs": "Mountaintop observatory at night, dome lower right, Milky Way sky, rocky ground lower middle.",
+  "roswell_ranch": "1947 New Mexico ranch at golden hour, foil/rubber/stick debris across lower half, windmill right, mesas. Debris ~y 900-1450.",
+  "roswell_town": "1947 desert town main street midday, brick/adobe stores left, black 1940s car, water tower ~947,448 and B-29-type bomber ~819,576 in background.",
+  "roswell_launch": "1947 desert airfield at dawn, long vertical balloon train x~700 from y~80 to ~830, mountains, hangar right.",
+  "roswell_today": "Modern desert town at dusk: alien-head green streetlights, flying-saucer building right, space murals; empty street lower half."
  }
 }
