@@ -62,14 +62,20 @@ If a push is rejected, `git pull --rebase` and push again.
 
 ## 2. Topic (stop 1)
 1. Find past topics with `Artifact` list (BHUGOL video pages). Never repeat one.
-2. Push a `jobs/viral/` job for the channels (`per_channel` 80):
+2. **Trend check (first, unless the user asked for evergreen only).**
+   - Run several WebSearch queries in one turn (`mode: "extended"`) for news from the last 7 days in categories BHUGOL can map: space and launches, vehicle and tech reveals, natural events (eclipses, quakes, storms, volcanoes), sports venues and events, record journeys, new records about places, notable anniversaries.
+   - Keep only trends with a **real map angle** (a place, route, border, orbit, distance). Drop wars, live disputes, tragedies and anything communal or religious.
+   - Every trend fact gets a dated source. The script avoids claims that could be outdated by posting day.
+3. Push a `jobs/viral/` job for the channels (`per_channel` 80):
    - `@Glore3`, `@geoglobetales`, `@worldjike`, `@geofactguy1`, `@RealLifeLore`, `@GeographyNow`
    - `channel/UCMaiQM2iWS97VZp7RjG8_nA`, `channel/UCfP7cEpQZ74cd26yuP4bCYg`, `channel/UC2Cl2g2xFTZoAEldxYVzQFg`, `channel/UCjJY5RvdQW9aEMGSfAbVrfA`
    - Plus any channels the user adds.
-3. Rank with yt-viral's `swipe.py --min 2.0` (multiple over each channel's own median).
-4. Drop unsafe topics: war-as-spectacle, live disputes, Partition, communal or religious topics.
-5. Show the top 8 as a table (multiple, views, channel) and name the ONE pattern they share. (yt-viral's formula labels judge the title only; say so.)
-6. Recommend 3 and let the user pick. Write our own story; never copy the source video's script.
+4. Rank with yt-viral's `swipe.py --min 2.0` (multiple over each channel's own median).
+5. Drop unsafe topics: war-as-spectacle, live disputes, Partition, communal or religious topics.
+6. **Merge into one table of 6 ideas** (about 3 trend-riders + 3 evergreen).
+   - Columns: idea · 🔥 trend heat (how recent and big the news is; "—" for evergreen) · 🗺️ geography fit · ✅ proven pattern (which outlier pattern it matches, with its multiple) · ⏰ timing ("post within ~3 days" for trends, "evergreen" otherwise).
+   - Name the ONE pattern the yt-viral outliers share. (yt-viral's formula labels judge the title only; say so.)
+7. Recommend 3 and let the user pick. Write our own story; never copy a source video's script.
 
 ## 3. Package first (yt-package)
 1. Write 10 titles and lint them with `title.py`:
