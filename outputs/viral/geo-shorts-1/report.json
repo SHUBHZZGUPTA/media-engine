@@ -1,0 +1,42 @@
+[
+ {
+  "channel": "@Glore3",
+  "ok": true,
+  "videos": 80
+ },
+ {
+  "channel": "@RealLifeLore",
+  "ok": true,
+  "videos": 62
+ },
+ {
+  "channel": "@MapMen",
+  "ok": false,
+  "error": "ERROR: [youtube:tab] @MapMen: This channel does not have a shorts tab\n"
+ },
+ {
+  "channel": "@GeographyNow",
+  "ok": true,
+  "videos": 80
+ },
+ {
+  "channel": "@TheGeoZone",
+  "ok": true,
+  "videos": 1
+ },
+ {
+  "channel": "@WorldGeographyFacts",
+  "ok": false,
+  "error": "404: Not Found. Retrying (2/3)...\nWARNING: [youtube:tab] YouTube said: ERROR - Requested entity was not found.\nWARNING: [youtube:tab] HTTP Error 404: Not Found. Retrying (3/3)...\nWARNING: [youtube:tab] YouTube said: ERROR - Requested entity was not found.\nERROR: [youtube:tab] @WorldGeographyFacts/shorts: Unable to download API page: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)\n"
+ },
+ {
+  "channel": "@geographybyjames",
+  "ok": false,
+  "error": "or 404: Not Found. Retrying (2/3)...\nWARNING: [youtube:tab] YouTube said: ERROR - Requested entity was not found.\nWARNING: [youtube:tab] HTTP Error 404: Not Found. Retrying (3/3)...\nWARNING: [youtube:tab] YouTube said: ERROR - Requested entity was not found.\nERROR: [youtube:tab] @geographybyjames/shorts: Unable to download API page: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)\n"
+ },
+ {
+  "channel": "@Atlas_Pro",
+  "ok": false,
+  "error": "TTP Error 404: Not Found. Retrying (2/3)...\nWARNING: [youtube:tab] YouTube said: ERROR - Requested entity was not found.\nWARNING: [youtube:tab] HTTP Error 404: Not Found. Retrying (3/3)...\nWARNING: [youtube:tab] YouTube said: ERROR - Requested entity was not found.\nERROR: [youtube:tab] @Atlas_Pro/shorts: Unable to download API page: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)\n"
+ }
+]
