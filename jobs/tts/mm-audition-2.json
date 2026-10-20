@@ -1,0 +1,21 @@
+{
+ "id": "mm-audition-2",
+ "models": [
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "algieba",
+   "direction": "Narrate this for a premium documentary YouTube channel about money: calm, deep, intriguing and confident, at a measured pace, with a short pause before the final question.",
+   "speakers": {
+    "Narrator": "Algieba"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "In 1971, one TV announcement cut the last link between the dollar and gold. Since then, every dollar in your pocket has been backed by... a promise. So what are you really holding?"
+    ]
+   ]
+  }
+ ]
+}
