@@ -1,0 +1,33 @@
+{
+ "id": "mm-audition",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "charon_iapetus",
+   "direction": "Two narrators audition for a premium documentary YouTube channel about money. Each reads the same passage on their own: calm, deep, intriguing and confident, at a measured pace, with a short pause before the final question. Leave a two-second silence between the two readings.",
+   "speakers": {
+    "Ash": "Charon",
+    "Blake": "Iapetus"
+   },
+   "lines": [
+    ["Ash", "In 1971, one TV announcement cut the last link between the dollar and gold. Since then, every dollar in your pocket has been backed by... a promise. So what are you really holding?"],
+    ["Blake", "In 1971, one TV announcement cut the last link between the dollar and gold. Since then, every dollar in your pocket has been backed by... a promise. So what are you really holding?"]
+   ]
+  },
+  {
+   "name": "rasalgethi_algieba",
+   "direction": "Two narrators audition for a premium documentary YouTube channel about money. Each reads the same passage on their own: calm, deep, intriguing and confident, at a measured pace, with a short pause before the final question. Leave a two-second silence between the two readings.",
+   "speakers": {
+    "Cole": "Rasalgethi",
+    "Drew": "Algieba"
+   },
+   "lines": [
+    ["Cole", "In 1971, one TV announcement cut the last link between the dollar and gold. Since then, every dollar in your pocket has been backed by... a promise. So what are you really holding?"],
+    ["Drew", "In 1971, one TV announcement cut the last link between the dollar and gold. Since then, every dollar in your pocket has been backed by... a promise. So what are you really holding?"]
+   ]
+  }
+ ]
+}
