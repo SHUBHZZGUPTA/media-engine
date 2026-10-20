@@ -27,6 +27,22 @@ def call(model, body, key):
         return json.load(r)
 
 
+def call_with_wait(model, body, key, tries=4):
+    """Per-minute 429s say 'retry in Ns' -- wait and retry. Daily-quota 429s (hours) are raised at once."""
+    import re
+    for n in range(tries):
+        try:
+            return call(model, body, key)
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or n == tries - 1:
+                raise
+            msg = e.read().decode(errors="replace")
+            m = re.search(r"retry in ([\d.]+)s", msg)
+            if not m or float(m.group(1)) > 90:
+                raise urllib.error.HTTPError(e.url, e.code, e.reason, e.headers, __import__("io").BytesIO(msg.encode()))
+            time.sleep(float(m.group(1)) + 2)
+
+
 def build(item):
     sp = item["speakers"]
     script = "\n".join(f"{who}: {text}" for who, text in item["lines"])
@@ -52,9 +68,9 @@ def main(job_path):
         entry = {"name": item["name"], "ok": False}
         if not key:
             entry["error"] = "GEMINI_API_KEY secret is missing"; report["items"].append(entry); continue
-        for model in job.get("models", ["gemini-3.1-flash-tts-preview"]):
+        for model in item.get("models") or job.get("models", ["gemini-3.1-flash-tts-preview"]):
             try:
-                t0 = time.time(); res = call(model, build(item), key)
+                t0 = time.time(); res = call_with_wait(model, build(item), key)
                 part = res["candidates"][0]["content"]["parts"][0]["inlineData"]
                 pcm = base64.b64decode(part["data"])
                 path = os.path.join(out, item["name"] + ".wav")
