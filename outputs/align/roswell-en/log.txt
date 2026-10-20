@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/runner/work/media-engine/media-engine/tools/whisper_words.py", line 12, in <module>
-    out = os.path.join("outputs", "align", job["id"]); os.makedirs(out, exist_ok=True)
-                                           ~~~^^^^^^
-KeyError: 'id'
-FAILED 1
