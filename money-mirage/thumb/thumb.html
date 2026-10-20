@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Brico;font-weight:800;src:url(brico800.woff2)}@font-face{font-family:Inter;font-weight:800;src:url(inter800.woff2)}
+body{margin:0}#t{position:relative;width:1280px;height:720px;overflow:hidden;background:radial-gradient(ellipse 90% 80% at 70% 45%,#1B2C4D 0%,#0E182C 55%,#070C17 100%)}
+.h{position:absolute;left:56px;top:150px;font:800 150px/0.92 Brico;color:#F3EBDD;letter-spacing:-2px;text-shadow:0 8px 0 #050A14,0 0 40px rgba(0,0,0,.6)}
+.h b{color:#E9B44C}.sub{position:absolute;left:62px;top:500px;font:800 40px Inter;color:#E2614B;letter-spacing:.06em;text-shadow:0 4px 0 #050A14}
+svg{position:absolute;left:0;top:0}
+</style></head><body><div id="t">
+<svg width="1280" height="720" viewBox="0 0 1280 720">
+ <defs><filter id="sh"><feGaussianBlur stdDeviation="14"/></filter><filter id="wob"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="14"/></filter></defs>
+ <ellipse cx="940" cy="380" rx="330" ry="250" fill="#E9B44C" opacity=".10" filter="url(#sh)"/>
+ <!-- gold bar, faded, behind -->
+ <g transform="translate(1010,560) scale(2.1)" opacity=".9"><path d="M-70,-38 L70,-38 L95,0 L-95,0 Z" fill="#F7D88A" stroke="#7A4E0E" stroke-width="5"/><path d="M-95,0 L95,0 L112,46 L-112,46 Z" fill="#E9B44C" stroke="#7A4E0E" stroke-width="5"/></g>
+ <path d="M880,470 L1140,650 M1140,470 L880,650" stroke="#E2614B" stroke-width="22" stroke-linecap="round" opacity=".9"/>
+ <!-- shimmering note -->
+ <g transform="translate(930,290) rotate(-8)" filter="url(#wob)">
+  <rect x="-250" y="-125" width="500" height="250" rx="16" fill="#EFE6D2" stroke="#5E7A66" stroke-width="7"/>
+  <rect x="-230" y="-105" width="460" height="210" rx="10" fill="none" stroke="#7FA48A" stroke-width="4" stroke-dasharray="10 6"/>
+  <ellipse cx="110" cy="0" rx="65" ry="75" fill="none" stroke="#7FA48A" stroke-width="5"/>
+  <text x="-190" y="-55" font-family="Brico" font-weight="800" font-size="50" fill="#4E6B57">100</text>
+  <text x="-60" y="10" font-family="Inter" font-weight="800" font-size="19" fill="#3F5747" letter-spacing="2" text-anchor="middle">I PROMISE TO PAY</text>
+  <text x="-60" y="38" font-family="Inter" font-weight="800" font-size="19" fill="#3F5747" letter-spacing="2" text-anchor="middle">THE BEARER...</text>
+ </g>
+ <circle cx="870" cy="300" r="120" fill="none" stroke="#E2614B" stroke-width="12"/>
+ <g transform="translate(1248,692)"><text text-anchor="end" font-family="Brico" font-weight="800" font-size="34" fill="#E9B44C">MONEY<tspan fill="#F3EBDD" dx="10">MIRAGE</tspan></text></g>
+</svg>
+<div class="h">IT'S<br><b>NOT</b><br>GOLD</div>
+</div></body></html>
