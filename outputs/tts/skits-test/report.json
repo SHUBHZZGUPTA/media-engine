@@ -1,0 +1,29 @@
+{
+ "job": "skits-test",
+ "items": [
+  {
+   "name": "skit_a",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 8.56,
+   "took": 4.9
+  },
+  {
+   "name": "skit_b",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 6.2,
+   "took": 4.0
+  },
+  {
+   "name": "skit_c",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 9.12,
+   "took": 4.4
+  }
+ ]
+}
