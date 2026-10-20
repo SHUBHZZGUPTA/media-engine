@@ -1,0 +1,13 @@
+{
+ "id": "roswell-thumbmap",
+ "files": [
+  {
+   "name": "nmfull_bm.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-12289671.8,3304282.3,-11287796.4,4807095.4&WIDTH=1600&HEIGHT=2400"
+  },
+  {
+   "name": "nmfull_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=BlueMarble_NextGeneration&BBOX=-12289671.8,3304282.3,-11287796.4,4807095.4&WIDTH=1600&HEIGHT=2400"
+  }
+ ]
+}
