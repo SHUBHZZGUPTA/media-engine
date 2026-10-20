@@ -1,0 +1,21 @@
+{
+ "id": "roswell-maps",
+ "files": [
+  {
+   "name": "nm_bm.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=BlueMarble_NextGeneration&BBOX=-11977977.2,3607863.1,-11488171.4,4342571.7&WIDTH=2048&HEIGHT=3072"
+  },
+  {
+   "name": "nm_viirs.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=VIIRS_SNPP_CorrectedReflectance_TrueColor&TIME=2025-10-12&BBOX=-11977977.2,3607863.1,-11488171.4,4342571.7&WIDTH=2048&HEIGHT=3072"
+  },
+  {
+   "name": "nm_viirs2.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=VIIRS_SNPP_CorrectedReflectance_TrueColor&TIME=2025-09-28&BBOX=-11977977.2,3607863.1,-11488171.4,4342571.7&WIDTH=2048&HEIGHT=3072"
+  },
+  {
+   "name": "usa_bm.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-14026255.8,2692598.2,-7235766.9,6533321.6&WIDTH=3000&HEIGHT=1697"
+  }
+ ]
+}
