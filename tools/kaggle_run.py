@@ -125,29 +125,34 @@ def stage_files(api, user, stage, diag):
             files += got or []
             if not token:
                 break
-        files = [f for f in files if os.path.isfile(f)]
+        pat = re.compile(stage["file_pattern"])
+        files = [f for f in files if os.path.isfile(f) and pat.search(os.path.basename(f))]
         diag["downloaded"] = [{"file": os.path.basename(f), "mb": round(os.path.getsize(f) / 1e6, 1)}
                               for f in files]
         if not files:
             raise RuntimeError(f"nothing in {stage['from_kernel']} matched {stage['file_pattern']}")
         for f in files:
             shutil.move(f, os.path.join(folder, os.path.basename(f)))
-        meta = {"title": stage.get("title", stage["dataset_slug"]), "id": ref,
-                "licenses": [{"name": "copyright-authors"}]}
-        with open(os.path.join(folder, "dataset-metadata.json"), "w") as fh:
-            json.dump(meta, fh)
         try:
             api.dataset_status(ref)
             exists = True
         except Exception:
             exists = False
-        if exists:
-            resp = api.dataset_create_version(folder, "staged from " + stage["from_kernel"], quiet=True)
-        else:
-            resp = api.dataset_create_new(folder, public=False, quiet=True)
-        err = getattr(resp, "error", None)
-        diag["create"] = {"existed": exists, "status": str(getattr(resp, "status", "")), "error": err,
-                          "url": getattr(resp, "url", None)}
+        diag["create"] = []
+        for license_name in ("other", "unknown"):  # private dataset; Kaggle still requires a license
+            meta = {"title": stage.get("title", stage["dataset_slug"]), "id": ref,
+                    "licenses": [{"name": license_name}]}
+            with open(os.path.join(folder, "dataset-metadata.json"), "w") as fh:
+                json.dump(meta, fh)
+            if exists:
+                resp = api.dataset_create_version(folder, "staged from " + stage["from_kernel"], quiet=True)
+            else:
+                resp = api.dataset_create_new(folder, public=False, quiet=True)
+            err = getattr(resp, "error", None)
+            diag["create"].append({"license": license_name, "existed": exists, "error": err,
+                                   "status": str(getattr(resp, "status", ""))})
+            if not err or "license" not in err.lower():
+                break
         if err:
             raise RuntimeError(f"Kaggle refused the dataset: {err}")
     print(f"[{now()}] staged {len(files)} file(s) into private dataset {ref}", flush=True)
