@@ -1,0 +1,13 @@
+{
+ "job": "korea-en-v2",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 125.52,
+   "took": 39.6
+  }
+ ]
+}
