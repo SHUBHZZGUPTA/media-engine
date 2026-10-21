@@ -1,0 +1,31 @@
+{
+ "id": "korea-hook-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "hook_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, punchy, urgent and surprised, like a scroll-stopping opener; leave a clear pause after the first question, a short comic pause before each punchline, quieter and serious for the invasion line. Chars voices a funny deadpan cartoon character, short and dry.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "क्या आप जानते हैं... नॉर्थ कोरिया और साउथ कोरिया आज भी जंग में हैं?"
+    ],
+    [
+     "Narrator",
+     "गोलियां nineteen fifty-three में रुक गईं... पर जंग कभी खत्म नहीं हुई।"
+    ],
+    [
+     "Narrator",
+     "क्यों?"
+    ]
+   ]
+  }
+ ]
+}

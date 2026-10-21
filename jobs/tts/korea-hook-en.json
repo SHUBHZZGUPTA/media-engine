@@ -1,0 +1,31 @@
+{
+ "id": "korea-hook-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "hook_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, punchy, urgent and surprised, like a scroll-stopping opener; leave a clear pause after the first question, with natural emphasis and a short comic pause before each punchline; quieter and serious for the line about the invasion and fighting. Chars voices a funny deadpan cartoon character (a talking line on a map), short and dry.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Did you know... North Korea and South Korea are still at war?"
+    ],
+    [
+     "Narrator",
+     "The shooting stopped in nineteen fifty-three... but the war never ended."
+    ],
+    [
+     "Narrator",
+     "Why?"
+    ]
+   ]
+  }
+ ]
+}
