@@ -1,0 +1,55 @@
+{
+ "id": "mm2-sfx-search",
+ "ua": "media-engine/1.0 (+https://github.com/shubhzz-gupta/media-engine)",
+ "delay": 3,
+ "files": [
+  {
+   "name": "paper.json",
+   "url": "https://api.openverse.org/v1/audio/?q=paper+banknote+rustle&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "coin.json",
+   "url": "https://api.openverse.org/v1/audio/?q=coin+clink&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "coins.json",
+   "url": "https://api.openverse.org/v1/audio/?q=coins+drop+pile&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "stamp.json",
+   "url": "https://api.openverse.org/v1/audio/?q=rubber+stamp&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "thud.json",
+   "url": "https://api.openverse.org/v1/audio/?q=deep+boom+impact&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "scale.json",
+   "url": "https://api.openverse.org/v1/audio/?q=metal+scale+creak&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "goat.json",
+   "url": "https://api.openverse.org/v1/audio/?q=goat+bleat&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "chicken.json",
+   "url": "https://api.openverse.org/v1/audio/?q=chicken+cluck&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "market.json",
+   "url": "https://api.openverse.org/v1/audio/?q=market+crowd+ambience&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "vault.json",
+   "url": "https://api.openverse.org/v1/audio/?q=heavy+vault+door&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "tv.json",
+   "url": "https://api.openverse.org/v1/audio/?q=old+television+click+on&license=cc0%2Cby&page_size=20&extension=mp3"
+  },
+  {
+   "name": "crowd.json",
+   "url": "https://api.openverse.org/v1/audio/?q=crowd+murmur&license=cc0%2Cby&page_size=20&extension=mp3"
+  }
+ ]
+}
