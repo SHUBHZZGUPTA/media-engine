@@ -1,0 +1,107 @@
+{
+ "id": "teslafly-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular science and geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "What you're seeing isn't a trick shot."
+    ],
+    [
+     "Narrator",
+     "This car weighs almost one point seven tonnes, and it's stopped upside down."
+    ],
+    [
+     "Narrator",
+     "No magnets. No glue. So what's holding it up?"
+    ],
+    [
+     "Narrator",
+     "This October, Tesla drove its new Roadster up a curved ramp... and stopped."
+    ],
+    [
+     "Chars",
+     "[grumpy, heavy, deep, slow cartoon planet-sized voice, baffled, straining like pulling a rope] Excuse me? I'm pulling. Nothing's happening."
+    ],
+    [
+     "Narrator",
+     "Here's the trick. Air is heavy."
+    ],
+    [
+     "Narrator",
+     "Every square metre around you carries about ten tonnes of air. Roughly two elephants."
+    ],
+    [
+     "Narrator",
+     "But the Roadster's four fans suck the air out from under it."
+    ],
+    [
+     "Narrator",
+     "Less air below, same air outside. So the air pins it to the road... even upside down."
+    ],
+    [
+     "Narrator",
+     "How hard? Tesla claims about four thousand seven hundred kilos. Nearly three times the car's weight."
+    ],
+    [
+     "Chars",
+     "[grumpy, heavy, deep, slow cartoon planet-sized voice, deeply offended] Nearly three to one? Rude."
+    ],
+    [
+     "Narrator",
+     "But Tesla didn't invent this. Rewind to nineteen seventy-eight."
+    ],
+    [
+     "Narrator",
+     "A Formula One car raced in Sweden with a giant fan on its back."
+    ],
+    [
+     "Chars",
+     "[nervous 1970s racing mechanic, too innocent, quick, fake casual] It's for cooling the engine. Honest."
+    ],
+    [
+     "Narrator",
+     "It won its only race by over half a minute. Then fan cars got banned."
+    ],
+    [
+     "Narrator",
+     "So the Roadster isn't beating gravity. It's turning the sky against it."
+    ],
+    [
+     "Narrator",
+     "And to come down? It flies. ... Sort of."
+    ],
+    [
+     "Narrator",
+     "Ten thrusters, built with SpaceX, blast out six hundred litres of squeezed air."
+    ],
+    [
+     "Narrator",
+     "It hopped over five Teslas, rolled in mid-air and landed. Nobody inside."
+    ],
+    [
+     "Narrator",
+     "Tesla says production starts in twenty twenty-eight. First promised: twenty twenty."
+    ],
+    [
+     "Chars",
+     "[grumpy, heavy, deep, slow cartoon planet-sized voice, deadpan, very patient] Take your time. I'll be here."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
