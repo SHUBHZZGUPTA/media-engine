@@ -10,6 +10,8 @@ Job params:
   save_every        checkpoint interval (checkpoints land in /kaggle/working/lora)
   sample_every      sample interval, 0 = no samples
   sample_prompts    prompts for sample images
+  max_minutes       safety stop: end training after this many minutes (0 = none), keeping
+                    every checkpoint saved so far
 
 Everything worth keeping (LoRA files, samples, logs, timing) is written to /kaggle/working."""
 import json
@@ -177,6 +179,38 @@ launcher = ("import sys, runpy, t4patch; sys.argv = ['run.py', sys.argv[1]]; "
             "runpy.run_path('run.py', run_name='__main__')")
 proc = subprocess.Popen([sys.executable, "-c", launcher, cfg_path], cwd=AITK, stdout=subprocess.PIPE,
                         stderr=subprocess.STDOUT, text=True, bufsize=1, env=env)
+
+
+def sync_outputs():
+    """Copy checkpoints and sample images to /kaggle/working as they appear, so a run that is
+    stopped early still keeps everything saved so far."""
+    for sub in ("lora", "samples"):
+        os.makedirs(f"{OUT}/{sub}", exist_ok=True)
+    for root, _, files in os.walk(f"{WORK}/output"):
+        for name in files:
+            sub = "lora" if name.endswith(".safetensors") else "samples" if root.endswith("samples") else None
+            if not sub:
+                continue
+            src, dst = os.path.join(root, name), f"{OUT}/{sub}/{name}"
+            if not os.path.exists(dst) or os.path.getsize(dst) != os.path.getsize(src):
+                shutil.copy(src, dst)
+
+
+# Safety stop: end training before Kaggle's session limit so the run finishes cleanly with every
+# checkpoint so far kept, instead of being cut off by Kaggle.
+import threading  # noqa: E402
+
+max_minutes = float(P.get("max_minutes", 0))
+stopped_by_time = threading.Event()
+if max_minutes:
+    def _stop():
+        stopped_by_time.set()
+        print(f"Time limit of {max_minutes} min reached; stopping training.", flush=True)
+        proc.terminate()
+    timer = threading.Timer(max(60.0, max_minutes * 60 - (time.time() - t0)), _stop)
+    timer.daemon = True
+    timer.start()
+
 step_re = re.compile(r"(\d+)/(\d+) \[[^\]]*?([\d.]+)(s/it|it/s)")
 last = None
 for line in proc.stdout:
@@ -189,21 +223,21 @@ for line in proc.stdout:
             log["last_step"], log["sec_per_step"] = done, round(sec, 2)
             if done != last and (done % 5 == 0 or done == total):
                 last = done
+                sync_outputs()
                 save_log()
     if "Traceback" in line or "Error" in line:
         print(line.rstrip(), flush=True)
 rc = proc.wait()
 log["exit_code"] = rc
-stamp("training finished" if rc == 0 else f"training failed (exit {rc})")
+log["stopped_by_time_limit"] = stopped_by_time.is_set()
+stamp("training finished" if rc == 0 else
+      "training stopped at the time limit" if stopped_by_time.is_set() else f"training failed (exit {rc})")
 
 # 5) Collect LoRA files and samples.
-os.makedirs(f"{OUT}/lora", exist_ok=True)
-for root, _, files in os.walk(f"{WORK}/output"):
-    for name in files:
-        if name.endswith(".safetensors") or root.endswith("samples"):
-            shutil.copy(os.path.join(root, name), f"{OUT}/lora/{name}")
-log["outputs"] = sorted(os.listdir(f"{OUT}/lora"))
-log["peak_gpu_mem_note"] = "see train_log.txt"
+sync_outputs()
+log["lora_files"] = sorted(os.listdir(f"{OUT}/lora"))
+log["samples"] = sorted(os.listdir(f"{OUT}/samples"))
 save_log()
 print(json.dumps(log, indent=1))
-sys.exit(rc)
+# A run stopped by the time limit with checkpoints saved counts as a success.
+sys.exit(0 if rc == 0 or (stopped_by_time.is_set() and log["lora_files"]) else rc)
