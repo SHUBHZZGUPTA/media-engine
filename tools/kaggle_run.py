@@ -113,9 +113,9 @@ def gpu_quota(api):
         return {"error": type(e).__name__}
 
 
-def stage_files(api, user, stage):
+def stage_files(api, user, stage, diag):
     """Copy files from an earlier notebook's output into a private dataset on this account and
-    return the dataset ref to attach."""
+    return the dataset ref to attach. Progress and errors are recorded in diag."""
     ref = f"{user}/{stage['dataset_slug']}"
     with tempfile.TemporaryDirectory() as dl, tempfile.TemporaryDirectory() as folder:
         files, token = [], None
@@ -126,8 +126,10 @@ def stage_files(api, user, stage):
             if not token:
                 break
         files = [f for f in files if os.path.isfile(f)]
+        diag["downloaded"] = [{"file": os.path.basename(f), "mb": round(os.path.getsize(f) / 1e6, 1)}
+                              for f in files]
         if not files:
-            sys.exit(f"stage: nothing in {stage['from_kernel']} matched {stage['file_pattern']}")
+            raise RuntimeError(f"nothing in {stage['from_kernel']} matched {stage['file_pattern']}")
         for f in files:
             shutil.move(f, os.path.join(folder, os.path.basename(f)))
         meta = {"title": stage.get("title", stage["dataset_slug"]), "id": ref,
@@ -140,19 +142,29 @@ def stage_files(api, user, stage):
         except Exception:
             exists = False
         if exists:
-            api.dataset_create_version(folder, "staged from " + stage["from_kernel"], quiet=True)
+            resp = api.dataset_create_version(folder, "staged from " + stage["from_kernel"], quiet=True)
         else:
-            api.dataset_create_new(folder, public=False, quiet=True)
+            resp = api.dataset_create_new(folder, public=False, quiet=True)
+        err = getattr(resp, "error", None)
+        diag["create"] = {"existed": exists, "status": str(getattr(resp, "status", "")), "error": err,
+                          "url": getattr(resp, "url", None)}
+        if err:
+            raise RuntimeError(f"Kaggle refused the dataset: {err}")
     print(f"[{now()}] staged {len(files)} file(s) into private dataset {ref}", flush=True)
     deadline = time.time() + 900
+    seen = []
     while time.time() < deadline:
         try:
-            if str(api.dataset_status(ref)).lower() == "ready":
-                return ref, [os.path.basename(f) for f in files]
-        except Exception:
-            pass
+            st = str(api.dataset_status(ref)).lower()
+        except Exception as e:
+            st = f"lookup failed: {type(e).__name__}: {e}"[:200]
+        if not seen or seen[-1] != st:
+            seen.append(st)
+            diag["statuses"] = seen
+        if st == "ready":
+            return ref, [os.path.basename(f) for f in files]
         time.sleep(15)
-    sys.exit(f"stage: dataset {ref} was not ready after 15 minutes")
+    raise RuntimeError(f"dataset {ref} was not ready after 15 minutes (statuses seen: {seen})")
 
 
 def wait_for(api, ref, minutes):
@@ -225,9 +237,18 @@ def main():
 
     if not args.collect:
         if job.get("stage"):
-            ds_ref, staged = stage_files(api, user, job["stage"])
+            diag = {}
+            try:
+                ds_ref, staged = stage_files(api, user, job["stage"], diag)
+            except Exception as e:
+                record.update(status="STAGE_FAILED", stage_error=f"{type(e).__name__}: {e}"[:1000],
+                              stage_diag=diag, checked_at=now())
+                outdir.mkdir(parents=True, exist_ok=True)
+                (outdir / "run.json").write_text(json.dumps(record, indent=1), encoding="utf-8")
+                print(json.dumps(record, indent=1))
+                return 1
             job["datasets"] = list(dict.fromkeys(job.get("datasets", []) + [ds_ref]))
-            record.update(staged_dataset=ds_ref, staged_files=staged)
+            record.update(staged_dataset=ds_ref, staged_files=staged, stage_diag=diag)
         with tempfile.TemporaryDirectory() as tmp:
             meta, acc = build_folder(job, user, Path(tmp))
             timeout_s = int(job.get("timeout_minutes", 60)) * 60
