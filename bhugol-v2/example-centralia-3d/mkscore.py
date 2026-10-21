@@ -21,13 +21,16 @@ S['music'] = {'bpm': 78, 'level': .3,
                'bass': [[C(3, 0), C(9, 0, -.3), .8], [C(11, 0), C(13, 1), .9], [C(15, 0), ES, .7]], 'arp': [[ES - .2, 'end', 1]],
                'muffle': [[C(9, 0, -.2), C(11, 0, -.2), 1]]}}
 fx = [['rumble_dur', .05, .9, 2.2], ['crack', C(0, 1, .1), .8]]
-fx += [['whoosh', a - .05, .7, .7, 400, 2600] for a in shots]
-fx += [['pop', C(1, 0), .6, 820], ['pop', C(1, 1, .5), .6, 900], ['pop', C(1, 1, .6), .5, 700],
+import sys as _s; _s.path.insert(0, '/home/claude/media-engine/bhugol-v2/motion'); import motion_plan
+CC = lambda li, ci=0, off=0.0: C(li, ci, off)
+P = motion_plan.plan(S, CC); BEATS = [{'kind': b['kind'], 't': CC(*b['at'])} for b in S.get('beats', [])]
+fx += motion_plan.sfx(P, BEATS)   # whooshes / impacts / risers locked to the shot plan's cuts, slams and count-ups
+fx += [['pop', C(1, 1, .5), .6, 900], ['pop', C(1, 1, .6), .5, 700],
        ['crack', C(3, 1, .05), .8], ['rumble', C(3, 1, .05), .6, C(3, 1, 1.4)], ['pop', C(3, 0, .7), .5, 760],
        ['pop', C(4, 0, -.35), .6, 600], ['slide', C(4, 1), .5, 500, 1400, .4],
        ['thud', C(5, 0, .3), .7], ['thud', C(5, 0, .6), .7], ['gloop', C(5, 1, .05), .7], ['pop', C(5, 2), .6, 900],
        ['slide', C(5, 3, .35), .6, 1500, 380, .7], ['crack', C(5, 4, .1), .9], ['rumble', C(5, 4, .1), .7, C(5, 4, 1.6)],
-       ['riser', C(6, 0), .5, C(7, 0, -.1)], ['pop', C(7, 0), .6, 820], ['pop', C(7, 1, .05), .5, 700],
+       ['riser', C(6, 0), .5, C(7, 0, -.1)], ['pop', C(7, 1, .05), .5, 700],
        ['riser', C(7, 2, -.2), .6, C(7, 2, .6)], ['pop', C(7, 2, .5), .7, 1000], ['boing', C(8, 1), .6, 170, .6],
        ['pop', C(9, 0), .5, 760], ['whoosh_down', C(9, 2, -.05), .5, .8, 2400, 300],
        ['plink', C(10, 1, .1), .5, 2600, .3], ['plink', C(10, 1, .38), .5, 2900, .3], ['plink', C(10, 1, .72), .5, 2400, .3],

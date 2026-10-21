@@ -1,7 +1,9 @@
 # Builds the 3D HyperFrames project for Centralia. Usage: python3 build3d.py <spec.json> <timing_final.json> <out_dir> [en|hi]
 import json, os, sys, shutil
 from PIL import Image
-spec_p, tim_p, out = sys.argv[1:4]; LANG = sys.argv[4] if len(sys.argv) > 4 else 'en'
+args = [x for x in sys.argv[1:] if not x.startswith('--')]; spec_p, tim_p, out = args[:3]; LANG = args[3] if len(args) > 3 else 'en'
+PREVIEW = next((float(x.split('=')[1]) for x in sys.argv if x.startswith('--preview=')), None)  # --preview=25 renders only the first 25 s
+MOT = '/home/claude/media-engine/bhugol-v2/motion'; sys.path.insert(0, MOT); import motion_plan
 HERE = os.path.dirname(os.path.abspath(__file__)); ART = os.path.join(HERE, 'art'); KIT = '/home/claude/bhugol-kit'
 SPEC = json.load(open(spec_p)); TIM = json.load(open(tim_p)); os.makedirs(os.path.join(out, 'assets'), exist_ok=True)
 LAST = TIM['lines'][-1]; END_START = round(LAST['start'] - .25, 3); DUR = TIM.get('dur') or round(LAST['end'] + 2.3, 3)
@@ -15,6 +17,8 @@ for i, c in enumerate(chunks): c['en'] = chunks[i + 1]['sn'] if i < len(chunks) 
 Cd = {f'{c["li"]}.{c["ci"]}': round(c['sn'], 3) for c in chunks}
 LN = [{'a': L['start'], 'b': L['end']} for L in TIM['lines']]
 def C(li, ci=0, off=0.0): return round(Cd[f'{li}.{ci}'] + off, 3)
+PLAN = motion_plan.plan(SPEC, C)
+for w in motion_plan.check(PLAN): print('motion check:', w)
 AR = {}
 for n in ('c_fire', 'c_centralia'):
     im = Image.open(os.path.join(ART, n + '.png')); AR[n] = round(im.width / im.height, 4)
@@ -26,7 +30,7 @@ TITLES = [('tFog', ['ये *धुंध* नहीं 🔥' if HI else "THAT'S
           ('t1981', ['*1981*'], C(9, 0), C(9, 1, -.1)), ('tZIP', ['ZIP *17927* ❌'], C(14, 2), C(15, 0, -.15)), ('t250', ['*+250 साल?*' if HI else '*+250 YEARS?*'], C(16, 2), C(17, 0, -.15))]
 I18N = {'CENTRALIA': 'सेंट्रेलिया', 'OLD MINE TUNNELS': 'पुरानी खदानें', '45 m': '45 मीटर'} if HI else {}
 PT = {'road': [512, 790], 'pit': [630, 720], 'hole': [512, 770], 'grid': [20, 140, 900, 780]}
-D = {'dur': DUR, 'lang': LANG, 'C': Cd, 'LN': LN, 'chunks': [{k: c[k] for k in ('txt', 'sn', 'en', 'wt')} for c in chunks],
+D = {'beats': [dict(b, t=C(*b['at'])) for b in SPEC.get('beats', [])], 'shots': PLAN, 'dur': DUR, 'lang': LANG, 'C': Cd, 'LN': LN, 'chunks': [{k: c[k] for k in ('txt', 'sn', 'en', 'wt')} for c in chunks],
      'titles': [dict(id=a, lines=b, a=c, b=d) for a, b, c, d in TITLES], 'ar': AR, 'pt': PT, 'i18n': I18N, 'map3': json.load(open(os.path.join(ART, 'map3d.json'))),
      'end': {'start': END_START, 'btn': round(END_START + .8, 3), 'tap': round(END_START + 2.0, 3), 'button': 'फॉलो करें BHUGOL' if HI else 'FOLLOW BHUGOL', 'following': 'FOLLOWING'}}
 FONTS = {'bsd900.woff2': 'big-shoulders-display/files/big-shoulders-display-latin-900-normal.woff2', 'bsd800.woff2': 'big-shoulders-display/files/big-shoulders-display-latin-800-normal.woff2',
@@ -36,6 +40,8 @@ shutil.copy('/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf', os.path.join(ou
 shutil.copy(os.path.join(KIT, 'assets/bhugol_badge.png'), os.path.join(out, 'assets/bhugol_badge.png'))
 shutil.copy('/home/claude/work/node_modules/gsap/dist/gsap.min.js', os.path.join(out, 'gsap.min.js'))
 shutil.copy('/home/claude/work/node_modules/three/build/three.min.js', os.path.join(out, 'three.min.js'))
+shutil.copy(os.path.join(MOT, 'motion.js'), os.path.join(out, 'motion.js'))
+if PREVIEW: DUR = PREVIEW
 tpl = open(os.path.join(HERE, 'template3d.html')).read()
 open(os.path.join(out, 'index.html'), 'w').write(tpl.replace('__DATA__', json.dumps(D, ensure_ascii=False)).replace('__DUR__', '%.3f' % DUR))
 json.dump({'dur': DUR, 'end': D['end'], 'C': Cd}, open(os.path.join(out, 'times.json'), 'w'), indent=1)
