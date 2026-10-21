@@ -1,0 +1,375 @@
+{
+ "offset": 0.3,
+ "lines": [
+  {
+   "start": 0.443,
+   "end": 9.138,
+   "words": [
+    0.443,
+    0.567,
+    0.738,
+    1.005,
+    1.538,
+    1.614,
+    2.09,
+    2.3,
+    2.433,
+    3.614,
+    3.71,
+    4.09,
+    4.471,
+    4.89,
+    4.967,
+    5.157,
+    5.348,
+    5.995,
+    6.071,
+    6.338,
+    6.7,
+    6.852,
+    7.214,
+    7.576,
+    8.548,
+    8.662,
+    8.814
+   ],
+   "text": "You can now carry a petaflop in your backpack. In two thousand eight, it filled a room... and cost over a hundred million dollars. So what changed?"
+  },
+  {
+   "start": 9.729,
+   "end": 15.09,
+   "words": [
+    9.729,
+    10.129,
+    10.3,
+    10.729,
+    11.31,
+    11.576,
+    12.033,
+    12.805,
+    12.986,
+    13.157,
+    13.462,
+    13.843,
+    14.186,
+    14.414,
+    14.586
+   ],
+   "text": "Rewind to two thousand eight. IBM's Roadrunner became the first computer to break a petaflop."
+  },
+  {
+   "start": 15.595,
+   "end": 19.405,
+   "words": [
+    15.595,
+    15.748,
+    16.119,
+    16.49,
+    16.89,
+    17.348,
+    17.595,
+    17.948,
+    18.3,
+    18.852,
+    19.1
+   ],
+   "text": "Nearly three hundred racks. Two point three five megawatts of power."
+  },
+  {
+   "start": 20.052,
+   "end": 24.357,
+   "words": [
+    20.052,
+    21.176,
+    21.386,
+    21.633,
+    22.129,
+    22.433,
+    23.281,
+    23.367,
+    23.557,
+    23.786
+   ],
+   "text": "Now Microsoft's Surface Laptop Ultra claims... up to one petaflop."
+  },
+  {
+   "start": 24.729,
+   "end": 27.233,
+   "words": [
+    24.729,
+    25.024,
+    25.138,
+    25.31,
+    25.919,
+    26.186,
+    26.548,
+    26.776,
+    26.929
+   ],
+   "text": "So did a supercomputer just shrink into a backpack?"
+  },
+  {
+   "start": 28.014,
+   "end": 28.671,
+   "words": [
+    28.014,
+    28.233,
+    28.348
+   ],
+   "text": "Here's the catch."
+  },
+  {
+   "start": 29.357,
+   "end": 32.348,
+   "words": [
+    29.357,
+    29.605,
+    29.986,
+    30.271,
+    30.71,
+    31.09,
+    31.967
+   ],
+   "text": "Roadrunner counted in big, precise, sixty-four-bit numbers."
+  },
+  {
+   "start": 32.805,
+   "end": 38.31,
+   "words": [
+    32.805,
+    33.205,
+    33.367,
+    33.519,
+    33.681,
+    33.967,
+    34.233,
+    34.69,
+    34.862,
+    35.319,
+    35.49,
+    35.89,
+    36.29,
+    36.919,
+    37.033,
+    37.205,
+    37.567,
+    37.852
+   ],
+   "text": "Nvidia's R T X Spark chip hits its petaflop with tiny four-bit numbers... plus a shortcut called sparsity."
+  },
+  {
+   "start": 38.852,
+   "end": 40.424,
+   "words": [
+    38.852,
+    39.052,
+    39.719,
+    39.89,
+    40.176
+   ],
+   "text": "Same word. Very different math."
+  },
+  {
+   "start": 40.967,
+   "end": 42.29,
+   "words": [
+    40.967,
+    41.081,
+    41.233,
+    42.043
+   ],
+   "text": "So why care? Memory."
+  },
+  {
+   "start": 43.014,
+   "end": 45.529,
+   "words": [
+    43.014,
+    43.09,
+    43.414,
+    43.681,
+    43.833,
+    44.138,
+    44.405,
+    44.576,
+    44.824,
+    45.186
+   ],
+   "text": "Most laptops give the graphics chip its own small memory."
+  },
+  {
+   "start": 45.929,
+   "end": 49.452,
+   "words": [
+    45.929,
+    46.043,
+    46.233,
+    46.462,
+    46.671,
+    46.919,
+    47.51,
+    47.624,
+    47.776,
+    48.11,
+    48.443,
+    48.786,
+    49.119
+   ],
+   "text": "This one shares a single pool. Up to one hundred and twenty-eight gigabytes."
+  },
+  {
+   "start": 49.5,
+   "end": 53.91,
+   "words": [
+    49.5,
+    49.624,
+    49.871,
+    49.967,
+    50.062,
+    50.195,
+    50.367,
+    50.671,
+    51.129,
+    51.338,
+    51.719,
+    51.795,
+    51.871,
+    51.948,
+    52.024,
+    52.31,
+    52.462,
+    52.652,
+    52.967,
+    53.281,
+    53.757
+   ],
+   "text": "Not all of it goes to graphics. In one test, the G P U could reach about one hundred and ten."
+  },
+  {
+   "start": 53.91,
+   "end": 56.938,
+   "words": [
+    53.91,
+    54.138,
+    54.329,
+    54.462,
+    54.652,
+    54.814,
+    54.976,
+    55.224,
+    55.452,
+    55.614,
+    55.776,
+    55.938,
+    56.1,
+    56.443
+   ],
+   "text": "Enough to fit an A I model with a hundred and twenty billion parameters."
+  },
+  {
+   "start": 57.338,
+   "end": 59.481,
+   "words": [
+    57.338,
+    57.49,
+    57.662,
+    58.195,
+    58.329,
+    58.9,
+    58.976,
+    59.205
+   ],
+   "text": "On your lap. No cloud. No server room."
+  },
+  {
+   "start": 59.852,
+   "end": 65.91,
+   "words": [
+    59.852,
+    59.929,
+    60.405,
+    60.519,
+    60.814,
+    61.11,
+    61.405,
+    61.69,
+    61.986,
+    62.5,
+    62.576,
+    62.748,
+    63.357,
+    63.719,
+    64.081,
+    64.452,
+    64.814,
+    65.176,
+    65.824
+   ],
+   "text": "The bill? From two thousand five hundred and ninety-nine dollars. The one-twenty-eight-gig version? Five thousand, eight hundred and ninety-nine."
+  },
+  {
+   "start": 65.91,
+   "end": 69.89,
+   "words": [
+    65.91,
+    66.119,
+    66.5,
+    66.652,
+    66.805,
+    66.919,
+    67.452,
+    68.31,
+    68.5,
+    68.595,
+    68.757,
+    68.919,
+    69.167,
+    69.414,
+    69.548
+   ],
+   "text": "So no, it's not a two-thousand-eight supercomputer. It's an A I lab... in a backpack."
+  },
+  {
+   "start": 70.633,
+   "end": 74.576,
+   "words": [
+    70.633,
+    70.881,
+    71.129,
+    71.319,
+    71.5,
+    71.681,
+    71.871,
+    72.652,
+    72.786,
+    72.976,
+    73.262,
+    73.471,
+    73.567,
+    74.348
+   ],
+   "text": "Roadrunner drew two point three five megawatts. This one charges from a hundred-and-forty-watt brick."
+  },
+  {
+   "start": 75.148,
+   "end": 77.567,
+   "words": [
+    75.148,
+    75.319,
+    75.452,
+    75.605,
+    76.348,
+    76.424,
+    76.576,
+    77.033,
+    77.224,
+    77.414
+   ],
+   "text": "This is Tech Minister. Follow for tech, minus the hype."
+  }
+ ],
+ "removed": 0.89,
+ "audio_len": 81.321,
+ "tempo": 1.05,
+ "dur": 80.36666666666666
+}

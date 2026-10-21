@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>Tech Minister Surface Laptop Ultra</title>
+<script src="./gsap.min.js"></script>
+<style>
+@font-face { font-family: 'Bodoni'; font-weight: 800; src: url(assets/bodoni800.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 800; src: url(assets/inter800.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 600; src: url(assets/inter600.woff2) format('woff2'); }
+:root { --ink: #0A0A0A; --paper: #F7F7F5; --blue: #2F6BFF; --white: #FFFFFF; --red: #FF3B30; --mute: #8A8A8E; }
+body { margin: 0; background: #000; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+.clip { position: absolute; inset: 0; }
+.L { position: absolute; inset: 0; pointer-events: none; }
+video.full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; z-index: 2; }
+video.wide { position: absolute; left: 0; top: 420px; width: 1080px; height: 608px; object-fit: cover; z-index: 2; }
+.scene { position: absolute; inset: 0; opacity: 0; z-index: 3; overflow: hidden; }
+.scene.under { z-index: 1; }
+.paper { background-color: var(--paper);
+  background-image: linear-gradient(rgba(10,10,10,.055) 2px, transparent 2px), linear-gradient(90deg, rgba(10,10,10,.055) 2px, transparent 2px);
+  background-size: 72px 72px; background-position: 0 0; }
+.black { background: #000; }
+.photo { position: absolute; left: 0; top: 0; transform-origin: 50% 50%; }
+.half { position: absolute; left: 0; width: 1080px; height: 960px; overflow: hidden; }
+.half img { position: absolute; transform-origin: 50% 50%; }
+.tag { position: absolute; right: 44px; top: 1790px; font: 600 26px 'Inter', sans-serif; letter-spacing: .02em; color: rgba(255,255,255,.78); opacity: 0; z-index: 9; text-align: right;
+  text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.tag.onpaper { color: rgba(10,10,10,.62); text-shadow: none; }
+#wm { position: absolute; left: 48px; top: 96px; font: 800 40px 'Bodoni', serif; letter-spacing: -.01em; color: #fff; mix-blend-mode: difference; z-index: 10; opacity: 0; }
+.ttl { position: absolute; left: 0; width: 1080px; opacity: 0; z-index: 8; text-align: center; }
+.tl { font-family: 'Bodoni', serif; font-weight: 800; letter-spacing: -.015em; line-height: 1.02; white-space: nowrap; }
+.tl.dark { color: var(--white); text-shadow: 0 4px 28px rgba(0,0,0,.65); }
+.tl.lite { color: var(--ink); }
+.k { color: var(--blue); }
+.cap { position: absolute; inset: 0; opacity: 0; z-index: 9; }
+.cl { position: absolute; left: 120px; width: 840px; text-align: center; white-space: nowrap; font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -.01em; line-height: 1; paint-order: stroke fill; }
+.cap.dark .cl { color: #fff; -webkit-text-stroke-color: #000; }
+.cap.lite .cl { color: var(--ink); -webkit-text-stroke-color: var(--paper); }
+.cl span { opacity: 0; }
+.lbl { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: .02em; }
+.box { position: absolute; box-sizing: border-box; border: 6px solid var(--ink); border-radius: 26px; background: #fff; }
+.boxlbl { position: absolute; left: 0; right: 0; text-align: center; font: 800 46px 'Inter', sans-serif; color: var(--ink); letter-spacing: .02em; }
+.fill { position: absolute; left: 0; bottom: 0; width: 100%; background: var(--blue); border-radius: 0 0 20px 20px; }
+.cell { position: absolute; box-sizing: border-box; border-radius: 6px; }
+.row { position: absolute; left: 110px; width: 860px; height: 150px; box-sizing: border-box; border-radius: 22px; border: 5px solid var(--ink); background: #fff;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 44px; font-family: 'Inter', sans-serif; font-weight: 800; color: var(--ink); opacity: 0; }
+.row .cfg { font-size: 44px; } .row .pr { font-size: 58px; }
+.row.hi { background: var(--blue); border-color: var(--blue); color: #fff; }
+.big { position: absolute; left: 0; width: 1080px; text-align: center; font-family: 'Bodoni', serif; font-weight: 800; line-height: 1; opacity: 0; }
+#endL { position: absolute; inset: 0; background: #000; opacity: 0; z-index: 7; }
+#stage { z-index: 8; }
+#endFollow { position: absolute; left: 0; width: 1080px; top: 720px; text-align: center; font: 600 44px 'Inter', sans-serif; letter-spacing: .5em; padding-left: .5em; box-sizing: border-box; color: #fff; opacity: 0; }
+#endWord { position: absolute; left: 0; width: 1080px; top: 800px; text-align: center; font: 800 128px 'Bodoni', serif; letter-spacing: -.02em; color: #fff; opacity: 0; white-space: nowrap; }
+#endRing { position: absolute; left: 390px; top: 595px; width: 300px; height: 300px; box-sizing: border-box; border-radius: 50%; border: 6px solid var(--blue); opacity: 0; }
+#endLine { position: absolute; left: 240px; top: 980px; width: 600px; height: 8px; background: var(--blue); transform-origin: 0 50%; transform: scaleX(0); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <!-- official footage (silent b-roll) -->
+  <video class="clip full" id="vA" src="assets/v_hero.mp4" data-start="0" data-duration="9.300" data-media-start="0" muted playsinline></video>
+  <video class="clip full" id="vC" src="assets/v_chip.mp4" data-start="{{S[3]-.25}}" data-duration="{{S[4]-S[3]}}" data-media-start="0.2" muted playsinline></video>
+  <video class="clip wide" id="vH" src="assets/w_ai3.mp4" data-start="{{S[14]-.25}}" data-duration="{{S[15]-S[14]}}" data-media-start="3.2" muted playsinline></video>
+  <video class="clip full" id="vJ" src="assets/v_build.mp4" data-start="{{S[16]-.25}}" data-duration="{{S[17]-S[16]}}" data-media-start="1.6" muted playsinline></video>
+  <div id="stage" class="clip L" data-start="0" data-duration="__DUR__"></div>
+  <div id="wm">TECH MINISTER</div>
+  <div id="endL"><div id="endFollow">FOLLOW</div><div id="endWord">TECH MINISTER</div><div id="endLine"></div><div id="endRing"></div></div>
+</div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag);
+  for (const k in attrs || {}) { if (k === 'text') e.textContent = attrs[k]; else if (k === 'style' && typeof attrs[k] === 'object') Object.assign(e.style, attrs[k]); else e.setAttribute(k, attrs[k]); }
+  if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); }
+  const end = word.endsWith('*'); if (end) word = word.slice(0, -1); const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const S = D.S, E = D.E;
+const C = (li, ci, off) => D.CS[li][ci || 0] + (off || 0);
+const ST = $('stage');
+
+/* ---------- scene windows (real seconds) ---------- */
+const W = { A: [0, 9.3], B: [9.3, S[3] - .25], C: [S[3] - .25, S[4] - .25], D: [S[4] - .25, S[5] - .15], E: [S[5] - .15, S[6] - .2],
+  F: [S[6] - .2, S[9] - .2], G: [S[9] - .2, S[14] - .25], H: [S[14] - .25, S[15] - .25], I: [S[15] - .25, S[16] - .25],
+  J: [S[16] - .25, S[17] - .25], K: [S[17] - .25, S[18] - .25], L: [S[18] - .25, D.dur + 1] };
+const LITE = ['E', 'F', 'G', 'I'];
+const sceneAt = t => { for (const k in W) if (t >= W[k][0] && t < W[k][1]) return k; return 'L'; };
+
+/* ---------- B: Roadrunner photo + rack grid ---------- */
+const B = mk('div', { class: 'scene black' }, ST);
+const bImg = mk('img', { class: 'photo', src: 'assets/roadrunner.jpg', alt: '', style: { width: '2880px', height: '1920px', left: '-900px', top: '0px' } }, B);
+const bDim = mk('div', { class: 'L', style: { background: '#000', opacity: 0 } }, B);
+const rack = mk('div', { class: 'L', style: { opacity: 0 } }, B); const RC = [];
+{ const cols = 16, rows = 19, cw = 36, gap = 8, x0 = (1080 - (cols * cw + (cols - 1) * gap)) / 2, y0 = 300;
+  for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const n = r * cols + c; if (n >= 296) break;
+    RC.push(mk('div', { class: 'cell', style: { left: (x0 + c * (cw + gap)) + 'px', top: (y0 + r * (cw + gap)) + 'px', width: cw + 'px', height: cw + 'px', background: 'rgba(255,255,255,.92)', opacity: 0 } }, rack)); } }
+const bLbl = mk('div', { class: 'ttl', style: { top: '250px' } }, B); { const d = mk('div', { class: 'tl dark', style: { fontSize: '96px' } }, bLbl); markup('IBM *ROADRUNNER*', d); const d2 = mk('div', { class: 'lbl', style: { fontSize: '44px', color: '#fff', marginTop: '18px', letterSpacing: '.3em' }, text: '2008 · 1.026 PETAFLOPS' }, bLbl); }
+const bRacks = mk('div', { class: 'big', style: { top: '1390px', fontSize: '0px' } }, B);
+const bMW = mk('div', { class: 'ttl', style: { top: '1165px' } }, B); { const d = mk('div', { class: 'tl dark', style: { fontSize: '130px' } }, bMW); markup('*2.35* MW', d); }
+const bTag = mk('div', { class: 'tag', text: 'Photo: Los Alamos National Laboratory / Wikimedia Commons' }, B);
+
+/* ---------- D + K: split screens ---------- */
+function split(topTxt, botTxt) { const el = mk('div', { class: 'scene black' }, ST);
+  const t = mk('div', { class: 'half', style: { top: '0px' } }, el); const ti = mk('img', { src: 'assets/roadrunner.jpg', alt: '', style: { width: '1620px', height: '1080px', left: '-270px', top: '-60px' } }, t);
+  const b = mk('div', { class: 'half', style: { top: '960px', background: '#0b0b0d' } }, el); const bi = mk('img', { src: 'assets/slu_hero.jpg', alt: '', style: { width: '2015px', height: '960px', left: '-467px', top: '0px' } }, b);
+  mk('div', { class: 'L', style: { top: '956px', height: '8px', bottom: 'auto', background: '#fff' } }, el);
+  const lt = mk('div', { class: 'ttl', style: { top: '700px' } }, el); markup(topTxt, mk('div', { class: 'tl dark', style: { fontSize: '120px' } }, lt));
+  const lb = mk('div', { class: 'ttl', style: { top: '1080px' } }, el); markup(botTxt, mk('div', { class: 'tl dark', style: { fontSize: '120px' } }, lb));
+  const tg = mk('div', { class: 'tag', style: { top: '1790px' }, text: 'Photos: Los Alamos National Laboratory · Microsoft' }, el);
+  return { el, t, b, ti, bi, lt, lb, tg }; }
+const DS = split('2008', '2026'); const qm = mk('div', { class: 'big', style: { top: '848px', fontSize: '210px', color: 'var(--blue)', textShadow: '0 6px 40px rgba(0,0,0,.7)' }, text: '?' }, DS.el);
+const KS = split('*2.35* MW', '*140* W');
+
+/* ---------- E: THE CATCH ---------- */
+const Es = mk('div', { class: 'scene paper' }, ST);
+const eT = mk('div', { class: 'big', style: { top: '560px', fontSize: '190px', color: 'var(--ink)' } }, Es); markup('THE *CATCH*', eT);
+
+/* ---------- F: bits ---------- */
+const Fs = mk('div', { class: 'scene paper' }, ST);
+const f64 = mk('div', { class: 'L', style: { opacity: 0 } }, Fs); const C64 = [];
+{ const cw = 74, g = 12, x0 = (1080 - (8 * cw + 7 * g)) / 2, y0 = 380;
+  for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) C64.push(mk('div', { class: 'cell', style: { left: (x0 + c * (cw + g)) + 'px', top: (y0 + r * (cw + g)) + 'px', width: cw + 'px', height: cw + 'px', background: 'var(--ink)', opacity: 0 } }, f64)); }
+const f64L = mk('div', { class: 'big', style: { top: '250px', fontSize: '84px', color: 'var(--ink)' } }, Fs); markup('64-BIT', f64L);
+const f4 = mk('div', { class: 'L', style: { opacity: 0 } }, Fs); const C4 = [];
+{ const cw = 74, g = 12; for (let c = 0; c < 4; c++) C4.push(mk('div', { class: 'cell', style: { left: (712 + c * (cw + g)) + 'px', top: '720px', width: cw + 'px', height: cw + 'px', background: 'var(--blue)', opacity: 0 } }, f4)); }
+const f4L = mk('div', { class: 'lbl', style: { position: 'absolute', left: '690px', width: '380px', top: '620px', textAlign: 'center', fontSize: '60px', color: 'var(--blue)', opacity: 0 }, text: '4-BIT' }, Fs);
+const fSp = mk('div', { class: 'lbl', style: { position: 'absolute', left: '690px', width: '380px', top: '830px', textAlign: 'center', fontSize: '40px', color: 'var(--ink)', opacity: 0 }, text: '+ SPARSITY' }, Fs);
+const fNe = mk('div', { class: 'big', style: { top: '1110px', fontSize: '92px', color: 'var(--ink)' } }, Fs); markup('PETAFLOP *≠* PETAFLOP', fNe);
+const fTag = mk('div', { class: 'tag onpaper', text: 'Source: Nvidia · Microsoft' }, Fs);
+
+/* ---------- G: memory ---------- */
+const Gs = mk('div', { class: 'scene paper' }, ST);
+const gT = mk('div', { class: 'big', style: { top: '520px', fontSize: '200px', color: 'var(--ink)' } }, Gs); markup('*MEMORY*', gT);
+const gL = mk('div', { class: 'box', style: { left: '90px', top: '380px', width: '420px', height: '640px', opacity: 0 } }, Gs);
+mk('div', { class: 'boxlbl', style: { top: '-86px' }, text: 'CPU' }, gL); const gLf = mk('div', { class: 'fill', style: { height: '0%', background: 'var(--ink)' } }, gL);
+mk('div', { class: 'boxlbl', style: { bottom: '24px', top: 'auto', color: '#fff', zIndex: 2 }, text: 'RAM' }, gL);
+const gR = mk('div', { class: 'box', style: { left: '600px', top: '780px', width: '390px', height: '240px', opacity: 0 } }, Gs);
+mk('div', { class: 'boxlbl', style: { top: '-86px' }, text: 'GPU' }, gR); const gRf = mk('div', { class: 'fill', style: { height: '0%', background: 'var(--ink)' } }, gR);
+mk('div', { class: 'boxlbl', style: { bottom: '24px', top: 'auto', color: '#fff', zIndex: 2 }, text: 'VRAM' }, gR);
+const gP = mk('div', { class: 'box', style: { left: '90px', top: '380px', width: '900px', height: '640px', opacity: 0 } }, Gs);
+const gPf = mk('div', { class: 'fill', style: { height: '0%' } }, gP);
+const gPl = mk('div', { class: 'boxlbl', style: { top: '-86px' }, text: 'CPU + GPU · ONE POOL' }, gP);
+const gPn = mk('div', { class: 'boxlbl', style: { top: '250px', fontSize: '130px', fontFamily: 'Bodoni', color: '#fff', zIndex: 2, opacity: 0 }, text: '128 GB' }, gP);
+const gMk = mk('div', { style: { position: 'absolute', left: '-20px', right: '-20px', top: (634 * (1 - 110 / 128)) + 'px', height: '0px', borderTop: '8px dashed var(--ink)', opacity: 0, zIndex: 3 } }, gP);
+const gMkL = mk('div', { class: 'lbl', style: { position: 'absolute', left: '0', width: '900px', top: (634 * (1 - 110 / 128) - 70) + 'px', textAlign: 'center', fontSize: '42px', color: 'var(--ink)', opacity: 0, zIndex: 3 }, text: 'GPU ≈ 110 GB (ONE TEST)' }, gP);
+const gDots = mk('div', { style: { position: 'absolute', left: '390px', top: '-520px', width: '300px', height: '300px', opacity: 0 } }, Gs);
+{ const sv = mk('svg', { width: 300, height: 300, viewBox: '-150 -150 300 300' }, gDots, true); let n = 0;
+  for (let ring = 0; ring <= 7; ring++) { const r = ring * 18, cnt = ring === 0 ? 1 : ring * 8;
+    for (let k = 0; k < cnt; k++) { const a = k / cnt * Math.PI * 2 + ring * .3; mk('circle', { cx: (r * Math.cos(a)).toFixed(1), cy: (r * Math.sin(a)).toFixed(1), r: 6.5 - ring * .45, fill: '#0A0A0A' }, sv, true); n++; } } }
+const gDl = mk('div', { class: 'lbl', style: { position: 'absolute', left: '0', width: '300px', top: '120px', textAlign: 'center', fontSize: '64px', color: '#fff', textShadow: '0 0 12px #0A0A0A' }, text: '120B' }, gDots);
+const gTag1 = mk('div', { class: 'tag onpaper', text: 'Source: StorageReview' }, Gs);
+const gTag2 = mk('div', { class: 'tag onpaper', text: 'Source: Nvidia' }, Gs);
+
+/* ---------- H: local AI (wide clip) + crossed icons ---------- */
+const Hs = mk('div', { class: 'scene under black' }, ST);
+const Hov = mk('div', { class: 'scene' }, ST);
+function xIcon(cx, label) { const g = mk('div', { style: { position: 'absolute', left: (cx - 150) + 'px', top: '1110px', width: '300px', height: '200px', opacity: 0 } }, Hov);
+  const sv = mk('svg', { width: 300, height: 200, viewBox: '0 0 300 200' }, g, true);
+  if (label === 'cloud') mk('path', { d: 'M80,150 Q40,150 42,112 Q46,78 84,80 Q96,42 140,44 Q180,46 190,82 Q232,78 238,114 Q240,150 200,150 Z', fill: 'none', stroke: '#fff', 'stroke-width': 12, 'stroke-linejoin': 'round' }, sv, true);
+  else { for (let i = 0; i < 3; i++) mk('rect', { x: 80, y: 40 + i * 42, width: 140, height: 34, rx: 6, fill: 'none', stroke: '#fff', 'stroke-width': 10 }, sv, true);
+    for (let i = 0; i < 3; i++) mk('circle', { cx: 196, cy: 57 + i * 42, r: 6, fill: '#fff' }, sv, true); }
+  const x = mk('path', { d: 'M70,30 L230,170 M230,30 L70,170', stroke: '#FF3B30', 'stroke-width': 18, 'stroke-linecap': 'round', opacity: 0 }, sv, true);
+  return { g, x }; }
+const hC = xIcon(320, 'cloud'), hS = xIcon(760, 'server');
+const hT = mk('div', { class: 'ttl', style: { top: '250px' } }, Hov); markup('*LOCAL* AI', mk('div', { class: 'tl dark', style: { fontSize: '96px' } }, hT));
+const hTag = mk('div', { class: 'tag', text: 'Footage: Microsoft' }, Hov);
+
+/* ---------- I: price ladder ---------- */
+const Is = mk('div', { class: 'scene paper' }, ST);
+const iT = mk('div', { class: 'big', style: { top: '230px', fontSize: '96px', color: 'var(--ink)' } }, Is); markup('THE *BILL*', iT);
+const PR = [['24 GB · 512 GB', '$2,599.99'], ['24 GB · 1 TB', '$2,999.99'], ['32 GB · 1 TB', '$3,299.99'], ['128 GB · 1 TB', '$5,899.99']];
+const iR = PR.map((p, i) => { const r = mk('div', { class: 'row' + (i === 3 ? ' hi' : ''), style: { top: (400 + i * 190) + 'px' } }, Is);
+  mk('span', { class: 'cfg', text: p[0] }, r); mk('span', { class: 'pr', text: p[1] }, r); return r; });
+const iTag = mk('div', { class: 'tag onpaper', text: 'Source: Microsoft Store (US prices)' }, Is);
+
+/* ---------- titles over footage (A, C, J) ---------- */
+function title(lines, top, size) { const g = mk('div', { class: 'ttl', style: { top: top + 'px' } }, ST);
+  lines.forEach((ln, i) => markup(ln, mk('div', { class: 'tl dark', style: { fontSize: (size[i] || size[0]) + 'px', marginTop: i ? '14px' : '0' } }, g))); return g; }
+const tA1 = title(['2008: A *ROOM*'], 250, [110]); const tA2 = title(['2026: A *LAPTOP*'], 380, [110]);
+const tC = title(['UP TO', '*1 PETAFLOP*'], 250, [80, 130]);
+const tJ = title(['AN *AI LAB*', 'IN A BACKPACK'], 250, [120, 92]);
+const tagA = mk('div', { class: 'tag', text: 'Footage: Microsoft' }, ST); const tagC = mk('div', { class: 'tag', text: 'Footage: Microsoft' }, ST); const tagJ = mk('div', { class: 'tag', text: 'Footage: Microsoft' }, ST);
+for (const e of [tA1, tA2, tC, tJ, tagA, tagC, tagJ]) e.style.zIndex = 8;
+
+/* ---------- captions ---------- */
+const CAPS = D.chunks.map(c => { const mode = LITE.includes(sceneAt(c.sn + .05)) ? 'lite' : 'dark';
+  const g = mk('div', { class: 'cap ' + mode }, ST); const lines = c.txt.split('|').map(ln => { const d = mk('div', { class: 'cl' }, g); markup(ln, d); return d; });
+  return { c, g, lines, words: [...g.querySelectorAll('span')] }; });
+function layout() {
+  for (const K of CAPS) { let fs = 84; K.g.style.opacity = 1;
+    for (const d of K.lines) { d.style.fontSize = '84px'; const w = d.scrollWidth; if (w > 840) fs = Math.min(fs, 84 * 840 / w); }
+    K.g.style.opacity = 0; const n = K.lines.length;
+    K.lines.forEach((d, i) => Object.assign(d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .16).toFixed(1) + 'px', top: (1430 + (i - (n - 1) / 2) * fs * 1.06 - fs * .5).toFixed(1) + 'px' })); }
+  for (const g of document.querySelectorAll('.ttl, .big')) { const o = g.style.opacity; g.style.opacity = 1;
+    for (const d of g.querySelectorAll('.tl')) { const w = d.scrollWidth, fs = parseFloat(d.style.fontSize); if (w > 980) d.style.fontSize = (fs * 980 / w).toFixed(1) + 'px'; }
+    if (g.classList.contains('big') && g.scrollWidth > 1000) g.style.fontSize = (parseFloat(g.style.fontSize) * 1000 / g.scrollWidth).toFixed(1) + 'px';
+    g.style.opacity = o; }
+}
+
+/* ---------- timeline ---------- */
+function build() {
+  layout();
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false };
+  const show = (el, a, b, punch) => { if (punch) tl.fromTo(el, { opacity: 1, scale: 1.06, transformOrigin: '540px 960px' }, { opacity: 1, scale: 1, duration: .35, ease: 'power3.out', ...IR }, a);
+    else tl.set(el, { opacity: 1 }, a); tl.set(el, { opacity: 0 }, b);
+    if (el.classList.contains('paper')) tl.fromTo(el, { scale: 1, backgroundPosition: '0px 0px' }, { scale: 1.045, backgroundPosition: '0px ' + Math.round((b - a) * 24) + 'px', duration: Math.max(.1, b - a - .4), ease: 'none', transformOrigin: '540px 900px', ...IR }, a + .36); };
+  const pop = (el, at, s0) => tl.fromTo(el, { opacity: 0, scale: s0 || .6, transformOrigin: '50% 50%' }, { opacity: 1, scale: 1, duration: .38, ease: 'back.out(2.2)', ...IR }, at);
+  const rise = (el, at) => tl.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .35, ease: 'power3.out', ...IR }, at);
+  const out = (el, at, d) => tl.to(el, { opacity: 0, duration: d || .2 }, at);
+  const shake = at => tl.fromTo(ST, { x: 0, y: 0 }, { keyframes: [{ x: -16, y: 10, duration: .05 }, { x: 12, y: -8, duration: .05 }, { x: -7, y: 5, duration: .06 }, { x: 0, y: 0, duration: .08 }], ...IR }, at);
+  const tagOn = (el, a, b) => { tl.to(el, { opacity: 1, duration: .25 }, a + .3); tl.to(el, { opacity: 0, duration: .15 }, b - .15); };
+
+  // watermark
+  tl.to($('wm'), { opacity: .9, duration: .4 }, .6); tl.to($('wm'), { opacity: 0, duration: .3 }, W.L[0]);
+  // A: reveal clip, two-line opener (different words from the spoken hook)
+  rise(tA1, .25); rise(tA2, 1.0); out([tA1, tA2], C(0, 2, -.2)); tagOn(tagA, 0, W.A[1]);
+  tl.fromTo($('vA'), { scale: 1.0 }, { scale: 1.08, duration: 9.3, ease: 'none', transformOrigin: '540px 960px', ...IR }, 0);
+  // B: Roadrunner
+  show(B, W.B[0], W.B[1], true);
+  tl.fromTo(bImg, { x: 0, scale: 1.0 }, { x: 260, scale: 1.12, duration: W.B[1] - W.B[0], ease: 'sine.inOut', ...IR }, W.B[0]);
+  rise(bLbl, C(1, 1, -.1)); out(bLbl, C(2, 0, -.2));
+  tl.to(bDim, { opacity: .62, duration: .3 }, C(2, 0, -.2)); tl.set(rack, { opacity: 1 }, C(2, 0, -.2));
+  RC.forEach((c, i) => tl.to(c, { opacity: 1, duration: .05 }, C(2, 0, -.1) + i * (1.5 / RC.length)));
+  pop(bMW, C(2, 1, -.05)); tagOn(bTag, W.B[0], W.B[1]);
+  // C: chip clip
+  rise(tC, W.C[0] + .5); out(tC, W.C[1] - .2); tagOn(tagC, W.C[0], W.C[1]);
+  tl.fromTo($('vC'), { scale: 1.0 }, { scale: 1.1, duration: W.C[1] - W.C[0], ease: 'none', transformOrigin: '540px 960px', ...IR }, W.C[0]);
+  // D: split 2008 vs 2026
+  show(DS.el, W.D[0], W.D[1], true); rise(DS.lt, W.D[0] + .1); rise(DS.lb, W.D[0] + .3); pop(qm, C(4, 1, -.1), .3); tagOn(DS.tg, W.D[0], W.D[1]);
+  tl.fromTo(DS.ti, { scale: 1 }, { scale: 1.08, duration: W.D[1] - W.D[0], ease: 'none', ...IR }, W.D[0]);
+  tl.fromTo(DS.bi, { scale: 1.08 }, { scale: 1, duration: W.D[1] - W.D[0], ease: 'none', ...IR }, W.D[0]);
+  // E: the catch
+  show(Es, W.E[0], W.E[1]); pop(eT, W.E[0] + .05, .5); shake(W.E[0] + .1);
+  // F: bits
+  show(Fs, W.F[0], W.F[1], true); tl.set(f64, { opacity: 1 }, W.F[0]); rise(f64L, W.F[0] + .1);
+  C64.forEach((c, i) => tl.to(c, { opacity: 1, duration: .05 }, C(6, 0, .1) + i * (1.4 / 64)));
+  // shrink: 64 grid slides left and scales, 4-bit appears right
+  tl.to(f64, { x: -250, y: 100, scale: .55, transformOrigin: '540px 720px', duration: .5, ease: 'power3.inOut' }, C(7, 1, -.2));
+  tl.to(f64L, { x: -250, y: 290, scale: .7, duration: .5, ease: 'power3.inOut' }, C(7, 1, -.2));
+  tl.set(f4, { opacity: 1 }, C(7, 1, .1)); C4.forEach((c, i) => tl.fromTo(c, { opacity: 0, scale: .3 }, { opacity: 1, scale: 1, duration: .25, ease: 'back.out(2)', ...IR }, C(7, 1, .2) + i * .12));
+  rise(f4L, C(7, 1, .15)); rise(fSp, C(7, 2, .1)); tl.to(C4[1], { opacity: .18, duration: .2 }, C(7, 2, .6)); tl.to(C4[3], { opacity: .18, duration: .2 }, C(7, 2, .8));
+  pop(fNe, C(8, 0, -.05), .7); tagOn(fTag, C(7, 0), W.F[1]);
+  // G: memory
+  show(Gs, W.G[0], W.G[1], true); pop(gT, W.G[0] + .05, .7); out(gT, C(10, 0, -.25));
+  rise(gL, C(10, 0, -.1)); rise(gR, C(10, 0, .3)); tl.to(gLf, { height: '62%', duration: .8, ease: 'power2.out' }, C(10, 0, .4)); tl.to(gRf, { height: '62%', duration: .6, ease: 'power2.out' }, C(10, 1, -.1));
+  tl.to(gR, { keyframes: [{ scale: .92, duration: .12 }, { scale: 1, duration: .14 }], transformOrigin: '50% 50%' }, C(10, 1, .35));
+  // merge into one pool
+  tl.to(gL, { opacity: 0, duration: .3 }, C(11, 0, .1)); tl.to(gR, { x: -510, y: -400, width: 900, height: 640, opacity: 0, duration: .45, ease: 'power3.inOut' }, C(11, 0, .1));
+  tl.to(gP, { opacity: 1, duration: .3 }, C(11, 0, .3)); tl.to(gPf, { height: '100%', duration: 1.3, ease: 'power2.inOut' }, C(11, 1, -.1)); pop(gPn, C(11, 1, .5), .6);
+  tl.to(gPn, { opacity: 0, duration: .2 }, C(12, 1, -.2)); tl.to(gMk, { opacity: 1, duration: .25 }, C(12, 1, .1)); rise(gMkL, C(12, 2, -.1));
+  tagOn(gTag1, C(12, 0), C(13, 0)); tl.to(gTag2, { opacity: 1, duration: .25 }, C(13, 0, .2)); tl.to(gTag2, { opacity: 0, duration: .15 }, W.G[1] - .15);
+  tl.to([gMk, gMkL], { opacity: 0, duration: .2 }, C(13, 0, -.1));
+  tl.fromTo(gDots, { opacity: 1, y: 0 }, { opacity: 1, y: 1080, duration: .9, ease: 'bounce.out', ...IR }, C(13, 0, .2));
+  tl.to(gDots, { scale: 1.15, duration: .25, yoyo: true, repeat: 1, transformOrigin: '50% 50%' }, C(13, 1, .3));
+  // H: local AI
+  show(Hov, W.H[0], W.H[1]); rise(hT, W.H[0] + .1);
+  tl.to(hC.g, { opacity: 1, duration: .25 }, C(14, 1, -.15)); tl.to(hS.g, { opacity: 1, duration: .25 }, C(14, 1, .35));
+  tl.to(hC.x, { opacity: 1, duration: .12 }, C(14, 1, .25)); tl.to(hS.x, { opacity: 1, duration: .12 }, C(14, 1, .8)); tagOn(hTag, W.H[0], W.H[1]);
+  // I: price ladder
+  show(Is, W.I[0], W.I[1], true); rise(iT, W.I[0] + .05);
+  iR.forEach((r, i) => { const at = i === 0 ? C(15, 1, .1) : i < 3 ? C(15, 1, .5 + i * .35) : C(15, 3, -.1); tl.fromTo(r, { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: .3, ease: 'power3.out', ...IR }, at); });
+  tl.to(iR[3], { scale: 1.08, duration: .3, ease: 'back.out(2)', transformOrigin: '50% 50%' }, C(15, 3, .25)); tl.to(iR.slice(0, 3), { opacity: .35, duration: .3 }, C(15, 3, .25));
+  tagOn(iTag, W.I[0], W.I[1]);
+  // J: build clip + payoff title
+  rise(tJ, C(16, 2, -.1)); out(tJ, W.J[1] - .2); tagOn(tagJ, W.J[0], W.J[1]); shake(C(16, 2, .05));
+  // K: split 2.35 MW vs 140 W
+  show(KS.el, W.K[0], W.K[1], true); rise(KS.lt, C(17, 0, .5)); rise(KS.lb, C(17, 1, .9)); tagOn(KS.tg, W.K[0], W.K[1]);
+  tl.fromTo(KS.ti, { scale: 1.08 }, { scale: 1, duration: W.K[1] - W.K[0], ease: 'none', ...IR }, W.K[0]);
+  // L: end card
+  tl.set($('endL'), { opacity: 1 }, W.L[0]); rise($('endFollow'), W.L[0] + .15); tl.fromTo($('endWord'), { opacity: 0, scale: .9 }, { opacity: 1, scale: 1, duration: .5, ease: 'power3.out', ...IR }, W.L[0] + .3);
+  tl.to($('endLine'), { scaleX: 1, duration: .7, ease: 'power2.inOut' }, W.L[0] + .7);
+  tl.fromTo($('endWord'), { scale: 1 }, { scale: 1.06, duration: D.dur - W.L[0] - .8, ease: 'none', transformOrigin: '540px 860px', ...IR }, W.L[0] + .8);
+  tl.fromTo($('endRing'), { opacity: .7, scale: .2 }, { opacity: 0, scale: 1.4, duration: 1.1, ease: 'power2.out', repeat: 2, repeatDelay: .35, transformOrigin: '50% 50%', ...IR }, W.L[0] + 1.4);
+  tl.to($('endFollow'), { keyframes: [{ scale: 1.12, duration: .15 }, { scale: 1, duration: .2 }], repeat: 2, repeatDelay: 1.1, transformOrigin: '540px 745px' }, W.L[0] + 1.4);
+  tl.to($('endLine'), { keyframes: [{ scaleX: .6, duration: .5 }, { scaleX: 1, duration: .5 }], repeat: 2, transformOrigin: '50% 50%' }, W.L[0] + 1.6);
+  // captions
+  for (const K of CAPS) { const c = K.c;
+    tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, Math.min(c.en, W.L[0] + 99));
+    tl.fromTo(K.g, { scale: .86, transformOrigin: '540px 1430px' }, { scale: 1, duration: .2, ease: 'back.out(2.2)', ...IR }, c.sn);
+    const nW = K.words.length, nT = c.wt.length;
+    K.words.forEach((w, i) => tl.to(w, { opacity: 1, duration: .08 }, c.wt[Math.min(nT - 1, Math.floor(i * nT / nW))])); }
+  return tl;
+}
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>
