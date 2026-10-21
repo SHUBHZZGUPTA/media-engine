@@ -1,0 +1,29 @@
+{
+ "id": "dig-maps",
+ "files": [
+  {
+   "name": "earth_bm_4k.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&LAYERS=BlueMarble_NextGeneration&BBOX=-180,-90,180,90&WIDTH=4096&HEIGHT=2048"
+  },
+  {
+   "name": "earth_relief_4k.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-180,-90,180,90&WIDTH=4096&HEIGHT=2048"
+  },
+  {
+   "name": "earth_night_4k.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&LAYERS=VIIRS_Black_Marble&BBOX=-180,-90,180,90&WIDTH=4096&HEIGHT=2048"
+  },
+  {
+   "name": "kola_relief.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=1113194.9,8859142.8,5009377.1,11753184.6&WIDTH=3000&HEIGHT=2000"
+  },
+  {
+   "name": "india_relief.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=6679169.4,445640.1,11131949.1,4579425.8&WIDTH=2800&HEIGHT=2600"
+  },
+  {
+   "name": "pacific_relief.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-13914936.3,-5160979.4,-7235766.9,-1345708.4&WIDTH=3600&HEIGHT=2000"
+  }
+ ]
+}
