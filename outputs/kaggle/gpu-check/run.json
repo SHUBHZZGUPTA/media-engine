@@ -1,0 +1,24 @@
+{
+ "job": "gpu-check",
+ "kernel": "shubhzzgupta07/me-gpu-check",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-gpu-check",
+ "gpu_quota_before": {
+  "used_h": 0.0,
+  "remaining_h": 30.0,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-10-21T04:16:18+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-10-21T04:16:49+00:00",
+ "files": [
+  "gpu_check.json",
+  "me-gpu-check.log"
+ ],
+ "gpu_quota_after": {
+  "used_h": 0.01,
+  "remaining_h": 29.99,
+  "total_h": 30.0
+ }
+}

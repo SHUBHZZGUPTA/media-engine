@@ -1,0 +1,33 @@
+[{"stream_name":"stdout","time":11.542868513,"data":"{\n"}
+,{"stream_name":"stdout","time":11.542923892,"data":" \"python\": \"3.13.15\",\n"}
+,{"stream_name":"stdout","time":11.542935299,"data":" \"nvidia_smi\": \"Tesla T4, 15360 MiB, 580.178.04\\nTesla T4, 15360 MiB, 580.178.04\",\n"}
+,{"stream_name":"stdout","time":11.54293807,"data":" \"ram_gb\": 33.7,\n"}
+,{"stream_name":"stdout","time":11.542940402,"data":" \"cpus\": 4,\n"}
+,{"stream_name":"stdout","time":11.542943597,"data":" \"disk_free_gb /kaggle/working\": 20.9,\n"}
+,{"stream_name":"stdout","time":11.542961192,"data":" \"disk_free_gb /tmp\": 1146.0,\n"}
+,{"stream_name":"stdout","time":11.542965349,"data":" \"internet huggingface\": 200,\n"}
+,{"stream_name":"stdout","time":11.54296927,"data":" \"internet github\": 200,\n"}
+,{"stream_name":"stdout","time":11.542972681,"data":" \"torch\": \"2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":11.542976686,"data":" \"cuda_available\": true,\n"}
+,{"stream_name":"stdout","time":11.542980438,"data":" \"gpus\": [\n"}
+,{"stream_name":"stdout","time":11.542983727,"data":"  {\n"}
+,{"stream_name":"stdout","time":11.542986894,"data":"   \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":11.542990476,"data":"   \"vram_gb\": 15.6,\n"}
+,{"stream_name":"stdout","time":11.542994095,"data":"   \"compute_capability\": \"7.5\"\n"}
+,{"stream_name":"stdout","time":11.542997511,"data":"  },\n"}
+,{"stream_name":"stdout","time":11.543000686,"data":"  {\n"}
+,{"stream_name":"stdout","time":11.543003831,"data":"   \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":11.543007094,"data":"   \"vram_gb\": 15.6,\n"}
+,{"stream_name":"stdout","time":11.543010266,"data":"   \"compute_capability\": \"7.5\"\n"}
+,{"stream_name":"stdout","time":11.543013577,"data":"  }\n"}
+,{"stream_name":"stdout","time":11.543016695,"data":" ],\n"}
+,{"stream_name":"stdout","time":11.543019724,"data":" \"bf16_supported\": true,\n"}
+,{"stream_name":"stdout","time":11.543023178,"data":" \"fp16_tflops_gpu0\": 22.8\n"}
+,{"stream_name":"stdout","time":11.543028108,"data":"}\n"}
+,{"stream_name":"stderr","time":17.005796604,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":17.005826317,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":17.314675759,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":17.314700625,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":18.099202696,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":19.179771804,"data":"[NbConvertApp] Writing 286666 bytes to __results__.html\n"}
+]
