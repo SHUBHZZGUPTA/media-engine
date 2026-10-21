@@ -1,109 +1,108 @@
-[{"stream_name":"stdout","time":35.550806272,"data":"[   34.9s] imports ready\n"}
-,{"stream_name":"stderr","time":35.551084368,"data":"/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.\n"}
-,{"stream_name":"stderr","time":35.55109607,"data":"  deprecate(\"torch_dtype\", \"1.0.0\", _TORCH_DTYPE_DEPRECATION_MESSAGE)\n"}
-,{"stream_name":"stderr","time":36.851303432,"data":"\rFetching 18 files:   0%|          | 0/18 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
-,{"stream_name":"stderr","time":36.851345077,"data":"WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
-,{"stream_name":"stderr","time":170.26512741,"data":"\rFetching 18 files:  11%|█         | 2/18 [00:00\u003c00:01,  9.51it/s]\rFetching 18 files:  33%|███▎      | 6/18 [00:00\u003c00:00, 15.02it/s]\rFetching 18 files:  50%|█████     | 9/18 [00:00\u003c00:00, 12.83it/s]\rFetching 18 files:  61%|██████    | 11/18 [00:10\u003c00:10,  1.56s/it]\rFetching 18 files:  67%|██████▋   | 12/18 [00:14\u003c00:12,  2.01s/it]\rFetching 18 files:  78%|███████▊  | 14/18 [01:19\u003c00:48, 12.04s/it]\rFetching 18 files:  83%|████████▎ | 15/18 [01:25\u003c00:32, 10.85s/it]\rFetching 18 files:  89%|████████▉ | 16/18 [01:25\u003c00:17,  8.56s/it]\rFetching 18 files:  94%|█████████▍| 17/18 [02:13\u003c00:17, 17.91s/it]\rFetching 18 files: 100%|██████████| 18/18 [02:13\u003c00:00,  7.42s/it]\n"}
-,{"stream_name":"stderr","time":186.842823433,"data":"\rLoading pipeline components...:   0%|          | 0/5 [00:00\u003c?, ?it/s]\rLoading pipeline components...:  20%|██        | 1/5 [00:14\u003c00:56, 14.07s/it]\rLoading pipeline components...:  40%|████      | 2/5 [00:14\u003c00:18,  6.29s/it]\n"}
-,{"stream_name":"stderr","time":186.948123023,"data":"\rLoading weights:   0%|          | 0/398 [00:00\u003c?, ?it/s]\u001b[A\n"}
-,{"stream_name":"stderr","time":187.0610206,"data":"\rLoading weights:  15%|█▌        | 61/398 [00:00\u003c00:00, 590.26it/s]\u001b[A\n"}
-,{"stream_name":"stderr","time":187.162258434,"data":"\rLoading weights:  30%|███       | 121/398 [00:00\u003c00:00, 554.35it/s]\u001b[A\n"}
-,{"stream_name":"stderr","time":187.262983415,"data":"\rLoading weights:  47%|████▋     | 186/398 [00:00\u003c00:00, 592.84it/s]\u001b[A\n"}
-,{"stream_name":"stderr","time":187.366656266,"data":"\rLoading weights:  62%|██████▏   | 246/398 [00:00\u003c00:00, 593.90it/s]\u001b[A\n"}
-,{"stream_name":"stderr","time":187.42820134,"data":"\rLoading weights:  80%|███████▉  | 317/398 [00:00\u003c00:00, 626.65it/s]\u001b[A\rLoading weights: 100%|██████████| 398/398 [00:00\u003c00:00, 682.22it/s]\n"}
-,{"stream_name":"stderr","time":187.495939896,"data":"\rLoading pipeline components...:  60%|██████    | 3/5 [00:15\u003c00:07,  3.81s/it]\n"}
-,{"stream_name":"stderr","time":212.962419228,"data":"\rLoading checkpoint shards:   0%|          | 0/3 [00:00\u003c?, ?it/s]\u001b[A\n"}
-,{"stream_name":"stderr","time":252.242152269,"data":"\rLoading checkpoint shards:  33%|███▎      | 1/3 [00:25\u003c00:50, 25.47s/it]\u001b[A\n"}
-,{"stream_name":"stderr","time":270.870733497,"data":"\rLoading checkpoint shards:  67%|██████▋   | 2/3 [01:04\u003c00:33, 33.59s/it]\u001b[A\n"}
-,{"stream_name":"stderr","time":270.871617837,"data":"\rLoading checkpoint shards: 100%|██████████| 3/3 [01:23\u003c00:00, 26.76s/it]\u001b[A\rLoading checkpoint shards: 100%|██████████| 3/3 [01:23\u003c00:00, 27.79s/it]\n"}
-,{"stream_name":"stderr","time":270.875852242,"data":"\rLoading pipeline components...: 100%|██████████| 5/5 [01:39\u003c00:00, 25.26s/it]\rLoading pipeline components...: 100%|██████████| 5/5 [01:39\u003c00:00, 19.84s/it]\n"}
-,{"stream_name":"stdout","time":270.877162813,"data":"[  270.2s] model loaded to RAM\n"}
-,{"stream_name":"stdout","time":315.592503008,"data":"[  314.9s] prompt encoded (487 tokens)\n"}
-,{"stream_name":"stderr","time":315.594245406,"data":"There are modules in ZImageTransformer2DModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\n"}
-,{"stream_name":"stderr","time":326.412337187,"data":"Attention backends are an experimental feature and the API may be subject to change.\n"}
-,{"stream_name":"stdout","time":326.41406538,"data":"[  325.8s] image model on GPU 0\n"}
-,{"stream_name":"stderr","time":374.078187355,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:05\u003c00:44,  5.60s/it]\r 22%|██▏       | 2/9 [00:08\u003c00:28,  4.14s/it]\r 33%|███▎      | 3/9 [00:14\u003c00:28,  4.71s/it]\r 44%|████▍     | 4/9 [00:19\u003c00:24,  5.00s/it]\r 56%|█████▌    | 5/9 [00:25\u003c00:20,  5.18s/it]\r 67%|██████▋   | 6/9 [00:30\u003c00:15,  5.31s/it]\r 78%|███████▊  | 7/9 [00:36\u003c00:10,  5.41s/it]\r 89%|████████▉ | 8/9 [00:41\u003c00:05,  5.50s/it]\r100%|██████████| 9/9 [00:47\u003c00:00,  5.57s/it]\r100%|██████████| 9/9 [00:47\u003c00:00,  5.29s/it]\n"}
-,{"stream_name":"stdout","time":376.512733934,"data":"[  375.9s] seed 11 denoised (NaN/inf in result)\n"}
-,{"stream_name":"stderr","time":429.247331203,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:03\u003c00:27,  3.41s/it]\r 22%|██▏       | 2/9 [00:09\u003c00:33,  4.84s/it]\r 33%|███▎      | 3/9 [00:15\u003c00:31,  5.33s/it]\r 44%|████▍     | 4/9 [00:21\u003c00:27,  5.59s/it]\r 56%|█████▌    | 5/9 [00:27\u003c00:23,  5.77s/it]\r 67%|██████▋   | 6/9 [00:33\u003c00:17,  5.94s/it]\r 78%|███████▊  | 7/9 [00:39\u003c00:12,  6.08s/it]\r 89%|████████▉ | 8/9 [00:46\u003c00:06,  6.21s/it]\r100%|██████████| 9/9 [00:52\u003c00:00,  6.26s/it]\r100%|██████████| 9/9 [00:52\u003c00:00,  5.86s/it]\n"}
-,{"stream_name":"stdout","time":431.861712567,"data":"[  431.2s] seed 22 denoised (NaN/inf in result)\n"}
-,{"stream_name":"stderr","time":483.711958314,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:03\u003c00:28,  3.62s/it]\r 22%|██▏       | 2/9 [00:09\u003c00:35,  5.09s/it]\r 33%|███▎      | 3/9 [00:15\u003c00:33,  5.53s/it]\r 44%|████▍     | 4/9 [00:21\u003c00:28,  5.71s/it]\r 56%|█████▌    | 5/9 [00:27\u003c00:23,  5.80s/it]\r 67%|██████▋   | 6/9 [00:33\u003c00:17,  5.85s/it]\r 78%|███████▊  | 7/9 [00:39\u003c00:11,  5.90s/it]\r 89%|████████▉ | 8/9 [00:45\u003c00:05,  5.95s/it]\r100%|██████████| 9/9 [00:51\u003c00:00,  5.99s/it]\r100%|██████████| 9/9 [00:51\u003c00:00,  5.76s/it]\n"}
-,{"stream_name":"stdout","time":486.259958115,"data":"[  485.6s] seed 33 denoised (NaN/inf in result)\n"}
-,{"stream_name":"stderr","time":539.09193512,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:03\u003c00:28,  3.62s/it]\r 22%|██▏       | 2/9 [00:09\u003c00:35,  5.12s/it]\r 33%|███▎      | 3/9 [00:15\u003c00:33,  5.61s/it]\r 44%|████▍     | 4/9 [00:22\u003c00:29,  5.84s/it]\r 56%|█████▌    | 5/9 [00:28\u003c00:23,  5.96s/it]\r 67%|██████▋   | 6/9 [00:34\u003c00:18,  6.03s/it]\r 78%|███████▊  | 7/9 [00:40\u003c00:12,  6.06s/it]\r 89%|████████▉ | 8/9 [00:46\u003c00:06,  6.07s/it]\r100%|██████████| 9/9 [00:52\u003c00:00,  6.08s/it]\r100%|██████████| 9/9 [00:52\u003c00:00,  5.87s/it]\n"}
-,{"stream_name":"stdout","time":541.624437776,"data":"[  541.0s] seed 44 denoised (NaN/inf in result)\n"}
-,{"stream_name":"stderr","time":550.249197688,"data":"There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\n"}
-,{"stream_name":"stderr","time":554.899578235,"data":"/usr/local/lib/python3.13/dist-packages/diffusers/image_processor.py:142: RuntimeWarning: invalid value encountered in cast\n"}
-,{"stream_name":"stderr","time":554.899610932,"data":"  images = (images * 255).round().astype(\"uint8\")\n"}
-,{"stream_name":"stdout","time":555.039587213,"data":"[  554.4s] saved photo_seed11.png\n"}
-,{"stream_name":"stdout","time":558.727976714,"data":"[  558.1s] saved photo_seed22.png\n"}
-,{"stream_name":"stdout","time":562.458940307,"data":"[  561.8s] saved photo_seed33.png\n"}
-,{"stream_name":"stdout","time":566.231904034,"data":"[  565.6s] saved photo_seed44.png\n"}
-,{"stream_name":"stdout","time":566.233564301,"data":"{\n"}
-,{"stream_name":"stdout","time":566.23358032,"data":" \"params\": {\n"}
-,{"stream_name":"stdout","time":566.233589585,"data":"  \"prompt\": \"Candid, high-quality iPhone mirror selfie taken inside a busy, real commercial gym in Mumbai. The subject is one adult woman in her late 20s: warm light-olive skin with faint natural freckles across her nose and upper cheeks, almond-shaped dark-brown eyes, thick defined dark eyebrows, full lips in a natural mauve-nude colour, dark brown-black hair with copper balayage ends worn in a messy low bun with loose face-framing strands and a few flyaways, chunky silver hoop earrings. Curvy fitness-model build: narrow cinched waist with subtle visible abs, full bust, very full wide hips and high, round glutes, slim thighs, slim knees and calves. She wears a plain matte black bikini set with a supportive top and full-coverage bottoms, and clean white sneakers. She stands about two metres from the gym's large wall mirror, body turned slightly to a three-quarter angle, weight shifted onto one leg, in a relaxed, natural stance. She holds a black iPhone low at chest height in her right hand so her entire face stays clearly visible in the mirror reflection, and she looks at the phone screen with a warm, playful half-smile, caught mid-moment. The framing is slightly off-centre and slightly tilted, like a real phone selfie, showing her from head to mid-thigh in the mirror. Background in the mirror: a real working gym with a dumbbell rack, a flat bench, rubber floor tiles with scuff marks, a towel and a water bottle on the floor, cable machines, and other people blurred only by motion. Lighting: soft daylight from a large side window as the one main light source, with ordinary overhead gym lights, natural shadows, true-to-life colours. Shot on the iPhone main camera at 1x in standard photo mode, not portrait mode: natural deep depth of field with the background in focus, slight wide-angle phone perspective, crisp sharp detail, clean high-quality iPhone image with only faint natural noise in the shadows. Real unretouched skin with visible pores, fine peach fuzz, natural skin-tone variation and a matte finish; bare face with only natural lip colour and no glam makeup. Photorealistic photograph of a real person, one woman only, anatomically correct hands holding the phone, no text, no watermark, no logos, no brand names.\",\n"}
-,{"stream_name":"stdout","time":566.233622355,"data":"  \"seeds\": [\n"}
-,{"stream_name":"stdout","time":566.233625268,"data":"   11,\n"}
-,{"stream_name":"stdout","time":566.233627501,"data":"   22,\n"}
-,{"stream_name":"stdout","time":566.233629564,"data":"   33,\n"}
-,{"stream_name":"stdout","time":566.233631614,"data":"   44\n"}
-,{"stream_name":"stdout","time":566.233633689,"data":"  ],\n"}
-,{"stream_name":"stdout","time":566.233635879,"data":"  \"width\": 1152,\n"}
-,{"stream_name":"stdout","time":566.233638029,"data":"  \"height\": 1536,\n"}
-,{"stream_name":"stdout","time":566.233640459,"data":"  \"steps\": 9\n"}
-,{"stream_name":"stdout","time":566.233642678,"data":" },\n"}
-,{"stream_name":"stdout","time":566.23364478,"data":" \"timings\": {\n"}
-,{"stream_name":"stdout","time":566.233646915,"data":"  \"imports ready\": 34.9,\n"}
-,{"stream_name":"stdout","time":566.233649105,"data":"  \"model loaded to RAM\": 270.2,\n"}
-,{"stream_name":"stdout","time":566.233651437,"data":"  \"prompt encoded (487 tokens)\": 314.9,\n"}
-,{"stream_name":"stdout","time":566.233654641,"data":"  \"image model on GPU 0\": 325.8,\n"}
-,{"stream_name":"stdout","time":566.233669626,"data":"  \"seed 11 denoised (NaN/inf in result)\": 375.9,\n"}
-,{"stream_name":"stdout","time":566.233673799,"data":"  \"seed 22 denoised (NaN/inf in result)\": 431.2,\n"}
-,{"stream_name":"stdout","time":566.233677632,"data":"  \"seed 33 denoised (NaN/inf in result)\": 485.6,\n"}
-,{"stream_name":"stdout","time":566.233681519,"data":"  \"seed 44 denoised (NaN/inf in result)\": 541.0,\n"}
-,{"stream_name":"stdout","time":566.233685364,"data":"  \"saved photo_seed11.png\": 554.4,\n"}
-,{"stream_name":"stdout","time":566.233689167,"data":"  \"saved photo_seed22.png\": 558.1,\n"}
-,{"stream_name":"stdout","time":566.233692467,"data":"  \"saved photo_seed33.png\": 561.8,\n"}
-,{"stream_name":"stdout","time":566.233695717,"data":"  \"saved photo_seed44.png\": 565.6\n"}
-,{"stream_name":"stdout","time":566.23369906,"data":" },\n"}
-,{"stream_name":"stdout","time":566.233702169,"data":" \"images\": {\n"}
-,{"stream_name":"stdout","time":566.233705425,"data":"  \"11\": {\n"}
-,{"stream_name":"stdout","time":566.233708615,"data":"   \"latent_nan_or_inf\": true,\n"}
-,{"stream_name":"stdout","time":566.233711886,"data":"   \"mean_brightness\": 0.0,\n"}
-,{"stream_name":"stdout","time":566.233715159,"data":"   \"pixel_std\": 0.0\n"}
-,{"stream_name":"stdout","time":566.233718462,"data":"  },\n"}
-,{"stream_name":"stdout","time":566.233721597,"data":"  \"22\": {\n"}
-,{"stream_name":"stdout","time":566.233725022,"data":"   \"latent_nan_or_inf\": true,\n"}
-,{"stream_name":"stdout","time":566.2337283,"data":"   \"mean_brightness\": 0.0,\n"}
-,{"stream_name":"stdout","time":566.233733442,"data":"   \"pixel_std\": 0.0\n"}
-,{"stream_name":"stdout","time":566.23374021,"data":"  },\n"}
-,{"stream_name":"stdout","time":566.233742587,"data":"  \"33\": {\n"}
-,{"stream_name":"stdout","time":566.233744726,"data":"   \"latent_nan_or_inf\": true,\n"}
-,{"stream_name":"stdout","time":566.233746931,"data":"   \"mean_brightness\": 0.0,\n"}
-,{"stream_name":"stdout","time":566.23374909,"data":"   \"pixel_std\": 0.0\n"}
-,{"stream_name":"stdout","time":566.233751811,"data":"  },\n"}
-,{"stream_name":"stdout","time":566.233766819,"data":"  \"44\": {\n"}
-,{"stream_name":"stdout","time":566.233770906,"data":"   \"latent_nan_or_inf\": true,\n"}
-,{"stream_name":"stdout","time":566.233774975,"data":"   \"mean_brightness\": 0.0,\n"}
-,{"stream_name":"stdout","time":566.233779061,"data":"   \"pixel_std\": 0.0\n"}
-,{"stream_name":"stdout","time":566.23378712,"data":"  }\n"}
-,{"stream_name":"stdout","time":566.23379041,"data":" },\n"}
-,{"stream_name":"stdout","time":566.233793477,"data":" \"diffusers\": \"0.40.0\",\n"}
-,{"stream_name":"stdout","time":566.233796814,"data":" \"gpus\": [\n"}
-,{"stream_name":"stdout","time":566.233800005,"data":"  \"Tesla T4\",\n"}
-,{"stream_name":"stdout","time":566.233803214,"data":"  \"Tesla T4\"\n"}
-,{"stream_name":"stdout","time":566.233806384,"data":" ],\n"}
-,{"stream_name":"stdout","time":566.233809451,"data":" \"prompt_tokens\": 487,\n"}
-,{"stream_name":"stdout","time":566.233812813,"data":" \"peak_vram_gb_gpu0_denoise\": 13.2,\n"}
-,{"stream_name":"stdout","time":566.2338161,"data":" \"files\": [\n"}
-,{"stream_name":"stdout","time":566.233819295,"data":"  \"photo_seed11.png\",\n"}
-,{"stream_name":"stdout","time":566.233822547,"data":"  \"photo_seed22.png\",\n"}
-,{"stream_name":"stdout","time":566.233825735,"data":"  \"photo_seed33.png\",\n"}
-,{"stream_name":"stdout","time":566.233829025,"data":"  \"photo_seed44.png\"\n"}
-,{"stream_name":"stdout","time":566.233832193,"data":" ]\n"}
-,{"stream_name":"stdout","time":566.233835297,"data":"}\n"}
-,{"stream_name":"stderr","time":574.335292388,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":574.335325086,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":574.615970616,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":574.615996841,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":575.444888941,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":576.405923717,"data":"[NbConvertApp] Writing 302023 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":45.105703337,"data":"[   44.2s] imports ready\n"}
+,{"stream_name":"stderr","time":45.10611115,"data":"/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.\n"}
+,{"stream_name":"stderr","time":45.106128177,"data":"  deprecate(\"torch_dtype\", \"1.0.0\", _TORCH_DTYPE_DEPRECATION_MESSAGE)\n"}
+,{"stream_name":"stderr","time":45.392848482,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":45.39288137,"data":"WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":195.293120223,"data":"\rFetching 18 files:   0%|          | 0/18 [00:00\u003c?, ?it/s]\rFetching 18 files:  11%|█         | 2/18 [00:00\u003c00:01, 15.36it/s]\rFetching 18 files:  39%|███▉      | 7/18 [00:00\u003c00:00, 29.45it/s]\rFetching 18 files:  56%|█████▌    | 10/18 [00:00\u003c00:00, 21.83it/s]\rFetching 18 files:  67%|██████▋   | 12/18 [00:19\u003c00:00, 21.83it/s]\rFetching 18 files:  72%|███████▏  | 13/18 [00:33\u003c00:20,  4.01s/it]\rFetching 18 files:  78%|███████▊  | 14/18 [01:24\u003c00:44, 11.07s/it]\rFetching 18 files:  83%|████████▎ | 15/18 [01:39\u003c00:34, 11.64s/it]\rFetching 18 files:  94%|█████████▍| 17/18 [02:13\u003c00:13, 13.43s/it]\rFetching 18 files: 100%|██████████| 18/18 [02:29\u003c00:00, 14.00s/it]\rFetching 18 files: 100%|██████████| 18/18 [02:29\u003c00:00,  8.32s/it]\n"}
+,{"stream_name":"stderr","time":199.225135501,"data":"\rLoading pipeline components...:   0%|          | 0/5 [00:00\u003c?, ?it/s]\rLoading pipeline components...:  20%|██        | 1/5 [00:03\u003c00:14,  3.52s/it]\n"}
+,{"stream_name":"stderr","time":225.452489012,"data":"\rLoading checkpoint shards:   0%|          | 0/3 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":264.581590406,"data":"\rLoading checkpoint shards:  33%|███▎      | 1/3 [00:26\u003c00:52, 26.23s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":283.423563756,"data":"\rLoading checkpoint shards:  67%|██████▋   | 2/3 [01:05\u003c00:33, 33.82s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":283.425924371,"data":"\rLoading checkpoint shards: 100%|██████████| 3/3 [01:24\u003c00:00, 26.98s/it]\u001b[A\rLoading checkpoint shards: 100%|██████████| 3/3 [01:24\u003c00:00, 28.07s/it]\n"}
+,{"stream_name":"stderr","time":284.633393144,"data":"\rLoading pipeline components...:  60%|██████    | 3/5 [01:27\u003c01:04, 32.12s/it]\rLoading pipeline components...:  80%|████████  | 4/5 [01:28\u003c00:21, 21.33s/it]\n"}
+,{"stream_name":"stderr","time":284.735559868,"data":"\rLoading weights:   0%|          | 0/398 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":284.845732457,"data":"\rLoading weights:  23%|██▎       | 92/398 [00:00\u003c00:00, 917.06it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":284.959467373,"data":"\rLoading weights:  46%|████▌     | 184/398 [00:00\u003c00:00, 867.13it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":285.059749272,"data":"\rLoading weights:  68%|██████▊   | 271/398 [00:00\u003c00:00, 818.72it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":285.107199011,"data":"\rLoading weights:  89%|████████▉ | 354/398 [00:00\u003c00:00, 822.01it/s]\u001b[A\rLoading weights: 100%|██████████| 398/398 [00:00\u003c00:00, 843.46it/s]\n"}
+,{"stream_name":"stderr","time":285.15323875,"data":"\rLoading pipeline components...: 100%|██████████| 5/5 [01:29\u003c00:00, 14.53s/it]\rLoading pipeline components...: 100%|██████████| 5/5 [01:29\u003c00:00, 17.90s/it]\n"}
+,{"stream_name":"stdout","time":285.154056098,"data":"[  284.3s] model loaded to RAM\n"}
+,{"stream_name":"stdout","time":330.342763813,"data":"[  329.4s] prompt encoded (487 tokens)\n"}
+,{"stream_name":"stdout","time":333.978568748,"data":"[  333.1s] image model on GPU 0\n"}
+,{"stream_name":"stderr","time":752.500502638,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:38\u003c05:04, 38.05s/it]\r 22%|██▏       | 2/9 [01:20\u003c04:45, 40.82s/it]\r 33%|███▎      | 3/9 [02:10\u003c04:29, 44.91s/it]\r 44%|████▍     | 4/9 [02:58\u003c03:49, 45.91s/it]\r 56%|█████▌    | 5/9 [03:46\u003c03:06, 46.74s/it]\r 67%|██████▋   | 6/9 [04:34\u003c02:21, 47.21s/it]\r 78%|███████▊  | 7/9 [05:22\u003c01:35, 47.55s/it]\r 89%|████████▉ | 8/9 [06:10\u003c00:47, 47.58s/it]\r100%|██████████| 9/9 [06:58\u003c00:00, 47.78s/it]\r100%|██████████| 9/9 [06:58\u003c00:00, 46.50s/it]\n"}
+,{"stream_name":"stdout","time":753.563688675,"data":"[  752.7s] seed 11 denoised\n"}
+,{"stream_name":"stderr","time":1185.187129025,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:47\u003c06:18, 47.28s/it]\r 22%|██▏       | 2/9 [01:35\u003c05:35, 47.91s/it]\r 33%|███▎      | 3/9 [02:23\u003c04:48, 48.05s/it]\r 44%|████▍     | 4/9 [03:11\u003c04:00, 48.07s/it]\r 56%|█████▌    | 5/9 [03:59\u003c03:12, 48.03s/it]\r 67%|██████▋   | 6/9 [04:47\u003c02:24, 48.01s/it]\r 78%|███████▊  | 7/9 [05:35\u003c01:35, 47.96s/it]\r 89%|████████▉ | 8/9 [06:23\u003c00:47, 47.91s/it]\r100%|██████████| 9/9 [07:11\u003c00:00, 47.96s/it]\r100%|██████████| 9/9 [07:11\u003c00:00, 47.96s/it]\n"}
+,{"stream_name":"stdout","time":1186.244698264,"data":"[ 1185.3s] seed 22 denoised\n"}
+,{"stream_name":"stderr","time":1618.919187822,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:47\u003c06:17, 47.23s/it]\r 22%|██▏       | 2/9 [01:35\u003c05:35, 47.90s/it]\r 33%|███▎      | 3/9 [02:23\u003c04:48, 48.11s/it]\r 44%|████▍     | 4/9 [03:12\u003c04:00, 48.16s/it]\r 56%|█████▌    | 5/9 [04:00\u003c03:12, 48.15s/it]\r 67%|██████▋   | 6/9 [04:48\u003c02:24, 48.15s/it]\r 78%|███████▊  | 7/9 [05:36\u003c01:36, 48.13s/it]\r 89%|████████▉ | 8/9 [06:24\u003c00:48, 48.12s/it]\r100%|██████████| 9/9 [07:12\u003c00:00, 48.08s/it]\r100%|██████████| 9/9 [07:12\u003c00:00, 48.07s/it]\n"}
+,{"stream_name":"stdout","time":1619.974540825,"data":"[ 1619.1s] seed 33 denoised\n"}
+,{"stream_name":"stderr","time":2050.813604834,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:46\u003c06:14, 46.84s/it]\r 22%|██▏       | 2/9 [01:34\u003c05:32, 47.49s/it]\r 33%|███▎      | 3/9 [02:22\u003c04:46, 47.69s/it]\r 44%|████▍     | 4/9 [03:10\u003c03:59, 47.80s/it]\r 56%|█████▌    | 5/9 [03:58\u003c03:11, 47.87s/it]\r 67%|██████▋   | 6/9 [04:46\u003c02:23, 47.92s/it]\r 78%|███████▊  | 7/9 [05:34\u003c01:35, 47.97s/it]\r 89%|████████▉ | 8/9 [06:22\u003c00:47, 47.99s/it]\r100%|██████████| 9/9 [07:10\u003c00:00, 48.01s/it]\r100%|██████████| 9/9 [07:10\u003c00:00, 47.87s/it]\n"}
+,{"stream_name":"stdout","time":2051.864075179,"data":"[ 2051.0s] seed 44 denoised\n"}
+,{"stream_name":"stderr","time":2063.489143185,"data":"There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\n"}
+,{"stream_name":"stdout","time":2070.508248607,"data":"[ 2069.6s] saved photo_seed11.png\n"}
+,{"stream_name":"stdout","time":2076.092831141,"data":"[ 2075.2s] saved photo_seed22.png\n"}
+,{"stream_name":"stdout","time":2081.936868417,"data":"[ 2081.0s] saved photo_seed33.png\n"}
+,{"stream_name":"stdout","time":2088.028909598,"data":"[ 2087.1s] saved photo_seed44.png\n"}
+,{"stream_name":"stdout","time":2088.032081761,"data":"{\n"}
+,{"stream_name":"stdout","time":2088.032105885,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":2088.032117639,"data":"  \"prompt\": \"Candid, high-quality iPhone mirror selfie taken inside a busy, real commercial gym in Mumbai. The subject is one adult woman in her late 20s: warm light-olive skin with faint natural freckles across her nose and upper cheeks, almond-shaped dark-brown eyes, thick defined dark eyebrows, full lips in a natural mauve-nude colour, dark brown-black hair with copper balayage ends worn in a messy low bun with loose face-framing strands and a few flyaways, chunky silver hoop earrings. Curvy fitness-model build: narrow cinched waist with subtle visible abs, full bust, very full wide hips and high, round glutes, slim thighs, slim knees and calves. She wears a plain matte black bikini set with a supportive top and full-coverage bottoms, and clean white sneakers. She stands about two metres from the gym's large wall mirror, body turned slightly to a three-quarter angle, weight shifted onto one leg, in a relaxed, natural stance. She holds a black iPhone low at chest height in her right hand so her entire face stays clearly visible in the mirror reflection, and she looks at the phone screen with a warm, playful half-smile, caught mid-moment. The framing is slightly off-centre and slightly tilted, like a real phone selfie, showing her from head to mid-thigh in the mirror. Background in the mirror: a real working gym with a dumbbell rack, a flat bench, rubber floor tiles with scuff marks, a towel and a water bottle on the floor, cable machines, and other people blurred only by motion. Lighting: soft daylight from a large side window as the one main light source, with ordinary overhead gym lights, natural shadows, true-to-life colours. Shot on the iPhone main camera at 1x in standard photo mode, not portrait mode: natural deep depth of field with the background in focus, slight wide-angle phone perspective, crisp sharp detail, clean high-quality iPhone image with only faint natural noise in the shadows. Real unretouched skin with visible pores, fine peach fuzz, natural skin-tone variation and a matte finish; bare face with only natural lip colour and no glam makeup. Photorealistic photograph of a real person, one woman only, anatomically correct hands holding the phone, no text, no watermark, no logos, no brand names.\",\n"}
+,{"stream_name":"stdout","time":2088.032136153,"data":"  \"seeds\": [\n"}
+,{"stream_name":"stdout","time":2088.03213974,"data":"   11,\n"}
+,{"stream_name":"stdout","time":2088.032142863,"data":"   22,\n"}
+,{"stream_name":"stdout","time":2088.03214595,"data":"   33,\n"}
+,{"stream_name":"stdout","time":2088.032148964,"data":"   44\n"}
+,{"stream_name":"stdout","time":2088.032152065,"data":"  ],\n"}
+,{"stream_name":"stdout","time":2088.03215514,"data":"  \"width\": 1152,\n"}
+,{"stream_name":"stdout","time":2088.032158262,"data":"  \"height\": 1536,\n"}
+,{"stream_name":"stdout","time":2088.032161339,"data":"  \"steps\": 9\n"}
+,{"stream_name":"stdout","time":2088.032164341,"data":" },\n"}
+,{"stream_name":"stdout","time":2088.032167423,"data":" \"timings\": {\n"}
+,{"stream_name":"stdout","time":2088.032170426,"data":"  \"imports ready\": 44.2,\n"}
+,{"stream_name":"stdout","time":2088.032185749,"data":"  \"model loaded to RAM\": 284.3,\n"}
+,{"stream_name":"stdout","time":2088.03218861,"data":"  \"prompt encoded (487 tokens)\": 329.4,\n"}
+,{"stream_name":"stdout","time":2088.032191114,"data":"  \"image model on GPU 0\": 333.1,\n"}
+,{"stream_name":"stdout","time":2088.032193639,"data":"  \"seed 11 denoised\": 752.7,\n"}
+,{"stream_name":"stdout","time":2088.032196138,"data":"  \"seed 22 denoised\": 1185.3,\n"}
+,{"stream_name":"stdout","time":2088.032198672,"data":"  \"seed 33 denoised\": 1619.1,\n"}
+,{"stream_name":"stdout","time":2088.032201088,"data":"  \"seed 44 denoised\": 2051.0,\n"}
+,{"stream_name":"stdout","time":2088.032203518,"data":"  \"saved photo_seed11.png\": 2069.6,\n"}
+,{"stream_name":"stdout","time":2088.032206084,"data":"  \"saved photo_seed22.png\": 2075.2,\n"}
+,{"stream_name":"stdout","time":2088.032208525,"data":"  \"saved photo_seed33.png\": 2081.0,\n"}
+,{"stream_name":"stdout","time":2088.032211038,"data":"  \"saved photo_seed44.png\": 2087.1\n"}
+,{"stream_name":"stdout","time":2088.032213852,"data":" },\n"}
+,{"stream_name":"stdout","time":2088.032216218,"data":" \"images\": {\n"}
+,{"stream_name":"stdout","time":2088.032218617,"data":"  \"11\": {\n"}
+,{"stream_name":"stdout","time":2088.03222103,"data":"   \"latent_nan_or_inf\": false,\n"}
+,{"stream_name":"stdout","time":2088.032223524,"data":"   \"mean_brightness\": 106.0,\n"}
+,{"stream_name":"stdout","time":2088.032226029,"data":"   \"pixel_std\": 54.1\n"}
+,{"stream_name":"stdout","time":2088.032228482,"data":"  },\n"}
+,{"stream_name":"stdout","time":2088.03223087,"data":"  \"22\": {\n"}
+,{"stream_name":"stdout","time":2088.032233229,"data":"   \"latent_nan_or_inf\": false,\n"}
+,{"stream_name":"stdout","time":2088.032235664,"data":"   \"mean_brightness\": 102.9,\n"}
+,{"stream_name":"stdout","time":2088.03223814,"data":"   \"pixel_std\": 55.3\n"}
+,{"stream_name":"stdout","time":2088.032240556,"data":"  },\n"}
+,{"stream_name":"stdout","time":2088.032242895,"data":"  \"33\": {\n"}
+,{"stream_name":"stdout","time":2088.032245243,"data":"   \"latent_nan_or_inf\": false,\n"}
+,{"stream_name":"stdout","time":2088.032247691,"data":"   \"mean_brightness\": 100.3,\n"}
+,{"stream_name":"stdout","time":2088.032250129,"data":"   \"pixel_std\": 57.9\n"}
+,{"stream_name":"stdout","time":2088.032252685,"data":"  },\n"}
+,{"stream_name":"stdout","time":2088.032254998,"data":"  \"44\": {\n"}
+,{"stream_name":"stdout","time":2088.032257347,"data":"   \"latent_nan_or_inf\": false,\n"}
+,{"stream_name":"stdout","time":2088.032259795,"data":"   \"mean_brightness\": 104.0,\n"}
+,{"stream_name":"stdout","time":2088.032262253,"data":"   \"pixel_std\": 54.8\n"}
+,{"stream_name":"stdout","time":2088.032264665,"data":"  }\n"}
+,{"stream_name":"stdout","time":2088.03226695,"data":" },\n"}
+,{"stream_name":"stdout","time":2088.032269271,"data":" \"diffusers\": \"0.40.0\",\n"}
+,{"stream_name":"stdout","time":2088.032271842,"data":" \"gpus\": [\n"}
+,{"stream_name":"stdout","time":2088.032274287,"data":"  \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":2088.032276765,"data":"  \"Tesla T4\"\n"}
+,{"stream_name":"stdout","time":2088.032279195,"data":" ],\n"}
+,{"stream_name":"stdout","time":2088.032281501,"data":" \"prompt_tokens\": 487,\n"}
+,{"stream_name":"stdout","time":2088.03228398,"data":" \"peak_vram_gb_gpu0_denoise\": 13.2,\n"}
+,{"stream_name":"stdout","time":2088.032286483,"data":" \"attention\": {\n"}
+,{"stream_name":"stdout","time":2088.032288903,"data":"  \"fp16_calls\": 1260,\n"}
+,{"stream_name":"stdout","time":2088.032291321,"data":"  \"fp32_fallbacks\": 0\n"}
+,{"stream_name":"stdout","time":2088.032296468,"data":" },\n"}
+,{"stream_name":"stdout","time":2088.03229888,"data":" \"files\": [\n"}
+,{"stream_name":"stdout","time":2088.032301265,"data":"  \"photo_seed11.png\",\n"}
+,{"stream_name":"stdout","time":2088.032303686,"data":"  \"photo_seed22.png\",\n"}
+,{"stream_name":"stdout","time":2088.032306086,"data":"  \"photo_seed33.png\",\n"}
+,{"stream_name":"stdout","time":2088.03230854,"data":"  \"photo_seed44.png\"\n"}
+,{"stream_name":"stdout","time":2088.032310982,"data":" ]\n"}
+,{"stream_name":"stdout","time":2088.032314991,"data":"}\n"}
+,{"stream_name":"stderr","time":2098.83327352,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2098.83331425,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2099.226568604,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2099.226598087,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2100.371077446,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2101.618725259,"data":"[NbConvertApp] Writing 311447 bytes to __results__.html\n"}
 ]

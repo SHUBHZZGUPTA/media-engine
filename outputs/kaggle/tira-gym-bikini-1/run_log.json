@@ -12,39 +12,39 @@
   "steps": 9
  },
  "timings": {
-  "imports ready": 34.9,
-  "model loaded to RAM": 270.2,
-  "prompt encoded (487 tokens)": 314.9,
-  "image model on GPU 0": 325.8,
-  "seed 11 denoised (NaN/inf in result)": 375.9,
-  "seed 22 denoised (NaN/inf in result)": 431.2,
-  "seed 33 denoised (NaN/inf in result)": 485.6,
-  "seed 44 denoised (NaN/inf in result)": 541.0,
-  "saved photo_seed11.png": 554.4,
-  "saved photo_seed22.png": 558.1,
-  "saved photo_seed33.png": 561.8,
-  "saved photo_seed44.png": 565.6
+  "imports ready": 44.2,
+  "model loaded to RAM": 284.3,
+  "prompt encoded (487 tokens)": 329.4,
+  "image model on GPU 0": 333.1,
+  "seed 11 denoised": 752.7,
+  "seed 22 denoised": 1185.3,
+  "seed 33 denoised": 1619.1,
+  "seed 44 denoised": 2051.0,
+  "saved photo_seed11.png": 2069.6,
+  "saved photo_seed22.png": 2075.2,
+  "saved photo_seed33.png": 2081.0,
+  "saved photo_seed44.png": 2087.1
  },
  "images": {
   "11": {
-   "latent_nan_or_inf": true,
-   "mean_brightness": 0.0,
-   "pixel_std": 0.0
+   "latent_nan_or_inf": false,
+   "mean_brightness": 106.0,
+   "pixel_std": 54.1
   },
   "22": {
-   "latent_nan_or_inf": true,
-   "mean_brightness": 0.0,
-   "pixel_std": 0.0
+   "latent_nan_or_inf": false,
+   "mean_brightness": 102.9,
+   "pixel_std": 55.3
   },
   "33": {
-   "latent_nan_or_inf": true,
-   "mean_brightness": 0.0,
-   "pixel_std": 0.0
+   "latent_nan_or_inf": false,
+   "mean_brightness": 100.3,
+   "pixel_std": 57.9
   },
   "44": {
-   "latent_nan_or_inf": true,
-   "mean_brightness": 0.0,
-   "pixel_std": 0.0
+   "latent_nan_or_inf": false,
+   "mean_brightness": 104.0,
+   "pixel_std": 54.8
   }
  },
  "diffusers": "0.40.0",
@@ -54,6 +54,10 @@
  ],
  "prompt_tokens": 487,
  "peak_vram_gb_gpu0_denoise": 13.2,
+ "attention": {
+  "fp16_calls": 1260,
+  "fp32_fallbacks": 0
+ },
  "files": [
   "photo_seed11.png",
   "photo_seed22.png",
