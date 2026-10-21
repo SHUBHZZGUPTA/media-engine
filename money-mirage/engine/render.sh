@@ -13,7 +13,7 @@ N=$(python3 -c "import json;print(len(json.loads('$SEGS')))")
 mkdir -p segs
 for i in $(seq ${1:-0} $((N-1))); do f=$(printf "seg%02d" $i)
   [ -s segs/$f.mp4 ] && continue
-  echo "$(date +%T) rendering $f"; timeout 1800 npx hyperframes render proj -c $f.html -o segs/$f.mp4 --quality looks --quiet > segs/$f.log 2>&1
+  echo "$(date +%T) rendering $f"; timeout 1800 npx hyperframes render proj -c $f.html -o segs/$f.mp4 --quality looks --quiet --no-low-memory-mode --workers 2 > segs/$f.log 2>&1
 done
 (cd segs && ls seg*.mp4 | sort | sed "s/^/file '/;s/$/'/" > list.txt)
 ffmpeg -v error -y -f concat -safe 0 -i segs/list.txt -c copy segs/video.mp4

@@ -1,110 +1,97 @@
-// CHAPTER 4: THE DOLLAR BECOMES THE WORLD'S GOLD (lines 23-28)
+// CHAPTER 4: THE DOLLAR BECOMES THE WORLD'S GOLD (lines 23-28) — archival / painted documentary style
+const c4_top = S => S.stg.appendChild(S.svg);
+const c4_dim = (S, o) => sv('rect', { x: 0, y: 0, width: 1920, height: 1080, fill: '#080C16', opacity: o == null ? .55 : o }, S.svg);
+const c4_circ = (g, x, y, r, txt, fill, tc) => { const c = sv('g', {}, g); sv('circle', { cx: x, cy: y, r, fill: fill || '#16233D', stroke: '#E9B44C', 'stroke-width': 5 }, c); svgT(c, txt, x, y + r * .36, r * 1.0, { c: tc || '#F3EBDD' }); return c; };
 function ch4() {
-  const t0 = CH(4).a - .3, tPlan = A('The plan'), tWhy = A('Why the dollar'), tSud = A('Suddenly the dollar'), tTrap = A('But there was a trap'),
-    tFr = A('France noticed'), tMin = A('Its finance minister'), tPl = A('America plugged'), tEnd = LB(28) + .35;
+  const t0 = CH(4).a - .3, tHotel = A('check into a hotel'), tPlan = A('The plan'), tWhy = A('Why the dollar'), tSud = A('Suddenly the dollar'), tTrap = A('But there was a trap'),
+    tMore = A('And the more dollars'), tFr = A('France noticed'), tMin = A('Its finance minister'), tPlug = A('America plugged'), tEnd = LB(28) + .35;
   startCh(4);
 
-  // 1. July 1944, 44 countries, Bretton Woods (map)
-  { const S = mapShot(t0, tPlan, { tr: 'fade' }); camSet(S, -30, 30, 1.0);
-    camTo(S, -45, 38, 1.15, t0, A('and delegates') - t0, 'sine.inOut');
-    const t = T(S, 'July *1944*', 960, 170, 110); kin(t, t0 + .2, { times: wordTimes('July 1944').map((x, i) => Math.max(t0 + .2, x)) });
-    const sub = T(S, 'The Second World War is still raging', 960, 280, 48, { color: '#8D98B0' }); kin(sub, A('The Second World War'));
-    out([t, sub], A('and delegates', -.1), .3);
-    const fl = G(S, {}); tl.set(fl, { opacity: 1 }, 0); const COLS = [['#E2614B', '#F3EBDD', '#3B5384'], ['#7FB58A', '#F3EBDD', '#E9B44C'], ['#3B5384', '#E9B44C', '#E2614B'], ['#F3EBDD', '#E2614B', '#7FB58A']];
-    const tD = A('delegates from 44');
-    for (let k = 0; k < 44; k++) { const c = k % 11, r = Math.floor(k / 11); const x = 440 + c * 96, y = 300 + r * 74; const f = sv('g', {}, fl);
-      const cs = COLS[(k * 7 + r) % 4]; for (let s = 0; s < 3; s++) sv('rect', k % 2 ? { x: x + s * 26, y, width: 26, height: 54, fill: cs[s] } : { x, y: y + s * 18, width: 78, height: 18, fill: cs[s] }, f);
-      sv('rect', { x, y, width: 78, height: 54, fill: 'none', stroke: '#0A1120', 'stroke-width': 3 }, f);
-      gsap.set(f, { autoAlpha: 0 }); tl.fromTo(f, { autoAlpha: 0, y: -40, rotation: -30, transformOrigin: '50% 100%' }, { autoAlpha: 1, y: 0, rotation: 0, duration: .3, ease: 'back.out(2)', ...IR }, tD + k * .035); }
-    sfx('flip', tD, .5); sfx('flip', tD + .6, .5); sfx('flip', tD + 1.2, .5); ev(tD, 'flags');
-    const n = I(S, '0', 960, 650, 110, { weight: 900, color: '#E9B44C' }); fin(n, A('44 countries'), .2); count(n, 0, 44, A('44 countries'), 1.0);
-    const nl = I(S, 'COUNTRIES', 960, 730, 34, { weight: 800, ls: '.3em', color: '#F3EBDD' }); fin(nl, A('44 countries', .2));
-    const tH = A('hotel in'); out([fl, n, nl], tH, .3); camTo(S, -71.44, 44.26, 4.5, tH, 1.4, 'power3.inOut');
-    pin(S, -71.44, 44.26, A('Bretton Woods'), { r: 7 }); mlabel(S, 'BRETTON WOODS', -71.44, 44.26, A('Bretton Woods', .2), { fs: 9, dy: -9 });
-    const ht = E(S, '🏨', 1300, 640, 150); pop(ht, A('hotel in', .4));
-    const hol = E(S, '🏖️', 620, 640, 150); pop(hol, A('Not for a holiday'));
-    const x = sv('path', { d: 'M530,550 L710,730 M710,550 L530,730', stroke: '#E2614B', 'stroke-width': 22, 'stroke-linecap': 'round', opacity: 0 }, S.svg); stamp(x, A('holiday', .1), { r: 0 }); }
+  // 1. July 1944: the war, 44 countries, a map to Bretton Woods
+  { const S = mapShot(t0, tHotel, { tr: 'fade' }); camSet(S, -30, 35, .5); camTo(S, -71.44, 44.26, 3.2, A('44 countries', -.3), tHotel - A('44 countries', -.3) + .4, 'power2.inOut');
+    const l = lower(S, 'JULY 1944', 'The Second World War is still *raging*', A('July 1944', -.1), { size: 76, y: 300 });
+    tl.to([l.k, l.h], { autoAlpha: 0, duration: .3 }, A('and delegates', -.2));
+    const n = I(S, '0', 960, 360, 200, { weight: 900, color: '#E9B44C' }); fin(n, A('44 countries', -.1), .2); count(n, 0, 44, A('44 countries', -.1), 1.1);
+    const nl = I(S, 'COUNTRIES SEND DELEGATES', 960, 480, 32, { weight: 800, ls: '.28em' }); fin(nl, A('44 countries', .2), .4);
+    tl.to([n, nl], { autoAlpha: 0, duration: .3 }, tHotel - .5); pin(S, -71.44, 44.26, tHotel - .6, { r: 6, rep: 2 }); }
 
-  // 2. the peg diagram
-  { const tSw = A('swappable by'); const S = shot(tPlan, tWhy, { tr: 'slide' }); const g = G(S, { opacity: 1 });
-    const t = T(S, 'The *plan*', 960, 130, 76); kin(t, tPlan);
-    const cur = [['£', 360, 300], ['₣', 300, 520], ['…', 360, 740]]; const cg = [];
-    cur.forEach(([m, x, y], k) => { const c = coin(g, x, y, 70, { mark: m, fill: '#C9CFDA' }); cg.push(c); pop(c, A('other currencies', k * .2), { sfx: k ? false : 'pop' }); });
-    const usd = coin(g, 960, 520, 120, { mark: '$' }); const gb = goldBar(g, 1560, 530, 1.6);
-    const links = cur.map(([, x, y]) => arrowPath(g, `M${x + 80},${y} Q${(x + 830) / 2},${(y + 520) / 2 + (y < 520 ? -40 : y > 520 ? 40 : 0)} 830,520`, { w: 8 }));
-    links.forEach((l, k) => draw(l, A('peg to the dollar', -.3 + k * .15), .5)); pop(usd, A('peg to the dollar'), { sfx: 'clink' });
-    tl.to(cg, { x: 30, duration: .18, yoyo: true, repeat: 3, ease: 'sine.inOut' }, A('peg to the dollar', .5)); sfx('boing', A('peg to the dollar', .5), .5);
-    const l2 = arrowPath(g, 'M1090,520 L1400,525', { w: 12 }); draw(l2, A('pegs to gold'), .5); pop(gb, A('pegs to gold', .3), { sfx: 'clink' });
-    const tag = I(S, '35 dollars / oz', 1250, 430, 42, { weight: 800, color: '#E9B44C' }); pop(tag, A('at 35'));
-    const sw = E(S, '🏛️', 1250, 760, 100); pop(sw, tSw); const swl = T(S, 'swappable by foreign governments', 1250, 850, 34, { color: '#8D98B0' }); kin(swl, tSw);
-    const loop = arrowPath(g, 'M1080,620 Q1250,720 1420,630', { w: 6, hc: 'l', c: '#F3EBDD' }); draw(loop, tSw + .2, .5); }
+  // 2. the hotel at Bretton Woods: not for a holiday
+  { const S = photo(tHotel, tPlan, 'mtwashington.jpg', { grade: 'warm', kb: [1.15, 1.2], tr: 'fade', credit: 'Mount Washington Hotel, Bretton Woods, historic postcard · Public domain' }); tl.set(S.img, { filter: GRADES.warm + ' blur(10px) brightness(.6)' }, tHotel - .2);
+    const c = card(S, 'mtwashington.jpg', 980, 170, 820, { rot: 3, filter: 'sepia(.35) contrast(1.05)' }); c4_top(S); slideIn(c, tHotel + .1, 120, 0, { d: .7 });
+    tl.to(c, { scale: 1.05, duration: tPlan - tHotel, ease: 'none' }, tHotel + .8);
+    lower(S, 'BRETTON WOODS, NEW HAMPSHIRE', 'A hotel in the *mountains*', tHotel + .2, { size: 66, y: 560, x: 110 });
+    const nh = T(S, 'Not for a *holiday.*', 120, 700, 66, { align: 'left' }); kin(nh, A('Not for a holiday'), { times: wordTimes('Not for a holiday') }); }
 
-  // 3. why the dollar? ~3/4 of official gold
-  { const S = shot(tWhy, tSud, { tr: 'zoom' }); const g = G(S, { opacity: 1 });
-    const t = T(S, 'Why the *dollar?*', 960, 130, 80); kin(t, tWhy, { times: wordTimes('Why the dollar') });
-    const R = 230, C = 2 * Math.PI * (R / 2); sv('circle', { cx: 760, cy: 520, r: R, fill: '#26344F' }, g);
-    const pie = sv('circle', { cx: 760, cy: 520, r: R / 2, fill: 'none', stroke: '#E9B44C', 'stroke-width': R, 'stroke-dasharray': C, 'stroke-dashoffset': C, transform: 'rotate(-90 760 520)' }, g);
-    tl.fromTo(pie, { attr: { 'stroke-dashoffset': C } }, { attr: { 'stroke-dashoffset': C * .25 }, duration: 1.4, ease: 'power2.out', ...IR }, A('held about'));
-    const us = E(S, '🇺🇸', 1300, 420, 120); pop(us, A('America held'));
-    const l1 = T(S, '*~3/4* of the world\'s', 1340, 560, 58); kin(l1, A('three quarters')); const l2 = T(S, 'official gold', 1340, 640, 58); kin(l2, A('official gold'));
-    sfx('sparkle', A('official gold'), .6); }
+  // 3. the plan: currencies -> dollar -> gold
+  { const S = photo(tPlan, tWhy, 'bw_room.jpg', { grade: 'warm', kb: [1.04, 1.12], from: [2, 0], to: [-2, 0], tr: 'slide', credit: 'Bretton Woods conference room · Pi3.124, CC BY-SA 4.0' }); c4_dim(S, .66);
+    const k = I(S, 'THE PLAN', 960, 150, 30, { weight: 800, color: '#E9B44C', ls: '.32em' }); fin(k, tPlan, .4);
+    const g = sv('g', {}, S.svg); const cur = [['£', 260], ['₣', 470], ['…', 680]].map(([s, y]) => c4_circ(g, 420, y, 70, s));
+    const usd = c4_circ(g, 960, 470, 115, '$', '#E9B44C', '#101A2E'); const gb = goldBar(g, 1530, 470, 1.6);
+    const arrs = cur.map((c, i) => arrowPath(g, `M500,${[260, 470, 680][i]} L835,470`, { w: 6 })); const ar2 = arrowPath(g, 'M1085,470 L1340,470', { w: 8 });
+    const lp = svgT(g, '35 DOLLARS AN OUNCE', 1530, 600, 28, { c: '#F3EBDD', font: 'Inter', w: 800, ls: '.1em' }); const ls = svgT(g, 'SWAPPABLE BY FOREIGN GOVERNMENTS', 1530, 642, 22, { c: '#C9CFDA', font: 'Inter', w: 800, ls: '.08em' });
+    cur.forEach((c, i) => pop(c, A('other currencies', i * .15), { sfx: i ? false : 'pop' })); arrs.forEach((a, i) => draw(a, A('peg to the dollar', -.1 + i * .1), .5));
+    pop(usd, A('the dollar,', -.1), { sfx: 'clink' }); pop(gb, A('pegs to gold', -.1), { sfx: 'clink' }); draw(ar2, A('pegs to gold', -.2), .5);
+    pop(lp, A('at 35 dollars'), { sfx: false }); pop(ls, A('swappable'), { sfx: false });
+    tl.to(usd, { scale: 1.08, transformOrigin: '50% 50%', transformBox: 'fill-box', yoyo: true, repeat: 1, duration: .3 }, A('peg to the dollar', .4)); }
 
-  // 4. as good as gold, and you could invest it; gold just sits there
-  { const tSits = A('Gold just sits'); const S = shot(tSud, tTrap, { tr: 'up' }); const g = G(S, { opacity: 1 });
-    const n = note(g, 560, 470, 380, { num: '1' }); pop(n, tSud); const eq = T(S, '=', 960, 470, 160, { color: '#E9B44C' }); kin(eq, A('as good as gold'), { sfx: 'pop' });
-    const gb = goldBar(g, 1360, 480, 1.7); pop(gb, A('as good as gold', .3), { sfx: 'clink' });
-    const t = T(S, 'As good as *gold...*', 960, 160, 70); kin(t, A('as good as gold'));
-    out(t, A('and better'), .2); const t2 = T(S, '...and *better* in one way', 960, 160, 70); kin(t2, A('and better'));
-    const up = E(S, '📈', 560, 730, 130); pop(up, A('invest dollars')); const il = I(S, 'invest it', 560, 830, 38, { weight: 800, color: '#7FB58A' }); pop(il, A('invest dollars', .2), { sfx: false });
-    const sun = E(S, '😎', 1360, 330, 150); pop(sun, A('looking expensive'), { y0: -120, sfx: 'boing' });
-    const gl = sv('rect', { x: 1150, y: 380, width: 70, height: 220, fill: 'rgba(255,246,226,.75)', transform: 'skewX(-20)', style: 'filter: blur(6px)', opacity: 0 }, g);
-    tl.fromTo(gl, { opacity: 0, x: 0 }, { keyframes: [{ opacity: 1, x: 150, duration: .3 }, { opacity: 0, x: 380, duration: .3 }], ...IR }, A('expensive', .1)); sfx('sparkle', A('expensive', .1));
-    const sl = T(S, 'Gold just *sits* there', 1360, 790, 46, { color: '#8D98B0' }); kin(sl, tSits); }
+  // 4. why the dollar? ~3/4 of the world's official gold
+  { const S = photo(tWhy, tSud, 'fortknox_postcard.jpg', { grade: 'mono', kb: [1.04, 1.14], to: [-2, -1], tr: 'fade', credit: 'Fort Knox Bullion Depository, postcard · Tichnor Bros., Boston Public Library · Public domain' }); c4_dim(S, .5);
+    const l = lower(S, 'WHY THE DOLLAR?', 'America held about *three quarters*', tWhy, { size: 70, x: 110, y: 330 });
+    const sub = I(S, "OF THE WORLD'S OFFICIAL GOLD", 116, 400, 32, { align: 'left', weight: 800, ls: '.2em' }); fin(sub, A("of the world's", -.2), .4);
+    const g = sv('g', {}, S.svg); const R = 190, cx = 1420, cy = 560, C = 2 * Math.PI * R;
+    sv('circle', { cx, cy, r: R, fill: 'rgba(16,26,46,.75)', stroke: '#26344F', 'stroke-width': 4 }, g);
+    const arc = sv('circle', { cx, cy, r: R / 2, fill: 'none', stroke: '#E9B44C', 'stroke-width': R, 'stroke-dasharray': `0 ${Math.PI * R}`, transform: `rotate(-90 ${cx} ${cy})` }, g);
+    tl.fromTo(arc, { attr: { 'stroke-dasharray': `0 ${Math.PI * R}` } }, { attr: { 'stroke-dasharray': `${Math.PI * R * .75} ${Math.PI * R}` }, duration: 1.2, ease: 'power2.out', ...IR }, A('three quarters', -.2));
+    const pl = svgT(g, '~¾', cx, cy + 30, 90, { c: '#101A2E' }); gsap.set(pl, { autoAlpha: 0 }); tl.to(pl, { autoAlpha: 1, duration: .3 }, A('three quarters', .8)); sfx('swoosh', A('three quarters', -.2), .4); }
 
-  // 5. the trap: dollars pile up overseas, the gold stays fixed; Triffin dilemma
-  { const tTr = A('Economists call this'); const S = shot(tTrap, tFr, { tr: 'wipe' }); const g = G(S, { opacity: 1 });
-    const t = T(S, 'A *trap* built in', 960, 120, 72); kin(t, tTrap);
-    const vt = sv('rect', { x: 200, y: 300, width: 500, height: 420, rx: 22, fill: '#16233D', stroke: '#2A3A5C', 'stroke-width': 3 }, g); fin(vt, A('To give the world')); const vl = I(S, 'AMERICAN VAULTS', 450, 760, 34, { weight: 800, ls: '.2em', color: '#8D98B0' }); fin(vl, A('To give the world'));
-    const st = G(S, {}); for (let k = 0; k < 4; k++) goldBar(st, 450, 650 - k * 72, .95, { label: false }); fin(st, A('To give the world', .2));
-    const ov = I(S, 'OVERSEAS', 1450, 760, 34, { weight: 800, ls: '.2em', color: '#8D98B0' }); fin(ov, A('sending them abroad'));
-    const arr = arrowPath(g, 'M720,450 Q960,330 1200,450', { w: 10, hc: 's', c: '#7FB58A' }); draw(arr, A('sending them abroad', -.3), .6);
-    for (let k = 0; k < 12; k++) { const c = k % 3, r = Math.floor(k / 3); const nn = note(g, 1330 + c * 120 + (r % 2) * 30, 690 - r * 70, 150, {}); pop(nn, A('piled up', -.6 + k * .2), { s0: .3, y0: -80, sfx: k % 3 ? false : 'pop', vol: .4 }); }
-    const cov = I(S, 'gold per dollar abroad ↓', 960, 230, 40, { weight: 800, color: '#E2614B' }); pop(cov, A('the less the gold'));
-    tl.to(st, { opacity: .45, duration: .6 }, A('could cover them'));
-    const card = P(S, 560, 380, 800, 200, { bg: '#F3EBDD', border: '#E2614B' }); const ci = mk('div', {}, card);
-    ci.innerHTML = '<div style="font:900 30px Inter;color:#E2614B;text-align:center;margin-top:34px;letter-spacing:.3em">ECONOMISTS CALL IT</div><div style="font:800 76px Brico;color:#101A2E;text-align:center;white-space:nowrap">The Triffin dilemma</div>';
-    stamp(card, A('Triffin', -.3), { r: -3, amp: .8 }); }
+  // 5. as good as gold... looking expensive
+  { const tSits = A('Gold just sits'); const S = photo(tSud, tTrap, 'bank_vault_1700s.jpg', { grade: 'paint', kb: [1.0, 1.16], from: [0, 0], to: [-3, -2], tr: 'zoom' }); c4_dim(S, .25);
+    const a = T(S, 'The dollar: *as good as gold*', 960, 220, 84); kin(a, A('Suddenly the dollar', .3)); out(a, tSits - .2);
+    const b = T(S, '...and you could *invest* it', 960, 330, 56, { color: '#C9CFDA' }); kin(b, A('You could invest')); out(b, tSits - .2);
+    const c = T(S, 'Gold just sits there,', 120, 700, 70, { align: 'left' }); kin(c, tSits, { times: wordTimes('Gold just sits there') });
+    const d = T(S, '*looking expensive.*', 120, 790, 70, { align: 'left' }); kin(d, A('looking expensive'), { times: wordTimes('looking expensive') });
+    const glint = sv('rect', { x: 0, y: -200, width: 140, height: 1500, fill: 'rgba(255,240,200,.28)', transform: 'rotate(18 960 540)', style: 'filter: blur(18px)' }, S.svg);
+    tl.fromTo(glint, { x: -400 }, { x: 2300, duration: 1.1, ease: 'power2.inOut', ...IR }, A('looking expensive', .1)); sfx('sparkle', A('looking expensive', .2), .7); }
 
-  // 6. France noticed: January 1965, 300 million dollars -> gold (map)
-  { const S = mapShot(tFr, tMin, { tr: 'zoom' }); camSet(S, -38.5, 40, .85); camTo(S, -38.5, 40, .88, tFr, tMin - tFr, 'sine.inOut');
-    pin(S, 2.35, 48.86, tFr, { r: 18 }); mlabel(S, 'FRANCE', 2.35, 48.86, tFr + .2, { fs: 40, dy: -36 });
-    pin(S, -77.04, 38.9, A('swap at least', -.4), { r: 18, c: '#F3EBDD' }); mlabel(S, 'USA', -77.04, 38.9, A('swap at least', -.2), { fs: 40, dy: -36 });
-    const t = T(S, 'France *noticed*', 960, 150, 76); kin(t, tFr, { times: wordTimes('France noticed') });
-    const jd = I(S, 'JANUARY 1965', 960, 250, 40, { weight: 800, ls: '.25em', color: '#E9B44C' }); pop(jd, A('January 1965'));
-    marc(S, 2.35, 48.86, -77.04, 38.9, A('300 million'), 1.0, { c: '#7FB58A', w: 12, bend: .03 });
-    const amt = T(S, 'At least *300 million* dollars', 960, 700, 64); kin(amt, A('at least 300'));
-    const back = marc(S, -77.04, 38.9, 2.35, 48.86, A('for American gold'), 1.0, { c: '#E9B44C', w: 12, bend: .09 });
-    const gb = goldBar(S.svg, 1500, 560, .9); pop(gb, A('American gold', .5), { sfx: 'clink' }); }
+  // 6. the trap: dollars sent abroad
+  { const S = mapShot(tTrap, tMore, { tr: 'slide' }); camSet(S, -20, 30, .55); camTo(S, 0, 28, .62, tTrap, tMore - tTrap + .4, 'sine.inOut');
+    lower(S, 'A TRAP BUILT IN', 'Dollars had to keep going *abroad*', tTrap + .1, { size: 70, y: 860 });
+    const us = [-90, 39]; pin(S, us[0], us[1], A('To give the world', -.2), { r: 16, rep: 1 });
+    [[2.35, 48.86], [-0.13, 51.5], [13.4, 52.5], [139.7, 35.7], [-46.6, -23.5], [28, -26], [77.2, 28.6]].forEach(([lo, la], i) => marc(S, us[0], us[1], lo, la, A('keep sending', -.3 + i * .22), .9, { c: '#7FB58A', w: 7, bend: .2 })); }
 
-  // 7. "exorbitant privilege" quote card
-  { const S = shot(tMin, tPl, { tr: 'fade', push: 1.04 });
-    const q = T(S, '“', 420, 330, 300, { color: '#E9B44C' }); pop(q, tMin, { sfx: 'whoosh' });
-    const who = I(S, "France's finance minister", 960, 330, 40, { weight: 600, color: '#8D98B0' }); fin(who, A('finance minister'));
-    const nm = T(S, "Valéry Giscard d'Estaing", 960, 410, 58); kin(nm, A('Valéry'));
-    const qt = T(S, '*"Exorbitant privilege"*', 960, 600, 120); kin(qt, A('exorbitant'), { times: wordTimes('exorbitant privilege'), sfx: 'sting', vol: .5 });
-    const line = sv('path', { d: 'M520,690 L1400,690', stroke: '#E2614B', 'stroke-width': 8, 'stroke-linecap': 'round', opacity: 0 }, S.svg); draw(line, A('privilege', .2), .5); }
+  // 7. Triffin: dollars pile up overseas, the gold stays fixed
+  { const tTr = A('Economists call this'); const S = photo(tMore, tFr, 'central_bank.jpg', { grade: 'paint', kb: [1.08, 1.14], tr: 'fade' }); tl.set(S.img, { filter: GRADES.paint + ' blur(6px) brightness(.55)' }, tMore - .2);
+    const g = sv('g', {}, S.svg);
+    const lv = svgT(g, 'GOLD IN AMERICAN VAULTS', 560, 250, 28, { c: '#E9B44C', font: 'Inter', w: 900, ls: '.16em' }); const lo = svgT(g, 'DOLLARS OVERSEAS', 1360, 250, 28, { c: '#7FB58A', font: 'Inter', w: 900, ls: '.16em' });
+    const bars = []; for (let k = 0; k < 4; k++) bars.push(goldBar(g, 560, 700 - k * 62, 1.1));
+    const notes = []; for (let k = 0; k < 9; k++) { const n = note(g, 1360 + (k % 2 ? 26 : -26), 730 - k * 48, 260, { fill: '#E6EEDF' }); notes.push(n); }
+    [lv, lo].forEach(e => pop(e, tMore, { sfx: false })); bars.forEach((b, k) => pop(b, tMore + .1 + k * .08, { sfx: k ? false : 'clink' }));
+    notes.forEach((n, k) => pop(n, A('piled up overseas', -.3 + k * .22), { s0: .6, y0: -80, sfx: k % 3 ? false : 'flip' }));
+    const cov = svgT(g, 'NOT ENOUGH GOLD TO COVER THEM', 960, 860, 34, { c: '#E2614B', font: 'Inter', w: 900, ls: '.14em' }); pop(cov, A('could cover them', -.2), { sfx: 'thud' });
+    tl.to([lv, lo, cov, ...bars, ...notes], { autoAlpha: .15, duration: .4 }, tTr - .2);
+    const t = T(S, 'The *Triffin dilemma*', 960, 480, 120); kin(t, tTr, { st: .12 }); }
 
-  // 8. the London gold pool cracks (1968)
-  { const t68 = A('In 1968'); const S = shot(tPl, tEnd, { tr: 'slide' }); const g = G(S, { opacity: 1 });
-    const t = T(S, 'Plugging the *leaks*', 960, 120, 70); kin(t, tPl);
-    const pool = G(S, {}); sv('ellipse', { cx: 960, cy: 520, rx: 420, ry: 130, fill: '#16233D', stroke: '#C9CFDA', 'stroke-width': 10 }, pool);
-    const gold = sv('ellipse', { cx: 960, cy: 525, rx: 390, ry: 110, fill: '#E9B44C' }, pool); svgT(pool, 'LONDON GOLD POOL', 960, 540, 44, { c: '#7A4E0E', font: 'Inter', w: 900, ls: '.14em' });
-    pop(pool, A('shared gold pool'), { s0: .6, sfx: 'clink' }); const uk = E(S, '🇬🇧', 960, 300, 100); pop(uk, A('London'));
-    const b1 = E(S, '🏦', 300, 760, 120), b2 = E(S, '🏦', 1620, 760, 120); pop(b1, A('emergency swaps')); pop(b2, A('emergency swaps', .2), { sfx: false });
-    const sw1 = arrowPath(g, 'M400,740 Q960,640 1520,740', { w: 8, hc: 'l', c: '#F3EBDD' }), sw2 = arrowPath(g, 'M1520,800 Q960,900 400,800', { w: 8, hc: 'l', c: '#F3EBDD' });
-    draw(sw1, A('central banks', -.4), .6); draw(sw2, A('central banks', -.1), .6);
-    stamp(T(S, '_1968_', 1500, 300, 110, { color: '#E2614B' }), t68, { r: 8 });
-    const crack = sv('path', { d: 'M700,420 L780,500 L740,560 L860,620 M1180,420 L1120,520 L1200,580 L1140,640', stroke: '#0A1120', 'stroke-width': 10, fill: 'none', 'stroke-linejoin': 'round', opacity: 0 }, G(S, { opacity: 1 }));
-    const tC = A('the gold pool collapsed'); draw(crack, tC, .3); shake(tC + .1, 1.6); sfx('crack', tC); flash(tC + .1, .3);
-    tl.to(gold, { attr: { ry: 6, rx: 120 }, duration: .6, ease: 'power2.in' }, tC + .2); }
+  // 8. France noticed: January 1965, at least 300 million dollars for gold
+  { const S = mapShot(tFr, tMin, { tr: 'fade' }); camSet(S, -37, 42, .82); camTo(S, -37, 43, .9, tFr, tMin - tFr + .4, 'sine.inOut');
+    const l = lower(S, 'FRANCE · JANUARY 1965', 'France *noticed*', tFr, { size: 84, y: 300 });
+    pin(S, 2.35, 48.86, tFr + .3, { rep: 1 }); mlabel(S, 'PARIS', 2.35, 48.86, tFr + .4, { fs: 34 }); pin(S, -77.04, 38.9, A('it announced'), { c: '#F3EBDD', rep: 1 }); mlabel(S, 'WASHINGTON', -77.04, 38.9, A('it announced', .1), { fs: 34 });
+    marc(S, 2.35, 48.86, -77.04, 38.9, A('would swap', -.1), 1.0, { c: '#7FB58A', w: 9, bend: .12 });
+    marc(S, -77.04, 38.9, 2.35, 48.86, A('for American gold', -.2), 1.0, { c: '#E9B44C', w: 9, bend: .22 });
+    const n = I(S, '0', 960, 640, 120, { weight: 900, color: '#E9B44C' }); fin(n, A('at least 300', -.1), .2); count(n, 0, 300, A('at least 300', -.1), 1.2, { pre: 'AT LEAST ', suf: ' MILLION' });
+    const u = I(S, 'OF ITS DOLLARS, SWAPPED FOR AMERICAN GOLD', 960, 735, 30, { weight: 800, ls: '.18em' }); fin(u, A('of its dollars'), .4); }
+
+  // 9. exorbitant privilege
+  { const S = photo(tMin, tPlug, 'trading_room.jpg', { grade: 'paint', kb: [1.06, 1.14], tr: 'zoom' }); tl.set(S.img, { filter: GRADES.paint + ' blur(8px) brightness(.45)' }, tMin - .2);
+    const k = I(S, "FRANCE'S FINANCE MINISTER, VALÉRY GISCARD D'ESTAING", 960, 300, 30, { weight: 800, color: '#E9B44C', ls: '.18em' }); fin(k, tMin, .5);
+    const q = T(S, '"Exorbitant *privilege."*', 960, 520, 150, { font: 'Brico' }); kin(q, A('"exorbitant', -.15), { times: wordTimes('exorbitant privilege'), s0: .8 });
+    const sub = I(S, "— HIS NAME FOR AMERICA'S POSITION", 960, 680, 30, { weight: 800, ls: '.18em', color: '#C9CFDA' }); fin(sub, A("called America's", -.1), .4); }
+
+  // 10. London gold pool collapses, 1968
+  { const tCol = A('the gold pool collapsed'); const S = mapShot(tPlug, tEnd, { tr: 'slide' }); camSet(S, -0.13, 51.5, 2.2); camTo(S, -0.13, 51.5, 3.6, tPlug, tEnd - tPlug + .3, 'sine.inOut');
+    pin(S, -0.13, 51.5, A('shared gold pool', -.2), { r: 10, rep: 2 }); mlabel(S, 'LONDON', -0.13, 51.5, A('in London', -.1), { fs: 22 });
+    lower(S, 'PLUGGING THE LEAKS', 'A shared gold pool in *London*', tPlug + .1, { size: 70, y: 300 });
+    const sw = I(S, '+ EMERGENCY SWAPS BETWEEN CENTRAL BANKS', 124, 860, 28, { align: 'left', weight: 800, ls: '.14em', color: '#C9CFDA' }); fin(sw, A('emergency swaps'), .4);
+    const y = I(S, '1968', 1440, 640, 200, { weight: 900, color: '#E2614B' }); stamp(y, A('In 1968', -.05), { r: -6 });
+    const crack = sv('path', { d: 'M960,120 L930,260 L990,360 L940,480 L1000,600 L955,720 L985,900', fill: 'none', stroke: '#E2614B', 'stroke-width': 7, 'stroke-linejoin': 'round', opacity: 0 }, S.svg);
+    draw(crack, tCol, .35); sfx('crack', tCol + .1, .8); shake(tCol + .2, 1.2); flash(tCol + .2, .2); }
 }

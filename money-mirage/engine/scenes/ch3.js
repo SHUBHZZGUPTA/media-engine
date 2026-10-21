@@ -1,128 +1,93 @@
-// CHAPTER 3: THE GOLD TRAP (lines 17-22)
-function c3_type(el, txt, at, dur) { const p = { v: 0 }; el.textContent = ''; gsap.set(el, { autoAlpha: 0 }); tl.set(el, { autoAlpha: 1 }, at);
-  tl.fromTo(p, { v: 0 }, { v: txt.length, duration: dur, ease: 'none', ...IR, onUpdate: () => { el.textContent = txt.slice(0, Math.round(p.v)); } }, at); sfx('typing', at, .5); ev(at, 'type'); }
+// CHAPTER 3: THE GOLD TRAP (lines 17-22) — archival / painted documentary style
+const c3_top = S => S.stg.appendChild(S.svg); // keep the SVG layer (highlights, diagrams) above cards
+const c3_dim = (S, o) => sv('rect', { x: 0, y: 0, width: 1920, height: 1080, fill: '#080C16', opacity: o == null ? .55 : o }, S.svg);
 function ch3() {
-  const t0 = CH(3).a - .3, tPanic = A('And in a panic'), tEm = A('So in emergencies'), tAm = A('America went further'), tHand = A('Americans had to hand'),
-    tHoard = A('Hoard it'), tDin = A('Imagine explaining'), tYear = A('A year later'), tLeg = A("And Americans couldn't"), tOrd = A('So ordinary people'), tEnd = LB(22) + .35;
+  const t0 = CH(3).a - .3, tPanic = A('And in a panic'), tEmerg = A('So in emergencies'), tAm = A('America went further'), tHand = A('Americans had to hand'),
+    tHoard = A('Hoard it'), tDin = A('Imagine explaining'), tYear = A('A year later'), tAnd74 = A("And Americans couldn't"), tOrd = A('So ordinary people'), tEnd = LB(22) + .35;
   startCh(3);
 
-  // 1. money line capped by the gold pile
-  { const S = shot(t0, tPanic, { tr: 'fade' }); const g = G(S, { opacity: 1 });
-    const ax = sv('path', { d: 'M360,820 L360,230 M360,820 L1560,820', stroke: '#3B5384', 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round', opacity: 0 }, g); draw(ax, t0 + .2, .6);
-    const t1 = T(S, 'In calm times, it *worked*', 960, 150, 70); kin(t1, A('In calm times'));
-    const gl = sv('path', { d: 'M360,620 C700,600 1100,585 1560,560', stroke: '#E9B44C', 'stroke-width': 12, fill: 'none', 'stroke-linecap': 'round', 'stroke-dasharray': '26 16', opacity: 0 }, g);
-    const ml = sv('path', { d: 'M360,800 C560,760 700,660 860,640 C1050,622 1250,604 1560,580', stroke: '#7FB58A', 'stroke-width': 12, fill: 'none', 'stroke-linecap': 'round', opacity: 0 }, g);
-    const lm = svgT(g, 'MONEY', 1580, 600, 34, { c: '#7FB58A', anchor: 'start', font: 'Inter', w: 900 }); const lg = svgT(g, 'GOLD', 1580, 545, 34, { c: '#E9B44C', anchor: 'start', font: 'Inter', w: 900 });
-    tl.set([lm, lg], { opacity: 0 }, 0);
-    out(t1, A("But here's the catch"), .2); const t2 = T(S, "But here's the *catch*", 960, 150, 70); kin(t2, A("But here's the catch"), { times: wordTimes("But here's the catch") });
-    draw(gl, A('Money could only'), 1.0); fin(lg, A('Money could only', .9));
-    draw(ml, A('grow as fast'), 1.3); fin(lm, A('grow as fast', 1.2));
-    const stack = G(S, {}); for (let k = 0; k < 3; k++) goldBar(stack, 1460 - k * 10, 500 - k * 44, .55, { label: false }); pop(stack, A('gold pile'), { sfx: 'clink' });
-    const cap = sv('circle', { cx: 860, cy: 640, r: 22, fill: '#E2614B', opacity: 0 }, g); pop(cap, A('gold pile', .4), { sfx: 'thud' }); pulse(cap, A('gold pile', .8), 1.4, 2); }
+  // 1. calm times + the catch: money line capped by the gold line
+  { const S = photo(t0, tPanic, 'bank_vault_1700s.jpg', { grade: 'paint', kb: [1.02, 1.12], from: [1, 0], to: [-1, -1], tr: 'fade' }); c3_dim(S, .62);
+    const t1 = T(S, 'In calm times, it *worked*', 960, 170, 76); kin(t1, A('In calm times'), { times: wordTimes('In calm times, it worked') }); out(t1, A("But here's the catch", -.1));
+    const g = sv('g', {}, S.svg); const X0 = 360, X1 = 1560, Y0 = 760, Y1 = 300;
+    const ax = sv('path', { d: `M${X0},${Y1 - 20} L${X0},${Y0} L${X1 + 40},${Y0}`, fill: 'none', stroke: '#5A6782', 'stroke-width': 4, opacity: 0 }, g);
+    const gold = sv('path', { d: `M${X0},${Y0 - 230} C${X0 + 400},${Y0 - 250} ${X0 + 800},${Y0 - 270} ${X1},${Y0 - 290}`, fill: 'none', stroke: '#E9B44C', 'stroke-width': 9, 'stroke-linecap': 'round', opacity: 0 }, g);
+    const money = sv('path', { d: `M${X0},${Y0 - 40} C${X0 + 260},${Y0 - 70} ${X0 + 420},${Y0 - 210} ${X0 + 640},${Y0 - 252} C${X0 + 820},${Y0 - 268} ${X0 + 1000},${Y0 - 278} ${X1},${Y0 - 286}`, fill: 'none', stroke: '#F3EBDD', 'stroke-width': 7, 'stroke-dasharray': '1 0', 'stroke-linecap': 'round', opacity: 0 }, g);
+    const lg = svgT(g, 'GOLD PILE', X1 + 30, Y0 - 300, 30, { anchor: 'start', c: '#E9B44C', font: 'Inter', w: 800, ls: '.14em' }); const lm = svgT(g, 'MONEY', X1 + 30, Y0 - 256, 30, { anchor: 'start', c: '#F3EBDD', font: 'Inter', w: 800, ls: '.14em' });
+    const cap = sv('path', { d: `M${X0 + 600},${Y0 - 300} L${X0 + 700},${Y0 - 300}`, stroke: '#E2614B', 'stroke-width': 0, opacity: 0 }, g);
+    fin(ax, A("But here's the catch"), .4); draw(gold, A('Money could only'), 1.0); pop(lg, A('Money could only', .8), { sfx: false });
+    draw(money, A('grow as fast'), 1.6, { ease: 'power2.out' }); pop(lm, A('the gold pile'), { sfx: false }); sfx('thud', A('the gold pile', .2), .5);
+    lower(S, "HERE'S THE CATCH", 'Money can only grow as fast as *gold*', A("But here's the catch", .3), { size: 64, y: 930 - 60 }); }
 
-  // 2. bank run: the queue grows, the vault is too small
-  { const tNE = A("There's never enough"); const S = shot(tPanic, tEm, { tr: 'slide' }); const g = G(S, { opacity: 1 });
-    const bank = G(S, {}); sv('path', { d: 'M1380,300 L1640,220 L1900,300 Z', fill: '#C9CFDA', stroke: '#6C7690', 'stroke-width': 6 }, bank);
-    sv('rect', { x: 1390, y: 300, width: 500, height: 420, fill: '#DDE2EA', stroke: '#6C7690', 'stroke-width': 6 }, bank);
-    for (let k = 0; k < 4; k++) sv('rect', { x: 1425 + k * 120, y: 330, width: 40, height: 300, fill: '#B5BDCC' }, bank);
-    sv('rect', { x: 1560, y: 560, width: 160, height: 160, fill: '#4B5570' }, bank); svgT(bank, 'BANK', 1640, 285, 34, { c: '#4B5570', font: 'Inter', w: 900, ls: '.2em' });
-    slideIn(bank, tPanic, 400, 0);
-    const vg = G(S, { opacity: 1 }); const vault = goldBar(vg, 1640, 690, .6); pop(vault, tPanic + .4, { sfx: 'clink' });
-    const t = T(S, 'Everyone wants their *gold* back', 760, 160, 64); kin(t, A('everyone wants'));
-    const ppl = ['🧍', '🧍‍♀️', '🧍‍♂️', '🧍', '🧍‍♀️', '🧍‍♂️', '🧍', '🧍‍♀️', '🧍‍♂️', '🧍'];
-    ppl.forEach((p, k) => { const e = E(S, p, 1270 - k * 115, 640, 150); pop(e, A('everyone wants', k * .38), { y0: -60, sfx: k % 3 ? false : 'pop', vol: .4 }); bob(e, A('everyone wants', k * .38 + .5), tEm + .3, 5, .5 + k * .03); });
-    stamp(T(S, '_NOT ENOUGH GOLD_', 1000, 420, 88, { color: '#E2614B' }), tNE, { r: -6 }); }
+  // 2. the bank run
+  { const S = photo(tPanic, tEmerg, 'bankrun_1931.jpg', { grade: 'mono', kb: [1.04, 1.18], from: [2, 2], to: [-2, -2], tr: 'fade', credit: 'Crowd outside the failed Bank of United States, New York · Library of Congress, NYWT&S · Public domain' });
+    lower(S, 'NEW YORK · GREAT DEPRESSION', 'Everyone wants their *gold* back', A('everyone wants their', -.2), { size: 88 });
+    const st = I(S, 'NOT ENOUGH FOR EVERYONE', 1440, 260, 46, { weight: 900, color: '#E2614B', ls: '.12em' }); stamp(st, A('never enough'), { r: -6, amp: .6 }); }
 
-  // 3. emergencies, wars: the link keeps getting cut; Britain 1931
-  { const t31 = A('Britain cut it'); const S = shot(tEm, tAm, { tr: 'zoom' }); const g = G(S, { opacity: 1 });
-    const n = note(g, 640, 430, 320, { num: '1' }); const gb = goldBar(g, 1300, 440, 1.3);
-    const chain = G(S, {}); for (let k = 0; k < 6; k++) sv('ellipse', { cx: 840 + k * 50, cy: 435, rx: 30, ry: 15, fill: 'none', stroke: '#C9CFDA', 'stroke-width': 8 }, chain);
-    pop(n, tEm, { s0: .6 }); pop(gb, tEm + .2, { s0: .6, sfx: 'clink' }); fin(chain, tEm + .3);
-    const war = E(S, '⚔️', 960, 230, 130); pop(war, A('especially wars'), { sfx: 'clang' }); wiggle(war, A('especially wars', .4), 12, 3);
-    tl.to(chain, { opacity: .15, duration: .15, yoyo: true, repeat: 3 }, A('kept suspending')); sfx('snap', A('kept suspending', .1), .7);
-    const t = T(S, 'Countries kept *suspending* the link', 960, 690, 62); kin(t, A('countries kept'));
-    out([n, gb, chain, war, t], t31 - .15, .25);
-    const card = P(S, 610, 230, 700, 420, { bg: '#F3EBDD', border: '#C9CFDA' }); const ci = mk('div', {}, card);
-    ci.innerHTML = '<div style="font:800 44px Inter;color:#4B5570;text-align:center;margin-top:44px;letter-spacing:.2em">BRITAIN</div><div style="font:800 190px Brico;color:#101A2E;text-align:center;line-height:220px">1931</div>';
-    slideIn(card, t31, 0, 300, { sfx: 'flip' }); const fl = E(S, '🇬🇧', 1310, 250, 130); pop(fl, t31 + .3);
-    stamp(T(S, '_LINK CUT_', 1180, 600, 80, { color: '#E2614B' }), A('for good'), { r: -10 }); }
+  // 3. emergencies, wars; Britain cuts the link in 1931
+  { const tBr = A('Britain cut it'); const S = photo(tEmerg, tAm, 'boe_hall_1808.jpg', { grade: 'warm', kb: [1.08, 1.2], from: [0, 2], to: [2, -2], tr: 'slide', credit: 'Bank of England, Rowlandson & Pugin, 1808 · Public domain' });
+    const l = lower(S, 'EMERGENCIES · ESPECIALLY WARS', 'Countries kept *suspending* the link', A('So in emergencies', .1), { size: 76 });
+    tl.to([l.k, l.h], { autoAlpha: 0, duration: .3 }, tBr - .15); c3_dim(S, 0); const dim = S.svg.lastChild; tl.to(dim, { attr: { opacity: .55 }, duration: .4 }, tBr - .2);
+    const k = I(S, 'BRITAIN CUTS THE LINK FOR GOOD', 960, 330, 32, { weight: 800, color: '#E9B44C', ls: '.3em' }); fin(k, tBr, .4);
+    const y = T(S, '*1931*', 960, 520, 260); kin(y, A('1931', -.05), { s0: .6, dy: 0 }); sfx('stamp', A('1931', .1), .6); }
 
-  // 4. Executive Order 6102 types itself
-  { const S = shot(tAm, tHand, { tr: 'up', push: 1.04 }); const t = T(S, 'America went *further*', 960, 140, 72); kin(t, tAm, { times: wordTimes('America went further') });
-    const doc = P(S, 560, 230, 800, 600, { bg: '#F3EBDD', border: '#C9CFDA' }); slideIn(doc, A('On April'), 0, 400, { sfx: 'flip' });
-    const l1 = mk('div', {}, doc), l2 = mk('div', {}, doc), l3 = mk('div', {}, doc), l4 = mk('div', {}, doc);
-    Object.assign(l1.style, { position: 'absolute', left: '60px', top: '60px', font: '800 50px Brico', color: '#101A2E' });
-    Object.assign(l2.style, { position: 'absolute', left: '60px', top: '140px', font: '800 40px Inter', color: '#E2614B' });
-    Object.assign(l3.style, { position: 'absolute', left: '60px', top: '230px', width: '680px', height: '14px', background: '#C9CFDA', borderRadius: '7px' });
-    Object.assign(l4.style, { position: 'absolute', left: '60px', top: '270px', width: '540px', height: '14px', background: '#C9CFDA', borderRadius: '7px' });
-    c3_type(l2, 'April 5, 1933', A('April 5th'), .9);
-    fin(l3, A('Great Depression'), .3); fin(l4, A('Great Depression', .3), .3);
-    const dep = I(S, 'THE GREAT DEPRESSION', 960, 700, 36, { color: '#8D98B0', ls: '.2em', weight: 800 }); fin(dep, A('Great Depression'), .4);
-    c3_type(l1, 'EXECUTIVE ORDER 6102', A('signed Executive'), 1.2);
-    const sig = sv('path', { d: 'M760,640 q40,-60 70,0 t70,0 q30,-50 60,-10 t60,0', stroke: '#101A2E', 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round', opacity: 0 }, S.svg); draw(sig, A('signed'), .7);
-    stamp(T(S, '_ORDER_', 1240, 330, 70, { color: '#E2614B' }), A('6102', .2), { r: 12 }); }
+  // 4. America went further: Executive Order 6102
+  { const S = photo(tAm, tHand, 'central_bank.jpg', { grade: 'paint', kb: [1.0, 1.14], to: [-2, -2], tr: 'fade' }); c3_dim(S, .35);
+    const a1 = T(S, 'America went *further*', 960, 200, 88); kin(a1, tAm, { times: wordTimes('America went further') });
+    const l = lower(S, 'APRIL 5, 1933 · THE GREAT DEPRESSION', 'Executive Order *6102*', A('On April 5th', .1), { size: 110 });
+    const sub = I(S, 'Signed by President Franklin Roosevelt', 124, 900 - 30, 34, { align: 'left', color: '#C9CFDA' }); fin(sub, A('signed'), .4); sfx('typing', A('Executive Order', .2), .4); }
 
-  // 5. hand in your gold by May 1st, at 20.67 an ounce
-  { const S = shot(tHand, tHoard, { tr: 'slide' }); const g = G(S, { opacity: 1 });
-    const t = T(S, 'Hand in your *gold* by May 1', 960, 140, 68); kin(t, A('hand most'));
-    const items = [coin(g, 380, 470, 70), goldBar(g, 620, 480, .9), coin(g, 860, 470, 70, { mark: '$' })];
-    items.forEach((it, k) => pop(it, A(['gold coins', 'bars and', 'gold certificates'][k]), { sfx: k === 2 ? 'pop' : 'clink' }));
-    const bank = E(S, '🏦', 1480, 470, 260); pop(bank, A('banking system'));
-    items.forEach((it, k) => tl.to(it, { x: 1100 - k * 240, scale: .2, opacity: 0, duration: .6, ease: 'power2.in' }, A('by May', k * .15)));
-    sfx('whoosh', A('by May'), .6); pulse(bank, A('by May', .6), 1.12, 1);
-    const tag = P(S, 660, 640, 600, 150, { bg: '#E9B44C', border: '#7A4E0E' }); const tt = mk('div', {}, tag);
-    Object.assign(tt.style, { font: '800 64px Brico', color: '#101A2E', textAlign: 'center', lineHeight: '150px' }); tt.textContent = '20.67 dollars / oz';
-    pop(tag, A('at 20 dollars'), { sfx: 'register', r0: -8 }); }
+  // 5. the order itself: hand in gold by May 1, at 20.67 an ounce
+  { const S = photo(tHand, tHoard, 'eo6102.jpg', { grade: 'mono', kb: [1.3, 1.36], tr: 'slide', credit: 'Executive Order 6102 notice, 1933 · U.S. Government Printing Office · Public domain' }); tl.set(S.img, { filter: GRADES.mono + ' blur(14px) brightness(.6)' }, tHand - .2);
+    const c = card(S, 'eo6102.jpg', 1060, 70, 560, { filter: 'sepia(.25) contrast(1.05)' }); c3_top(S);
+    slideIn(c, tHand, 0, 120, { d: .7 });
+    hl(S, 1100, 242, 488, 60, A('gold coins'), {}); hl(S, 1104, 211, 480, 36, A('by May 1st', -.1), {});
+    const l = lower(S, 'HAND IT IN BY MAY 1', 'Gold coins, bars and *certificates*', tHand + .2, { size: 58, x: 110, y: 560 });
+    const p = I(S, '20.67', 120, 720, 120, { align: 'left', weight: 900, color: '#E9B44C' }); pop(p, A('at 20 dollars', -.1), { s0: .8, sfx: 'clink' });
+    const u = I(S, 'DOLLARS AN OUNCE', 124, 800, 30, { align: 'left', weight: 800, ls: '.24em' }); fin(u, A('at 20 dollars', .3), .4); }
 
-  // 6. the penalty
-  { const S = shot(tHoard, tDin, { tr: 'zoom' }); const t = T(S, 'Hoard it?', 960, 160, 90); kin(t, tHoard, { times: wordTimes('Hoard it') });
-    const c1 = P(S, 300, 330, 600, 330, { bg: '#16233D' }), c2 = P(S, 1020, 330, 600, 330, { bg: '#16233D' });
-    const a1 = mk('div', {}, c1), a2 = mk('div', {}, c2);
-    a1.innerHTML = '<div style="font:900 40px Inter;color:#8D98B0;text-align:center;margin-top:46px;letter-spacing:.2em">FINE</div><div class="n1" style="font:800 110px Brico;color:#E9B44C;text-align:center">10,000</div><div style="font:800 36px Inter;color:#F3EBDD;text-align:center">dollars</div>';
-    a2.innerHTML = '<div style="font:900 40px Inter;color:#8D98B0;text-align:center;margin-top:46px;letter-spacing:.2em">PRISON</div><div class="n2" style="font:800 110px Brico;color:#E2614B;text-align:center">10</div><div style="font:800 36px Inter;color:#F3EBDD;text-align:center">up to 10 years</div>';
-    slideIn(c1, A('10,000'), -300, 0); count(c1.querySelector('.n1'), 0, 10000, A('10,000'), .9);
-    slideIn(c2, A('up to ten'), 300, 0); count(c2.querySelector('.n2'), 0, 10, A('up to ten'), .8);
-    const both = T(S, '...or *both*', 960, 780, 74); kin(both, A('or both')); shake(A('or both', .3), .8); sfx('stamp', A('or both', .3)); }
+  // 6. the penalties
+  { const S = photo(tHoard, tDin, 'eo6102.jpg', { grade: 'mono', kb: [1.3, 1.34], tr: 'fade' }); tl.set(S.img, { filter: GRADES.mono + ' blur(14px) brightness(.55)' }, tHoard - .2);
+    const c = card(S, 'eo6102.jpg', 860, -820, 1000, { filter: 'sepia(.25) contrast(1.05)' }); c3_top(S); fin(c, tHoard - .1, .4);
+    tl.fromTo(c, { y: 0 }, { y: -40, duration: tDin - tHoard + .5, ease: 'none', ...IR }, tHoard - .1);
+    const box = hl(S, 912, 474, 900, 112, A('Hoard it', .4), { sw: 7 }); tl.fromTo(box, { y: 0 }, { y: -40, duration: tDin - tHoard + .5, ease: 'none', ...IR }, tHoard - .1);
+    const f = I(S, '10,000-DOLLAR FINE', 110, 420, 64, { align: 'left', weight: 900, color: '#E2614B' }); pop(f, A('10,000-dollar fine', -.05), { s0: .8, sfx: 'stamp' });
+    const j = I(S, 'UP TO 10 YEARS IN PRISON', 110, 520, 44, { align: 'left', weight: 900 }); pop(j, A('up to ten years'), { s0: .8, sfx: 'thud' });
+    const b = I(S, 'OR BOTH.', 110, 610, 44, { align: 'left', weight: 900, color: '#E9B44C' }); pop(b, A('or both'), { s0: .8, sfx: false }); }
 
-  // 7. dinner party gag
-  { const S = shot(tDin, tYear, { tr: 'fade', push: 1.02 }); const g = G(S, { opacity: 1 });
-    sv('ellipse', { cx: 960, cy: 640, rx: 560, ry: 90, fill: '#6B3E22', stroke: '#2E190C', 'stroke-width': 6 }, g);
-    sv('rect', { x: 640, y: 660, width: 24, height: 160, fill: '#4A2A16' }, g); sv('rect', { x: 1256, y: 660, width: 24, height: 160, fill: '#4A2A16' }, g);
-    const faces = ['😬', '😐', '🫢', '😶']; faces.forEach((f, k) => { const e = E(S, f, 560 + k * 270, 460, 170); pop(e, tDin + k * .12, { sfx: k ? false : 'pop' }); });
-    const props = ['🍷', '🍽️', '🍷']; props.forEach((p, k) => { const e = E(S, p, 720 + k * 240, 610, 80); fin(e, tDin); });
-    const b = T(S, '...', 1600, 260, 120, { color: '#8D98B0' }); kin(b, A('dinner party'), { sfx: 'pop' }); sfx('crickets', A('dinner party', .2), .8); }
+  // 7. dinner-party beat: awkward hold
+  { const S = photo(tDin, tYear, 'tv_1971.jpg', { grade: 'paint', kb: [1.0, 1.22], from: [0, 0], to: [-6, 3], tr: 'fade' }); tl.set(S.img, { filter: GRADES.paint + ' sepia(.4) brightness(.7)' }, tDin - .2);
+    sfx('crickets', A('dinner party', .4), .8); }
 
-  // 8. a year later: price tag 20.67 -> 35, 41% less gold per dollar
-  { const S = shot(tYear, tLeg, { tr: 'wipe' }); const t = T(S, 'Official price of gold', 960, 140, 60, { color: '#8D98B0' }); kin(t, tYear);
-    const tag = P(S, 560, 210, 800, 220, { bg: '#E9B44C', border: '#7A4E0E' }); const n = mk('div', {}, tag);
-    Object.assign(n.style, { font: '800 120px Brico', color: '#101A2E', textAlign: 'center', lineHeight: '220px' });
-    pop(tag, tYear + .2, { sfx: 'register' }); count(n, 20.67, 35, A('jumped to'), 1.0, { f: '2', suf: ' / oz' }); sfx('register', A('35 dollars'), .8);
-    const same = T(S, 'Same *gold.*', 960, 500, 62); kin(same, A('Same gold'));
-    const r1 = P(S, 480, 590, 960, 70, { bg: '#E9B44C', border: '#7A4E0E' }), r2 = P(S, 480, 700, 960, 70, { bg: '#E9B44C', border: '#7A4E0E' });
-    const l1 = I(S, 'Gold per dollar: before', 470, 625, 30, { align: 'right', color: '#8D98B0' }), l2 = I(S, 'after', 470, 735, 30, { align: 'right', color: '#8D98B0' });
-    fin(r1, A('But each dollar')); fin(l1, A('But each dollar')); fin(r2, A('But each dollar', .3)); fin(l2, A('But each dollar', .3));
-    tl.fromTo(r2, { width: 960 }, { width: 566, duration: .9, ease: 'power3.inOut', ...IR }, A('41 percent', -.2));
-    const pct = T(S, '_-41%_', 1560, 735, 70, { color: '#E2614B' }); stamp(pct, A('41 percent', .4), { r: 0 }); }
+  // 8. a year later: price jumps to 35, each dollar = 41% less gold
+  { const S = photo(tYear, tAnd74, 'fortknox_postcard.jpg', { grade: 'mono', kb: [1.06, 1.16], to: [-2, -1], tr: 'slide', credit: 'Fort Knox Bullion Depository, postcard · Tichnor Bros., Boston Public Library · Public domain' }); c3_dim(S, .45);
+    const k = I(S, 'A YEAR LATER · OFFICIAL PRICE OF GOLD', 960, 170, 30, { weight: 800, color: '#E9B44C', ls: '.3em' }); fin(k, tYear, .4);
+    const p = I(S, '20.67', 960, 320, 170, { weight: 900 }); fin(p, tYear + .2, .3); count(p, 20.67, 35, A('jumped to'), 1.0, { f: '2', ease: 'power3.inOut' });
+    const u = I(S, 'DOLLARS AN OUNCE', 960, 430, 32, { weight: 800, ls: '.24em' }); fin(u, tYear + .4, .4);
+    const sg = T(S, 'Same *gold.*', 960, 560, 72); kin(sg, A('Same gold'), { times: wordTimes('Same gold') });
+    const g = sv('g', {}, S.svg); const bx = 560, bw = 800;
+    const lb1 = svgT(g, 'GOLD PER DOLLAR · BEFORE', bx, 690, 24, { anchor: 'start', c: '#C9CFDA', font: 'Inter', w: 800, ls: '.16em' }); const b1 = sv('rect', { x: bx, y: 705, width: bw, height: 30, rx: 6, fill: '#E9B44C' }, g);
+    const lb2 = svgT(g, 'AFTER', bx, 790, 24, { anchor: 'start', c: '#C9CFDA', font: 'Inter', w: 800, ls: '.16em' }); const b2 = sv('rect', { x: bx, y: 805, width: bw, height: 30, rx: 6, fill: '#E9B44C' }, g);
+    const cut = sv('rect', { x: bx + bw * .59, y: 805, width: bw * .41, height: 30, rx: 6, fill: 'none', stroke: '#E2614B', 'stroke-width': 4, 'stroke-dasharray': '10 7', opacity: 0 }, g);
+    const pct = svgT(g, '−41%', bx + bw + 30, 832, 46, { anchor: 'start', c: '#E2614B' });
+    [lb1, b1, lb2, b2, pct].forEach(e => gsap.set(e, { autoAlpha: 0 })); tl.to([lb1, b1, lb2, b2], { autoAlpha: 1, duration: .4 }, A('But each dollar', -.1));
+    tl.fromTo(b2, { attr: { width: bw } }, { attr: { width: bw * .59 }, duration: .9, ease: 'power2.inOut', ...IR }, A('41 percent', -.2)); fin(cut, A('41 percent', .4), .3); pop(pct, A('41 percent', .3), { sfx: 'thud' }); }
 
-  // 9. legal again: Dec 31, 1974
-  { const S = shot(tLeg, tOrd, { tr: 'up' }); const g = G(S, { opacity: 1 });
-    const cal = P(S, 1080, 220, 420, 460, { bg: '#F3EBDD', border: '#C9CFDA' }); const ci = mk('div', {}, cal);
-    ci.innerHTML = '<div style="background:#E2614B;height:100px;border-radius:18px 18px 0 0;color:#fff;font:800 50px Inter;display:flex;align-items:center;justify-content:center;letter-spacing:.12em">DEC 31</div><div style="font:800 170px Brico;color:#101A2E;text-align:center;line-height:250px">1974</div>';
-    const gb = goldBar(g, 620, 450, 1.8); pop(gb, tLeg, { s0: .6, sfx: 'clink' }); const lk = lock(g, 620, 360, .8); pop(lk.g, tLeg + .3, { sfx: 'clang' });
-    const t = T(S, 'Gold bars: *illegal* to own', 620, 720, 54); kin(t, A('legally own'));
-    slideIn(cal, A('until the last day'), 300, 0, { sfx: 'flip' });
-    tl.to(lk.g, { y: -60, opacity: 0, rotation: 20, transformOrigin: '50% 50%', duration: .5, ease: 'power2.in' }, A('1974', .2)); sfx('snap', A('1974', .2), .6); }
+  // 9. the last day of 1974
+  { const S = photo(tAnd74, tOrd, 'fortknox_vault.jpg', { grade: 'mono', kb: [1.1, 1.2], tr: 'fade', credit: 'Fort Knox Bullion Depository · Public domain' }); tl.set(S.img, { filter: GRADES.mono + ' blur(5px)' }, tAnd74 - .2); c3_dim(S, .4);
+    const l = lower(S, 'PRIVATE GOLD BARS', 'Illegal to own until', tAnd74 + .1, { size: 72, y: 330 });
+    const cal = P(S, 1150, 360, 420, 440, { bg: '#F3EBDD', border: '#C9CFDA' }); const inner = mk('div', {}, cal);
+    inner.innerHTML = '<div style="background:#E2614B;height:96px;border-radius:18px 18px 0 0;color:#fff;font:800 46px Inter;display:flex;align-items:center;justify-content:center;letter-spacing:.14em">DECEMBER</div><div style="font:800 190px Inter;color:#101A2E;text-align:center;line-height:230px">31</div><div style="font:800 64px Inter;color:#101A2E;text-align:center;letter-spacing:.1em">1974</div>';
+    slideIn(cal, A('the last day', -.3), 0, -260, { sfx: 'flip', d: .6 }); }
 
   // 10. re-hook: people locked out, governments not
-  { const tGov = A('But foreign governments'), tLoop = A('that loophole'); const S = shot(tOrd, tEnd, { tr: 'zoom' }); const g = G(S, { opacity: 1 });
-    const door = (x, label, col) => { const d = G(S, {}); sv('rect', { x: x - 170, y: 230, width: 340, height: 500, rx: 14, fill: '#16233D', stroke: '#3B5384', 'stroke-width': 8 }, d);
-      const leaf = sv('rect', { x: x - 150, y: 250, width: 300, height: 480, rx: 8, fill: col, stroke: '#2A3A5C', 'stroke-width': 5 }, d); svgT(d, label, x, 790, 40, { font: 'Inter', w: 900, ls: '.14em' }); return { d, leaf }; };
-    const D1 = door(620, 'PEOPLE', '#4B5570'), D2 = door(1300, 'GOVERNMENTS', '#4B5570');
-    const top = G(S, { opacity: 1 }); pop(D1.d, tOrd, { s0: .8 }); const lk = lock(top, 620, 470, 1.1); pop(lk.g, A('locked out'), { s0: 2, sfx: 'clang', ease: 'power4.in', d: .25 }); shake(A('locked out', .25), .8);
-    pop(D2.d, tGov, { s0: .8 }); const glow = sv('rect', { x: 1150, y: 250, width: 300, height: 480, fill: '#E9B44C', opacity: 0 }, top);
-    tl.to(D2.leaf, { attr: { width: 40 }, duration: .6, ease: 'power3.inOut' }, A("governments weren't", .2)); tl.to(glow, { opacity: .55, duration: .5 }, A("governments weren't", .3)); sfx('sparkle', A("governments weren't", .3), .7);
-    const gb = goldBar(top, 1300, 520, .8); pop(gb, A("governments weren't", .6), { sfx: 'clink' });
-    const t = T(S, 'That *loophole* broke the system', 960, 130, 70); kin(t, tLoop);
-    const crack = sv('path', { d: 'M960,160 L930,330 L990,480 L940,640 L975,800', stroke: '#E2614B', 'stroke-width': 10, fill: 'none', 'stroke-linejoin': 'round', opacity: 0 }, top);
-    draw(crack, A('broke the whole'), .35); shake(A('broke the whole', .1), 1.4); sfx('crack', A('broke the whole')); flash(A('broke the whole', .1), .3); }
+  { const tGov = A('But foreign governments'), tLoop = A('And that loophole'); const S = photo(tOrd, tEnd, 'gold_window.jpg', { grade: 'paint', kb: [1.0, 1.12], to: [-1, -2], tr: 'fade' }); c3_dim(S, .3);
+    const g = sv('g', {}, S.svg);
+    const pp = svgT(g, 'ORDINARY PEOPLE', 520, 300, 40, { c: '#F3EBDD', font: 'Inter', w: 900, ls: '.18em' }); const lk = lock(g, 520, 490, 1.2); const lkx = svgT(g, 'LOCKED OUT', 520, 650, 34, { c: '#E2614B', font: 'Inter', w: 900, ls: '.2em' });
+    const gv = svgT(g, 'FOREIGN GOVERNMENTS', 1400, 300, 40, { c: '#F3EBDD', font: 'Inter', w: 900, ls: '.18em' }); const op = svgT(g, 'STILL ALLOWED', 1400, 650, 34, { c: '#E9B44C', font: 'Inter', w: 900, ls: '.2em' });
+    const gb = goldBar(g, 1400, 480, 1.3);
+    pop(pp, tOrd + .2, { sfx: false }); pop(lk.g, A('locked out', -.1), { sfx: 'clang', vol: .6 }); pop(lkx, A('locked out', .2), { sfx: false });
+    pop(gv, tGov, { sfx: false }); pop(gb, A("weren't", -.2), { sfx: 'clink' }); pop(op, A("weren't", .1), { sfx: false });
+    tl.to([pp, lk.g, lkx, gv, gb, op], { autoAlpha: 0, duration: .35 }, tLoop - .1);
+    const r = T(S, 'That loophole broke the *whole system*', 960, 470, 84); kin(r, tLoop, { times: wordTimes('that loophole is what eventually broke the whole system').filter((_, i) => ![2, 3, 4].includes(i)) }); sfx('crack', A('broke the whole', .1), .6); }
 }

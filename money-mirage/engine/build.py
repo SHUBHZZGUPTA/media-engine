@@ -21,6 +21,7 @@ for d, s in fonts.items():
 for src, dst in [('/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf', 'assets/emoji.ttf'), (os.path.join(HERE, 'assets/world.jpg'), 'assets/world.jpg'),
                  (os.path.join(MM, 'node_modules/gsap/dist/gsap.min.js'), 'gsap.min.js')]:
     if not os.path.exists(os.path.join(out, dst)): shutil.copy(src, os.path.join(out, dst))
+shutil.copytree(os.path.join(HERE, 'assets/arch'), os.path.join(out, 'assets/arch'), dirs_exist_ok=True)
 tpl = open(os.path.join(HERE, 'template.html')).read().replace('__SCENES__', code).replace('__DATA__', json.dumps(D, ensure_ascii=False))
 segs = json.loads(sys.argv[2]) if len(sys.argv) > 2 else None
 open(os.path.join(out, 'index.html'), 'w').write(tpl.replace('__SEG__', 'null').replace('__DUR__', '%.3f' % D['dur']))

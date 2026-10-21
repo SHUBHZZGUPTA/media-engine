@@ -1,6 +1,6 @@
 # Money Mirage audio: synthesized music bed (per chapter), synthesized SFX at cue times, ducking, final mix.
 # Usage: python3 audio.py  (reads build/timing.json, build/narration.wav, build/sfx.json) -> build/mix.wav
-import json, wave, numpy as np
+import json, wave, os, numpy as np
 from scipy.signal import fftconvolve, butter, sosfilt
 SR = 48000; B = '/home/claude/mm-work/engine/build'
 rng = np.random.default_rng(7)
@@ -120,31 +120,54 @@ MOODS = {
 CHMOOD = ['wonder', 'wonder', 'drive', 'tension', 'drive', 'tension', 'drive', 'resolve']
 BPM = 92; BEAT = 60 / BPM; BAR = BEAT * 4
 def tri(root, q): return [root, root + (3 if q == 'm' else 4), root + 7]
-music = np.zeros(N, np.float32)
-for c in TIM['chapters']:
-    a = c['a'] - (2.2 if c['n'] else .3); b = (TIM['chapters'][c['n'] + 1]['a'] - 2.2) if c['n'] < 7 else DUR
-    mood = MOODS[CHMOOD[c['n']]]; n0 = int(max(0, a) * SR); L = int((b - max(0, a)) * SR); seg = np.zeros(L + SR * 3)
-    nb = int(np.ceil((b - a) / BAR))
-    for k in range(nb):
-        root, q = mood[(k // 2) % 4]; s = int(k * BAR * SR); e = min(len(seg), s + int(BAR * SR))
-        fr = [mtof(m) for m in tri(root - 12, q)]; pd = pad(fr, e - s) * env_adsr(e - s, .4, .3, .8, .5); seg[s:e] += pd * .05
-        bass = np.sin(2 * np.pi * mtof(root - 24) * np.arange(e - s) / SR) * env_adsr(e - s, .02, .4, .5, .3); seg[s:e] += bass * .09
-        arp = tri(root, q) + [root + 12]; pat = [0, 2, 1, 3, 2, 1, 3, 2]
-        for j in range(8):
-            if CHMOOD[c['n']] == 'tension' and j % 2: continue
-            st = s + int(j * BEAT / 2 * SR); nt = pl(arp[pat[j]] + (12 if CHMOOD[c['n']] == 'resolve' else 0), .7, .45)
-            seg[st:st + len(nt)] += nt[:len(seg) - st] * .07
-        if CHMOOD[c['n']] in ('drive', 'tension'):
-            for j in range(4):
-                st = s + int(j * BEAT * SR); kl = int(.25 * SR); tt = np.arange(kl) / SR
-                kick = np.sin(2 * np.pi * (50 + 90 * np.exp(-tt * 30)) * tt) * np.exp(-tt * 12)
-                if j % 2 == 0: seg[st:st + kl] += kick[:len(seg) - st] * .12
-                hh = hp(noise(int(.05 * SR)), 7000) * np.exp(-np.arange(int(.05 * SR)) / SR * 80) * .025
-                st2 = st + int(BEAT / 2 * SR); seg[st2:st2 + len(hh)] += hh[:len(seg) - st2]
-    seg = verb(seg, .3)
-    fade = np.ones(len(seg)); fi = int(1.2 * SR); fade[:fi] = np.linspace(0, 1, fi); fo = int(2.5 * SR); end = L
-    fade[end - fo:end] *= np.linspace(1, 0, fo); fade[end:] = 0
-    seg *= fade; e = min(N, n0 + len(seg)); music[n0:e] += seg[:e - n0]
+import glob, subprocess
+TRACKS = sorted(glob.glob(f'{B}/music/*.mp3') + glob.glob(f'{B}/music/*.wav'))
+def loadtrack(p):
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'], capture_output=True, check=True).stdout
+    x = np.frombuffer(raw, np.int16).astype(np.float32) / 32768; return x / (np.sqrt((x ** 2).mean()) + 1e-9) * .1
+if TRACKS:
+    # real recorded tracks: chapters cycle through them, each chapter starts a new track section with crossfades
+    music = np.zeros(N, np.float32); TR = [loadtrack(p) for p in TRACKS]; pos = [0] * len(TR)
+    plan = json.load(open(f'{B}/music/plan.json')) if os.path.exists(f'{B}/music/plan.json') else None
+    for c in TIM['chapters']:
+        a = max(0, c['a'] - (2.4 if c['n'] else .3)); b = (TIM['chapters'][c['n'] + 1]['a'] - 2.0) if c['n'] < 7 else DUR
+        k = plan[c['n']] if plan else c['n'] % len(TR); x = TR[k]; L = int((b - a) * SR) + int(2 * SR)
+        if pos[k] + L > len(x): pos[k] = 0
+        seg = x[pos[k]:pos[k] + L].copy(); pos[k] += L
+        if len(seg) < L: seg = np.concatenate([seg, x[:L - len(seg)]])
+        fi, fo = int(1.5 * SR), int(2 * SR); seg[:fi] *= np.linspace(0, 1, fi); seg[-fo:] *= np.linspace(1, 0, fo)
+        n0 = int(a * SR); e = min(N, n0 + len(seg)); music[n0:e] += seg[:e - n0]
+else:
+    music = np.zeros(N, np.float32)
+if not TRACKS and os.environ.get('SYNTH_MUSIC') != '1':
+    music = np.zeros(N, np.float32)
+elif False:
+    pass
+    for c in TIM['chapters']:
+        a = c['a'] - (2.2 if c['n'] else .3); b = (TIM['chapters'][c['n'] + 1]['a'] - 2.2) if c['n'] < 7 else DUR
+        mood = MOODS[CHMOOD[c['n']]]; n0 = int(max(0, a) * SR); L = int((b - max(0, a)) * SR); seg = np.zeros(L + SR * 3)
+        nb = int(np.ceil((b - a) / BAR))
+        for k in range(nb):
+            root, q = mood[(k // 2) % 4]; s = int(k * BAR * SR); e = min(len(seg), s + int(BAR * SR))
+            fr = [mtof(m) for m in tri(root - 12, q)]; pd = pad(fr, e - s) * env_adsr(e - s, .4, .3, .8, .5); seg[s:e] += pd * .05
+            bass = np.sin(2 * np.pi * mtof(root - 24) * np.arange(e - s) / SR) * env_adsr(e - s, .02, .4, .5, .3); seg[s:e] += bass * .09
+            arp = tri(root, q) + [root + 12]; pat = [0, 2, 1, 3, 2, 1, 3, 2]
+            for j in range(8):
+                if CHMOOD[c['n']] == 'tension' and j % 2: continue
+                st = s + int(j * BEAT / 2 * SR); nt = pl(arp[pat[j]] + (12 if CHMOOD[c['n']] == 'resolve' else 0), .7, .45)
+                seg[st:st + len(nt)] += nt[:len(seg) - st] * .07
+            if CHMOOD[c['n']] in ('drive', 'tension'):
+                for j in range(4):
+                    st = s + int(j * BEAT * SR); kl = int(.25 * SR); tt = np.arange(kl) / SR
+                    kick = np.sin(2 * np.pi * (50 + 90 * np.exp(-tt * 30)) * tt) * np.exp(-tt * 12)
+                    if j % 2 == 0: seg[st:st + kl] += kick[:len(seg) - st] * .12
+                    hh = hp(noise(int(.05 * SR)), 7000) * np.exp(-np.arange(int(.05 * SR)) / SR * 80) * .025
+                    st2 = st + int(BEAT / 2 * SR); seg[st2:st2 + len(hh)] += hh[:len(seg) - st2]
+        seg = verb(seg, .3)
+        fade = np.ones(len(seg)); fi = int(1.2 * SR); fade[:fi] = np.linspace(0, 1, fi); fo = int(2.5 * SR); end = L
+        fade[end - fo:end] *= np.linspace(1, 0, fo); fade[end:] = 0
+        seg *= fade; e = min(N, n0 + len(seg)); music[n0:e] += seg[:e - n0]
+
 # ---------------- ducking under narration ----------------
 nar = rd(f'{B}/narration.wav'); voice = np.zeros(N, np.float32); voice[:len(nar)] = nar
 hop = 480; envv = np.array([np.sqrt((voice[i:i + hop] ** 2).mean()) for i in range(0, N, hop)])
@@ -161,7 +184,7 @@ for name, t, vol in sorted(cues, key=lambda c: c[1]):
     if name not in CACHE: CACHE[name] = SFX[name]().astype(np.float32)
     x = CACHE[name] * vol * {'whoosh': .55, 'swoosh': .6, 'tick': .7, 'pop': .8}.get(name, 1); s = int(t * SR); e = min(N, s + len(x)); fx[s:e] += x[:e - s]
 fx = verb(fx, .12)
-mix = voice * 1.0 + music * 1.0 + fx * .55
+mix = voice * 1.0 + music * 1.0 + fx * .4
 mix = mix[:int((DUR + .5) * SR)]
 mix /= max(1e-6, np.abs(mix).max()) / .95
 with wave.open(f'{B}/mix.wav', 'wb') as w:
