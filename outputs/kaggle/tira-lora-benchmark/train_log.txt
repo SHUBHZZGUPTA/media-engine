@@ -1,0 +1,36 @@
+Flax classes are deprecated and will be removed in Diffusers v0.40.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v0.40.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Running 1 job
+Error running job: No module named 'av'
+Error running on_error: cannot access local variable 'job' where it is not associated with a value
+
+========================================
+Result:
+ - 0 completed jobs
+ - 1 failure
+========================================
+Traceback (most recent call last):
+  File "/tmp/ai-toolkit/run.py", line 151, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/ai-toolkit/run.py", line 136, in main
+    raise e
+  File "/tmp/ai-toolkit/run.py", line 123, in main
+    job = get_job(config_file, args.name)
+  File "/tmp/ai-toolkit/toolkit/job.py", line 28, in get_job
+    from jobs import ExtensionJob
+  File "/tmp/ai-toolkit/jobs/__init__.py", line 1, in <module>
+    from .BaseJob import BaseJob
+  File "/tmp/ai-toolkit/jobs/BaseJob.py", line 5, in <module>
+    from jobs.process import BaseProcess
+  File "/tmp/ai-toolkit/jobs/process/__init__.py", line 6, in <module>
+    from .TrainVAEProcess import TrainVAEProcess
+  File "/tmp/ai-toolkit/jobs/process/TrainVAEProcess.py", line 20, in <module>
+    from toolkit.data_loader import ImageDataset
+  File "/tmp/ai-toolkit/toolkit/data_loader.py", line 22, in <module>
+    from toolkit.config_modules import DatasetConfig, preprocess_dataset_raw_config
+  File "/tmp/ai-toolkit/toolkit/config_modules.py", line 9, in <module>
+    from toolkit.audio.album_artwork import add_album_artwork
+  File "/tmp/ai-toolkit/toolkit/audio/album_artwork.py", line 4, in <module>
+    import av
+ModuleNotFoundError: No module named 'av'

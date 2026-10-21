@@ -1,0 +1,26 @@
+{
+ "params": {
+  "aitk_commit": "04733873cf1da8060fce01316ec45daedbd4a918",
+  "trigger": "tirav1",
+  "steps": 25,
+  "rank": 16,
+  "lr": 0.0001,
+  "resolutions": [
+   512,
+   768
+  ],
+  "save_every": 25,
+  "sample_every": 0,
+  "sample_prompts": []
+ },
+ "images": 35,
+ "timings": {
+  "ai-toolkit installed": 74.7,
+  "dataset ready (35 images)": 138.5,
+  "config written": 138.6,
+  "training failed (exit 1)": 179.2
+ },
+ "exit_code": 1,
+ "outputs": [],
+ "peak_gpu_mem_note": "see train_log.txt"
+}

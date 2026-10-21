@@ -1,0 +1,26 @@
+{
+ "job": "tira-lora-benchmark",
+ "kernel": "shubhzzgupta07/me-tira-lora-benchmark",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-lora-benchmark",
+ "gpu_quota_before": {
+  "used_h": 0.85,
+  "remaining_h": 29.15,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-10-21T06:46:21+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "ERROR",
+ "checked_at": "2026-10-21T06:49:53+00:00",
+ "files": [
+  "config.yaml",
+  "me-tira-lora-benchmark.log",
+  "train_log.txt",
+  "train_run.json"
+ ],
+ "gpu_quota_after": {
+  "used_h": 0.9,
+  "remaining_h": 29.1,
+  "total_h": 30.0
+ }
+}

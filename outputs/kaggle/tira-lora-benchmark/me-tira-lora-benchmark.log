@@ -1,0 +1,65 @@
+[{"stream_name":"stdout","time":1.026893785,"data":"$ git init -q /tmp/ai-toolkit \u0026\u0026 cd /tmp/ai-toolkit \u0026\u0026 git remote add origin https://github.com/ostris/ai-toolkit.git \u0026\u0026 git fetch -q --depth 1 origin 04733873cf1da8060fce01316ec45daedbd4a918 \u0026\u0026 git checkout -q FETCH_HEAD \u0026\u0026 git submodule update --init --recursive --depth 1 -q || true\n"}
+,{"stream_name":"stdout","time":3.666799005,"data":"$ /usr/bin/python3 -m pip install -q -r /tmp/train/requirements.txt\n"}
+,{"stream_name":"stdout","time":19.649749583,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 3.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.428548696,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 3.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.081773523,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 80.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.118643774,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.3/200.3 kB 9.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.202118994,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 67.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.246697141,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 10.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.277767922,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.7/109.7 kB 6.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.317219062,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 31.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.355427505,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.0/557.0 kB 25.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.388560735,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.490689901,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 100.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.602669304,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 49.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.648164176,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 54.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.062726551,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 51.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.120612327,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 89.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.153105934,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.8/53.8 kB 2.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.206866583,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 85.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.262942239,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 2.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":72.40851983,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":72.4085546,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":72.408560617,"data":"ydata-profiling 4.18.4 requires matplotlib\u003c=3.10,\u003e=3.5, but you have matplotlib 3.10.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":72.720674708,"data":"$ /usr/bin/python3 -m pip install -q torchao\n"}
+,{"stream_name":"stdout","time":75.75448854,"data":"[    74.7s] ai-toolkit installed\n"}
+,{"stream_name":"stdout","time":139.517584195,"data":"[   138.5s] dataset ready (35 images)\n"}
+,{"stream_name":"stdout","time":139.606037542,"data":"[   138.6s] config written\n"}
+,{"stream_name":"stdout","time":175.644787184,"data":"Error running job: No module named 'av'\n"}
+,{"stream_name":"stdout","time":175.644819157,"data":"Error running on_error: cannot access local variable 'job' where it is not associated with a value\n"}
+,{"stream_name":"stdout","time":175.646632838,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":175.647817274,"data":"ModuleNotFoundError: No module named 'av'\n"}
+,{"stream_name":"stdout","time":180.222336244,"data":"[   179.2s] training failed (exit 1)\n"}
+,{"stream_name":"stdout","time":180.223091991,"data":"{\n"}
+,{"stream_name":"stdout","time":180.223110085,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":180.223114299,"data":"  \"aitk_commit\": \"04733873cf1da8060fce01316ec45daedbd4a918\",\n"}
+,{"stream_name":"stdout","time":180.2231176,"data":"  \"trigger\": \"tirav1\",\n"}
+,{"stream_name":"stdout","time":180.223120564,"data":"  \"steps\": 25,\n"}
+,{"stream_name":"stdout","time":180.223123556,"data":"  \"rank\": 16,\n"}
+,{"stream_name":"stdout","time":180.223126417,"data":"  \"lr\": 0.0001,\n"}
+,{"stream_name":"stdout","time":180.223129284,"data":"  \"resolutions\": [\n"}
+,{"stream_name":"stdout","time":180.223132098,"data":"   512,\n"}
+,{"stream_name":"stdout","time":180.223134808,"data":"   768\n"}
+,{"stream_name":"stdout","time":180.223137478,"data":"  ],\n"}
+,{"stream_name":"stdout","time":180.223140281,"data":"  \"save_every\": 25,\n"}
+,{"stream_name":"stdout","time":180.223143059,"data":"  \"sample_every\": 0,\n"}
+,{"stream_name":"stdout","time":180.223145862,"data":"  \"sample_prompts\": []\n"}
+,{"stream_name":"stdout","time":180.223148684,"data":" },\n"}
+,{"stream_name":"stdout","time":180.223151856,"data":" \"images\": 35,\n"}
+,{"stream_name":"stdout","time":180.223167985,"data":" \"timings\": {\n"}
+,{"stream_name":"stdout","time":180.223173451,"data":"  \"ai-toolkit installed\": 74.7,\n"}
+,{"stream_name":"stdout","time":180.223178511,"data":"  \"dataset ready (35 images)\": 138.5,\n"}
+,{"stream_name":"stdout","time":180.223183607,"data":"  \"config written\": 138.6,\n"}
+,{"stream_name":"stdout","time":180.22318836,"data":"  \"training failed (exit 1)\": 179.2\n"}
+,{"stream_name":"stdout","time":180.223203093,"data":" },\n"}
+,{"stream_name":"stdout","time":180.223206418,"data":" \"exit_code\": 1,\n"}
+,{"stream_name":"stdout","time":180.223211372,"data":" \"outputs\": [],\n"}
+,{"stream_name":"stdout","time":180.223217868,"data":" \"peak_gpu_mem_note\": \"see train_log.txt\"\n"}
+,{"stream_name":"stdout","time":180.223220197,"data":"}\n"}
+,{"stream_name":"stderr","time":182.256718993,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":182.256747001,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":182.488126423,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":182.488169563,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":183.278889203,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":184.220638093,"data":"[NbConvertApp] Writing 322187 bytes to __results__.html\n"}
+]
