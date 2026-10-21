@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Brico;font-weight:800;src:url(assets/brico800.woff2)}
+body{margin:0;background:transparent}.c{position:relative}
+</style></head><body>
+<svg id="emblemDefs" width="0" height="0" style="position:absolute"><defs>
+ <radialGradient id="coin" cx="42%" cy="36%" r="70%"><stop offset="0" stop-color="#FFE7A6"/><stop offset=".45" stop-color="#EDBB52"/><stop offset="1" stop-color="#B07A1E"/></radialGradient>
+ <linearGradient id="hz" x1="0" x2="1"><stop offset="0" stop-color="#F3EBDD" stop-opacity="0"/><stop offset=".5" stop-color="#F3EBDD" stop-opacity=".95"/><stop offset="1" stop-color="#F3EBDD" stop-opacity="0"/></linearGradient>
+ <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#E9B44C" stop-opacity=".5"/><stop offset=".5" stop-color="#E9B44C" stop-opacity=".1"/><stop offset="1" stop-color="#E9B44C" stop-opacity="0"/></radialGradient>
+ <radialGradient id="bgr" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#18284A"/><stop offset=".6" stop-color="#0D1628"/><stop offset="1" stop-color="#070C17"/></radialGradient>
+ <filter id="mir" x="-20%" y="-20%" width="140%" height="160%"><feTurbulence type="fractalNoise" baseFrequency="0.004 0.055" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+<!-- emblem symbol: coin over horizon + mirage reflection, drawn in a 400x400 box -->
+
+<div class="c" id="lockup" style="width:2400px;height:1500px"><svg width="2400" height="1500" viewBox="0 0 2400 1500"><g transform="translate(800,40) scale(2)" id="e1"></g>
+ <text x="1200" y="1180" text-anchor="middle" font-family="Brico" font-weight="800" font-size="230" letter-spacing="24"><tspan fill="#E9B44C">MONEY</tspan><tspan fill="#F3EBDD" dx="70">MIRAGE</tspan></text>
+ <g opacity=".3" transform="translate(0,2410) scale(1,-1)"><text x="1200" y="1180" text-anchor="middle" font-family="Brico" font-weight="800" font-size="230" letter-spacing="24"><tspan fill="#E9B44C">MONEY</tspan><tspan fill="#F3EBDD" dx="70">MIRAGE</tspan></text></g>
+ <g fill="#0D1628">{WSTRIPES}</g></svg></div>
+<div class="c" id="icon" style="width:800px;height:800px"><svg width="800" height="800" viewBox="0 0 800 800"><rect width="800" height="800" fill="url(#bgr)"/><g transform="translate(120,140) scale(1.4)" id="e2"></g></svg></div>
+<script>
+const T='<g>\n <circle cx="200" cy="170" r="180" fill="url(#halo)"/>\n <clipPath id="ab{K}"><rect x="0" y="0" width="400" height="230"/></clipPath><clipPath id="be{K}"><rect x="0" y="230" width="400" height="170"/></clipPath>\n <mask id="mf{K}" maskUnits="userSpaceOnUse" x="0" y="230" width="400" height="170"><rect x="0" y="230" width="400" height="150" fill="url(#fade)"/></mask>\n <g clip-path="url(#ab{K})"><circle cx="200" cy="170" r="92" fill="url(#coin)"/><circle cx="200" cy="170" r="78" fill="none" stroke="#A8711A" stroke-width="3" opacity=".55"/><circle cx="200" cy="170" r="71" fill="none" stroke="#FFF1C4" stroke-width="1.5" opacity=".45"/></g>\n <g clip-path="url(#be{K})"><g mask="url(#mf{K})"><g filter="url(#mir)"><g transform="translate(0,460) scale(1,-1)"><circle cx="200" cy="170" r="92" fill="url(#coin)"/></g></g></g>\n  {STRIPES}</g>\n <rect x="40" y="229" width="320" height="2.5" fill="url(#hz)"/>\n</g>';
+const st=Array.from({length:6},(_,k)=>`<rect x="104" y="${238+k*22+k*k*1.1}" width="192" height="${1.4+k*.6}" fill="#0D1628" opacity=".9"/>`).join('');
+document.getElementById('e1').innerHTML=T.replaceAll('{K}','a').replace('{STRIPES}',st);
+document.getElementById('e2').innerHTML=T.replaceAll('{K}','b').replace('{STRIPES}',st.replaceAll('#0D1628','#0F1A30'));
+document.querySelector('#lockup svg g[fill]').innerHTML=Array.from({length:5},(_,k)=>`<rect x="300" y="${1260+k*26}" width="1800" height="${5+k*1.6}"/>`).join('');
+</script></body></html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>Money Mirage logo</title>
+<script src="./gsap.min.js"></script>
+<style>
+@font-face { font-family: 'Brico'; font-weight: 800; src: url(assets/brico800.woff2) format('woff2'); }
+body { margin: 0; background: #070C17; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden;
+  background: radial-gradient(ellipse 60% 55% at 50% 44%, #15233F 0%, #0B1324 55%, #060A14 100%); }
+#grain { position: absolute; inset: 0; opacity: .10; mix-blend-mode: overlay; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='320' height='320' filter='url(%23n)'/></svg>"); }
+svg { position: absolute; left: 0; top: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="6.5">
+<div id="stage" class="clip" data-start="0" data-duration="6.5" style="position:absolute;inset:0">
+<svg id="art" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="coin" cx="42%" cy="36%" r="70%">
+      <stop offset="0" stop-color="#FFE7A6"/><stop offset=".45" stop-color="#EDBB52"/><stop offset="1" stop-color="#B07A1E"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#E9B44C" stop-opacity=".55"/><stop offset=".5" stop-color="#E9B44C" stop-opacity=".12"/><stop offset="1" stop-color="#E9B44C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hz" x1="0" x2="1">
+      <stop offset="0" stop-color="#F3EBDD" stop-opacity="0"/><stop offset=".5" stop-color="#F3EBDD" stop-opacity=".95"/><stop offset="1" stop-color="#F3EBDD" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glintG" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="above"><rect x="0" y="0" width="1920" height="430"/></clipPath>
+    <clipPath id="below"><rect x="0" y="430" width="1920" height="300"/></clipPath>
+    <clipPath id="coinClip"><circle cx="960" cy="352" r="110"/></clipPath>
+    <mask id="refFade" maskUnits="userSpaceOnUse" x="0" y="430" width="1920" height="300"><rect x="0" y="430" width="1920" height="230" fill="url(#fade)"/></mask>
+    <filter id="mirage" x="-20%" y="-20%" width="140%" height="160%">
+      <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.004 0.055" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap id="disp" in="SourceGraphic" in2="n" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="mirageW" x="-10%" y="-40%" width="120%" height="180%">
+      <feTurbulence id="turbW" type="fractalNoise" baseFrequency="0.003 0.09" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap id="dispW" in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+  </defs>
+
+  <g id="push">
+    <!-- emblem -->
+    <circle id="haloC" cx="960" cy="352" r="300" fill="url(#halo)" opacity="0"/>
+    <g clip-path="url(#above)">
+      <g id="coinG">
+        <circle cx="960" cy="352" r="110" fill="url(#coin)"/>
+        <circle cx="960" cy="352" r="94" fill="none" stroke="#A8711A" stroke-width="3" opacity=".55"/>
+        <circle cx="960" cy="352" r="86" fill="none" stroke="#FFF1C4" stroke-width="1.5" opacity=".45"/>
+        <g clip-path="url(#coinClip)"><rect id="glint" x="760" y="200" width="60" height="320" fill="url(#glintG)" transform="skewX(-18)" opacity="0"/></g>
+      </g>
+    </g>
+    <!-- reflection of the coin below the horizon -->
+    <g id="coinRef" clip-path="url(#below)" opacity="0">
+      <g mask="url(#refFade)"><g filter="url(#mirage)">
+        <g transform="translate(0,860) scale(1,-1)">
+          <circle cx="960" cy="352" r="110" fill="url(#coin)"/>
+          <circle cx="960" cy="352" r="94" fill="none" stroke="#A8711A" stroke-width="3" opacity=".55"/>
+        </g>
+      </g></g>
+      <g id="stripes"></g>
+    </g>
+    <rect id="horizon" x="560" y="429" width="800" height="2.5" fill="url(#hz)"/>
+
+    <!-- wordmark -->
+    <g id="wm">
+      <text id="w1" x="960" y="730" text-anchor="middle" font-family="Brico" font-weight="800" font-size="112" letter-spacing="12"><tspan id="tMoney" fill="#E9B44C">MONEY</tspan><tspan id="tMirage" fill="#F3EBDD" dx="34">MIRAGE</tspan></text>
+    </g>
+    <g id="wmRef" opacity="0" filter="url(#mirageW)">
+      <g transform="translate(0,1482) scale(1,-1)">
+        <text x="960" y="730" text-anchor="middle" font-family="Brico" font-weight="800" font-size="112" letter-spacing="12"><tspan fill="#E9B44C">MONEY</tspan><tspan fill="#F3EBDD" dx="34">MIRAGE</tspan></text>
+      </g>
+      <g id="wstripes"></g>
+    </g>
+  </g>
+</svg>
+<div id="grain"></div>
+</div>
+</div>
+<script>
+const NS = 'http://www.w3.org/2000/svg', $ = id => document.getElementById(id);
+const mk = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
+// mirage stripes cut through the reflections (navy bands that thicken further down)
+for (let k = 0; k < 6; k++) mk('rect', { x: 836, y: 446 + k * 26 + k * k * 1.2, width: 248, height: 1.6 + k * .7, fill: '#0D1628', opacity: .85 }, $('stripes'));
+for (let k = 0; k < 5; k++) mk('rect', { x: 560, y: 762 + k * 13, width: 800, height: 2.6 + k * .8, fill: '#0B1324' }, $('wstripes'));
+const IR = { immediateRender: false };
+function build() {
+  const tl = gsap.timeline({ paused: true });
+  gsap.set('#w1', { opacity: 0 }); gsap.set('#horizon', { scaleX: 0, transformOrigin: '50% 50%', transformBox: 'fill-box' }); gsap.set('#coinG', { y: 260 });
+  tl.set('#coinG', { y: 260 }, 0);
+  // horizon draws outwards
+  tl.fromTo('#horizon', { scaleX: 0, transformOrigin: '50% 50%', transformBox: 'fill-box' }, { scaleX: 1, duration: 1.1, ease: 'power3.inOut', ...IR }, .25);
+  // coin rises like a sun from behind the horizon
+  tl.fromTo('#coinG', { y: 260 }, { y: 0, duration: 1.6, ease: 'power3.out', ...IR }, .85);
+  tl.fromTo('#haloC', { opacity: 0, scale: .6, transformOrigin: '50% 50%', transformBox: 'fill-box' }, { opacity: 1, scale: 1, duration: 1.8, ease: 'sine.out', ...IR }, 1.0);
+  // its mirage reflection shimmers in
+  tl.fromTo('#coinRef', { opacity: 0 }, { opacity: 1, duration: 1.2, ...IR }, 1.4);
+  tl.fromTo('#disp', { attr: { scale: 60 } }, { attr: { scale: 16 }, duration: 2.2, ease: 'power2.out', ...IR }, 1.4);
+  const w = { t: 0 }; tl.fromTo(w, { t: 0 }, { t: 6.5, duration: 6.5, ease: 'none', ...IR, onUpdate: () => {
+    const f = 0.055 + Math.sin(w.t * 2.1) * 0.012, g = 0.09 + Math.sin(w.t * 1.7 + 1) * 0.015;
+    $('turb').setAttribute('baseFrequency', `0.004 ${f.toFixed(4)}`); $('turbW').setAttribute('baseFrequency', `0.003 ${g.toFixed(4)}`);
+    $('turb').setAttribute('seed', 7 + Math.floor(w.t * 6) % 3); } }, 0);
+  // glint across the coin
+  tl.fromTo('#glint', { opacity: 0, x: -40 }, { keyframes: [{ opacity: 1, duration: .15 }, { x: 330, duration: .7, ease: 'power2.inOut' }, { opacity: 0, duration: .15 }], ...IR }, 2.35);
+  tl.fromTo('#glint', { x: -40 }, { keyframes: [{ opacity: .7, duration: .1 }, { x: 330, duration: .7, ease: 'power2.inOut' }, { opacity: 0, duration: .1 }], ...IR }, 5.3);
+  // wordmark: letters settle in as spacing tightens
+  tl.fromTo('#w1', { opacity: 0, y: 26, attr: { 'letter-spacing': 40 } }, { opacity: 1, y: 0, attr: { 'letter-spacing': 12 }, duration: 1.4, ease: 'power3.out', ...IR }, 2.5);
+  tl.fromTo('#tMirage', { opacity: 0 }, { opacity: 1, duration: .9, ...IR }, 2.95);
+  tl.fromTo('#wmRef', { opacity: 0 }, { opacity: .3, duration: 1.2, ...IR }, 3.4);
+  tl.fromTo('#dispW', { attr: { scale: 28 } }, { attr: { scale: 9 }, duration: 1.6, ease: 'power2.out', ...IR }, 3.4);
+  // slow cinematic push
+  tl.fromTo('#push', { scale: 1, transformOrigin: '960px 470px' }, { scale: 1.035, duration: 6.5, ease: 'none', ...IR }, 0);
+  return tl;
+}
+document.fonts.ready.then(() => { window.__timelines = window.__timelines || {}; window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>
