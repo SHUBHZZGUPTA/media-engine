@@ -1,0 +1,99 @@
+[{"stream_name":"stdout","time":39.178293454,"data":"[   38.4s] found 1 LoRA files\n"}
+,{"stream_name":"stderr","time":39.178830931,"data":"/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.\n"}
+,{"stream_name":"stderr","time":39.178845351,"data":"  deprecate(\"torch_dtype\", \"1.0.0\", _TORCH_DTYPE_DEPRECATION_MESSAGE)\n"}
+,{"stream_name":"stderr","time":39.742173906,"data":"\rFetching 18 files:   0%|          | 0/18 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":39.74250167,"data":"WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":170.029846117,"data":"\rFetching 18 files:  17%|█▋        | 3/18 [00:00\u003c00:00, 17.06it/s]\rFetching 18 files:  44%|████▍     | 8/18 [00:00\u003c00:00, 26.66it/s]\rFetching 18 files:  61%|██████    | 11/18 [00:00\u003c00:00, 13.57it/s]\rFetching 18 files:  72%|███████▏  | 13/18 [00:10\u003c00:06,  1.30s/it]\rFetching 18 files:  72%|███████▏  | 13/18 [00:29\u003c00:06,  1.30s/it]\rFetching 18 files:  78%|███████▊  | 14/18 [01:15\u003c00:45, 11.39s/it]\rFetching 18 files:  83%|████████▎ | 15/18 [01:32\u003c00:37, 12.55s/it]\rFetching 18 files:  94%|█████████▍| 17/18 [02:09\u003c00:14, 14.63s/it]\rFetching 18 files: 100%|██████████| 18/18 [02:10\u003c00:00, 11.83s/it]\rFetching 18 files: 100%|██████████| 18/18 [02:10\u003c00:00,  7.24s/it]\n"}
+,{"stream_name":"stderr","time":186.871310037,"data":"\rLoading pipeline components...:   0%|          | 0/5 [00:00\u003c?, ?it/s]\rLoading pipeline components...:  20%|██        | 1/5 [00:06\u003c00:26,  6.66s/it]\n"}
+,{"stream_name":"stderr","time":186.986996278,"data":"\rLoading weights:   0%|          | 0/398 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":187.088626989,"data":"\rLoading weights:   9%|▉         | 37/398 [00:00\u003c00:01, 340.18it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":187.197386365,"data":"\rLoading weights:  22%|██▏       | 87/398 [00:00\u003c00:00, 426.99it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":187.305348276,"data":"\rLoading weights:  40%|███▉      | 158/398 [00:00\u003c00:00, 532.32it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":187.417446563,"data":"\rLoading weights:  53%|█████▎    | 212/398 [00:00\u003c00:00, 519.46it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":187.520576743,"data":"\rLoading weights:  66%|██████▋   | 264/398 [00:00\u003c00:00, 499.01it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":187.637430633,"data":"\rLoading weights:  83%|████████▎ | 331/398 [00:00\u003c00:00, 548.34it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":187.638880467,"data":"\rLoading weights:  97%|█████████▋| 387/398 [00:00\u003c00:00, 524.35it/s]\u001b[A\rLoading weights: 100%|██████████| 398/398 [00:00\u003c00:00, 523.23it/s]\n"}
+,{"stream_name":"stderr","time":188.585280815,"data":"\rLoading pipeline components...:  40%|████      | 2/5 [00:07\u003c00:10,  3.35s/it]\rLoading pipeline components...:  60%|██████    | 3/5 [00:08\u003c00:04,  2.22s/it]\n"}
+,{"stream_name":"stderr","time":214.105188351,"data":"\rLoading checkpoint shards:   0%|          | 0/3 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":253.277681901,"data":"\rLoading checkpoint shards:  33%|███▎      | 1/3 [00:25\u003c00:51, 25.52s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":271.924099706,"data":"\rLoading checkpoint shards:  67%|██████▋   | 2/3 [01:04\u003c00:33, 33.55s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":271.925125081,"data":"\rLoading checkpoint shards: 100%|██████████| 3/3 [01:23\u003c00:00, 26.75s/it]\u001b[A\rLoading checkpoint shards: 100%|██████████| 3/3 [01:23\u003c00:00, 27.78s/it]\n"}
+,{"stream_name":"stderr","time":271.962987004,"data":"\rLoading pipeline components...:  80%|████████  | 4/5 [01:31\u003c00:34, 34.26s/it]\rLoading pipeline components...: 100%|██████████| 5/5 [01:31\u003c00:00, 18.40s/it]\n"}
+,{"stream_name":"stdout","time":271.963659723,"data":"[  271.2s] model loaded to RAM\n"}
+,{"stream_name":"stdout","time":325.898092528,"data":"[  325.1s] 4 prompts encoded\n"}
+,{"stream_name":"stderr","time":476.084156846,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:14\u003c01:53, 14.16s/it]\r 22%|██▏       | 2/9 [00:28\u003c01:38, 14.07s/it]\r 33%|███▎      | 3/9 [00:43\u003c01:26, 14.45s/it]\r 44%|████▍     | 4/9 [00:58\u003c01:14, 14.94s/it]\r 56%|█████▌    | 5/9 [01:15\u003c01:01, 15.48s/it]\r 67%|██████▋   | 6/9 [01:32\u003c00:48, 16.25s/it]\r 78%|███████▊  | 7/9 [01:51\u003c00:34, 17.07s/it]\r 89%|████████▉ | 8/9 [02:09\u003c00:17, 17.28s/it]\r100%|██████████| 9/9 [02:26\u003c00:00, 17.23s/it]\r100%|██████████| 9/9 [02:26\u003c00:00, 16.28s/it]\n"}
+,{"stream_name":"stdout","time":476.472878347,"data":"[  475.7s] base prompt 1 denoised\n"}
+,{"stream_name":"stderr","time":635.628631285,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:16\u003c02:14, 16.85s/it]\r 22%|██▏       | 2/9 [00:34\u003c02:01, 17.39s/it]\r 33%|███▎      | 3/9 [00:52\u003c01:46, 17.67s/it]\r 44%|████▍     | 4/9 [01:10\u003c01:28, 17.72s/it]\r 56%|█████▌    | 5/9 [01:27\u003c01:10, 17.66s/it]\r 67%|██████▋   | 6/9 [01:45\u003c00:52, 17.66s/it]\r 78%|███████▊  | 7/9 [02:03\u003c00:35, 17.72s/it]\r 89%|████████▉ | 8/9 [02:21\u003c00:17, 17.76s/it]\r100%|██████████| 9/9 [02:39\u003c00:00, 17.78s/it]\r100%|██████████| 9/9 [02:39\u003c00:00, 17.68s/it]\n"}
+,{"stream_name":"stdout","time":636.027726739,"data":"[  635.2s] base prompt 2 denoised\n"}
+,{"stream_name":"stderr","time":795.31240387,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:17\u003c02:19, 17.41s/it]\r 22%|██▏       | 2/9 [00:35\u003c02:03, 17.64s/it]\r 33%|███▎      | 3/9 [00:52\u003c01:46, 17.69s/it]\r 44%|████▍     | 4/9 [01:10\u003c01:28, 17.71s/it]\r 56%|█████▌    | 5/9 [01:28\u003c01:10, 17.72s/it]\r 67%|██████▋   | 6/9 [01:46\u003c00:53, 17.72s/it]\r 78%|███████▊  | 7/9 [02:03\u003c00:35, 17.73s/it]\r 89%|████████▉ | 8/9 [02:21\u003c00:17, 17.72s/it]\r100%|██████████| 9/9 [02:39\u003c00:00, 17.70s/it]\r100%|██████████| 9/9 [02:39\u003c00:00, 17.70s/it]\n"}
+,{"stream_name":"stdout","time":795.70897411,"data":"[  794.9s] base prompt 3 denoised\n"}
+,{"stream_name":"stderr","time":954.723134589,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:17\u003c02:18, 17.29s/it]\r 22%|██▏       | 2/9 [00:35\u003c02:02, 17.55s/it]\r 33%|███▎      | 3/9 [00:52\u003c01:45, 17.63s/it]\r 44%|████▍     | 4/9 [01:10\u003c01:28, 17.66s/it]\r 56%|█████▌    | 5/9 [01:28\u003c01:10, 17.68s/it]\r 67%|██████▋   | 6/9 [01:45\u003c00:53, 17.69s/it]\r 78%|███████▊  | 7/9 [02:03\u003c00:35, 17.70s/it]\r 89%|████████▉ | 8/9 [02:21\u003c00:17, 17.70s/it]\r100%|██████████| 9/9 [02:39\u003c00:00, 17.70s/it]\r100%|██████████| 9/9 [02:39\u003c00:00, 17.67s/it]\n"}
+,{"stream_name":"stdout","time":955.119855959,"data":"[  954.3s] base prompt 4 denoised\n"}
+,{"stream_name":"stderr","time":1018.135145779,"data":"Loading step200 was unsuccessful with the following error: \n"}
+,{"stream_name":"stderr","time":1018.135182113,"data":"Found an incompatible version of torchao. Found version 0.10.0, but only versions above 0.16.0 are supported\n"}
+,{"stream_name":"stderr","time":1018.154650409,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":1018.15666718,"data":"  File \"/kaggle/src/script.py\", line 126, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":1018.15668829,"data":"    pipe.load_lora_weights(path, adapter_name=name)\n"}
+,{"stream_name":"stderr","time":1018.15669356,"data":"    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.156698328,"data":"  File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/peft_utils.py\", line 347, in wrapper\n"}
+,{"stream_name":"stderr","time":1018.156702739,"data":"    return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":1018.156707171,"data":"  File \"/usr/local/lib/python3.13/dist-packages/diffusers/loaders/lora_pipeline.py\", line 5477, in load_lora_weights\n"}
+,{"stream_name":"stderr","time":1018.156711674,"data":"    self.load_lora_into_transformer(\n"}
+,{"stream_name":"stderr","time":1018.15671562,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":1018.156719997,"data":"        state_dict,\n"}
+,{"stream_name":"stderr","time":1018.156724042,"data":"        ^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.15672893,"data":"    ...\u003c5 lines\u003e...\n"}
+,{"stream_name":"stderr","time":1018.156733413,"data":"        hotswap=hotswap,\n"}
+,{"stream_name":"stderr","time":1018.15673748,"data":"        ^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.156741569,"data":"    )\n"}
+,{"stream_name":"stderr","time":1018.156745739,"data":"    ^\n"}
+,{"stream_name":"stderr","time":1018.156749987,"data":"  File \"/usr/local/lib/python3.13/dist-packages/diffusers/loaders/lora_pipeline.py\", line 5504, in load_lora_into_transformer\n"}
+,{"stream_name":"stderr","time":1018.156754697,"data":"    transformer.load_lora_adapter(\n"}
+,{"stream_name":"stderr","time":1018.156758549,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":1018.156762425,"data":"        state_dict,\n"}
+,{"stream_name":"stderr","time":1018.156767066,"data":"        ^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.156771299,"data":"    ...\u003c5 lines\u003e...\n"}
+,{"stream_name":"stderr","time":1018.156776014,"data":"        hotswap=hotswap,\n"}
+,{"stream_name":"stderr","time":1018.156780054,"data":"        ^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.156783777,"data":"    )\n"}
+,{"stream_name":"stderr","time":1018.156787724,"data":"    ^\n"}
+,{"stream_name":"stderr","time":1018.156791783,"data":"  File \"/usr/local/lib/python3.13/dist-packages/diffusers/loaders/peft.py\", line 312, in load_lora_adapter\n"}
+,{"stream_name":"stderr","time":1018.15679614,"data":"    inject_adapter_in_model(\n"}
+,{"stream_name":"stderr","time":1018.15680028,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":1018.156804381,"data":"        lora_config, self, adapter_name=adapter_name, state_dict=state_dict, **peft_kwargs\n"}
+,{"stream_name":"stderr","time":1018.156808625,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.156825544,"data":"    )\n"}
+,{"stream_name":"stderr","time":1018.156829249,"data":"    ^\n"}
+,{"stream_name":"stderr","time":1018.156832427,"data":"  File \"/usr/local/lib/python3.13/dist-packages/peft/mapping.py\", line 88, in inject_adapter_in_model\n"}
+,{"stream_name":"stderr","time":1018.156835792,"data":"    peft_model = tuner_cls(\n"}
+,{"stream_name":"stderr","time":1018.156839697,"data":"        model, peft_config, adapter_name=adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict\n"}
+,{"stream_name":"stderr","time":1018.156843547,"data":"    )\n"}
+,{"stream_name":"stderr","time":1018.156847089,"data":"  File \"/usr/local/lib/python3.13/dist-packages/peft/tuners/tuners_utils.py\", line 318, in __init__\n"}
+,{"stream_name":"stderr","time":1018.156850446,"data":"    self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)\n"}
+,{"stream_name":"stderr","time":1018.156854036,"data":"    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.156857834,"data":"  File \"/usr/local/lib/python3.13/dist-packages/peft/tuners/tuners_utils.py\", line 939, in inject_adapter\n"}
+,{"stream_name":"stderr","time":1018.156861728,"data":"    self._create_and_replace(\n"}
+,{"stream_name":"stderr","time":1018.15686534,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":1018.156870469,"data":"        peft_config, adapter_name, target, target_name, parent, current_key=key\n"}
+,{"stream_name":"stderr","time":1018.156874009,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1018.156877474,"data":"    )\n"}
+,{"stream_name":"stderr","time":1018.156880631,"data":"    ^\n"}
+,{"stream_name":"stderr","time":1018.156883799,"data":"  File \"/usr/local/lib/python3.13/dist-packages/peft/tuners/lora/model.py\", line 281, in _create_and_replace\n"}
+,{"stream_name":"stderr","time":1018.15688729,"data":"    new_module = self._create_new_module(lora_config, adapter_name, target, device_map=device_map, **kwargs)\n"}
+,{"stream_name":"stderr","time":1018.15689079,"data":"  File \"/usr/local/lib/python3.13/dist-packages/peft/tuners/lora/model.py\", line 430, in _create_new_module\n"}
+,{"stream_name":"stderr","time":1018.156894392,"data":"    new_module = dispatcher(target, adapter_name, config=lora_config, **kwargs)\n"}
+,{"stream_name":"stderr","time":1018.156897819,"data":"  File \"/usr/local/lib/python3.13/dist-packages/peft/tuners/lora/torchao.py\", line 160, in dispatch_torchao\n"}
+,{"stream_name":"stderr","time":1018.156901338,"data":"    if not is_torchao_available():\n"}
+,{"stream_name":"stderr","time":1018.156904552,"data":"           ~~~~~~~~~~~~~~~~~~~~^^\n"}
+,{"stream_name":"stderr","time":1018.156907751,"data":"  File \"/usr/local/lib/python3.13/dist-packages/peft/import_utils.py\", line 147, in is_torchao_available\n"}
+,{"stream_name":"stderr","time":1018.156911295,"data":"    raise ImportError(\n"}
+,{"stream_name":"stderr","time":1018.156914531,"data":"    ...\u003c2 lines\u003e...\n"}
+,{"stream_name":"stderr","time":1018.156917879,"data":"    )\n"}
+,{"stream_name":"stderr","time":1018.156921114,"data":"ImportError: Found an incompatible version of torchao. Found version 0.10.0, but only versions above 0.16.0 are supported\n"}
+,{"stream_name":"stderr","time":1026.430646359,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1026.430677663,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1026.755430685,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1026.755457977,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1027.783889743,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1028.817652336,"data":"[NbConvertApp] Writing 309318 bytes to __results__.html\n"}
+]

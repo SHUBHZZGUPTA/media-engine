@@ -1,0 +1,67 @@
+{
+ "job": "tira-lora-v1-previews",
+ "kernel": "shubhzzgupta07/me-tira-lora-v1-previews",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-lora-v1-previews",
+ "gpu_quota_before": {
+  "used_h": 11.52,
+  "remaining_h": 18.48,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/tira-lora-checkpoints",
+ "staged_files": [
+  "tira_zimage_lora.safetensors",
+  "tira_zimage_lora_000000200.safetensors",
+  "tira_zimage_lora_000000400.safetensors",
+  "tira_zimage_lora_000000600.safetensors",
+  "tira_zimage_lora_000000800.safetensors"
+ ],
+ "stage_diag": {
+  "downloaded": [
+   {
+    "file": "tira_zimage_lora.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000000200.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000000400.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000000600.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000000800.safetensors",
+    "mb": 85.1
+   }
+  ],
+  "create": [
+   {
+    "license": "other",
+    "existed": true,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "ready"
+  ]
+ },
+ "pushed_at": "2026-10-21T20:02:23+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "ERROR",
+ "checked_at": "2026-10-21T20:20:01+00:00",
+ "files": [
+  "me-tira-lora-v1-previews.log",
+  "run_log.json"
+ ],
+ "gpu_quota_after": {
+  "used_h": 11.8,
+  "remaining_h": 18.2,
+  "total_h": 30.0
+ }
+}

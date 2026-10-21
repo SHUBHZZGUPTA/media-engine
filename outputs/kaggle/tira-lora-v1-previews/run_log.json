@@ -1,0 +1,32 @@
+{
+ "params": {
+  "prompts": [
+   "tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo",
+   "tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo"
+  ],
+  "lora_glob": "tira_zimage_lora*.safetensors",
+  "seed": 42,
+  "width": 768,
+  "height": 1024,
+  "steps": 9,
+  "lora_scale": 1.0,
+  "include_base": true
+ },
+ "timings": {
+  "found 1 LoRA files": 38.4,
+  "model loaded to RAM": 271.2,
+  "4 prompts encoded": 325.1,
+  "base prompt 1 denoised": 475.7,
+  "base prompt 2 denoised": 635.2,
+  "base prompt 3 denoised": 794.9,
+  "base prompt 4 denoised": 954.3
+ },
+ "images": [],
+ "diffusers": "0.40.0",
+ "versions": [
+  "base",
+  "step200"
+ ]
+}
