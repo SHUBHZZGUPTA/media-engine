@@ -3,8 +3,8 @@
  "kernel": "shubhzzgupta07/me-tira-lora-v1-previews",
  "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-lora-v1-previews",
  "gpu_quota_before": {
-  "used_h": 11.52,
-  "remaining_h": 18.48,
+  "used_h": 11.8,
+  "remaining_h": 18.2,
   "total_h": 30.0
  },
  "staged_dataset": "shubhzzgupta07/tira-lora-checkpoints",
@@ -38,6 +38,7 @@
     "mb": 85.1
    }
   ],
+  "version_before": 2,
   "create": [
    {
     "license": "other",
@@ -47,21 +48,47 @@
    }
   ],
   "statuses": [
-   "ready"
-  ]
+   "ready (version 2)",
+   "ready (version 3)"
+  ],
+  "version_ready": 3
  },
- "pushed_at": "2026-10-21T20:02:23+00:00",
+ "pushed_at": "2026-10-21T20:23:31+00:00",
  "accelerator": "NvidiaTeslaT4",
- "version": 1,
- "status": "ERROR",
- "checked_at": "2026-10-21T20:20:01+00:00",
+ "version": 2,
+ "status": "COMPLETE",
+ "checked_at": "2026-10-21T21:36:47+00:00",
  "files": [
+  "base_p1.jpg",
+  "base_p2.jpg",
+  "base_p3.jpg",
+  "base_p4.jpg",
+  "final_p1.jpg",
+  "final_p2.jpg",
+  "final_p3.jpg",
+  "final_p4.jpg",
   "me-tira-lora-v1-previews.log",
-  "run_log.json"
+  "run_log.json",
+  "step200_p1.jpg",
+  "step200_p2.jpg",
+  "step200_p3.jpg",
+  "step200_p4.jpg",
+  "step400_p1.jpg",
+  "step400_p2.jpg",
+  "step400_p3.jpg",
+  "step400_p4.jpg",
+  "step600_p1.jpg",
+  "step600_p2.jpg",
+  "step600_p3.jpg",
+  "step600_p4.jpg",
+  "step800_p1.jpg",
+  "step800_p2.jpg",
+  "step800_p3.jpg",
+  "step800_p4.jpg"
  ],
  "gpu_quota_after": {
-  "used_h": 11.8,
-  "remaining_h": 18.2,
+  "used_h": 13.01,
+  "remaining_h": 16.99,
   "total_h": 30.0
  }
 }

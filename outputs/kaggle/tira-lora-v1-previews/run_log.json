@@ -15,18 +15,193 @@
   "include_base": true
  },
  "timings": {
-  "found 1 LoRA files": 38.4,
-  "model loaded to RAM": 271.2,
-  "4 prompts encoded": 325.1,
-  "base prompt 1 denoised": 475.7,
-  "base prompt 2 denoised": 635.2,
-  "base prompt 3 denoised": 794.9,
-  "base prompt 4 denoised": 954.3
+  "found 5 LoRA files": 44.7,
+  "model loaded to RAM": 279.7,
+  "4 prompts encoded": 333.1,
+  "base prompt 1 denoised": 470.8,
+  "base prompt 2 denoised": 622.9,
+  "base prompt 3 denoised": 774.0,
+  "base prompt 4 denoised": 925.9,
+  "step200 prompt 1 denoised": 1133.3,
+  "step200 prompt 2 denoised": 1289.2,
+  "step200 prompt 3 denoised": 1445.6,
+  "step200 prompt 4 denoised": 1602.1,
+  "step400 prompt 1 denoised": 1811.2,
+  "step400 prompt 2 denoised": 1967.0,
+  "step400 prompt 3 denoised": 2122.6,
+  "step400 prompt 4 denoised": 2278.9,
+  "step600 prompt 1 denoised": 2484.6,
+  "step600 prompt 2 denoised": 2640.7,
+  "step600 prompt 3 denoised": 2796.7,
+  "step600 prompt 4 denoised": 2952.3,
+  "step800 prompt 1 denoised": 3156.4,
+  "step800 prompt 2 denoised": 3312.2,
+  "step800 prompt 3 denoised": 3468.9,
+  "step800 prompt 4 denoised": 3625.3,
+  "final prompt 1 denoised": 3829.8,
+  "final prompt 2 denoised": 3985.4,
+  "final prompt 3 denoised": 4141.2,
+  "final prompt 4 denoised": 4297.2,
+  "all images saved": 4349.9
  },
- "images": [],
+ "images": [
+  {
+   "file": "base_p1.jpg",
+   "version": "base",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "base_p2.jpg",
+   "version": "base",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "base_p3.jpg",
+   "version": "base",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "base_p4.jpg",
+   "version": "base",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step200_p1.jpg",
+   "version": "step200",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step200_p2.jpg",
+   "version": "step200",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step200_p3.jpg",
+   "version": "step200",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step200_p4.jpg",
+   "version": "step200",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step400_p1.jpg",
+   "version": "step400",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step400_p2.jpg",
+   "version": "step400",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step400_p3.jpg",
+   "version": "step400",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step400_p4.jpg",
+   "version": "step400",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step600_p1.jpg",
+   "version": "step600",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step600_p2.jpg",
+   "version": "step600",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step600_p3.jpg",
+   "version": "step600",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step600_p4.jpg",
+   "version": "step600",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step800_p1.jpg",
+   "version": "step800",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step800_p2.jpg",
+   "version": "step800",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step800_p3.jpg",
+   "version": "step800",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step800_p4.jpg",
+   "version": "step800",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "final_p1.jpg",
+   "version": "final",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "final_p2.jpg",
+   "version": "final",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "final_p3.jpg",
+   "version": "final",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "final_p4.jpg",
+   "version": "final",
+   "prompt": 4,
+   "nan": false
+  }
+ ],
  "diffusers": "0.40.0",
  "versions": [
   "base",
-  "step200"
- ]
+  "step200",
+  "step400",
+  "step600",
+  "step800",
+  "final"
+ ],
+ "version_errors": {},
+ "attention": {
+  "fp16_calls": 7488,
+  "fp32_fallbacks": 0
+ }
 }
