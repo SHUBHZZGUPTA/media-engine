@@ -124,15 +124,27 @@ def wait_for(api, ref, minutes):
         time.sleep(POLL_SECONDS)
 
 
+MAX_REPO_FILE_MB = 40
+
+
 def download(api, ref, outdir):
+    """Download a run's outputs. Files over MAX_REPO_FILE_MB (e.g. LoRA weights) are not kept
+    in the repo: they stay in the Kaggle notebook's output, where later jobs can attach them."""
     outdir.mkdir(parents=True, exist_ok=True)
-    files, token = [], None
+    files, kept_on_kaggle, token = [], [], None
     while True:
         got, token = api.kernels_output(ref, path=str(outdir), force=True, quiet=True,
                                         page_token=token, page_size=200)
         files += got or []
         if not token:
-            return files
+            break
+    for f in list(files):
+        if os.path.isfile(f) and os.path.getsize(f) > MAX_REPO_FILE_MB * 1e6:
+            kept_on_kaggle.append({"file": os.path.relpath(f, outdir),
+                                   "mb": round(os.path.getsize(f) / 1e6, 1)})
+            os.remove(f)
+            files.remove(f)
+    return files, kept_on_kaggle
 
 
 def main():
@@ -174,8 +186,10 @@ def main():
         record["failure"] = failure
 
     if status in FINAL:
-        files = download(api, ref, outdir)
+        files, kept = download(api, ref, outdir)
         record["files"] = sorted(os.path.relpath(f, outdir) for f in files)
+        if kept:
+            record["kept_on_kaggle"] = kept
         record["gpu_quota_after"] = gpu_quota(api)
     else:
         print(f"Still {status} after the wait; it keeps running on Kaggle. "
