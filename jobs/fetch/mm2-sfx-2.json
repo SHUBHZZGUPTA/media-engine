@@ -1,0 +1,63 @@
+{
+ "id": "mm2-sfx-2",
+ "ua": "media-engine/1.0",
+ "delay": 3,
+ "files": [
+  {
+   "name": "paper2.json",
+   "url": "https://api.openverse.org/v1/audio/?q=paper&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "money2.json",
+   "url": "https://api.openverse.org/v1/audio/?q=banknotes&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "coins2.json",
+   "url": "https://api.openverse.org/v1/audio/?q=coins&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "coin3.json",
+   "url": "https://api.openverse.org/v1/audio/?q=coin+drop&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "stamp2.json",
+   "url": "https://api.openverse.org/v1/audio/?q=stamp&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "page.json",
+   "url": "https://api.openverse.org/v1/audio/?q=page+turn&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "typewriter.json",
+   "url": "https://api.openverse.org/v1/audio/?q=typewriter&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "tick.json",
+   "url": "https://api.openverse.org/v1/audio/?q=clock+ticking&license=cc0%2Cby&page_size=20"
+  },
+  {
+   "name": "sfx_chicken.mp3",
+   "url": "https://cdn.freesound.org/previews/673/673255_14693005-hq.mp3"
+  },
+  {
+   "name": "sfx_goat.mp3",
+   "url": "https://cdn.freesound.org/previews/683/683259_14040168-hq.mp3"
+  },
+  {
+   "name": "sfx_coins_count.mp3",
+   "url": "https://cdn.freesound.org/previews/161/161315_2840087-hq.mp3"
+  },
+  {
+   "name": "sfx_thud.mp3",
+   "url": "https://cdn.freesound.org/previews/512/512389_3997858-hq.mp3"
+  },
+  {
+   "name": "sfx_thump.mp3",
+   "url": "https://cdn.freesound.org/previews/683/683031_4257513-hq.mp3"
+  },
+  {
+   "name": "sfx_crowd.mp3",
+   "url": "https://cdn.freesound.org/previews/381/381373_6456158-hq.mp3"
+  }
+ ]
+}
