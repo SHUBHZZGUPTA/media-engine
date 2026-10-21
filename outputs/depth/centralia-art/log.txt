@@ -1,0 +1,13 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 15262.26it/s]
+depth library/scenes/centralia_pit.jpg
+depth library/scenes/centralia_road.jpg
+depth library/scenes/centralia_hole.jpg
+depth library/scenes/centralia_town.jpg
+upscale library/scenes/centralia_pit.jpg
+upscale library/scenes/centralia_road.jpg
+upscale library/scenes/centralia_hole.jpg
+upscale library/scenes/centralia_town.jpg
+upscale library/characters/c_fire.png
+upscale library/characters/c_centralia.png
+{'depth': [{'src': 'library/scenes/centralia_pit.jpg', 'secs': 2.0}, {'src': 'library/scenes/centralia_road.jpg', 'secs': 2.0}, {'src': 'library/scenes/centralia_hole.jpg', 'secs': 1.9}, {'src': 'library/scenes/centralia_town.jpg', 'secs': 2.0}], 'upscale': [{'src': 'library/scenes/centralia_pit.jpg', 'secs': 83.2}, {'src': 'library/scenes/centralia_road.jpg', 'secs': 81.9}, {'src': 'library/scenes/centralia_hole.jpg', 'secs': 84.3}, {'src': 'library/scenes/centralia_town.jpg', 'secs': 86.3}, {'src': 'library/characters/c_fire.png', 'secs': 100.0}, {'src': 'library/characters/c_centralia.png', 'secs': 99.0}]}
