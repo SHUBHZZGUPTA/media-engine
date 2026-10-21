@@ -1,0 +1,186 @@
+#!/usr/bin/env python3
+"""Run a GPU job on Kaggle from a job file and save what it produces.
+
+Usage:
+  python3 tools/kaggle_run.py jobs/kaggle/<id>.json            start the run and wait for it
+  python3 tools/kaggle_run.py jobs/kaggle/<id>.json --collect  fetch results of a run left going
+  python3 tools/kaggle_run.py jobs/kaggle/<id>.json --dry-run  show what would be sent, no login
+
+Job file fields:
+  id               short name; used for the private Kaggle notebook and outputs/kaggle/<id>/
+  script           path in this repo to the Python script that Kaggle runs
+  accelerator      "NvidiaTeslaT4" (default), "NvidiaTeslaP100" or "none"
+  internet         true (default); needed to download models
+  timeout_minutes  hard limit for the run on Kaggle (default 60; Kaggle caps sessions at 12 h)
+  wait_minutes     how long to wait here before leaving the run going (default 60)
+  datasets, models, kernels  optional lists of Kaggle sources to attach ("owner/slug")
+
+Credentials: KAGGLE_API_TOKEN, or KAGGLE_USERNAME + KAGGLE_KEY. They are never printed.
+"""
+import argparse
+import json
+import os
+import re
+import shutil
+import sys
+import tempfile
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+FINAL = {"COMPLETE", "ERROR", "CANCEL_REQUESTED", "CANCEL_ACKNOWLEDGED"}
+POLL_SECONDS = 30
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def load_job(path):
+    job = json.loads(Path(path).read_text(encoding="utf-8"))
+    for key in ("id", "script"):
+        if key not in job:
+            sys.exit(f"{path}: job file is missing '{key}'")
+    return job
+
+
+def slug_for(job_id):
+    return "me-" + re.sub(r"[^a-z0-9]+", "-", job_id.lower()).strip("-")
+
+
+def build_folder(job, user, folder):
+    script = ROOT / job["script"]
+    if not script.is_file():
+        sys.exit(f"script not found: {job['script']}")
+    shutil.copy(script, folder / script.name)
+    slug = slug_for(job["id"])
+    acc = job.get("accelerator", "NvidiaTeslaT4")
+    meta = {
+        "id": f"{user}/{slug}",
+        "title": slug,
+        "code_file": script.name,
+        "language": "python",
+        "kernel_type": "script",
+        "is_private": True,
+        "enable_gpu": acc.lower() != "none",
+        "enable_internet": bool(job.get("internet", True)),
+        "dataset_sources": job.get("datasets", []),
+        "competition_sources": [],
+        "kernel_sources": job.get("kernels", []),
+        "model_sources": job.get("models", []),
+    }
+    (folder / "kernel-metadata.json").write_text(json.dumps(meta, indent=1), encoding="utf-8")
+    return meta, (None if acc.lower() == "none" else acc)
+
+
+def login():
+    for var in ("KAGGLE_API_TOKEN", "KAGGLE_USERNAME", "KAGGLE_KEY"):
+        if os.environ.get(var, "") == "":
+            os.environ.pop(var, None)
+    has_token = "KAGGLE_API_TOKEN" in os.environ
+    has_legacy = "KAGGLE_USERNAME" in os.environ and "KAGGLE_KEY" in os.environ
+    if not (has_token or has_legacy):
+        sys.exit("No Kaggle credentials. Add the KAGGLE_API_TOKEN secret in the repo's "
+                 "Settings > Secrets and variables > Actions.")
+    from kaggle.api.kaggle_api_extended import KaggleApi
+    api = KaggleApi()
+    api.authenticate()
+    user = api.config_values.get("username")
+    if not user:
+        sys.exit("Kaggle accepted no username for these credentials; generate a new token.")
+    return api, user
+
+
+def gpu_quota(api):
+    try:
+        q = api.quota_view().gpu_quota
+        used = q.time_used.total_seconds() / 3600
+        total = q.total_time_allowed.total_seconds() / 3600
+        return {"used_h": round(used, 2), "remaining_h": round(max(0.0, total - used), 2),
+                "total_h": round(total, 2)}
+    except Exception as e:  # quota is informational only
+        return {"error": type(e).__name__}
+
+
+def wait_for(api, ref, minutes):
+    deadline = time.time() + minutes * 60
+    last = None
+    while True:
+        st = api.kernels_status(ref)
+        name = st.status.name if hasattr(st.status, "name") else str(st.status)
+        if name != last:
+            print(f"[{now()}] {ref}: {name}", flush=True)
+            last = name
+        if name in FINAL:
+            return name, (st.failure_message or "")
+        if time.time() > deadline:
+            return name, ""
+        time.sleep(POLL_SECONDS)
+
+
+def download(api, ref, outdir):
+    outdir.mkdir(parents=True, exist_ok=True)
+    files, token = [], None
+    while True:
+        got, token = api.kernels_output(ref, path=str(outdir), force=True, quiet=True,
+                                        page_token=token, page_size=200)
+        files += got or []
+        if not token:
+            return files
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("job")
+    ap.add_argument("--collect", action="store_true")
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
+
+    job = load_job(args.job)
+    outdir = ROOT / "outputs" / "kaggle" / job["id"]
+
+    if args.dry_run:
+        with tempfile.TemporaryDirectory() as tmp:
+            meta, acc = build_folder(job, "YOUR_KAGGLE_USERNAME", Path(tmp))
+            print(json.dumps({"accelerator": acc, "metadata": meta}, indent=1))
+        return 0
+
+    api, user = login()
+    ref = f"{user}/{slug_for(job['id'])}"
+    record = {"job": job["id"], "kernel": ref, "url": f"https://www.kaggle.com/code/{ref}",
+              "gpu_quota_before": gpu_quota(api)}
+
+    if not args.collect:
+        with tempfile.TemporaryDirectory() as tmp:
+            meta, acc = build_folder(job, user, Path(tmp))
+            timeout_s = int(job.get("timeout_minutes", 60)) * 60
+            resp = api.kernels_push(tmp, timeout=str(timeout_s), acc=acc)
+            err = getattr(resp, "error", None)
+            if err:
+                sys.exit(f"Kaggle refused the push: {err}")
+            record.update(pushed_at=now(), accelerator=acc,
+                          version=getattr(resp, "version_number", None))
+            print(f"[{now()}] pushed {ref} (version {record['version']}) on {acc}", flush=True)
+
+    status, failure = wait_for(api, ref, int(job.get("wait_minutes", 60)))
+    record.update(status=status, checked_at=now())
+    if failure:
+        record["failure"] = failure
+
+    if status in FINAL:
+        files = download(api, ref, outdir)
+        record["files"] = sorted(os.path.relpath(f, outdir) for f in files)
+        record["gpu_quota_after"] = gpu_quota(api)
+    else:
+        print(f"Still {status} after the wait; it keeps running on Kaggle. "
+              f"Run this job again with mode 'collect' to fetch the results.")
+
+    outdir.mkdir(parents=True, exist_ok=True)
+    (outdir / "run.json").write_text(json.dumps(record, indent=1), encoding="utf-8")
+    print(json.dumps(record, indent=1))
+    return 1 if status == "ERROR" else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
