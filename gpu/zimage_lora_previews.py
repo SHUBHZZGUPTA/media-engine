@@ -37,6 +37,8 @@ def pip(*args):
     subprocess.run([sys.executable, "-m", "pip", "install", "-q", *args], check=True)
 
 
+# Kaggle's image ships torchao 0.10, which the LoRA loader (peft) rejects outright; it isn't needed.
+subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "-q", "torchao"], check=False)
 try:
     from diffusers import ZImagePipeline
     import peft  # noqa: F401  (needed for LoRA loading)
@@ -120,10 +122,16 @@ pipe.transformer.to("cuda:0")
 width, height = int(P.get("width", 768)), int(P.get("height", 1024))
 steps, seed = int(P.get("steps", 9)), int(P.get("seed", 42))
 latents = []
+log["version_errors"] = {}
 for name, path in versions:
     if path:
-        pipe.load_lora_weights(path, adapter_name=name)
-        pipe.set_adapters([name], adapter_weights=[float(P.get("lora_scale", 1.0))])
+        try:
+            pipe.load_lora_weights(path, adapter_name=name)
+            pipe.set_adapters([name], adapter_weights=[float(P.get("lora_scale", 1.0))])
+        except Exception as e:  # one bad file shouldn't lose the other versions
+            log["version_errors"][name] = f"{type(e).__name__}: {e}"[:500]
+            stamp(f"{name}: could not load LoRA, skipped")
+            continue
     for i, emb in enumerate(embeds):
         with torch.no_grad():
             lat = pipe(prompt_embeds=emb, height=height, width=width, num_inference_steps=steps,

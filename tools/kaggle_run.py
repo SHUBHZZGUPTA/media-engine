@@ -138,6 +138,14 @@ def stage_files(api, user, stage, diag):
             exists = True
         except Exception:
             exists = False
+        version_before = 0
+        if exists:
+            try:
+                version_before = int(json.loads(api.dataset_status(ref, format="json(current_version_number)"))
+                                     .get("current_version_number") or 0)
+            except Exception:
+                version_before = 0
+        diag["version_before"] = version_before
         diag["create"] = []
         for license_name in ("other", "unknown"):  # private dataset; Kaggle still requires a license
             meta = {"title": stage.get("title", stage["dataset_slug"]), "id": ref,
@@ -160,13 +168,17 @@ def stage_files(api, user, stage, diag):
     seen = []
     while time.time() < deadline:
         try:
-            st = str(api.dataset_status(ref)).lower()
+            info = json.loads(api.dataset_status(ref, format="json(status,current_version_number)"))
+            version = int(info.get("current_version_number") or 0)
+            st = f"{str(info.get('status', '')).lower()} (version {version})"
         except Exception as e:
-            st = f"lookup failed: {type(e).__name__}: {e}"[:200]
+            version, st = 0, f"lookup failed: {type(e).__name__}: {e}"[:200]
         if not seen or seen[-1] != st:
             seen.append(st)
             diag["statuses"] = seen
-        if st == "ready":
+        # a new upload is only usable once its own version is ready, not the previous one
+        if st.startswith("ready") and version > version_before:
+            diag["version_ready"] = version
             return ref, [os.path.basename(f) for f in files]
         time.sleep(15)
     raise RuntimeError(f"dataset {ref} was not ready after 15 minutes (statuses seen: {seen})")
