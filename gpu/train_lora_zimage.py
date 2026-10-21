@@ -52,13 +52,16 @@ def sh(cmd, **kw):
 
 
 # 1) ai-toolkit at a fixed commit, with its requirements minus pieces Kaggle's Python 3.13 / torch
-#    can't take (old scipy pin, torchcodec/av/audio libs, web UI servers) and that training doesn't use.
+#    can't take (the old scipy pin; torchcodec, which is tied to a torch version) and that training
+#    never imports (gradio, pytorch_fid). Audio libraries are imported at startup, so they stay,
+#    unpinned so Python 3.13 wheels are used.
 sh(f"git init -q {AITK} && cd {AITK} && git remote add origin https://github.com/ostris/ai-toolkit.git"
    f" && git fetch -q --depth 1 origin {P['aitk_commit']} && git checkout -q FETCH_HEAD"
    f" && git submodule update --init --recursive --depth 1 -q || true")
-skip = re.compile(r"^(scipy|torchcodec|av|librosa|mutagen|gradio|fastapi|uvicorn|pytorch_fid|torchao)\b")
+skip = re.compile(r"^(scipy|torchcodec|gradio|pytorch_fid|torchao)\b")
+unpin = re.compile(r"^(av|librosa|mutagen)==")
 reqs = [l.strip() for l in open(f"{AITK}/requirements_base.txt") if l.strip() and not l.startswith("#")]
-keep = [r for r in reqs if not skip.match(r)]
+keep = [r.split("==")[0] if unpin.match(r) else r for r in reqs if not skip.match(r)]
 with open(f"{WORK}/requirements.txt", "w") as f:
     f.write("\n".join(keep) + "\n")
 sh(f"{sys.executable} -m pip install -q -r {WORK}/requirements.txt")
