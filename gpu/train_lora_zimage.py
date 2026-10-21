@@ -111,12 +111,33 @@ if P.get("resume_glob"):
         log["kaggle_input_listing"] = listing
         stamp("resume checkpoint not found; stopping")
         sys.exit(1)
-    best = max(found, key=lambda f: int((re.findall(r"_(\d{9})\.safetensors$", f) or ["0"])[0]))
-    shutil.copy(best, save_root)
+    def ckpt_step(f):
+        """Step from the filename; a run's final file has none, so read it from the file's metadata
+        (ai-toolkit stores training_info.step there), falling back to the job's resume_step."""
+        m = re.findall(r"_(\d{9})\.safetensors$", f)
+        if m:
+            return int(m[0])
+        try:
+            from safetensors import safe_open
+            with safe_open(f, "pt") as s:
+                info = (s.metadata() or {}).get("training_info", "{}")
+            return int((json.loads(info) if isinstance(info, str) else info).get("step") or 0)
+        except Exception as e:
+            log.setdefault("resume_notes", []).append(f"metadata step unreadable for {f}: {e}")
+            return int(P.get("resume_step", 0))
+
+    steps_found = {f: ckpt_step(f) for f in found}
+    best = max(found, key=steps_found.get)
+    start = steps_found[best]
+    # Copied in under a step-numbered name, so the resumed file is never mistaken for this run's
+    # final output.
+    shutil.copy(best, os.path.join(save_root, f"tira_zimage_lora_{start:09d}.safetensors"))
     for extra in glob.glob(os.path.join(os.path.dirname(best), "optimizer.pt")):
         shutil.copy(extra, save_root)
+        log["resumed_optimizer"] = extra
     log["resumed_from"] = best
-    stamp(f"resuming from {os.path.basename(best)}")
+    log["resumed_step"] = start
+    stamp(f"resuming from {os.path.basename(best)} (step {start})")
 
 # 4) Config: ai-toolkit's Z-Image Turbo preset with the training adapter. With sample_every 0,
 #    sampling is switched off entirely: on a T4, decoding a 768x1024 sample while the training model

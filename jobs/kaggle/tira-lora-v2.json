@@ -1,0 +1,253 @@
+{
+ "id": "tira-lora-v2",
+ "script": "gpu/train_lora_zimage.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 690,
+ "wait_minutes": 12,
+ "stage": {
+  "from_kernel": "shubhzzgupta07/me-tira-lora-v1-resume",
+  "file_pattern": "(^|/)(tira_zimage_lora\\.safetensors|optimizer\\.pt)$",
+  "dataset_slug": "tira-lora-checkpoints",
+  "title": "Tira LoRA checkpoints"
+ },
+ "params": {
+  "aitk_commit": "04733873cf1da8060fce01316ec45daedbd4a918",
+  "trigger": "tirav1",
+  "dataset": [
+   {
+    "name": "tira_02",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_103501_0423f1fb-96d2-454f-ad85-21d5031772ff.png",
+    "caption": "tirav1 woman, full body right side profile, standing, black racerback sports bra, black high-waisted bike shorts, white sneakers, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_03",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_104838_b95b7122-47fc-446b-bedc-ffb5cf735801.png",
+    "caption": "tirav1 woman, full body front three-quarter view, standing, black sports bra, black high-waisted bike shorts, white sneakers, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_04",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_104838_48694711-74e0-4c9e-9390-4fbeaee395df.png",
+    "caption": "tirav1 woman, head and shoulders portrait, front view, looking at the camera, black racerback sports bra, hair in a messy low bun, plain white studio background"
+   },
+   {
+    "name": "tira_05",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_104838_9e7b2fb2-01fe-4d94-a2af-5bbbdbe1636c.png",
+    "caption": "tirav1 woman, full body, walking on a park path at sunset, open beige zip-up jacket over a black sports bra, black leggings, white sneakers, hair in a low bun, candid phone photo"
+   },
+   {
+    "name": "tira_06",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_104838_d311d83e-630a-4099-a154-fbd5e79b62de.png",
+    "caption": "tirav1 woman, full body back view, standing, black racerback sports bra, black high-waisted bike shorts, white sneakers, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_07",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_104838_66b33f87-f26e-4c2f-8ff7-9bcbfae5124b.png",
+    "caption": "tirav1 woman, mirror selfie in a gym, holding a phone, sage green sports bra and leggings, white sneakers, hair in a low bun"
+   },
+   {
+    "name": "tira_08",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_110045_97e2bb5e-eef0-4878-a1be-dd2992d5b12f.png",
+    "caption": "tirav1 woman, standing in a kitchen holding a smoothie glass, white tank top, light blue jeans, barefoot, smiling, hair in a low bun, candid photo"
+   },
+   {
+    "name": "tira_09",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_110045_9e8bd74f-f869-4941-aa79-57e77d092388.png",
+    "caption": "tirav1 woman, sitting on a gym bench holding a water bottle, dusty pink sports bra and bike shorts, white sneakers, smiling, hair in a low bun"
+   },
+   {
+    "name": "tira_10",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_110046_1b36aa95-ce09-4905-887e-ad74bcde8196.png",
+    "caption": "tirav1 woman, full body rear three-quarter view, standing, black sports bra, black high-waisted bike shorts, white sneakers, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_11",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_112815_90d1b139-214b-4218-99a8-ef588856044b.png",
+    "caption": "tirav1 woman, full body front view, standing, black racerback sports bra, black high-waisted bike shorts, white sneakers, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_12",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_122750_27fba563-86c2-4ac0-9eae-bde992be3206.png",
+    "caption": "tirav1 woman, rear three-quarter view looking over her shoulder, city rooftop terrace at sunset, black sports bra, olive green leggings, white sneakers, hair in a low bun, candid phone photo"
+   },
+   {
+    "name": "tira_13",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_175239_99b26274-1496-423f-b329-26823b0f5015.png",
+    "caption": "tirav1 woman, front view, standing on a rooftop at sunset, black sports bra, olive green leggings, smiling, hair in a low bun, candid phone photo"
+   },
+   {
+    "name": "tira_14",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_181247_d74f7b14-8f5e-4f0d-821b-d387b6a3a36b.png",
+    "caption": "tirav1 woman, standing on a boat deck by the sea, black one-piece swimsuit, open white shirt, sunglasses on her head, hair in a low bun"
+   },
+   {
+    "name": "tira_15",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_181248_7224a39a-c82c-499e-87a2-d9c20d74c5bd.png",
+    "caption": "tirav1 woman, three-quarter view, walking on a beach at sunset, terracotta bikini, holding a white cloth, smiling, hair in a low bun"
+   },
+   {
+    "name": "tira_16",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_181249_f97bde65-394e-47fe-bd0b-e393d8b2d0f5.png",
+    "caption": "tirav1 woman, dancing garba at night on a terrace, holding dandiya sticks, green lehenga skirt and embroidered blouse, barefoot, smiling, hair in a low bun, festive lights"
+   },
+   {
+    "name": "tira_18",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_182932_233d3f05-fd0d-4c0d-b147-1f703d93520b.png",
+    "caption": "tirav1 woman, rear view looking over her shoulder, standing in shallow sea water at sunset, brown bikini, holding a white sarong, fishing boat behind her, hair in a low bun"
+   },
+   {
+    "name": "tira_19",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_182932_ac40417b-1ffe-430d-9a53-dbc46c3ce5a7.png",
+    "caption": "tirav1 woman, front view, standing on a beach at sunset, brown bikini with a white sarong tied at the hips, fishing boat behind her, hair in a low bun"
+   },
+   {
+    "name": "tira_21",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_182933_87857282-d27d-458a-aa03-386070db93bd.png",
+    "caption": "tirav1 woman, dancing garba at night, holding dandiya sticks, green lehenga and green blouse, rangoli and string lights, smiling, hair in a low bun"
+   },
+   {
+    "name": "tira_22",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_184341_235616ce-2f22-40b8-8778-bd2b6b9309c1.png",
+    "caption": "tirav1 woman, rear view looking over her shoulder, standing in the sea, terracotta bikini, holding a white cloth, clear blue sky, smiling, hair in a low bun"
+   },
+   {
+    "name": "tira_23",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_232608_dbef7ce9-4435-4145-8487-eaf7c5b11911.png",
+    "caption": "tirav1 woman, sitting on a seafront promenade wall, black tank top, light denim shorts, white sneakers, long hair worn down, sunset"
+   },
+   {
+    "name": "tira_25",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_234605_67a8fb65-1c2f-45f6-b8e4-20ed9dfe3305.png",
+    "caption": "tirav1 woman, rear view looking over her shoulder, leaving an apartment, cream long-sleeve blouse, black flared trousers, beige tote bag, hair in a low bun"
+   },
+   {
+    "name": "tira_27",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261016_235012_5823b1dd-1c97-4556-80b4-1c4a638a505e.png",
+    "caption": "tirav1 woman, topless, seen from behind and the side, standing by an open wardrobe, black trousers, barefoot, looking over her shoulder, hair in a low bun, bedroom"
+   },
+   {
+    "name": "tira_30",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062655_4468d16d-8f2c-445e-b1db-808aa1b6fdce.png",
+    "caption": "tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight"
+   },
+   {
+    "name": "tira_31",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062613_fbbaa9b2-59fe-48c6-8d95-16809571e5bb.png",
+    "caption": "tirav1 woman, close-up, three-quarter view, laughing, black tank top, hair in a low bun, seaside promenade, golden hour"
+   },
+   {
+    "name": "tira_32",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062613_8c875b85-d9aa-4107-b9a7-8597e0baae90.png",
+    "caption": "tirav1 woman, full body front view, hand on hip, black bodycon dress, black strappy heels, hair in a low bun, rooftop at dusk, city skyline"
+   },
+   {
+    "name": "tira_33",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062656_11165365-829f-4bb8-aa54-bf0e30e81b12.png",
+    "caption": "tirav1 woman, full body right side profile, sage green sports bra and leggings, white sneakers, hair in a low bun, gym"
+   },
+   {
+    "name": "tira_34",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062613_5dd0ff83-0777-4fda-92bc-aadcfb3db145.png",
+    "caption": "tirav1 woman, rear three-quarter view looking over her shoulder, walking through a street market, white cropped tank top, light blue jeans, crossbody bag, hair tied back"
+   },
+   {
+    "name": "tira_35",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062613_eda684b4-34d6-46b1-8272-401dd10e4513.png",
+    "caption": "tirav1 woman, sitting on a bed holding a coffee cup, cream knit cardigan, black tank top, grey shorts, legs crossed, long hair worn down, bedroom, morning light"
+   },
+   {
+    "name": "tira_36",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062656_bab86272-6088-4f5b-bf49-e80c88d2cad0.png",
+    "caption": "tirav1 woman, full body front three-quarter view, walking in shallow waves at sunset, red one-piece swimsuit, hand in her hair, hair in a low bun, beach"
+   },
+   {
+    "name": "tira_37",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062656_00559b5a-6162-4bb3-b303-c615e82640e8.png",
+    "caption": "tirav1 woman, standing on a terrace at night holding a sparkler, maroon embroidered anarkali dress with dupatta, flowers in her hair, fireworks, festive lights"
+   },
+   {
+    "name": "tira_38",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062732_6fb37aa6-4c98-4c1f-9975-7e24294dec53.png",
+    "caption": "tirav1 woman, mirror selfie in a bathroom, holding a phone, black long-sleeve bodysuit, dark blue jeans, gold belt, long hair worn down"
+   },
+   {
+    "name": "tira_39",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_062731_acd739cd-d19e-4887-9da3-facc2630b578.png",
+    "caption": "tirav1 woman, rear three-quarter view looking over her shoulder, standing at the edge of a pool, white bikini, open sheer white shirt, sunglasses on her head, hair in a low bun, palm trees"
+   },
+   {
+    "name": "tira_40",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_063411_f78a9bd1-534c-4499-bcaf-d655c285c65a.png",
+    "caption": "tirav1 woman, full body front view, standing, black long-sleeve bodysuit, barefoot, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_41",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_063410_55633d5c-8a6a-40a8-975e-1595cada3760.png",
+    "caption": "tirav1 woman, full body right side profile, standing, black long-sleeve bodysuit, barefoot, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_42",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_063410_92173173-ab5b-44de-82ed-15fc081076dd.png",
+    "caption": "tirav1 woman, full body back view, standing, black long-sleeve bodysuit, barefoot, hair in a low bun, plain white studio background"
+   },
+   {
+    "name": "tira_46",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214257_d45cbec0-b199-44f2-9183-4396a933b5bf.png",
+    "caption": "tirav1 woman, close-up portrait, front view, looking at the camera, neutral expression, black t-shirt, hair pulled back in a bun with loose strands, plain light grey wall"
+   },
+   {
+    "name": "tira_47",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214257_413dda9f-b0aa-4fd1-9102-5127526d5512.png",
+    "caption": "tirav1 woman, close-up portrait, three-quarter view, smiling, white t-shirt, hair in a low bun with loose strands, park with trees, sunlight"
+   },
+   {
+    "name": "tira_48",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214258_9816c31b-3ef0-4b70-867c-6d5fe56a6969.png",
+    "caption": "tirav1 woman, close-up portrait, three-quarter view, soft smile, black tank top, long hair worn down, apartment with bookshelves, daylight"
+   },
+   {
+    "name": "tira_49",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214257_a8c206b8-02d4-4abc-8fcb-9f348c0d60f7.png",
+    "caption": "tirav1 woman, close-up portrait, side profile, grey t-shirt, hair in a low bun, plain off-white wall"
+   },
+   {
+    "name": "tira_50",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214344_5369ce31-35b9-4050-bb4c-cfb492ef25b1.png",
+    "caption": "tirav1 woman, close-up portrait, front view, laughing, cream knit sweater, long hair worn down, living room, warm lamp light, evening"
+   },
+   {
+    "name": "tira_51",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214345_ff377973-1124-4305-b684-bac4c7f93ef7.png",
+    "caption": "tirav1 woman, close-up portrait, front view, soft smile, black spaghetti-strap top, long hair worn down, seafront, golden hour"
+   },
+   {
+    "name": "tira_52",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214345_fe979cdf-da49-4c23-8103-4111e365698f.png",
+    "caption": "tirav1 woman, close-up portrait, rear three-quarter view looking over her shoulder, smiling, sage green sports bra, hair in a low bun, gym"
+   },
+   {
+    "name": "tira_53",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JOwAIITUoFGoBaSmZB1O46AuW7/hf_20261021_214346_27a0bd77-eb4a-4601-9f42-471800e30471.png",
+    "caption": "tirav1 woman, close-up portrait, front view, chin resting on her hand, black long-sleeve top, long hair worn down, cafe at night, warm lights"
+   }
+  ],
+  "steps": 2000,
+  "rank": 16,
+  "lr": 0.0001,
+  "resolutions": [
+   512,
+   768
+  ],
+  "save_every": 200,
+  "sample_every": 0,
+  "max_minutes": 660,
+  "sample_prompts": [
+   "tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo",
+   "tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo"
+  ],
+  "resume_glob": "tira_zimage_lora*.safetensors",
+  "resume_step": 1000
+ }
+}
