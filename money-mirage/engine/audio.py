@@ -124,7 +124,7 @@ import glob, subprocess
 TRACKS = sorted(glob.glob(f'{B}/music/*.mp3') + glob.glob(f'{B}/music/*.wav'))
 def loadtrack(p):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'], capture_output=True, check=True).stdout
-    x = np.frombuffer(raw, np.int16).astype(np.float32) / 32768; return x / (np.sqrt((x ** 2).mean()) + 1e-9) * .1
+    x = np.frombuffer(raw, np.int16).astype(np.float32) / 32768; return x / (np.sqrt((x ** 2).mean()) + 1e-9) * .065
 if TRACKS:
     # real recorded tracks: chapters cycle through them, each chapter starts a new track section with crossfades
     music = np.zeros(N, np.float32); TR = [loadtrack(p) for p in TRACKS]; pos = [0] * len(TR)
@@ -172,7 +172,7 @@ elif False:
 nar = rd(f'{B}/narration.wav'); voice = np.zeros(N, np.float32); voice[:len(nar)] = nar
 hop = 480; envv = np.array([np.sqrt((voice[i:i + hop] ** 2).mean()) for i in range(0, N, hop)])
 act = (envv > .02).astype(float); sm = np.convolve(act, np.ones(40) / 40, 'same')  # ~0.4 s smoothing
-gain = 1 - .55 * np.clip(sm * 1.5, 0, 1); gain = np.repeat(gain, hop)[:N]
+gain = 1 - .68 * np.clip(sm * 1.5, 0, 1); gain = np.repeat(gain, hop)[:N]
 music *= gain
 # ---------------- SFX placement ----------------
 fx = np.zeros(N, np.float32); cues = json.load(open(f'{B}/sfx.json'))
