@@ -1,0 +1,97 @@
+{
+ "id": "dig2-en-p1",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "part1a",
+   "direction": "Narrate this as a popular geography YouTube channel's long-form explainer. The Narrator is a deep, warm, confident storyteller: curious and brisk, with natural emphasis, building wonder as we go deeper, a short comic pause before each punchline, and real awe at the big reveals. Chars voices funny cartoon characters: short and punchy. Read numbers naturally.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Start digging in Delhi and never stop. Twelve thousand kilometres later... where do you come out?"
+    ],
+    [
+     "Narrator",
+     "The planet will try to stop you four times. And humans have tried. We got about 0.2 percent of the way."
+    ],
+    [
+     "Narrator",
+     "So let's go further than anyone ever has. Starting with the deepest hole on Earth."
+    ],
+    [
+     "Narrator",
+     "Rewind to 1970. Far north in Russia, near the border with Norway, Soviet scientists start drilling. Straight down."
+    ],
+    [
+     "Narrator",
+     "The hole is narrower than a dinner plate. About 23 centimetres. And they keep going... for 19 years."
+    ],
+    [
+     "Narrator",
+     "By 1989, it reaches 12,262 metres. Drop Mount Everest in, and it would vanish. It's even deeper than the Mariana Trench."
+    ],
+    [
+     "Narrator",
+     "But down there, it was about 180 degrees. Nearly double what they'd expected."
+    ],
+    [
+     "Narrator",
+     "And the rock stopped behaving like rock. It turned soft, like hot plastic, and crept back into the hole."
+    ],
+    [
+     "Narrator",
+     "So in the early nineties, they stopped. Today, the deepest hole on Earth is a rusty metal cap... in an abandoned field."
+    ]
+   ]
+  },
+  {
+   "name": "part1b",
+   "direction": "Narrate this as a popular geography YouTube channel's long-form explainer. The Narrator is a deep, warm, confident storyteller: curious and brisk, with natural emphasis, building wonder as we go deeper, a short comic pause before each punchline, and real awe at the big reveals. Chars voices funny cartoon characters: short and punchy. Read numbers naturally.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Chars",
+     "[tired, grumpy old metal lid, deadpan] Deepest hole on Earth. Please stop sitting on me."
+    ],
+    [
+     "Narrator",
+     "And the twist? After 19 years... they only got about a third of the way through the crust."
+    ],
+    [
+     "Narrator",
+     "So if our best drill gave up at 12 kilometres... how do we know what's 6,000 kilometres down?"
+    ],
+    [
+     "Narrator",
+     "Let's cheat. Imagine a drill pod that can't melt. Back to Delhi... and down we go."
+    ],
+    [
+     "Narrator",
+     "First, the crust. Under the oceans, it's only about 5 to 10 kilometres thick. Under the continents, around 30 to 50."
+    ],
+    [
+     "Narrator",
+     "Shrink the Earth to the size of an apple, and the crust is thinner than its skin."
+    ],
+    [
+     "Narrator",
+     "And it heats up fast. Every kilometre down adds about 25 to 30 degrees."
+    ],
+    [
+     "Narrator",
+     "The deepest mine on Earth, in South Africa, goes about 4 kilometres down. The rock there hits about 60 degrees. Miners need huge cooling systems just to work."
+    ]
+   ]
+  }
+ ]
+}
