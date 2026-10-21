@@ -132,10 +132,51 @@ with open(cfg_path, "w") as f:
 shutil.copy(cfg_path, f"{OUT}/config.yaml")
 stamp("config written")
 
-# 4) Train. Output streams to train_log.txt; step speed is read from the progress bar.
+# 4) Train. A T4 runs out of memory on bf16 attention at 768 px (it can only use the
+#    memory-efficient attention kernel in fp16), so a small t4patch module, imported before
+#    the trainer starts, computes attention in fp16, with a chunked fp32 fallback if a call overflows.
+#    Output streams to train_log.txt; step speed is read from the progress bar.
+patch_dir = f"{WORK}/t4patch"
+os.makedirs(patch_dir, exist_ok=True)
+with open(f"{patch_dir}/t4patch.py", "w") as f:
+    f.write('''
+import torch
+_sdpa = torch.nn.functional.scaled_dot_product_attention
+_stats = {"fp16": 0, "fp32_fallback": 0}
+
+def _attention_t4(query, key, value, attn_mask=None, dropout_p=0.0, is_causal=False, scale=None,
+                  enable_gqa=False):
+    if query.dtype != torch.bfloat16 or not query.is_cuda:
+        return _sdpa(query, key, value, attn_mask=attn_mask, dropout_p=dropout_p, is_causal=is_causal,
+                     scale=scale, enable_gqa=enable_gqa)
+    _stats["fp16"] += 1
+    with torch.nn.attention.sdpa_kernel([torch.nn.attention.SDPBackend.EFFICIENT_ATTENTION,
+                                         torch.nn.attention.SDPBackend.MATH]):
+        out = _sdpa(query.half(), key.half(), value.half(), attn_mask=attn_mask, dropout_p=dropout_p,
+                    is_causal=is_causal, scale=scale, enable_gqa=enable_gqa)
+    if torch.isfinite(out).all():
+        return out.to(torch.bfloat16)
+    _stats["fp32_fallback"] += 1
+    k, v = key.float(), value.float()
+    chunks = []
+    for i in range(0, query.shape[-2], 1024):
+        m = attn_mask
+        if m is not None and m.dim() >= 2 and m.shape[-2] > 1:
+            m = m[..., i:i + 1024, :]
+        chunks.append(_sdpa(query[..., i:i + 1024, :].float(), k, v, attn_mask=m, dropout_p=dropout_p,
+                            is_causal=is_causal, scale=scale, enable_gqa=enable_gqa))
+    return torch.cat(chunks, dim=-2).to(torch.bfloat16)
+
+torch.nn.functional.scaled_dot_product_attention = _attention_t4
+import atexit
+atexit.register(lambda: print("T4 attention patch stats:", _stats, flush=True))
+''')
+env = dict(os.environ, PYTHONPATH=patch_dir + os.pathsep + os.environ.get("PYTHONPATH", ""))
 train_log = open(f"{OUT}/train_log.txt", "w")
-proc = subprocess.Popen([sys.executable, "run.py", cfg_path], cwd=AITK, stdout=subprocess.PIPE,
-                        stderr=subprocess.STDOUT, text=True, bufsize=1)
+launcher = ("import sys, runpy, t4patch; sys.argv = ['run.py', sys.argv[1]]; "
+            "runpy.run_path('run.py', run_name='__main__')")
+proc = subprocess.Popen([sys.executable, "-c", launcher, cfg_path], cwd=AITK, stdout=subprocess.PIPE,
+                        stderr=subprocess.STDOUT, text=True, bufsize=1, env=env)
 step_re = re.compile(r"(\d+)/(\d+) \[[^\]]*?([\d.]+)(s/it|it/s)")
 last = None
 for line in proc.stdout:
