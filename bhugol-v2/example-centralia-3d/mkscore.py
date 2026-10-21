@@ -1,5 +1,5 @@
 # Adds nominal timings (o = aligned starts), music sections and sound effects in real seconds, then runs score.py.
-# Usage: python3 mkscore.py <spec.json> <out_dir>   (reads <out_dir>/voice.wav + timing.json)
+# Usage: python3 mkscore.py <spec.json> <out_dir>   (reads <out_dir>/voice.wav + timing.json; writes mix_norm.wav and mix_final.wav = + bundled SFX)
 import json, sys, subprocess
 spec_p, od = sys.argv[1:3]
 S = json.load(open(spec_p)); TIM = json.load(open(od + '/timing.json'))
@@ -40,5 +40,14 @@ fx += [['pop', C(1, 1, .5), .6, 900], ['pop', C(1, 1, .6), .5, 700],
        ['boom', C(16, 2, .1), .7, 1.6, 44], ['pop', C(16, 2), .6, 900], ['pop', C(17, 0, -.35), .6, 600],
        ['chime', ES, .6, [523.25, 659.25, 783.99], 1.6, .5], ['pop', ES + .8, .6, 900], ['plink', ES + 2.0, .6, 1800, .5]]
 S['fx'] = fx
+motion_plan.unwarp(S, TIM)   # score.py re-maps times through W(); our times are already real seconds (bug fixed 22 Oct)
 out = spec_p.replace('.json', '.scored.json'); json.dump(S, open(out, 'w'), ensure_ascii=False, indent=1)
 subprocess.run(['python3', '/home/claude/bhugol-kit/tools/score.py', out, od + '/voice.wav', od + '/timing.json', od], check=True)
+# bundled HyperFrames SFX on the 2-3 biggest moments, peak-aligned (writes mix_final.wav + sfx_stem.wav)
+cues = []
+for b in S.get('beats', []):
+    if b['kind'] == 'charslam': cues.append({'file': 'impact-bass-1.mp3', 't': CC(*b['at']) + .3, 'gain_db': -10, 'what': 'hook title lands'})
+for p in P[1:]:
+    if p['cut'] in ('burn', 'flash'): cues += [{'file': 'whoosh-cinematic.mp3', 't': p['t'] + .05, 'gain_db': -9, 'what': 'hero cut'}, {'file': 'impact-bass-2.mp3', 't': p['t'] + .3, 'gain_db': -12, 'what': 'hero landing'}]
+json.dump(cues, open(od + '/sfx_cues.json', 'w'), indent=1)
+subprocess.run(['python3', '/home/claude/media-engine/bhugol-v2/motion/sfxlayer.py', od + '/mix_norm.wav', od + '/mix_final.wav', od + '/sfx_stem.wav', od + '/sfx_cues.json'], check=True)
