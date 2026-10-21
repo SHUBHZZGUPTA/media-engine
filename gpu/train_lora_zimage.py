@@ -12,6 +12,9 @@ Job params:
   sample_prompts    prompts for sample images
   max_minutes       safety stop: end training after this many minutes (0 = none), keeping
                     every checkpoint saved so far
+  resume_glob       optional filename pattern of a checkpoint in an attached Kaggle input (e.g. a
+                    previous run's output); the highest-step match is resumed from. If set and
+                    nothing matches, the job stops at once instead of training from scratch.
 
 Everything worth keeping (LoRA files, samples, logs, timing) is written to /kaggle/working."""
 import json
@@ -94,8 +97,32 @@ for item in P["dataset"]:
     os.remove(raw)
 stamp(f"dataset ready ({len(P['dataset'])} images)")
 
-# 3) Config: ai-toolkit's Z-Image Turbo preset with the training adapter.
+# 3) Resume: ai-toolkit continues from the latest checkpoint it finds in its save folder, reading the
+#    step from the file's metadata, so a previous run's checkpoint is copied in before training.
+import glob  # noqa: E402
+
+save_root = f"{WORK}/output/tira_zimage_lora"
+os.makedirs(save_root, exist_ok=True)
+if P.get("resume_glob"):
+    found = glob.glob(f"/kaggle/input/**/{P['resume_glob']}", recursive=True)
+    if not found:
+        listing = sorted(glob.glob("/kaggle/input/**", recursive=True))[:200]
+        log["resume_error"] = "no checkpoint matched " + P["resume_glob"]
+        log["kaggle_input_listing"] = listing
+        stamp("resume checkpoint not found; stopping")
+        sys.exit(1)
+    best = max(found, key=lambda f: int((re.findall(r"_(\d{9})\.safetensors$", f) or ["0"])[0]))
+    shutil.copy(best, save_root)
+    for extra in glob.glob(os.path.join(os.path.dirname(best), "optimizer.pt")):
+        shutil.copy(extra, save_root)
+    log["resumed_from"] = best
+    stamp(f"resuming from {os.path.basename(best)}")
+
+# 4) Config: ai-toolkit's Z-Image Turbo preset with the training adapter. With sample_every 0,
+#    sampling is switched off entirely: on a T4, decoding a 768x1024 sample while the training model
+#    is loaded runs out of memory, so samples are made in a separate job afterwards.
 steps = int(P["steps"])
+sampling_off = not int(P.get("sample_every", 0))
 sample_every = int(P.get("sample_every", 0)) or steps * 10
 config = {
     "job": "extension",
@@ -114,6 +141,7 @@ config = {
                       "train_text_encoder": False, "gradient_checkpointing": True, "noise_scheduler": "flowmatch",
                       "timestep_type": "weighted", "optimizer": "adamw8bit", "lr": float(P.get("lr", 1e-4)),
                       "dtype": "bf16", "unload_text_encoder": False, "skip_first_sample": True,
+                      "disable_sampling": sampling_off,
                       "ema_config": {"use_ema": False}},
             "model": {"name_or_path": "Tongyi-MAI/Z-Image-Turbo", "arch": "zimage", "quantize": True,
                       "qtype": "qfloat8", "quantize_te": True, "low_vram": True,
@@ -134,7 +162,7 @@ with open(cfg_path, "w") as f:
 shutil.copy(cfg_path, f"{OUT}/config.yaml")
 stamp("config written")
 
-# 4) Train. A T4 runs out of memory on bf16 attention at 768 px (it can only use the
+# 5) Train. A T4 runs out of memory on bf16 attention at 768 px (it can only use the
 #    memory-efficient attention kernel in fp16), so a small t4patch module, imported before
 #    the trainer starts, computes attention in fp16, with a chunked fp32 fallback if a call overflows.
 #    Output streams to train_log.txt; step speed is read from the progress bar.
@@ -188,7 +216,8 @@ def sync_outputs():
         os.makedirs(f"{OUT}/{sub}", exist_ok=True)
     for root, _, files in os.walk(f"{WORK}/output"):
         for name in files:
-            sub = "lora" if name.endswith(".safetensors") else "samples" if root.endswith("samples") else None
+            sub = ("lora" if name.endswith(".safetensors") or name == "optimizer.pt"
+                   else "samples" if root.endswith("samples") else None)
             if not sub:
                 continue
             src, dst = os.path.join(root, name), f"{OUT}/{sub}/{name}"
@@ -233,7 +262,7 @@ log["stopped_by_time_limit"] = stopped_by_time.is_set()
 stamp("training finished" if rc == 0 else
       "training stopped at the time limit" if stopped_by_time.is_set() else f"training failed (exit {rc})")
 
-# 5) Collect LoRA files and samples.
+# 6) Collect LoRA files and samples.
 sync_outputs()
 log["lora_files"] = sorted(os.listdir(f"{OUT}/lora"))
 log["samples"] = sorted(os.listdir(f"{OUT}/samples"))
