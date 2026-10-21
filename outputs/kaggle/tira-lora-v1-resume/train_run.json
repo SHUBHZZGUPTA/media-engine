@@ -22,12 +22,24 @@
  },
  "images": 35,
  "timings": {
-  "ai-toolkit installed": 79.5,
-  "dataset ready (35 images)": 160.1,
-  "resume checkpoint not found; stopping": 160.1
+  "ai-toolkit installed": 76.1,
+  "dataset ready (35 images)": 108.8,
+  "resuming from tira_zimage_lora_000000200.safetensors": 111.5,
+  "config written": 111.5,
+  "training finished": 28296.5
  },
- "resume_error": "no checkpoint matched tira_zimage_lora_0*.safetensors",
- "kaggle_input_listing": [
-  "/kaggle/input/"
- ]
+ "resumed_from": "/kaggle/input/tira-lora-checkpoints/tira_zimage_lora_000000200.safetensors",
+ "last_step": 1000,
+ "sec_per_step": 34.73,
+ "exit_code": 0,
+ "stopped_by_time_limit": false,
+ "lora_files": [
+  "optimizer.pt",
+  "tira_zimage_lora.safetensors",
+  "tira_zimage_lora_000000200.safetensors",
+  "tira_zimage_lora_000000400.safetensors",
+  "tira_zimage_lora_000000600.safetensors",
+  "tira_zimage_lora_000000800.safetensors"
+ ],
+ "samples": []
 }

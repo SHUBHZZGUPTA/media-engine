@@ -1,0 +1,70 @@
+job: extension
+config:
+  name: tira_zimage_lora
+  process:
+  - type: sd_trainer
+    training_folder: /tmp/train/output
+    device: cuda:0
+    network:
+      type: lora
+      linear: 16
+      linear_alpha: 16
+    save:
+      dtype: float16
+      save_every: 200
+      max_step_saves_to_keep: 20
+    datasets:
+    - folder_path: /tmp/train/dataset
+      caption_ext: txt
+      caption_dropout_rate: 0.05
+      cache_latents_to_disk: true
+      resolution:
+      - 512
+      - 768
+    train:
+      batch_size: 1
+      steps: 1000
+      gradient_accumulation_steps: 1
+      train_unet: true
+      train_text_encoder: false
+      gradient_checkpointing: true
+      noise_scheduler: flowmatch
+      timestep_type: weighted
+      optimizer: adamw8bit
+      lr: 0.0001
+      dtype: bf16
+      unload_text_encoder: false
+      skip_first_sample: true
+      disable_sampling: true
+      ema_config:
+        use_ema: false
+    model:
+      name_or_path: Tongyi-MAI/Z-Image-Turbo
+      arch: zimage
+      quantize: true
+      qtype: qfloat8
+      quantize_te: true
+      low_vram: true
+      assistant_lora_path: ostris/zimage_turbo_training_adapter/zimage_turbo_training_adapter_v2.safetensors
+    sample:
+      sampler: flowmatch
+      sample_every: 10000
+      width: 768
+      height: 1024
+      prompts:
+      - tirav1 woman, close-up portrait, front view, looking at the camera, white
+        t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone
+        photo
+      - tirav1 woman, full body front view, standing in a gym, black sports bra and
+        black leggings, white sneakers, hair in a low bun, candid iPhone photo
+      - tirav1 woman, rear three-quarter view looking over her shoulder, walking on
+        a beach at sunset, red bikini, hair in a low bun, candid iPhone photo
+      - tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater,
+        blue jeans, smiling, long hair worn down, candid iPhone photo
+      seed: 42
+      walk_seed: true
+      guidance_scale: 1
+      sample_steps: 9
+meta:
+  name: tira_zimage_lora
+  version: '1.0'

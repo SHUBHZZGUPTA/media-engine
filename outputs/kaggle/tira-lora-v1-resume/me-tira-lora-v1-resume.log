@@ -1,36 +1,83 @@
-[{"stream_name":"stdout","time":0.938865558,"data":"$ git init -q /tmp/ai-toolkit \u0026\u0026 cd /tmp/ai-toolkit \u0026\u0026 git remote add origin https://github.com/ostris/ai-toolkit.git \u0026\u0026 git fetch -q --depth 1 origin 04733873cf1da8060fce01316ec45daedbd4a918 \u0026\u0026 git checkout -q FETCH_HEAD \u0026\u0026 git submodule update --init --recursive --depth 1 -q || true\n"}
-,{"stream_name":"stdout","time":3.6281232340000003,"data":"$ /usr/bin/python3 -m pip install -q -r /tmp/train/requirements.txt\n"}
-,{"stream_name":"stdout","time":20.180652194,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 2.7 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":21.964957646,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 3.3 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.107605109,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 65.8 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.14343059,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.3/200.3 kB 12.4 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.223717734,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 56.4 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.259830686,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 16.3 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.291320062,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.7/109.7 kB 6.2 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.329302214,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 37.3 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.365128997,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.0/557.0 kB 27.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.396473353,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.7 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.498068232,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 100.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.604487466,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 48.2 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.647281652,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 58.9 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":26.040231411,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 51.3 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":26.098060946,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 94.0 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":26.13086117,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.8/53.8 kB 2.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":26.450945469,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 63.0 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":26.48088645,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.7/195.7 kB 10.8 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":26.530508911,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 89.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":26.588873102,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 1.7 MB/s eta 0:00:00\n"}
-,{"stream_name":"stderr","time":76.813604937,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
-,{"stream_name":"stderr","time":76.813645842,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
-,{"stream_name":"stderr","time":76.813651012,"data":"ydata-profiling 4.18.4 requires matplotlib\u003c=3.10,\u003e=3.5, but you have matplotlib 3.10.1 which is incompatible.\n"}
-,{"stream_name":"stdout","time":77.188861578,"data":"$ /usr/bin/python3 -m pip install -q torchao\n"}
-,{"stream_name":"stdout","time":80.424226563,"data":"[    79.5s] ai-toolkit installed\n"}
-,{"stream_name":"stdout","time":161.041089269,"data":"[   160.1s] dataset ready (35 images)\n"}
-,{"stream_name":"stdout","time":161.041906969,"data":"[   160.1s] resume checkpoint not found; stopping\n"}
-,{"stream_name":"stderr","time":163.218760521,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":163.218807061,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":163.498456253,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":163.498487829,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":164.343430503,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":165.422779948,"data":"[NbConvertApp] Writing 341515 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":0.793922118,"data":"$ git init -q /tmp/ai-toolkit \u0026\u0026 cd /tmp/ai-toolkit \u0026\u0026 git remote add origin https://github.com/ostris/ai-toolkit.git \u0026\u0026 git fetch -q --depth 1 origin 04733873cf1da8060fce01316ec45daedbd4a918 \u0026\u0026 git checkout -q FETCH_HEAD \u0026\u0026 git submodule update --init --recursive --depth 1 -q || true\n"}
+,{"stream_name":"stdout","time":3.661756155,"data":"$ /usr/bin/python3 -m pip install -q -r /tmp/train/requirements.txt\n"}
+,{"stream_name":"stdout","time":22.019308423,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 4.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":23.853095852,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 3.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.916976004,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 92.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.949186074,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.3/200.3 kB 10.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.018340391,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 72.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.051314648,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 15.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.081146152,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.7/109.7 kB 5.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.115857834,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 35.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.149613835,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.0/557.0 kB 27.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.178984059,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.277894580999998,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 103.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.371044254,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 55.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.410412253,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 60.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.779811544,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 50.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.831905807,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 95.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.859442904,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.8/53.8 kB 2.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.155529841,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 60.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.187316483,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.7/195.7 kB 11.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.234177012,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 92.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.287588545,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 1.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":73.25524479,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":73.255282133,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":73.255287427,"data":"ydata-profiling 4.18.4 requires matplotlib\u003c=3.10,\u003e=3.5, but you have matplotlib 3.10.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":73.619192779,"data":"$ /usr/bin/python3 -m pip install -q torchao\n"}
+,{"stream_name":"stdout","time":76.865962453,"data":"[    76.1s] ai-toolkit installed\n"}
+,{"stream_name":"stdout","time":109.638567599,"data":"[   108.8s] dataset ready (35 images)\n"}
+,{"stream_name":"stdout","time":112.309433368,"data":"[   111.5s] resuming from tira_zimage_lora_000000200.safetensors\n"}
+,{"stream_name":"stdout","time":112.342224581,"data":"[   111.5s] config written\n"}
+,{"stream_name":"stdout","time":28297.319975853,"data":"[ 28296.5s] training finished\n"}
+,{"stream_name":"stdout","time":28297.354523592,"data":"{\n"}
+,{"stream_name":"stdout","time":28297.354547017,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":28297.354552209,"data":"  \"aitk_commit\": \"04733873cf1da8060fce01316ec45daedbd4a918\",\n"}
+,{"stream_name":"stdout","time":28297.354556834,"data":"  \"trigger\": \"tirav1\",\n"}
+,{"stream_name":"stdout","time":28297.354561097,"data":"  \"steps\": 1000,\n"}
+,{"stream_name":"stdout","time":28297.354565236,"data":"  \"rank\": 16,\n"}
+,{"stream_name":"stdout","time":28297.354569465,"data":"  \"lr\": 0.0001,\n"}
+,{"stream_name":"stdout","time":28297.354576907,"data":"  \"resolutions\": [\n"}
+,{"stream_name":"stdout","time":28297.354579741,"data":"   512,\n"}
+,{"stream_name":"stdout","time":28297.354582672,"data":"   768\n"}
+,{"stream_name":"stdout","time":28297.354585433,"data":"  ],\n"}
+,{"stream_name":"stdout","time":28297.354588116,"data":"  \"save_every\": 200,\n"}
+,{"stream_name":"stdout","time":28297.354590947,"data":"  \"sample_every\": 0,\n"}
+,{"stream_name":"stdout","time":28297.354593788,"data":"  \"max_minutes\": 660,\n"}
+,{"stream_name":"stdout","time":28297.354596504,"data":"  \"sample_prompts\": [\n"}
+,{"stream_name":"stdout","time":28297.354599376,"data":"   \"tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":28297.35460245,"data":"   \"tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":28297.354605576,"data":"   \"tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":28297.354617009,"data":"   \"tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo\"\n"}
+,{"stream_name":"stdout","time":28297.354619564,"data":"  ],\n"}
+,{"stream_name":"stdout","time":28297.354621669,"data":"  \"resume_glob\": \"tira_zimage_lora_0*.safetensors\"\n"}
+,{"stream_name":"stdout","time":28297.354624051,"data":" },\n"}
+,{"stream_name":"stdout","time":28297.354626171,"data":" \"images\": 35,\n"}
+,{"stream_name":"stdout","time":28297.354628327,"data":" \"timings\": {\n"}
+,{"stream_name":"stdout","time":28297.354630497,"data":"  \"ai-toolkit installed\": 76.1,\n"}
+,{"stream_name":"stdout","time":28297.354632866,"data":"  \"dataset ready (35 images)\": 108.8,\n"}
+,{"stream_name":"stdout","time":28297.354635116,"data":"  \"resuming from tira_zimage_lora_000000200.safetensors\": 111.5,\n"}
+,{"stream_name":"stdout","time":28297.354637377,"data":"  \"config written\": 111.5,\n"}
+,{"stream_name":"stdout","time":28297.354639596,"data":"  \"training finished\": 28296.5\n"}
+,{"stream_name":"stdout","time":28297.35464188,"data":" },\n"}
+,{"stream_name":"stdout","time":28297.354643969,"data":" \"resumed_from\": \"/kaggle/input/tira-lora-checkpoints/tira_zimage_lora_000000200.safetensors\",\n"}
+,{"stream_name":"stdout","time":28297.354646344,"data":" \"last_step\": 1000,\n"}
+,{"stream_name":"stdout","time":28297.354648516,"data":" \"sec_per_step\": 34.73,\n"}
+,{"stream_name":"stdout","time":28297.354650759,"data":" \"exit_code\": 0,\n"}
+,{"stream_name":"stdout","time":28297.354652965,"data":" \"stopped_by_time_limit\": false,\n"}
+,{"stream_name":"stdout","time":28297.354655177,"data":" \"lora_files\": [\n"}
+,{"stream_name":"stdout","time":28297.354657341,"data":"  \"optimizer.pt\",\n"}
+,{"stream_name":"stdout","time":28297.354659592,"data":"  \"tira_zimage_lora.safetensors\",\n"}
+,{"stream_name":"stdout","time":28297.354661826,"data":"  \"tira_zimage_lora_000000200.safetensors\",\n"}
+,{"stream_name":"stdout","time":28297.354664042,"data":"  \"tira_zimage_lora_000000400.safetensors\",\n"}
+,{"stream_name":"stdout","time":28297.354666279,"data":"  \"tira_zimage_lora_000000600.safetensors\",\n"}
+,{"stream_name":"stdout","time":28297.354668466,"data":"  \"tira_zimage_lora_000000800.safetensors\"\n"}
+,{"stream_name":"stdout","time":28297.354670664,"data":" ],\n"}
+,{"stream_name":"stdout","time":28297.354672746,"data":" \"samples\": []\n"}
+,{"stream_name":"stdout","time":28297.354674907,"data":"}\n"}
+,{"stream_name":"stderr","time":28299.645752215,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":28299.645786471,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":28299.941919295,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":28299.941946933,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":28301.502656137,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":28302.562825218,"data":"[NbConvertApp] Writing 341515 bytes to __results__.html\n"}
 ]
