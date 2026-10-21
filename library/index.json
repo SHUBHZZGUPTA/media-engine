@@ -19,7 +19,9 @@
   "c_roswell": "Roswell personified: silver water-tower hat with green alien-antenna headband, sheriff star, vest, thumbs up; smug grin; faces left-ish/front. (Roswell)",
   "c_mogul": "Project Mogul balloon personified: silver balloon head, foil-and-tape body, dangling microphone, round spy sunglasses; deadpan; faces left. (Roswell)",
   "c_fire": "Underground coal fire personified: black coal-lump body with glowing orange cracks, flame-tuft hair, ember sparks, rubbing hands greedily; delighted greedy grin; faces left. (Centralia, 2026-10-21)",
-  "c_centralia": "Small 1960s coal town personified: red-brick row-house body with windows + door, miner's hard hat with headlamp, coal smudges, side chimney, sweat drop; worried frown; faces right. (Centralia)"
+  "c_centralia": "Small 1960s coal town personified: red-brick row-house body with windows + door, miner's hard hat with headlamp, coal smudges, side chimney, sweat drop; worried frown; faces right. (Centralia)",
+  "c_liberty": "Statue of Liberty personified in original 1880s shiny copper-brown (not green): robe, 7-spike crown, torch raised in right hand, blank tablet; polite confused, mouth open; faces right. (Liberty, 2026-10-21)",
+  "c_nj": "New Jersey waterfront personified: red-brick harbour-warehouse body with two windows, wooden pier-post belt, grey flat cap, stubble, arms crossed holding a fishing rod; deadpan grumpy; faces left. (Liberty)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -41,6 +43,10 @@
   "centralia_pit": "1962 Pennsylvania strip-mine pit used as a dump: grey rock walls with coal layers, trash burning with orange flames and grey smoke, wooded ridges, row houses on the ridge. Flames ~630,720.",
   "centralia_road": "Abandoned cracked two-lane highway today, steam rising from cracks, faded paint swirls (no letters), dirt mounds, autumn trees, overcast. Main cracks/steam ~512,790.",
   "centralia_hole": "1980s coal-town backyard in winter: narrow steaming hole in the grass, wooden fence, back of brick row house, bare trees. Hole ~512,770.",
-  "centralia_town": "Bird's-eye aerial of a 1960s Pennsylvania coal town: grid of brick row houses (~x 20-900, y 140-780), diagonal highway, river top-left, open-pit mine at right edge, open field lower middle."
+  "centralia_town": "Bird's-eye aerial of a 1960s Pennsylvania coal town: grid of brick row houses (~x 20-900, y 140-780), diagonal highway, river top-left, open-pit mine at right edge, open field lower middle.",
+  "liberty_suez": "Suez Canal entrance at Port Said, late 1860s: stone breakwater + lighthouse left, sailing ships + paddle steamer, canal into desert, sandy quay lower half. Landmarks: canal mouth ~560,330; empty ground y 800-1500.",
+  "liberty_paris": "Paris street 1884, wet cobbles, Haussmann buildings both sides, giant copper-brown Statue of Liberty in scaffolding above the rooftops. Statue bbox ~440,20 - 680,560.",
+  "liberty_crates": "New York dock June 1885: stacks of plain wooden crates both sides, three-masted steam frigate behind, crane with hanging crate left, open plank dock lower middle.",
+  "liberty_harbour": "Bird's-eye of Liberty Island in Upper NY Bay: island centre ~455,850 (spans x 110-780, y 670-1020), statue ~520,640, NJ park shore top-left, Manhattan skyline top-right, ferry ~820,480, pier to ~918,855."
  }
 }
