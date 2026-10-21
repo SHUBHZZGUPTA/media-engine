@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Centralia 3D</title>
+<script src="./gsap.min.js"></script>
+<script src="./three.min.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 800; src: url(assets/muk800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 700; src: url(assets/muk700.woff2) format('woff2'); }
+:root { --mari: #FFC23A; --white: #F4F8FB; --fire: #FF7A1A; --ink: #03101A; }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #02070D; }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+.push { position: absolute; inset: 0; }
+.cv { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.chars { position: absolute; inset: 0; }
+.char { position: absolute; opacity: 0; }
+.char img { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 18px 22px rgba(0,0,0,.55)); }
+.shadow { position: absolute; height: 54px; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(0,0,0,.5), rgba(0,0,0,0) 70%); opacity: 0; }
+.ov { position: absolute; inset: 0; }
+.plbl { position: absolute; left: 0; top: 0; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #03101A; line-height: 1; opacity: 0; }
+#vig { background: radial-gradient(ellipse 75% 60% at 50% 45%, rgba(2,7,13,0) 55%, rgba(2,7,13,.66) 100%); }
+#topFade { height: 560px; bottom: auto; background: linear-gradient(rgba(2,7,13,.75) 0%, rgba(2,7,13,.35) 45%, rgba(2,7,13,0) 100%); }
+#capFade { top: 1170px; height: 520px; bottom: auto; background: linear-gradient(rgba(2,7,13,0), rgba(2,7,13,.55) 45%, rgba(2,7,13,0)); }
+#dim { background: #02070D; opacity: 0; }
+#flash { background: #ffffff; opacity: 0; }
+#heat { background: radial-gradient(ellipse 80% 55% at 50% 60%, rgba(255,110,20,.5), rgba(255,60,0,0) 70%); opacity: 0; mix-blend-mode: screen; }
+.emo { position: absolute; font-family: 'Emo', sans-serif; font-size: 200px; line-height: 1; opacity: 0; filter: drop-shadow(0 10px 12px rgba(0,0,0,.5)); }
+.ttl, .cap { position: absolute; inset: 0; opacity: 0; }
+.tl { position: absolute; left: 60px; width: 960px; text-align: center; white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; color: var(--white); line-height: 1; }
+.tl.big { font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; letter-spacing: .01em; }
+.tl.small { font-family: 'Arch', 'Muk', sans-serif; font-weight: 800; letter-spacing: .12em; }
+.k { color: var(--mari); }
+.cl { position: absolute; left: 195px; width: 740px; text-align: center; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #02070D; line-height: 1; }
+.hi .cl, .hi .tl.big, .hi .plbl { letter-spacing: 0; }
+.cl span { opacity: 0; }
+#badgeWrap { position: absolute; left: 230px; top: 450px; width: 620px; height: 620px; opacity: 0; transform-origin: 0 0; }
+#badgeShadow { position: absolute; inset: 4% 3% -4% 3%; border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(8px); }
+#badge { position: absolute; inset: 0; width: 100%; height: 100%; }
+#follow { position: absolute; left: 220px; top: 1125px; width: 640px; height: 130px; opacity: 0; }
+#folBtn { position: absolute; inset: 0; border-radius: 65px; background: var(--fire); box-sizing: border-box; }
+#folTxt, #folTxt2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; font-size: 66px; letter-spacing: .05em; color: var(--ink); }
+#folTxt2 { color: var(--fire); opacity: 0; }
+#tapDot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.85); border: 3px solid var(--ink); opacity: 0; }
+#ripple { position: absolute; left: 20px; top: -235px; width: 600px; height: 600px; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(255,255,255,.6); opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="scenes" class="scr"></div></div>
+    <div id="heat" class="scr"></div>
+    <div id="fx" class="scr"></div>
+    <div id="vig" class="scr"></div>
+    <div id="dim" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <div id="topFade" class="scr"></div>
+    <div id="capFade" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="badgeWrap"><div id="badgeShadow"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
+    <div id="follow"><div id="folBtn"></div><div id="folTxt"></div><div id="folTxt2"></div><div id="ripple"></div><div id="tapDot"></div></div>
+  </div>
+</div>
+<script>
+const D = __DATA__;
+if (D.lang === 'hi') document.getElementById('root').classList.add('hi');
+const NS = 'http://www.w3.org/2000/svg', T3 = THREE;
+const $ = id => document.getElementById(id);
+const tr = s => (D.i18n && D.i18n[s]) || s;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const LN = D.LN, PT = D.pt;
+
+/* ---------- keyframe tracks (evaluated from time only) ---------- */
+const EZ = {}; const ease = n => EZ[n || 'power2.inOut'] || (EZ[n || 'power2.inOut'] = gsap.parseEase(n || 'power2.inOut'));
+function Track(base) { return { base, last: base, keys: [] }; }
+function key(T, to, at, dur, e) { const from = (typeof T.last === 'object') ? Object.assign({}, T.last) : T.last;
+  const tgt = (typeof to === 'object') ? Object.assign({}, from, to) : to; T.keys.push({ a: at, d: Math.max(.04, dur), from, to: tgt, e: ease(e) }); T.last = tgt; }
+function valAt(T, t) { let v = T.base;
+  for (const k of T.keys) { if (t < k.a) break; const p = k.e(Math.min(1, (t - k.a) / k.d));
+    if (typeof k.to === 'object') { v = {}; for (const q in k.to) v[q] = k.from[q] + (k.to[q] - k.from[q]) * p; } else v = k.from + (k.to - k.from) * p; }
+  return v; }
+
+/* ---------- assets ---------- */
+const loader = new T3.TextureLoader(); const TX = {};
+function tex(n, opt) { if (!TX[n]) TX[n] = new Promise(r => loader.load('assets/' + n, t => { t.anisotropy = 4; if (opt && opt.nearest) { t.minFilter = t.magFilter = T3.LinearFilter; t.generateMipmaps = false; } if (opt && opt.repeat) t.wrapS = t.wrapT = T3.RepeatWrapping; r(t); })); return TX[n]; }
+const CPU = {};
+function cpuImg(n) { if (!CPU[n]) CPU[n] = new Promise(r => { const im = new Image(); im.onload = () => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); r({ w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }); }; im.src = 'assets/' + n; }); return CPU[n]; }
+const sampleCPU = (I, u, v) => { const x = clamp(Math.round(u * (I.w - 1)), 0, I.w - 1), y = clamp(Math.round((1 - v) * (I.h - 1)), 0, I.h - 1); return I.d[(y * I.w + x) * 4] / 255; };
+function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.25, 'rgba(255,255,255,.55)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new T3.CanvasTexture(c); }
+const GLOW = glowTex();
+const READY = [];
+
+/* ---------- 3D plate scenes ---------- */
+const PH = 2, FOV = 30, ASP = 1080 / 1920;
+const VS = `uniform sampler2D dep; uniform float dScale; varying vec2 vUv;
+void main(){ vUv = uv; float d = texture2D(dep, uv).r; vec3 p = position; p.z += (d - 0.5) * dScale; gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
+const FS = `uniform sampler2D tex, tex2, burn, noiseT; uniform float prog, grassP, bright, sat, time, shim, hasBurn, heat; uniform vec4 grid, shimRect; varying vec2 vUv;
+void main(){ vec2 uv = vUv;
+  if (shim > 0.0) { float m = smoothstep(shimRect.x, shimRect.x + 0.05, uv.x) * smoothstep(shimRect.z, shimRect.z - 0.05, uv.x) * smoothstep(shimRect.y, shimRect.y + 0.05, uv.y) * smoothstep(shimRect.w, shimRect.w - 0.05, uv.y);
+    uv += shim * m * vec2(sin(uv.y * 170.0 + time * 7.0) * 0.0016, sin(uv.x * 120.0 + time * 5.0) * 0.0011); }
+  vec3 c = texture2D(tex, uv).rgb;
+  if (hasBurn > 0.5) { float b = texture2D(burn, uv).r; float r = 1.0 - smoothstep(prog - 0.07, prog, b);
+    float fl = 0.86 + 0.14 * sin(time * 13.0 + uv.x * 40.0) * sin(time * 7.3 + uv.y * 31.0); c = mix(c, texture2D(tex2, uv).rgb * mix(1.0, fl, r), r); }
+  if (grassP > 0.0) { float inG = smoothstep(grid.x, grid.x + 0.04, uv.x) * smoothstep(grid.z, grid.z - 0.04, uv.x) * smoothstep(grid.y, grid.y + 0.04, uv.y) * smoothstep(grid.w, grid.w - 0.04, uv.y);
+    float n = texture2D(noiseT, uv * vec2(2.0, 3.0)).r; float n2 = texture2D(noiseT, uv * vec2(9.0, 13.0)).r;
+    float g = smoothstep(n - 0.06, n + 0.06, grassP) * inG; vec3 gc = mix(vec3(0.30, 0.41, 0.19), vec3(0.46, 0.52, 0.26), n2) * (0.7 + 0.6 * dot(c, vec3(0.299,0.587,0.114))); c = mix(c, gc, g * 0.9); }
+  c += heat * vec3(0.20, 0.06, 0.0);
+  float l = dot(c, vec3(0.299, 0.587, 0.114)); c = mix(vec3(l), c, sat) * bright;
+  gl_FragColor = vec4(c, 1.0); }`;
+const PVS = `uniform float time, rise, sizeK, drift; attribute vec3 seed; varying float vA; varying float vS;
+void main(){ float t = fract(seed.x + time * seed.y); vec3 p = position; p.y += t * rise; p.x += sin(t * 6.0 + seed.z * 30.0) * drift * t; p.z += t * 0.05;
+  vec4 mv = modelViewMatrix * vec4(p, 1.0); gl_Position = projectionMatrix * mv; gl_PointSize = sizeK * (0.5 + t * 1.6) / -mv.z; vA = sin(t * 3.14159); vS = seed.z; }`;
+const PFS = `uniform vec3 col; uniform float alpha, time, flick; varying float vA; varying float vS;
+void main(){ float d = length(gl_PointCoord - 0.5); float a = exp(-d * d * 14.0) * vA * alpha; a *= 1.0 - flick + flick * (0.5 + 0.5 * sin(time * 20.0 + vS * 60.0)); gl_FragColor = vec4(col, a); }`;
+const SHOTS = [];
+function plate3(o) {
+  const el = mk('div', { class: 'scene' }, $('scenes')); const push = mk('div', { class: 'push' }, el);
+  const cv = mk('canvas', { width: 1080, height: 1920, class: 'cv' }, push);
+  const ov = mk('div', { class: 'ov' }, push); const chars = mk('div', { class: 'chars' }, push);
+  const R = new T3.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true }); R.setPixelRatio(1); R.setSize(1080, 1920, false);
+  const sc = new T3.Scene(); sc.background = new T3.Color(o.bg || 0x02070D);
+  const cam = new T3.PerspectiveCamera(FOV, ASP, .02, 100); sc.add(cam);
+  const W = PH * 1024 / 1536;
+  const U = { tex: { value: null }, tex2: { value: null }, dep: { value: null }, burn: { value: null }, noiseT: { value: null }, dScale: { value: o.dScale || .32 },
+    prog: { value: -.2 }, grassP: { value: 0 }, grid: { value: new T3.Vector4(0, 0, 1, 1) }, bright: { value: 1 }, sat: { value: 1 }, time: { value: 0 },
+    shim: { value: 0 }, shimRect: { value: new T3.Vector4(0, 0, 1, 1) }, hasBurn: { value: o.burn ? 1 : 0 }, heat: { value: 0 } };
+  if (o.shim) U.shimRect.value.set(o.shim[0] / 1024, 1 - o.shim[3] / 1536, o.shim[2] / 1024, 1 - o.shim[1] / 1536);
+  if (o.grid) U.grid.value.set(o.grid[0] / 1024, 1 - o.grid[3] / 1536, o.grid[2] / 1024, 1 - o.grid[1] / 1536);
+  sc.add(new T3.Mesh(new T3.PlaneGeometry(W, PH, 256, 384), new T3.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS })));
+  const S = { el, push, cv, ov, chars, R, sc, cam, U, W, o, cam0: Track({ x: 512, y: 768, z: 1, yaw: 0, pitch: 0 }), uT: {}, parts: [], glows: [], labels: [], hooks: [] };
+  READY.push(tex(o.tex).then(t => U.tex.value = t), tex(o.dep, { nearest: 1 }).then(t => U.dep.value = t), cpuImg(o.dep).then(I => S.depI = I),
+    tex('noise.png', { repeat: 1 }).then(t => U.noiseT.value = t), o.tex2 ? tex(o.tex2).then(t => U.tex2.value = t) : 0, o.burn ? tex(o.burn).then(t => U.burn.value = t) : 0);
+  return S;
+}
+const world = (S, ix, iy, lift) => { const u = ix / 1024, v = 1 - iy / 1536; const d = S.depI ? sampleCPU(S.depI, u, v) : .5;
+  return new T3.Vector3((u - .5) * S.W, (v - .5) * PH, (d - .5) * S.U.dScale.value + (lift || 0)); };
+const toScreen = (cam, p) => { const v = p.clone().project(cam); return { x: (v.x + 1) / 2 * 1080, y: (1 - v.y) / 2 * 1920, z: v.z }; };
+function setCam(S, s) { const Z = Math.max(1, s.z); const hv = PH / 2 / Z / 1.1; const dist = hv / Math.tan(FOV * Math.PI / 360); const hw = hv * ASP;
+  let tx = (s.x / 1024 - .5) * S.W, ty = (.5 - s.y / 1536) * PH; const mx = Math.max(0, S.W / 2 - hw), my = Math.max(0, PH / 2 - hv);
+  tx = clamp(tx, -mx, mx); ty = clamp(ty, -my, my);
+  const yw = s.yaw * Math.PI / 180, pt = s.pitch * Math.PI / 180;
+  S.cam.position.set(tx + Math.sin(yw) * Math.cos(pt) * dist, ty + Math.sin(pt) * dist, Math.cos(yw) * Math.cos(pt) * dist); S.cam.lookAt(tx, ty, 0); S.cam.updateMatrixWorld(); }
+function particles(S, o) { // o: rect [x0,y0,x1,y1] image px, n, rise, size, col, alpha, add, flick, drift, speed, lift
+  const n = o.n, pos = new Float32Array(n * 3), sd = new Float32Array(n * 3);
+  for (let i = 0; i < n; i++) { const fx = ((i * 0.6180339) % 1), fy = ((i * 0.7548776) % 1); const ix = o.rect[0] + fx * (o.rect[2] - o.rect[0]), iy = o.rect[1] + fy * (o.rect[3] - o.rect[1]);
+    const u = ix / 1024, v = 1 - iy / 1536; pos.set([(u - .5) * S.W, (v - .5) * PH, .5 * S.U.dScale.value * .0 + (o.lift || .18)], i * 3);
+    sd.set([(i * 0.3819) % 1, (o.speed || .25) * (.7 + ((i * 0.917) % 1) * .6), (i * 0.1234) % 1], i * 3); }
+  const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(pos, 3)); g.setAttribute('seed', new T3.BufferAttribute(sd, 3));
+  const U = { time: { value: 0 }, rise: { value: o.rise || .5 }, sizeK: { value: o.size || 300 }, drift: { value: o.drift || .05 }, col: { value: new T3.Color(o.col || 0xEEF2F6) }, alpha: { value: 0 }, flick: { value: o.flick || 0 } };
+  const m = new T3.ShaderMaterial({ uniforms: U, vertexShader: PVS, fragmentShader: PFS, transparent: true, depthWrite: false, blending: o.add ? T3.AdditiveBlending : T3.NormalBlending });
+  const P = new T3.Points(g, m); P.frustumCulled = false; S.sc.add(P); const rec = { P, U, a: Track(0) }; S.parts.push(rec); return rec; }
+function glow(S, ix, iy, size, col, lift) { const sp = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: col, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 }));
+  S.sc.add(sp); const rec = { sp, ix, iy, size, lift: lift || .08, a: Track(0), seed: S.glows.length * 1.7 }; S.glows.push(rec); return rec; }
+function label(S, txt, ix, iy, fs, col) { const e = mk('div', { class: 'plbl' }, S.ov); e.textContent = tr(txt); Object.assign(e.style, { fontSize: fs + 'px', webkitTextStrokeWidth: (fs * .18) + 'px', color: col || '' });
+  const rec = { e, ix, iy, a: Track(0) }; S.labels.push(rec); return rec; }
+function lights(S) { S.sc.add(new T3.HemisphereLight(0xffffff, 0x2a3240, 1.0)); const d = new T3.DirectionalLight(0xffffff, 1.1); d.position.set(-2, 3, 4); S.sc.add(d); }
+const viewPos = (sx, sy, dist) => { const hv = dist * Math.tan(FOV * Math.PI / 360); return new T3.Vector3((sx / 540 - 1) * hv * ASP, (1 - sy / 960) * hv, -dist); };
+
+function renderPlate(S, t) {
+  setCam(S, valAt(S.cam0, t)); S.U.time.value = t;
+  for (const k in S.uT) S.U[k].value = valAt(S.uT[k], t);
+  for (const p of S.parts) { p.U.time.value = t; p.U.alpha.value = valAt(p.a, t); }
+  for (const g of S.glows) { const a = valAt(g.a, t); g.sp.material.opacity = a * (.8 + .2 * Math.sin(t * 11 + g.seed) * Math.sin(t * 6.3 + g.seed * 2));
+    g.sp.position.copy(world(S, g.ix, g.iy, g.lift)); const s = g.size * (1 + .06 * Math.sin(t * 9 + g.seed)); g.sp.scale.set(s, s, 1); }
+  for (const h of S.hooks) h(t);
+  S.R.render(S.sc, S.cam);
+  for (const L of S.labels) { const a = valAt(L.a, t); L.e.style.opacity = a; if (a <= 0) continue; const q = toScreen(S.cam, world(S, L.ix, L.iy, .03));
+    L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2).toFixed(1)}px) scale(${(.6 + .4 * Math.min(1, a * 1.5)).toFixed(3)})`; }
+}
+
+/* ---------- 3D map: globe + terrain flyover ---------- */
+const M3 = D.map3; const [L0, L1, B0, B1] = M3.bbox; const LC = (L0 + L1) / 2, BC = (B0 + B1) / 2, KX = Math.cos(BC * Math.PI / 180);
+function map3() {
+  const el = mk('div', { class: 'scene' }, $('scenes')); const push = mk('div', { class: 'push' }, el);
+  const cvG = mk('canvas', { width: 1080, height: 1920, class: 'cv' }, push); const cvT = mk('canvas', { width: 1080, height: 1920, class: 'cv' }, push);
+  const ov = mk('div', { class: 'ov' }, push);
+  const RG = new T3.WebGLRenderer({ canvas: cvG, antialias: true, preserveDrawingBuffer: true }); RG.setPixelRatio(1); RG.setSize(1080, 1920, false);
+  const RT = new T3.WebGLRenderer({ canvas: cvT, antialias: true, preserveDrawingBuffer: true }); RT.setPixelRatio(1); RT.setSize(1080, 1920, false);
+  // globe
+  const sg = new T3.Scene(); sg.background = new T3.Color(0x01040A); const cg = new T3.PerspectiveCamera(30, ASP, .01, 100);
+  const globe = new T3.Mesh(new T3.SphereGeometry(1, 160, 120), new T3.MeshBasicMaterial({ color: 0xffffff })); sg.add(globe);
+  const atm = new T3.Mesh(new T3.SphereGeometry(1.06, 96, 72), new T3.ShaderMaterial({ side: T3.BackSide, transparent: true, blending: T3.AdditiveBlending, depthWrite: false,
+    vertexShader: `varying vec3 vN; varying vec3 vP; void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vP; void main(){ float f = pow(clamp(1.0 - abs(dot(normalize(-vP), vN)), 0.0, 1.0), 2.2); gl_FragColor = vec4(0.35, 0.65, 1.0, f * 0.9); }` })); sg.add(atm);
+  { const n = 1400, p = new Float32Array(n * 3); for (let i = 0; i < n; i++) { const a = (i * 2.399963) % (Math.PI * 2), z = 1 - 2 * ((i + .5) / n), r = Math.sqrt(1 - z * z); p.set([Math.cos(a) * r * 30, z * 30, Math.sin(a) * r * 30], i * 3); }
+    const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(p, 3)); sg.add(new T3.Points(g, new T3.PointsMaterial({ color: 0xffffff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: .7 }))); }
+  const ll = (lon, lat, r) => { const ph = (lon + 180) * Math.PI / 180, th = (90 - lat) * Math.PI / 180; return new T3.Vector3(-Math.cos(ph) * Math.sin(th) * r, Math.cos(th) * r, Math.sin(ph) * Math.sin(th) * r); };
+  // terrain
+  const st = new T3.Scene(); st.background = new T3.Color(0x0A1424); st.fog = new T3.Fog(0x0A1424, 9, 20);
+  const ct = new T3.PerspectiveCamera(32, ASP, .005, 60); ct.up.set(0, 0, 1);
+  const Wt = (L1 - L0) * KX, Ht = (B1 - B0), EX = .0105;
+  const TU = { dem: { value: null }, ne: { value: null }, cls: { value: null }, mask: { value: null }, hs: { value: null }, hl: { value: 0 }, exag: { value: 0 },
+    crect: { value: new T3.Vector4((M3.pa_close_bbox[0] - L0) / (L1 - L0), (M3.pa_close_bbox[2] - B0) / (B1 - B0), (M3.pa_close_bbox[1] - L0) / (L1 - L0), (M3.pa_close_bbox[3] - B0) / (B1 - B0)) } };
+  const terr = new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 640, 320), new T3.ShaderMaterial({ uniforms: TU,
+    vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform sampler2D ne, cls, mask, hs; uniform float hl; uniform vec4 crect; varying vec2 vUv;
+      void main(){ vec3 c = texture2D(ne, vUv).rgb;
+        vec2 q = (vUv - crect.xy) / (crect.zw - crect.xy); float f = smoothstep(0.0, 0.08, q.x) * smoothstep(1.0, 0.92, q.x) * smoothstep(0.0, 0.08, q.y) * smoothstep(1.0, 0.92, q.y);
+        if (f > 0.0) c = mix(c, texture2D(cls, clamp(q, 0.0, 1.0)).rgb, f);
+        float h = texture2D(hs, vUv).r; c *= 0.42 + 0.78 * h; float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, 0.78);
+        float m = texture2D(mask, vUv).r; c = mix(c, c * vec3(1.15, 1.02, 0.7) + vec3(0.07, 0.045, 0.0), m * hl * 0.6); c *= mix(1.0, 0.62, hl * (1.0 - m));
+        gl_FragColor = vec4(c, 1.0); }` }));
+  st.add(terr);
+  const demI = { I: null }; const hAt = (lon, lat) => demI.I ? sampleCPU(demI.I, (lon - L0) / (L1 - L0), (lat - B0) / (B1 - B0)) * EX * 1.0 : 0;
+  const wpos = (lon, lat, up) => new T3.Vector3((lon - LC) * KX, lat - BC, hAt(lon, lat) * TU.exag.value / EX + (up || 0));
+  // wall ribbon along the PA outline (built after DEM loads)
+  const WU = { rise: { value: 0 }, wh: { value: .28 } };
+  const wallMat = new T3.ShaderMaterial({ uniforms: WU, transparent: true, depthWrite: false, side: T3.DoubleSide, blending: T3.AdditiveBlending,
+    vertexShader: `uniform float rise, wh; attribute float k; varying float vK; void main(){ vK = k; vec3 p = position; p.z += k * wh * rise; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform float rise; varying float vK; void main(){ float a = (1.0 - vK) * (1.0 - vK) * rise; gl_FragColor = vec4(1.0, 0.68, 0.18, a * 0.95); }` });
+  const pin = new T3.Group(); st.add(pin);
+  const beam = new T3.Mesh(new T3.CylinderGeometry(.008, .008, .24, 12, 1, true), new T3.MeshBasicMaterial({ color: 0xFF7A1A, transparent: true, opacity: .0, blending: T3.AdditiveBlending, depthWrite: false }));
+  beam.rotation.x = Math.PI / 2; beam.position.z = .12; pin.add(beam);
+  const head = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0xFF5A1A, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 })); head.position.z = .24; head.scale.set(.16, .16, 1); pin.add(head);
+  const ring = new T3.Mesh(new T3.RingGeometry(.02, .03, 48), new T3.MeshBasicMaterial({ color: 0xFF7A1A, transparent: true, opacity: 0, blending: T3.AdditiveBlending, depthWrite: false, side: T3.DoubleSide })); ring.position.z = .004; pin.add(ring);
+  const S = { el, push, ov, cvG, cvT, RG, RT, sg, cg, st, ct, globe, TU, WU, pin, beam, head, ring, labels: [], gk: Track({ lon: -92, lat: 34, dist: 3.4 }), tk: Track({ lon: -77.6, lat: 40.9, dist: 5, el: 74, yaw: 0 }),
+    x: Track(0), hl: Track(0), rise: Track(0), pinA: Track(0), wpos, ll, lab: null };
+  READY.push(tex('globe.jpg').then(t => { globe.material.map = t; globe.material.needsUpdate = true; }), tex('ne.jpg').then(t => TU.ne.value = t), tex('pa_close.jpg').then(t => TU.cls.value = t),
+    tex('pa_mask.png').then(t => TU.mask.value = t), tex('hillshade.png').then(t => TU.hs.value = t), tex('dem8.png', { nearest: 1 }).then(t => TU.dem.value = t),
+    cpuImg('dem8.png').then(I => { demI.I = I; TU.exag.value = EX * 26;
+      const pts = M3.pa.map(([lo, la]) => wpos(lo, la, .002)); const pos = [], kk = [];
+      for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; pos.push(a.x, a.y, a.z, b.x, b.y, b.z, b.x, b.y, b.z, a.x, a.y, a.z, b.x, b.y, b.z, a.x, a.y, a.z); kk.push(0, 0, 1, 0, 1, 1); }
+      const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.Float32BufferAttribute(pos, 3)); g.setAttribute('k', new T3.Float32BufferAttribute(kk, 1)); st.add(new T3.Mesh(g, wallMat));
+      const cp = wpos(M3.centralia[0], M3.centralia[1]); pin.position.copy(cp); }));
+  return S;
+}
+function renderMap(S, t) {
+  const x = valAt(S.x, t); S.cvG.style.opacity = 1 - x; S.cvT.style.opacity = x;
+  if (x < 1) { const g = valAt(S.gk, t); const p = S.ll(g.lon, g.lat, g.dist); S.cg.position.copy(p); S.cg.lookAt(0, 0, 0); S.globe.rotation.y = 0; S.RG.render(S.sg, S.cg); }
+  if (x > 0) { const k = valAt(S.tk, t); S.TU.hl.value = valAt(S.hl, t); S.WU.rise.value = valAt(S.rise, t);
+    const tg = new T3.Vector3((k.lon - LC) * KX, k.lat - BC, 0); const e = k.el * Math.PI / 180, y = k.yaw * Math.PI / 180;
+    S.ct.position.set(tg.x + Math.sin(y) * Math.cos(e) * k.dist, tg.y - Math.cos(y) * Math.cos(e) * k.dist, Math.sin(e) * k.dist); S.ct.lookAt(tg); S.ct.updateMatrixWorld();
+    const pa = valAt(S.pinA, t); S.beam.material.opacity = pa * .8; S.head.material.opacity = pa; const rs = 1 + ((t * .9) % 1) * 5; S.ring.scale.set(rs, rs, 1); S.ring.material.opacity = pa * (1 - (t * .9) % 1);
+    S.RT.render(S.st, S.ct);
+    for (const L of S.labels) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const q = toScreen(S.ct, S.pin.position.clone().add(new T3.Vector3(0, 0, .34)));
+      L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight).toFixed(1)}px)`; } }
+}
+
+/* ---------- build scenes ---------- */
+const R1 = plate3({ tex: 'plate_road.jpg', dep: 'depth_road.png', dScale: .34, shim: [80, 560, 960, 1300] });
+const MP = map3();
+const PIT = plate3({ tex: 'plate_pit.jpg', dep: 'depth_pit.png', dScale: .36, shim: [300, 560, 1000, 860] });
+const XS = plate3({ tex: 'dio_cold.jpg', tex2: 'dio_hot.jpg', burn: 'dio_burn.png', dep: 'depth_dio.png', dScale: .22, bg: 0x0E1C3C });
+const TW1 = plate3({ tex: 'plate_town.jpg', dep: 'depth_town.png', dScale: .22 });
+const HO = plate3({ tex: 'plate_hole.jpg', dep: 'depth_hole.png', dScale: .32 });
+const TW2 = plate3({ tex: 'plate_town.jpg', dep: 'depth_town.png', dScale: .22, grid: PT.grid });
+const R2 = plate3({ tex: 'plate_road.jpg', dep: 'depth_road.png', dScale: .34, shim: [80, 560, 960, 1300] });
+const PLATES = [R1, PIT, XS, TW1, HO, TW2, R2];
+// particles + glows
+for (const S of [R1, R2]) { S.steam = particles(S, { rect: [120, 640, 920, 1000], n: 36, rise: .75, size: 900, col: 0xE4E9EE, speed: .1, drift: .1 });
+  S.glow = [glow(S, PT.road[0] - 160, PT.road[1] + 40, .5, 0x9A3A08), glow(S, PT.road[0] + 200, PT.road[1] + 120, .42, 0x9A3A08)]; S.uT.shim = Track(1); }
+PIT.smoke = particles(PIT, { rect: [420, 640, 980, 760], n: 40, rise: .9, size: 900, col: 0x9A948C, speed: .09, drift: .14 });
+PIT.emb = particles(PIT, { rect: [480, 660, 960, 760], n: 90, rise: .55, size: 60, col: 0xFF8A2A, speed: .35, add: 1, flick: .6, drift: .05 });
+PIT.glow = glow(PIT, PT.pit[0], PT.pit[1], .9, 0xFF6A10); PIT.uT.shim = Track(1);
+XS.emb = particles(XS, { rect: [80, 520, 960, 1100], n: 120, rise: .25, size: 50, col: 0xFF8A2A, speed: .3, add: 1, flick: .7, drift: .03, lift: .14 });
+XS.smoke = particles(XS, { rect: [640, 300, 900, 420], n: 40, rise: .6, size: 380, col: 0x9C9690, speed: .1, drift: .1, lift: .12 });
+XS.uT.prog = Track(-.2);
+HO.steam = particles(HO, { rect: [480, 740, 545, 790], n: 40, rise: .9, size: 620, col: 0xE4E9EE, speed: .12, drift: .07 });
+HO.glow = glow(HO, PT.hole[0], PT.hole[1], .25, 0xFF5A10);
+TW1.uT.heat = Track(0); TW2.uT.grassP = Track(0); TW2.uT.bright = Track(1); TW2.uT.sat = Track(1);
+// map label
+MP.labels.push({ e: (() => { const e = mk('div', { class: 'plbl' }, MP.ov); e.textContent = tr('CENTRALIA'); Object.assign(e.style, { fontSize: '64px', webkitTextStrokeWidth: '12px' }); return e; })(), a: Track(0) });
+// cross-section label, hole depth line
+XS.tun = label(XS, 'OLD MINE TUNNELS', 430, 560, 54);
+HO.lbl = label(HO, '45 m', PT.hole[0] + 190, PT.hole[1] + 230, 92, '#FFC23A');
+{ const svg = mk('svg', { width: 1080, height: 1920, style: 'position:absolute;left:0;top:0;overflow:visible' }, HO.ov, true);
+  const ln = mk('path', { stroke: '#FFC23A', 'stroke-width': 11, 'stroke-dasharray': '28 18', fill: 'none', 'stroke-linecap': 'round' }, svg, true);
+  const hd = mk('path', { stroke: '#FFC23A', 'stroke-width': 11, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, svg, true);
+  HO.dl = Track(0); HO.hooks.push(t => { const a = valAt(HO.dl, t); svg.style.opacity = a > 0 ? 1 : 0; if (a <= 0) return;
+    const p0 = toScreen(HO.cam, world(HO, PT.hole[0], PT.hole[1] + 20)), p1 = toScreen(HO.cam, world(HO, PT.hole[0], PT.hole[1] + 20 + 640 * a));
+    ln.setAttribute('d', `M${p0.x.toFixed(1)},${p0.y.toFixed(1)} L${p1.x.toFixed(1)},${p1.y.toFixed(1)}`);
+    hd.setAttribute('d', `M${(p1.x - 34).toFixed(1)},${(p1.y - 40).toFixed(1)} L${p1.x.toFixed(1)},${p1.y.toFixed(1)} L${(p1.x + 34).toFixed(1)},${(p1.y - 40).toFixed(1)}`); }); }
+// 3D thermometer (TW1) and 3D cost bars (TW2), attached to the camera so they keep their screen spot
+lights(TW1); lights(TW2);
+{ const g = new T3.Group(); TW1.cam.add(g); const d = 1.3; g.position.copy(viewPos(870, 760, d)); g.rotation.y = -.35; g.rotation.z = .05; g.userData.s = .36;
+  const glass = new T3.Mesh(new T3.CylinderGeometry(.075, .075, 1.3, 40), new T3.MeshStandardMaterial({ color: 0xF4F8FB, roughness: .15, metalness: .05, transparent: true, opacity: .3, depthWrite: false }));
+  const cap = new T3.Mesh(new T3.SphereGeometry(.075, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), glass.material); cap.position.y = .65;
+  const bulb = new T3.Mesh(new T3.SphereGeometry(.16, 40, 24), new T3.MeshStandardMaterial({ color: 0xFF3B30, emissive: 0x8A1408, roughness: .3 })); bulb.position.y = -.72;
+  const mg = new T3.CylinderGeometry(.045, .045, 1, 24); mg.translate(0, .5, 0); const merc = new T3.Mesh(mg, bulb.material); merc.position.y = -.68;
+  const ticks = new T3.Group(); for (let i = 0; i < 9; i++) { const tk = new T3.Mesh(new T3.BoxGeometry(i % 2 ? .05 : .09, .012, .01), new T3.MeshStandardMaterial({ color: 0x03101A })); tk.position.set(.1, -.5 + i * .13, .02); ticks.add(tk); }
+  g.add(glass, cap, bulb, merc, ticks); g.visible = false; TW1.thermo = { g, merc, a: Track(0), lvl: Track(.05), spin: Track(-.35) };
+  TW1.thermoLbl = (() => { const e = mk('div', { class: 'plbl' }, TW1.ov); e.textContent = '78°C'; Object.assign(e.style, { fontSize: '96px', webkitTextStrokeWidth: '17px' }); return e; })();
+  TW1.hooks.push(t => { const a = valAt(TW1.thermo.a, t); g.visible = a > 0; const l = valAt(TW1.thermo.lvl, t); merc.scale.y = Math.max(.02, l * 1.25); g.scale.setScalar(.15 * (.6 + .4 * Math.min(1, a))); g.rotation.y = valAt(TW1.thermo.spin, t) + Math.sin(t * .8) * .06;
+    const la = valAt(TW1.lblA, t); TW1.thermoLbl.style.opacity = la; if (la > 0) { const top = new T3.Vector3(0, .95, 0); g.localToWorld(top); const q = toScreen(TW1.cam, top);
+      TW1.thermoLbl.style.transform = `translate(${(q.x - TW1.thermoLbl.offsetWidth / 2).toFixed(1)}px,${(q.y - TW1.thermoLbl.offsetHeight).toFixed(1)}px) scale(${(.6 + .4 * la).toFixed(3)})`; } });
+  TW1.lblA = Track(0); }
+{ const g = new T3.Group(); TW2.cam.add(g); const d = 1.4; const base = viewPos(540, 1170, d); g.position.copy(base);
+  const unit = viewPos(540, 530, d).y - base.y; // world height for 640 px at this distance
+  const bx = (sx) => viewPos(sx, 1170, d).x - base.x; const wB = viewPos(760, 1170, d).x - viewPos(540, 1170, d).x;
+  const mkBar = (col, emi, sx) => { const geo = new T3.BoxGeometry(wB, 1, wB * .8); geo.translate(0, .5, 0); const m = new T3.Mesh(geo, new T3.MeshStandardMaterial({ color: col, emissive: emi, roughness: .35, metalness: .15 })); m.position.x = bx(sx); m.scale.y = .001; g.add(m); return m; };
+  const A = mkBar(0xFF4D4D, 0x3A0A0A, 340), B = mkBar(0xFFC23A, 0x3A2A06, 740); g.visible = false;
+  const lab = (txt, col) => { const e = mk('div', { class: 'plbl' }, TW2.ov); e.textContent = txt; Object.assign(e.style, { fontSize: '66px', webkitTextStrokeWidth: '13px', color: col }); return e; };
+  const la = lab('$663,000,000', '#FF6A6A'), lb = lab('$42,000,000', '#FFC23A');
+  const ea = mk('div', { class: 'emo' }, TW2.ov), eb = mk('div', { class: 'emo' }, TW2.ov); ea.textContent = '🔥'; eb.textContent = '🚚'; ea.style.fontSize = eb.style.fontSize = '130px';
+  TW2.bars = { g, A, B, a: Track(0), hA: Track(0), hB: Track(0), la: Track(0), lb: Track(0), ea: Track(0), eb: Track(0), spin: Track(.42) };
+  TW2.hooks.push(t => { const R = TW2.bars, a = valAt(R.a, t); g.visible = a > 0; if (!g.visible) { for (const e of [la, lb, ea, eb]) e.style.opacity = 0; return; }
+    g.rotation.y = valAt(R.spin, t) + Math.sin(t * .7) * .04; A.scale.y = Math.max(.001, valAt(R.hA, t) * unit); B.scale.y = Math.max(.001, valAt(R.hB, t) * unit);
+    B.visible = valAt(R.hB, t) > .001; const at = (m, e, op, dy, center) => { e.style.opacity = op; if (op <= 0) return; const p = new T3.Vector3(m.position.x, m.scale.y + dy, 0); g.localToWorld(p); const q = toScreen(TW2.cam, p);
+      e.style.transform = `translate(${(q.x - e.offsetWidth / 2).toFixed(1)}px,${(q.y - (center ? e.offsetHeight / 2 : e.offsetHeight)).toFixed(1)}px)`; };
+    at(A, ea, valAt(R.ea, t), .015, 0); at(B, eb, valAt(R.eb, t), .015, 0);
+    at(A, la, valAt(R.la, t), .13, 0); at(B, lb, valAt(R.lb, t), .13, 0); }); }
+
+/* ---------- characters (screen space) ---------- */
+const H = 760, FEET = 1215, POS = { L: 300, R: 790, M: 545 };
+function addChar(S, name, side) { const w = Math.min(560, H * D.ar[name]); const x = POS[side];
+  const sh = mk('div', { class: 'shadow' }, S.chars); Object.assign(sh.style, { left: (x - w * .42) + 'px', top: (FEET - 30) + 'px', width: (w * .84) + 'px' });
+  const c = mk('div', { class: 'char' }, S.chars); Object.assign(c.style, { left: (x - w / 2) + 'px', top: (FEET - H) + 'px', width: w + 'px', height: H + 'px' });
+  mk('img', { src: `assets/${name}.png`, alt: '' }, c); return { c, sh, x }; }
+XS.cFire = addChar(XS, 'c_fire', 'L'); TW1.cTown = addChar(TW1, 'c_centralia', 'L'); R2.cFire = addChar(R2, 'c_fire', 'M');
+const emo = (ch, x, y, fs) => { const e = mk('div', { class: 'emo' }, $('fx')); e.textContent = ch; Object.assign(e.style, { left: x + 'px', top: y + 'px', fontSize: (fs || 200) + 'px' }); return e; };
+const ePick = emo('⛏️', 140, 420, 190), eDrop = emo('💧', 740, 420, 190), eCash = emo('💸', 450, 520, 200), ePump = emo('⛽', 560, 640, 170), eCam = emo('📸', 440, 470, 200);
+
+/* ---------- titles + captions ---------- */
+const TT = {};
+for (const t of D.titles) { const g = mk('div', { class: 'ttl', id: t.id }, $('titles')); const lines = [];
+  t.lines.forEach((ln0, i) => { const small = ln0.startsWith('~'); const ln = small ? ln0.slice(1) : ln0; const size = small ? 58 : 132;
+    const d = mk('div', { class: 'tl ' + (small ? 'small' : 'big') }, g); const base = 300 + (i === 0 ? 0 : (small ? 74 : 124));
+    Object.assign(d.style, { fontSize: size + 'px', top: (base - size * .8) + 'px', webkitTextStrokeWidth: (size * .14) + 'px' }); markup(ln, d); lines.push(d); });
+  TT[t.id] = { g, t, lines }; }
+const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps'));
+  const lines = c.txt.split('|').map(ln => { const d = mk('div', { class: 'cl' }, g); markup(ln, d); return d; });
+  return { c, g, lines, words: [...g.querySelectorAll('span')] }; });
+$('folTxt').textContent = D.end.button; $('folTxt2').textContent = '✓ ' + D.end.following;
+function layout() {
+  for (const K of CAPS) { let fs = 92; K.g.style.opacity = 1;
+    for (const d of K.lines) { d.style.fontSize = '92px'; const w = d.scrollWidth; if (w > 740) fs = Math.min(fs, 92 * 740 / w); }
+    K.g.style.opacity = 0; const n = K.lines.length;
+    K.lines.forEach((d, i) => Object.assign(d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .17).toFixed(1) + 'px', top: (1385 + (i - (n - 1) / 2) * fs - fs * .5).toFixed(1) + 'px' })); }
+  for (const id in TT) { const { g, lines } = TT[id]; g.style.opacity = 1;
+    for (const d of lines) { const w = d.scrollWidth, fs = parseFloat(d.style.fontSize); if (w > 960) d.style.fontSize = (fs * 960 / w).toFixed(1) + 'px'; }
+    g.style.opacity = 0; }
+}
+
+/* ---------- timeline ---------- */
+function build() {
+  layout();
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false };
+  const cam = (S, to, at, dur, e) => key(S.cam0, to, at, dur, e || 'power2.inOut');
+  const camSet = (S, s) => { S.cam0.base = S.cam0.last = Object.assign({ x: 512, y: 768, z: 1, yaw: 0, pitch: 0 }, s); };
+  const shots = [[R1, 0, C(1, 0, -.15)], [MP, C(1, 0, -.15), C(2, 0, -.15)], [PIT, C(2, 0, -.15), C(3, 0, -.15)], [XS, C(3, 0, -.15), C(7, 0, -.15)],
+    [TW1, C(7, 0, -.15), C(9, 0, -.15)], [HO, C(9, 0, -.15), C(11, 0, -.15)], [TW2, C(11, 0, -.15), C(15, 0, -.15)], [R2, C(15, 0, -.15), D.dur + 1]];
+  shots.forEach(([S, a, b], i) => { S.win = [a, b];
+    if (i === 0) tl.set(S.el, { opacity: 1, x: 0 }, 0);
+    else tl.fromTo(S.el, { opacity: 1, x: 1080 }, { opacity: 1, x: 0, duration: .35, ease: 'power3.out', ...IR }, a);
+    if (i < shots.length - 1) { tl.to(S.el, { x: -1080, duration: .35, ease: 'power3.in' }, b); tl.set(S.el, { opacity: 0 }, b + .36); } });
+  const talk = (ch, a, b) => { const n = Math.max(2, Math.floor((b - a) / .32));
+    tl.fromTo(ch.c, { scaleY: 1, rotation: 0, transformOrigin: '50% 100%' }, { keyframes: Array.from({ length: n }, (_, i) => [{ scaleY: 1.05, rotation: i % 2 ? 2.2 : -2.2, duration: .16 }, { scaleY: 1, rotation: 0, duration: .16 }]).flat(), ...IR }, a); };
+  const enter = (ch, at, from) => { tl.fromTo(ch.c, from === 'L' ? { opacity: 0, x: -520 } : from === 'R' ? { opacity: 0, x: 520 } : { opacity: 0, y: 420 }, { opacity: 1, x: 0, y: 0, duration: .5, ease: 'back.out(1.7)', ...IR }, at);
+    tl.to(ch.sh, { opacity: 1, duration: .3 }, at + .1); };
+  const leave = (ch, at, to) => { tl.to(ch.c, to === 'L' ? { x: -600, opacity: 0, duration: .35, ease: 'power3.in' } : to === 'R' ? { x: 600, opacity: 0, duration: .35, ease: 'power3.in' } : { y: 500, opacity: 0, duration: .35, ease: 'power3.in' }, at);
+    tl.to(ch.sh, { opacity: 0, duration: .2 }, at); };
+  const zoomTo = (S, ch, a, b) => { tl.to(S.push, { scale: 1.18, x: (540 - ch.x) * .45, y: -40, duration: .28, ease: 'power3.out', transformOrigin: '540px 900px' }, a - .18);
+    tl.to(S.push, { scale: 1, x: 0, y: 0, duration: .35, ease: 'power2.inOut' }, b + .1); };
+  const popD = (el, at) => tl.fromTo(el, { opacity: 0, scale: .3, y: 80 }, { opacity: 1, scale: 1, y: 0, duration: .4, ease: 'back.out(2.2)', ...IR }, at);
+  const fade = (el, at, d) => tl.to(el, { opacity: 0, duration: d || .3 }, at);
+  const shake = at => tl.fromTo($('shake'), { x: 0, y: 0 }, { keyframes: [{ x: -20, y: 12, duration: .05 }, { x: 16, y: -10, duration: .05 }, { x: -10, y: 7, duration: .06 }, { x: 6, y: -4, duration: .06 }, { x: 0, y: 0, duration: .08 }], ...IR }, at);
+  const on = (T, at, d, v) => key(T, v === undefined ? 1 : v, at, d || .4, 'power1.inOut');
+
+  // ===== R1: hook =====
+  camSet(R1, { x: 512, y: 830, z: 1.95, yaw: -5, pitch: 2 });
+  cam(R1, { y: 700, z: 1.0, yaw: 1, pitch: 0 }, .1, C(0, 2) - .1, 'sine.inOut');
+  cam(R1, { y: 740, z: 1.3, yaw: 5, pitch: -2 }, C(0, 2), C(1, 0) - C(0, 2), 'power1.inOut');
+  on(R1.steam.a, 0, .01, .45); R1.glow.forEach((g, k) => on(g.a, .1 + k * .2, .5, .8));
+  shake(C(0, 1, .1)); tl.to($('heat'), { keyframes: [{ opacity: .55, duration: .3 }, { opacity: .15, duration: .8 }] }, C(0, 1, .1)); tl.to($('heat'), { opacity: 0, duration: .3 }, C(1, 0, -.2));
+
+  // ===== MP: globe -> Pennsylvania terrain =====
+  key(MP.gk, { lon: -92, lat: 34, dist: 3.4 }, C(1, 0, -.15), .01);
+  key(MP.gk, { lon: -77.4, lat: 40.9, dist: 1.55 }, C(1, 0, -.1), C(1, 1, .1) - C(1, 0, -.1), 'power2.inOut');
+  key(MP.x, 1, C(1, 1, -.2), .45, 'power1.inOut');
+  key(MP.tk, { lon: -77.6, lat: 40.95, dist: 9.0, el: 78, yaw: 0 }, C(1, 1, -.2), .01);
+  key(MP.tk, { lon: -77.4, lat: 40.75, dist: 7.4, el: 64, yaw: 6 }, C(1, 1, -.15), 1.3, 'power2.out');
+  key(MP.tk, { lon: -76.34, lat: 40.8, dist: 3.0, el: 48, yaw: 20 }, C(1, 1, 1.25), C(2, 0) - C(1, 1, 1.25), 'power2.inOut');
+  key(MP.hl, 1, C(1, 1, .1), .6); key(MP.rise, 1, C(1, 1, .2), .9, 'power2.out'); key(MP.pinA, 1, C(1, 1, .9), .4);
+  key(MP.labels[0].a, 1, C(1, 1, 1.0), .3);
+
+  // ===== PIT: trash fire =====
+  camSet(PIT, { x: 630, y: 520, z: 1.0, yaw: -6, pitch: 3 });
+  cam(PIT, { y: 700, z: 1.5, yaw: 5, pitch: -2 }, C(2, 0, -.15), C(3, 0) - C(2, 0, -.15), 'sine.inOut');
+  on(PIT.smoke.a, C(2, 0, -.15), .3, .5); on(PIT.emb.a, C(2, 0, -.15), .3, 1); on(PIT.glow.a, C(2, 0, -.1), .4, .9);
+
+  // ===== XS: 3D diorama, fire spreads =====
+  camSet(XS, { x: 780, y: 470, z: 1.9, yaw: 8, pitch: 5 });
+  cam(XS, { x: 760, y: 500, z: 2.05, yaw: 5 }, C(3, 0, -.15), C(3, 0, .6) - C(3, 0, -.15), 'sine.inOut');
+  cam(XS, { x: 560, y: 760, z: 1.18, yaw: -4, pitch: 2 }, C(3, 0, .6), .9, 'power3.inOut');
+  cam(XS, { x: 560, y: 780, z: 1.25, yaw: -1 }, C(3, 0, 1.5), C(5, 0) - C(3, 0, 1.5), 'sine.inOut');
+  cam(XS, { x: 512, y: 800, z: 1.06, yaw: 4, pitch: 3 }, C(5, 0), C(6, 0) - C(5, 0), 'sine.inOut');
+  cam(XS, { x: 512, y: 768, z: 1.0, yaw: -5, pitch: 1 }, C(6, 0), C(7, 0) - C(6, 0), 'power2.out');
+  key(XS.uT.prog, .38, C(3, 1, .05), 1.4, 'power1.in'); shake(C(3, 1, .5));
+  key(XS.uT.prog, .86, C(5, 4, -.05), 1.6, 'power1.inOut'); shake(C(5, 4, .15));
+  key(XS.uT.prog, 1.12, C(6, 0, .1), 1.3, 'power1.out');
+  on(XS.emb.a, C(3, 1, .3), .6, .6); key(XS.emb.a, 1, C(5, 4), .6); on(XS.smoke.a, C(3, 1, .2), .5, .7);
+  on(XS.tun.a, C(3, 0, .7), .35); key(XS.tun.a, 0, C(3, 1, .3), .3);
+  enter(XS.cFire, C(4, 0, -.35), 'B'); talk(XS.cFire, LN[4].a, LN[4].b); zoomTo(XS, XS.cFire, LN[4].a, LN[4].b);
+  tl.fromTo(XS.cFire.c, { scaleY: 1, scaleX: 1 }, { keyframes: [{ scaleY: 1.1, scaleX: .95, duration: .12 }, { scaleY: .96, scaleX: 1.03, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }], transformOrigin: '50% 100%', ...IR }, C(4, 1));
+  leave(XS.cFire, C(5, 0, -.15), 'B');
+  popD(ePick, C(5, 0, .05)); tl.to(ePick, { rotation: -30, duration: .15, yoyo: true, repeat: 3, transformOrigin: '70% 80%' }, C(5, 0, .3));
+  popD(eDrop, C(5, 1, .05)); fade([ePick, eDrop], C(5, 2, -.1), .2);
+  tl.fromTo(eCash, { opacity: 0, y: 60, scale: .4 }, { opacity: 1, y: 0, scale: 1, duration: .3, ease: 'back.out(2)', ...IR }, C(5, 3, -.05));
+  tl.to(eCash, { y: -700, x: 180, rotation: 25, opacity: 0, duration: .9, ease: 'power2.in' }, C(5, 3, .35));
+
+  // ===== TW1: 1979 heat, 3D thermometer =====
+  const gx = (PT.grid[0] + PT.grid[2]) / 2, gy = (PT.grid[1] + PT.grid[3]) / 2;
+  camSet(TW1, { x: gx, y: gy, z: 1.05, yaw: -5, pitch: 4 });
+  cam(TW1, { y: gy + 40, z: 1.32, yaw: 5, pitch: -2 }, C(7, 0, -.15), C(9, 0) - C(7, 0, -.15), 'sine.inOut');
+  popD(ePump, C(7, 1, .05)); fade(ePump, C(8, 0, -.4));
+  key(TW1.thermo.a, 1, C(7, 1, .1), .35, 'back.out(2)'); key(TW1.thermo.lvl, .82, C(7, 2, -.2), 1.0, 'power2.in'); key(TW1.thermo.spin, .25, C(7, 1, .1), 1.6, 'power2.out');
+  key(TW1.lblA, 1, C(7, 2, .5), .3); shake(C(7, 2, .6)); key(TW1.uT.heat, 1, C(7, 2, .2), .6);
+  key(TW1.thermo.a, 0, C(8, 0, -.3), .25); key(TW1.lblA, 0, C(8, 0, -.3), .2);
+  enter(TW1.cTown, C(8, 0, -.35), 'L'); talk(TW1.cTown, LN[8].a, LN[8].b); zoomTo(TW1, TW1.cTown, LN[8].a, LN[8].b);
+  tl.to(TW1.cTown.c, { keyframes: [{ y: -18, duration: .12 }, { y: 0, duration: .14 }] }, C(8, 1));
+  key(TW1.uT.heat, 0, C(9, 0, -.3), .3); leave(TW1.cTown, C(9, 0, -.25), 'L');
+
+  // ===== HO: 1981 (serious, no gags) =====
+  camSet(HO, { x: PT.hole[0], y: PT.hole[1] - 160, z: 1.0, yaw: -4, pitch: 2 });
+  cam(HO, { y: PT.hole[1], z: 1.5, yaw: 2, pitch: 4 }, C(9, 0, -.15), C(9, 2) - C(9, 0, -.15), 'sine.inOut');
+  cam(HO, { y: PT.hole[1] + 260, z: 1.18, yaw: 4, pitch: -3 }, C(9, 2), 1.0, 'power2.inOut');
+  cam(HO, { y: PT.hole[1] + 200, z: 1.22, yaw: 1 }, C(9, 2, 1.0), C(11, 0) - C(9, 2, 1.0), 'sine.inOut');
+  on(HO.steam.a, C(9, 0, -.1), .5, .9); on(HO.glow.a, C(9, 1), .5, .7);
+  key(HO.dl, 1, C(9, 2, -.05), .9, 'power2.out'); on(HO.lbl.a, C(9, 2, .6), .35);
+  tl.to($('dim'), { opacity: .28, duration: .5 }, C(9, 2)); key(HO.dl, 0, C(10, 0, .2), .3); key(HO.lbl.a, 0, C(10, 0, .2), .3); tl.to($('dim'), { opacity: 0, duration: .4 }, C(10, 1, -.3));
+  popD(eCam, C(10, 1, -.05));
+  [0, .28, .62].forEach(o => tl.fromTo($('flash'), { opacity: 0 }, { keyframes: [{ opacity: .7, duration: .05 }, { opacity: 0, duration: .22 }], ...IR }, C(10, 1, .1 + o)));
+  fade(eCam, C(11, 0, -.3), .2);
+
+  // ===== TW2: 3D cost bars, payoff, homes go =====
+  camSet(TW2, { x: gx, y: gy, z: 1.0, yaw: 5, pitch: 3 });
+  cam(TW2, { z: 1.1, yaw: -3, pitch: 1 }, C(11, 0, -.15), C(13, 0) - C(11, 0, -.15), 'sine.inOut');
+  key(TW2.uT.bright, .5, C(11, 0, .1), .4); key(TW2.uT.sat, .8, C(11, 0, .1), .4);
+  const B = TW2.bars; key(B.a, 1, C(11, 0, .2), .2); key(B.ea, 1, C(11, 0, .3), .3);
+  key(B.hA, 1, C(11, 2, -.1), 1.1, 'power2.out'); key(B.la, 1, C(11, 2, .7), .3); shake(C(11, 2, .8));
+  key(B.spin, -.3, C(11, 2, -.1), 3.2, 'sine.inOut');
+  key(B.eb, 1, C(12, 0, .1), .3); key(B.hB, 42 / 663, C(12, 1, -.1), .5, 'power2.out'); key(B.lb, 1, C(12, 1, .2), .3);
+  for (const k of ['a', 'ea', 'eb', 'la', 'lb']) key(B[k], 0, C(13, 0, -.1), .3);
+  key(TW2.uT.bright, 1, C(13, 0), .4); key(TW2.uT.sat, 1, C(13, 0), .4);
+  cam(TW2, { z: 1.35, yaw: 2, pitch: 2 }, C(13, 0), C(13, 1) - C(13, 0), 'sine.inOut');
+  key(TW2.uT.bright, .58, C(13, 1, .25), .25); key(TW2.uT.sat, 0, C(13, 1, .25), .25);
+  tl.to($('flash'), { keyframes: [{ opacity: .6, duration: .08 }, { opacity: 0, duration: .5 }] }, C(13, 1, .25)); shake(C(13, 1, .25));
+  cam(TW2, { z: 1.0, yaw: -4, pitch: 4 }, C(14, 0), C(15, 0) - C(14, 0), 'sine.inOut');
+  key(TW2.uT.bright, .95, C(14, 0), .5); key(TW2.uT.sat, .9, C(14, 0), .5);
+  key(TW2.uT.grassP, .97, C(14, 0, .3), C(15, 0, -.3) - C(14, 0, .3), 'power1.inOut');
+
+  // ===== R2: today, twist, punchline =====
+  camSet(R2, { x: 512, y: 710, z: 1.0, yaw: 5, pitch: 1 });
+  cam(R2, { y: 740, z: 1.25, yaw: -2 }, C(15, 0, -.15), C(16, 0) - C(15, 0, -.15), 'sine.inOut');
+  cam(R2, { y: 790, z: 1.55, yaw: -6, pitch: 3 }, C(16, 0), C(17, 0) - C(16, 0), 'power1.inOut');
+  cam(R2, { y: 680, z: 1.08, yaw: 0, pitch: 0 }, D.end.start - .3, 1.0, 'power2.inOut');
+  on(R2.steam.a, C(15, 0, -.1), .5, .5); R2.glow.forEach((g, k) => on(g.a, C(15, 0, .1 * k), .5, .85));
+  shake(C(16, 2, .1)); tl.to($('heat'), { keyframes: [{ opacity: .5, duration: .3 }, { opacity: .1, duration: .8 }] }, C(16, 2, .1));
+  enter(R2.cFire, C(17, 0, -.35), 'B'); talk(R2.cFire, LN[17].a, LN[17].b); zoomTo(R2, R2.cFire, LN[17].a, LN[17].b);
+  tl.to(R2.cFire.c, { rotation: -8, transformOrigin: '50% 100%', duration: .2, yoyo: true, repeat: 1 }, C(17, 1, .1));
+  leave(R2.cFire, D.end.start - .2, 'B'); tl.to($('heat'), { opacity: 0, duration: .3 }, D.end.start - .2);
+
+  // titles
+  for (const id in TT) { const { g, t } = TT[id];
+    tl.fromTo(g, { opacity: 0, scale: .82, transformOrigin: '540px 340px' }, { opacity: 1, scale: 1, duration: .3, ease: 'back.out(2)', ...IR }, t.a);
+    tl.to(g, { opacity: 0, duration: .25 }, t.b); }
+  // captions
+  for (const K of CAPS) { const c = K.c;
+    tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { scale: .84, transformOrigin: '565px 1385px' }, { scale: 1, duration: .22, ease: 'back.out(2.2)', ...IR }, c.sn);
+    K.words.forEach((w, i) => tl.to(w, { opacity: 1, duration: .09 }, c.wt[Math.min(i, c.wt.length - 1)])); }
+  // badge + end card
+  const BW = $('badgeWrap'); const E = D.end; const bs = 108 / 620;
+  tl.fromTo(BW, { opacity: 0, x: 44 - 230, y: 1332 - 450, scale: bs }, { opacity: 1, x: 44 - 230, y: 1332 - 450, scale: bs, duration: .5 }, .2);
+  tl.fromTo(BW, { x: 44 - 230, y: 1332 - 450, scale: bs }, { x: 0, y: 0, scale: 1, duration: .9, ease: 'power2.inOut', ...IR }, E.start);
+  tl.to($('dim'), { opacity: .55, duration: .5 }, E.start);
+  const F = $('follow');
+  tl.fromTo(F, { opacity: 0, scale: .2 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2)', ...IR }, E.btn);
+  const TD = $('tapDot');
+  tl.fromTo(TD, { opacity: 0, x: 470, y: 120 }, { opacity: 1, x: 430, y: 50, duration: .6, ease: 'power2.out', ...IR }, E.tap - .6);
+  tl.to(F, { keyframes: [{ scale: .94, duration: .1 }, { scale: 1, duration: .1 }] }, E.tap);
+  tl.fromTo($('ripple'), { opacity: .5, scale: .05 }, { opacity: 0, scale: 1, duration: .8, ease: 'power2.out', ...IR }, E.tap + .1);
+  tl.set($('folBtn'), { backgroundColor: '#2A1206', border: '5px solid #FF7A1A' }, E.tap + .2);
+  tl.set($('folTxt'), { opacity: 0 }, E.tap + .2); tl.set($('folTxt2'), { opacity: 1 }, E.tap + .2);
+  tl.to(TD, { opacity: 0, duration: .3 }, E.tap + .5);
+  // sort keyframes, then one render driver (reads time only)
+  const allT = []; for (const S of PLATES) { allT.push(S.cam0, ...Object.values(S.uT), ...S.parts.map(p => p.a), ...S.glows.map(g => g.a), ...S.labels.map(l => l.a)); }
+  allT.push(MP.gk, MP.tk, MP.x, MP.hl, MP.rise, MP.pinA, MP.labels[0].a, HO.dl, TW1.thermo.a, TW1.thermo.lvl, TW1.thermo.spin, TW1.lblA, ...Object.values(TW2.bars).filter(v => v && v.keys));
+  for (const T of allT) T.keys.sort((a, b) => a.a - b.a);
+  const clk = { t: 0 };
+  tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => { const t = clk.t;
+    for (const S of PLATES) if (t >= S.win[0] - .05 && t <= S.win[1] + .45) renderPlate(S, t);
+    if (t >= MP.win[0] - .05 && t <= MP.win[1] + .45) renderMap(MP, t); } }, 0);
+  return tl;
+}
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => Promise.all(READY)).then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>

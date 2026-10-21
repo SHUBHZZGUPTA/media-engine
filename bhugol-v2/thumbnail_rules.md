@@ -24,3 +24,15 @@ Shorts by views vs the channel median, plus automatic colour/text measurements o
 - About 99.9% of Shorts views come from the Shorts feed, where no thumbnail is shown (YouTube, Jan 2025).
 - Thumbnails matter on the Home page, search, the channel page and Subscriptions. So the first frame and hook come first; the thumbnail is the second lever.
 - All effects here are correlations, not proof.
+
+## Default recipe A (chosen 21 Oct 2026, Centralia)
+A yt-viral re-rank of the same 908-thumbnail study: the top outliers (11-104x) are almost all a satellite map with one
+region in a bold flat colour plus a big date or number (1849, 1773, 1831, 1967) and few words; on disaster/danger
+topics the best one (Darien Gap, 8.5x) is a satellite map with a giant "160 km", while scene/photo thumbnails sat at 0.9-1.5x.
+Recipe A keeps that pattern and still shows the story moment:
+- **3D satellite terrain** (the video's own map assets), the region filled in its flag colour with a glowing gold border.
+- **Fire/glow at the payoff spot**, ringed by the red hand-drawn circle.
+- **A zoom bubble** (white ring + red outline, dotted leader line) showing the key scene from the video.
+- **A giant glowing number** not already in the title, plus 1-3 words above it.
+- 2-3 emoji, badge top-left; vertical and 16:9; English + Hindi; pass the 140 px feed test.
+Build it with `3d/thumb_a.py` (config-driven) and show all four to the user before burning frame 0.

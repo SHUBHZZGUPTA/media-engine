@@ -1,0 +1,97 @@
+<!doctype html><html><head><meta charset="utf-8">
+<script src="three.min.js"></script><script src="map3d.js"></script><!-- map3d.js = "const M3=" + art/map3d.json (thumb_a.py writes it) -->
+<style>
+@font-face{font-family:BSD;font-weight:900;src:url(assets/bsd900.woff2)}@font-face{font-family:Muk;font-weight:800;src:url(assets/muk800.woff2)}@font-face{font-family:Emo;src:url(assets/emoji.ttf)}
+body{margin:0;background:#000} #f{position:relative;overflow:hidden} canvas{position:absolute;left:0;top:0}
+.t{position:absolute;font-family:BSD,Muk;font-weight:900;line-height:1;white-space:nowrap}
+.w{color:#fff;paint-order:stroke fill;-webkit-text-stroke:18px #000;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6))}
+.y{color:#000;background:#FFE81A;border:8px solid #000;padding:4px 24px 10px;box-shadow:12px 12px 0 #000,0 0 40px rgba(255,232,26,.7);transform:rotate(-3deg)}
+.emo{position:absolute;font-family:Emo;line-height:1;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6))}
+.badge{position:absolute;filter:drop-shadow(0 4px 8px rgba(0,0,0,.6))}
+</style></head><body><div id="f"></div>
+<script>
+const Q = new URLSearchParams(location.search); const MODE = Q.get('m') || 'v', LANG = Q.get('l') || 'en';
+const W = MODE === 'v' ? 1080 : 1280, H = MODE === 'v' ? 1920 : 720;
+const f = document.getElementById('f'); f.style.width = W + 'px'; f.style.height = H + 'px';
+const T3 = THREE; const [L0, L1, B0, B1] = M3.bbox; const LC = (L0 + L1) / 2, BC = (B0 + B1) / 2, KX = Math.cos(BC * Math.PI / 180);
+const cv = document.createElement('canvas'); cv.width = W * 2; cv.height = H * 2; cv.style.width = W + 'px'; cv.style.height = H + 'px'; f.appendChild(cv);
+const R = new T3.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true }); R.setPixelRatio(1); R.setSize(W * 2, H * 2, false);
+const sc = new T3.Scene(); sc.background = new T3.Color(0x07101E); sc.fog = new T3.Fog(0x07101E, 12, 26);
+const cam = new T3.PerspectiveCamera(MODE === 'v' ? 34 : 30, W / H, .01, 80); cam.up.set(0, 0, 1);
+const L = new T3.TextureLoader(); const ld = n => new Promise(r => L.load('assets/' + n, t => { t.anisotropy = 8; r(t); }));
+function cpu(n) { return new Promise(r => { const im = new Image(); im.onload = () => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); r({ w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }); }; im.src = 'assets/' + n; }); }
+function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); const r = g.createRadialGradient(128, 128, 0, 128, 128, 128);
+  r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.22, 'rgba(255,255,255,.6)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 256, 256); return new T3.CanvasTexture(c); }
+const GT = glowTex();
+Promise.all([ld('ne.jpg'), ld('pa_close.jpg'), ld('pa_mask.png'), ld('hillshade.png'), ld('dem8.png'), cpu('dem8.png'), document.fonts.ready]).then(([ne, cls, mask, hs, dem, demI]) => {
+  const Wt = (L1 - L0) * KX, Ht = B1 - B0, EX = .0105 * 30;
+  const cr = M3.pa_close_bbox;
+  const U = { ne: { value: ne }, cls: { value: cls }, mask: { value: mask }, hs: { value: hs }, dem: { value: dem }, exag: { value: EX },
+    crect: { value: new T3.Vector4((cr[0] - L0) / (L1 - L0), (cr[2] - B0) / (B1 - B0), (cr[1] - L0) / (L1 - L0), (cr[3] - B0) / (B1 - B0)) } };
+  sc.add(new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 900, 450), new T3.ShaderMaterial({ uniforms: U,
+    vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform sampler2D ne, cls, mask, hs; uniform vec4 crect; varying vec2 vUv;
+      void main(){ vec3 c = texture2D(ne, vUv).rgb; vec2 q = (vUv - crect.xy) / (crect.zw - crect.xy);
+        float fq = smoothstep(0.0, 0.08, q.x) * smoothstep(1.0, 0.92, q.x) * smoothstep(0.0, 0.08, q.y) * smoothstep(1.0, 0.92, q.y);
+        if (fq > 0.0) c = mix(c, texture2D(cls, clamp(q, 0.0, 1.0)).rgb, fq);
+        float h = texture2D(hs, vUv).r; float m = texture2D(mask, vUv).r;
+        vec3 outside = c * (0.42 + 0.78 * h); outside = mix(vec3(dot(outside, vec3(.3,.59,.11))), outside, 0.7) * 0.62;
+        vec3 blue = vec3(0.10, 0.30, 0.95) * (0.30 + 1.05 * h) + vec3(0.03, 0.05, 0.06);
+        gl_FragColor = vec4(mix(outside, blue, m), 1.0); }` })));
+  const hAt = (lo, la) => { const u = (lo - L0) / (L1 - L0), v = (la - B0) / (B1 - B0); const x = Math.round(u * (demI.w - 1)), y = Math.round((1 - v) * (demI.h - 1)); return demI.d[(y * demI.w + x) * 4] / 255 * EX; };
+  const wp = (lo, la, up) => new T3.Vector3((lo - LC) * KX, la - BC, hAt(lo, la) + (up || 0));
+  // gold border wall + bright ground line
+  const pts = M3.outline.map(([lo, la]) => wp(lo, la, .004)); const pos = [], kk = [];
+  for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; pos.push(a.x, a.y, a.z, b.x, b.y, b.z, b.x, b.y, b.z, a.x, a.y, a.z, b.x, b.y, b.z, a.x, a.y, a.z); kk.push(0, 0, 1, 0, 1, 1); }
+  const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.Float32BufferAttribute(pos, 3)); g.setAttribute('k', new T3.Float32BufferAttribute(kk, 1));
+  sc.add(new T3.Mesh(g, new T3.ShaderMaterial({ transparent: true, depthWrite: false, side: T3.DoubleSide, blending: T3.AdditiveBlending,
+    vertexShader: `attribute float k; varying float vK; void main(){ vK = k; vec3 p = position; p.z += k * 0.34; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `varying float vK; void main(){ float a = pow(1.0 - vK, 2.2); gl_FragColor = vec4(1.0, 0.78, 0.16, a); }` })));
+  const tube = new T3.TubeGeometry(new T3.CatmullRomCurve3(pts, true), pts.length * 4, .022, 8, true);
+  sc.add(new T3.Mesh(tube, new T3.MeshBasicMaterial({ color: 0xFFC83A })));
+  // fire at Centralia
+  const c0 = wp(M3.pin[0], M3.pin[1]);
+  const sp = (col, s, z, op, add) => { const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: col, transparent: true, blending: add ? T3.AdditiveBlending : T3.NormalBlending, depthWrite: false, opacity: op })); m.position.copy(c0).add(new T3.Vector3(0, 0, z)); m.scale.set(s, s, 1); sc.add(m); };
+  sp(0xC81E00, 2.2, .03, .8); sp(0xFF4A00, 1.4, .06, .95); sp(0xFF8A10, .8, .09, 1); sp(0xFFC040, .4, .12, 1, 1); sp(0xFFE7A0, .16, .14, 1, 1); sp(0xFF6A00, 2.8, .02, .4, 1);
+  for (let i = 0; i < 26; i++) { const a = i * 2.39996, r = .05 + (i % 7) * .045, z = .1 + ((i * .37) % 1) * .55;
+    const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: i % 3 ? 0xFF7A10 : 0xFFC040, transparent: true, blending: T3.NormalBlending, depthWrite: false, opacity: .9 }));
+    m.position.copy(c0).add(new T3.Vector3(Math.cos(a) * r, Math.sin(a) * r, z)); const s = .035 + (i % 3) * .015; m.scale.set(s, s, 1); sc.add(m); }
+  if (Q.get('big')) { for (let i = 0; i < 40; i++) { const a = i * 2.39996, r = (i % 9) * .025, z = .06 + (i % 13) * .045;
+      const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: z > .4 ? 0xFF3A00 : (z > .2 ? 0xFF7A10 : 0xFFC040), transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: .55 }));
+      m.position.copy(c0).add(new T3.Vector3(Math.cos(a) * r, Math.sin(a) * r * .6, z)); const s = .22 - z * .25; m.scale.set(Math.max(.05, s) * .7, Math.max(.05, s), 1); sc.add(m); } }
+  for (let i = 0; i < 7; i++) { const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: 0x9A9AA0, transparent: true, depthWrite: false, opacity: .28 }));
+    m.position.copy(c0).add(new T3.Vector3(.05 * Math.sin(i), .04 * i, .25 + i * .13)); const s = .3 + i * .07; m.scale.set(s, s, 1); sc.add(m); }
+  // camera
+  // camera: ?vcam=lonOffset,latOffset,dist,elev,yaw (relative to the pin), ?wcam=... for 16:9; defaults = Centralia framing
+  const camQ = (Q.get(MODE === 'v' ? 'vcam' : 'wcam') || (MODE === 'v' ? '-0.41,0.15,9.6,66,4' : '-0.61,0.1,8.4,62,0')).split(',').map(Number);
+  const tg = wp(M3.pin[0] + camQ[0], M3.pin[1] + camQ[1]); const el = camQ[3] * Math.PI / 180, yw = camQ[4] * Math.PI / 180, dist = camQ[2];
+  tg.z = 0; cam.position.set(tg.x + Math.sin(yw) * Math.cos(el) * dist, tg.y - Math.cos(yw) * Math.cos(el) * dist, Math.sin(el) * dist); cam.lookAt(tg); cam.updateMatrixWorld();
+  if (MODE === 'w') cam.setViewOffset(W, H, -260, 0, W, H);
+  cam.updateProjectionMatrix();
+  R.render(sc, cam);
+  const v = c0.clone().add(new T3.Vector3(0, 0, .08)).project(cam); const cx = (v.x + 1) / 2 * W, cy = (1 - v.y) / 2 * H;
+  window.__C = [cx, cy]; if (Q.get('bare')) { document.title = 'READY'; return; }
+  // overlay
+  const w1 = LANG === 'hi' ? 'सिर्फ' : 'ONLY', w2 = LANG === 'hi' ? '5 बचे' : '5 LEFT';
+  const svg = (inner) => { const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); s.setAttribute('width', W); s.setAttribute('height', H); s.style.cssText = 'position:absolute;left:0;top:0;overflow:visible'; s.innerHTML = inner; f.appendChild(s); };
+  const add = (html) => f.insertAdjacentHTML('beforeend', html);
+  if (MODE === 'v') {
+    add(`<div style="position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,0) 28%,rgba(0,0,0,0) 80%,rgba(0,0,0,.4))"></div>`);
+    svg(`<g fill="none" stroke="#FF1A1A" stroke-width="18" stroke-linecap="round" style="filter:drop-shadow(0 0 10px rgba(255,30,30,.9))">
+      <ellipse cx="${cx}" cy="${cy}" rx="150" ry="125" transform="rotate(-8 ${cx} ${cy})"/><ellipse cx="${cx + 5}" cy="${cy + 4}" rx="141" ry="117" transform="rotate(5 ${cx} ${cy})"/>
+      <path d="M300,700 Q330,${cy - 40} ${cx - 160},${cy - 20}"/><path d="M${cx - 160},${cy - 20} l-40,-26 M${cx - 160},${cy - 20} l-44,20"/></g>`);
+    add(`<img class="badge" src="assets/bhugol_badge.png" style="left:36px;top:36px;width:140px">
+      <div class="t w" style="left:230px;top:150px;font-size:170px">${w1}</div><div class="t y" style="left:300px;top:340px;font-size:190px">${w2}</div>
+      <div class="emo" style="left:${cx + 60}px;top:${cy + 120}px;font-size:160px">🤯</div><div class="emo" style="left:90px;top:${cy + 360}px;font-size:160px">😱</div><div class="emo" style="left:820px;top:${cy + 500}px;font-size:150px">🇺🇸</div>`);
+  } else {
+    add(`<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,0) 46%)"></div>`);
+    svg(`<g fill="none" stroke="#FF1A1A" stroke-width="13" stroke-linecap="round" style="filter:drop-shadow(0 0 8px rgba(255,30,30,.9))">
+      <ellipse cx="${cx}" cy="${cy}" rx="105" ry="88" transform="rotate(-6 ${cx} ${cy})"/><ellipse cx="${cx + 4}" cy="${cy + 3}" rx="99" ry="82" transform="rotate(4 ${cx} ${cy})"/>
+      <path d="M560,560 Q${cx - 120},${cy + 160} ${cx - 104},${cy + 56}"/><path d="M${cx - 104},${cy + 56} l-38,6 M${cx - 104},${cy + 56} l2,38"/></g>`);
+    add(`<img class="badge" src="assets/bhugol_badge.png" style="left:22px;top:22px;width:96px">
+      <div class="t w" style="left:40px;top:150px;font-size:140px;-webkit-text-stroke:15px #000">${w1}</div><div class="t y" style="left:60px;top:320px;font-size:160px;border-width:6px">${w2}</div>
+      <div class="emo" style="left:${cx + 80}px;top:${cy - 200}px;font-size:100px">🤯</div><div class="emo" style="left:470px;top:560px;font-size:96px">😱</div><div class="emo" style="left:1140px;top:560px;font-size:90px">🇺🇸</div>`);
+  }
+  document.title = 'READY';
+});
+</script></body></html>

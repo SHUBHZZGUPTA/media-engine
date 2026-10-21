@@ -1,0 +1,204 @@
+{
+ "slug": "centralia",
+ "lines": [
+  {
+   "o": 0,
+   "text": "Under your feet here, a fire has burned for 64 years. Population: 5. So why did nobody stop it?",
+   "chunks": [
+    "UNDER YOUR FEET HERE,",
+    "A *FIRE* HAS BURNED|FOR *64 YEARS.*",
+    "POPULATION: *5.*",
+    "SO WHY DID|*NOBODY STOP IT?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Rewind to 1962. Centralia, Pennsylvania. A coal town of about 1,400 people.",
+   "chunks": [
+    "REWIND TO *1962.*",
+    "*CENTRALIA,*|PENNSYLVANIA.",
+    "A COAL TOWN OF|ABOUT *1,400* PEOPLE."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "The story goes, the town burned its trash in an old mining pit.",
+   "chunks": [
+    "THE STORY GOES,",
+    "THE TOWN BURNED|ITS *TRASH*",
+    "IN AN OLD|*MINING PIT.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "But that pit sat on old coal mines. And the fire got in.",
+   "chunks": [
+    "BUT THAT PIT SAT|ON *OLD COAL MINES.*",
+    "AND THE *FIRE*|GOT IN."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Ooh. Coal? For me?",
+   "chunks": [
+    "OOH. *COAL?*",
+    "FOR *ME?*"
+   ],
+   "speaker": "fire"
+  },
+  {
+   "o": 0,
+   "text": "So they dug. They flushed. About 42 thousand dollars later, the money ran out... The fire didn't.",
+   "chunks": [
+    "SO THEY *DUG.*",
+    "THEY *FLUSHED.*",
+    "ABOUT *42 THOUSAND*|DOLLARS LATER,",
+    "THE MONEY|RAN OUT...",
+    "THE FIRE *DIDN'T.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "So how bad could it get?",
+   "chunks": [
+    "SO HOW BAD|COULD IT *GET?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "By 1979, petrol in an underground tank hit 78 degrees Celsius.",
+   "chunks": [
+    "BY *1979,*",
+    "PETROL IN AN|UNDERGROUND TANK",
+    "HIT *78 DEGREES*|CELSIUS."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Is it just me... or the ground?",
+   "chunks": [
+    "IS IT JUST ME...",
+    "OR THE *GROUND?*"
+   ],
+   "speaker": "town"
+  },
+  {
+   "o": 0,
+   "text": "In 1981, the ground opened under a 12-year-old boy. A hole about 45 metres deep.",
+   "chunks": [
+    "IN *1981,*",
+    "THE GROUND OPENED|UNDER A *12-YEAR-OLD* BOY.",
+    "A HOLE ABOUT|*45 METRES* DEEP."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "His cousin pulled him out. Now America was watching.",
+   "chunks": [
+    "HIS *COUSIN*|PULLED HIM OUT.",
+    "NOW *AMERICA*|WAS WATCHING."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Putting the fire out? One study said about 663 million dollars.",
+   "chunks": [
+    "PUTTING THE|*FIRE OUT?*",
+    "ONE STUDY SAID ABOUT",
+    "*663 MILLION*|DOLLARS."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Moving everyone out? 42 million. Yes... that number again.",
+   "chunks": [
+    "MOVING|*EVERYONE OUT?*",
+    "*42 MILLION.*",
+    "YES... THAT|*NUMBER AGAIN.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "So America didn't put out the fire... it put out the town.",
+   "chunks": [
+    "SO AMERICA DIDN'T|PUT OUT THE *FIRE...*",
+    "IT PUT OUT|THE *TOWN.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Over 500 homes and shops were bought and torn down. In 2002, even the ZIP code went.",
+   "chunks": [
+    "OVER *500* HOMES|AND SHOPS",
+    "WERE BOUGHT AND|*TORN DOWN.*",
+    "IN *2002,*",
+    "EVEN THE *ZIP CODE*|WENT."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Today, a handful of people still live there. Steam still rises through the cracks.",
+   "chunks": [
+    "TODAY, A *HANDFUL*|OF PEOPLE",
+    "STILL LIVE THERE.",
+    "*STEAM* STILL RISES|THROUGH THE *CRACKS.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "And the twist? At this rate, it could burn for another 250 years.",
+   "chunks": [
+    "AND THE *TWIST?*",
+    "AT THIS RATE,|IT COULD BURN",
+    "FOR ANOTHER|*250 YEARS.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Relax. I'm only 64.",
+   "chunks": [
+    "RELAX.",
+    "I'M ONLY *64.*"
+   ],
+   "speaker": "fire"
+  },
+  {
+   "o": 0,
+   "text": "This is BHUGOL. Follow for more Geography Fun Facts.",
+   "chunks": [
+    "THIS IS *BHUGOL.*",
+    "FOLLOW FOR MORE|GEOGRAPHY FUN FACTS."
+   ]
+  }
+ ],
+ "voices": {
+  "fire": {
+   "semitones": 4,
+   "formant": "shifted"
+  },
+  "town": {
+   "semitones": -3,
+   "formant": "preserved"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.42,
+  "tempo": 1.05,
+  "long_before": {
+   "4": 0.85,
+   "8": 0.85,
+   "12": 0.8,
+   "13": 0.65,
+   "16": 0.5,
+   "17": 1.0
+  },
+  "line_tempo": {
+   "4": 1.0,
+   "8": 1.0,
+   "13": 1.0,
+   "17": 1.0
+  }
+ },
+ "tail": 2.3
+}
