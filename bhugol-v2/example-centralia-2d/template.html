@@ -54,13 +54,29 @@ body { margin: 0; background: #02070D; }
 #folTxt, #folTxt2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; font-size: 66px; letter-spacing: .05em; color: var(--ink); }
 #folTxt2 { color: var(--fire); opacity: 0; }
 #tapDot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.85); border: 3px solid var(--ink); opacity: 0; }
+.kbox { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; line-height: 1; opacity: 0; }
+.knum, .ksuf { display: inline-block; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; }
+.knum { font-size: 230px; -webkit-text-stroke-width: 30px; color: var(--fire); text-shadow: 0 0 40px rgba(255,90,20,.55); }
+.ksuf { font-size: 120px; -webkit-text-stroke-width: 18px; color: var(--white); margin-left: 26px; }
+.flapRow { display: flex; justify-content: center; gap: 7px; }
+.flap { display: inline-block; width: 66px; height: 104px; border-radius: 10px; background: linear-gradient(#1A2230 0 49%, #0B1018 51% 100%); color: #F4F8FB; font-family: 'BSD', sans-serif; font-weight: 900;
+  font-size: 92px; line-height: 104px; text-align: center; box-shadow: 0 6px 0 rgba(0,0,0,.55), inset 0 0 0 2px rgba(255,255,255,.07); transform-origin: 50% 50%; }
+.flapLbl { font-family: 'Arch', sans-serif; font-weight: 800; font-size: 44px; letter-spacing: .2em; color: var(--mari); margin-bottom: 14px; paint-order: stroke fill; -webkit-text-stroke: 8px #03101A; }
+.card { position: absolute; left: 0; top: 0; width: 560px; opacity: 0; }
+.cin { background: rgba(6,12,22,.88); border: 4px solid var(--fire); border-radius: 26px; padding: 22px 30px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.6); }
+.crow { display: flex; align-items: center; gap: 14px; font-family: 'Arch', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: .08em; color: var(--white); }
+.cflag { font-family: 'Emo', sans-serif; font-size: 50px; }
+.cbig { margin-top: 6px; font-family: 'BSD', sans-serif; font-weight: 900; color: var(--mari); line-height: 1; }
+.cnum { display: inline-block; font-size: 128px; } .csuf { display: inline-block; font-size: 64px; color: var(--white); margin-left: 14px; }
+.ctag { margin-top: 10px; display: inline-block; padding: 6px 16px; border-radius: 40px; background: rgba(255,122,26,.18); color: var(--fire); font-family: 'Arch', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: .1em; }
+.cl .k { color: #FFFFFF; }
 #ripple { position: absolute; left: 20px; top: -235px; width: 600px; height: 600px; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(255,255,255,.6); opacity: 0; }
 </style>
 </head>
 <body>
 <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
   <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
-    <div id="shake" class="scr"><div id="scenes" class="scr"></div></div>
+    <div id="shake" class="scr"><div id="cshake" class="scr"><div id="scenes" class="scr"></div></div></div>
     <div id="heat" class="scr"></div>
     <div id="steam" class="scr" data-layout-allow-overflow></div>
     <div id="fx" class="scr"></div>
@@ -71,10 +87,12 @@ body { margin: 0; background: #02070D; }
     <div id="capFade" class="scr"></div>
     <div id="titles" class="scr"></div>
     <div id="caps" class="scr"></div>
+    <div id="hook" class="scr"></div>
     <div id="badgeWrap"><div id="badgeShadow"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
     <div id="follow"><div id="folBtn"></div><div id="folTxt"></div><div id="folTxt2"></div><div id="ripple"></div><div id="tapDot"></div></div>
   </div>
 </div>
+__MBLUR__
 <script>
 const D = __DATA__;
 if (D.lang === 'hi') document.getElementById('root').classList.add('hi');
@@ -121,6 +139,15 @@ MP.pa = mk('path', { d: M.pa, fill: '#FF7A1A', 'fill-opacity': 0, stroke: '#FFC2
 MP.ring = mk('circle', { cx, cy, r: 10, fill: 'none', stroke: '#FF7A1A', 'stroke-width': 4, opacity: 0 }, MP.svg, true);
 MP.pin = mk('circle', { cx, cy, r: 10, fill: '#FF4D4D', stroke: '#03101A', 'stroke-width': 4, opacity: 0 }, MP.svg, true);
 MP.lbl = T(MP, 'CENTRALIA', cx, cy - 26, 34);
+{ const defs = mk('defs', {}, MP.svg, true); const cp = mk('clipPath', { id: 'paClip' }, defs, true); mk('path', { d: M.pa }, cp, true);
+  MP.flag = mk('image', { href: 'assets/flag_us.png', preserveAspectRatio: 'none', 'clip-path': 'url(#paClip)', opacity: 0 }, MP.svg, true);
+  MP.svg.insertBefore(MP.flag, MP.pa.nextSibling); }   // sized to the border's bbox in build() (needs layout)
+{ const el = mk('div', { class: 'card' }, MP.push); el.innerHTML = `<div class="cin"><div class="crow"><span class="cflag">🇺🇸</span><span>CENTRALIA, PA</span></div><div class="cbig"><span class="cnum">0</span><span class="csuf">PEOPLE</span></div><div class="ctag">⛏️ COAL TOWN</div></div>`;
+  const ln = mk('svg', { width: 1080, height: 1920, style: 'position:absolute;left:0;top:0;overflow:visible;opacity:0' }, MP.push, true); MP.push.insertBefore(ln, el);
+  const path = mk('path', { stroke: '#FF7A1A', 'stroke-width': 6, 'stroke-dasharray': '14 10', fill: 'none' }, ln, true);
+  MP.card = { el, ln, path, num: el.querySelector('.cnum'), suf: el.querySelector('.csuf') }; }
+const K64 = mk('div', { class: 'kbox', style: 'top:150px' }, $('hook')); K64.innerHTML = '<span class="knum">0</span><span class="ksuf">YEARS</span>';
+const POP = mk('div', { class: 'kbox', style: 'top:170px' }, $('hook')); POP.innerHTML = '<div class="flapRow"></div>';
 // pit: flames
 PIT.gl = glow(PIT, PT.pit[0], PT.pit[1], 260, 140, '#FF7A1A', 0);
 // cross-section: pit notch, tunnels, fire paths
@@ -209,7 +236,7 @@ function build() {
   const pop = (el, at, s0) => tl.fromTo(el, { opacity: 0, scale: s0 || .5, transformOrigin: '50% 50%', transformBox: 'fill-box' }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(2.4)', ...IR }, at);
   const popD = (el, at) => tl.fromTo(el, { opacity: 0, scale: .3, y: 80 }, { opacity: 1, scale: 1, y: 0, duration: .4, ease: 'back.out(2.2)', ...IR }, at);
   const fade = (el, at, d) => tl.to(el, { opacity: 0, duration: d || .3 }, at);
-  const shake = at => tl.fromTo($('shake'), { x: 0, y: 0 }, { keyframes: [{ x: -20, y: 12, duration: .05 }, { x: 16, y: -10, duration: .05 }, { x: -10, y: 7, duration: .06 }, { x: 6, y: -4, duration: .06 }, { x: 0, y: 0, duration: .08 }], ...IR }, at);
+  const shake = (at, k) => MO.shake(at, .6, 'rig-6d-wobble', k || .75);  // reg:camera-shake measured profile, decaying impact
   const flicker = (el, a, b, lo, hi) => { const n = Math.max(1, Math.floor((b - a) / .5)); tl.fromTo(el, { opacity: lo }, { keyframes: Array.from({ length: n }, (_, i) => [{ opacity: hi * (i % 3 === 1 ? .8 : 1), duration: .22 }, { opacity: lo, duration: .28 }]).flat(), ...IR }, a); };
   const steam = (op, at, d) => tl.to($('steam'), { opacity: op * .8, duration: d || .4 }, at);
 
@@ -321,16 +348,42 @@ function build() {
   tl.to(R2.cFire.c, { rotation: -8, transformOrigin: '50% 100%', duration: .2, yoyo: true, repeat: 1 }, C(17, 1, .1));
   leave(R2.cFire, D.end.start - .2, 'B'); tl.to($('heat'), { opacity: 0, duration: .3 }, D.end.start - .2); steam(.5, D.end.start, .5);
 
+  // ===== v2: HyperFrames library ports, placed from the spec's beats (the same list drives the sound) =====
+  const beat = k => (D.beats || []).filter(b => b.kind === k);
+  // hand-drawn marks live in each plate's image space (inside S.cam), so they ride the camera; widths are in image px
+  const TGT = { R1: [PT.road[0], PT.road[1] - 20, 150, 75], PIT: [PT.pit[0], PT.pit[1], 165, 85] };  // image px (the 2D camera zooms ~1.3-1.9x)
+  const ARW = { R1: { x0: PT.road[0] + 300, y0: PT.road[1] - 430, x1: PT.road[0] + 70, y1: PT.road[1] - 90 }, XS: { x0: 835, y0: 430, x1: 540, y1: 712 } };
+  for (const b of beat('circle')) { const S = REG[b.scene], g = TGT[b.scene]; if (!S || !g) continue; MO.hwCircle(S.cam, () => ({ x: g[0], y: g[1] }), g[2], g[3], b.t, b.u, { seed: 3 + b.t, w: 9 }); }
+  for (const b of beat('arrow')) { const S = REG[b.scene], e = ARW[b.scene]; if (!S || !e) continue; MO.hwArrow(S.cam, () => e, b.t, b.u, { seed: 7 + b.t, w: 9, head: 46, col: b.scene === 'XS' ? '#FFC23A' : '#FF3B30' }); }
+  for (const b of beat('grow')) { const ch = D.chunks.find(c => Math.abs(c.sn - b.t) < .02); const wi = ch ? ch.txt.replace(/\|/g, ' ').split(' ').findIndex(w => w.includes(String(b.to))) : -1;
+    const dur = wi >= 0 ? Math.max(.6, ch.wt[wi] - b.t + .15) : 1.2; tl.set(K64, { opacity: 1 }, b.t);
+    MO.countGrow(K64.querySelector('.knum'), b.to, b.t, { dur, startScale: .35, suffixEl: K64.querySelector('.ksuf') }); MO.textOut(K64, C(0, 2, -.12)); }
+  for (const b of beat('flap')) { tl.set(POP, { opacity: 1 }, b.t); MO.flap(POP.querySelector('.flapRow'), 'POPULATION: 5', b.t, { stagger: .04 }); MO.textOut(POP, C(0, 3, -.12)); }
+  { const bb = MP.pa.getBBox(); for (const [k, v] of Object.entries({ x: bb.x, y: bb.y, width: bb.width, height: bb.height })) MP.flag.setAttribute(k, v);
+    tl.to(MP.flag, { attr: { opacity: .8 }, duration: .5, ...IR }, C(1, 1, .1)); tl.to(MP.flag, { attr: { opacity: 0 }, duration: .7, ...IR }, C(1, 1, 1.25)); }
+  for (const b of beat('card')) { const Cd = MP.card, root = $('root'); const e3 = gsap.parseEase('power3.out'); fade(MP.lbl, b.t - .1, .2);
+    MO.driver(b.t - .02, b.u + .3, t => { const a = Math.max(0, Math.min(e3(Math.min(1, Math.max(0, (t - b.t) / .35))), 1 - (t - b.u) / .25));  // pure function of time (driver order-safe)
+      Cd.el.style.opacity = a; Cd.ln.style.opacity = a; if (a <= 0) return;
+      const r = MP.pin.getBoundingClientRect(), R0 = root.getBoundingClientRect(), k = 1080 / R0.width; const q = { x: (r.left + r.width / 2 - R0.left) * k, y: (r.top + r.height / 2 - R0.top) * k };
+      const w = Cd.el.offsetWidth, h = Cd.el.offsetHeight, x = Math.min(1040 - w, Math.max(40, q.x - w / 2)), y = Math.min(1150 - h, Math.max(300, q.y - h - 170));
+      Cd.el.style.transform = `translate(${x.toFixed(1)}px,${(y + (1 - a) * 40).toFixed(1)}px)`; Cd.path.setAttribute('d', `M${(x + w / 2).toFixed(1)} ${(y + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); });
+    MO.countGrow(Cd.num, 1400, b.t + .1, { dur: 1.1, startScale: .5, suffixEl: Cd.suf }); }
+  MO.shake(0, C(1, 0, -.15), 'handheld-normal-mild', .12, { decay: false });
+  MO.shake(C(2, 0, -.15), C(3, 0, -.15) - C(2, 0, -.15), 'handheld-normal-mild', .1, { decay: false });
+  if (TT.t1962) TT.t1962.g.setAttribute('data-hf-motion-blur', '{"samplesPerFrame": 8}');
+  const cs = beat('charslam')[0];
   // titles
   for (const id in TT) { const { g, t } = TT[id];
-    if (id === 't1962' || id === 't250') MO.slam(g, t.a, { shake: id === 't250' }); else MO.textIn(g, t.a);
+    if (id === 'tFog' && cs) { tl.set(g, { opacity: 1 }, cs.t); MO.charSlam(TT.tFog.lines[0], cs.t, { blur: true }); }
+    else if (id === 't1962' || id === 't250') MO.slam(g, t.a, { shake: id === 't250' }); else MO.textIn(g, t.a);
     MO.textOut(g, t.b); }
   { const sp = TT.t42k && TT.t42k.lines[0].querySelector('span'); if (sp) MO.countUp(sp, 42000, TT.t42k.t.a, { prefix: '$', dur: 1.3, noScale: true }); }
   // captions
   for (const K of CAPS) { const c = K.c;
     tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
     tl.fromTo(K.g, { scale: .9, transformOrigin: '565px 1385px' }, { scale: 1, duration: .2, ease: 'power3.out', ...IR }, c.sn);
-    MO.karaoke(K.words, c.wt, w => w.classList.contains('k')); }
+    MO.karaoke(K.words, c.wt, w => w.classList.contains('k'));
+    K.words.forEach((w, i) => { if (w.classList.contains('k')) MO.sweep(w, c.wt[Math.min(i, c.wt.length - 1)]); }); }
   // steam motion (deterministic, rises)
   const sp = { t: 0 }; tl.fromTo(sp, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => {
     for (const F of PF) { const ph = (F.ph + sp.t * F.sp) % 1; const y = 1700 - ph * 1500 - F.r; const x = F.x + Math.sin(sp.t * .8 + F.ph * 9) * 40;
@@ -349,6 +402,8 @@ function build() {
   tl.set($('folBtn'), { backgroundColor: '#2A1206', border: '5px solid #FF7A1A' }, E.tap + .2);
   tl.set($('folTxt'), { opacity: 0 }, E.tap + .2); tl.set($('folTxt2'), { opacity: 1 }, E.tap + .2);
   tl.to(TD, { opacity: 0, duration: .3 }, E.tap + .5);
+  layout();  // re-fit captions after the keyword bars changed widths
+  MO.shakeOn($('cshake'), D.dur);
   return tl;
 }
 window.__timelines = window.__timelines || {};

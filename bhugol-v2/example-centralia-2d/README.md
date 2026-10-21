@@ -6,3 +6,10 @@ shot plan as `../example-centralia-3d/` (use that folder's `centralia.json` / `m
   count-ups and slams come from `../motion/motion.js` (handle `MO`; `M` is the map data in this template).
 - `build.py` — spec + timing -> project; reads the spec's `shots` plan via `../motion/motion_plan.py` and copies `motion.js`.
 - Render: `hyperframes render --quality looks` (~13 min EN / ~15 min HI), then `../finish.sh`.
+
+## v2 (22 Oct 2026): HyperFrames library upgrades
+Same beats as the 3D example (use `../example-centralia-3d/centralia.json` as the spec): char-slam hook title, "64 YEARS" growing
+count, "POPULATION: 5" flip board, measured camera shake, hand-drawn arrows/circles in each plate's image space (they ride the
+camera), US flag clipped into the Pennsylvania border, a stat card pinned to the map pin, caption highlight bars, motion blur on
+the hook letters and the 1962 slam. The `burn` cut becomes a warm fire flash in 2D (no WebGL overlay). `mkscore.py` has the
+sound-timing fix and the bundled-SFX layer (writes `mix_final.wav`). Grade at finish with `../grade/teal-orange-blockbuster.cube`.
