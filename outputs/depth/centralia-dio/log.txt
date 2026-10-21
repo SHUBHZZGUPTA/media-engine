@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 8470.42it/s]
+depth library/scenes/centralia_dio_cold.png
+upscale library/scenes/centralia_dio_cold.png
+upscale library/scenes/centralia_dio_hot.png
+{'depth': [{'src': 'library/scenes/centralia_dio_cold.png', 'secs': 2.8}], 'upscale': [{'src': 'library/scenes/centralia_dio_cold.png', 'secs': 173.1}, {'src': 'library/scenes/centralia_dio_hot.png', 'secs': 170.4}]}
