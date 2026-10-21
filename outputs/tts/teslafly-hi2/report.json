@@ -1,0 +1,13 @@
+{
+ "job": "teslafly-hi2",
+ "items": [
+  {
+   "name": "narration_hi",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 105.84,
+   "took": 34.1
+  }
+ ]
+}
