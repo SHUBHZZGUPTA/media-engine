@@ -13,9 +13,9 @@ on:
         required: true
         default: 'jobs/kaggle/gpu-check.json'
       mode:
-        description: 'run = start on Kaggle and wait; collect = fetch results of a run left going'
+        description: 'run = start on Kaggle and wait; collect = wait for and fetch a run left going; status = one quick check'
         type: choice
-        options: [run, collect]
+        options: [run, collect, status]
         default: run
 permissions:
   contents: write
@@ -45,7 +45,7 @@ jobs:
         run: |
           set -e
           if [ -n "$JOB" ]; then
-            FLAG=""; [ "$MODE" = "collect" ] && FLAG="--collect"
+            FLAG=""; [ "$MODE" = "collect" ] && FLAG="--collect"; [ "$MODE" = "status" ] && FLAG="--status"
             python3 tools/kaggle_run.py "$JOB" $FLAG
           else
             CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'jobs/kaggle/*.json' || true)

@@ -4,6 +4,7 @@
 Usage:
   python3 tools/kaggle_run.py jobs/kaggle/<id>.json            start the run and wait for it
   python3 tools/kaggle_run.py jobs/kaggle/<id>.json --collect  fetch results of a run left going
+  python3 tools/kaggle_run.py jobs/kaggle/<id>.json --status   one quick status check, no waiting
   python3 tools/kaggle_run.py jobs/kaggle/<id>.json --dry-run  show what would be sent, no login
 
 Job file fields:
@@ -151,6 +152,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("job")
     ap.add_argument("--collect", action="store_true")
+    ap.add_argument("--status", action="store_true", help="one status check without waiting")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -167,6 +169,13 @@ def main():
     ref = f"{user}/{slug_for(job['id'])}"
     record = {"job": job["id"], "kernel": ref, "url": f"https://www.kaggle.com/code/{ref}",
               "gpu_quota_before": gpu_quota(api)}
+    if args.status:
+        args.collect = True
+    if args.collect and (outdir / "run.json").exists():
+        # keep what the original run recorded (push time, version, accelerator)
+        previous = json.loads((outdir / "run.json").read_text(encoding="utf-8"))
+        record = {**previous, "gpu_quota_now": record["gpu_quota_before"],
+                  **{k: record[k] for k in ("job", "kernel", "url")}}
 
     if not args.collect:
         with tempfile.TemporaryDirectory() as tmp:
@@ -180,7 +189,7 @@ def main():
                           version=getattr(resp, "version_number", None))
             print(f"[{now()}] pushed {ref} (version {record['version']}) on {acc}", flush=True)
 
-    status, failure = wait_for(api, ref, int(job.get("wait_minutes", 60)))
+    status, failure = wait_for(api, ref, 0 if args.status else int(job.get("wait_minutes", 60)))
     record.update(status=status, checked_at=now())
     if failure:
         record["failure"] = failure
