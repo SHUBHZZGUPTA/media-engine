@@ -1,0 +1,31 @@
+{
+ "id": "teslafly-hook-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "hook_en",
+   "direction": "Narrate this as a popular science and geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy. The opening is a bold dare to the viewer: punchy, confident, a beat of wonder on 'upside down', a short beat before 'So how?'.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You'd lose this bet."
+    ],
+    [
+     "Narrator",
+     "That's a real one point seven tonne car. It flew over a truck and hung upside down."
+    ],
+    [
+     "Narrator",
+     "Nobody inside. ... So how?"
+    ]
+   ]
+  }
+ ]
+}

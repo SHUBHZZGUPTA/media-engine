@@ -1,0 +1,31 @@
+{
+ "id": "teslafly-hook-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "hook_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy. The opening is a bold dare to the viewer: punchy, confident, a beat of wonder on 'उल्टी', a short beat before 'तो कैसे?'.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "ये शर्त आप हार जाएंगे।"
+    ],
+    [
+     "Narrator",
+     "ये असली one point seven tonne की car है। ये एक truck के ऊपर से उड़ी और उल्टी लटक गई।"
+    ],
+    [
+     "Narrator",
+     "अंदर कोई नहीं। ... तो कैसे?"
+    ]
+   ]
+  }
+ ]
+}
