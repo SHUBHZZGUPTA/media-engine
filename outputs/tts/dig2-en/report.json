@@ -1,0 +1,29 @@
+{
+ "job": "dig2-en",
+ "items": [
+  {
+   "name": "part1",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 67.73,
+   "took": 25.1
+  },
+  {
+   "name": "part2",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 119.81,
+   "took": 46.1
+  },
+  {
+   "name": "part3",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 103.09,
+   "took": 30.7
+  }
+ ]
+}
