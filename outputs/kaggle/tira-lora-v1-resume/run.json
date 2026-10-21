@@ -3,22 +3,29 @@
  "kernel": "shubhzzgupta07/me-tira-lora-v1-resume",
  "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-lora-v1-resume",
  "gpu_quota_before": {
-  "used_h": 3.61,
-  "remaining_h": 26.39,
-  "total_h": 30.0
- },
- "pushed_at": "2026-10-21T10:58:54+00:00",
- "accelerator": "NvidiaTeslaT4",
- "version": 1,
- "status": "ERROR",
- "checked_at": "2026-10-21T11:02:56+00:00",
- "files": [
-  "me-tira-lora-v1-resume.log",
-  "train_run.json"
- ],
- "gpu_quota_after": {
   "used_h": 3.65,
   "remaining_h": 26.35,
   "total_h": 30.0
- }
+ },
+ "status": "STAGE_FAILED",
+ "stage_error": "RuntimeError: Kaggle refused the dataset: Please select a valid license",
+ "stage_diag": {
+  "downloaded": [
+   {
+    "file": "tira_zimage_lora_000000200.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "me-tira-lora-v1.log",
+    "mb": 0.0
+   }
+  ],
+  "create": {
+   "existed": false,
+   "status": "Error",
+   "error": "Please select a valid license",
+   "url": "https://www.kaggle.com/"
+  }
+ },
+ "checked_at": "2026-10-21T11:25:03+00:00"
 }
