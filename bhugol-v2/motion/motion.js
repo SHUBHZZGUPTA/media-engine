@@ -5,7 +5,7 @@
    const MO = BhugolMotion(tl, { xfade: true });   (xfade: true only in 3D, with shader_xfade.js)
    MO.shake(at, dur, profile, k, {decay}) ... MO.shakeOn(wrapperEl, totalDur)   one driver sums every shake event (call once, last)
    MO.hwCircle(parent, pos(t)->{x,y}, rx, ry, at, until, {col, w, seed})  /  MO.hwArrow(parent, ends(t)->{x0,y0,x1,y1}, at, until, o)
-   MO.charSlam(lineEl, at, {wordGap, spread, blur})   MO.countGrow(numEl, to, at, {dur, startScale, suffixEl})
+   MO.charSlam(lineEl, at, {wordGap, spread, blur})   MO.countGrow(numEl, to, at, {dur, from, prefix, startScale, suffixEl})
    MO.flap(rowEl, 'TEXT', at, {stagger})              MO.sweep(wordSpan, at, col)   (keywords: bar behind the word, no outline)
    Built from the HyperFrames motion doctrine (faceless-explainer motion-language + cut-catalog, hyperframes-animation
    transitions/rules, embedded-captions motion). Every effect is a GSAP tween on the paused main timeline, so every frame
@@ -189,8 +189,8 @@
 
     // ---- counting with dynamic scale (rules/counting-dynamic-scale): number grows while counting; suffix lands after ----
     function countGrow(numEl, to, at, o) { o = o || {}; const dur = o.dur || 1.2, st = { v: o.from || 0 };
-      const fmt = v => Math.round(v).toLocaleString('en-US');
-      tl.fromTo(st, { v: o.from || 0 }, { v: to, duration: dur, ease: 'power3.out', ...IR, onUpdate: () => { numEl.textContent = fmt(st.v); } }, at);
+      const fmt = v => (o.prefix || '') + Math.round(v).toLocaleString('en-US');
+      tl.fromTo(st, { v: o.from || 0 }, { v: to, duration: dur, ease: o.ease || 'power3.out', ...IR, onUpdate: () => { numEl.textContent = fmt(st.v); } }, at);
       tl.set(numEl, { textContent: fmt(o.from || 0) }, Math.max(0, at - .01));
       tl.fromTo(numEl, { scale: o.startScale || .4, opacity: 0 }, { scale: 1, opacity: 1, duration: dur, ease: 'power3.out', transformOrigin: '50% 60%', ...IR }, at);
       if (o.suffixEl) tl.fromTo(o.suffixEl, { opacity: 0, x: 60, scale: 1.25 }, { opacity: 1, x: 0, scale: 1, duration: .26, ease: 'power4.out', ...IR }, at + dur - .05);

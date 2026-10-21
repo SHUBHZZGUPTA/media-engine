@@ -29,6 +29,7 @@ def C(li, ci=0, off=0.0): return round(Cd[f'{li}.{ci}'] + off, 3)
 MOT = '/home/claude/media-engine/bhugol-v2/motion'; sys.path.insert(0, MOT); import motion_plan
 PLAN = motion_plan.plan(SPEC, C)
 for w in motion_plan.check(PLAN): print('motion check:', w)
+_BT = [C(*b['at']) for b in SPEC.get('beats', [])]   # pre-render plan gap check (any length): titles + beats + cuts
 
 # ---- art ----
 AR = {}
@@ -69,6 +70,11 @@ shutil.copy('/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf', os.path.join(ou
 shutil.copy(os.path.join(KIT, 'assets/bhugol_badge.png'), os.path.join(out, 'assets/bhugol_badge.png'))
 shutil.copy('/home/claude/work/node_modules/gsap/dist/gsap.min.js', os.path.join(out, 'gsap.min.js'))
 shutil.copy(os.path.join(MOT, 'motion.js'), os.path.join(out, 'motion.js'))
+_end = min(END_START, PREVIEW) if globals().get('PREVIEW') else END_START
+_G = motion_plan.gaps(PLAN, [{'t': t} for t in _BT], _end, extra=[t[2] for t in TITLES])
+for a, b in _G: print(f'PLAN GAP {a:.1f}-{b:.1f} s ({b - a:.1f} s) with nothing new on screen: add a beat (circle/arrow/grow/flap/card/punch) or a cut')
+if _G and '--allow-gaps' not in sys.argv: sys.exit('plan check failed: fix the gaps above in the spec (or rerun with --allow-gaps and say why)')
+print('plan check: no stretch over 5 s without a new visual moment (0-%.1f s)' % _end)
 tpl = open(os.path.join(HERE, 'template.html')).read().replace('__MBLUR__', open(os.path.join(MOT, 'vendor/motion-blur.html')).read())
 shutil.copy(os.path.join(HERE, '..', 'example-centralia-3d', 'flag_us.png') if not os.path.exists(os.path.join(HERE, 'flag_us.png')) else os.path.join(HERE, 'flag_us.png'), os.path.join(out, 'assets', 'flag_us.png'))
 open(os.path.join(out, 'index.html'), 'w').write(tpl.replace('__DATA__', json.dumps(D, ensure_ascii=False)).replace('__DUR__', '%.3f' % DUR))

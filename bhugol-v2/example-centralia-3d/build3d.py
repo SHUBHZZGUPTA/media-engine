@@ -19,6 +19,7 @@ LN = [{'a': L['start'], 'b': L['end']} for L in TIM['lines']]
 def C(li, ci=0, off=0.0): return round(Cd[f'{li}.{ci}'] + off, 3)
 PLAN = motion_plan.plan(SPEC, C)
 for w in motion_plan.check(PLAN): print('motion check:', w)
+_BT = [C(*b['at']) for b in SPEC.get('beats', [])]   # pre-render plan gap check (any length): titles + beats + cuts
 AR = {}
 for n in ('c_fire', 'c_centralia'):
     im = Image.open(os.path.join(ART, n + '.png')); AR[n] = round(im.width / im.height, 4)
@@ -42,6 +43,11 @@ shutil.copy('/home/claude/work/node_modules/gsap/dist/gsap.min.js', os.path.join
 shutil.copy('/home/claude/work/node_modules/three/build/three.min.js', os.path.join(out, 'three.min.js'))
 shutil.copy(os.path.join(MOT, 'motion.js'), os.path.join(out, 'motion.js')); shutil.copy(os.path.join(MOT, 'shader_xfade.js'), os.path.join(out, 'shader_xfade.js'))
 if PREVIEW: DUR = PREVIEW
+_end = min(END_START, PREVIEW) if globals().get('PREVIEW') else END_START
+_G = motion_plan.gaps(PLAN, [{'t': t} for t in _BT], _end, extra=[t[2] for t in TITLES])
+for a, b in _G: print(f'PLAN GAP {a:.1f}-{b:.1f} s ({b - a:.1f} s) with nothing new on screen: add a beat (circle/arrow/grow/flap/card/punch) or a cut')
+if _G and '--allow-gaps' not in sys.argv: sys.exit('plan check failed: fix the gaps above in the spec (or rerun with --allow-gaps and say why)')
+print('plan check: no stretch over 5 s without a new visual moment (0-%.1f s)' % _end)
 tpl = open(os.path.join(HERE, 'template3d.html')).read().replace('__MBLUR__', open(os.path.join(MOT, 'vendor/motion-blur.html')).read())
 shutil.copy(os.path.join(HERE, 'flag_us.png'), os.path.join(out, 'assets/flag_us.png'))
 open(os.path.join(out, 'index.html'), 'w').write(tpl.replace('__DATA__', json.dumps(D, ensure_ascii=False)).replace('__DUR__', '%.3f' % DUR))

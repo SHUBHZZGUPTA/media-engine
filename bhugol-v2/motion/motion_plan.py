@@ -78,3 +78,12 @@ def unwarp(S, TIM):
             for k in (0, 1):
                 if isinstance(seg[k], (int, float)): seg[k] = inv(seg[k])
     return S
+
+
+def gaps(P, beats, end, extra=(), max_gap=5.0):
+    """Pre-render plan check (any video length): every stretch from 0 s to the end card must have a planned visual
+    moment (a cut, a beat, a title or a hand-made `moment`) at least every `max_gap` seconds. Returns [(a, b)] gaps.
+    The builds stop on a gap unless run with --allow-gaps (then say why it is deliberate)."""
+    ev = sorted({round(p['t'], 2) for p in P} | {round(b['t'], 2) for b in beats} | {round(t, 2) for t in extra})
+    pts = [0.0] + [t for t in ev if 0 < t < end] + [end]
+    return [(a, b) for a, b in zip(pts, pts[1:]) if b - a > max_gap]

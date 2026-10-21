@@ -272,9 +272,9 @@ function renderMap(S, t) {
     S.RT.render(S.st, S.ct);
     for (const L of S.labels) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const q = toScreen(S.ct, S.pin.position.clone().add(new T3.Vector3(0, 0, .34)));
       L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight).toFixed(1)}px)`; }
-    if (S.card) { const a = valAt(S.card.a, t); S.card.el.style.opacity = a * x; S.card.ln.style.opacity = a * x; if (a > 0) { const q = toScreen(S.ct, S.pin.position.clone().add(new T3.Vector3(0, 0, .26)));
-      const w = S.card.el.offsetWidth, h = S.card.el.offsetHeight, cx = clamp(q.x - w / 2, 40, 1040 - w), cy = clamp(q.y - h - 170, 300, 1150 - h);
-      S.card.el.style.transform = `translate(${cx.toFixed(1)}px,${(cy + (1 - a) * 40).toFixed(1)}px)`; S.card.path.setAttribute('d', `M${(cx + w / 2).toFixed(1)} ${(cy + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); } } } 
+    for (const cd of S.cards) { const a = valAt(cd.a, t); cd.el.style.opacity = a * x; cd.ln.style.opacity = a * x; if (a > 0) { const q = toScreen(S.ct, S.pin.position.clone().add(new T3.Vector3(0, 0, .26)));
+      const w = cd.el.offsetWidth, h = cd.el.offsetHeight, cx = clamp(q.x - w / 2, 40, 1040 - w), cy = clamp(q.y - h - 170, 300, 1150 - h);
+      cd.el.style.transform = `translate(${cx.toFixed(1)}px,${(cy + (1 - a) * 40).toFixed(1)}px)`; cd.path.setAttribute('d', `M${(cx + w / 2).toFixed(1)} ${(cy + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); } } } 
 }
 
 /* ---------- build scenes ---------- */
@@ -303,14 +303,13 @@ HO.glow = glow(HO, PT.hole[0], PT.hole[1], .25, 0xFF5A10);
 TW1.uT.heat = Track(0); TW2.uT.grassP = Track(0); TW2.uT.bright = Track(1); TW2.uT.sat = Track(1);
 // map label
 MP.labels.push({ e: (() => { const e = mk('div', { class: 'plbl' }, MP.ov); e.textContent = tr('CENTRALIA'); Object.assign(e.style, { fontSize: '64px', webkitTextStrokeWidth: '12px' }); return e; })(), a: Track(0) });
-// map callout card (motion-graphics maps: callout-card) — flag chip, name, counted stat, tag; tied to the pin by a connector
-{ const el = mk('div', { class: 'card' }, MP.ov); el.innerHTML = `<div class="cin"><div class="crow"><span class="cflag">🇺🇸</span><span>CENTRALIA, PA</span></div><div class="cbig"><span class="cnum">0</span><span class="csuf">PEOPLE</span></div><div class="ctag">⛏️ COAL TOWN</div></div>`;
+// map callout cards (motion-graphics maps: callout-card): built per `card` beat in build(); each is pinned to the map pin
+MP.cards = [];
+function mkCard(b) { const el = mk('div', { class: 'card' }, MP.ov);
+  el.innerHTML = `<div class="cin"><div class="crow"><span class="cflag">${b.flag || ''}</span><span>${b.name || ''}</span></div><div class="cbig"><span class="cnum">0</span><span class="csuf">${b.unit || ''}</span></div>${b.tag ? `<div class="ctag">${b.tag}</div>` : ''}</div>`;
   const svg = mk('svg', { width: 1080, height: 1920, style: 'position:absolute;left:0;top:0;overflow:visible;opacity:0' }, MP.ov, true); MP.ov.insertBefore(svg, el);
   const path = mk('path', { stroke: '#FF7A1A', 'stroke-width': 6, 'stroke-dasharray': '14 10', fill: 'none' }, svg, true);
-  MP.card = { el, ln: svg, path, a: Track(0), num: el.querySelector('.cnum'), suf: el.querySelector('.csuf') }; }
-// hook kit elements (rules/counting-dynamic-scale, reg:split-flap-board)
-const K64 = mk('div', { class: 'kbox', style: 'top:150px' }, $('hook')); K64.innerHTML = '<span class="knum">0</span><span class="ksuf">YEARS</span>';
-const POP = mk('div', { class: 'kbox', style: 'top:170px' }, $('hook')); POP.innerHTML = '<div class="flapRow"></div>';
+  const c = { el, ln: svg, path, a: Track(0), num: el.querySelector('.cnum'), suf: el.querySelector('.csuf') }; MP.cards.push(c); return c; }
 // cross-section label, hole depth line
 XS.tun = label(XS, 'OLD MINE TUNNELS', 430, 560, 54);
 HO.lbl = label(HO, '45 m', PT.hole[0] + 190, PT.hole[1] + 230, 92, '#FFC23A');
@@ -502,24 +501,35 @@ function build() {
   tl.to(R2.cFire.c, { rotation: -8, transformOrigin: '50% 100%', duration: .2, yoyo: true, repeat: 1 }, C(17, 1, .1));
   leave(R2.cFire, D.end.start - .2, 'B'); tl.to($('heat'), { opacity: 0, duration: .3 }, D.end.start - .2);
 
-  // ===== v2 test: HyperFrames library ports, placed from the spec's beats (same list drives the sound) =====
+  // ===== v2: HyperFrames library ports, placed from the spec's beats (the same list drives the sound) =====
+  // Every beat carries its own content and position, so any video (any length) is planned in its spec, not in this file.
   const beat = k => (D.beats || []).filter(b => b.kind === k);
   const SC = { R1, MP, PIT, XS, TW1, HO, TW2, R2 };
   const proj = (S, ix, iy, t) => { setCam(S, valAt(S.cam0, t)); return toScreen(S.cam, world(S, ix, iy, .03)); };
-  const TGT = { R1: [PT.road[0], PT.road[1] - 20, 270, 130], PIT: [PT.pit[0], PT.pit[1], 250, 125] };
-  const ARW = { R1: t => { const q = proj(R1, PT.road[0], PT.road[1] - 40, t); return { x0: 880, y0: 470, x1: q.x + 80, y1: q.y - 120 }; },
-                XS: t => { const a = proj(XS, 770, 380, t), b = proj(XS, 520, 600, t); return { x0: a.x, y0: a.y, x1: b.x, y1: b.y }; } };
-  for (const b of beat('circle')) { const S = SC[b.scene], g = TGT[b.scene]; MO.hwCircle(S.ov, t => proj(S, g[0], g[1], t), g[2], g[3], b.t, b.u, { seed: 3 + b.t }); }
-  for (const b of beat('arrow')) { const S = SC[b.scene]; MO.hwArrow(S.ov, ARW[b.scene], b.t, b.u, { seed: 7 + b.t, col: b.scene === 'XS' ? '#FFC23A' : '#FF3B30' }); }
-  for (const b of beat('grow')) { const ch = D.chunks.find(c => Math.abs(c.sn - b.t) < .02); const wi = ch ? ch.txt.replace(/\|/g, ' ').split(' ').findIndex(w => w.includes(String(b.to))) : -1;
-    const dur = wi >= 0 ? Math.max(.6, ch.wt[wi] - b.t + .15) : 1.2; tl.set(K64, { opacity: 1 }, b.t);
-    MO.countGrow(K64.querySelector('.knum'), b.to, b.t, { dur, startScale: .35, suffixEl: K64.querySelector('.ksuf') }); MO.textOut(K64, C(0, 2, -.12)); }
-  for (const b of beat('flap')) { tl.set(POP, { opacity: 1 }, b.t); MO.flap(POP.querySelector('.flapRow'), 'POPULATION: 5', b.t, { stagger: .04 }); MO.textOut(POP, C(0, 3, -.12)); }
-  for (const b of beat('card')) { const Cd = MP.card; key(Cd.a, 1, b.t, .35, 'power3.out'); key(Cd.a, 0, b.u, .25); key(MP.labels[0].a, 0, b.t - .1, .2);
-    MO.countGrow(Cd.num, 1400, b.t + .1, { dur: 1.1, startScale: .5, suffixEl: Cd.suf }); }
+  const nextChunk = t => { const c = D.chunks.find(c => c.sn > t + .5); return c ? c.sn - .12 : t + 2; };   // default end = the next caption chunk at least 0.5 s later (never before the beat starts)
+  const wordTime = (b, needle) => { const ch = D.chunks.find(c => Math.abs(c.sn - b.t) < .02); const wi = ch ? ch.txt.replace(/\|/g, ' ').split(' ').findIndex(w => w.includes(needle)) : -1;
+    return wi >= 0 ? ch.wt[wi] : null; };
+  // circle: {scene, c:[x,y], r:[rx,ry]} in the scene plate's image px (3D projects them each frame); optional col
+  for (const b of beat('circle')) { const S = SC[b.scene]; if (!S || !S.ov || !b.c) continue;
+    MO.hwCircle(S.ov, t => proj(S, b.c[0], b.c[1], t), (b.r || [240, 120])[0], (b.r || [240, 120])[1], b.t, b.u || nextChunk(b.t), { seed: 3 + b.t, col: b.col }); }
+  // arrow: {scene, from:[x,y], to:[x,y]} image px; optional col (yellow reads better on dark plates)
+  for (const b of beat('arrow')) { const S = SC[b.scene]; if (!S || !S.ov || !b.from || !b.to) continue;
+    MO.hwArrow(S.ov, t => { const p0 = proj(S, b.from[0], b.from[1], t), p1 = proj(S, b.to[0], b.to[1], t); return { x0: p0.x, y0: p0.y, x1: p1.x, y1: p1.y }; }, b.t, b.u || nextChunk(b.t), { seed: 7 + b.t, col: b.col }); }
+  // grow: {to, unit, prefix, y} a number that grows while counting (lands on its spoken word), unit after; top title area
+  for (const b of beat('grow')) { const el = mk('div', { class: 'kbox', style: `top:${b.y || 150}px` }, $('hook'));
+    el.innerHTML = `<span class="knum">0</span><span class="ksuf">${tr(b.unit || '')}</span>`; const wt = wordTime(b, String(b.to).replace(/,/g, '').slice(0, 2));
+    const dur = wt ? Math.max(.6, wt - b.t + .15) : 1.2; tl.set(el, { opacity: 1 }, b.t);
+    MO.countGrow(el.querySelector('.knum'), b.to, b.t, { dur, from: b.from || 0, prefix: b.prefix, startScale: .35, suffixEl: el.querySelector('.ksuf') }); MO.textOut(el, b.u || nextChunk(b.t)); }
+  // flap: {text, y} split-flap board
+  for (const b of beat('flap')) { const el = mk('div', { class: 'kbox', style: `top:${b.y || 170}px` }, $('hook')); el.innerHTML = '<div class="flapRow"></div>';
+    tl.set(el, { opacity: 1 }, b.t); MO.flap(el.querySelector('.flapRow'), String(b.text || ''), b.t, { stagger: .04 }); MO.textOut(el, b.u || nextChunk(b.t)); }
+  // card: {flag, name, to, unit, tag} map stat card pinned to the pin (3D map scene)
+  for (const b of beat('card')) { const Cd = mkCard(b); key(Cd.a, 1, b.t, .35, 'power3.out'); key(Cd.a, 0, b.u || nextChunk(b.t), .25); if (MP.labels[0]) key(MP.labels[0].a, 0, b.t - .1, .2);
+    if (b.to) MO.countGrow(Cd.num, b.to, b.t + .1, { dur: 1.1, startScale: .5, suffixEl: Cd.suf }); else Cd.num.textContent = ''; }
   key(MP.flagA, .75, C(1, 1, .3), .5, 'power2.out'); key(MP.flagA, 0, C(1, 1, 1.25), .8, 'power1.inOut');
   MO.shake(0, C(1, 0, -.15), 'handheld-normal-mild', .12, { decay: false });
   MO.shake(C(2, 0, -.15), C(3, 0, -.15) - C(2, 0, -.15), 'handheld-normal-mild', .1, { decay: false });
+  MO.shake(C(15, 0, -.15), D.end.start - C(15, 0, -.15), 'handheld-normal-mild', .1, { decay: false });
   if (TT.t1962) TT.t1962.g.setAttribute('data-hf-motion-blur', '{"samplesPerFrame": 8}');
   const cs = beat('charslam')[0];
   // titles
@@ -552,7 +562,7 @@ function build() {
   MO.shakeOn($('cshake'), D.dur);
   // sort keyframes, then one render driver (reads time only)
   const allT = []; for (const S of PLATES) { allT.push(S.cam0, ...Object.values(S.uT), ...S.parts.map(p => p.a), ...S.glows.map(g => g.a), ...S.labels.map(l => l.a)); }
-  allT.push(MP.gk, MP.tk, MP.x, MP.hl, MP.rise, MP.pinA, MP.flagA, MP.card.a, MP.labels[0].a, HO.dl, TW1.thermo.a, TW1.thermo.lvl, TW1.thermo.spin, TW1.lblA, ...Object.values(TW2.bars).filter(v => v && v.keys));
+  allT.push(MP.gk, MP.tk, MP.x, MP.hl, MP.rise, MP.pinA, MP.flagA, ...MP.cards.map(c => c.a), MP.labels[0].a, HO.dl, TW1.thermo.a, TW1.thermo.lvl, TW1.thermo.spin, TW1.lblA, ...Object.values(TW2.bars).filter(v => v && v.keys));
   for (const T of allT) T.keys.sort((a, b) => a.a - b.a);
   const clk = { t: 0 };
   tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => { const t = clk.t;

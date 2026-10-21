@@ -13,3 +13,9 @@ count, "POPULATION: 5" flip board, measured camera shake, hand-drawn arrows/circ
 camera), US flag clipped into the Pennsylvania border, a stat card pinned to the map pin, caption highlight bars, motion blur on
 the hook letters and the 1962 slam. The `burn` cut becomes a warm fire flash in 2D (no WebGL overlay). `mkscore.py` has the
 sound-timing fix and the bundled-SFX layer (writes `mix_final.wav`). Grade at finish with `../grade/teal-orange-blockbuster.cube`.
+
+## Whole-video spec (22 Oct 2026)
+`centralia.json` now plans 47 beats across all 80 s (was ~22 s), so the full video gets the same circles, arrows, number
+trackers, flip boards and card as the preview. The template reads every label, number and position from the beats (no
+Centralia text hard-coded). The build stops if any stretch over 5 s has no visual moment (old spec: 5 gaps, worst 14.4 s at
+51-66 s; new spec: none).

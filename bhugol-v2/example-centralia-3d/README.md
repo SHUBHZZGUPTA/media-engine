@@ -21,3 +21,9 @@ Pennsylvania border, a pinned stat card, caption highlight bars, motion blur on 
 teal-orange LUT: `ffmpeg -i silent.mp4 -i mix_final.wav -filter_complex "[0:v]split[a][b];[b]lut3d=file=../grade/teal-orange-blockbuster.cube[g];[a][g]blend=all_mode=normal:all_opacity=0.8,format=yuv420p[v]" ...`.
 `flag_us.png` is drawn from the public-domain design; for other countries rasterise the MIT `flag-icons` npm SVGs.
 Checks on the first 25 s: retention_qa PASS (an event every 2.2 s), sfx_check 17/17.
+
+## Whole-video spec (22 Oct 2026)
+`centralia.json` now plans 47 beats across all 80 s (was ~22 s), so the full video gets the same circles, arrows, number
+trackers, flip boards and card as the preview. The template reads every label, number and position from the beats (no
+Centralia text hard-coded). The build stops if any stretch over 5 s has no visual moment (old spec: 5 gaps, worst 14.4 s at
+51-66 s; new spec: none).

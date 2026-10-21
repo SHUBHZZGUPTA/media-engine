@@ -392,7 +392,8 @@
     1,
     0
    ],
-   "to": 64
+   "to": 64,
+   "unit": "YEARS"
   },
   {
    "kind": "flap",
@@ -400,7 +401,8 @@
     0,
     2,
     -0.05
-   ]
+   ],
+   "text": "POPULATION: 5"
   },
   {
    "kind": "arrow",
@@ -414,6 +416,22 @@
     0,
     1,
     -0.15
+   ],
+   "from": [
+    840,
+    420
+   ],
+   "to": [
+    580,
+    680
+   ],
+   "from2d": [
+    812,
+    360
+   ],
+   "to2d": [
+    582,
+    700
    ]
   },
   {
@@ -428,6 +446,18 @@
     1,
     0,
     -0.3
+   ],
+   "c": [
+    512,
+    770
+   ],
+   "r": [
+    270,
+    130
+   ],
+   "r2d": [
+    150,
+    75
    ]
   },
   {
@@ -442,7 +472,12 @@
     2,
     0,
     -0.1
-   ]
+   ],
+   "flag": "🇺🇸",
+   "name": "CENTRALIA, PA",
+   "to": 1400,
+   "unit": "PEOPLE",
+   "tag": "⛏️ COAL TOWN"
   },
   {
    "kind": "circle",
@@ -456,6 +491,18 @@
     3,
     0,
     -0.25
+   ],
+   "c": [
+    630,
+    720
+   ],
+   "r": [
+    250,
+    125
+   ],
+   "r2d": [
+    165,
+    85
    ]
   },
   {
@@ -470,7 +517,411 @@
     4,
     0,
     -0.4
+   ],
+   "from": [
+    770,
+    380
+   ],
+   "to": [
+    520,
+    600
+   ],
+   "from2d": [
+    835,
+    430
+   ],
+   "to2d": [
+    540,
+    712
+   ],
+   "col": "#FFC23A"
+  },
+  {
+   "kind": "circle",
+   "scene": "XS",
+   "at": [
+    6,
+    0,
+    0
+   ],
+   "until": [
+    7,
+    0,
+    -0.3
+   ],
+   "c": [
+    470,
+    640
+   ],
+   "r": [
+    300,
+    150
+   ],
+   "c2d": [
+    520,
+    760
+   ],
+   "r2d": [
+    330,
+    120
+   ],
+   "col": "#FFC23A"
+  },
+  {
+   "kind": "arrow",
+   "scene": "TW1",
+   "at": [
+    7,
+    1,
+    0.1
+   ],
+   "until": [
+    7,
+    2,
+    -0.25
+   ],
+   "from": [
+    760,
+    300
+   ],
+   "to": [
+    560,
+    620
    ]
+  },
+  {
+   "kind": "circle",
+   "scene": "TW1",
+   "at": [
+    8,
+    1,
+    0
+   ],
+   "until": [
+    9,
+    0,
+    -0.3
+   ],
+   "c": [
+    460,
+    470
+   ],
+   "r": [
+    300,
+    150
+   ],
+   "r2d": [
+    190,
+    95
+   ]
+  },
+  {
+   "kind": "circle",
+   "scene": "HO",
+   "at": [
+    9,
+    1,
+    0.1
+   ],
+   "c": [
+    512,
+    770
+   ],
+   "r": [
+    160,
+    90
+   ],
+   "r2d": [
+    110,
+    60
+   ]
+  },
+  {
+   "kind": "arrow",
+   "scene": "HO",
+   "at": [
+    10,
+    0,
+    0.1
+   ],
+   "until": [
+    10,
+    1,
+    -0.15
+   ],
+   "from": [
+    512,
+    760
+   ],
+   "to": [
+    512,
+    420
+   ],
+   "col": "#FFC23A"
+  },
+  {
+   "kind": "circle",
+   "scene": "TW2",
+   "at": [
+    14,
+    1,
+    0
+   ],
+   "until": [
+    14,
+    3,
+    -0.1
+   ],
+   "c": [
+    460,
+    460
+   ],
+   "r": [
+    380,
+    250
+   ],
+   "r2d": [
+    240,
+    150
+   ]
+  },
+  {
+   "kind": "grow",
+   "at": [
+    14,
+    0,
+    0
+   ],
+   "until": [
+    14,
+    2,
+    -0.12
+   ],
+   "to": 500,
+   "unit": "HOMES"
+  },
+  {
+   "kind": "flap",
+   "at": [
+    15,
+    0,
+    0.1
+   ],
+   "until": [
+    15,
+    2,
+    -0.12
+   ],
+   "text": "POPULATION: 5"
+  },
+  {
+   "kind": "arrow",
+   "scene": "R2",
+   "at": [
+    15,
+    2,
+    0
+   ],
+   "until": [
+    16,
+    0,
+    -0.15
+   ],
+   "from": [
+    840,
+    420
+   ],
+   "to": [
+    580,
+    680
+   ],
+   "from2d": [
+    812,
+    360
+   ],
+   "to2d": [
+    582,
+    700
+   ]
+  },
+  {
+   "kind": "circle",
+   "scene": "R2",
+   "at": [
+    16,
+    1,
+    0
+   ],
+   "until": [
+    16,
+    2,
+    -0.1
+   ],
+   "c": [
+    512,
+    770
+   ],
+   "r": [
+    270,
+    130
+   ],
+   "r2d": [
+    150,
+    75
+   ]
+  },
+  {
+   "kind": "moment",
+   "at": [
+    4,
+    0,
+    -0.35
+   ],
+   "what": "fire character pops up"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    5,
+    0,
+    0.05
+   ],
+   "what": "pickaxe emoji"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    5,
+    1,
+    0.05
+   ],
+   "what": "water-drop emoji"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    5,
+    3,
+    -0.05
+   ],
+   "what": "cash emoji flies off"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    5,
+    4,
+    0.15
+   ],
+   "what": "fire spreads + shake"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    7,
+    1,
+    0.05
+   ],
+   "what": "pump emoji + 3D thermometer"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    8,
+    0,
+    -0.35
+   ],
+   "what": "town character enters"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    8,
+    1,
+    0
+   ],
+   "what": "character jumps"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    9,
+    2,
+    -0.05
+   ],
+   "what": "depth line + 45 m count"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    10,
+    1,
+    0.1
+   ],
+   "what": "camera flashes"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    11,
+    0,
+    0.2
+   ],
+   "what": "cost bars appear"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    12,
+    0,
+    0.1
+   ],
+   "what": "second bar + truck emoji"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    12,
+    1,
+    -0.1
+   ],
+   "what": "$42M bar grows"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    13,
+    0,
+    -0.1
+   ],
+   "what": "bars vanish"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    13,
+    1,
+    0.25
+   ],
+   "what": "grey-out flash + shake"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    14,
+    0,
+    0.3
+   ],
+   "what": "homes turn to grass"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    17,
+    0,
+    -0.35
+   ],
+   "what": "fire character pops up"
   }
  ]
 }
