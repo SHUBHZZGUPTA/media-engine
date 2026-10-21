@@ -21,7 +21,11 @@
   "c_fire": "Underground coal fire personified: black coal-lump body with glowing orange cracks, flame-tuft hair, ember sparks, rubbing hands greedily; delighted greedy grin; faces left. (Centralia, 2026-10-21)",
   "c_centralia": "Small 1960s coal town personified: red-brick row-house body with windows + door, miner's hard hat with headlamp, coal smudges, side chimney, sweat drop; worried frown; faces right. (Centralia)",
   "c_liberty": "Statue of Liberty personified in original 1880s shiny copper-brown (not green): robe, 7-spike crown, torch raised in right hand, blank tablet; polite confused, mouth open; faces right. (Liberty, 2026-10-21)",
-  "c_nj": "New Jersey waterfront personified: red-brick harbour-warehouse body with two windows, wooden pier-post belt, grey flat cap, stubble, arms crossed holding a fishing rod; deadpan grumpy; faces left. (Liberty)"
+  "c_nj": "New Jersey waterfront personified: red-brick harbour-warehouse body with two windows, wooden pier-post belt, grey flat cap, stubble, arms crossed holding a fishing rod; deadpan grumpy; faces left. (Liberty)",
+  "c_cap": "Rusty welded borehole cap personified: round flat iron lid body with rim bolts, welded handle on top; tired grumpy deadpan; faces right. (Dig through Earth, 2026-10-21)",
+  "c_mantle": "Earth's mantle personified: glowing dark-red molten rock blob with orange lava veins, sleepy half-closed eyes, proud smile; faces left. (Dig)",
+  "c_core": "Earth's inner core personified: white-hot glowing iron ball with flame wisps, sunglasses pushed up; smug grin; faces right. (Dig)",
+  "c_fish": "Small orange-and-white striped reef fish standing on its tail, fins on hips; indignant, one eyebrow raised; faces left. (Dig)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -49,6 +53,10 @@
   "liberty_crates": "New York dock June 1885: stacks of plain wooden crates both sides, three-masted steam frigate behind, crane with hanging crate left, open plank dock lower middle.",
   "liberty_harbour": "Bird's-eye of Liberty Island in Upper NY Bay: island centre ~455,850 (spans x 110-780, y 670-1020), statue ~520,640, NJ park shore top-left, Manhattan skyline top-right, ferry ~820,480, pier to ~918,855.",
   "centralia_dio_cold": "3D isometric cutaway diorama: coal town on top of an earth block, strip-mine pit right, two rows of dark empty mine tunnels + 2 shafts inside, navy background.",
-  "centralia_dio_hot": "Same diorama edited: all tunnels and shafts burning orange, smoke from pit and cracks (pixel-aligned with centralia_dio_cold)."
+  "centralia_dio_hot": "Same diorama edited: all tunnels and shafts burning orange, smoke from pit and cracks (pixel-aligned with centralia_dio_cold).",
+  "kola_rig": "1970s Soviet Arctic drilling site at polar dusk: tall steel derrick at left over a lit long building, snowy tundra, faint green aurora. Landscape 1536x1024; rig ~240,180; open snow lower middle.",
+  "kola_cap": "Abandoned Arctic research site today: concrete ruins, rusty scrap, snow + moss; small rusty welded cap on cracked concrete lower-left (~370,850 of 1536x1024).",
+  "study": "1930s European seismologist's study: desk with seismogram strips, brass drum seismograph, globe, bookshelves, rainy rooftops window; nobody present. 1536x1024.",
+  "pacific": "Open South Pacific at midday from just above the water: deep blue waves, tiny distant rocky islet with seabirds on the horizon; open water lower middle. 1536x1024."
  }
 }

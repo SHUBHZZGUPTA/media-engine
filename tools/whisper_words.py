@@ -17,13 +17,17 @@ with wave.open(job["audio"]) as w:  # decode ourselves: avoids a PyAV version cl
 a = a.reshape(-1, ch).mean(1)
 if sr != 16000:
     a = np.interp(np.arange(0, len(a) / sr, 1 / 16000), np.arange(len(a)) / sr, a).astype(np.float32)
-segs, info = m.transcribe(a, language=job.get("lang", "en"), word_timestamps=True, beam_size=5,
-                          condition_on_previous_text=False, vad_filter=False)
+# optional "segments": [[start_s, end_s], ...] -> transcribe each slice separately (long Hindi takes drop words otherwise)
+spans = job.get("segments") or [[0, len(a) / 16000]]
 rows, S = [], []
-for s in segs:
-    S.append({"start": s.start, "end": s.end, "text": s.text})
-    for w in s.words or []:
-        rows.append(f"{w.start:.3f} {w.end:.3f} {w.word.strip()}")
+for s0, s1 in spans:
+    piece = a[int(s0 * 16000):int(s1 * 16000)]
+    segs, info = m.transcribe(piece, language=job.get("lang", "en"), word_timestamps=True, beam_size=5,
+                              condition_on_previous_text=False, vad_filter=False)
+    for s in segs:
+        S.append({"start": s.start + s0, "end": s.end + s0, "text": s.text})
+        for w in s.words or []:
+            rows.append(f"{w.start + s0:.3f} {w.end + s0:.3f} {w.word.strip()}")
 open(os.path.join(out, "words.txt"), "w").write("\n".join(rows) + "\n")
 json.dump(S, open(os.path.join(out, "segments.json"), "w"), indent=1)
 print(len(rows), "words")
