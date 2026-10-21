@@ -3,21 +3,27 @@
  "kernel": "shubhzzgupta07/me-tira-gym-bikini-1",
  "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-gym-bikini-1",
  "gpu_quota_before": {
-  "used_h": 0.01,
-  "remaining_h": 29.99,
-  "total_h": 30.0
- },
- "pushed_at": "2026-10-21T04:21:34+00:00",
- "accelerator": "NvidiaTeslaT4",
- "version": 1,
- "status": "ERROR",
- "checked_at": "2026-10-21T04:27:36+00:00",
- "files": [
-  "me-tira-gym-bikini-1.log"
- ],
- "gpu_quota_after": {
   "used_h": 0.1,
   "remaining_h": 29.9,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-10-21T04:30:06+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 2,
+ "status": "COMPLETE",
+ "checked_at": "2026-10-21T04:40:09+00:00",
+ "files": [
+  "me-tira-gym-bikini-1.log",
+  "photo_seed11.png",
+  "photo_seed22.png",
+  "photo_seed33.png",
+  "photo_seed44.png",
+  "prompt.txt",
+  "run_log.json"
+ ],
+ "gpu_quota_after": {
+  "used_h": 0.26,
+  "remaining_h": 29.74,
   "total_h": 30.0
  }
 }
