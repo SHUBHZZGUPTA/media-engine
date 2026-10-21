@@ -1,0 +1,21 @@
+{
+ "job": "dig2-en-p1",
+ "items": [
+  {
+   "name": "part1a",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 62.89,
+   "took": 24.1
+  },
+  {
+   "name": "part1b",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 55.13,
+   "took": 32.0
+  }
+ ]
+}
