@@ -10,11 +10,28 @@
  "pushed_at": "2026-10-21T08:20:00+00:00",
  "accelerator": "NvidiaTeslaT4",
  "version": 1,
- "status": "RUNNING",
- "checked_at": "2026-10-21T09:31:22+00:00",
+ "status": "ERROR",
+ "checked_at": "2026-10-21T10:31:40+00:00",
  "gpu_quota_now": {
-  "used_h": 2.72,
-  "remaining_h": 27.28,
+  "used_h": 3.61,
+  "remaining_h": 26.39,
+  "total_h": 30.0
+ },
+ "files": [
+  "config.yaml",
+  "me-tira-lora-v1.log",
+  "train_log.txt",
+  "train_run.json"
+ ],
+ "kept_on_kaggle": [
+  {
+   "file": "lora/tira_zimage_lora_000000200.safetensors",
+   "mb": 85.1
+  }
+ ],
+ "gpu_quota_after": {
+  "used_h": 3.61,
+  "remaining_h": 26.39,
   "total_h": 30.0
  }
 }

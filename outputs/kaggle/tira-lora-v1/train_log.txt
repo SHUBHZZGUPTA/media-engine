@@ -1,0 +1,1248 @@
+Flax classes are deprecated and will be removed in Diffusers v0.40.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Flax classes are deprecated and will be removed in Diffusers v0.40.0. We recommend migrating to PyTorch classes or pinning your version of Diffusers.
+Running 1 job
+{
+    "type": "sd_trainer",
+    "training_folder": "/tmp/train/output",
+    "device": "cuda:0",
+    "network": {
+        "type": "lora",
+        "linear": 16,
+        "linear_alpha": 16
+    },
+    "save": {
+        "dtype": "float16",
+        "save_every": 200,
+        "max_step_saves_to_keep": 20
+    },
+    "datasets": [
+        {
+            "folder_path": "/tmp/train/dataset",
+            "caption_ext": "txt",
+            "caption_dropout_rate": 0.05,
+            "cache_latents_to_disk": true,
+            "resolution": [
+                512,
+                768
+            ]
+        }
+    ],
+    "train": {
+        "batch_size": 1,
+        "steps": 1100,
+        "gradient_accumulation_steps": 1,
+        "train_unet": true,
+        "train_text_encoder": false,
+        "gradient_checkpointing": true,
+        "noise_scheduler": "flowmatch",
+        "timestep_type": "weighted",
+        "optimizer": "adamw8bit",
+        "lr": 0.0001,
+        "dtype": "bf16",
+        "unload_text_encoder": false,
+        "skip_first_sample": true,
+        "ema_config": {
+            "use_ema": false
+        }
+    },
+    "model": {
+        "name_or_path": "Tongyi-MAI/Z-Image-Turbo",
+        "arch": "zimage",
+        "quantize": true,
+        "qtype": "qfloat8",
+        "quantize_te": true,
+        "low_vram": true,
+        "assistant_lora_path": "ostris/zimage_turbo_training_adapter/zimage_turbo_training_adapter_v2.safetensors"
+    },
+    "sample": {
+        "sampler": "flowmatch",
+        "sample_every": 200,
+        "width": 768,
+        "height": 1024,
+        "prompts": [
+            "tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo",
+            "tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo",
+            "tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo",
+            "tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo"
+        ],
+        "seed": 42,
+        "walk_seed": true,
+        "guidance_scale": 1,
+        "sample_steps": 9
+    }
+}
+
+#############################################
+# Running job: tira_zimage_lora
+#############################################
+
+
+Running  1 process
+Loading ZImage model
+Loading transformer
+
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:   0%|          |  0.00B / 12.3GB            [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes:           |  0.00B            
+split_files/diffusion_models/z_image_tur(…): downloading bytes:           | 35.9MB            
+split_files/diffusion_models/z_image_tur(…): downloading bytes:           | 94.2MB, 3.46MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  157MB, 9.02MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  221MB, 14.9MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  283MB, 20.9MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▎         |  346MB, 26.6MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▎         |  410MB, 32.3MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  474MB, 38.1MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  536MB, 43.8MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  600MB, 49.2MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▌         |  663MB, 54.8MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▌         |  726MB, 60.1MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▋         |  789MB, 65.5MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▋         |  853MB, 70.7MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▊         |  977MB, 81.0MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:   1%|          | 67.1MB / 12.3GB            [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.10GB, 90.5MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.16GB, 95.5MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.23GB,  101MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █         | 1.29GB,  105MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▏        | 1.39GB,  115MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:   7%|▋         |  805MB / 12.3GB, 6.20MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▏        | 1.48GB,  121MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▎        | 1.54GB,  124MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:   9%|▊         | 1.07GB / 12.3GB, 72.7MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▎        | 1.66GB,  131MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.72GB,  135MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.79GB,  140MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 1.85GB,  144MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 1.91GB,  149MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 1.97GB,  153MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▋        | 2.04GB,  157MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▋        | 2.10GB,  161MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▊        | 2.16GB,  166MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▊        | 2.28GB,  174MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  10%|▉         | 1.21GB / 12.3GB, 95.4MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▉        | 2.36GB,  178MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▉        | 2.42GB,  180MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██        | 2.48GB,  184MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██        | 2.55GB,  188MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  11%|█▏        | 1.41GB / 12.3GB, 96.5MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▏       | 2.65GB,  196MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  12%|█▏        | 1.48GB / 12.3GB,  110MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▏       | 2.71GB,  198MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▎       | 2.77GB,  201MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▎       | 2.83GB,  205MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▍       | 2.94GB,  211MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▍       | 3.02GB,  215MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  18%|█▊        | 2.21GB / 12.3GB,  115MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▌       | 3.13GB,  219MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▌       | 3.19GB,  223MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▋       | 3.25GB,  226MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▋       | 3.32GB,  229MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▋       | 3.38GB,  233MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▊       | 3.44GB,  236MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▊       | 3.50GB,  239MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▉       | 3.57GB,  243MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▉       | 3.63GB,  246MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▉       | 3.69GB,  249MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███       | 3.75GB,  252MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███       | 3.82GB,  255MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▏      | 3.88GB,  258MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▏      | 3.94GB,  261MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.01GB,  265MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.07GB,  268MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.13GB,  271MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▍      | 4.26GB,  276MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▌      | 4.37GB,  282MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▌      | 4.45GB,  285MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▋      | 4.53GB,  287MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  26%|██▌       | 3.15GB / 12.3GB,  171MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▋      | 4.60GB,  288MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  29%|██▉       | 3.55GB / 12.3GB,  214MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▊      | 4.68GB,  288MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▊      | 4.73GB,  289MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.77GB,  291MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.82GB,  292MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  31%|███       | 3.76GB / 12.3GB,  244MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.90GB,  295MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████      | 4.95GB,  295MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████      | 5.00GB,  297MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▏     | 5.08GB,  299MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▏     | 5.17GB,  301MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.25GB,  303MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.34GB,  305MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.39GB,  306MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▍     | 5.44GB,  307MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▍     | 5.50GB,  310MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.56GB,  312MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.62GB,  314MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.68GB,  316MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▋     | 5.74GB,  318MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▋     | 5.79GB,  320MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.85GB,  322MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.91GB,  324MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.97GB,  326MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▉     | 6.08GB,  330MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▉     | 6.14GB,  332MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████     | 6.20GB,  334MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████     | 6.25GB,  336MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.37GB,  339MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.42GB,  341MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▎    | 6.53GB,  344MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▎    | 6.59GB,  346MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▍    | 6.70GB,  349MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▍    | 6.76GB,  351MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▌    | 6.87GB,  354MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 6.93GB,  356MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 6.98GB,  357MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 7.04GB,  359MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.10GB,  361MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.16GB,  362MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.21GB,  364MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▉    | 7.27GB,  366MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▉    | 7.33GB,  367MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████    | 7.39GB,  369MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████    | 7.50GB,  372MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▏   | 7.56GB,  373MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▏   | 7.67GB,  376MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▎   | 7.78GB,  379MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▎   | 7.83GB,  380MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▍   | 7.89GB,  381MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▍   | 8.00GB,  384MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▌   | 8.06GB,  385MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▌   | 8.12GB,  387MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▋   | 8.17GB,  388MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▋   | 8.23GB,  389MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▊   | 8.35GB,  392MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▊   | 8.40GB,  394MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▊   | 8.46GB,  395MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▉   | 8.57GB,  398MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████   | 8.63GB,  399MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████   | 8.69GB,  400MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▏  | 8.80GB,  402MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▏  | 8.92GB,  405MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▎  | 8.97GB,  406MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▎  | 9.03GB,  407MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.15GB,  410MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.21GB,  411MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▌  | 9.32GB,  414MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▌  | 9.38GB,  415MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▋  | 9.44GB,  416MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▋  | 9.50GB,  417MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▊  | 9.60GB,  419MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▉  | 9.70GB,  421MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▉  | 9.75GB,  421MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▉  | 9.81GB,  422MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████  | 9.87GB,  423MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████  | 9.93GB,  424MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▏ | 10.0GB,  427MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▏ | 10.1GB,  427MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▎ | 10.2GB,  426MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▎ | 10.2GB,  426MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.3GB,  426MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.4GB,  424MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  44%|████▍     | 5.43GB / 12.3GB,  122MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.4GB,  422MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.5GB,  421MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  45%|████▍     | 5.50GB / 12.3GB,  235MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.5GB,  421MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.6GB,  408MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.6GB,  329MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  52%|█████▏    | 6.44GB / 12.3GB,  234MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.6GB,  290MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.6GB,  262MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.6GB,  237MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  65%|██████▌   | 8.05GB / 12.3GB,  233MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.7GB,  181MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.7GB,  173MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  76%|███████▌  | 9.32GB / 12.3GB,  281MB/s  [A
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  89%|████████▉ | 10.9GB / 12.3GB,  273MB/s  [A
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file: 100%|██████████| 12.3GB / 12.3GB,  229MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.7GB,  173MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████████| 10.7GB,  173MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████████| 10.7GB,  173MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file: 100%|██████████| 12.3GB / 12.3GB,  317MB/s  
+
+config.json:   0%|          | 0.00/473 [00:00<?, ?B/s]
+config.json: 100%|██████████| 473/473 [00:00<00:00, 3.17MB/s]
+Loading assistant LoRA
+
+
+zimage_turbo_training_adapter_v2.safeten(…): reconstructing file:   0%|          |  0.00B /  340MB            [A
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes:           |  0.00B            
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ▏         | 6.86MB            
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ▌         | 19.9MB,  650kB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ▉         | 33.8MB, 1.87MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: █▌        | 53.2MB, 3.17MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██▏       | 73.2MB, 4.96MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██▋       | 91.8MB, 6.79MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ███▌      |  122MB, 9.80MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ████▌     |  153MB, 12.5MB/s  
+
+zimage_turbo_training_adapter_v2.safeten(…): reconstructing file:  41%|████      |  138MB /  340MB            [A
+
+zimage_turbo_training_adapter_v2.safeten(…): reconstructing file: 100%|██████████|  340MB /  340MB, 12.8MB/s  [A
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██████████|  164MB, 14.6MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██████████|  164MB, 14.6MB/s  
+
+zimage_turbo_training_adapter_v2.safeten(…): reconstructing file: 100%|██████████|  340MB /  340MB, 31.3MB/s  
+create LoRA network. base dim (rank): 64, alpha: 64
+neuron dropout: p=None, rank dropout: p=None, module dropout: p=None
+create LoRA for Text Encoder: 0 modules.
+create LoRA for U-Net: 276 modules.
+enable LoRA for U-Net
+Merging in assistant LoRA
+Missing keys: []
+Quantizing (float8)
+ - quantizing 30 blocks
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  3%|▎         | 1/30 [00:00<00:13,  2.19it/s]
+  7%|▋         | 2/30 [00:00<00:09,  2.99it/s]
+ 10%|█         | 3/30 [00:00<00:07,  3.41it/s]
+ 13%|█▎        | 4/30 [00:01<00:07,  3.65it/s]
+ 17%|█▋        | 5/30 [00:01<00:06,  3.81it/s]
+ 20%|██        | 6/30 [00:01<00:06,  3.92it/s]
+ 23%|██▎       | 7/30 [00:01<00:05,  3.99it/s]
+ 27%|██▋       | 8/30 [00:02<00:05,  4.03it/s]
+ 30%|███       | 9/30 [00:02<00:05,  4.06it/s]
+ 33%|███▎      | 10/30 [00:02<00:04,  4.06it/s]
+ 37%|███▋      | 11/30 [00:02<00:04,  4.08it/s]
+ 40%|████      | 12/30 [00:03<00:04,  4.09it/s]
+ 43%|████▎     | 13/30 [00:03<00:04,  4.09it/s]
+ 47%|████▋     | 14/30 [00:03<00:03,  4.09it/s]
+ 50%|█████     | 15/30 [00:03<00:03,  4.10it/s]
+ 53%|█████▎    | 16/30 [00:04<00:03,  4.09it/s]
+ 57%|█████▋    | 17/30 [00:04<00:03,  4.09it/s]
+ 60%|██████    | 18/30 [00:04<00:02,  4.08it/s]
+ 63%|██████▎   | 19/30 [00:04<00:02,  4.07it/s]
+ 67%|██████▋   | 20/30 [00:05<00:02,  4.08it/s]
+ 70%|███████   | 21/30 [00:05<00:02,  4.09it/s]
+ 73%|███████▎  | 22/30 [00:05<00:01,  4.09it/s]
+ 77%|███████▋  | 23/30 [00:05<00:01,  4.09it/s]
+ 80%|████████  | 24/30 [00:06<00:01,  4.08it/s]
+ 83%|████████▎ | 25/30 [00:06<00:01,  4.07it/s]
+ 87%|████████▋ | 26/30 [00:06<00:00,  4.07it/s]
+ 90%|█████████ | 27/30 [00:06<00:00,  4.06it/s]
+ 93%|█████████▎| 28/30 [00:07<00:00,  4.06it/s]
+ 97%|█████████▋| 29/30 [00:07<00:00,  4.06it/s]
+100%|██████████| 30/30 [00:07<00:00,  4.08it/s]
+100%|██████████| 30/30 [00:07<00:00,  3.97it/s]
+ - quantizing extras
+Text Encoder
+
+tokenizer_config.json:   0%|          | 0.00/9.73k [00:00<?, ?B/s]
+tokenizer_config.json: 100%|██████████| 9.73k/9.73k [00:00<00:00, 5.98MB/s]
+
+vocab.json:   0%|          | 0.00/2.78M [00:00<?, ?B/s]
+vocab.json: 100%|██████████| 2.78M/2.78M [00:00<00:00, 102MB/s]
+
+merges.txt:   0%|          | 0.00/1.67M [00:00<?, ?B/s]
+merges.txt: 100%|██████████| 1.67M/1.67M [00:00<00:00, 129MB/s]
+
+
+tokenizer/tokenizer.json: reconstructing file:   0%|          |  0.00B / 11.4MB            [A
+tokenizer/tokenizer.json: downloading bytes:           |  0.00B            
+
+tokenizer/tokenizer.json: reconstructing file: 100%|██████████| 11.4MB / 11.4MB            [A
+tokenizer/tokenizer.json: downloading bytes: ██▉       | 3.40MB            
+tokenizer/tokenizer.json: downloading bytes: ██████████| 3.40MB,  330kB/s  
+tokenizer/tokenizer.json: downloading bytes: ██████████| 3.40MB,  330kB/s  
+
+tokenizer/tokenizer.json: reconstructing file: 100%|██████████| 11.4MB / 11.4MB, 1.11MB/s  
+
+config.json:   0%|          | 0.00/726 [00:00<?, ?B/s]
+config.json: 100%|██████████| 726/726 [00:00<00:00, 3.10MB/s]
+
+model.safetensors.index.json:   0%|          | 0.00/32.8k [00:00<?, ?B/s]
+model.safetensors.index.json: 100%|██████████| 32.8k/32.8k [00:00<00:00, 64.3MB/s]
+
+Downloading bytes:           |  0.00B            
+
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+
+
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][A[A
+
+Reconstructing (incomplete total...):   0%|          |  0.00B / 99.6MB            [A
+
+Reconstructing (incomplete total...):   0%|          |  0.00B / 4.06GB            [A
+
+Reconstructing (incomplete total...):   0%|          |  0.00B / 8.04GB            [A
+Downloading bytes:           | 6.72MB            
+Downloading bytes:           | 37.8MB,  140kB/s  
+Downloading bytes:           | 81.8MB, 1.16MB/s  
+Downloading bytes:           | 83.9MB, 5.75MB/s  
+Downloading bytes: ▏         |  133MB, 1.20MB/s  
+Downloading bytes: ▏         |  180MB, 1.30MB/s  
+Downloading bytes: ▎         |  230MB, 14.8MB/s  
+Downloading bytes: ▎         |  279MB, 17.6MB/s  
+Downloading bytes: ▍         |  324MB, 20.1MB/s  
+Downloading bytes: ▍         |  378MB, 23.2MB/s  
+Downloading bytes: ▌         |  433MB, 26.4MB/s  
+Downloading bytes: ▌         |  489MB, 29.7MB/s  
+Downloading bytes: ▋         |  549MB, 33.1MB/s  
+Downloading bytes: ▊         |  606MB, 36.3MB/s  
+Downloading bytes: ▊         |  665MB, 39.4MB/s  
+Downloading bytes: ▉         |  723MB, 42.2MB/s  
+Downloading bytes: ▉         |  781MB, 45.0MB/s  
+Downloading bytes: █         |  838MB, 23.4MB/s  
+Downloading bytes: █         |  896MB, 25.2MB/s  
+Downloading bytes: █▏        |  954MB, 26.9MB/s  
+Downloading bytes: █▎        | 1.01GB, 28.7MB/s  
+Downloading bytes: █▎        | 1.10GB, 2.73MB/s  
+Downloading bytes: █▍        | 1.18GB, 2.77MB/s  
+Downloading bytes: █▌        | 1.26GB, 2.87MB/s  
+Downloading bytes: █▋        | 1.33GB, 70.0MB/s  
+Downloading bytes: █▋        | 1.37GB, 72.1MB/s  
+Downloading bytes: █▊        | 1.45GB, 3.00MB/s  
+Downloading bytes: █▉        | 1.51GB, 40.9MB/s  
+Downloading bytes: █▉        | 1.56GB, 3.11MB/s  
+Downloading bytes: ██        | 1.61GB, 3.17MB/s  
+Downloading bytes: ██        | 1.66GB, 81.8MB/s  
+Downloading bytes: ██▏       | 1.71GB, 3.27MB/s  
+Downloading bytes: ██▏       | 1.76GB, 84.4MB/s  
+Downloading bytes: ██▏       | 1.81GB, 85.8MB/s  
+Downloading bytes: ██▎       | 1.86GB, 87.3MB/s  
+Downloading bytes: ██▍       | 1.92GB, 89.0MB/s  
+Downloading bytes: ██▍       | 1.98GB, 90.7MB/s  
+Downloading bytes: ██▌       | 2.04GB, 92.5MB/s  
+Downloading bytes: ██▌       | 2.10GB, 94.3MB/s  
+Downloading bytes: ██▋       | 2.17GB, 3.90MB/s  
+Downloading bytes: ██▊       | 2.23GB, 97.5MB/s  
+
+Reconstructing (incomplete total...):   1%|          | 99.6MB / 8.04GB            [A
+Downloading bytes: ██▊       | 2.31GB, 64.8MB/s  
+Downloading bytes: ██▉       | 2.36GB, 66.5MB/s  
+Downloading bytes: ██▉       | 2.41GB, 68.0MB/s  
+Downloading bytes: ███       | 2.47GB, 70.0MB/s  
+Downloading bytes: ███▏      | 2.53GB, 72.0MB/s  
+Downloading bytes: ███▏      | 2.59GB, 73.9MB/s  
+Downloading bytes: ███▎      | 2.65GB, 75.7MB/s  
+Downloading bytes: ███▎      | 2.70GB, 77.5MB/s  
+Downloading bytes: ███▍      | 2.79GB,  112MB/s  
+Downloading bytes: ███▌      | 2.87GB, 82.6MB/s  
+Downloading bytes: ███▋      | 2.95GB,  116MB/s  
+Downloading bytes: ███▊      | 3.04GB, 88.1MB/s  
+Downloading bytes: ███▊      | 3.09GB, 89.9MB/s  
+Downloading bytes: ███▉      | 3.15GB, 91.7MB/s  
+Downloading bytes: ████      | 3.23GB,  122MB/s  
+Downloading bytes: ████      | 3.31GB, 96.8MB/s  
+Downloading bytes: ████▏     | 3.37GB, 98.5MB/s  
+Downloading bytes: ████▎     | 3.45GB,  126MB/s  
+Downloading bytes: ████▍     | 3.53GB,  104MB/s  
+Downloading bytes: ████▍     | 3.59GB,  106MB/s  
+Downloading bytes: ████▌     | 3.65GB,  108MB/s  
+Downloading bytes: ████▋     | 3.73GB,  130MB/s  
+Downloading bytes: ████▋     | 3.81GB,  113MB/s  
+Downloading bytes: ████▊     | 3.89GB,  132MB/s  
+Downloading bytes: ████▉     | 3.96GB,  118MB/s  
+Downloading bytes: █████     | 4.03GB,  134MB/s  
+Downloading bytes: █████     | 4.11GB,  121MB/s  
+Downloading bytes: █████▏    | 4.18GB,  136MB/s  
+Downloading bytes: █████▎    | 4.25GB,  125MB/s  
+Downloading bytes: █████▎    | 4.31GB,  126MB/s  
+Downloading bytes: █████▍    | 4.36GB,  127MB/s  
+Downloading bytes: █████▍    | 4.41GB,  128MB/s  
+Downloading bytes: █████▌    | 4.46GB,  129MB/s  
+Downloading bytes: █████▌    | 4.51GB,  131MB/s  
+Downloading bytes: █████▋    | 4.56GB,  132MB/s  
+Downloading bytes: █████▋    | 4.59GB,  143MB/s  
+Downloading bytes: █████▊    | 4.68GB,  144MB/s  
+Downloading bytes: █████▉    | 4.76GB,  137MB/s  
+Downloading bytes: ██████    | 4.85GB,  146MB/s  
+Downloading bytes: ██████    | 4.90GB,  147MB/s  
+Downloading bytes: ██████▏   | 4.98GB,  143MB/s  
+Downloading bytes: ██████▎   | 5.06GB,  148MB/s  
+Downloading bytes: ██████▍   | 5.13GB,  148MB/s  
+Downloading bytes: ██████▍   | 5.18GB,  147MB/s  
+
+Reconstructing (incomplete total...):   5%|▌         |  435MB / 8.04GB, 8.62MB/s  [A
+Downloading bytes: ██████▍   | 5.23GB,  148MB/s  
+Downloading bytes: ██████▌   | 5.28GB,  147MB/s  
+Downloading bytes: ██████▌   | 5.33GB,  146MB/s  
+Downloading bytes: ██████▋   | 5.37GB,  147MB/s  
+Downloading bytes: ██████▋   | 5.41GB,  146MB/s  
+Downloading bytes: ██████▊   | 5.45GB,  145MB/s  
+Downloading bytes: ██████▊   | 5.49GB,  145MB/s  
+Downloading bytes: ██████▉   | 5.54GB,  148MB/s  
+Downloading bytes: ██████▉   | 5.56GB,  148MB/s  
+Downloading bytes: ██████▉   | 5.59GB,  145MB/s  
+Downloading bytes: ███████   | 5.63GB,  145MB/s  
+Downloading bytes: ███████   | 5.68GB,  145MB/s  
+Downloading bytes: ███████   | 5.72GB,  146MB/s  
+Downloading bytes: ███████▏  | 5.77GB,  146MB/s  
+Downloading bytes: ███████▏  | 5.81GB,  146MB/s  
+Downloading bytes: ███████▎  | 5.87GB,  147MB/s  
+Downloading bytes: ███████▎  | 5.93GB,  148MB/s  
+Downloading bytes: ███████▍  | 5.99GB,  149MB/s  
+Downloading bytes: ███████▌  | 6.05GB,  150MB/s  
+Downloading bytes: ███████▌  | 6.12GB,  149MB/s  
+Downloading bytes: ███████▋  | 6.17GB,  160MB/s  
+Downloading bytes: ███████▋  | 6.22GB,  149MB/s  
+
+Reconstructing (incomplete total...):   7%|▋         |  569MB / 8.04GB, 26.8MB/s  [A
+Downloading bytes: ███████▊  | 6.28GB,  160MB/s  
+
+Reconstructing (incomplete total...):  17%|█▋        | 1.35GB / 8.04GB, 31.8MB/s  [A
+Downloading bytes: ███████▉  | 6.34GB,  159MB/s  
+Downloading bytes: ███████▉  | 6.38GB,  150MB/s  
+Downloading bytes: ███████▉  | 6.43GB,  150MB/s  
+Downloading bytes: ████████  | 6.47GB,  150MB/s  
+Downloading bytes: ████████  | 6.51GB,  150MB/s  
+Downloading bytes: ████████▏ | 6.56GB,  151MB/s  
+Downloading bytes: ████████▏ | 6.63GB,  151MB/s  
+Downloading bytes: ████████▎ | 6.69GB,  165MB/s  
+Downloading bytes: ████████▍ | 6.74GB,  167MB/s  
+Downloading bytes: ████████▍ | 6.80GB,  168MB/s  
+Downloading bytes: ████████▌ | 6.85GB,  169MB/s  
+Downloading bytes: ████████▌ | 6.91GB,  170MB/s  
+Downloading bytes: ████████▋ | 6.97GB,  169MB/s  
+
+Reconstructing (incomplete total...):  21%|██        | 1.68GB / 8.04GB, 60.3MB/s  [A
+
+Reconstructing (incomplete total...):  34%|███▍      | 2.76GB / 8.04GB, 51.8MB/s  [A
+
+Reconstructing (incomplete total...):  53%|█████▎    | 4.30GB / 8.04GB,  125MB/s  [A
+
+Reconstructing (incomplete total...):  73%|███████▎  | 5.84GB / 8.04GB,  128MB/s  [A
+Downloading bytes: ████████▋ | 6.97GB,  152MB/s  
+
+Reconstructing (incomplete total...):  80%|███████▉  | 6.40GB / 8.04GB,  157MB/s  [A
+
+Reconstructing (incomplete total...):  99%|█████████▉| 7.95GB / 8.04GB,  149MB/s  [A
+
+
+Fetching 3 files:  33%|███▎      | 1/3 [00:41<01:22, 41.42s/it][A[A
+
+Reconstructing (incomplete total...): 100%|██████████| 8.04GB / 8.04GB,  182MB/s  [A
+Fetching 3 files: 100%|██████████| 3/3 [00:41<00:00, 13.82s/it]
+
+Downloading bytes: ██████████| 6.97GB,  152MB/s  
+Download complete: : ██████████| 6.97GB,  152MB/s  
+
+Reconstruction complete: 100%|██████████| 8.04GB / 8.04GB,  170MB/s               [A
+Download complete: : ██████████| 6.97GB,  152MB/s  
+
+Reconstruction complete: 100%|██████████| 8.04GB / 8.04GB,  170MB/s  
+
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]
+Loading weights:  21%|██▏       | 85/398 [00:00<00:00, 849.86it/s]
+Loading weights:  43%|████▎     | 170/398 [00:05<00:08, 28.38it/s]
+Loading weights:  56%|█████▌    | 222/398 [00:05<00:04, 41.79it/s]
+Loading weights:  67%|██████▋   | 268/398 [00:05<00:02, 57.45it/s]
+Loading weights: 100%|██████████| 398/398 [00:05<00:00, 73.74it/s]
+
+generation_config.json:   0%|          | 0.00/239 [00:00<?, ?B/s]
+generation_config.json: 100%|██████████| 239/239 [00:00<00:00, 1.01MB/s]
+Quantizing (qfloat8)
+ - quantizing 36 blocks
+
+  0%|          | 0/36 [00:00<?, ?it/s]
+  3%|▎         | 1/36 [00:00<00:31,  1.10it/s]
+  6%|▌         | 2/36 [00:01<00:28,  1.18it/s]
+  8%|▊         | 3/36 [00:02<00:26,  1.24it/s]
+ 11%|█         | 4/36 [00:03<00:24,  1.32it/s]
+ 14%|█▍        | 5/36 [00:03<00:16,  1.84it/s]
+ 17%|█▋        | 6/36 [00:03<00:12,  2.44it/s]
+ 19%|█▉        | 7/36 [00:03<00:09,  3.00it/s]
+ 22%|██▏       | 8/36 [00:03<00:07,  3.62it/s]
+ 25%|██▌       | 9/36 [00:03<00:06,  4.22it/s]
+ 28%|██▊       | 10/36 [00:04<00:05,  4.77it/s]
+ 31%|███       | 11/36 [00:04<00:10,  2.49it/s]
+ 33%|███▎      | 12/36 [00:05<00:12,  1.88it/s]
+ 36%|███▌      | 13/36 [00:06<00:14,  1.62it/s]
+ 39%|███▉      | 14/36 [00:07<00:14,  1.49it/s]
+ 42%|████▏     | 15/36 [00:08<00:14,  1.41it/s]
+ 44%|████▍     | 16/36 [00:09<00:14,  1.34it/s]
+ 47%|████▋     | 17/36 [00:09<00:14,  1.31it/s]
+ 50%|█████     | 18/36 [00:10<00:14,  1.28it/s]
+ 53%|█████▎    | 19/36 [00:11<00:13,  1.27it/s]
+ 56%|█████▌    | 20/36 [00:12<00:12,  1.26it/s]
+ 58%|█████▊    | 21/36 [00:13<00:11,  1.26it/s]
+ 61%|██████    | 22/36 [00:13<00:11,  1.25it/s]
+ 64%|██████▍   | 23/36 [00:14<00:10,  1.24it/s]
+ 67%|██████▋   | 24/36 [00:15<00:09,  1.24it/s]
+ 69%|██████▉   | 25/36 [00:16<00:08,  1.24it/s]
+ 72%|███████▏  | 26/36 [00:17<00:08,  1.23it/s]
+ 75%|███████▌  | 27/36 [00:17<00:07,  1.23it/s]
+ 78%|███████▊  | 28/36 [00:18<00:06,  1.23it/s]
+ 81%|████████  | 29/36 [00:19<00:05,  1.22it/s]
+ 83%|████████▎ | 30/36 [00:20<00:04,  1.22it/s]
+ 86%|████████▌ | 31/36 [00:21<00:04,  1.21it/s]
+ 89%|████████▉ | 32/36 [00:22<00:03,  1.19it/s]
+ 92%|█████████▏| 33/36 [00:22<00:02,  1.20it/s]
+ 94%|█████████▍| 34/36 [00:23<00:01,  1.21it/s]
+ 97%|█████████▋| 35/36 [00:24<00:00,  1.21it/s]
+100%|██████████| 36/36 [00:25<00:00,  1.21it/s]
+100%|██████████| 36/36 [00:25<00:00,  1.42it/s]
+ - quantizing extras
+Loading VAE
+
+config.json:   0%|          | 0.00/805 [00:00<?, ?B/s]
+config.json: 100%|██████████| 805/805 [00:00<00:00, 4.50MB/s]
+
+
+vae/diffusion_pytorch_model.safetensors: reconstructing file:   0%|          |  0.00B /  168MB            [A
+vae/diffusion_pytorch_model.safetensors: downloading bytes:           |  0.00B            
+vae/diffusion_pytorch_model.safetensors: downloading bytes:           | 1.29MB            
+vae/diffusion_pytorch_model.safetensors: downloading bytes: █▎        | 21.9MB,  126kB/s  
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ██▉       | 48.9MB, 2.12MB/s  
+vae/diffusion_pytorch_model.safetensors: downloading bytes: █████▌    | 92.4MB, 4.71MB/s  
+
+vae/diffusion_pytorch_model.safetensors: reconstructing file:  40%|████      | 67.1MB /  168MB            [A
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ███████▍  |  124MB, 10.9MB/s  
+
+vae/diffusion_pytorch_model.safetensors: reconstructing file: 100%|██████████|  168MB /  168MB, 6.44MB/s  [A
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ██████████|  147MB, 13.6MB/s  
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ██████████|  147MB, 13.6MB/s  
+
+vae/diffusion_pytorch_model.safetensors: reconstructing file: 100%|██████████|  168MB /  168MB, 15.8MB/s  
+Making pipe
+Preparing Model
+Model Loaded
+create LoRA network. base dim (rank): 16, alpha: 16
+neuron dropout: p=None, rank dropout: p=None, module dropout: p=None
+create LoRA for Text Encoder: 0 modules.
+create LoRA for U-Net: 240 modules.
+enable LoRA for U-Net
+Dataset: /tmp/train/dataset
+  -  Preprocessing image dimensions
+
+  0%|          | 0/35 [00:00<?, ?it/s]
+  6%|▌         | 2/35 [00:00<00:01, 17.61it/s]
+ 11%|█▏        | 4/35 [00:00<00:01, 18.43it/s]
+ 20%|██        | 7/35 [00:00<00:01, 19.27it/s]
+ 29%|██▊       | 10/35 [00:00<00:01, 19.70it/s]
+ 37%|███▋      | 13/35 [00:00<00:01, 21.66it/s]
+ 46%|████▌     | 16/35 [00:00<00:00, 21.43it/s]
+ 54%|█████▍    | 19/35 [00:00<00:00, 21.02it/s]
+ 63%|██████▎   | 22/35 [00:01<00:00, 21.33it/s]
+ 71%|███████▏  | 25/35 [00:01<00:00, 21.62it/s]
+ 80%|████████  | 28/35 [00:01<00:00, 22.32it/s]
+ 89%|████████▊ | 31/35 [00:01<00:00, 22.02it/s]
+ 97%|█████████▋| 34/35 [00:01<00:00, 21.50it/s]
+100%|██████████| 35/35 [00:01<00:00, 21.16it/s]
+  -  Found 35 images
+Bucket sizes for /tmp/train/dataset:
+416x624: 5 files
+384x672: 28 files
+464x560: 2 files
+3 buckets made
+Caching latents for /tmp/train/dataset
+ - Saving latents to disk
+
+Caching latents to disk:   0%|          | 0/35 [00:00<?, ?it/s]
+Caching latents to disk:   3%|▎         | 1/35 [00:07<04:26,  7.83s/it]
+Caching latents to disk:   6%|▌         | 2/35 [00:08<01:56,  3.54s/it]
+Caching latents to disk:   9%|▊         | 3/35 [00:08<01:09,  2.18s/it]
+Caching latents to disk:  11%|█▏        | 4/35 [00:09<00:47,  1.54s/it]
+Caching latents to disk:  14%|█▍        | 5/35 [00:10<00:35,  1.19s/it]
+Caching latents to disk:  17%|█▋        | 6/35 [00:10<00:28,  1.02it/s]
+Caching latents to disk:  20%|██        | 7/35 [00:11<00:23,  1.19it/s]
+Caching latents to disk:  23%|██▎       | 8/35 [00:11<00:20,  1.32it/s]
+Caching latents to disk:  26%|██▌       | 9/35 [00:12<00:18,  1.43it/s]
+Caching latents to disk:  29%|██▊       | 10/35 [00:12<00:16,  1.52it/s]
+Caching latents to disk:  31%|███▏      | 11/35 [00:13<00:15,  1.59it/s]
+Caching latents to disk:  34%|███▍      | 12/35 [00:14<00:14,  1.63it/s]
+Caching latents to disk:  37%|███▋      | 13/35 [00:14<00:13,  1.68it/s]
+Caching latents to disk:  40%|████      | 14/35 [00:15<00:12,  1.69it/s]
+Caching latents to disk:  43%|████▎     | 15/35 [00:15<00:11,  1.71it/s]
+Caching latents to disk:  46%|████▌     | 16/35 [00:16<00:11,  1.72it/s]
+Caching latents to disk:  49%|████▊     | 17/35 [00:16<00:10,  1.72it/s]
+Caching latents to disk:  51%|█████▏    | 18/35 [00:17<00:09,  1.73it/s]
+Caching latents to disk:  54%|█████▍    | 19/35 [00:18<00:09,  1.72it/s]
+Caching latents to disk:  57%|█████▋    | 20/35 [00:18<00:08,  1.73it/s]
+Caching latents to disk:  60%|██████    | 21/35 [00:19<00:08,  1.72it/s]
+Caching latents to disk:  63%|██████▎   | 22/35 [00:19<00:07,  1.72it/s]
+Caching latents to disk:  66%|██████▌   | 23/35 [00:20<00:06,  1.73it/s]
+Caching latents to disk:  69%|██████▊   | 24/35 [00:20<00:06,  1.72it/s]
+Caching latents to disk:  71%|███████▏  | 25/35 [00:21<00:05,  1.71it/s]
+Caching latents to disk:  74%|███████▍  | 26/35 [00:22<00:05,  1.71it/s]
+Caching latents to disk:  77%|███████▋  | 27/35 [00:22<00:04,  1.71it/s]
+Caching latents to disk:  80%|████████  | 28/35 [00:23<00:04,  1.72it/s]
+Caching latents to disk:  83%|████████▎ | 29/35 [00:23<00:03,  1.72it/s]
+Caching latents to disk:  86%|████████▌ | 30/35 [00:24<00:02,  1.72it/s]
+Caching latents to disk:  89%|████████▊ | 31/35 [00:25<00:02,  1.71it/s]
+Caching latents to disk:  91%|█████████▏| 32/35 [00:25<00:01,  1.71it/s]
+Caching latents to disk:  94%|█████████▍| 33/35 [00:26<00:01,  1.71it/s]
+Caching latents to disk:  97%|█████████▋| 34/35 [00:26<00:00,  1.71it/s]
+Caching latents to disk: 100%|██████████| 35/35 [00:27<00:00,  1.71it/s]
+Caching latents to disk: 100%|██████████| 35/35 [00:27<00:00,  1.28it/s]
+Dataset: /tmp/train/dataset
+  -  Preprocessing image dimensions
+
+  0%|          | 0/35 [00:00<?, ?it/s]
+100%|██████████| 35/35 [00:00<00:00, 27245.85it/s]
+  -  Found 35 images
+Bucket sizes for /tmp/train/dataset:
+624x944: 5 files
+576x1024: 28 files
+688x848: 2 files
+3 buckets made
+Caching latents for /tmp/train/dataset
+ - Saving latents to disk
+
+Caching latents to disk:   0%|          | 0/35 [00:00<?, ?it/s]
+Caching latents to disk:   3%|▎         | 1/35 [00:07<04:03,  7.17s/it]
+Caching latents to disk:   6%|▌         | 2/35 [00:08<02:04,  3.76s/it]
+Caching latents to disk:   9%|▊         | 3/35 [00:09<01:25,  2.67s/it]
+Caching latents to disk:  11%|█▏        | 4/35 [00:11<01:06,  2.16s/it]
+Caching latents to disk:  14%|█▍        | 5/35 [00:12<00:56,  1.88s/it]
+Caching latents to disk:  17%|█▋        | 6/35 [00:14<00:49,  1.72s/it]
+Caching latents to disk:  20%|██        | 7/35 [00:15<00:45,  1.62s/it]
+Caching latents to disk:  23%|██▎       | 8/35 [00:16<00:41,  1.55s/it]
+Caching latents to disk:  26%|██▌       | 9/35 [00:18<00:39,  1.51s/it]
+Caching latents to disk:  29%|██▊       | 10/35 [00:19<00:37,  1.49s/it]
+Caching latents to disk:  31%|███▏      | 11/35 [00:21<00:35,  1.47s/it]
+Caching latents to disk:  34%|███▍      | 12/35 [00:22<00:33,  1.46s/it]
+Caching latents to disk:  37%|███▋      | 13/35 [00:24<00:31,  1.45s/it]
+Caching latents to disk:  40%|████      | 14/35 [00:25<00:30,  1.46s/it]
+Caching latents to disk:  43%|████▎     | 15/35 [00:26<00:29,  1.46s/it]
+Caching latents to disk:  46%|████▌     | 16/35 [00:28<00:27,  1.46s/it]
+Caching latents to disk:  49%|████▊     | 17/35 [00:29<00:26,  1.47s/it]
+Caching latents to disk:  51%|█████▏    | 18/35 [00:31<00:25,  1.48s/it]
+Caching latents to disk:  54%|█████▍    | 19/35 [00:32<00:23,  1.49s/it]
+Caching latents to disk:  57%|█████▋    | 20/35 [00:34<00:22,  1.49s/it]
+Caching latents to disk:  60%|██████    | 21/35 [00:35<00:20,  1.50s/it]
+Caching latents to disk:  63%|██████▎   | 22/35 [00:37<00:19,  1.51s/it]
+Caching latents to disk:  66%|██████▌   | 23/35 [00:39<00:18,  1.51s/it]
+Caching latents to disk:  69%|██████▊   | 24/35 [00:40<00:16,  1.52s/it]
+Caching latents to disk:  71%|███████▏  | 25/35 [00:42<00:15,  1.52s/it]
+Caching latents to disk:  74%|███████▍  | 26/35 [00:43<00:13,  1.53s/it]
+Caching latents to disk:  77%|███████▋  | 27/35 [00:45<00:12,  1.53s/it]
+Caching latents to disk:  80%|████████  | 28/35 [00:46<00:10,  1.54s/it]
+Caching latents to disk:  83%|████████▎ | 29/35 [00:48<00:09,  1.54s/it]
+Caching latents to disk:  86%|████████▌ | 30/35 [00:49<00:07,  1.55s/it]
+Caching latents to disk:  89%|████████▊ | 31/35 [00:51<00:06,  1.56s/it]
+Caching latents to disk:  91%|█████████▏| 32/35 [00:53<00:04,  1.57s/it]
+Caching latents to disk:  94%|█████████▍| 33/35 [00:54<00:03,  1.57s/it]
+Caching latents to disk:  97%|█████████▋| 34/35 [00:56<00:01,  1.58s/it]
+Caching latents to disk: 100%|██████████| 35/35 [00:57<00:00,  1.60s/it]
+Caching latents to disk: 100%|██████████| 35/35 [00:57<00:00,  1.65s/it]
+Skipping first sample due to config setting
+
+tira_zimage_lora:   0%|          | 0/1100 [00:00<?, ?it/s]
+tira_zimage_lora:   0%|          | 0/1100 [00:47<?, ?it/s, lr: 1.0e-04 loss: 3.677e-01]
+tira_zimage_lora:   0%|          | 1/1100 [00:47<14:34:22, 47.74s/it, lr: 1.0e-04 loss: 3.677e-01]
+tira_zimage_lora:   0%|          | 1/1100 [01:32<14:34:22, 47.74s/it, lr: 1.0e-04 loss: 4.137e-01]
+tira_zimage_lora:   0%|          | 2/1100 [01:32<13:52:40, 45.50s/it, lr: 1.0e-04 loss: 4.137e-01]
+tira_zimage_lora:   0%|          | 2/1100 [01:54<13:52:40, 45.50s/it, lr: 1.0e-04 loss: 4.025e-01]
+tira_zimage_lora:   0%|          | 3/1100 [01:54<8:45:35, 28.75s/it, lr: 1.0e-04 loss: 4.025e-01] 
+tira_zimage_lora:   0%|          | 3/1100 [02:16<8:45:35, 28.75s/it, lr: 1.0e-04 loss: 4.176e-01]
+tira_zimage_lora:   0%|          | 4/1100 [02:16<7:18:36, 24.01s/it, lr: 1.0e-04 loss: 4.176e-01]
+tira_zimage_lora:   0%|          | 4/1100 [02:38<7:18:36, 24.01s/it, lr: 1.0e-04 loss: 3.777e-01]
+tira_zimage_lora:   0%|          | 5/1100 [02:38<6:51:58, 22.57s/it, lr: 1.0e-04 loss: 3.777e-01]
+tira_zimage_lora:   0%|          | 5/1100 [03:00<6:51:58, 22.57s/it, lr: 1.0e-04 loss: 4.554e-01]
+tira_zimage_lora:   1%|          | 6/1100 [03:00<6:44:07, 22.16s/it, lr: 1.0e-04 loss: 4.554e-01]
+tira_zimage_lora:   1%|          | 6/1100 [03:46<6:44:07, 22.16s/it, lr: 1.0e-04 loss: 3.829e-01]
+tira_zimage_lora:   1%|          | 7/1100 [03:46<11:43:39, 38.63s/it, lr: 1.0e-04 loss: 3.829e-01]
+tira_zimage_lora:   1%|          | 7/1100 [04:32<11:43:39, 38.63s/it, lr: 1.0e-04 loss: 3.793e-01]
+tira_zimage_lora:   1%|          | 8/1100 [04:32<13:13:45, 43.61s/it, lr: 1.0e-04 loss: 3.793e-01]
+tira_zimage_lora:   1%|          | 8/1100 [04:54<13:13:45, 43.61s/it, lr: 1.0e-04 loss: 4.138e-01]
+tira_zimage_lora:   1%|          | 9/1100 [04:54<8:40:22, 28.62s/it, lr: 1.0e-04 loss: 4.138e-01] 
+tira_zimage_lora:   1%|          | 9/1100 [05:40<8:40:22, 28.62s/it, lr: 1.0e-04 loss: 3.422e-01]
+tira_zimage_lora:   1%|          | 10/1100 [05:40<12:19:06, 40.69s/it, lr: 1.0e-04 loss: 3.422e-01]
+tira_zimage_lora:   1%|          | 10/1100 [06:25<12:19:06, 40.69s/it, lr: 1.0e-04 loss: 3.742e-01]
+tira_zimage_lora:   1%|          | 11/1100 [06:25<13:19:59, 44.08s/it, lr: 1.0e-04 loss: 3.742e-01]
+tira_zimage_lora:   1%|          | 11/1100 [07:11<13:19:59, 44.08s/it, lr: 1.0e-04 loss: 4.305e-01]
+tira_zimage_lora:   1%|          | 12/1100 [07:11<13:38:09, 45.12s/it, lr: 1.0e-04 loss: 4.305e-01]
+tira_zimage_lora:   1%|          | 12/1100 [07:56<13:38:09, 45.12s/it, lr: 1.0e-04 loss: 4.644e-01]
+tira_zimage_lora:   1%|          | 13/1100 [07:56<13:41:30, 45.35s/it, lr: 1.0e-04 loss: 4.644e-01]
+tira_zimage_lora:   1%|          | 13/1100 [08:18<13:41:30, 45.35s/it, lr: 1.0e-04 loss: 8.395e-01]
+tira_zimage_lora:   1%|▏         | 14/1100 [08:18<8:44:53, 29.00s/it, lr: 1.0e-04 loss: 8.395e-01] 
+tira_zimage_lora:   1%|▏         | 14/1100 [08:40<8:44:53, 29.00s/it, lr: 1.0e-04 loss: 1.493e-01]
+tira_zimage_lora:   1%|▏         | 15/1100 [08:40<7:15:05, 24.06s/it, lr: 1.0e-04 loss: 1.493e-01]
+tira_zimage_lora:   1%|▏         | 15/1100 [09:25<7:15:05, 24.06s/it, lr: 1.0e-04 loss: 4.151e-01]
+tira_zimage_lora:   1%|▏         | 16/1100 [09:25<11:40:39, 38.78s/it, lr: 1.0e-04 loss: 4.151e-01]
+tira_zimage_lora:   1%|▏         | 16/1100 [09:47<11:40:39, 38.78s/it, lr: 1.0e-04 loss: 3.836e-01]
+tira_zimage_lora:   2%|▏         | 17/1100 [09:47<8:07:44, 27.02s/it, lr: 1.0e-04 loss: 3.836e-01] 
+tira_zimage_lora:   2%|▏         | 17/1100 [10:10<8:07:44, 27.02s/it, lr: 1.0e-04 loss: 3.576e-01]
+tira_zimage_lora:   2%|▏         | 18/1100 [10:10<7:06:30, 23.65s/it, lr: 1.0e-04 loss: 3.576e-01]
+tira_zimage_lora:   2%|▏         | 18/1100 [10:32<7:06:30, 23.65s/it, lr: 1.0e-04 loss: 3.561e-01]
+tira_zimage_lora:   2%|▏         | 19/1100 [10:32<6:45:22, 22.50s/it, lr: 1.0e-04 loss: 3.561e-01]
+tira_zimage_lora:   2%|▏         | 19/1100 [10:53<6:45:22, 22.50s/it, lr: 1.0e-04 loss: 3.538e-01]
+tira_zimage_lora:   2%|▏         | 20/1100 [10:53<6:38:19, 22.13s/it, lr: 1.0e-04 loss: 3.538e-01]
+tira_zimage_lora:   2%|▏         | 20/1100 [11:39<6:38:19, 22.13s/it, lr: 1.0e-04 loss: 3.759e-01]
+tira_zimage_lora:   2%|▏         | 21/1100 [11:39<11:36:22, 38.72s/it, lr: 1.0e-04 loss: 3.759e-01]
+tira_zimage_lora:   2%|▏         | 21/1100 [12:25<11:36:22, 38.72s/it, lr: 1.0e-04 loss: 4.263e-01]
+tira_zimage_lora:   2%|▏         | 22/1100 [12:25<13:00:09, 43.42s/it, lr: 1.0e-04 loss: 4.263e-01]
+tira_zimage_lora:   2%|▏         | 22/1100 [13:10<13:00:09, 43.42s/it, lr: 1.0e-04 loss: 3.001e-01]
+tira_zimage_lora:   2%|▏         | 23/1100 [13:10<13:26:50, 44.95s/it, lr: 1.0e-04 loss: 3.001e-01]
+tira_zimage_lora:   2%|▏         | 23/1100 [13:55<13:26:50, 44.95s/it, lr: 1.0e-04 loss: 4.051e-01]
+tira_zimage_lora:   2%|▏         | 24/1100 [13:55<13:27:26, 45.02s/it, lr: 1.0e-04 loss: 4.051e-01]
+tira_zimage_lora:   2%|▏         | 24/1100 [14:17<13:27:26, 45.02s/it, lr: 1.0e-04 loss: 4.463e-01]
+tira_zimage_lora:   2%|▏         | 25/1100 [14:17<8:36:17, 28.82s/it, lr: 1.0e-04 loss: 4.463e-01] 
+tira_zimage_lora:   2%|▏         | 25/1100 [14:39<8:36:17, 28.82s/it, lr: 1.0e-04 loss: 3.777e-01]
+tira_zimage_lora:   2%|▏         | 26/1100 [14:39<7:09:35, 24.00s/it, lr: 1.0e-04 loss: 3.777e-01]
+tira_zimage_lora:   2%|▏         | 26/1100 [15:01<7:09:35, 24.00s/it, lr: 1.0e-04 loss: 2.875e-01]
+tira_zimage_lora:   2%|▏         | 27/1100 [15:01<6:43:45, 22.58s/it, lr: 1.0e-04 loss: 2.875e-01]
+tira_zimage_lora:   2%|▏         | 27/1100 [15:47<6:43:45, 22.58s/it, lr: 1.0e-04 loss: 5.684e-01]
+tira_zimage_lora:   3%|▎         | 28/1100 [15:47<11:33:07, 38.79s/it, lr: 1.0e-04 loss: 5.684e-01]
+tira_zimage_lora:   3%|▎         | 28/1100 [16:09<11:33:07, 38.79s/it, lr: 1.0e-04 loss: 4.500e-01]
+tira_zimage_lora:   3%|▎         | 29/1100 [16:09<8:02:55, 27.05s/it, lr: 1.0e-04 loss: 4.500e-01] 
+tira_zimage_lora:   3%|▎         | 29/1100 [16:55<8:02:55, 27.05s/it, lr: 1.0e-04 loss: 3.886e-01]
+tira_zimage_lora:   3%|▎         | 30/1100 [16:55<11:55:51, 40.14s/it, lr: 1.0e-04 loss: 3.886e-01]
+tira_zimage_lora:   3%|▎         | 30/1100 [17:41<11:55:51, 40.14s/it, lr: 1.0e-04 loss: 3.683e-01]
+tira_zimage_lora:   3%|▎         | 31/1100 [17:41<13:05:59, 44.12s/it, lr: 1.0e-04 loss: 3.683e-01]
+tira_zimage_lora:   3%|▎         | 31/1100 [18:26<13:05:59, 44.12s/it, lr: 1.0e-04 loss: 4.424e-01]
+tira_zimage_lora:   3%|▎         | 32/1100 [18:26<13:26:01, 45.28s/it, lr: 1.0e-04 loss: 4.424e-01]
+tira_zimage_lora:   3%|▎         | 32/1100 [18:48<13:26:01, 45.28s/it, lr: 1.0e-04 loss: 6.178e-01]
+tira_zimage_lora:   3%|▎         | 33/1100 [18:48<8:37:49, 29.12s/it, lr: 1.0e-04 loss: 6.178e-01] 
+tira_zimage_lora:   3%|▎         | 33/1100 [19:11<8:37:49, 29.12s/it, lr: 1.0e-04 loss: 4.885e-01]
+tira_zimage_lora:   3%|▎         | 34/1100 [19:11<7:11:05, 24.26s/it, lr: 1.0e-04 loss: 4.885e-01]
+tira_zimage_lora:   3%|▎         | 34/1100 [19:33<7:11:05, 24.26s/it, lr: 1.0e-04 loss: 3.029e-01]
+tira_zimage_lora:   3%|▎         | 35/1100 [19:33<6:43:09, 22.71s/it, lr: 1.0e-04 loss: 3.029e-01]
+tira_zimage_lora:   3%|▎         | 35/1100 [19:55<6:43:09, 22.71s/it, lr: 1.0e-04 loss: 3.605e-01]
+tira_zimage_lora:   3%|▎         | 36/1100 [19:55<6:35:05, 22.28s/it, lr: 1.0e-04 loss: 3.605e-01]
+tira_zimage_lora:   3%|▎         | 36/1100 [20:17<6:35:05, 22.28s/it, lr: 1.0e-04 loss: 5.984e-01]
+tira_zimage_lora:   3%|▎         | 37/1100 [20:17<6:32:59, 22.18s/it, lr: 1.0e-04 loss: 5.984e-01]
+tira_zimage_lora:   3%|▎         | 37/1100 [21:03<6:32:59, 22.18s/it, lr: 1.0e-04 loss: 4.048e-01]
+tira_zimage_lora:   3%|▎         | 38/1100 [21:03<11:24:11, 38.66s/it, lr: 1.0e-04 loss: 4.048e-01]
+tira_zimage_lora:   3%|▎         | 38/1100 [21:48<11:24:11, 38.66s/it, lr: 1.0e-04 loss: 3.910e-01]
+tira_zimage_lora:   4%|▎         | 39/1100 [21:48<12:50:56, 43.60s/it, lr: 1.0e-04 loss: 3.910e-01]
+tira_zimage_lora:   4%|▎         | 39/1100 [22:11<12:50:56, 43.60s/it, lr: 1.0e-04 loss: 6.466e-01]
+tira_zimage_lora:   4%|▎         | 40/1100 [22:11<8:25:00, 28.59s/it, lr: 1.0e-04 loss: 6.466e-01] 
+tira_zimage_lora:   4%|▎         | 40/1100 [22:56<8:25:00, 28.59s/it, lr: 1.0e-04 loss: 6.193e-01]
+tira_zimage_lora:   4%|▎         | 41/1100 [22:56<11:58:16, 40.70s/it, lr: 1.0e-04 loss: 6.193e-01]
+tira_zimage_lora:   4%|▎         | 41/1100 [23:42<11:58:16, 40.70s/it, lr: 1.0e-04 loss: 2.963e-01]
+tira_zimage_lora:   4%|▍         | 42/1100 [23:42<12:56:27, 44.03s/it, lr: 1.0e-04 loss: 2.963e-01]
+tira_zimage_lora:   4%|▍         | 42/1100 [24:27<12:56:27, 44.03s/it, lr: 1.0e-04 loss: 3.560e-01]
+tira_zimage_lora:   4%|▍         | 43/1100 [24:27<13:09:13, 44.80s/it, lr: 1.0e-04 loss: 3.560e-01]
+tira_zimage_lora:   4%|▍         | 43/1100 [25:13<13:09:13, 44.80s/it, lr: 1.0e-04 loss: 5.544e-01]
+tira_zimage_lora:   4%|▍         | 44/1100 [25:13<13:20:59, 45.51s/it, lr: 1.0e-04 loss: 5.544e-01]
+tira_zimage_lora:   4%|▍         | 44/1100 [25:35<13:20:59, 45.51s/it, lr: 1.0e-04 loss: 6.634e-01]
+tira_zimage_lora:   4%|▍         | 45/1100 [25:35<8:31:38, 29.10s/it, lr: 1.0e-04 loss: 6.634e-01] 
+tira_zimage_lora:   4%|▍         | 45/1100 [26:20<8:31:38, 29.10s/it, lr: 1.0e-04 loss: 3.498e-01]
+tira_zimage_lora:   4%|▍         | 46/1100 [26:20<11:53:43, 40.63s/it, lr: 1.0e-04 loss: 3.498e-01]
+tira_zimage_lora:   4%|▍         | 46/1100 [26:42<11:53:43, 40.63s/it, lr: 1.0e-04 loss: 4.384e-01]
+tira_zimage_lora:   4%|▍         | 47/1100 [26:42<8:03:57, 27.58s/it, lr: 1.0e-04 loss: 4.384e-01] 
+tira_zimage_lora:   4%|▍         | 47/1100 [27:28<8:03:57, 27.58s/it, lr: 1.0e-04 loss: 3.014e-01]
+tira_zimage_lora:   4%|▍         | 48/1100 [27:28<11:42:42, 40.08s/it, lr: 1.0e-04 loss: 3.014e-01]
+tira_zimage_lora:   4%|▍         | 48/1100 [28:13<11:42:42, 40.08s/it, lr: 1.0e-04 loss: 2.920e-01]
+tira_zimage_lora:   4%|▍         | 49/1100 [28:13<12:47:39, 43.82s/it, lr: 1.0e-04 loss: 2.920e-01]
+tira_zimage_lora:   4%|▍         | 49/1100 [28:35<12:47:39, 43.82s/it, lr: 1.0e-04 loss: 3.978e-01]
+tira_zimage_lora:   5%|▍         | 50/1100 [28:35<8:19:13, 28.53s/it, lr: 1.0e-04 loss: 3.978e-01] 
+tira_zimage_lora:   5%|▍         | 50/1100 [28:57<8:19:13, 28.53s/it, lr: 1.0e-04 loss: 3.305e-01]
+tira_zimage_lora:   5%|▍         | 51/1100 [28:57<6:58:56, 23.96s/it, lr: 1.0e-04 loss: 3.305e-01]
+tira_zimage_lora:   5%|▍         | 51/1100 [29:43<6:58:56, 23.96s/it, lr: 1.0e-04 loss: 9.144e-02]
+tira_zimage_lora:   5%|▍         | 52/1100 [29:43<11:18:44, 38.86s/it, lr: 1.0e-04 loss: 9.144e-02]
+tira_zimage_lora:   5%|▍         | 52/1100 [30:05<11:18:44, 38.86s/it, lr: 1.0e-04 loss: 4.221e-01]
+tira_zimage_lora:   5%|▍         | 53/1100 [30:05<7:51:52, 27.04s/it, lr: 1.0e-04 loss: 4.221e-01] 
+tira_zimage_lora:   5%|▍         | 53/1100 [30:26<7:51:52, 27.04s/it, lr: 1.0e-04 loss: 6.836e-01]
+tira_zimage_lora:   5%|▍         | 54/1100 [30:26<6:48:45, 23.45s/it, lr: 1.0e-04 loss: 6.836e-01]
+tira_zimage_lora:   5%|▍         | 54/1100 [31:12<6:48:45, 23.45s/it, lr: 1.0e-04 loss: 3.928e-01]
+tira_zimage_lora:   5%|▌         | 55/1100 [31:12<11:19:38, 39.02s/it, lr: 1.0e-04 loss: 3.928e-01]
+tira_zimage_lora:   5%|▌         | 55/1100 [31:58<11:19:38, 39.02s/it, lr: 1.0e-04 loss: 3.610e-01]
+tira_zimage_lora:   5%|▌         | 56/1100 [31:58<12:40:05, 43.68s/it, lr: 1.0e-04 loss: 3.610e-01]
+tira_zimage_lora:   5%|▌         | 56/1100 [32:44<12:40:05, 43.68s/it, lr: 1.0e-04 loss: 3.812e-01]
+tira_zimage_lora:   5%|▌         | 57/1100 [32:44<13:05:53, 45.21s/it, lr: 1.0e-04 loss: 3.812e-01]
+tira_zimage_lora:   5%|▌         | 57/1100 [33:06<13:05:53, 45.21s/it, lr: 1.0e-04 loss: 4.948e-01]
+tira_zimage_lora:   5%|▌         | 58/1100 [33:06<8:23:00, 28.96s/it, lr: 1.0e-04 loss: 4.948e-01] 
+tira_zimage_lora:   5%|▌         | 58/1100 [33:51<8:23:00, 28.96s/it, lr: 1.0e-04 loss: 3.864e-01]
+tira_zimage_lora:   5%|▌         | 59/1100 [33:51<11:39:36, 40.32s/it, lr: 1.0e-04 loss: 3.864e-01]
+tira_zimage_lora:   5%|▌         | 59/1100 [34:36<11:39:36, 40.32s/it, lr: 1.0e-04 loss: 3.177e-01]
+tira_zimage_lora:   5%|▌         | 60/1100 [34:36<12:43:23, 44.04s/it, lr: 1.0e-04 loss: 3.177e-01]
+tira_zimage_lora:   5%|▌         | 60/1100 [34:59<12:43:23, 44.04s/it, lr: 1.0e-04 loss: 3.881e-01]
+tira_zimage_lora:   6%|▌         | 61/1100 [34:59<8:16:16, 28.66s/it, lr: 1.0e-04 loss: 3.881e-01] 
+tira_zimage_lora:   6%|▌         | 61/1100 [35:21<8:16:16, 28.66s/it, lr: 1.0e-04 loss: 2.776e-01]
+tira_zimage_lora:   6%|▌         | 62/1100 [35:21<6:55:41, 24.03s/it, lr: 1.0e-04 loss: 2.776e-01]
+tira_zimage_lora:   6%|▌         | 62/1100 [35:43<6:55:41, 24.03s/it, lr: 1.0e-04 loss: 2.643e-01]
+tira_zimage_lora:   6%|▌         | 63/1100 [35:43<6:31:20, 22.64s/it, lr: 1.0e-04 loss: 2.643e-01]
+tira_zimage_lora:   6%|▌         | 63/1100 [36:28<6:31:20, 22.64s/it, lr: 1.0e-04 loss: 4.535e-01]
+tira_zimage_lora:   6%|▌         | 64/1100 [36:28<11:10:42, 38.84s/it, lr: 1.0e-04 loss: 4.535e-01]
+tira_zimage_lora:   6%|▌         | 64/1100 [37:14<11:10:42, 38.84s/it, lr: 1.0e-04 loss: 1.541e-01]
+tira_zimage_lora:   6%|▌         | 65/1100 [37:14<12:32:12, 43.61s/it, lr: 1.0e-04 loss: 1.541e-01]
+tira_zimage_lora:   6%|▌         | 65/1100 [37:37<12:32:12, 43.61s/it, lr: 1.0e-04 loss: 2.207e-01]
+tira_zimage_lora:   6%|▌         | 66/1100 [37:37<8:17:11, 28.85s/it, lr: 1.0e-04 loss: 2.207e-01] 
+tira_zimage_lora:   6%|▌         | 66/1100 [37:59<8:17:11, 28.85s/it, lr: 1.0e-04 loss: 5.232e-01]
+tira_zimage_lora:   6%|▌         | 67/1100 [37:59<6:55:41, 24.14s/it, lr: 1.0e-04 loss: 5.232e-01]
+tira_zimage_lora:   6%|▌         | 67/1100 [38:21<6:55:41, 24.14s/it, lr: 1.0e-04 loss: 3.889e-01]
+tira_zimage_lora:   6%|▌         | 68/1100 [38:21<6:30:18, 22.69s/it, lr: 1.0e-04 loss: 3.889e-01]
+tira_zimage_lora:   6%|▌         | 68/1100 [39:07<6:30:18, 22.69s/it, lr: 1.0e-04 loss: 4.434e-01]
+tira_zimage_lora:   6%|▋         | 69/1100 [39:07<11:08:30, 38.90s/it, lr: 1.0e-04 loss: 4.434e-01]
+tira_zimage_lora:   6%|▋         | 69/1100 [39:29<11:08:30, 38.90s/it, lr: 1.0e-04 loss: 4.454e-01]
+tira_zimage_lora:   6%|▋         | 70/1100 [39:29<7:44:47, 27.08s/it, lr: 1.0e-04 loss: 4.454e-01] 
+tira_zimage_lora:   6%|▋         | 70/1100 [39:51<7:44:47, 27.08s/it, lr: 1.0e-04 loss: 3.787e-01]
+tira_zimage_lora:   6%|▋         | 71/1100 [39:51<6:44:23, 23.58s/it, lr: 1.0e-04 loss: 3.787e-01]
+tira_zimage_lora:   6%|▋         | 71/1100 [40:13<6:44:23, 23.58s/it, lr: 1.0e-04 loss: 3.769e-01]
+tira_zimage_lora:   7%|▋         | 72/1100 [40:13<6:26:07, 22.54s/it, lr: 1.0e-04 loss: 3.769e-01]
+tira_zimage_lora:   7%|▋         | 72/1100 [40:35<6:26:07, 22.54s/it, lr: 1.0e-04 loss: 4.023e-01]
+tira_zimage_lora:   7%|▋         | 73/1100 [40:35<6:20:05, 22.21s/it, lr: 1.0e-04 loss: 4.023e-01]
+tira_zimage_lora:   7%|▋         | 73/1100 [40:57<6:20:05, 22.21s/it, lr: 1.0e-04 loss: 5.975e-01]
+tira_zimage_lora:   7%|▋         | 74/1100 [40:57<6:19:19, 22.18s/it, lr: 1.0e-04 loss: 5.975e-01]
+tira_zimage_lora:   7%|▋         | 74/1100 [41:43<6:19:19, 22.18s/it, lr: 1.0e-04 loss: 4.086e-01]
+tira_zimage_lora:   7%|▋         | 75/1100 [41:43<11:00:17, 38.65s/it, lr: 1.0e-04 loss: 4.086e-01]
+tira_zimage_lora:   7%|▋         | 75/1100 [42:05<11:00:17, 38.65s/it, lr: 1.0e-04 loss: 4.959e-01]
+tira_zimage_lora:   7%|▋         | 76/1100 [42:05<7:40:52, 27.00s/it, lr: 1.0e-04 loss: 4.959e-01] 
+tira_zimage_lora:   7%|▋         | 76/1100 [42:50<7:40:52, 27.00s/it, lr: 1.0e-04 loss: 3.109e-01]
+tira_zimage_lora:   7%|▋         | 77/1100 [42:50<11:20:35, 39.92s/it, lr: 1.0e-04 loss: 3.109e-01]
+tira_zimage_lora:   7%|▋         | 77/1100 [43:12<11:20:35, 39.92s/it, lr: 1.0e-04 loss: 4.136e-01]
+tira_zimage_lora:   7%|▋         | 78/1100 [43:12<7:45:34, 27.33s/it, lr: 1.0e-04 loss: 4.136e-01] 
+tira_zimage_lora:   7%|▋         | 78/1100 [43:34<7:45:34, 27.33s/it, lr: 1.0e-04 loss: 3.969e-01]
+tira_zimage_lora:   7%|▋         | 79/1100 [43:34<6:40:56, 23.56s/it, lr: 1.0e-04 loss: 3.969e-01]
+tira_zimage_lora:   7%|▋         | 79/1100 [44:19<6:40:56, 23.56s/it, lr: 1.0e-04 loss: 4.400e-01]
+tira_zimage_lora:   7%|▋         | 80/1100 [44:19<10:59:49, 38.81s/it, lr: 1.0e-04 loss: 4.400e-01]
+tira_zimage_lora:   7%|▋         | 80/1100 [44:41<10:59:49, 38.81s/it, lr: 1.0e-04 loss: 2.948e-01]
+tira_zimage_lora:   7%|▋         | 81/1100 [44:41<7:39:05, 27.03s/it, lr: 1.0e-04 loss: 2.948e-01] 
+tira_zimage_lora:   7%|▋         | 81/1100 [45:03<7:39:05, 27.03s/it, lr: 1.0e-04 loss: 5.452e-01]
+tira_zimage_lora:   7%|▋         | 82/1100 [45:03<6:38:42, 23.50s/it, lr: 1.0e-04 loss: 5.452e-01]
+tira_zimage_lora:   7%|▋         | 82/1100 [45:49<6:38:42, 23.50s/it, lr: 1.0e-04 loss: 2.916e-01]
+tira_zimage_lora:   8%|▊         | 83/1100 [45:49<10:57:55, 38.82s/it, lr: 1.0e-04 loss: 2.916e-01]
+tira_zimage_lora:   8%|▊         | 83/1100 [46:11<10:57:55, 38.82s/it, lr: 1.0e-04 loss: 3.744e-01]
+tira_zimage_lora:   8%|▊         | 84/1100 [46:11<7:37:46, 27.03s/it, lr: 1.0e-04 loss: 3.744e-01] 
+tira_zimage_lora:   8%|▊         | 84/1100 [46:57<7:37:46, 27.03s/it, lr: 1.0e-04 loss: 3.806e-01]
+tira_zimage_lora:   8%|▊         | 85/1100 [46:57<11:18:51, 40.13s/it, lr: 1.0e-04 loss: 3.806e-01]
+tira_zimage_lora:   8%|▊         | 85/1100 [47:42<11:18:51, 40.13s/it, lr: 1.0e-04 loss: 5.446e-01]
+tira_zimage_lora:   8%|▊         | 86/1100 [47:42<12:24:33, 44.06s/it, lr: 1.0e-04 loss: 5.446e-01]
+tira_zimage_lora:   8%|▊         | 86/1100 [48:28<12:24:33, 44.06s/it, lr: 1.0e-04 loss: 6.553e-01]
+tira_zimage_lora:   8%|▊         | 87/1100 [48:28<12:43:25, 45.22s/it, lr: 1.0e-04 loss: 6.553e-01]
+tira_zimage_lora:   8%|▊         | 87/1100 [48:50<12:43:25, 45.22s/it, lr: 1.0e-04 loss: 4.296e-01]
+tira_zimage_lora:   8%|▊         | 88/1100 [48:50<8:07:20, 28.89s/it, lr: 1.0e-04 loss: 4.296e-01] 
+tira_zimage_lora:   8%|▊         | 88/1100 [49:35<8:07:20, 28.89s/it, lr: 1.0e-04 loss: 4.116e-01]
+tira_zimage_lora:   8%|▊         | 89/1100 [49:35<11:20:45, 40.40s/it, lr: 1.0e-04 loss: 4.116e-01]
+tira_zimage_lora:   8%|▊         | 89/1100 [50:20<11:20:45, 40.40s/it, lr: 1.0e-04 loss: 2.942e-01]
+tira_zimage_lora:   8%|▊         | 90/1100 [50:20<12:16:46, 43.77s/it, lr: 1.0e-04 loss: 2.942e-01]
+tira_zimage_lora:   8%|▊         | 90/1100 [50:42<12:16:46, 43.77s/it, lr: 1.0e-04 loss: 4.158e-01]
+tira_zimage_lora:   8%|▊         | 91/1100 [50:42<7:58:59, 28.48s/it, lr: 1.0e-04 loss: 4.158e-01] 
+tira_zimage_lora:   8%|▊         | 91/1100 [51:28<7:58:59, 28.48s/it, lr: 1.0e-04 loss: 3.083e-01]
+tira_zimage_lora:   8%|▊         | 92/1100 [51:28<11:15:33, 40.21s/it, lr: 1.0e-04 loss: 3.083e-01]
+tira_zimage_lora:   8%|▊         | 92/1100 [52:13<11:15:33, 40.21s/it, lr: 1.0e-04 loss: 3.489e-01]
+tira_zimage_lora:   8%|▊         | 93/1100 [52:13<12:13:32, 43.71s/it, lr: 1.0e-04 loss: 3.489e-01]
+tira_zimage_lora:   8%|▊         | 93/1100 [52:59<12:13:32, 43.71s/it, lr: 1.0e-04 loss: 4.193e-01]
+tira_zimage_lora:   9%|▊         | 94/1100 [52:59<12:36:21, 45.11s/it, lr: 1.0e-04 loss: 4.193e-01]
+tira_zimage_lora:   9%|▊         | 94/1100 [53:44<12:36:21, 45.11s/it, lr: 1.0e-04 loss: 4.801e-01]
+tira_zimage_lora:   9%|▊         | 95/1100 [53:44<12:43:49, 45.60s/it, lr: 1.0e-04 loss: 4.801e-01]
+tira_zimage_lora:   9%|▊         | 95/1100 [54:30<12:43:49, 45.60s/it, lr: 1.0e-04 loss: 1.500e-01]
+tira_zimage_lora:   9%|▊         | 96/1100 [54:30<12:45:55, 45.77s/it, lr: 1.0e-04 loss: 1.500e-01]
+tira_zimage_lora:   9%|▊         | 96/1100 [55:16<12:45:55, 45.77s/it, lr: 1.0e-04 loss: 3.760e-01]
+tira_zimage_lora:   9%|▉         | 97/1100 [55:16<12:41:51, 45.57s/it, lr: 1.0e-04 loss: 3.760e-01]
+tira_zimage_lora:   9%|▉         | 97/1100 [56:01<12:41:51, 45.57s/it, lr: 1.0e-04 loss: 3.552e-01]
+tira_zimage_lora:   9%|▉         | 98/1100 [56:01<12:36:10, 45.28s/it, lr: 1.0e-04 loss: 3.552e-01]
+tira_zimage_lora:   9%|▉         | 98/1100 [56:23<12:36:10, 45.28s/it, lr: 1.0e-04 loss: 4.355e-01]
+tira_zimage_lora:   9%|▉         | 99/1100 [56:23<8:02:39, 28.93s/it, lr: 1.0e-04 loss: 4.355e-01] 
+tira_zimage_lora:   9%|▉         | 99/1100 [57:08<8:02:39, 28.93s/it, lr: 1.0e-04 loss: 2.826e-01]
+tira_zimage_lora:   9%|▉         | 100/1100 [57:08<11:10:23, 40.22s/it, lr: 1.0e-04 loss: 2.826e-01]
+tira_zimage_lora:   9%|▉         | 100/1100 [57:53<11:10:23, 40.22s/it, lr: 1.0e-04 loss: 3.846e-01]
+tira_zimage_lora:   9%|▉         | 101/1100 [57:53<12:08:26, 43.75s/it, lr: 1.0e-04 loss: 3.846e-01]
+tira_zimage_lora:   9%|▉         | 101/1100 [58:39<12:08:26, 43.75s/it, lr: 1.0e-04 loss: 3.911e-01]
+tira_zimage_lora:   9%|▉         | 102/1100 [58:39<12:27:49, 44.96s/it, lr: 1.0e-04 loss: 3.911e-01]
+tira_zimage_lora:   9%|▉         | 102/1100 [59:24<12:27:49, 44.96s/it, lr: 1.0e-04 loss: 5.454e-01]
+tira_zimage_lora:   9%|▉         | 103/1100 [59:24<12:35:35, 45.47s/it, lr: 1.0e-04 loss: 5.454e-01]
+tira_zimage_lora:   9%|▉         | 103/1100 [59:46<12:35:35, 45.47s/it, lr: 1.0e-04 loss: 3.240e-01]
+tira_zimage_lora:   9%|▉         | 104/1100 [59:46<8:01:53, 29.03s/it, lr: 1.0e-04 loss: 3.240e-01] 
+tira_zimage_lora:   9%|▉         | 104/1100 [1:00:32<8:01:53, 29.03s/it, lr: 1.0e-04 loss: 4.394e-01]
+tira_zimage_lora:  10%|▉         | 105/1100 [1:00:32<11:14:20, 40.66s/it, lr: 1.0e-04 loss: 4.394e-01]
+tira_zimage_lora:  10%|▉         | 105/1100 [1:01:17<11:14:20, 40.66s/it, lr: 1.0e-04 loss: 3.821e-01]
+tira_zimage_lora:  10%|▉         | 106/1100 [1:01:17<12:06:51, 43.87s/it, lr: 1.0e-04 loss: 3.821e-01]
+tira_zimage_lora:  10%|▉         | 106/1100 [1:01:39<12:06:51, 43.87s/it, lr: 1.0e-04 loss: 3.790e-01]
+tira_zimage_lora:  10%|▉         | 107/1100 [1:01:39<7:51:51, 28.51s/it, lr: 1.0e-04 loss: 3.790e-01] 
+tira_zimage_lora:  10%|▉         | 107/1100 [1:02:01<7:51:51, 28.51s/it, lr: 1.0e-04 loss: 3.840e-01]
+tira_zimage_lora:  10%|▉         | 108/1100 [1:02:01<6:35:05, 23.90s/it, lr: 1.0e-04 loss: 3.840e-01]
+tira_zimage_lora:  10%|▉         | 108/1100 [1:02:23<6:35:05, 23.90s/it, lr: 1.0e-04 loss: 5.721e-01]
+tira_zimage_lora:  10%|▉         | 109/1100 [1:02:23<6:08:24, 22.31s/it, lr: 1.0e-04 loss: 5.721e-01]
+tira_zimage_lora:  10%|▉         | 109/1100 [1:02:45<6:08:24, 22.31s/it, lr: 1.0e-04 loss: 5.543e-01]
+tira_zimage_lora:  10%|█         | 110/1100 [1:02:45<6:03:58, 22.06s/it, lr: 1.0e-04 loss: 5.543e-01]
+tira_zimage_lora:  10%|█         | 110/1100 [1:03:30<6:03:58, 22.06s/it, lr: 1.0e-04 loss: 3.909e-01]
+tira_zimage_lora:  10%|█         | 111/1100 [1:03:30<10:34:25, 38.49s/it, lr: 1.0e-04 loss: 3.909e-01]
+tira_zimage_lora:  10%|█         | 111/1100 [1:03:52<10:34:25, 38.49s/it, lr: 1.0e-04 loss: 4.334e-01]
+tira_zimage_lora:  10%|█         | 112/1100 [1:03:52<7:24:02, 26.97s/it, lr: 1.0e-04 loss: 4.334e-01] 
+tira_zimage_lora:  10%|█         | 112/1100 [1:04:14<7:24:02, 26.97s/it, lr: 1.0e-04 loss: 2.906e-01]
+tira_zimage_lora:  10%|█         | 113/1100 [1:04:14<6:23:51, 23.34s/it, lr: 1.0e-04 loss: 2.906e-01]
+tira_zimage_lora:  10%|█         | 113/1100 [1:04:36<6:23:51, 23.34s/it, lr: 1.0e-04 loss: 9.899e-02]
+tira_zimage_lora:  10%|█         | 114/1100 [1:04:36<6:08:05, 22.40s/it, lr: 1.0e-04 loss: 9.899e-02]
+tira_zimage_lora:  10%|█         | 114/1100 [1:04:58<6:08:05, 22.40s/it, lr: 1.0e-04 loss: 3.502e-01]
+tira_zimage_lora:  10%|█         | 115/1100 [1:04:58<6:04:13, 22.19s/it, lr: 1.0e-04 loss: 3.502e-01]
+tira_zimage_lora:  10%|█         | 115/1100 [1:05:20<6:04:13, 22.19s/it, lr: 1.0e-04 loss: 4.034e-01]
+tira_zimage_lora:  11%|█         | 116/1100 [1:05:20<6:01:00, 22.01s/it, lr: 1.0e-04 loss: 4.034e-01]
+tira_zimage_lora:  11%|█         | 116/1100 [1:05:42<6:01:00, 22.01s/it, lr: 1.0e-04 loss: 4.552e-01]
+tira_zimage_lora:  11%|█         | 117/1100 [1:05:42<6:01:30, 22.07s/it, lr: 1.0e-04 loss: 4.552e-01]
+tira_zimage_lora:  11%|█         | 117/1100 [1:06:27<6:01:30, 22.07s/it, lr: 1.0e-04 loss: 9.963e-02]
+tira_zimage_lora:  11%|█         | 118/1100 [1:06:27<10:29:07, 38.44s/it, lr: 1.0e-04 loss: 9.963e-02]
+tira_zimage_lora:  11%|█         | 118/1100 [1:07:13<10:29:07, 38.44s/it, lr: 1.0e-04 loss: 3.822e-01]
+tira_zimage_lora:  11%|█         | 119/1100 [1:07:13<11:47:15, 43.26s/it, lr: 1.0e-04 loss: 3.822e-01]
+tira_zimage_lora:  11%|█         | 119/1100 [1:07:35<11:47:15, 43.26s/it, lr: 1.0e-04 loss: 2.980e-01]
+tira_zimage_lora:  11%|█         | 120/1100 [1:07:35<7:43:00, 28.35s/it, lr: 1.0e-04 loss: 2.980e-01] 
+tira_zimage_lora:  11%|█         | 120/1100 [1:07:57<7:43:00, 28.35s/it, lr: 1.0e-04 loss: 4.108e-01]
+tira_zimage_lora:  11%|█         | 121/1100 [1:07:57<6:29:02, 23.84s/it, lr: 1.0e-04 loss: 4.108e-01]
+tira_zimage_lora:  11%|█         | 121/1100 [1:08:18<6:29:02, 23.84s/it, lr: 1.0e-04 loss: 3.585e-01]
+tira_zimage_lora:  11%|█         | 122/1100 [1:08:18<6:02:32, 22.24s/it, lr: 1.0e-04 loss: 3.585e-01]
+tira_zimage_lora:  11%|█         | 122/1100 [1:08:40<6:02:32, 22.24s/it, lr: 1.0e-04 loss: 4.960e-01]
+tira_zimage_lora:  11%|█         | 123/1100 [1:08:40<5:58:52, 22.04s/it, lr: 1.0e-04 loss: 4.960e-01]
+tira_zimage_lora:  11%|█         | 123/1100 [1:09:26<5:58:52, 22.04s/it, lr: 1.0e-04 loss: 1.121e+00]
+tira_zimage_lora:  11%|█▏        | 124/1100 [1:09:26<10:24:03, 38.36s/it, lr: 1.0e-04 loss: 1.121e+00]
+tira_zimage_lora:  11%|█▏        | 124/1100 [1:10:11<10:24:03, 38.36s/it, lr: 1.0e-04 loss: 4.169e-01]
+tira_zimage_lora:  11%|█▏        | 125/1100 [1:10:11<11:42:15, 43.22s/it, lr: 1.0e-04 loss: 4.169e-01]
+tira_zimage_lora:  11%|█▏        | 125/1100 [1:10:33<11:42:15, 43.22s/it, lr: 1.0e-04 loss: 4.102e-01]
+tira_zimage_lora:  11%|█▏        | 126/1100 [1:10:33<7:39:53, 28.33s/it, lr: 1.0e-04 loss: 4.102e-01] 
+tira_zimage_lora:  11%|█▏        | 126/1100 [1:11:18<7:39:53, 28.33s/it, lr: 1.0e-04 loss: 3.791e-01]
+tira_zimage_lora:  12%|█▏        | 127/1100 [1:11:18<10:52:59, 40.27s/it, lr: 1.0e-04 loss: 3.791e-01]
+tira_zimage_lora:  12%|█▏        | 127/1100 [1:11:40<10:52:59, 40.27s/it, lr: 1.0e-04 loss: 4.213e-01]
+tira_zimage_lora:  12%|█▏        | 128/1100 [1:11:40<7:24:39, 27.45s/it, lr: 1.0e-04 loss: 4.213e-01] 
+tira_zimage_lora:  12%|█▏        | 128/1100 [1:12:02<7:24:39, 27.45s/it, lr: 1.0e-04 loss: 2.835e-01]
+tira_zimage_lora:  12%|█▏        | 129/1100 [1:12:02<6:22:22, 23.63s/it, lr: 1.0e-04 loss: 2.835e-01]
+tira_zimage_lora:  12%|█▏        | 129/1100 [1:12:48<6:22:22, 23.63s/it, lr: 1.0e-04 loss: 3.075e-01]
+tira_zimage_lora:  12%|█▏        | 130/1100 [1:12:48<10:29:34, 38.94s/it, lr: 1.0e-04 loss: 3.075e-01]
+tira_zimage_lora:  12%|█▏        | 130/1100 [1:13:10<10:29:34, 38.94s/it, lr: 1.0e-04 loss: 4.202e-01]
+tira_zimage_lora:  12%|█▏        | 131/1100 [1:13:10<7:17:50, 27.11s/it, lr: 1.0e-04 loss: 4.202e-01] 
+tira_zimage_lora:  12%|█▏        | 131/1100 [1:13:55<7:17:50, 27.11s/it, lr: 1.0e-04 loss: 4.372e-01]
+tira_zimage_lora:  12%|█▏        | 132/1100 [1:13:55<10:47:53, 40.16s/it, lr: 1.0e-04 loss: 4.372e-01]
+tira_zimage_lora:  12%|█▏        | 132/1100 [1:14:17<10:47:53, 40.16s/it, lr: 1.0e-04 loss: 4.581e-01]
+tira_zimage_lora:  12%|█▏        | 133/1100 [1:14:17<7:22:32, 27.46s/it, lr: 1.0e-04 loss: 4.581e-01] 
+tira_zimage_lora:  12%|█▏        | 133/1100 [1:15:03<7:22:32, 27.46s/it, lr: 1.0e-04 loss: 5.981e-01]
+tira_zimage_lora:  12%|█▏        | 134/1100 [1:15:03<10:49:14, 40.33s/it, lr: 1.0e-04 loss: 5.981e-01]
+tira_zimage_lora:  12%|█▏        | 134/1100 [1:15:49<10:49:14, 40.33s/it, lr: 1.0e-04 loss: 3.320e-01]
+tira_zimage_lora:  12%|█▏        | 135/1100 [1:15:49<11:49:02, 44.09s/it, lr: 1.0e-04 loss: 3.320e-01]
+tira_zimage_lora:  12%|█▏        | 135/1100 [1:16:11<11:49:02, 44.09s/it, lr: 1.0e-04 loss: 2.743e-01]
+tira_zimage_lora:  12%|█▏        | 136/1100 [1:16:11<7:38:02, 28.51s/it, lr: 1.0e-04 loss: 2.743e-01] 
+tira_zimage_lora:  12%|█▏        | 136/1100 [1:16:33<7:38:02, 28.51s/it, lr: 1.0e-04 loss: 2.658e-01]
+tira_zimage_lora:  12%|█▏        | 137/1100 [1:16:33<6:25:17, 24.01s/it, lr: 1.0e-04 loss: 2.658e-01]
+tira_zimage_lora:  12%|█▏        | 137/1100 [1:17:18<6:25:17, 24.01s/it, lr: 1.0e-04 loss: 4.178e-01]
+tira_zimage_lora:  13%|█▎        | 138/1100 [1:17:18<10:25:41, 39.02s/it, lr: 1.0e-04 loss: 4.178e-01]
+tira_zimage_lora:  13%|█▎        | 138/1100 [1:18:04<10:25:41, 39.02s/it, lr: 1.0e-04 loss: 4.495e-01]
+tira_zimage_lora:  13%|█▎        | 139/1100 [1:18:04<11:33:53, 43.32s/it, lr: 1.0e-04 loss: 4.495e-01]
+tira_zimage_lora:  13%|█▎        | 139/1100 [1:18:49<11:33:53, 43.32s/it, lr: 1.0e-04 loss: 3.613e-01]
+tira_zimage_lora:  13%|█▎        | 140/1100 [1:18:49<11:53:10, 44.57s/it, lr: 1.0e-04 loss: 3.613e-01]
+tira_zimage_lora:  13%|█▎        | 140/1100 [1:19:34<11:53:10, 44.57s/it, lr: 1.0e-04 loss: 3.167e-01]
+tira_zimage_lora:  13%|█▎        | 141/1100 [1:19:34<11:59:03, 44.99s/it, lr: 1.0e-04 loss: 3.167e-01]
+tira_zimage_lora:  13%|█▎        | 141/1100 [1:20:19<11:59:03, 44.99s/it, lr: 1.0e-04 loss: 3.910e-01]
+tira_zimage_lora:  13%|█▎        | 142/1100 [1:20:19<12:03:01, 45.28s/it, lr: 1.0e-04 loss: 3.910e-01]
+tira_zimage_lora:  13%|█▎        | 142/1100 [1:21:05<12:03:01, 45.28s/it, lr: 1.0e-04 loss: 4.289e-01]
+tira_zimage_lora:  13%|█▎        | 143/1100 [1:21:05<12:06:23, 45.54s/it, lr: 1.0e-04 loss: 4.289e-01]
+tira_zimage_lora:  13%|█▎        | 143/1100 [1:21:50<12:06:23, 45.54s/it, lr: 1.0e-04 loss: 3.642e-01]
+tira_zimage_lora:  13%|█▎        | 144/1100 [1:21:50<12:06:47, 45.61s/it, lr: 1.0e-04 loss: 3.642e-01]
+tira_zimage_lora:  13%|█▎        | 144/1100 [1:22:13<12:06:47, 45.61s/it, lr: 1.0e-04 loss: 3.674e-01]
+tira_zimage_lora:  13%|█▎        | 145/1100 [1:22:13<7:43:17, 29.11s/it, lr: 1.0e-04 loss: 3.674e-01] 
+tira_zimage_lora:  13%|█▎        | 145/1100 [1:22:34<7:43:17, 29.11s/it, lr: 1.0e-04 loss: 3.712e-01]
+tira_zimage_lora:  13%|█▎        | 146/1100 [1:22:34<6:22:32, 24.06s/it, lr: 1.0e-04 loss: 3.712e-01]
+tira_zimage_lora:  13%|█▎        | 146/1100 [1:23:20<6:22:32, 24.06s/it, lr: 1.0e-04 loss: 4.294e-01]
+tira_zimage_lora:  13%|█▎        | 147/1100 [1:23:20<10:22:34, 39.20s/it, lr: 1.0e-04 loss: 4.294e-01]
+tira_zimage_lora:  13%|█▎        | 147/1100 [1:24:06<10:22:34, 39.20s/it, lr: 1.0e-04 loss: 7.167e-01]
+tira_zimage_lora:  13%|█▎        | 148/1100 [1:24:06<11:36:48, 43.92s/it, lr: 1.0e-04 loss: 7.167e-01]
+tira_zimage_lora:  13%|█▎        | 148/1100 [1:24:28<11:36:48, 43.92s/it, lr: 1.0e-04 loss: 3.607e-01]
+tira_zimage_lora:  14%|█▎        | 149/1100 [1:24:28<7:34:07, 28.65s/it, lr: 1.0e-04 loss: 3.607e-01] 
+tira_zimage_lora:  14%|█▎        | 149/1100 [1:24:50<7:34:07, 28.65s/it, lr: 1.0e-04 loss: 4.201e-01]
+tira_zimage_lora:  14%|█▎        | 150/1100 [1:24:50<6:20:48, 24.05s/it, lr: 1.0e-04 loss: 4.201e-01]
+tira_zimage_lora:  14%|█▎        | 150/1100 [1:25:36<6:20:48, 24.05s/it, lr: 1.0e-04 loss: 4.170e-01]
+tira_zimage_lora:  14%|█▎        | 151/1100 [1:25:36<10:20:40, 39.24s/it, lr: 1.0e-04 loss: 4.170e-01]
+tira_zimage_lora:  14%|█▎        | 151/1100 [1:26:22<10:20:40, 39.24s/it, lr: 1.0e-04 loss: 4.360e-01]
+tira_zimage_lora:  14%|█▍        | 152/1100 [1:26:22<11:31:51, 43.79s/it, lr: 1.0e-04 loss: 4.360e-01]
+tira_zimage_lora:  14%|█▍        | 152/1100 [1:27:07<11:31:51, 43.79s/it, lr: 1.0e-04 loss: 3.815e-01]
+tira_zimage_lora:  14%|█▍        | 153/1100 [1:27:07<11:51:50, 45.10s/it, lr: 1.0e-04 loss: 3.815e-01]
+tira_zimage_lora:  14%|█▍        | 153/1100 [1:27:29<11:51:50, 45.10s/it, lr: 1.0e-04 loss: 4.054e-01]
+tira_zimage_lora:  14%|█▍        | 154/1100 [1:27:29<7:36:13, 28.94s/it, lr: 1.0e-04 loss: 4.054e-01] 
+tira_zimage_lora:  14%|█▍        | 154/1100 [1:27:51<7:36:13, 28.94s/it, lr: 1.0e-04 loss: 4.315e-01]
+tira_zimage_lora:  14%|█▍        | 155/1100 [1:27:51<6:20:03, 24.13s/it, lr: 1.0e-04 loss: 4.315e-01]
+tira_zimage_lora:  14%|█▍        | 155/1100 [1:28:37<6:20:03, 24.13s/it, lr: 1.0e-04 loss: 3.578e-01]
+tira_zimage_lora:  14%|█▍        | 156/1100 [1:28:37<10:16:05, 39.16s/it, lr: 1.0e-04 loss: 3.578e-01]
+tira_zimage_lora:  14%|█▍        | 156/1100 [1:28:59<10:16:05, 39.16s/it, lr: 1.0e-04 loss: 2.649e-01]
+tira_zimage_lora:  14%|█▍        | 157/1100 [1:28:59<7:06:40, 27.15s/it, lr: 1.0e-04 loss: 2.649e-01] 
+tira_zimage_lora:  14%|█▍        | 157/1100 [1:29:45<7:06:40, 27.15s/it, lr: 1.0e-04 loss: 3.006e-01]
+tira_zimage_lora:  14%|█▍        | 158/1100 [1:29:45<10:28:56, 40.06s/it, lr: 1.0e-04 loss: 3.006e-01]
+tira_zimage_lora:  14%|█▍        | 158/1100 [1:30:30<10:28:56, 40.06s/it, lr: 1.0e-04 loss: 3.769e-01]
+tira_zimage_lora:  14%|█▍        | 159/1100 [1:30:30<11:25:28, 43.71s/it, lr: 1.0e-04 loss: 3.769e-01]
+tira_zimage_lora:  14%|█▍        | 159/1100 [1:30:52<11:25:28, 43.71s/it, lr: 1.0e-04 loss: 3.660e-01]
+tira_zimage_lora:  15%|█▍        | 160/1100 [1:30:52<7:27:10, 28.54s/it, lr: 1.0e-04 loss: 3.660e-01] 
+tira_zimage_lora:  15%|█▍        | 160/1100 [1:31:14<7:27:10, 28.54s/it, lr: 1.0e-04 loss: 4.076e-01]
+tira_zimage_lora:  15%|█▍        | 161/1100 [1:31:14<6:19:29, 24.25s/it, lr: 1.0e-04 loss: 4.076e-01]
+tira_zimage_lora:  15%|█▍        | 161/1100 [1:32:00<6:19:29, 24.25s/it, lr: 1.0e-04 loss: 3.948e-01]
+tira_zimage_lora:  15%|█▍        | 162/1100 [1:32:00<10:13:25, 39.24s/it, lr: 1.0e-04 loss: 3.948e-01]
+tira_zimage_lora:  15%|█▍        | 162/1100 [1:32:22<10:13:25, 39.24s/it, lr: 1.0e-04 loss: 2.045e-01]
+tira_zimage_lora:  15%|█▍        | 163/1100 [1:32:22<7:04:09, 27.16s/it, lr: 1.0e-04 loss: 2.045e-01] 
+tira_zimage_lora:  15%|█▍        | 163/1100 [1:33:08<7:04:09, 27.16s/it, lr: 1.0e-04 loss: 3.988e-01]
+tira_zimage_lora:  15%|█▍        | 164/1100 [1:33:08<10:24:30, 40.03s/it, lr: 1.0e-04 loss: 3.988e-01]
+tira_zimage_lora:  15%|█▍        | 164/1100 [1:33:30<10:24:30, 40.03s/it, lr: 1.0e-04 loss: 3.824e-01]
+tira_zimage_lora:  15%|█▌        | 165/1100 [1:33:30<7:06:45, 27.39s/it, lr: 1.0e-04 loss: 3.824e-01] 
+tira_zimage_lora:  15%|█▌        | 165/1100 [1:34:15<7:06:45, 27.39s/it, lr: 1.0e-04 loss: 5.071e-01]
+tira_zimage_lora:  15%|█▌        | 166/1100 [1:34:15<10:25:58, 40.21s/it, lr: 1.0e-04 loss: 5.071e-01]
+tira_zimage_lora:  15%|█▌        | 166/1100 [1:34:37<10:25:58, 40.21s/it, lr: 1.0e-04 loss: 4.124e-01]
+tira_zimage_lora:  15%|█▌        | 167/1100 [1:34:37<7:06:50, 27.45s/it, lr: 1.0e-04 loss: 4.124e-01] 
+tira_zimage_lora:  15%|█▌        | 167/1100 [1:35:23<7:06:50, 27.45s/it, lr: 1.0e-04 loss: 2.882e-01]
+tira_zimage_lora:  15%|█▌        | 168/1100 [1:35:23<10:23:06, 40.11s/it, lr: 1.0e-04 loss: 2.882e-01]
+tira_zimage_lora:  15%|█▌        | 168/1100 [1:35:45<10:23:06, 40.11s/it, lr: 1.0e-04 loss: 4.263e-01]
+tira_zimage_lora:  15%|█▌        | 169/1100 [1:35:45<7:05:56, 27.45s/it, lr: 1.0e-04 loss: 4.263e-01] 
+tira_zimage_lora:  15%|█▌        | 169/1100 [1:36:07<7:05:56, 27.45s/it, lr: 1.0e-04 loss: 4.635e-01]
+tira_zimage_lora:  15%|█▌        | 170/1100 [1:36:07<6:07:50, 23.73s/it, lr: 1.0e-04 loss: 4.635e-01]
+tira_zimage_lora:  15%|█▌        | 170/1100 [1:36:29<6:07:50, 23.73s/it, lr: 1.0e-04 loss: 4.237e-01]
+tira_zimage_lora:  16%|█▌        | 171/1100 [1:36:29<5:48:44, 22.52s/it, lr: 1.0e-04 loss: 4.237e-01]
+tira_zimage_lora:  16%|█▌        | 171/1100 [1:36:51<5:48:44, 22.52s/it, lr: 1.0e-04 loss: 3.488e-01]
+tira_zimage_lora:  16%|█▌        | 172/1100 [1:36:51<5:42:30, 22.15s/it, lr: 1.0e-04 loss: 3.488e-01]
+tira_zimage_lora:  16%|█▌        | 172/1100 [1:37:13<5:42:30, 22.15s/it, lr: 1.0e-04 loss: 3.956e-01]
+tira_zimage_lora:  16%|█▌        | 173/1100 [1:37:13<5:40:24, 22.03s/it, lr: 1.0e-04 loss: 3.956e-01]
+tira_zimage_lora:  16%|█▌        | 173/1100 [1:37:35<5:40:24, 22.03s/it, lr: 1.0e-04 loss: 3.418e-01]
+tira_zimage_lora:  16%|█▌        | 174/1100 [1:37:35<5:39:11, 21.98s/it, lr: 1.0e-04 loss: 3.418e-01]
+tira_zimage_lora:  16%|█▌        | 174/1100 [1:37:57<5:39:11, 21.98s/it, lr: 1.0e-04 loss: 1.484e-01]
+tira_zimage_lora:  16%|█▌        | 175/1100 [1:37:57<5:37:55, 21.92s/it, lr: 1.0e-04 loss: 1.484e-01]
+tira_zimage_lora:  16%|█▌        | 175/1100 [1:38:19<5:37:55, 21.92s/it, lr: 1.0e-04 loss: 4.033e-01]
+tira_zimage_lora:  16%|█▌        | 176/1100 [1:38:19<5:37:30, 21.92s/it, lr: 1.0e-04 loss: 4.033e-01]
+tira_zimage_lora:  16%|█▌        | 176/1100 [1:38:41<5:37:30, 21.92s/it, lr: 1.0e-04 loss: 3.933e-01]
+tira_zimage_lora:  16%|█▌        | 177/1100 [1:38:41<5:36:26, 21.87s/it, lr: 1.0e-04 loss: 3.933e-01]
+tira_zimage_lora:  16%|█▌        | 177/1100 [1:39:02<5:36:26, 21.87s/it, lr: 1.0e-04 loss: 3.959e-01]
+tira_zimage_lora:  16%|█▌        | 178/1100 [1:39:02<5:36:51, 21.92s/it, lr: 1.0e-04 loss: 3.959e-01]
+tira_zimage_lora:  16%|█▌        | 178/1100 [1:39:24<5:36:51, 21.92s/it, lr: 1.0e-04 loss: 3.729e-01]
+tira_zimage_lora:  16%|█▋        | 179/1100 [1:39:24<5:37:02, 21.96s/it, lr: 1.0e-04 loss: 3.729e-01]
+tira_zimage_lora:  16%|█▋        | 179/1100 [1:40:10<5:37:02, 21.96s/it, lr: 1.0e-04 loss: 3.765e-01]
+tira_zimage_lora:  16%|█▋        | 180/1100 [1:40:10<9:48:44, 38.40s/it, lr: 1.0e-04 loss: 3.765e-01]
+tira_zimage_lora:  16%|█▋        | 180/1100 [1:40:55<9:48:44, 38.40s/it, lr: 1.0e-04 loss: 4.526e-01]
+tira_zimage_lora:  16%|█▋        | 181/1100 [1:40:55<11:05:04, 43.42s/it, lr: 1.0e-04 loss: 4.526e-01]
+tira_zimage_lora:  16%|█▋        | 181/1100 [1:41:41<11:05:04, 43.42s/it, lr: 1.0e-04 loss: 3.347e-01]
+tira_zimage_lora:  17%|█▋        | 182/1100 [1:41:41<11:28:21, 44.99s/it, lr: 1.0e-04 loss: 3.347e-01]
+tira_zimage_lora:  17%|█▋        | 182/1100 [1:42:27<11:28:21, 44.99s/it, lr: 1.0e-04 loss: 4.776e-01]
+tira_zimage_lora:  17%|█▋        | 183/1100 [1:42:27<11:35:41, 45.52s/it, lr: 1.0e-04 loss: 4.776e-01]
+tira_zimage_lora:  17%|█▋        | 183/1100 [1:43:13<11:35:41, 45.52s/it, lr: 1.0e-04 loss: 3.790e-01]
+tira_zimage_lora:  17%|█▋        | 184/1100 [1:43:13<11:37:25, 45.68s/it, lr: 1.0e-04 loss: 3.790e-01]
+tira_zimage_lora:  17%|█▋        | 184/1100 [1:43:35<11:37:25, 45.68s/it, lr: 1.0e-04 loss: 2.516e-01]
+tira_zimage_lora:  17%|█▋        | 185/1100 [1:43:35<7:24:16, 29.13s/it, lr: 1.0e-04 loss: 2.516e-01] 
+tira_zimage_lora:  17%|█▋        | 185/1100 [1:44:20<7:24:16, 29.13s/it, lr: 1.0e-04 loss: 2.748e-01]
+tira_zimage_lora:  17%|█▋        | 186/1100 [1:44:20<10:21:18, 40.79s/it, lr: 1.0e-04 loss: 2.748e-01]
+tira_zimage_lora:  17%|█▋        | 186/1100 [1:45:06<10:21:18, 40.79s/it, lr: 1.0e-04 loss: 3.701e-01]
+tira_zimage_lora:  17%|█▋        | 187/1100 [1:45:06<11:13:50, 44.28s/it, lr: 1.0e-04 loss: 3.701e-01]
+tira_zimage_lora:  17%|█▋        | 187/1100 [1:45:28<11:13:50, 44.28s/it, lr: 1.0e-04 loss: 4.552e-01]
+tira_zimage_lora:  17%|█▋        | 188/1100 [1:45:28<7:16:43, 28.73s/it, lr: 1.0e-04 loss: 4.552e-01] 
+tira_zimage_lora:  17%|█▋        | 188/1100 [1:45:50<7:16:43, 28.73s/it, lr: 1.0e-04 loss: 3.655e-01]
+tira_zimage_lora:  17%|█▋        | 189/1100 [1:45:50<6:05:22, 24.06s/it, lr: 1.0e-04 loss: 3.655e-01]
+tira_zimage_lora:  17%|█▋        | 189/1100 [1:46:12<6:05:22, 24.06s/it, lr: 1.0e-04 loss: 3.972e-01]
+tira_zimage_lora:  17%|█▋        | 190/1100 [1:46:12<5:43:28, 22.65s/it, lr: 1.0e-04 loss: 3.972e-01]
+tira_zimage_lora:  17%|█▋        | 190/1100 [1:46:58<5:43:28, 22.65s/it, lr: 1.0e-04 loss: 4.254e-01]
+tira_zimage_lora:  17%|█▋        | 191/1100 [1:46:58<9:46:35, 38.72s/it, lr: 1.0e-04 loss: 4.254e-01]
+tira_zimage_lora:  17%|█▋        | 191/1100 [1:47:20<9:46:35, 38.72s/it, lr: 1.0e-04 loss: 2.722e-01]
+tira_zimage_lora:  17%|█▋        | 192/1100 [1:47:20<6:49:12, 27.04s/it, lr: 1.0e-04 loss: 2.722e-01]
+tira_zimage_lora:  17%|█▋        | 192/1100 [1:47:42<6:49:12, 27.04s/it, lr: 1.0e-04 loss: 3.974e-01]
+tira_zimage_lora:  18%|█▊        | 193/1100 [1:47:42<5:55:17, 23.50s/it, lr: 1.0e-04 loss: 3.974e-01]
+tira_zimage_lora:  18%|█▊        | 193/1100 [1:48:04<5:55:17, 23.50s/it, lr: 1.0e-04 loss: 3.485e-01]
+tira_zimage_lora:  18%|█▊        | 194/1100 [1:48:04<5:38:58, 22.45s/it, lr: 1.0e-04 loss: 3.485e-01]
+tira_zimage_lora:  18%|█▊        | 194/1100 [1:48:26<5:38:58, 22.45s/it, lr: 1.0e-04 loss: 4.508e-01]
+tira_zimage_lora:  18%|█▊        | 195/1100 [1:48:26<5:33:50, 22.13s/it, lr: 1.0e-04 loss: 4.508e-01]
+tira_zimage_lora:  18%|█▊        | 195/1100 [1:49:12<5:33:50, 22.13s/it, lr: 1.0e-04 loss: 3.779e-01]
+tira_zimage_lora:  18%|█▊        | 196/1100 [1:49:12<9:41:16, 38.58s/it, lr: 1.0e-04 loss: 3.779e-01]
+tira_zimage_lora:  18%|█▊        | 196/1100 [1:49:57<9:41:16, 38.58s/it, lr: 1.0e-04 loss: 3.006e-01]
+tira_zimage_lora:  18%|█▊        | 197/1100 [1:49:57<10:53:24, 43.42s/it, lr: 1.0e-04 loss: 3.006e-01]
+tira_zimage_lora:  18%|█▊        | 197/1100 [1:50:43<10:53:24, 43.42s/it, lr: 1.0e-04 loss: 3.783e-01]
+tira_zimage_lora:  18%|█▊        | 198/1100 [1:50:43<11:16:13, 44.98s/it, lr: 1.0e-04 loss: 3.783e-01]
+tira_zimage_lora:  18%|█▊        | 198/1100 [1:51:28<11:16:13, 44.98s/it, lr: 1.0e-04 loss: 4.257e-01]
+tira_zimage_lora:  18%|█▊        | 199/1100 [1:51:28<11:21:37, 45.39s/it, lr: 1.0e-04 loss: 4.257e-01]
+tira_zimage_lora:  18%|█▊        | 199/1100 [1:52:14<11:21:37, 45.39s/it, lr: 1.0e-04 loss: 5.369e-01]
+tira_zimage_lora:  18%|█▊        | 200/1100 [1:52:14<11:24:18, 45.62s/it, lr: 1.0e-04 loss: 5.369e-01]
+tira_zimage_lora:  18%|█▊        | 200/1100 [1:53:00<11:24:18, 45.62s/it, lr: 1.0e-04 loss: 1.953e-01]
+Saving at step 200
+Saved checkpoint to /tmp/train/output/tira_zimage_lora/tira_zimage_lora_000000200.safetensors
+Saved optimizer to /tmp/train/output/tira_zimage_lora/optimizer.pt
+Unloading assistant lora
+
+Generating Samples:   0%|          | 0/4 [00:00<?, ?it/s]
+Generating Samples:   0%|          | 0/4 [02:59<?, ?it/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import sys, runpy, t4patch; sys.argv = ['run.py', sys.argv[1]]; runpy.run_path('run.py', run_name='__main__')
+                                                                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 294, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "run.py", line 151, in <module>
+    main()
+    ~~~~^^
+  File "run.py", line 136, in main
+    raise e
+  File "run.py", line 124, in main
+    job.run()
+    ~~~~~~~^^
+  File "/tmp/ai-toolkit/jobs/ExtensionJob.py", line 22, in run
+    process.run()
+    ~~~~~~~~~~~^^
+  File "/tmp/ai-toolkit/jobs/process/BaseSDTrainProcess.py", line 2742, in run
+    self.sample(self.step_num)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/tmp/ai-toolkit/jobs/process/BaseSDTrainProcess.py", line 379, in sample
+    self.sd.generate_images(gen_img_config_list, sampler=sample_config.sampler)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/tmp/ai-toolkit/toolkit/models/base_model.py", line 771, in generate_images
+    img = self.generate_single_image(
+        pipeline,
+    ...<4 lines>...
+        extra,
+    )
+  File "/tmp/ai-toolkit/extensions_built_in/diffusion_models/z_image/z_image.py", line 308, in generate_single_image
+    img = pipeline(
+          ~~~~~~~~^
+        prompt_embeds=conditional_embeds.text_embeds,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        **extra,
+        ^^^^^^^^
+    ).images[0]
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/pipelines/z_image/pipeline_z_image.py", line 591, in __call__
+    image = self.vae.decode(latents, return_dict=False)[0]
+            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/accelerate_utils.py", line 46, in wrapper
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 235, in decode
+    decoded = self._decode(z).sample
+              ~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 206, in _decode
+    dec = self.decoder(z)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/vae.py", line 301, in forward
+    sample = up_block(sample, latent_embeds)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py", line 2643, in forward
+    hidden_states = upsampler(hidden_states)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/diffusers/models/upsampling.py", line 186, in forward
+    hidden_states = self.conv(hidden_states)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py", line 548, in _conv_forward
+    return F.conv2d(
+           ~~~~~~~~^
+        input, weight, bias, self.stride, self.padding, self.dilation, self.groups
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.38 GiB. GPU 0 has a total capacity of 14.56 GiB of which 2.27 GiB is free. Including non-PyTorch memory, this process has 12.29 GiB memory in use. Of the allocated memory 12.03 GiB is allocated by PyTorch, and 135.38 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+Error running job: CUDA out of memory. Tried to allocate 3.38 GiB. GPU 0 has a total capacity of 14.56 GiB of which 2.27 GiB is free. Including non-PyTorch memory, this process has 12.29 GiB memory in use. Of the allocated memory 12.03 GiB is allocated by PyTorch, and 135.38 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+
+========================================
+Result:
+ - 0 completed jobs
+ - 1 failure
+========================================
+T4 attention patch stats: {'fp16': 20585, 'fp32_fallback': 0}

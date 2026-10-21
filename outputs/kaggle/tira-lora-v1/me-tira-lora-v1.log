@@ -1,0 +1,77 @@
+[{"stream_name":"stdout","time":0.96688647,"data":"$ git init -q /tmp/ai-toolkit \u0026\u0026 cd /tmp/ai-toolkit \u0026\u0026 git remote add origin https://github.com/ostris/ai-toolkit.git \u0026\u0026 git fetch -q --depth 1 origin 04733873cf1da8060fce01316ec45daedbd4a918 \u0026\u0026 git checkout -q FETCH_HEAD \u0026\u0026 git submodule update --init --recursive --depth 1 -q || true\n"}
+,{"stream_name":"stdout","time":4.6043517210000005,"data":"$ /usr/bin/python3 -m pip install -q -r /tmp/train/requirements.txt\n"}
+,{"stream_name":"stdout","time":23.096451292,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 4.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.786028341,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 3.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.458519571,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 111.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.486091675,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.3/200.3 kB 9.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.544245219,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 79.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.567754449,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 16.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.589984843,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.7/109.7 kB 6.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.620898127,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 32.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.648492993,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.0/557.0 kB 27.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.671875382,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.782535376,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 83.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.862551404,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 58.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.896349852,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 59.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.3331802,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 39.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.379002218,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 90.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.401936915,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.8/53.8 kB 2.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.690565192,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 61.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.714444686,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.7/195.7 kB 11.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.757176923,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 90.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.796559747,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 2.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":77.875852463,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":77.875885345,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":77.875893168,"data":"ydata-profiling 4.18.4 requires matplotlib\u003c=3.10,\u003e=3.5, but you have matplotlib 3.10.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":78.200731469,"data":"$ /usr/bin/python3 -m pip install -q torchao\n"}
+,{"stream_name":"stdout","time":81.312380896,"data":"[    80.3s] ai-toolkit installed\n"}
+,{"stream_name":"stdout","time":121.841626389,"data":"[   120.9s] dataset ready (35 images)\n"}
+,{"stream_name":"stdout","time":121.877940604,"data":"[   120.9s] config written\n"}
+,{"stream_name":"stdout","time":7480.681224446,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":7480.685064866,"data":"torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.38 GiB. GPU 0 has a total capacity of 14.56 GiB of which 2.27 GiB is free. Including non-PyTorch memory, this process has 12.29 GiB memory in use. Of the allocated memory 12.03 GiB is allocated by PyTorch, and 135.38 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"}
+,{"stream_name":"stdout","time":7480.759391992,"data":"Error running job: CUDA out of memory. Tried to allocate 3.38 GiB. GPU 0 has a total capacity of 14.56 GiB of which 2.27 GiB is free. Including non-PyTorch memory, this process has 12.29 GiB memory in use. Of the allocated memory 12.03 GiB is allocated by PyTorch, and 135.38 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"}
+,{"stream_name":"stdout","time":7483.239982764,"data":"[  7482.3s] training failed (exit -11)\n"}
+,{"stream_name":"stdout","time":7483.27180467,"data":"{\n"}
+,{"stream_name":"stdout","time":7483.271823884,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":7483.271829821,"data":"  \"aitk_commit\": \"04733873cf1da8060fce01316ec45daedbd4a918\",\n"}
+,{"stream_name":"stdout","time":7483.271835635,"data":"  \"trigger\": \"tirav1\",\n"}
+,{"stream_name":"stdout","time":7483.271840723,"data":"  \"steps\": 1100,\n"}
+,{"stream_name":"stdout","time":7483.271845343,"data":"  \"rank\": 16,\n"}
+,{"stream_name":"stdout","time":7483.271860384,"data":"  \"lr\": 0.0001,\n"}
+,{"stream_name":"stdout","time":7483.271867783,"data":"  \"resolutions\": [\n"}
+,{"stream_name":"stdout","time":7483.271870567,"data":"   512,\n"}
+,{"stream_name":"stdout","time":7483.27187263,"data":"   768\n"}
+,{"stream_name":"stdout","time":7483.271874995,"data":"  ],\n"}
+,{"stream_name":"stdout","time":7483.271877255,"data":"  \"save_every\": 200,\n"}
+,{"stream_name":"stdout","time":7483.271879425,"data":"  \"sample_every\": 200,\n"}
+,{"stream_name":"stdout","time":7483.271882069,"data":"  \"max_minutes\": 660,\n"}
+,{"stream_name":"stdout","time":7483.27188437,"data":"  \"sample_prompts\": [\n"}
+,{"stream_name":"stdout","time":7483.271886735,"data":"   \"tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":7483.271889228,"data":"   \"tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":7483.2718917,"data":"   \"tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":7483.271894064,"data":"   \"tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo\"\n"}
+,{"stream_name":"stdout","time":7483.27189646,"data":"  ]\n"}
+,{"stream_name":"stdout","time":7483.271898514,"data":" },\n"}
+,{"stream_name":"stdout","time":7483.271900653,"data":" \"images\": 35,\n"}
+,{"stream_name":"stdout","time":7483.271902821,"data":" \"timings\": {\n"}
+,{"stream_name":"stdout","time":7483.271904951,"data":"  \"ai-toolkit installed\": 80.3,\n"}
+,{"stream_name":"stdout","time":7483.271907195,"data":"  \"dataset ready (35 images)\": 120.9,\n"}
+,{"stream_name":"stdout","time":7483.271909483,"data":"  \"config written\": 120.9,\n"}
+,{"stream_name":"stdout","time":7483.271911673,"data":"  \"training failed (exit -11)\": 7482.3\n"}
+,{"stream_name":"stdout","time":7483.271913842,"data":" },\n"}
+,{"stream_name":"stdout","time":7483.271915888,"data":" \"last_step\": 200,\n"}
+,{"stream_name":"stdout","time":7483.271918049,"data":" \"sec_per_step\": 45.62,\n"}
+,{"stream_name":"stdout","time":7483.271920203,"data":" \"exit_code\": -11,\n"}
+,{"stream_name":"stdout","time":7483.27192233,"data":" \"stopped_by_time_limit\": false,\n"}
+,{"stream_name":"stdout","time":7483.271924513,"data":" \"lora_files\": [\n"}
+,{"stream_name":"stdout","time":7483.271926689,"data":"  \"tira_zimage_lora_000000200.safetensors\"\n"}
+,{"stream_name":"stdout","time":7483.271928915,"data":" ],\n"}
+,{"stream_name":"stdout","time":7483.271930965,"data":" \"samples\": []\n"}
+,{"stream_name":"stdout","time":7483.271933136,"data":"}\n"}
+,{"stream_name":"stderr","time":7485.903496468,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":7485.903526069,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":7486.253056467,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":7486.253088955,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":7488.372147058,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":7489.382320634,"data":"[NbConvertApp] Writing 334734 bytes to __results__.html\n"}
+]
