@@ -4,7 +4,7 @@
  "accelerator": "NvidiaTeslaT4",
  "internet": true,
  "timeout_minutes": 690,
- "wait_minutes": 10,
+ "wait_minutes": 12,
  "params": {
   "aitk_commit": "04733873cf1da8060fce01316ec45daedbd4a918",
   "trigger": "tirav1",
@@ -203,7 +203,10 @@
   ],
   "resume_glob": "tira_zimage_lora_0*.safetensors"
  },
- "kernels": [
-  "shubhzzgupta07/me-tira-lora-v1"
- ]
+ "stage": {
+  "from_kernel": "shubhzzgupta07/me-tira-lora-v1",
+  "file_pattern": "tira_zimage_lora_\\d+\\.safetensors$",
+  "dataset_slug": "tira-lora-checkpoints",
+  "title": "Tira LoRA checkpoints"
+ }
 }

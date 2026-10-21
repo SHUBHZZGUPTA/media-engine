@@ -16,6 +16,10 @@ Job file fields:
   wait_minutes     how long to wait here before leaving the run going (default 60)
   datasets, models, kernels  optional lists of Kaggle sources to attach ("owner/slug")
   params           optional settings for the script, readable there as json.loads(JOB_PARAMS)
+  stage            optional {from_kernel, file_pattern, dataset_slug, title}: before the run, copy
+                   matching files from an earlier notebook's output into a private Kaggle dataset on
+                   the same account and attach it (outputs of a notebook that ended in an error
+                   can't be attached directly)
 
 Credentials: KAGGLE_API_TOKEN, or KAGGLE_USERNAME + KAGGLE_KEY. They are never printed.
 """
@@ -109,6 +113,48 @@ def gpu_quota(api):
         return {"error": type(e).__name__}
 
 
+def stage_files(api, user, stage):
+    """Copy files from an earlier notebook's output into a private dataset on this account and
+    return the dataset ref to attach."""
+    ref = f"{user}/{stage['dataset_slug']}"
+    with tempfile.TemporaryDirectory() as dl, tempfile.TemporaryDirectory() as folder:
+        files, token = [], None
+        while True:
+            got, token = api.kernels_output(stage["from_kernel"], path=dl, file_pattern=stage["file_pattern"],
+                                            force=True, quiet=True, page_token=token, page_size=200)
+            files += got or []
+            if not token:
+                break
+        files = [f for f in files if os.path.isfile(f)]
+        if not files:
+            sys.exit(f"stage: nothing in {stage['from_kernel']} matched {stage['file_pattern']}")
+        for f in files:
+            shutil.move(f, os.path.join(folder, os.path.basename(f)))
+        meta = {"title": stage.get("title", stage["dataset_slug"]), "id": ref,
+                "licenses": [{"name": "copyright-authors"}]}
+        with open(os.path.join(folder, "dataset-metadata.json"), "w") as fh:
+            json.dump(meta, fh)
+        try:
+            api.dataset_status(ref)
+            exists = True
+        except Exception:
+            exists = False
+        if exists:
+            api.dataset_create_version(folder, "staged from " + stage["from_kernel"], quiet=True)
+        else:
+            api.dataset_create_new(folder, public=False, quiet=True)
+    print(f"[{now()}] staged {len(files)} file(s) into private dataset {ref}", flush=True)
+    deadline = time.time() + 900
+    while time.time() < deadline:
+        try:
+            if str(api.dataset_status(ref)).lower() == "ready":
+                return ref, [os.path.basename(f) for f in files]
+        except Exception:
+            pass
+        time.sleep(15)
+    sys.exit(f"stage: dataset {ref} was not ready after 15 minutes")
+
+
 def wait_for(api, ref, minutes):
     deadline = time.time() + minutes * 60
     last = None
@@ -178,6 +224,10 @@ def main():
                   **{k: record[k] for k in ("job", "kernel", "url")}}
 
     if not args.collect:
+        if job.get("stage"):
+            ds_ref, staged = stage_files(api, user, job["stage"])
+            job["datasets"] = list(dict.fromkeys(job.get("datasets", []) + [ds_ref]))
+            record.update(staged_dataset=ds_ref, staged_files=staged)
         with tempfile.TemporaryDirectory() as tmp:
             meta, acc = build_folder(job, user, Path(tmp))
             timeout_s = int(job.get("timeout_minutes", 60)) * 60
