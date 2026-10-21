@@ -15,12 +15,14 @@
  },
  "images": 35,
  "timings": {
-  "ai-toolkit installed": 74.7,
-  "dataset ready (35 images)": 138.5,
-  "config written": 138.6,
-  "training failed (exit 1)": 179.2
+  "ai-toolkit installed": 79.9,
+  "dataset ready (35 images)": 160.0,
+  "config written": 160.0,
+  "training failed (exit -11)": 742.3
  },
- "exit_code": 1,
+ "last_step": 8,
+ "sec_per_step": 17.07,
+ "exit_code": -11,
  "outputs": [],
  "peak_gpu_mem_note": "see train_log.txt"
 }
