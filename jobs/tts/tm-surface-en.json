@@ -1,0 +1,94 @@
+{
+ "id": "tm-surface-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a sharp, modern tech-news YouTube Shorts channel. The Narrator is a deep, warm, confident explainer: brisk and clear, slightly wry, never hype-y. Lean on the numbers. Take a short pause before 'Here's the catch', before each punchline, and before the final sign-off.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You can now carry a petaflop in your backpack. In two thousand eight, it filled a room... and cost over a hundred million dollars. So what changed?"
+    ],
+    [
+     "Narrator",
+     "Rewind to two thousand eight. IBM's Roadrunner became the first computer to break a petaflop."
+    ],
+    [
+     "Narrator",
+     "Nearly three hundred racks. Two point three five megawatts of power."
+    ],
+    [
+     "Narrator",
+     "Now Microsoft's Surface Laptop Ultra claims... up to one petaflop."
+    ],
+    [
+     "Narrator",
+     "So did a supercomputer just shrink into a backpack?"
+    ],
+    [
+     "Narrator",
+     "Here's the catch."
+    ],
+    [
+     "Narrator",
+     "Roadrunner counted in big, precise, sixty-four-bit numbers."
+    ],
+    [
+     "Narrator",
+     "Nvidia's R T X Spark chip hits its petaflop with tiny four-bit numbers... plus a shortcut called sparsity."
+    ],
+    [
+     "Narrator",
+     "Same word. Very different math."
+    ],
+    [
+     "Narrator",
+     "So why care? Memory."
+    ],
+    [
+     "Narrator",
+     "Most laptops give the graphics chip its own small memory."
+    ],
+    [
+     "Narrator",
+     "This one shares a single pool. Up to one hundred and twenty-eight gigabytes."
+    ],
+    [
+     "Narrator",
+     "Not all of it goes to graphics. In one test, the G P U could reach about one hundred and ten."
+    ],
+    [
+     "Narrator",
+     "Enough to fit an A I model with a hundred and twenty billion parameters."
+    ],
+    [
+     "Narrator",
+     "On your lap. No cloud. No server room."
+    ],
+    [
+     "Narrator",
+     "The bill? From two thousand five hundred and ninety-nine dollars. The one-twenty-eight-gig version? Five thousand, eight hundred and ninety-nine."
+    ],
+    [
+     "Narrator",
+     "So no, it's not a two-thousand-eight supercomputer. It's an A I lab... in a backpack."
+    ],
+    [
+     "Narrator",
+     "Roadrunner drew two point three five megawatts. This one charges from a hundred-and-forty-watt brick."
+    ],
+    [
+     "Narrator",
+     "This is Tech Minister. Follow for tech, minus the hype."
+    ]
+   ]
+  }
+ ]
+}
