@@ -14,6 +14,7 @@ Job file fields:
   timeout_minutes  hard limit for the run on Kaggle (default 60; Kaggle caps sessions at 12 h)
   wait_minutes     how long to wait here before leaving the run going (default 60)
   datasets, models, kernels  optional lists of Kaggle sources to attach ("owner/slug")
+  params           optional settings for the script, readable there as json.loads(JOB_PARAMS)
 
 Credentials: KAGGLE_API_TOKEN, or KAGGLE_USERNAME + KAGGLE_KEY. They are never printed.
 """
@@ -53,7 +54,11 @@ def build_folder(job, user, folder):
     script = ROOT / job["script"]
     if not script.is_file():
         sys.exit(f"script not found: {job['script']}")
-    shutil.copy(script, folder / script.name)
+    code = script.read_text(encoding="utf-8")
+    if "params" in job:
+        # Kaggle runs a single file, so the job's params are written into its first line.
+        code = f"JOB_PARAMS = {json.dumps(job['params'])!r}\n" + code
+    (folder / script.name).write_text(code, encoding="utf-8")
     slug = slug_for(job["id"])
     acc = job.get("accelerator", "NvidiaTeslaT4")
     meta = {
