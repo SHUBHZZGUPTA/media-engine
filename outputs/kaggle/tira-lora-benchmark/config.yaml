@@ -11,7 +11,7 @@ config:
       linear_alpha: 16
     save:
       dtype: float16
-      save_every: 25
+      save_every: 30
       max_step_saves_to_keep: 20
     datasets:
     - folder_path: /tmp/train/dataset
@@ -23,7 +23,7 @@ config:
       - 768
     train:
       batch_size: 1
-      steps: 25
+      steps: 30
       gradient_accumulation_steps: 1
       train_unet: true
       train_text_encoder: false
@@ -47,7 +47,7 @@ config:
       assistant_lora_path: ostris/zimage_turbo_training_adapter/zimage_turbo_training_adapter_v2.safetensors
     sample:
       sampler: flowmatch
-      sample_every: 250
+      sample_every: 300
       width: 768
       height: 1024
       prompts: []

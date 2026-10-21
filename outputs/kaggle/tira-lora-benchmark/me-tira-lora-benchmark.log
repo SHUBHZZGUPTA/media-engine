@@ -1,69 +1,67 @@
-[{"stream_name":"stdout","time":0.935443728,"data":"$ git init -q /tmp/ai-toolkit \u0026\u0026 cd /tmp/ai-toolkit \u0026\u0026 git remote add origin https://github.com/ostris/ai-toolkit.git \u0026\u0026 git fetch -q --depth 1 origin 04733873cf1da8060fce01316ec45daedbd4a918 \u0026\u0026 git checkout -q FETCH_HEAD \u0026\u0026 git submodule update --init --recursive --depth 1 -q || true\n"}
-,{"stream_name":"stdout","time":5.044425822,"data":"$ /usr/bin/python3 -m pip install -q -r /tmp/train/requirements.txt\n"}
-,{"stream_name":"stdout","time":23.573598507,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 4.0 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":25.12638182,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 3.1 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":27.842421237,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 116.8 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":27.865421043,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.3/200.3 kB 11.9 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":27.925679839,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 78.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":27.949452272,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 16.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":27.973967351,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.7/109.7 kB 5.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.003202574,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 35.0 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.035211498,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.0/557.0 kB 22.4 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.05920242,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.14934801,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 102.7 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.275119062,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 63.5 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.310632179,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 57.1 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.667903883,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 51.3 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.712952671,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 98.2 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.735687904,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.8/53.8 kB 2.7 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":28.997838543,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 64.8 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":29.022494868,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.7/195.7 kB 11.4 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":29.064980204,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 91.9 MB/s eta 0:00:00\n"}
-,{"stream_name":"stdout","time":29.10497077,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 2.3 MB/s eta 0:00:00\n"}
-,{"stream_name":"stderr","time":77.452777252,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
-,{"stream_name":"stderr","time":77.452821416,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
-,{"stream_name":"stderr","time":77.452834266,"data":"ydata-profiling 4.18.4 requires matplotlib\u003c=3.10,\u003e=3.5, but you have matplotlib 3.10.1 which is incompatible.\n"}
-,{"stream_name":"stdout","time":77.782453206,"data":"$ /usr/bin/python3 -m pip install -q torchao\n"}
-,{"stream_name":"stdout","time":80.826204214,"data":"[    79.9s] ai-toolkit installed\n"}
-,{"stream_name":"stdout","time":160.926621271,"data":"[   160.0s] dataset ready (35 images)\n"}
-,{"stream_name":"stdout","time":160.964047044,"data":"[   160.0s] config written\n"}
-,{"stream_name":"stdout","time":740.777809853,"data":"Error running job: OOM during training step 3 times in a row, aborting training\n"}
-,{"stream_name":"stdout","time":740.780459203,"data":"Traceback (most recent call last):\n"}
-,{"stream_name":"stdout","time":740.781691217,"data":"    raise RuntimeError(\"OOM during training step 3 times in a row, aborting training\")\n"}
-,{"stream_name":"stdout","time":740.7817272,"data":"RuntimeError: OOM during training step 3 times in a row, aborting training\n"}
-,{"stream_name":"stdout","time":743.277638777,"data":"[   742.3s] training failed (exit -11)\n"}
-,{"stream_name":"stdout","time":743.279585752,"data":"{\n"}
-,{"stream_name":"stdout","time":743.279609882,"data":" \"params\": {\n"}
-,{"stream_name":"stdout","time":743.279614572,"data":"  \"aitk_commit\": \"04733873cf1da8060fce01316ec45daedbd4a918\",\n"}
-,{"stream_name":"stdout","time":743.279618068,"data":"  \"trigger\": \"tirav1\",\n"}
-,{"stream_name":"stdout","time":743.279621319,"data":"  \"steps\": 25,\n"}
-,{"stream_name":"stdout","time":743.279624335,"data":"  \"rank\": 16,\n"}
-,{"stream_name":"stdout","time":743.279627286,"data":"  \"lr\": 0.0001,\n"}
-,{"stream_name":"stdout","time":743.279630266,"data":"  \"resolutions\": [\n"}
-,{"stream_name":"stdout","time":743.279633454,"data":"   512,\n"}
-,{"stream_name":"stdout","time":743.279650785,"data":"   768\n"}
-,{"stream_name":"stdout","time":743.279667232,"data":"  ],\n"}
-,{"stream_name":"stdout","time":743.279671791,"data":"  \"save_every\": 25,\n"}
-,{"stream_name":"stdout","time":743.279676762,"data":"  \"sample_every\": 0,\n"}
-,{"stream_name":"stdout","time":743.279681474,"data":"  \"sample_prompts\": []\n"}
-,{"stream_name":"stdout","time":743.279685614,"data":" },\n"}
-,{"stream_name":"stdout","time":743.279689671,"data":" \"images\": 35,\n"}
-,{"stream_name":"stdout","time":743.279703324,"data":" \"timings\": {\n"}
-,{"stream_name":"stdout","time":743.279708453,"data":"  \"ai-toolkit installed\": 79.9,\n"}
-,{"stream_name":"stdout","time":743.279715275,"data":"  \"dataset ready (35 images)\": 160.0,\n"}
-,{"stream_name":"stdout","time":743.279717554,"data":"  \"config written\": 160.0,\n"}
-,{"stream_name":"stdout","time":743.279720146,"data":"  \"training failed (exit -11)\": 742.3\n"}
-,{"stream_name":"stdout","time":743.279736194,"data":" },\n"}
-,{"stream_name":"stdout","time":743.279739726,"data":" \"last_step\": 8,\n"}
-,{"stream_name":"stdout","time":743.279743289,"data":" \"sec_per_step\": 17.07,\n"}
-,{"stream_name":"stdout","time":743.279747155,"data":" \"exit_code\": -11,\n"}
-,{"stream_name":"stdout","time":743.279750822,"data":" \"outputs\": [],\n"}
-,{"stream_name":"stdout","time":743.279754973,"data":" \"peak_gpu_mem_note\": \"see train_log.txt\"\n"}
-,{"stream_name":"stdout","time":743.279758771,"data":"}\n"}
-,{"stream_name":"stderr","time":745.846570736,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":745.846614278,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":746.232268497,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":746.232289087,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":748.175604596,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":749.243841165,"data":"[NbConvertApp] Writing 323004 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":0.840333179,"data":"$ git init -q /tmp/ai-toolkit \u0026\u0026 cd /tmp/ai-toolkit \u0026\u0026 git remote add origin https://github.com/ostris/ai-toolkit.git \u0026\u0026 git fetch -q --depth 1 origin 04733873cf1da8060fce01316ec45daedbd4a918 \u0026\u0026 git checkout -q FETCH_HEAD \u0026\u0026 git submodule update --init --recursive --depth 1 -q || true\n"}
+,{"stream_name":"stdout","time":3.5005381399999997,"data":"$ /usr/bin/python3 -m pip install -q -r /tmp/train/requirements.txt\n"}
+,{"stream_name":"stdout","time":20.290332421,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 3.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":22.06765238,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 3.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.733753561,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 94.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.761168923,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.3/200.3 kB 11.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.831986581,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 71.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.861657756,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 15.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.890382309,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.7/109.7 kB 5.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.923678052,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 34.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.961365108,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.0/557.0 kB 20.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.988629668,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.076794951,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 112.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.155496818,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 60.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.195696607,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 54.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.575103101,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 49.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.632041702,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 77.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.660340094,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.8/53.8 kB 2.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.968054832,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 60.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.997370148,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.7/195.7 kB 10.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.050035931,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 77.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.100107673,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 2.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":78.177047289,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":78.177078779,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":78.177100241,"data":"ydata-profiling 4.18.4 requires matplotlib\u003c=3.10,\u003e=3.5, but you have matplotlib 3.10.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":78.547326653,"data":"$ /usr/bin/python3 -m pip install -q torchao\n"}
+,{"stream_name":"stdout","time":81.897681745,"data":"[    81.1s] ai-toolkit installed\n"}
+,{"stream_name":"stdout","time":117.232605887,"data":"[   116.4s] dataset ready (35 images)\n"}
+,{"stream_name":"stdout","time":117.268885459,"data":"[   116.4s] config written\n"}
+,{"stream_name":"stdout","time":1514.594967823,"data":"[  1513.8s] training finished\n"}
+,{"stream_name":"stdout","time":1514.626857576,"data":"{\n"}
+,{"stream_name":"stdout","time":1514.626882024,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":1514.62688755,"data":"  \"aitk_commit\": \"04733873cf1da8060fce01316ec45daedbd4a918\",\n"}
+,{"stream_name":"stdout","time":1514.626892463,"data":"  \"trigger\": \"tirav1\",\n"}
+,{"stream_name":"stdout","time":1514.626897349,"data":"  \"steps\": 30,\n"}
+,{"stream_name":"stdout","time":1514.626902176,"data":"  \"rank\": 16,\n"}
+,{"stream_name":"stdout","time":1514.626906339,"data":"  \"lr\": 0.0001,\n"}
+,{"stream_name":"stdout","time":1514.626911237,"data":"  \"resolutions\": [\n"}
+,{"stream_name":"stdout","time":1514.626915537,"data":"   512,\n"}
+,{"stream_name":"stdout","time":1514.626919559,"data":"   768\n"}
+,{"stream_name":"stdout","time":1514.626923629,"data":"  ],\n"}
+,{"stream_name":"stdout","time":1514.626927652,"data":"  \"save_every\": 30,\n"}
+,{"stream_name":"stdout","time":1514.626931807,"data":"  \"sample_every\": 0,\n"}
+,{"stream_name":"stdout","time":1514.626938113,"data":"  \"sample_prompts\": []\n"}
+,{"stream_name":"stdout","time":1514.626945224,"data":" },\n"}
+,{"stream_name":"stdout","time":1514.626947939,"data":" \"images\": 35,\n"}
+,{"stream_name":"stdout","time":1514.626950634,"data":" \"timings\": {\n"}
+,{"stream_name":"stdout","time":1514.626953323,"data":"  \"ai-toolkit installed\": 81.1,\n"}
+,{"stream_name":"stdout","time":1514.626956169,"data":"  \"dataset ready (35 images)\": 116.4,\n"}
+,{"stream_name":"stdout","time":1514.62695896,"data":"  \"config written\": 116.4,\n"}
+,{"stream_name":"stdout","time":1514.626961686,"data":"  \"training finished\": 1513.8\n"}
+,{"stream_name":"stdout","time":1514.626964505,"data":" },\n"}
+,{"stream_name":"stdout","time":1514.626978166,"data":" \"last_step\": 30,\n"}
+,{"stream_name":"stdout","time":1514.626993981,"data":" \"sec_per_step\": 33.15,\n"}
+,{"stream_name":"stdout","time":1514.626998097,"data":" \"exit_code\": 0,\n"}
+,{"stream_name":"stdout","time":1514.627002012,"data":" \"outputs\": [\n"}
+,{"stream_name":"stdout","time":1514.627005967,"data":"  \"tira_zimage_lora.safetensors\"\n"}
+,{"stream_name":"stdout","time":1514.627009979,"data":" ],\n"}
+,{"stream_name":"stdout","time":1514.627013249,"data":" \"peak_gpu_mem_note\": \"see train_log.txt\"\n"}
+,{"stream_name":"stdout","time":1514.627016744,"data":"}\n"}
+,{"stream_name":"stderr","time":1517.059282419,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1517.05931082,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1517.383373398,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1517.383399444,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1519.068498851,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1520.106842632,"data":"[NbConvertApp] Writing 327798 bytes to __results__.html\n"}
 ]

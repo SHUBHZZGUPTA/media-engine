@@ -12,7 +12,7 @@ Running 1 job
     },
     "save": {
         "dtype": "float16",
-        "save_every": 25,
+        "save_every": 30,
         "max_step_saves_to_keep": 20
     },
     "datasets": [
@@ -29,7 +29,7 @@ Running 1 job
     ],
     "train": {
         "batch_size": 1,
-        "steps": 25,
+        "steps": 30,
         "gradient_accumulation_steps": 1,
         "train_unet": true,
         "train_text_encoder": false,
@@ -56,7 +56,7 @@ Running 1 job
     },
     "sample": {
         "sampler": "flowmatch",
-        "sample_every": 250,
+        "sample_every": 300,
         "width": 768,
         "height": 1024,
         "prompts": [],
@@ -79,223 +79,238 @@ Loading transformer
 
 split_files/diffusion_models/z_image_tur(…): reconstructing file:   0%|          |  0.00B / 12.3GB            [A
 split_files/diffusion_models/z_image_tur(…): downloading bytes:           |  0.00B            
-split_files/diffusion_models/z_image_tur(…): downloading bytes:           |  881kB            
-split_files/diffusion_models/z_image_tur(…): downloading bytes:           | 54.0MB, 85.0kB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes:           |  113MB, 5.20MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  173MB, 10.8MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  237MB, 16.5MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  301MB, 22.4MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▎         |  363MB, 28.2MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▎         |  427MB, 33.9MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  491MB, 39.6MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  555MB, 45.3MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▌         |  620MB, 50.9MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▌         |  683MB, 56.5MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▌         |  746MB, 61.9MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▋         |  809MB, 67.2MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▋         |  874MB, 72.4MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▊         |  938MB, 77.8MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▊         | 1.06GB, 88.0MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.12GB, 92.8MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.19GB, 97.8MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █         | 1.30GB,  107MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▏        | 1.40GB,  114MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes:           | 31.0MB            
+split_files/diffusion_models/z_image_tur(…): downloading bytes:           | 84.5MB, 3.05MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes:           |  142MB, 8.26MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  199MB, 13.8MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▏         |  258MB, 19.2MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▎         |  318MB, 24.8MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▎         |  378MB, 30.3MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▎         |  436MB, 35.8MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  496MB, 41.1MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  556MB, 46.4MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▍         |  614MB, 51.7MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▌         |  729MB, 61.6MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▋         |  840MB, 71.3MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:   7%|▋         |  872MB / 12.3GB            [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▏        | 1.49GB,  121MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:   1%|          | 67.1MB / 12.3GB            [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▊         |  935MB, 80.4MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▊         | 1.04GB, 86.7MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.10GB, 91.3MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.15GB, 95.7MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ▉         | 1.21GB,  100MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █         | 1.31GB,  109MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:   8%|▊         | 1.01GB / 12.3GB, 79.1MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▎        | 1.55GB,  124MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▎        | 1.61GB,  128MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:   4%|▍         |  469MB / 12.3GB, 6.31MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▏        | 1.41GB,  116MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▏        | 1.50GB,  122MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  10%|█         | 1.27GB / 12.3GB, 90.3MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.71GB,  136MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.78GB,  139MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.84GB,  144MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 1.91GB,  148MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 1.97GB,  152MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▋        | 2.03GB,  156MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▋        | 2.09GB,  160MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▋        | 2.15GB,  164MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▊        | 2.21GB,  168MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▊        | 2.28GB,  172MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▉        | 2.34GB,  176MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █▉        | 2.40GB,  180MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██        | 2.47GB,  184MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██        | 2.59GB,  192MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▏       | 2.71GB,  199MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▎       | 2.78GB,  203MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▎       | 2.84GB,  206MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▎       | 2.90GB,  210MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▍       | 2.96GB,  214MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▍       | 3.03GB,  217MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▌       | 3.09GB,  221MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▌       | 3.16GB,  224MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▋       | 3.28GB,  231MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▋       | 3.35GB,  235MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▊       | 3.41GB,  238MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▊       | 3.52GB,  245MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:   8%|▊         | 1.01GB / 12.3GB, 42.8MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▎        | 1.59GB,  127MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▎        | 1.65GB,  131MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.71GB,  135MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.77GB,  139MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▍        | 1.83GB,  143MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 1.88GB,  147MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 1.94GB,  151MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▌        | 2.00GB,  155MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▋        | 2.06GB,  159MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▊        | 2.17GB,  166MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▊        | 2.27GB,  173MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▉        | 2.37GB,  177MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █▉        | 2.42GB,  181MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██        | 2.48GB,  184MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██        | 2.54GB,  187MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██        | 2.60GB,  191MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▏       | 2.66GB,  194MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▏       | 2.74GB,  200MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  15%|█▍        | 1.81GB / 12.3GB,  117MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▉       | 3.62GB,  249MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▉       | 3.68GB,  251MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  13%|█▎        | 1.54GB / 12.3GB, 90.6MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▎       | 2.86GB,  203MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▎       | 2.91GB,  207MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▍       | 2.97GB,  210MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▍       | 3.03GB,  213MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▌       | 3.09GB,  217MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▌       | 3.15GB,  220MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▌       | 3.21GB,  223MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▋       | 3.29GB,  228MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▋       | 3.38GB,  231MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  16%|█▋        | 2.01GB / 12.3GB,  129MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███       | 3.73GB,  253MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███       | 3.80GB,  256MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▏      | 3.86GB,  259MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▏      | 3.93GB,  262MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▏      | 3.99GB,  266MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.05GB,  269MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.11GB,  272MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▍      | 4.23GB,  277MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  21%|██        | 2.62GB / 12.3GB,  120MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▊       | 3.47GB,  235MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▊       | 3.53GB,  236MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  18%|█▊        | 2.21GB / 12.3GB,  144MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▌      | 4.35GB,  282MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▌      | 4.41GB,  285MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▋      | 4.48GB,  287MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▋      | 4.54GB,  290MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▋      | 4.60GB,  293MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▊      | 4.66GB,  296MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▊      | 4.73GB,  299MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.79GB,  301MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.85GB,  304MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.92GB,  307MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████      | 4.98GB,  309MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▏     | 5.09GB,  314MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▏     | 5.17GB,  316MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.24GB,  317MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.31GB,  317MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  23%|██▎       | 2.88GB / 12.3GB,  198MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▉       | 3.61GB,  241MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██▉       | 3.66GB,  242MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███       | 3.75GB,  246MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███       | 3.82GB,  248MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  27%|██▋       | 3.35GB / 12.3GB,  150MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.38GB,  318MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▍     | 5.42GB,  318MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  26%|██▌       | 3.22GB / 12.3GB,  216MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▏      | 3.90GB,  249MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▏      | 3.95GB,  251MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.01GB,  253MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.06GB,  256MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▎      | 4.12GB,  258MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▍      | 4.17GB,  261MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▍      | 4.23GB,  263MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▍      | 4.29GB,  266MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▌      | 4.34GB,  268MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▌      | 4.40GB,  270MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▌      | 4.45GB,  273MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▋      | 4.51GB,  275MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▋      | 4.57GB,  277MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▊      | 4.68GB,  282MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▊      | 4.73GB,  284MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.79GB,  286MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.84GB,  289MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███▉      | 4.90GB,  291MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████      | 5.01GB,  295MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████      | 5.06GB,  297MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▏     | 5.12GB,  299MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▏     | 5.17GB,  301MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.28GB,  305MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▎     | 5.34GB,  307MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▍     | 5.40GB,  309MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▍     | 5.45GB,  311MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.56GB,  315MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.62GB,  317MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.67GB,  319MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▋     | 5.73GB,  321MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▋     | 5.82GB,  324MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  29%|██▉       | 3.55GB / 12.3GB,  218MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▍     | 5.50GB,  318MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.55GB,  319MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.59GB,  320MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.63GB,  321MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▌     | 5.68GB,  322MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▋     | 5.73GB,  323MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▋     | 5.78GB,  324MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.87GB,  326MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.93GB,  327MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.98GB,  329MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▉     | 6.04GB,  331MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▉     | 6.10GB,  333MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████     | 6.16GB,  335MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████     | 6.22GB,  337MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████     | 6.27GB,  339MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.33GB,  341MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.39GB,  343MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.45GB,  344MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▎    | 6.50GB,  346MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▎    | 6.56GB,  348MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▍    | 6.62GB,  350MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▍    | 6.68GB,  352MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▌    | 6.79GB,  355MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▌    | 6.85GB,  357MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▌    | 6.91GB,  358MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 6.97GB,  360MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 7.03GB,  362MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.08GB,  364MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.14GB,  365MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▉    | 7.25GB,  368MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▉    | 7.31GB,  370MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████    | 7.43GB,  373MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████    | 7.49GB,  375MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▏   | 7.55GB,  376MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▏   | 7.66GB,  379MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▎   | 7.78GB,  382MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▎   | 7.84GB,  384MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▍   | 7.89GB,  385MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▍   | 7.95GB,  387MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▌   | 8.01GB,  388MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▌   | 8.12GB,  391MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▋   | 8.18GB,  393MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▋   | 8.24GB,  394MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▊   | 8.36GB,  397MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▊   | 8.41GB,  398MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▉   | 8.47GB,  399MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▉   | 8.58GB,  402MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████   | 8.64GB,  403MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████   | 8.70GB,  404MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▏  | 8.81GB,  407MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▏  | 8.87GB,  408MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▎  | 8.92GB,  409MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▎  | 9.04GB,  411MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.09GB,  413MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.15GB,  414MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.21GB,  415MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▌  | 9.26GB,  416MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▌  | 9.32GB,  417MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▌  | 9.38GB,  418MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▋  | 9.50GB,  421MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▊  | 9.55GB,  422MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▊  | 9.67GB,  424MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▉  | 9.72GB,  425MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▉  | 9.82GB,  427MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  27%|██▋       | 3.35GB / 12.3GB,  233MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.89GB,  325MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.94GB,  325MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▊     | 5.99GB,  326MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▉     | 6.09GB,  328MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████▉     | 6.14GB,  330MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████     | 6.20GB,  332MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████     | 6.25GB,  333MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.33GB,  335MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.39GB,  335MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  31%|███       | 3.82GB / 12.3GB,  230MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████  | 9.90GB,  427MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████  | 9.98GB,  425MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▏ | 10.0GB,  426MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▏ | 10.1GB,  427MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  35%|███▍      | 4.29GB / 12.3GB,  182MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▏    | 6.45GB,  334MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▎    | 6.49GB,  334MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▎    | 6.53GB,  335MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  40%|███▉      | 4.90GB / 12.3GB,  142MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▎ | 10.2GB,  426MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▎ | 10.2GB,  426MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▎ | 10.3GB,  426MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.3GB,  425MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.4GB,  425MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  36%|███▌      | 4.43GB / 12.3GB,  237MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▎    | 6.61GB,  336MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▍    | 6.65GB,  336MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▍    | 6.69GB,  336MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▍    | 6.73GB,  337MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▌    | 6.82GB,  337MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▌    | 6.87GB,  339MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▌    | 6.92GB,  340MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  44%|████▍     | 5.43GB / 12.3GB,  215MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.5GB,  424MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.5GB,  423MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.6GB,  401MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.6GB,  309MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.6GB,  286MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.6GB,  212MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  37%|███▋      | 4.49GB / 12.3GB,  239MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 6.97GB,  341MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 7.02GB,  342MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▋    | 7.07GB,  344MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.12GB,  345MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.18GB,  346MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▊    | 7.23GB,  347MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▉    | 7.33GB,  350MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: █████▉    | 7.39GB,  351MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████    | 7.44GB,  353MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████    | 7.49GB,  354MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▏   | 7.54GB,  355MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▏   | 7.65GB,  358MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▎   | 7.70GB,  359MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▎   | 7.75GB,  360MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▍   | 7.85GB,  362MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▍   | 7.91GB,  364MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▌   | 8.01GB,  366MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▌   | 8.06GB,  367MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▌   | 8.11GB,  368MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▋   | 8.16GB,  369MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▋   | 8.22GB,  370MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▋   | 8.27GB,  371MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▊   | 8.32GB,  372MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▊   | 8.37GB,  373MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▉   | 8.47GB,  375MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████▉   | 8.57GB,  377MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████   | 8.62GB,  378MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████   | 8.67GB,  379MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████   | 8.72GB,  380MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▏  | 8.77GB,  381MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▏  | 8.83GB,  382MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▏  | 8.88GB,  383MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▎  | 8.93GB,  384MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▎  | 8.98GB,  385MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  50%|█████     | 6.17GB / 12.3GB,  247MB/s  [A
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  38%|███▊      | 4.69GB / 12.3GB,  229MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.09GB,  387MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.14GB,  388MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▍  | 9.20GB,  389MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▌  | 9.25GB,  390MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▌  | 9.31GB,  391MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  63%|██████▎   | 7.78GB / 12.3GB,  144MB/s  [A
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  39%|███▉      | 4.83GB / 12.3GB,  183MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▋  | 9.40GB,  393MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▋  | 9.46GB,  394MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▋  | 9.51GB,  395MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▊  | 9.57GB,  396MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▊  | 9.62GB,  397MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▊  | 9.68GB,  398MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▉  | 9.73GB,  399MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ███████▉  | 9.79GB,  400MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████  | 9.88GB,  402MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████  | 9.97GB,  402MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▏ | 10.0GB,  403MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▏ | 10.1GB,  403MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▏ | 10.1GB,  404MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▎ | 10.2GB,  405MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  76%|███████▌  | 9.32GB / 12.3GB,  252MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.7GB,  150MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  40%|████      | 4.96GB / 12.3GB,  183MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▎ | 10.3GB,  406MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.3GB,  407MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.4GB,  408MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▍ | 10.5GB,  409MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▌ | 10.5GB,  411MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.6GB,  411MB/s  
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file:  89%|████████▉ | 10.9GB / 12.3GB,  351MB/s  [A
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  47%|████▋     | 5.83GB / 12.3GB,  172MB/s  [A
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file: 100%|██████████| 12.3GB / 12.3GB,  254MB/s  [A
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████████| 10.7GB,  149MB/s  
-split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████████| 10.7GB,  149MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  60%|██████    | 7.44GB / 12.3GB,  222MB/s  [A
 
-split_files/diffusion_models/z_image_tur(…): reconstructing file: 100%|██████████| 12.3GB / 12.3GB,  339MB/s  
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  74%|███████▎  | 9.05GB / 12.3GB,  204MB/s  [A
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file:  87%|████████▋ | 10.7GB / 12.3GB,  299MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ████████▋ | 10.7GB,  411MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file: 100%|█████████▉| 12.3GB / 12.3GB,  398MB/s  [A
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file: 100%|██████████| 12.3GB / 12.3GB,  280MB/s  [A
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████████| 10.7GB,  411MB/s  
+split_files/diffusion_models/z_image_tur(…): downloading bytes: ██████████| 10.7GB,  411MB/s  
+
+split_files/diffusion_models/z_image_tur(…): reconstructing file: 100%|██████████| 12.3GB / 12.3GB,  281MB/s  
 
 config.json:   0%|          | 0.00/473 [00:00<?, ?B/s]
-config.json: 100%|██████████| 473/473 [00:00<00:00, 2.38MB/s]
+config.json: 100%|██████████| 473/473 [00:00<00:00, 2.98MB/s]
 Loading assistant LoRA
 
 
 zimage_turbo_training_adapter_v2.safeten(…): reconstructing file:   0%|          |  0.00B /  340MB            [A
 zimage_turbo_training_adapter_v2.safeten(…): downloading bytes:           |  0.00B            
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes:           | 8.10kB            
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ▎         | 10.6MB,   773B/s  
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ▊         | 29.1MB, 1.01MB/s  
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: █▍        | 49.4MB, 2.76MB/s  
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██        | 70.4MB, 4.65MB/s  
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██▋       | 89.4MB, 6.59MB/s  
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ███▍      |  117MB, 9.56MB/s  
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ████▎     |  148MB, 12.1MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ▏         | 4.44MB            
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ▋         | 23.6MB,  431kB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: █▏        | 39.6MB, 2.28MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: █▋        | 58.8MB, 3.81MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██▎       | 77.2MB, 5.62MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ███▏      |  108MB, 8.83MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ████      |  138MB, 11.5MB/s  
 
-zimage_turbo_training_adapter_v2.safeten(…): reconstructing file:  36%|███▌      |  122MB /  340MB            [A
+zimage_turbo_training_adapter_v2.safeten(…): reconstructing file:   1%|          | 3.33MB /  340MB            [A
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ████▊     |  164MB, 14.0MB/s  
 
-zimage_turbo_training_adapter_v2.safeten(…): reconstructing file:  84%|████████▍ |  286MB /  340MB, 11.4MB/s  [A
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██████████|  164MB, 14.7MB/s  
-zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██████████|  164MB, 14.7MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): reconstructing file:  88%|████████▊ |  298MB /  340MB,  315kB/s  [A
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██████████|  164MB, 15.0MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): downloading bytes: ██████████|  164MB, 15.0MB/s  
 
-zimage_turbo_training_adapter_v2.safeten(…): reconstructing file: 100%|██████████|  340MB /  340MB, 31.3MB/s  
+zimage_turbo_training_adapter_v2.safeten(…): reconstructing file: 100%|██████████|  340MB /  340MB, 31.8MB/s  
 create LoRA network. base dim (rank): 64, alpha: 64
 neuron dropout: p=None, rank dropout: p=None, module dropout: p=None
 create LoRA for Text Encoder: 0 modules.
@@ -307,65 +322,65 @@ Quantizing (float8)
  - quantizing 30 blocks
 
   0%|          | 0/30 [00:00<?, ?it/s]
-  3%|▎         | 1/30 [00:00<00:12,  2.23it/s]
-  7%|▋         | 2/30 [00:00<00:09,  3.04it/s]
- 10%|█         | 3/30 [00:00<00:07,  3.44it/s]
- 13%|█▎        | 4/30 [00:01<00:07,  3.65it/s]
- 17%|█▋        | 5/30 [00:01<00:06,  3.77it/s]
- 20%|██        | 6/30 [00:01<00:06,  3.87it/s]
- 23%|██▎       | 7/30 [00:01<00:05,  3.92it/s]
- 27%|██▋       | 8/30 [00:02<00:05,  3.97it/s]
- 30%|███       | 9/30 [00:02<00:05,  4.00it/s]
- 33%|███▎      | 10/30 [00:02<00:04,  4.02it/s]
- 37%|███▋      | 11/30 [00:02<00:04,  4.02it/s]
- 40%|████      | 12/30 [00:03<00:04,  4.02it/s]
- 43%|████▎     | 13/30 [00:03<00:04,  4.03it/s]
- 47%|████▋     | 14/30 [00:03<00:03,  4.03it/s]
- 50%|█████     | 15/30 [00:03<00:03,  4.02it/s]
- 53%|█████▎    | 16/30 [00:04<00:03,  3.99it/s]
- 57%|█████▋    | 17/30 [00:04<00:03,  4.01it/s]
- 60%|██████    | 18/30 [00:04<00:02,  4.02it/s]
- 63%|██████▎   | 19/30 [00:04<00:02,  4.03it/s]
- 67%|██████▋   | 20/30 [00:05<00:02,  4.01it/s]
- 70%|███████   | 21/30 [00:05<00:02,  4.00it/s]
- 73%|███████▎  | 22/30 [00:05<00:02,  4.00it/s]
- 77%|███████▋  | 23/30 [00:05<00:01,  4.00it/s]
- 80%|████████  | 24/30 [00:06<00:01,  4.01it/s]
- 83%|████████▎ | 25/30 [00:06<00:01,  4.01it/s]
- 87%|████████▋ | 26/30 [00:06<00:00,  4.01it/s]
- 90%|█████████ | 27/30 [00:06<00:00,  4.00it/s]
- 93%|█████████▎| 28/30 [00:07<00:00,  4.01it/s]
- 97%|█████████▋| 29/30 [00:07<00:00,  4.02it/s]
-100%|██████████| 30/30 [00:07<00:00,  4.04it/s]
-100%|██████████| 30/30 [00:07<00:00,  3.92it/s]
+  3%|▎         | 1/30 [00:00<00:12,  2.35it/s]
+  7%|▋         | 2/30 [00:00<00:09,  3.06it/s]
+ 10%|█         | 3/30 [00:00<00:07,  3.38it/s]
+ 13%|█▎        | 4/30 [00:01<00:07,  3.57it/s]
+ 17%|█▋        | 5/30 [00:01<00:06,  3.66it/s]
+ 20%|██        | 6/30 [00:01<00:06,  3.73it/s]
+ 23%|██▎       | 7/30 [00:01<00:06,  3.78it/s]
+ 27%|██▋       | 8/30 [00:02<00:05,  3.83it/s]
+ 30%|███       | 9/30 [00:02<00:05,  3.86it/s]
+ 33%|███▎      | 10/30 [00:02<00:05,  3.88it/s]
+ 37%|███▋      | 11/30 [00:03<00:04,  3.83it/s]
+ 40%|████      | 12/30 [00:03<00:04,  3.75it/s]
+ 43%|████▎     | 13/30 [00:03<00:04,  3.77it/s]
+ 47%|████▋     | 14/30 [00:03<00:04,  3.79it/s]
+ 50%|█████     | 15/30 [00:04<00:03,  3.83it/s]
+ 53%|█████▎    | 16/30 [00:04<00:03,  3.84it/s]
+ 57%|█████▋    | 17/30 [00:04<00:03,  3.86it/s]
+ 60%|██████    | 18/30 [00:04<00:03,  3.86it/s]
+ 63%|██████▎   | 19/30 [00:05<00:02,  3.86it/s]
+ 67%|██████▋   | 20/30 [00:05<00:02,  3.86it/s]
+ 70%|███████   | 21/30 [00:05<00:02,  3.86it/s]
+ 73%|███████▎  | 22/30 [00:05<00:02,  3.86it/s]
+ 77%|███████▋  | 23/30 [00:06<00:01,  3.86it/s]
+ 80%|████████  | 24/30 [00:06<00:01,  3.83it/s]
+ 83%|████████▎ | 25/30 [00:06<00:01,  3.83it/s]
+ 87%|████████▋ | 26/30 [00:06<00:01,  3.83it/s]
+ 90%|█████████ | 27/30 [00:07<00:00,  3.84it/s]
+ 93%|█████████▎| 28/30 [00:07<00:00,  3.85it/s]
+ 97%|█████████▋| 29/30 [00:07<00:00,  3.86it/s]
+100%|██████████| 30/30 [00:07<00:00,  3.86it/s]
+100%|██████████| 30/30 [00:07<00:00,  3.77it/s]
  - quantizing extras
 Text Encoder
 
 tokenizer_config.json:   0%|          | 0.00/9.73k [00:00<?, ?B/s]
-tokenizer_config.json: 100%|██████████| 9.73k/9.73k [00:00<00:00, 5.31MB/s]
+tokenizer_config.json: 100%|██████████| 9.73k/9.73k [00:00<00:00, 7.60MB/s]
 
 vocab.json:   0%|          | 0.00/2.78M [00:00<?, ?B/s]
-vocab.json: 100%|██████████| 2.78M/2.78M [00:00<00:00, 110MB/s]
+vocab.json: 100%|██████████| 2.78M/2.78M [00:00<00:00, 77.0MB/s]
 
 merges.txt:   0%|          | 0.00/1.67M [00:00<?, ?B/s]
-merges.txt: 100%|██████████| 1.67M/1.67M [00:00<00:00, 132MB/s]
+merges.txt: 100%|██████████| 1.67M/1.67M [00:00<00:00, 118MB/s]
 
 
 tokenizer/tokenizer.json: reconstructing file:   0%|          |  0.00B / 11.4MB            [A
 tokenizer/tokenizer.json: downloading bytes:           |  0.00B            
-tokenizer/tokenizer.json: downloading bytes: ▊         |  990kB            
+tokenizer/tokenizer.json: downloading bytes: █▏        | 1.37MB            
 
 tokenizer/tokenizer.json: reconstructing file: 100%|██████████| 11.4MB / 11.4MB            [A
-tokenizer/tokenizer.json: downloading bytes: ██████████| 3.40MB,  330kB/s  
-tokenizer/tokenizer.json: downloading bytes: ██████████| 3.40MB,  330kB/s  
+tokenizer/tokenizer.json: downloading bytes: ██████████| 3.40MB,  335kB/s  
+tokenizer/tokenizer.json: downloading bytes: ██████████| 3.40MB,  335kB/s  
 
-tokenizer/tokenizer.json: reconstructing file: 100%|██████████| 11.4MB / 11.4MB, 1.11MB/s  
+tokenizer/tokenizer.json: reconstructing file: 100%|██████████| 11.4MB / 11.4MB, 1.13MB/s  
 
 config.json:   0%|          | 0.00/726 [00:00<?, ?B/s]
-config.json: 100%|██████████| 726/726 [00:00<00:00, 3.27MB/s]
+config.json: 100%|██████████| 726/726 [00:00<00:00, 4.34MB/s]
 
 model.safetensors.index.json:   0%|          | 0.00/32.8k [00:00<?, ?B/s]
-model.safetensors.index.json: 100%|██████████| 32.8k/32.8k [00:00<00:00, 64.5MB/s]
+model.safetensors.index.json: 100%|██████████| 32.8k/32.8k [00:00<00:00, 85.2MB/s]
 
 Downloading bytes:           |  0.00B            
 
@@ -374,242 +389,263 @@ Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [
 
 Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][A[A
 
-Reconstructing (incomplete total...):   0%|          |  0.00B / 7.95GB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 99.6MB            [A
 
-Reconstructing (incomplete total...):   0%|          |  0.00B / 7.95GB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 4.06GB            [A
 
 Reconstructing (incomplete total...):   0%|          |  0.00B / 8.04GB            [A
-Downloading bytes:           |  250kB            
-Downloading bytes:           | 20.1MB,  944kB/s  
-Downloading bytes:           | 45.6MB, 1.96MB/s  
-Downloading bytes:           | 62.0MB,  107kB/s  
-Downloading bytes:           |  100MB, 5.20MB/s  
-Downloading bytes: ▏         |  145MB,  148kB/s  
-Downloading bytes: ▏         |  174MB,  156kB/s  
-Downloading bytes: ▎         |  211MB, 10.1MB/s  
-Downloading bytes: ▎         |  256MB,  174kB/s  
-Downloading bytes: ▎         |  269MB, 13.1MB/s  
-Downloading bytes: ▎         |  300MB, 14.6MB/s  
-Downloading bytes: ▍         |  331MB, 16.1MB/s  
-Downloading bytes: ▍         |  363MB,  228kB/s  
-Downloading bytes: ▍         |  395MB,  272kB/s  
-Downloading bytes: ▌         |  428MB,  315kB/s  
-Downloading bytes: ▌         |  474MB, 17.8MB/s  
-Downloading bytes: ▌         |  474MB, 23.5MB/s  
-Downloading bytes: ▋         |  509MB,  384kB/s  
-Downloading bytes: ▋         |  549MB, 20.1MB/s  
-Downloading bytes: ▋         |  550MB, 26.8MB/s  
-Downloading bytes: ▋         |  580MB, 21.1MB/s  
-Downloading bytes: ▊         |  608MB, 21.9MB/s  
-Downloading bytes: ▊         |  609MB, 29.5MB/s  
-Downloading bytes: ▊         |  639MB, 22.9MB/s  
-Downloading bytes: ▊         |  670MB,  592kB/s  
-Downloading bytes: ▊         |  701MB,  664kB/s  
-Downloading bytes: ▉         |  735MB,  734kB/s  
-Downloading bytes: ▉         |  781MB,  800kB/s  
-Downloading bytes: █         |  837MB,  865kB/s  
-Downloading bytes: █         |  893MB,  926kB/s  
-Downloading bytes: █▏        |  946MB, 1.00MB/s  
-Downloading bytes: █▏        | 1.00GB, 1.06MB/s  
-Downloading bytes: █▎        | 1.05GB, 1.11MB/s  
-Downloading bytes: █▍        | 1.11GB, 1.18MB/s  
-Downloading bytes: █▍        | 1.17GB, 1.24MB/s  
-Downloading bytes: █▌        | 1.25GB, 41.9MB/s  
-Downloading bytes: █▋        | 1.33GB, 1.39MB/s  
-Downloading bytes: █▋        | 1.39GB, 1.45MB/s  
-Downloading bytes: █▊        | 1.41GB, 64.0MB/s  
-Downloading bytes: █▊        | 1.50GB, 1.54MB/s  
-Downloading bytes: █▉        | 1.58GB, 70.4MB/s  
-Downloading bytes: ██        | 1.66GB, 1.80MB/s  
-Downloading bytes: ██▏       | 1.74GB, 1.83MB/s  
-Downloading bytes: ██▎       | 1.83GB, 1.89MB/s  
-Downloading bytes: ██▎       | 1.91GB, 82.4MB/s  
-Downloading bytes: ██▍       | 1.99GB, 2.02MB/s  
-Downloading bytes: ██▌       | 2.07GB, 87.6MB/s  
-Downloading bytes: ██▋       | 2.15GB, 68.0MB/s  
-Downloading bytes: ██▋       | 2.21GB, 91.2MB/s  
-Downloading bytes: ██▊       | 2.30GB, 72.7MB/s  
-Downloading bytes: ██▉       | 2.38GB, 2.21MB/s  
-Downloading bytes: ███       | 2.45GB, 77.2MB/s  
-Downloading bytes: ███▏      | 2.53GB,  101MB/s  
-Downloading bytes: ███▏      | 2.61GB, 81.4MB/s  
-Downloading bytes: ███▎      | 2.69GB,  105MB/s  
-Downloading bytes: ███▍      | 2.78GB, 2.40MB/s  
-Downloading bytes: ███▌      | 2.85GB, 2.41MB/s  
-Downloading bytes: ███▌      | 2.91GB, 2.44MB/s  
-Downloading bytes: ███▋      | 2.96GB, 2.45MB/s  
-Downloading bytes: ███▊      | 3.04GB, 2.48MB/s  
-Downloading bytes: ███▊      | 3.10GB,  118MB/s  
-Downloading bytes: ███▉      | 3.18GB, 93.0MB/s  
-Downloading bytes: ████      | 3.24GB,  122MB/s  
-Downloading bytes: ████      | 3.31GB, 2.58MB/s  
-Downloading bytes: ████▏     | 3.37GB,  125MB/s  
-Downloading bytes: ████▎     | 3.43GB, 2.60MB/s  
-Downloading bytes: ████▎     | 3.48GB,  128MB/s  
-Downloading bytes: ████▍     | 3.54GB,  129MB/s  
-Downloading bytes: ████▍     | 3.59GB,  131MB/s  
-Downloading bytes: ████▌     | 3.65GB,  132MB/s  
-Downloading bytes: ████▌     | 3.71GB,  133MB/s  
-Downloading bytes: ████▋     | 3.76GB,  135MB/s  
-Downloading bytes: ████▊     | 3.82GB, 2.72MB/s  
-Downloading bytes: ████▊     | 3.88GB, 2.74MB/s  
-Downloading bytes: ████▉     | 3.94GB, 2.75MB/s  
-Downloading bytes: ████▉     | 3.99GB,  140MB/s  
-Downloading bytes: █████     | 4.08GB,  112MB/s  
-Downloading bytes: █████▏    | 4.16GB, 2.83MB/s  
-Downloading bytes: █████▏    | 4.22GB, 2.86MB/s  
-Downloading bytes: █████▎    | 4.28GB, 2.89MB/s  
-Downloading bytes: █████▍    | 4.33GB, 2.91MB/s  
-Downloading bytes: █████▍    | 4.39GB, 2.92MB/s  
-Downloading bytes: █████▌    | 4.48GB, 2.97MB/s  
-Downloading bytes: █████▋    | 4.56GB,  150MB/s  
-Downloading bytes: █████▋    | 4.62GB,  152MB/s  
-Downloading bytes: █████▊    | 4.68GB,  153MB/s  
-Downloading bytes: █████▉    | 4.76GB, 3.09MB/s  
-Downloading bytes: ██████    | 4.83GB, 3.09MB/s  
+Downloading bytes:           |  101kB            
+Downloading bytes:           | 24.7MB, 94.6kB/s  
+Downloading bytes:           | 54.0MB,  182kB/s  
+Downloading bytes:           | 77.1MB,  232kB/s  
+Downloading bytes: ▏         |  103MB,  332kB/s  
+Downloading bytes: ▏         |  129MB, 1.01MB/s  
+Downloading bytes: ▏         |  165MB,  511kB/s  
+Downloading bytes: ▏         |  190MB, 1.64MB/s  
+Downloading bytes: ▎         |  222MB, 2.15MB/s  
+Downloading bytes: ▎         |  253MB, 2.69MB/s  
+Downloading bytes: ▎         |  286MB, 3.27MB/s  
+Downloading bytes: ▍         |  317MB, 3.86MB/s  
+Downloading bytes: ▍         |  361MB, 4.81MB/s  
+Downloading bytes: ▌         |  411MB, 5.94MB/s  
+Downloading bytes: ▌         |  458MB, 7.16MB/s  
+Downloading bytes: ▋         |  510MB, 8.31MB/s  
+Downloading bytes: ▋         |  563MB, 9.40MB/s  
+Downloading bytes: ▊         |  618MB, 10.4MB/s  
+Downloading bytes: ▊         |  671MB, 11.4MB/s  
+Downloading bytes: ▉         |  725MB, 12.5MB/s  
+Downloading bytes: ▉         |  778MB, 13.5MB/s  
+Downloading bytes: █         |  833MB, 2.25MB/s  
+Downloading bytes: █         |  886MB, 2.40MB/s  
+Downloading bytes: █▏        |  937MB, 2.50MB/s  
+Downloading bytes: █▏        | 1.00GB, 18.3MB/s  
+Downloading bytes: █▎        | 1.06GB, 19.4MB/s  
+Downloading bytes: █▍        | 1.12GB, 20.5MB/s  
+Downloading bytes: █▍        | 1.19GB, 21.7MB/s  
+Downloading bytes: █▌        | 1.23GB, 2.88MB/s  
+Downloading bytes: █▌        | 1.26GB, 2.89MB/s  
+Downloading bytes: █▌        | 1.31GB, 2.94MB/s  
+Downloading bytes: █▋        | 1.36GB, 2.99MB/s  
+Downloading bytes: █▊        | 1.41GB, 3.03MB/s  
+Downloading bytes: █▊        | 1.46GB, 3.05MB/s  
+Downloading bytes: █▉        | 1.52GB, 3.05MB/s  
+Downloading bytes: █▉        | 1.57GB, 3.09MB/s  
+Downloading bytes: ██        | 1.65GB, 31.3MB/s  
+Downloading bytes: ██▏       | 1.72GB, 3.15MB/s  
+Downloading bytes: ██▏       | 1.78GB, 3.21MB/s  
+Downloading bytes: ██▎       | 1.83GB, 3.23MB/s  
+Downloading bytes: ██▎       | 1.88GB, 3.24MB/s  
+Downloading bytes: ██▍       | 1.97GB, 38.3MB/s  
+Downloading bytes: ██▌       | 2.04GB, 3.34MB/s  
+Downloading bytes: ██▋       | 2.12GB, 41.4MB/s  
+Downloading bytes: ██▋       | 2.19GB, 3.37MB/s  
+Downloading bytes: ██▊       | 2.26GB, 3.39MB/s  
+Downloading bytes: ██▉       | 2.33GB,  123MB/s  
+Downloading bytes: ██▉       | 2.40GB, 3.44MB/s  
+Downloading bytes: ███       | 2.48GB, 48.7MB/s  
+Downloading bytes: ███▏      | 2.55GB, 3.46MB/s  
+Downloading bytes: ███▎      | 2.63GB, 52.0MB/s  
+Downloading bytes: ███▎      | 2.71GB, 3.48MB/s  
+Downloading bytes: ███▍      | 2.79GB, 55.6MB/s  
+Downloading bytes: ███▌      | 2.87GB, 3.61MB/s  
+Downloading bytes: ███▋      | 2.93GB,  142MB/s  
 
-Reconstructing (incomplete total...):   3%|▎         |  268MB / 8.04GB            [A
-Downloading bytes: ██████    | 4.89GB,  156MB/s  
+Reconstructing (incomplete total...):   1%|          | 57.7MB / 8.04GB            [A
 
-Reconstructing (incomplete total...):   4%|▍         |  335MB / 8.04GB, 21.5MB/s  [A
-Downloading bytes: ██████▏   | 4.94GB,  157MB/s  
-Downloading bytes: ██████▏   | 5.00GB,  130MB/s  
+Reconstructing (incomplete total...):   1%|          | 99.6MB / 8.04GB, 4.91MB/s  [A
+Downloading bytes: ███▋      | 3.00GB,  143MB/s  
+Downloading bytes: ███▊      | 3.07GB, 61.2MB/s  
+Downloading bytes: ███▉      | 3.12GB, 62.7MB/s  
+Downloading bytes: ███▉      | 3.17GB, 64.4MB/s  
+Downloading bytes: ███▉      | 3.20GB,  146MB/s  
+Downloading bytes: ████      | 3.28GB,  147MB/s  
+Downloading bytes: ████▏     | 3.34GB,  147MB/s  
+Downloading bytes: ████▏     | 3.35GB, 72.6MB/s  
+Downloading bytes: ████▎     | 3.42GB, 74.5MB/s  
+Downloading bytes: ████▎     | 3.50GB,  149MB/s  
+Downloading bytes: ████▍     | 3.58GB,  149MB/s  
+Downloading bytes: ████▍     | 3.61GB,  150MB/s  
 
-Reconstructing (incomplete total...):   5%|▌         |  435MB / 8.04GB, 4.61MB/s  [A
-Downloading bytes: ██████▎   | 5.07GB,  158MB/s  
-Downloading bytes: ██████▎   | 5.12GB,  159MB/s  
-Downloading bytes: ██████▍   | 5.18GB,  133MB/s  
-Downloading bytes: ██████▌   | 5.23GB,  159MB/s  
-Downloading bytes: ██████▌   | 5.29GB,  134MB/s  
+Reconstructing (incomplete total...):   2%|▏         |  167MB / 8.04GB, 5.69MB/s  [A
+Downloading bytes: ████▌     | 3.67GB, 83.4MB/s  
+Downloading bytes: ████▌     | 3.72GB, 85.0MB/s  
+Downloading bytes: ████▋     | 3.77GB, 87.0MB/s  
+Downloading bytes: ████▋     | 3.80GB,  151MB/s  
+Downloading bytes: ████▊     | 3.88GB, 91.0MB/s  
+Downloading bytes: ████▉     | 3.94GB, 93.0MB/s  
+Downloading bytes: ████▉     | 3.99GB, 94.9MB/s  
+Downloading bytes: █████     | 4.05GB, 96.6MB/s  
+Downloading bytes: █████▏    | 4.13GB,  100MB/s  
+Downloading bytes: █████▏    | 4.20GB,  155MB/s  
+Downloading bytes: █████▎    | 4.27GB,  103MB/s  
 
-Reconstructing (incomplete total...):  12%|█▏        |  972MB / 8.04GB, 7.95MB/s  [A
-Downloading bytes: ██████▋   | 5.33GB,  134MB/s  
-Downloading bytes: ██████▋   | 5.39GB,  135MB/s  
-Downloading bytes: ██████▊   | 5.45GB,  158MB/s  
+Reconstructing (incomplete total...):   4%|▎         |  301MB / 8.04GB, 3.28kB/s  [A
+Downloading bytes: █████▍    | 4.33GB,  105MB/s  
+Downloading bytes: █████▍    | 4.38GB,  106MB/s  
+Downloading bytes: █████▌    | 4.46GB,  156MB/s  
+Downloading bytes: █████▌    | 4.52GB,  156MB/s  
+Downloading bytes: █████▋    | 4.57GB,  157MB/s  
+Downloading bytes: █████▋    | 4.59GB,  114MB/s  
+Downloading bytes: █████▊    | 4.68GB,  116MB/s  
+Downloading bytes: █████▉    | 4.74GB,  157MB/s  
+Downloading bytes: █████▉    | 4.81GB,  156MB/s  
+Downloading bytes: ██████    | 4.89GB,  155MB/s  
 
-Reconstructing (incomplete total...):  13%|█▎        | 1.04GB / 8.04GB, 42.4MB/s  [A
-Downloading bytes: ██████▊   | 5.50GB,  159MB/s  
-Downloading bytes: ██████▉   | 5.56GB,  159MB/s  
-Downloading bytes: ██████▉   | 5.61GB,  159MB/s  
-Downloading bytes: ███████   | 5.66GB,  141MB/s  
-Downloading bytes: ███████   | 5.72GB,  159MB/s  
+Reconstructing (incomplete total...):   8%|▊         |  636MB / 8.04GB, 10.9MB/s  [A
+Downloading bytes: ██████▏   | 4.97GB,  155MB/s  
+Downloading bytes: ██████▏   | 5.02GB,  154MB/s  
+Downloading bytes: ██████▎   | 5.07GB,  129MB/s  
+Downloading bytes: ██████▎   | 5.12GB,  154MB/s  
+Downloading bytes: ██████▍   | 5.18GB,  152MB/s  
+Downloading bytes: ██████▌   | 5.23GB,  151MB/s  
+Downloading bytes: ██████▌   | 5.27GB,  132MB/s  
+Downloading bytes: ██████▌   | 5.31GB,  150MB/s  
 
-Reconstructing (incomplete total...):  16%|█▌        | 1.31GB / 8.04GB, 46.5MB/s  [A
-Downloading bytes: ███████▏  | 5.78GB,  143MB/s  
-Downloading bytes: ███████▎  | 5.84GB,  144MB/s  
-Downloading bytes: ███████▎  | 5.90GB,  146MB/s  
-Downloading bytes: ███████▍  | 5.95GB,  148MB/s  
-Downloading bytes: ███████▍  | 6.01GB,  150MB/s  
-Downloading bytes: ███████▌  | 6.06GB,  152MB/s  
-Downloading bytes: ███████▌  | 6.13GB,  159MB/s  
-Downloading bytes: ███████▋  | 6.18GB,  155MB/s  
-Downloading bytes: ███████▊  | 6.24GB,  158MB/s  
-Downloading bytes: ███████▊  | 6.28GB,  158MB/s  
-Downloading bytes: ███████▉  | 6.34GB,  158MB/s  
-Downloading bytes: ███████▉  | 6.39GB,  158MB/s  
-Downloading bytes: ████████  | 6.44GB,  160MB/s  
-Downloading bytes: ████████  | 6.50GB,  161MB/s  
-Downloading bytes: ████████▏ | 6.55GB,  162MB/s  
-Downloading bytes: ████████▏ | 6.60GB,  163MB/s  
-Downloading bytes: ████████▎ | 6.66GB,  164MB/s  
-Downloading bytes: ████████▍ | 6.74GB,  162MB/s  
-Downloading bytes: ████████▍ | 6.80GB,  162MB/s  
-Downloading bytes: ████████▌ | 6.87GB,  170MB/s  
-Downloading bytes: ████████▋ | 6.96GB,  162MB/s  
+Reconstructing (incomplete total...):  10%|█         |  838MB / 8.04GB, 31.0MB/s  [A
+Downloading bytes: ██████▋   | 5.36GB,  148MB/s  
+Downloading bytes: ██████▋   | 5.39GB,  133MB/s  
+Downloading bytes: ██████▊   | 5.43GB,  146MB/s  
 
-Reconstructing (incomplete total...):  25%|██▌       | 2.02GB / 8.04GB, 65.0MB/s  [A
+Reconstructing (incomplete total...):  20%|█▉        | 1.58GB / 8.04GB, 24.7MB/s  [A
+Downloading bytes: ██████▊   | 5.47GB,  146MB/s  
+Downloading bytes: ██████▊   | 5.50GB,  145MB/s  
+Downloading bytes: ██████▊   | 5.53GB,  135MB/s  
+Downloading bytes: ██████▉   | 5.57GB,  144MB/s  
+Downloading bytes: ██████▉   | 5.59GB,  143MB/s  
+Downloading bytes: ██████▉   | 5.62GB,  143MB/s  
+Downloading bytes: ███████   | 5.65GB,  135MB/s  
+Downloading bytes: ███████   | 5.68GB,  135MB/s  
+Downloading bytes: ███████   | 5.72GB,  141MB/s  
+Downloading bytes: ███████▏  | 5.74GB,  141MB/s  
+Downloading bytes: ███████▏  | 5.77GB,  140MB/s  
+Downloading bytes: ███████▏  | 5.79GB,  139MB/s  
+Downloading bytes: ███████▏  | 5.82GB,  139MB/s  
+Downloading bytes: ███████▎  | 5.85GB,  138MB/s  
+Downloading bytes: ███████▎  | 5.88GB,  138MB/s  
+Downloading bytes: ███████▎  | 5.90GB,  137MB/s  
+Downloading bytes: ███████▎  | 5.93GB,  137MB/s  
+Downloading bytes: ███████▍  | 5.96GB,  136MB/s  
+Downloading bytes: ███████▍  | 5.99GB,  136MB/s  
+Downloading bytes: ███████▍  | 6.02GB,  135MB/s  
+Downloading bytes: ███████▌  | 6.05GB,  135MB/s  
+Downloading bytes: ███████▌  | 6.08GB,  134MB/s  
+Downloading bytes: ███████▌  | 6.11GB,  134MB/s  
+Downloading bytes: ███████▋  | 6.14GB,  133MB/s  
+Downloading bytes: ███████▋  | 6.15GB,  143MB/s  
+Downloading bytes: ███████▋  | 6.19GB,  133MB/s  
+Downloading bytes: ███████▋  | 6.20GB,  144MB/s  
+Downloading bytes: ███████▊  | 6.24GB,  145MB/s  
+Downloading bytes: ███████▊  | 6.27GB,  131MB/s  
+Downloading bytes: ███████▊  | 6.30GB,  129MB/s  
+Downloading bytes: ███████▊  | 6.32GB,  128MB/s  
+Downloading bytes: ███████▉  | 6.35GB,  127MB/s  
+Downloading bytes: ███████▉  | 6.37GB,  141MB/s  
+Downloading bytes: ███████▉  | 6.39GB,  125MB/s  
+Downloading bytes: ███████▉  | 6.42GB,  124MB/s  
+Downloading bytes: ████████  | 6.44GB,  124MB/s  
+Downloading bytes: ████████  | 6.47GB,  124MB/s  
+Downloading bytes: ████████  | 6.50GB,  123MB/s  
+Downloading bytes: ████████  | 6.53GB,  123MB/s  
+Downloading bytes: ████████▏ | 6.56GB,  122MB/s  
+Downloading bytes: ████████▏ | 6.59GB,  122MB/s  
+Downloading bytes: ████████▏ | 6.62GB,  122MB/s  
+Downloading bytes: ████████▎ | 6.65GB,  145MB/s  
+Downloading bytes: ████████▎ | 6.69GB,  146MB/s  
+Downloading bytes: ████████▍ | 6.75GB,  147MB/s  
+Downloading bytes: ████████▍ | 6.80GB,  149MB/s  
+Downloading bytes: ████████▌ | 6.85GB,  149MB/s  
+Downloading bytes: ████████▌ | 6.93GB,  122MB/s  
 
-Reconstructing (incomplete total...):  44%|████▍     | 3.56GB / 8.04GB, 71.5MB/s  [A
+Reconstructing (incomplete total...):  26%|██▌       | 2.08GB / 8.04GB, 84.8MB/s  [A
 
-Reconstructing (incomplete total...):  64%|██████▍   | 5.17GB / 8.04GB,  133MB/s  [A
-Downloading bytes: ████████▋ | 6.97GB,  169MB/s  
+Reconstructing (incomplete total...):  46%|████▌     | 3.69GB / 8.04GB, 52.6MB/s  [A
 
-Reconstructing (incomplete total...):  80%|████████  | 6.47GB / 8.04GB,  144MB/s  [A
+Reconstructing (incomplete total...):  65%|██████▌   | 5.24GB / 8.04GB,  169MB/s  [A
 
-Reconstructing (incomplete total...): 100%|█████████▉| 8.01GB / 8.04GB,  159MB/s  [A
+Reconstructing (incomplete total...):  80%|████████  | 6.47GB / 8.04GB,  128MB/s  [A
+Downloading bytes: ████████▋ | 6.97GB,  153MB/s  
+
+Reconstructing (incomplete total...): 100%|█████████▉| 8.02GB / 8.04GB,  150MB/s  [A
 
 
-Fetching 3 files:  33%|███▎      | 1/3 [00:42<01:24, 42.08s/it][A[A
-Fetching 3 files: 100%|██████████| 3/3 [00:42<00:00, 14.03s/it]
+Fetching 3 files:  33%|███▎      | 1/3 [00:41<01:22, 41.32s/it][A[A
+Fetching 3 files: 100%|██████████| 3/3 [00:41<00:00, 13.77s/it]
 
-Downloading bytes: ██████████| 6.97GB,  169MB/s  
-Download complete: : ██████████| 6.97GB,  169MB/s  
+Downloading bytes: ██████████| 6.97GB,  153MB/s  
+Download complete: : ██████████| 6.97GB,  153MB/s  
 
-Reconstruction complete: 100%|██████████| 8.04GB / 8.04GB,  165MB/s               [A
-Download complete: : ██████████| 6.97GB,  169MB/s  
+Reconstruction complete: 100%|██████████| 8.04GB / 8.04GB,  198MB/s               [A
+Download complete: : ██████████| 6.97GB,  153MB/s  
 
-Reconstruction complete: 100%|██████████| 8.04GB / 8.04GB,  165MB/s  
+Reconstruction complete: 100%|██████████| 8.04GB / 8.04GB,  198MB/s  
 
 Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]
-Loading weights:  30%|███       | 121/398 [00:00<00:00, 1200.75it/s]
-Loading weights:  61%|██████    | 242/398 [00:00<00:00, 783.00it/s] 
-Loading weights:  83%|████████▎ | 329/398 [00:00<00:00, 757.61it/s]
-Loading weights: 100%|██████████| 398/398 [00:00<00:00, 908.86it/s]
+Loading weights:  45%|████▍     | 179/398 [00:00<00:00, 1751.52it/s]
+Loading weights:  89%|████████▉ | 355/398 [00:00<00:00, 814.83it/s] 
+Loading weights: 100%|██████████| 398/398 [00:00<00:00, 949.70it/s]
 
 generation_config.json:   0%|          | 0.00/239 [00:00<?, ?B/s]
-generation_config.json: 100%|██████████| 239/239 [00:00<00:00, 816kB/s]
+generation_config.json: 100%|██████████| 239/239 [00:00<00:00, 1.40MB/s]
 Quantizing (qfloat8)
  - quantizing 36 blocks
 
   0%|          | 0/36 [00:00<?, ?it/s]
-  3%|▎         | 1/36 [00:00<00:31,  1.10it/s]
-  6%|▌         | 2/36 [00:01<00:27,  1.23it/s]
-  8%|▊         | 3/36 [00:01<00:17,  1.93it/s]
- 11%|█         | 4/36 [00:01<00:12,  2.65it/s]
- 14%|█▍        | 5/36 [00:02<00:09,  3.32it/s]
- 17%|█▋        | 6/36 [00:02<00:07,  3.99it/s]
- 19%|█▉        | 7/36 [00:02<00:06,  4.58it/s]
- 22%|██▏       | 8/36 [00:02<00:05,  5.08it/s]
- 25%|██▌       | 9/36 [00:02<00:04,  5.49it/s]
- 28%|██▊       | 10/36 [00:02<00:04,  5.81it/s]
- 31%|███       | 11/36 [00:03<00:08,  2.94it/s]
- 33%|███▎      | 12/36 [00:04<00:11,  2.12it/s]
- 36%|███▌      | 13/36 [00:05<00:12,  1.80it/s]
- 39%|███▉      | 14/36 [00:05<00:13,  1.60it/s]
- 42%|████▏     | 15/36 [00:06<00:14,  1.49it/s]
- 44%|████▍     | 16/36 [00:07<00:14,  1.42it/s]
- 47%|████▋     | 17/36 [00:08<00:14,  1.35it/s]
- 50%|█████     | 18/36 [00:09<00:13,  1.31it/s]
- 53%|█████▎    | 19/36 [00:09<00:13,  1.28it/s]
- 56%|█████▌    | 20/36 [00:10<00:12,  1.26it/s]
- 58%|█████▊    | 21/36 [00:11<00:11,  1.25it/s]
- 61%|██████    | 22/36 [00:12<00:11,  1.24it/s]
- 64%|██████▍   | 23/36 [00:13<00:10,  1.24it/s]
- 67%|██████▋   | 24/36 [00:14<00:09,  1.24it/s]
- 69%|██████▉   | 25/36 [00:14<00:08,  1.24it/s]
- 72%|███████▏  | 26/36 [00:15<00:08,  1.23it/s]
- 75%|███████▌  | 27/36 [00:16<00:07,  1.23it/s]
- 78%|███████▊  | 28/36 [00:17<00:06,  1.23it/s]
- 81%|████████  | 29/36 [00:18<00:05,  1.23it/s]
- 83%|████████▎ | 30/36 [00:18<00:04,  1.22it/s]
- 86%|████████▌ | 31/36 [00:19<00:04,  1.21it/s]
- 89%|████████▉ | 32/36 [00:20<00:03,  1.21it/s]
- 92%|█████████▏| 33/36 [00:21<00:02,  1.20it/s]
- 94%|█████████▍| 34/36 [00:22<00:01,  1.20it/s]
- 97%|█████████▋| 35/36 [00:23<00:00,  1.19it/s]
-100%|██████████| 36/36 [00:23<00:00,  1.20it/s]
-100%|██████████| 36/36 [00:23<00:00,  1.50it/s]
+  3%|▎         | 1/36 [00:00<00:19,  1.83it/s]
+  6%|▌         | 2/36 [00:00<00:11,  3.03it/s]
+  8%|▊         | 3/36 [00:00<00:08,  4.05it/s]
+ 11%|█         | 4/36 [00:01<00:06,  4.84it/s]
+ 14%|█▍        | 5/36 [00:01<00:05,  5.41it/s]
+ 17%|█▋        | 6/36 [00:01<00:05,  5.78it/s]
+ 19%|█▉        | 7/36 [00:01<00:04,  6.03it/s]
+ 22%|██▏       | 8/36 [00:01<00:04,  6.16it/s]
+ 25%|██▌       | 9/36 [00:01<00:04,  6.25it/s]
+ 28%|██▊       | 10/36 [00:01<00:04,  6.31it/s]
+ 31%|███       | 11/36 [00:02<00:04,  5.96it/s]
+ 33%|███▎      | 12/36 [00:02<00:04,  5.74it/s]
+ 36%|███▌      | 13/36 [00:02<00:03,  5.81it/s]
+ 39%|███▉      | 14/36 [00:02<00:03,  5.96it/s]
+ 42%|████▏     | 15/36 [00:02<00:03,  6.07it/s]
+ 44%|████▍     | 16/36 [00:03<00:03,  5.07it/s]
+ 47%|████▋     | 17/36 [00:03<00:07,  2.59it/s]
+ 50%|█████     | 18/36 [00:04<00:09,  1.93it/s]
+ 53%|█████▎    | 19/36 [00:05<00:10,  1.64it/s]
+ 56%|█████▌    | 20/36 [00:06<00:10,  1.49it/s]
+ 58%|█████▊    | 21/36 [00:07<00:10,  1.39it/s]
+ 61%|██████    | 22/36 [00:08<00:10,  1.33it/s]
+ 64%|██████▍   | 23/36 [00:08<00:10,  1.29it/s]
+ 67%|██████▋   | 24/36 [00:09<00:09,  1.27it/s]
+ 69%|██████▉   | 25/36 [00:10<00:08,  1.26it/s]
+ 72%|███████▏  | 26/36 [00:11<00:08,  1.25it/s]
+ 75%|███████▌  | 27/36 [00:12<00:07,  1.24it/s]
+ 78%|███████▊  | 28/36 [00:12<00:06,  1.23it/s]
+ 81%|████████  | 29/36 [00:13<00:05,  1.22it/s]
+ 83%|████████▎ | 30/36 [00:14<00:04,  1.22it/s]
+ 86%|████████▌ | 31/36 [00:15<00:04,  1.21it/s]
+ 89%|████████▉ | 32/36 [00:16<00:03,  1.21it/s]
+ 92%|█████████▏| 33/36 [00:17<00:02,  1.21it/s]
+ 94%|█████████▍| 34/36 [00:17<00:01,  1.21it/s]
+ 97%|█████████▋| 35/36 [00:18<00:00,  1.20it/s]
+100%|██████████| 36/36 [00:19<00:00,  1.20it/s]
+100%|██████████| 36/36 [00:19<00:00,  1.84it/s]
  - quantizing extras
 Loading VAE
 
 config.json:   0%|          | 0.00/805 [00:00<?, ?B/s]
-config.json: 100%|██████████| 805/805 [00:00<00:00, 5.15MB/s]
+config.json: 100%|██████████| 805/805 [00:00<00:00, 2.81MB/s]
 
 
 vae/diffusion_pytorch_model.safetensors: reconstructing file:   0%|          |  0.00B /  168MB            [A
 vae/diffusion_pytorch_model.safetensors: downloading bytes:           |  0.00B            
-vae/diffusion_pytorch_model.safetensors: downloading bytes: ▎         | 4.79MB            
-vae/diffusion_pytorch_model.safetensors: downloading bytes: █▎        | 21.9MB,  465kB/s  
-vae/diffusion_pytorch_model.safetensors: downloading bytes: ██▋       | 45.0MB, 2.11MB/s  
-vae/diffusion_pytorch_model.safetensors: downloading bytes: ████▊     | 79.8MB, 4.32MB/s  
-vae/diffusion_pytorch_model.safetensors: downloading bytes: ██████▏   |  104MB, 7.64MB/s  
-vae/diffusion_pytorch_model.safetensors: downloading bytes: ███████▊  |  131MB, 10.7MB/s  
+vae/diffusion_pytorch_model.safetensors: downloading bytes: █▏        | 20.3MB            
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ██▉       | 48.8MB, 2.00MB/s  
+vae/diffusion_pytorch_model.safetensors: downloading bytes: █████▋    | 96.2MB, 4.78MB/s  
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ███████▉  |  133MB, 9.37MB/s  
 
-vae/diffusion_pytorch_model.safetensors: reconstructing file: 100%|██████████|  168MB /  168MB            [A
-vae/diffusion_pytorch_model.safetensors: downloading bytes: ██████████|  147MB, 13.5MB/s  
-vae/diffusion_pytorch_model.safetensors: downloading bytes: ██████████|  147MB, 13.5MB/s  
+vae/diffusion_pytorch_model.safetensors: reconstructing file:  40%|████      | 67.1MB /  168MB            [A
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ██████████|  147MB, 14.1MB/s  
+vae/diffusion_pytorch_model.safetensors: downloading bytes: ██████████|  147MB, 14.1MB/s  
 
-vae/diffusion_pytorch_model.safetensors: reconstructing file: 100%|██████████|  168MB /  168MB, 15.9MB/s  
+vae/diffusion_pytorch_model.safetensors: reconstructing file: 100%|██████████|  168MB /  168MB, 16.3MB/s  
 Making pipe
 Preparing Model
 Model Loaded
@@ -622,19 +658,22 @@ Dataset: /tmp/train/dataset
   -  Preprocessing image dimensions
 
   0%|          | 0/35 [00:00<?, ?it/s]
-  6%|▌         | 2/35 [00:00<00:01, 18.27it/s]
- 11%|█▏        | 4/35 [00:00<00:01, 19.14it/s]
- 20%|██        | 7/35 [00:00<00:01, 20.09it/s]
- 29%|██▊       | 10/35 [00:00<00:01, 20.25it/s]
- 37%|███▋      | 13/35 [00:00<00:01, 21.10it/s]
- 46%|████▌     | 16/35 [00:00<00:00, 20.78it/s]
- 54%|█████▍    | 19/35 [00:00<00:00, 20.56it/s]
- 63%|██████▎   | 22/35 [00:01<00:00, 21.00it/s]
- 71%|███████▏  | 25/35 [00:01<00:00, 21.25it/s]
- 80%|████████  | 28/35 [00:01<00:00, 21.81it/s]
- 89%|████████▊ | 31/35 [00:01<00:00, 21.57it/s]
- 97%|█████████▋| 34/35 [00:01<00:00, 21.04it/s]
-100%|██████████| 35/35 [00:01<00:00, 20.92it/s]
+  6%|▌         | 2/35 [00:00<00:01, 16.75it/s]
+ 11%|█▏        | 4/35 [00:00<00:01, 17.42it/s]
+ 17%|█▋        | 6/35 [00:00<00:01, 18.29it/s]
+ 23%|██▎       | 8/35 [00:00<00:01, 18.07it/s]
+ 29%|██▊       | 10/35 [00:00<00:01, 18.25it/s]
+ 34%|███▍      | 12/35 [00:00<00:01, 18.47it/s]
+ 43%|████▎     | 15/35 [00:00<00:00, 20.05it/s]
+ 49%|████▊     | 17/35 [00:00<00:00, 19.55it/s]
+ 54%|█████▍    | 19/35 [00:01<00:00, 19.29it/s]
+ 63%|██████▎   | 22/35 [00:01<00:00, 19.48it/s]
+ 69%|██████▊   | 24/35 [00:01<00:00, 19.47it/s]
+ 77%|███████▋  | 27/35 [00:01<00:00, 20.31it/s]
+ 86%|████████▌ | 30/35 [00:01<00:00, 20.05it/s]
+ 91%|█████████▏| 32/35 [00:01<00:00, 19.92it/s]
+ 97%|█████████▋| 34/35 [00:01<00:00, 19.42it/s]
+100%|██████████| 35/35 [00:01<00:00, 19.27it/s]
   -  Found 35 images
 Bucket sizes for /tmp/train/dataset:
 416x624: 5 files
@@ -645,47 +684,47 @@ Caching latents for /tmp/train/dataset
  - Saving latents to disk
 
 Caching latents to disk:   0%|          | 0/35 [00:00<?, ?it/s]
-Caching latents to disk:   3%|▎         | 1/35 [00:07<04:29,  7.93s/it]
-Caching latents to disk:   6%|▌         | 2/35 [00:08<01:58,  3.58s/it]
-Caching latents to disk:   9%|▊         | 3/35 [00:09<01:10,  2.19s/it]
-Caching latents to disk:  11%|█▏        | 4/35 [00:09<00:47,  1.54s/it]
-Caching latents to disk:  14%|█▍        | 5/35 [00:10<00:35,  1.19s/it]
-Caching latents to disk:  17%|█▋        | 6/35 [00:10<00:28,  1.03it/s]
-Caching latents to disk:  20%|██        | 7/35 [00:11<00:23,  1.20it/s]
-Caching latents to disk:  23%|██▎       | 8/35 [00:11<00:19,  1.35it/s]
-Caching latents to disk:  26%|██▌       | 9/35 [00:12<00:17,  1.47it/s]
-Caching latents to disk:  29%|██▊       | 10/35 [00:12<00:15,  1.57it/s]
-Caching latents to disk:  31%|███▏      | 11/35 [00:13<00:14,  1.64it/s]
-Caching latents to disk:  34%|███▍      | 12/35 [00:13<00:13,  1.70it/s]
-Caching latents to disk:  37%|███▋      | 13/35 [00:14<00:12,  1.74it/s]
-Caching latents to disk:  40%|████      | 14/35 [00:15<00:11,  1.76it/s]
-Caching latents to disk:  43%|████▎     | 15/35 [00:15<00:11,  1.78it/s]
-Caching latents to disk:  46%|████▌     | 16/35 [00:16<00:10,  1.79it/s]
-Caching latents to disk:  49%|████▊     | 17/35 [00:16<00:10,  1.79it/s]
-Caching latents to disk:  51%|█████▏    | 18/35 [00:17<00:09,  1.80it/s]
-Caching latents to disk:  54%|█████▍    | 19/35 [00:17<00:08,  1.80it/s]
-Caching latents to disk:  57%|█████▋    | 20/35 [00:18<00:08,  1.80it/s]
-Caching latents to disk:  60%|██████    | 21/35 [00:18<00:07,  1.79it/s]
-Caching latents to disk:  63%|██████▎   | 22/35 [00:19<00:07,  1.79it/s]
-Caching latents to disk:  66%|██████▌   | 23/35 [00:20<00:06,  1.79it/s]
-Caching latents to disk:  69%|██████▊   | 24/35 [00:20<00:06,  1.78it/s]
-Caching latents to disk:  71%|███████▏  | 25/35 [00:21<00:05,  1.77it/s]
-Caching latents to disk:  74%|███████▍  | 26/35 [00:21<00:05,  1.77it/s]
-Caching latents to disk:  77%|███████▋  | 27/35 [00:22<00:04,  1.77it/s]
-Caching latents to disk:  80%|████████  | 28/35 [00:22<00:03,  1.77it/s]
-Caching latents to disk:  83%|████████▎ | 29/35 [00:23<00:03,  1.76it/s]
-Caching latents to disk:  86%|████████▌ | 30/35 [00:23<00:02,  1.77it/s]
-Caching latents to disk:  89%|████████▊ | 31/35 [00:24<00:02,  1.77it/s]
-Caching latents to disk:  91%|█████████▏| 32/35 [00:25<00:01,  1.76it/s]
-Caching latents to disk:  94%|█████████▍| 33/35 [00:25<00:01,  1.76it/s]
-Caching latents to disk:  97%|█████████▋| 34/35 [00:26<00:00,  1.76it/s]
-Caching latents to disk: 100%|██████████| 35/35 [00:26<00:00,  1.76it/s]
-Caching latents to disk: 100%|██████████| 35/35 [00:26<00:00,  1.30it/s]
+Caching latents to disk:   3%|▎         | 1/35 [00:08<04:45,  8.40s/it]
+Caching latents to disk:   6%|▌         | 2/35 [00:08<02:05,  3.81s/it]
+Caching latents to disk:   9%|▊         | 3/35 [00:09<01:14,  2.34s/it]
+Caching latents to disk:  11%|█▏        | 4/35 [00:10<00:51,  1.66s/it]
+Caching latents to disk:  14%|█▍        | 5/35 [00:10<00:38,  1.28s/it]
+Caching latents to disk:  17%|█▋        | 6/35 [00:11<00:30,  1.05s/it]
+Caching latents to disk:  20%|██        | 7/35 [00:12<00:25,  1.10it/s]
+Caching latents to disk:  23%|██▎       | 8/35 [00:12<00:21,  1.23it/s]
+Caching latents to disk:  26%|██▌       | 9/35 [00:13<00:19,  1.33it/s]
+Caching latents to disk:  29%|██▊       | 10/35 [00:13<00:17,  1.41it/s]
+Caching latents to disk:  31%|███▏      | 11/35 [00:14<00:16,  1.46it/s]
+Caching latents to disk:  34%|███▍      | 12/35 [00:15<00:15,  1.50it/s]
+Caching latents to disk:  37%|███▋      | 13/35 [00:15<00:14,  1.54it/s]
+Caching latents to disk:  40%|████      | 14/35 [00:16<00:13,  1.55it/s]
+Caching latents to disk:  43%|████▎     | 15/35 [00:17<00:12,  1.56it/s]
+Caching latents to disk:  46%|████▌     | 16/35 [00:17<00:12,  1.57it/s]
+Caching latents to disk:  49%|████▊     | 17/35 [00:18<00:11,  1.57it/s]
+Caching latents to disk:  51%|█████▏    | 18/35 [00:18<00:10,  1.57it/s]
+Caching latents to disk:  54%|█████▍    | 19/35 [00:19<00:10,  1.57it/s]
+Caching latents to disk:  57%|█████▋    | 20/35 [00:20<00:09,  1.57it/s]
+Caching latents to disk:  60%|██████    | 21/35 [00:20<00:08,  1.57it/s]
+Caching latents to disk:  63%|██████▎   | 22/35 [00:21<00:08,  1.57it/s]
+Caching latents to disk:  66%|██████▌   | 23/35 [00:22<00:07,  1.56it/s]
+Caching latents to disk:  69%|██████▊   | 24/35 [00:22<00:07,  1.55it/s]
+Caching latents to disk:  71%|███████▏  | 25/35 [00:23<00:06,  1.54it/s]
+Caching latents to disk:  74%|███████▍  | 26/35 [00:24<00:05,  1.53it/s]
+Caching latents to disk:  77%|███████▋  | 27/35 [00:24<00:05,  1.53it/s]
+Caching latents to disk:  80%|████████  | 28/35 [00:25<00:04,  1.52it/s]
+Caching latents to disk:  83%|████████▎ | 29/35 [00:26<00:03,  1.51it/s]
+Caching latents to disk:  86%|████████▌ | 30/35 [00:26<00:03,  1.51it/s]
+Caching latents to disk:  89%|████████▊ | 31/35 [00:27<00:02,  1.50it/s]
+Caching latents to disk:  91%|█████████▏| 32/35 [00:28<00:02,  1.50it/s]
+Caching latents to disk:  94%|█████████▍| 33/35 [00:28<00:01,  1.49it/s]
+Caching latents to disk:  97%|█████████▋| 34/35 [00:29<00:00,  1.48it/s]
+Caching latents to disk: 100%|██████████| 35/35 [00:30<00:00,  1.48it/s]
+Caching latents to disk: 100%|██████████| 35/35 [00:30<00:00,  1.16it/s]
 Dataset: /tmp/train/dataset
   -  Preprocessing image dimensions
 
   0%|          | 0/35 [00:00<?, ?it/s]
-100%|██████████| 35/35 [00:00<00:00, 26901.35it/s]
+100%|██████████| 35/35 [00:00<00:00, 23375.90it/s]
   -  Found 35 images
 Bucket sizes for /tmp/train/dataset:
 624x944: 5 files
@@ -696,95 +735,113 @@ Caching latents for /tmp/train/dataset
  - Saving latents to disk
 
 Caching latents to disk:   0%|          | 0/35 [00:00<?, ?it/s]
-Caching latents to disk:   3%|▎         | 1/35 [00:07<04:10,  7.38s/it]
-Caching latents to disk:   6%|▌         | 2/35 [00:08<02:05,  3.82s/it]
-Caching latents to disk:   9%|▊         | 3/35 [00:10<01:25,  2.69s/it]
-Caching latents to disk:  11%|█▏        | 4/35 [00:11<01:06,  2.16s/it]
-Caching latents to disk:  14%|█▍        | 5/35 [00:12<00:56,  1.87s/it]
-Caching latents to disk:  17%|█▋        | 6/35 [00:14<00:49,  1.70s/it]
-Caching latents to disk:  20%|██        | 7/35 [00:15<00:44,  1.59s/it]
-Caching latents to disk:  23%|██▎       | 8/35 [00:16<00:41,  1.52s/it]
-Caching latents to disk:  26%|██▌       | 9/35 [00:18<00:38,  1.48s/it]
-Caching latents to disk:  29%|██▊       | 10/35 [00:19<00:36,  1.45s/it]
-Caching latents to disk:  31%|███▏      | 11/35 [00:21<00:34,  1.44s/it]
-Caching latents to disk:  34%|███▍      | 12/35 [00:22<00:32,  1.43s/it]
-Caching latents to disk:  37%|███▋      | 13/35 [00:23<00:31,  1.41s/it]
-Caching latents to disk:  40%|████      | 14/35 [00:25<00:29,  1.42s/it]
-Caching latents to disk:  43%|████▎     | 15/35 [00:26<00:28,  1.42s/it]
-Caching latents to disk:  46%|████▌     | 16/35 [00:28<00:27,  1.43s/it]
-Caching latents to disk:  49%|████▊     | 17/35 [00:29<00:25,  1.43s/it]
-Caching latents to disk:  51%|█████▏    | 18/35 [00:31<00:24,  1.44s/it]
-Caching latents to disk:  54%|█████▍    | 19/35 [00:32<00:23,  1.45s/it]
-Caching latents to disk:  57%|█████▋    | 20/35 [00:33<00:21,  1.45s/it]
-Caching latents to disk:  60%|██████    | 21/35 [00:35<00:20,  1.46s/it]
-Caching latents to disk:  63%|██████▎   | 22/35 [00:36<00:19,  1.47s/it]
-Caching latents to disk:  66%|██████▌   | 23/35 [00:38<00:17,  1.47s/it]
-Caching latents to disk:  69%|██████▊   | 24/35 [00:39<00:16,  1.47s/it]
-Caching latents to disk:  71%|███████▏  | 25/35 [00:41<00:14,  1.48s/it]
-Caching latents to disk:  74%|███████▍  | 26/35 [00:42<00:13,  1.49s/it]
-Caching latents to disk:  77%|███████▋  | 27/35 [00:44<00:12,  1.50s/it]
-Caching latents to disk:  80%|████████  | 28/35 [00:45<00:10,  1.51s/it]
-Caching latents to disk:  83%|████████▎ | 29/35 [00:47<00:09,  1.51s/it]
-Caching latents to disk:  86%|████████▌ | 30/35 [00:49<00:07,  1.52s/it]
-Caching latents to disk:  89%|████████▊ | 31/35 [00:50<00:06,  1.52s/it]
-Caching latents to disk:  91%|█████████▏| 32/35 [00:52<00:04,  1.52s/it]
-Caching latents to disk:  94%|█████████▍| 33/35 [00:53<00:03,  1.51s/it]
-Caching latents to disk:  97%|█████████▋| 34/35 [00:55<00:01,  1.51s/it]
-Caching latents to disk: 100%|██████████| 35/35 [00:56<00:00,  1.50s/it]
-Caching latents to disk: 100%|██████████| 35/35 [00:56<00:00,  1.61s/it]
+Caching latents to disk:   3%|▎         | 1/35 [00:07<04:27,  7.88s/it]
+Caching latents to disk:   6%|▌         | 2/35 [00:09<02:16,  4.13s/it]
+Caching latents to disk:   9%|▊         | 3/35 [00:10<01:33,  2.93s/it]
+Caching latents to disk:  11%|█▏        | 4/35 [00:12<01:13,  2.37s/it]
+Caching latents to disk:  14%|█▍        | 5/35 [00:13<01:01,  2.06s/it]
+Caching latents to disk:  17%|█▋        | 6/35 [00:15<00:54,  1.87s/it]
+Caching latents to disk:  20%|██        | 7/35 [00:16<00:49,  1.76s/it]
+Caching latents to disk:  23%|██▎       | 8/35 [00:18<00:45,  1.68s/it]
+Caching latents to disk:  26%|██▌       | 9/35 [00:19<00:42,  1.64s/it]
+Caching latents to disk:  29%|██▊       | 10/35 [00:21<00:40,  1.60s/it]
+Caching latents to disk:  31%|███▏      | 11/35 [00:23<00:37,  1.58s/it]
+Caching latents to disk:  34%|███▍      | 12/35 [00:24<00:35,  1.56s/it]
+Caching latents to disk:  37%|███▋      | 13/35 [00:26<00:33,  1.54s/it]
+Caching latents to disk:  40%|████      | 14/35 [00:27<00:32,  1.53s/it]
+Caching latents to disk:  43%|████▎     | 15/35 [00:29<00:30,  1.53s/it]
+Caching latents to disk:  46%|████▌     | 16/35 [00:30<00:28,  1.52s/it]
+Caching latents to disk:  49%|████▊     | 17/35 [00:32<00:27,  1.52s/it]
+Caching latents to disk:  51%|█████▏    | 18/35 [00:33<00:25,  1.51s/it]
+Caching latents to disk:  54%|█████▍    | 19/35 [00:35<00:24,  1.50s/it]
+Caching latents to disk:  57%|█████▋    | 20/35 [00:36<00:22,  1.50s/it]
+Caching latents to disk:  60%|██████    | 21/35 [00:38<00:20,  1.49s/it]
+Caching latents to disk:  63%|██████▎   | 22/35 [00:39<00:19,  1.49s/it]
+Caching latents to disk:  66%|██████▌   | 23/35 [00:40<00:17,  1.47s/it]
+Caching latents to disk:  69%|██████▊   | 24/35 [00:42<00:16,  1.47s/it]
+Caching latents to disk:  71%|███████▏  | 25/35 [00:43<00:14,  1.46s/it]
+Caching latents to disk:  74%|███████▍  | 26/35 [00:45<00:13,  1.46s/it]
+Caching latents to disk:  77%|███████▋  | 27/35 [00:46<00:11,  1.46s/it]
+Caching latents to disk:  80%|████████  | 28/35 [00:48<00:10,  1.46s/it]
+Caching latents to disk:  83%|████████▎ | 29/35 [00:49<00:08,  1.45s/it]
+Caching latents to disk:  86%|████████▌ | 30/35 [00:51<00:07,  1.45s/it]
+Caching latents to disk:  89%|████████▊ | 31/35 [00:52<00:05,  1.45s/it]
+Caching latents to disk:  91%|█████████▏| 32/35 [00:54<00:04,  1.45s/it]
+Caching latents to disk:  94%|█████████▍| 33/35 [00:55<00:02,  1.44s/it]
+Caching latents to disk:  97%|█████████▋| 34/35 [00:56<00:01,  1.44s/it]
+Caching latents to disk: 100%|██████████| 35/35 [00:58<00:00,  1.44s/it]
+Caching latents to disk: 100%|██████████| 35/35 [00:58<00:00,  1.67s/it]
 Skipping first sample due to config setting
 
-tira_zimage_lora:   0%|          | 0/25 [00:00<?, ?it/s]
-tira_zimage_lora:   0%|          | 0/25 [00:45<?, ?it/s, lr: 1.0e-04 loss: 4.304e-01]
-tira_zimage_lora:   4%|▍         | 1/25 [00:45<18:12, 45.51s/it, lr: 1.0e-04 loss: 4.304e-01]
-tira_zimage_lora:   4%|▍         | 1/25 [01:06<18:12, 45.51s/it, lr: 1.0e-04 loss: 4.046e-01]
-tira_zimage_lora:   8%|▊         | 2/25 [01:06<10:06, 26.36s/it, lr: 1.0e-04 loss: 4.046e-01]
-tira_zimage_lora:   8%|▊         | 2/25 [01:26<10:06, 26.36s/it, lr: 1.0e-04 loss: 3.523e-01]
-tira_zimage_lora:  12%|█▏        | 3/25 [01:26<08:10, 22.30s/it, lr: 1.0e-04 loss: 3.523e-01]
-tira_zimage_lora:  16%|█▌        | 4/25 [01:43<06:31, 18.62s/it, lr: 1.0e-04 loss: 3.523e-01]
-tira_zimage_lora:  16%|█▌        | 4/25 [02:04<06:31, 18.62s/it, lr: 1.0e-04 loss: 3.489e-01]
-tira_zimage_lora:  20%|██        | 5/25 [02:04<06:41, 20.07s/it, lr: 1.0e-04 loss: 3.489e-01]
-tira_zimage_lora:  24%|██▍       | 6/25 [02:21<05:40, 17.93s/it, lr: 1.0e-04 loss: 3.489e-01]
-tira_zimage_lora:  28%|██▊       | 7/25 [02:38<05:10, 17.25s/it, lr: 1.0e-04 loss: 3.489e-01]
-tira_zimage_lora:  32%|███▏      | 8/25 [02:55<04:50, 17.07s/it, lr: 1.0e-04 loss: 3.489e-01]
-################################################
-# OOM during training step, skipping batch 1/3 #
-################################################
+tira_zimage_lora:   0%|          | 0/30 [00:00<?, ?it/s]
+tira_zimage_lora:   0%|          | 0/30 [00:43<?, ?it/s, lr: 1.0e-04 loss: 3.988e-01]
+tira_zimage_lora:   3%|▎         | 1/30 [00:43<20:51, 43.15s/it, lr: 1.0e-04 loss: 3.988e-01]
+tira_zimage_lora:   3%|▎         | 1/30 [01:03<20:51, 43.15s/it, lr: 1.0e-04 loss: 6.272e-01]
+tira_zimage_lora:   7%|▋         | 2/30 [01:03<11:55, 25.55s/it, lr: 1.0e-04 loss: 6.272e-01]
+tira_zimage_lora:   7%|▋         | 2/30 [01:44<11:55, 25.55s/it, lr: 1.0e-04 loss: 4.965e-01]
+tira_zimage_lora:  10%|█         | 3/30 [01:44<16:39, 37.03s/it, lr: 1.0e-04 loss: 4.965e-01]
+tira_zimage_lora:  10%|█         | 3/30 [02:26<16:39, 37.03s/it, lr: 1.0e-04 loss: 4.284e-01]
+tira_zimage_lora:  13%|█▎        | 4/30 [02:26<17:29, 40.36s/it, lr: 1.0e-04 loss: 4.284e-01]
+tira_zimage_lora:  13%|█▎        | 4/30 [03:08<17:29, 40.36s/it, lr: 1.0e-04 loss: 4.127e-01]
+tira_zimage_lora:  17%|█▋        | 5/30 [03:08<17:09, 41.18s/it, lr: 1.0e-04 loss: 4.127e-01]
+tira_zimage_lora:  17%|█▋        | 5/30 [03:49<17:09, 41.18s/it, lr: 1.0e-04 loss: 3.584e-01]
+tira_zimage_lora:  20%|██        | 6/30 [03:49<16:33, 41.38s/it, lr: 1.0e-04 loss: 3.584e-01]
+tira_zimage_lora:  20%|██        | 6/30 [04:31<16:33, 41.38s/it, lr: 1.0e-04 loss: 3.780e-01]
+tira_zimage_lora:  23%|██▎       | 7/30 [04:31<15:57, 41.65s/it, lr: 1.0e-04 loss: 3.780e-01]
+tira_zimage_lora:  23%|██▎       | 7/30 [04:51<15:57, 41.65s/it, lr: 1.0e-04 loss: 4.683e-01]
+tira_zimage_lora:  27%|██▋       | 8/30 [04:51<09:48, 26.76s/it, lr: 1.0e-04 loss: 4.683e-01]
+tira_zimage_lora:  27%|██▋       | 8/30 [05:12<09:48, 26.76s/it, lr: 1.0e-04 loss: 4.025e-01]
+tira_zimage_lora:  30%|███       | 9/30 [05:12<07:46, 22.23s/it, lr: 1.0e-04 loss: 4.025e-01]
+tira_zimage_lora:  30%|███       | 9/30 [05:53<07:46, 22.23s/it, lr: 1.0e-04 loss: 3.934e-01]
+tira_zimage_lora:  33%|███▎      | 10/30 [05:53<11:58, 35.93s/it, lr: 1.0e-04 loss: 3.934e-01]
+tira_zimage_lora:  33%|███▎      | 10/30 [06:35<11:58, 35.93s/it, lr: 1.0e-04 loss: 3.807e-01]
+tira_zimage_lora:  37%|███▋      | 11/30 [06:35<12:40, 40.01s/it, lr: 1.0e-04 loss: 3.807e-01]
+tira_zimage_lora:  37%|███▋      | 11/30 [06:55<12:40, 40.01s/it, lr: 1.0e-04 loss: 9.737e-02]
+tira_zimage_lora:  40%|████      | 12/30 [06:55<07:50, 26.15s/it, lr: 1.0e-04 loss: 9.737e-02]
+tira_zimage_lora:  40%|████      | 12/30 [07:37<07:50, 26.15s/it, lr: 1.0e-04 loss: 2.869e-01]
+tira_zimage_lora:  43%|████▎     | 13/30 [07:37<10:28, 36.95s/it, lr: 1.0e-04 loss: 2.869e-01]
+tira_zimage_lora:  43%|████▎     | 13/30 [07:57<10:28, 36.95s/it, lr: 1.0e-04 loss: 2.850e-01]
+tira_zimage_lora:  47%|████▋     | 14/30 [07:57<06:43, 25.24s/it, lr: 1.0e-04 loss: 2.850e-01]
+tira_zimage_lora:  47%|████▋     | 14/30 [08:39<06:43, 25.24s/it, lr: 1.0e-04 loss: 4.108e-01]
+tira_zimage_lora:  50%|█████     | 15/30 [08:39<09:10, 36.73s/it, lr: 1.0e-04 loss: 4.108e-01]
+tira_zimage_lora:  50%|█████     | 15/30 [08:59<09:10, 36.73s/it, lr: 1.0e-04 loss: 4.469e-01]
+tira_zimage_lora:  53%|█████▎    | 16/30 [08:59<05:53, 25.23s/it, lr: 1.0e-04 loss: 4.469e-01]
+tira_zimage_lora:  53%|█████▎    | 16/30 [09:41<05:53, 25.23s/it, lr: 1.0e-04 loss: 4.236e-01]
+tira_zimage_lora:  57%|█████▋    | 17/30 [09:41<07:58, 36.82s/it, lr: 1.0e-04 loss: 4.236e-01]
+tira_zimage_lora:  57%|█████▋    | 17/30 [10:01<07:58, 36.82s/it, lr: 1.0e-04 loss: 4.300e-01]
+tira_zimage_lora:  60%|██████    | 18/30 [10:01<05:02, 25.18s/it, lr: 1.0e-04 loss: 4.300e-01]
+tira_zimage_lora:  60%|██████    | 18/30 [10:43<05:02, 25.18s/it, lr: 1.0e-04 loss: 3.031e-01]
+tira_zimage_lora:  63%|██████▎   | 19/30 [10:43<06:42, 36.62s/it, lr: 1.0e-04 loss: 3.031e-01]
+tira_zimage_lora:  63%|██████▎   | 19/30 [11:24<06:42, 36.62s/it, lr: 1.0e-04 loss: 4.326e-01]
+tira_zimage_lora:  67%|██████▋   | 20/30 [11:24<06:40, 40.06s/it, lr: 1.0e-04 loss: 4.326e-01]
+tira_zimage_lora:  67%|██████▋   | 20/30 [12:06<06:40, 40.06s/it, lr: 1.0e-04 loss: 4.276e-01]
+tira_zimage_lora:  70%|███████   | 21/30 [12:06<06:10, 41.17s/it, lr: 1.0e-04 loss: 4.276e-01]
+tira_zimage_lora:  70%|███████   | 21/30 [12:26<06:10, 41.17s/it, lr: 1.0e-04 loss: 3.765e-01]
+tira_zimage_lora:  73%|███████▎  | 22/30 [12:26<03:31, 26.49s/it, lr: 1.0e-04 loss: 3.765e-01]
+tira_zimage_lora:  73%|███████▎  | 22/30 [12:46<03:31, 26.49s/it, lr: 1.0e-04 loss: 3.883e-01]
+tira_zimage_lora:  77%|███████▋  | 23/30 [12:46<02:34, 22.02s/it, lr: 1.0e-04 loss: 3.883e-01]
+tira_zimage_lora:  77%|███████▋  | 23/30 [13:28<02:34, 22.02s/it, lr: 1.0e-04 loss: 4.461e-01]
+tira_zimage_lora:  80%|████████  | 24/30 [13:28<03:35, 35.88s/it, lr: 1.0e-04 loss: 4.461e-01]
+tira_zimage_lora:  80%|████████  | 24/30 [13:48<03:35, 35.88s/it, lr: 1.0e-04 loss: 5.240e-01]
+tira_zimage_lora:  83%|████████▎ | 25/30 [13:48<02:05, 25.04s/it, lr: 1.0e-04 loss: 5.240e-01]
+tira_zimage_lora:  83%|████████▎ | 25/30 [14:09<02:05, 25.04s/it, lr: 1.0e-04 loss: 2.963e-01]
+tira_zimage_lora:  87%|████████▋ | 26/30 [14:09<01:27, 21.76s/it, lr: 1.0e-04 loss: 2.963e-01]
+tira_zimage_lora:  87%|████████▋ | 26/30 [14:50<01:27, 21.76s/it, lr: 1.0e-04 loss: 3.736e-01]
+tira_zimage_lora:  90%|█████████ | 27/30 [14:50<01:47, 35.78s/it, lr: 1.0e-04 loss: 3.736e-01]
+tira_zimage_lora:  90%|█████████ | 27/30 [15:32<01:47, 35.78s/it, lr: 1.0e-04 loss: 3.946e-01]
+tira_zimage_lora:  93%|█████████▎| 28/30 [15:32<01:19, 40.00s/it, lr: 1.0e-04 loss: 3.946e-01]
+tira_zimage_lora:  93%|█████████▎| 28/30 [15:52<01:19, 40.00s/it, lr: 1.0e-04 loss: 4.362e-01]
+tira_zimage_lora:  97%|█████████▋| 29/30 [15:52<00:26, 26.02s/it, lr: 1.0e-04 loss: 4.362e-01]
+tira_zimage_lora:  97%|█████████▋| 29/30 [16:34<00:26, 26.02s/it, lr: 1.0e-04 loss: 3.069e-01]
+tira_zimage_lora: 100%|██████████| 30/30 [16:34<00:00, 36.95s/it, lr: 1.0e-04 loss: 3.069e-01]
+tira_zimage_lora: 100%|██████████| 30/30 [16:34<00:00, 33.15s/it, lr: 1.0e-04 loss: 3.069e-01]
+Saved checkpoint to /tmp/train/output/tira_zimage_lora/tira_zimage_lora.safetensors
+Saved optimizer to /tmp/train/output/tira_zimage_lora/optimizer.pt
+Unloading assistant lora
+
+Generating Samples: 0it [00:00, ?it/s]
+Generating Samples: 0it [00:00, ?it/s]
+Loading assistant lora
 
 
-################################################
-# OOM during training step, skipping batch 1/3 #
-################################################
-
-
-################################################
-# OOM during training step, skipping batch 2/3 #
-################################################
-
-
-################################################
-# OOM during training step, skipping batch 3/3 #
-################################################
-
-Error running job: OOM during training step 3 times in a row, aborting training
-
-========================================
-Result:
- - 0 completed jobs
- - 1 failure
-========================================
-Traceback (most recent call last):
-  File "/tmp/ai-toolkit/run.py", line 151, in <module>
-    main()
-    ~~~~^^
-  File "/tmp/ai-toolkit/run.py", line 136, in main
-    raise e
-  File "/tmp/ai-toolkit/run.py", line 124, in main
-    job.run()
-    ~~~~~~~^^
-  File "/tmp/ai-toolkit/jobs/ExtensionJob.py", line 22, in run
-    process.run()
-    ~~~~~~~~~~~^^
-  File "/tmp/ai-toolkit/jobs/process/BaseSDTrainProcess.py", line 2646, in run
-    raise RuntimeError("OOM during training step 3 times in a row, aborting training")
-RuntimeError: OOM during training step 3 times in a row, aborting training
+T4 attention patch stats: {'fp16': 3106, 'fp32_fallback': 0}
