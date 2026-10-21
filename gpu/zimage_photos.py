@@ -1,9 +1,11 @@
 """Runs on Kaggle (2x T4). Generates photos with Z-Image-Turbo from the job's prompt and seeds,
 and saves them with the prompt and timings to /kaggle/working.
 
-T4 layout: GPU 1 encodes the prompt (bf16 text encoder), GPU 0 runs the image model in fp16 so
-PyTorch's memory-efficient attention can be used (bf16 attention on a T4 runs out of memory),
-then the VAE decodes in fp32 on GPU 0 after the image model is moved off it.
+T4 layout: GPU 1 encodes the prompt, GPU 0 runs the image model, and the VAE decodes in fp32 on
+GPU 0 once the image model is moved off it. The model stays in bf16 (in fp16 it overflows and
+gives black images), but a T4 can only run memory-efficient attention in fp16, and bf16 attention
+there runs out of memory. So attention alone is computed in fp16, with a chunked fp32 fallback
+for any call whose fp16 result overflows.
 
 Job params: prompt (str), seeds (list of int), width, height (multiples of 16), steps."""
 import gc
@@ -50,6 +52,37 @@ import diffusers
 import numpy as np
 import torch
 
+_sdpa = torch.nn.functional.scaled_dot_product_attention
+_stats = {"fp16_calls": 0, "fp32_fallbacks": 0}
+
+
+def _attention_t4(query, key, value, attn_mask=None, dropout_p=0.0, is_causal=False, scale=None,
+                  enable_gqa=False):
+    """bf16 attention on a T4: compute in fp16 with the memory-efficient kernel; if that
+    overflows, recompute in fp32, 1024 queries at a time."""
+    if query.dtype != torch.bfloat16 or not query.is_cuda:
+        return _sdpa(query, key, value, attn_mask=attn_mask, dropout_p=dropout_p, is_causal=is_causal,
+                     scale=scale, enable_gqa=enable_gqa)
+    _stats["fp16_calls"] += 1
+    with torch.nn.attention.sdpa_kernel([torch.nn.attention.SDPBackend.EFFICIENT_ATTENTION,
+                                         torch.nn.attention.SDPBackend.MATH]):
+        out = _sdpa(query.half(), key.half(), value.half(), attn_mask=attn_mask, dropout_p=dropout_p,
+                    is_causal=is_causal, scale=scale, enable_gqa=enable_gqa)
+    if torch.isfinite(out).all():
+        return out.to(torch.bfloat16)
+    _stats["fp32_fallbacks"] += 1
+    k, v = key.float(), value.float()
+    chunks = []
+    for i in range(0, query.shape[-2], 1024):
+        m = attn_mask
+        if m is not None and m.dim() >= 2 and m.shape[-2] > 1:
+            m = m[..., i:i + 1024, :]
+        chunks.append(_sdpa(query[..., i:i + 1024, :].float(), k, v, attn_mask=m, dropout_p=dropout_p,
+                            is_causal=is_causal, scale=scale, enable_gqa=enable_gqa))
+    return torch.cat(chunks, dim=-2).to(torch.bfloat16)
+
+
+torch.nn.functional.scaled_dot_product_attention = _attention_t4
 log["diffusers"] = diffusers.__version__
 log["gpus"] = [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())]
 text_dev = "cuda:1" if torch.cuda.device_count() > 1 else "cuda:0"
@@ -70,16 +103,15 @@ pipe.text_encoder.to(text_dev)
 with torch.no_grad():
     embeds, _ = pipe.encode_prompt(P["prompt"], device=text_dev, do_classifier_free_guidance=False,
                                    max_sequence_length=1024)
-embeds = [e.to("cuda:0", torch.float16) for e in embeds]
+embeds = [e.to("cuda:0", torch.bfloat16) for e in embeds]
 pipe.text_encoder.to("cpu")
 pipe.text_encoder = None
 gc.collect()
 torch.cuda.empty_cache()
 stamp(f"prompt encoded ({log['prompt_tokens']} tokens)")
 
-# 2) Image model in fp16 on GPU 0 with memory-efficient attention.
-pipe.transformer.to(torch.float16).to("cuda:0")
-pipe.transformer.set_attention_backend("_native_efficient")
+# 2) Image model in bf16 on GPU 0; attention goes through _attention_t4 above.
+pipe.transformer.to("cuda:0")
 stamp("image model on GPU 0")
 
 width, height = int(P.get("width", 1152)), int(P.get("height", 1536))
@@ -95,6 +127,8 @@ for seed in P.get("seeds", [1]):
     latents[seed] = lat.float().cpu()
     stamp(f"seed {seed} denoised{' (NaN/inf in result)' if bad else ''}")
 log["peak_vram_gb_gpu0_denoise"] = round(torch.cuda.max_memory_allocated(0) / 1e9, 1)
+log["attention"] = dict(_stats)
+save_log()
 
 # 3) Decode on GPU 0 in fp32 once the image model is off it.
 pipe.transformer.to("cpu")
