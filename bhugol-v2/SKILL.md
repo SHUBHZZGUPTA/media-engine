@@ -303,8 +303,8 @@ Fix the spec/template, rebuild, rerun. Both gates were checked against the Benga
 
 ## 11. Thumbnails (follow thumbnail_rules.md; match the video's style)
 1. **3D style → recipe A** (`3d/thumb_a.py <config.json>`):
-   - the video's own **3D satellite terrain**, the subject region filled in its **flag colours** with a glowing gold border
-   - **fire/glow at the payoff spot** inside a **red hand-drawn circle**
+   - the video's own **3D satellite terrain**, the subject region filled in its **flag colours** with a glowing gold border (config `"flag": "<flag png>"`; without it the region is flat blue)
+   - **fire/glow at the payoff spot** inside a **red hand-drawn circle** (config `"glow": "fire"` default, or `"water"` for water stories)
    - a **zoom bubble** (white ring, red outline, dotted leader) showing the video's key scene
    - a **giant glowing number** not already in the title, with **1-3 words** above it (never repeating the title; lint with `title.py`)
    - 2-3 emoji stickers (😱 + a topic emoji + the flag emoji), badge small, top-left; no characters, people or faces
@@ -331,7 +331,7 @@ Fix the spec/template, rebuild, rerun. Both gates were checked against the Benga
 ## 13. Deliver
 1. SendUserFile both MP4s (attach), English first, then the thumbnails (render).
 2. Put the kits in the reply as copy blocks.
-3. Report the plan check (longest planned gap), the full-render retention QA result (cadence, longest gap, moving share) and the sound-on-beat result (n/n).
+3. Report the plan check (longest planned gap), the pre-render gates (scene + layout), the full-render retention QA result (cadence, longest gap, moving share, plate missing) and the sound-on-beat result (n/n), and confirm the audit sheets of the final files were viewed.
 4. Push new library art.
 5. Report the Gemini requests used (out of 10/day per model).
 6. For trend topics, remind the user of the posting window (⏰).
