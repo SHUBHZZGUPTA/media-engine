@@ -128,13 +128,13 @@ const READY = [];
 const PH = 2, FOV = 30, ASP = 1080 / 1920;
 const VS = `uniform sampler2D dep; uniform float dScale; varying vec2 vUv;
 void main(){ vUv = uv; float d = texture2D(dep, uv).r; vec3 p = position; p.z += (d - 0.5) * dScale; gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
-const FS = `uniform sampler2D tex, tex2, burn, noiseT; uniform float prog, grassP, bright, sat, time, shim, hasBurn, heat; uniform vec4 grid, shimRect; varying vec2 vUv;
+const FS = `uniform sampler2D tex, tex2, burn, noiseT; uniform float prog, grassP, bright, sat, time, shim, hasBurn, heat, flk; uniform vec4 grid, shimRect; varying vec2 vUv;
 void main(){ vec2 uv = vUv;
   if (shim > 0.0) { float m = smoothstep(shimRect.x, shimRect.x + 0.05, uv.x) * smoothstep(shimRect.z, shimRect.z - 0.05, uv.x) * smoothstep(shimRect.y, shimRect.y + 0.05, uv.y) * smoothstep(shimRect.w, shimRect.w - 0.05, uv.y);
     uv += shim * m * vec2(sin(uv.y * 170.0 + time * 7.0) * 0.0016, sin(uv.x * 120.0 + time * 5.0) * 0.0011); }
   vec3 c = texture2D(tex, uv).rgb;
   if (hasBurn > 0.5) { float b = texture2D(burn, uv).r; float r = 1.0 - smoothstep(prog - 0.07, prog, b);
-    float fl = 0.86 + 0.14 * sin(time * 13.0 + uv.x * 40.0) * sin(time * 7.3 + uv.y * 31.0); c = mix(c, texture2D(tex2, uv).rgb * mix(1.0, fl, r), r); }
+    float fl = mix(1.0, 0.86 + 0.14 * sin(time * 13.0 + uv.x * 40.0) * sin(time * 7.3 + uv.y * 31.0), flk); /* fire flicker only on plates with flick: 1 (no line comments inside one-line shader strings) */ c = mix(c, texture2D(tex2, uv).rgb * mix(1.0, fl, r), r); }
   if (grassP > 0.0) { float inG = smoothstep(grid.x, grid.x + 0.04, uv.x) * smoothstep(grid.z, grid.z - 0.04, uv.x) * smoothstep(grid.y, grid.y + 0.04, uv.y) * smoothstep(grid.w, grid.w - 0.04, uv.y);
     float n = texture2D(noiseT, uv * vec2(2.0, 3.0)).r; float n2 = texture2D(noiseT, uv * vec2(9.0, 13.0)).r;
     float g = smoothstep(n - 0.06, n + 0.06, grassP) * inG; vec3 gc = mix(vec3(0.30, 0.41, 0.19), vec3(0.46, 0.52, 0.26), n2) * (0.7 + 0.6 * dot(c, vec3(0.299,0.587,0.114))); c = mix(c, gc, g * 0.9); }
@@ -157,7 +157,7 @@ function plate3(o) {
   const W = PH * 1024 / 1536;
   const U = { tex: { value: null }, tex2: { value: null }, dep: { value: null }, burn: { value: null }, noiseT: { value: null }, dScale: { value: o.dScale || .32 },
     prog: { value: -.2 }, grassP: { value: 0 }, grid: { value: new T3.Vector4(0, 0, 1, 1) }, bright: { value: 1 }, sat: { value: 1 }, time: { value: 0 },
-    shim: { value: 0 }, shimRect: { value: new T3.Vector4(0, 0, 1, 1) }, hasBurn: { value: o.burn ? 1 : 0 }, heat: { value: 0 } };
+    shim: { value: 0 }, shimRect: { value: new T3.Vector4(0, 0, 1, 1) }, hasBurn: { value: o.burn ? 1 : 0 }, heat: { value: 0 }, flk: { value: o.flick ? 1 : 0 } };
   if (o.shim) U.shimRect.value.set(o.shim[0] / 1024, 1 - o.shim[3] / 1536, o.shim[2] / 1024, 1 - o.shim[1] / 1536);
   if (o.grid) U.grid.value.set(o.grid[0] / 1024, 1 - o.grid[3] / 1536, o.grid[2] / 1024, 1 - o.grid[1] / 1536);
   sc.add(new T3.Mesh(new T3.PlaneGeometry(W, PH, 256, 384), new T3.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS })));
@@ -251,7 +251,7 @@ function map3() {
   beam.rotation.x = Math.PI / 2; beam.position.z = .12; pin.add(beam);
   const head = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0xFF5A1A, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 })); head.position.z = .24; head.scale.set(.16, .16, 1); pin.add(head);
   const ring = new T3.Mesh(new T3.RingGeometry(.02, .03, 48), new T3.MeshBasicMaterial({ color: 0xFF7A1A, transparent: true, opacity: 0, blending: T3.AdditiveBlending, depthWrite: false, side: T3.DoubleSide })); ring.position.z = .004; pin.add(ring);
-  const S = { el, push, ov, cvG, cvT, RG, RT, sg, cg, st, ct, globe, TU, WU, pin, beam, head, ring, labels: [], gk: Track({ lon: -92, lat: 34, dist: 3.4 }), tk: Track({ lon: -77.6, lat: 40.9, dist: 5, el: 74, yaw: 0 }),
+  const S = { el, push, ov, cvG, cvT, RG, RT, sg, cg, st, ct, globe, TU, WU, pin, beam, head, ring, labels: [], lls: [], gk: Track({ lon: -92, lat: 34, dist: 3.4 }), tk: Track({ lon: -77.6, lat: 40.9, dist: 5, el: 74, yaw: 0 }),
     x: Track(0), hl: Track(0), rise: Track(0), pinA: Track(0), flagA: Track(0), wpos, ll, lab: null };
   READY.push(tex('globe.jpg').then(t => { globe.material.map = t; globe.material.needsUpdate = true; }), tex('ne.jpg').then(t => TU.ne.value = t), tex('pa_close.jpg').then(t => TU.cls.value = t),
     tex('pa_mask.png').then(t => TU.mask.value = t), tex('flag_us.png').then(t => TU.flag.value = t), tex('hillshade.png').then(t => TU.hs.value = t), tex('dem8.png', { nearest: 1 }).then(t => TU.dem.value = t),
@@ -274,14 +274,23 @@ function renderMap(S, t) {
       L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight).toFixed(1)}px)`; }
     for (const cd of S.cards) { const a = valAt(cd.a, t); cd.el.style.opacity = a * x; cd.ln.style.opacity = a * x; if (a > 0) { const q = toScreen(S.ct, S.pin.position.clone().add(new T3.Vector3(0, 0, .26)));
       const w = cd.el.offsetWidth, h = cd.el.offsetHeight, cx = clamp(q.x - w / 2, 40, 1040 - w), cy = clamp(q.y - h - 170, 300, 1150 - h);
-      cd.el.style.transform = `translate(${cx.toFixed(1)}px,${(cy + (1 - a) * 40).toFixed(1)}px)`; cd.path.setAttribute('d', `M${(cx + w / 2).toFixed(1)} ${(cy + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); } } } 
+      cd.el.style.transform = `translate(${cx.toFixed(1)}px,${(cy + (1 - a) * 40).toFixed(1)}px)`; cd.path.setAttribute('d', `M${(cx + w / 2).toFixed(1)} ${(cy + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); } }
+    for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const q = toScreen(S.ct, S.wpos(L.lon, L.lat, .03));
+      L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2).toFixed(1)}px) scale(${(.6 + .4 * Math.min(1, a * 1.5)).toFixed(3)})`; } } 
 }
+
+/* camera of the terrain flyover at time t (pure function of time), for beats pinned to a lon/lat; and lon/lat labels */
+function mapProj(S, t, lon, lat, up) { const k = valAt(S.tk, t); const tg = new T3.Vector3((k.lon - LC) * KX, k.lat - BC, 0); const e = k.el * Math.PI / 180, y = k.yaw * Math.PI / 180;
+  S.ct.position.set(tg.x + Math.sin(y) * Math.cos(e) * k.dist, tg.y - Math.cos(y) * Math.cos(e) * k.dist, Math.sin(e) * k.dist); S.ct.lookAt(tg); S.ct.updateMatrixWorld();
+  return toScreen(S.ct, S.wpos(lon, lat, up || .01)); }
+function mapLabel(S, txt, lon, lat, fs, col) { const e = mk('div', { class: 'plbl' }, S.ov); e.textContent = tr(txt); Object.assign(e.style, { fontSize: fs + 'px', webkitTextStrokeWidth: (fs * .18) + 'px', color: col || '' });
+  const rec = { e, lon, lat, a: Track(0) }; S.lls.push(rec); return rec; }
 
 /* ---------- build scenes ---------- */
 const R1 = plate3({ tex: 'plate_road.jpg', dep: 'depth_road.png', dScale: .34, shim: [80, 560, 960, 1300] });
 const MP = map3();
 const PIT = plate3({ tex: 'plate_pit.jpg', dep: 'depth_pit.png', dScale: .36, shim: [300, 560, 1000, 860] });
-const XS = plate3({ tex: 'dio_cold.jpg', tex2: 'dio_hot.jpg', burn: 'dio_burn.png', dep: 'depth_dio.png', dScale: .22, bg: 0x0E1C3C });
+const XS = plate3({ tex: 'dio_cold.jpg', tex2: 'dio_hot.jpg', burn: 'dio_burn.png', dep: 'depth_dio.png', dScale: .22, bg: 0x0E1C3C, flick: 1 });
 const TW1 = plate3({ tex: 'plate_town.jpg', dep: 'depth_town.png', dScale: .22 });
 const HO = plate3({ tex: 'plate_hole.jpg', dep: 'depth_hole.png', dScale: .32 });
 const TW2 = plate3({ tex: 'plate_town.jpg', dep: 'depth_town.png', dScale: .22, grid: PT.grid });
@@ -390,9 +399,10 @@ function build() {
   // shots + cuts come from the spec's shot plan (motion_plan.py): one source of truth for picture and sound
   const MO = BhugolMotion(tl, { xfade: true }); const REG = { R1, MP, PIT, XS, TW1, HO, TW2, R2 };
   const PL = D.shots.map(s => ({ S: REG[s.scene], el: REG[s.scene].el, at: s.t, cut: s.cut }));
-  PL.forEach((p, i) => { p.S.win = [i ? p.at - .45 : 0, i < PL.length - 1 ? PL[i + 1].at + .1 + (PL[i + 1].cut === 'burn' ? MO.BURN_DUR : 0) : D.dur + 1]; });
+  for (const S of [...PLATES, MP]) S.wins = [];
+  PL.forEach((p, i) => { p.S.wins.push([i ? p.at - .45 : 0, i < PL.length - 1 ? PL[i + 1].at + .1 + (PL[i + 1].cut === 'burn' ? MO.BURN_DUR : 0) : D.dur + 1]); });
   PL.forEach((p, i) => { if (p.cut === 'burn') XF.add(p.at, MO.BURN_DUR, PL[i - 1].S.cvT ? { cv: PL[i - 1].S.cvT, push: PL[i - 1].S.push } : PL[i - 1].S, p.S, 'burn'); });  // draw early/late so cut overlaps never show a blank canvas
-  MO.shots(PL);
+  MO.shots(PL); tl.set(PL[0].el, { opacity: 1 }, 0);  // a scene reused later is hidden at 0 by its later shots' cuts
   for (const b of D.beats || []) if (b.kind === 'punch') MO.punch(REG[b.scene].push, b.t, b.level, b.back);  // hook/in-shot beats
   const talk = (ch, a, b) => { const n = Math.max(2, Math.floor((b - a) / .32));
     tl.fromTo(ch.c, { scaleY: 1, rotation: 0, transformOrigin: '50% 100%' }, { keyframes: Array.from({ length: n }, (_, i) => [{ scaleY: 1.05, rotation: i % 2 ? 2.2 : -2.2, duration: .16 }, { scaleY: 1, rotation: 0, duration: .16 }]).flat(), ...IR }, a); };
@@ -511,9 +521,11 @@ function build() {
     return wi >= 0 ? ch.wt[wi] : null; };
   // circle: {scene, c:[x,y], r:[rx,ry]} in the scene plate's image px (3D projects them each frame); optional col
   for (const b of beat('circle')) { const S = SC[b.scene]; if (!S || !S.ov || !b.c) continue;
-    MO.hwCircle(S.ov, t => proj(S, b.c[0], b.c[1], t), (b.r || [240, 120])[0], (b.r || [240, 120])[1], b.t, b.u || nextChunk(b.t), { seed: 3 + b.t, col: b.col }); }
+    MO.hwCircle(S.ov, t => proj(S, b.c[0], b.c[1], t), (b.r || [240, 120])[0], (b.r || [240, 120])[1], b.t, b.u || nextChunk(b.t), { seed: 3 + b.t, col: b.col });
+    if (b.text) { const Lb = label(S, b.text, b.c[0] + (b.tdx || 0), b.c[1] + (b.tdy || 0), b.fs || 76, b.tcol || '#FFC23A'); key(Lb.a, 1, b.t + .25, .3, 'power3.out'); key(Lb.a, 0, b.u || nextChunk(b.t), .25); } }
   // arrow: {scene, from:[x,y], to:[x,y]} image px; optional col (yellow reads better on dark plates)
   for (const b of beat('arrow')) { const S = SC[b.scene]; if (!S || !S.ov || !b.from || !b.to) continue;
+    if (S === MP) { MO.hwArrow(S.ov, t => { const p0 = mapProj(MP, t, b.from[0], b.from[1]), p1 = mapProj(MP, t, b.to[0], b.to[1]); return { x0: p0.x, y0: p0.y, x1: p1.x, y1: p1.y }; }, b.t, b.u || nextChunk(b.t), { seed: 7 + b.t, col: b.col, head: b.head }); continue; }
     MO.hwArrow(S.ov, t => { const p0 = proj(S, b.from[0], b.from[1], t), p1 = proj(S, b.to[0], b.to[1], t); return { x0: p0.x, y0: p0.y, x1: p1.x, y1: p1.y }; }, b.t, b.u || nextChunk(b.t), { seed: 7 + b.t, col: b.col }); }
   // grow: {to, unit, prefix, y} a number that grows while counting (lands on its spoken word), unit after; top title area
   for (const b of beat('grow')) { const el = mk('div', { class: 'kbox', style: `top:${b.y || 150}px` }, $('hook'));
@@ -562,12 +574,13 @@ function build() {
   MO.shakeOn($('cshake'), D.dur);
   // sort keyframes, then one render driver (reads time only)
   const allT = []; for (const S of PLATES) { allT.push(S.cam0, ...Object.values(S.uT), ...S.parts.map(p => p.a), ...S.glows.map(g => g.a), ...S.labels.map(l => l.a)); }
-  allT.push(MP.gk, MP.tk, MP.x, MP.hl, MP.rise, MP.pinA, MP.flagA, ...MP.cards.map(c => c.a), MP.labels[0].a, HO.dl, TW1.thermo.a, TW1.thermo.lvl, TW1.thermo.spin, TW1.lblA, ...Object.values(TW2.bars).filter(v => v && v.keys));
+  allT.push(MP.gk, MP.tk, MP.x, MP.hl, MP.rise, MP.pinA, MP.flagA, ...MP.cards.map(c => c.a), MP.labels[0].a, ...MP.lls.map(l => l.a), HO.dl, TW1.thermo.a, TW1.thermo.lvl, TW1.thermo.spin, TW1.lblA, ...Object.values(TW2.bars).filter(v => v && v.keys));
   for (const T of allT) T.keys.sort((a, b) => a.a - b.a);
   const clk = { t: 0 };
   tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => { const t = clk.t;
-    for (const S of PLATES) if (t >= S.win[0] - .05 && t <= S.win[1] + .45) renderPlate(S, t);
-    if (t >= MP.win[0] - .05 && t <= MP.win[1] + .45) renderMap(MP, t);
+    const live = S => S.wins.some(w => t >= w[0] - .05 && t <= w[1] + .45);
+    for (const S of PLATES) if (live(S)) renderPlate(S, t);
+    if (live(MP)) renderMap(MP, t);
     XF.render(t); } }, 0);
   return tl;
 }

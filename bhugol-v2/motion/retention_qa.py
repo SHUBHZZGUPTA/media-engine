@@ -5,6 +5,8 @@ Checks (thresholds from the HyperFrames motion doctrine + the kit's attention be
   - change cadence: a visual event at least every 2.7 s on average, longest gap <= 6 s (in-shot beats count)
   - moving share: >= 85% of 0.25 s steps moving
   - black frames: none (blackdetect)
+  - plate missing: no stretch >= 0.5 s where the picture area (above the captions) is near-flat while captions still run;
+    blackdetect misses this because captions, badge and particles keep the frame from being 'black' (Bengaluru, 22 Oct)
   - first second: motion within the first 0.5 s (the hook frame must already move)
   - transition grammar (with --spec/--timing): 1 primary cut type ~60-70%, 1-2 accents, <= 2 hero flashes, no shot > 12 s without a cut
 Prints PASS/CHECK per item and an overall verdict. CHECK items are fixed before finishing unless deliberate (say why).
@@ -38,6 +40,17 @@ gaps = np.diff([0] + ev2 + [t[-1]]) if len(t) else [0]
 avg = (t[-1] / max(1, len(ev2))) if len(t) else 0
 rep('change cadence', avg <= 2.7 and max(gaps) <= 6, f'one every {avg:.1f} s, longest gap {max(gaps):.1f} s ({len(ev2)} events)')
 rep('hook frame moving', bool(len(d)) and d[:2].max() > .6, f'motion in first 0.5 s = {d[:2].max():.2f}' if len(d) else 'n/a')
+# plate missing: picture region (rows above the caption band) almost flat for >= 0.5 s
+pic = fr[1:, 10:75, :] if len(fr) > 1 else fr[:, 10:75, :]
+flat = pic.std((1, 2)) < 6.0
+if a.end: flat = flat[:len(t)]
+runs2 = []; c = 0
+for i, f in enumerate(list(flat) + [False]):
+    if f: c += 1
+    else:
+        if c >= 2: runs2.append((round(float(t[i - c]), 2), round(c / 4, 2)))
+        c = 0
+rep('plate missing', not runs2, 'none' if not runs2 else f'flat picture area at {runs2[:6]} (start s, length s) - a scene did not draw')
 bd = subprocess.run(['ffmpeg', '-hide_banner', '-i', a.video, '-vf', 'blackdetect=d=0.03:pix_th=0.08', '-an', '-f', 'null', '-'], capture_output=True, text=True).stderr
 blk = [l.split('black_start:')[1].split()[0] for l in bd.splitlines() if 'black_start:' in l]
 rep('black frames', not blk, 'none' if not blk else f'at {blk[:5]} s')

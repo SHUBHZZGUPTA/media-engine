@@ -52,7 +52,12 @@ def sfx(P, beats=()):
         elif b['kind'] == 'grow': fx += [['ticks', b['t'], .3, b['t'] + 1.1, 18]]
         elif b['kind'] == 'flap': fx += [['pop', b['t'], .4, 1800], ['ticks', b['t'], .6, b['t'] + .9, 30]]
         elif b['kind'] == 'card': fx += [['pop', b['t'], .55, 820], ['whoosh', b['t'] - .1, .3, .3, 900, 2600]]
-        elif b['kind'] in ('circle', 'arrow'): fx += [['pop', b['t'], .25, 1500], ['slide', b['t'], .35, 1800, 2600, .45]]
+        elif b['kind'] in ('circle', 'arrow'): fx += [['pop', b['t'], .2, 1000], ['whoosh', b['t'] - .04, .1, .32, 600, 1500]]  # soft pen-swish (the old 1.8-2.6 kHz slide whistle was jarring)
+    # a short, quiet click exactly on every cut and beat: whooshes and risers lead INTO the moment, so without a sharp
+    # transient the onset reads late and sfx_check misses it. Punches/cuts slightly louder than drawn marks.
+    fx += [['pop', p['t'], .32, 1100, .04] for p in P[1:]]
+    fx += [['pop', b['t'] + (.3 if b['kind'] == 'charslam' else 0), .42 if b['kind'] == 'punch' else .3, 1500 if b['kind'] == 'punch' else 1000, .04]
+           for b in beats if b['kind'] != 'impact']
     return fx
 
 
@@ -87,3 +92,16 @@ def gaps(P, beats, end, extra=(), max_gap=5.0):
     ev = sorted({round(p['t'], 2) for p in P} | {round(b['t'], 2) for b in beats} | {round(t, 2) for t in extra})
     pts = [0.0] + [t for t in ev if 0 < t < end] + [end]
     return [(a, b) for a, b in zip(pts, pts[1:]) if b - a > max_gap]
+
+
+SHARP = ('slam', 'count', 'punch', 'charslam', 'grow', 'flap', 'card')
+
+
+def sharp_gaps(P, beats, end, max_gap=4.0):
+    """Second plan check (22 Oct 2026, Bengaluru lesson): continuous motion (water filling, rain, particles) hides soft
+    beats from retention_qa, so every stretch needs a SHARP event (a cut, punch, slam, count, grow, flap or card; a
+    drawn circle/arrow or a `moment` does not count) at least every `max_gap` seconds. Returns [(a, b)]."""
+    ev = sorted({round(p['t'], 2) for p in P} | {round(b['t'], 2) for b in beats if b.get('kind') in SHARP})
+    pts = [0.0] + [t for t in ev if 0 < t < end] + [end]
+    return [(a, b) for a, b in zip(pts, pts[1:]) if b - a > max_gap]
+

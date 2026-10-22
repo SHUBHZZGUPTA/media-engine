@@ -23,21 +23,22 @@ function cpu(n) { return new Promise(r => { const im = new Image(); im.onload = 
 function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); const r = g.createRadialGradient(128, 128, 0, 128, 128, 128);
   r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.22, 'rgba(255,255,255,.6)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 256, 256); return new T3.CanvasTexture(c); }
 const GT = glowTex();
-Promise.all([ld('ne.jpg'), ld('pa_close.jpg'), ld('pa_mask.png'), ld('hillshade.png'), ld('dem8.png'), cpu('dem8.png'), document.fonts.ready]).then(([ne, cls, mask, hs, dem, demI]) => {
+Promise.all([ld('ne.jpg'), ld('pa_close.jpg'), ld('pa_mask.png'), ld('hillshade.png'), ld('dem8.png'), cpu('dem8.png'), Q.get('flag') ? ld(Q.get('flag')) : null, document.fonts.ready]).then(([ne, cls, mask, hs, dem, demI, flag]) => {
   const Wt = (L1 - L0) * KX, Ht = B1 - B0, EX = .0105 * 30;
   const cr = M3.pa_close_bbox;
-  const U = { ne: { value: ne }, cls: { value: cls }, mask: { value: mask }, hs: { value: hs }, dem: { value: dem }, exag: { value: EX },
+  const U = { ne: { value: ne }, cls: { value: cls }, mask: { value: mask }, hs: { value: hs }, dem: { value: dem }, exag: { value: EX }, flag: { value: flag }, hasFlag: { value: flag ? 1 : 0 }, frect: { value: (() => { const lo = M3.outline.map(p => p[0]), la = M3.outline.map(p => p[1]); return new T3.Vector4((Math.min(...lo) - L0) / (L1 - L0), (Math.min(...la) - B0) / (B1 - B0), (Math.max(...lo) - L0) / (L1 - L0), (Math.max(...la) - B0) / (B1 - B0)); })() },
     crect: { value: new T3.Vector4((cr[0] - L0) / (L1 - L0), (cr[2] - B0) / (B1 - B0), (cr[1] - L0) / (L1 - L0), (cr[3] - B0) / (B1 - B0)) } };
   sc.add(new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 900, 450), new T3.ShaderMaterial({ uniforms: U,
     vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
-    fragmentShader: `uniform sampler2D ne, cls, mask, hs; uniform vec4 crect; varying vec2 vUv;
+    fragmentShader: `uniform sampler2D ne, cls, mask, hs, flag; uniform float hasFlag; uniform vec4 crect, frect; varying vec2 vUv;
       void main(){ vec3 c = texture2D(ne, vUv).rgb; vec2 q = (vUv - crect.xy) / (crect.zw - crect.xy);
         float fq = smoothstep(0.0, 0.08, q.x) * smoothstep(1.0, 0.92, q.x) * smoothstep(0.0, 0.08, q.y) * smoothstep(1.0, 0.92, q.y);
         if (fq > 0.0) c = mix(c, texture2D(cls, clamp(q, 0.0, 1.0)).rgb, fq);
         float h = texture2D(hs, vUv).r; float m = texture2D(mask, vUv).r;
         vec3 outside = c * (0.42 + 0.78 * h); outside = mix(vec3(dot(outside, vec3(.3,.59,.11))), outside, 0.7) * 0.62;
         vec3 blue = vec3(0.10, 0.30, 0.95) * (0.30 + 1.05 * h) + vec3(0.03, 0.05, 0.06);
-        gl_FragColor = vec4(mix(outside, blue, m), 1.0); }` })));
+        vec2 fq2 = clamp((vUv - frect.xy) / (frect.zw - frect.xy), 0.0, 1.0); vec3 fl = texture2D(flag, fq2).rgb * (0.55 + 0.7 * h);
+        gl_FragColor = vec4(mix(outside, mix(blue, fl, hasFlag), m), 1.0); }` })));
   const hAt = (lo, la) => { const u = (lo - L0) / (L1 - L0), v = (la - B0) / (B1 - B0); const x = Math.round(u * (demI.w - 1)), y = Math.round((1 - v) * (demI.h - 1)); return demI.d[(y * demI.w + x) * 4] / 255 * EX; };
   const wp = (lo, la, up) => new T3.Vector3((lo - LC) * KX, la - BC, hAt(lo, la) + (up || 0));
   // gold border wall + bright ground line
@@ -49,7 +50,9 @@ Promise.all([ld('ne.jpg'), ld('pa_close.jpg'), ld('pa_mask.png'), ld('hillshade.
     fragmentShader: `varying float vK; void main(){ float a = pow(1.0 - vK, 2.2); gl_FragColor = vec4(1.0, 0.78, 0.16, a); }` })));
   const tube = new T3.TubeGeometry(new T3.CatmullRomCurve3(pts, true), pts.length * 4, .022, 8, true);
   sc.add(new T3.Mesh(tube, new T3.MeshBasicMaterial({ color: 0xFFC83A })));
-  // fire at Centralia
+  // glow at the pin: ?glow=fire (default, Centralia) or ?glow=water (Bengaluru lakes)
+  const WATER = Q.get('glow') === 'water';
+  if (!WATER) {
   const c0 = wp(M3.pin[0], M3.pin[1]);
   const sp = (col, s, z, op, add) => { const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: col, transparent: true, blending: add ? T3.AdditiveBlending : T3.NormalBlending, depthWrite: false, opacity: op })); m.position.copy(c0).add(new T3.Vector3(0, 0, z)); m.scale.set(s, s, 1); sc.add(m); };
   sp(0xC81E00, 2.2, .03, .8); sp(0xFF4A00, 1.4, .06, .95); sp(0xFF8A10, .8, .09, 1); sp(0xFFC040, .4, .12, 1, 1); sp(0xFFE7A0, .16, .14, 1, 1); sp(0xFF6A00, 2.8, .02, .4, 1);
@@ -61,6 +64,19 @@ Promise.all([ld('ne.jpg'), ld('pa_close.jpg'), ld('pa_mask.png'), ld('hillshade.
       m.position.copy(c0).add(new T3.Vector3(Math.cos(a) * r, Math.sin(a) * r * .6, z)); const s = .22 - z * .25; m.scale.set(Math.max(.05, s) * .7, Math.max(.05, s), 1); sc.add(m); } }
   for (let i = 0; i < 7; i++) { const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: 0x9A9AA0, transparent: true, depthWrite: false, opacity: .28 }));
     m.position.copy(c0).add(new T3.Vector3(.05 * Math.sin(i), .04 * i, .25 + i * .13)); const s = .3 + i * .07; m.scale.set(s, s, 1); sc.add(m); }
+  } else {
+  const c0 = wp(M3.pin[0], M3.pin[1]);
+  const sp = (col, s, z, op, add) => { const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: col, transparent: true, blending: add ? T3.AdditiveBlending : T3.NormalBlending, depthWrite: false, opacity: op })); m.position.copy(c0).add(new T3.Vector3(0, 0, z)); m.scale.set(s, s, 1); sc.add(m); };
+  sp(0x0A3CB4, 2.2, .03, .8); sp(0x1E6EFF, 1.4, .06, .95); sp(0x3AA8FF, .8, .09, 1); sp(0x9ADCFF, .4, .12, 1, 1); sp(0xE6F8FF, .16, .14, 1, 1); sp(0x2A6AFF, 2.8, .02, .4, 1);
+  for (let i = 0; i < 26; i++) { const a = i * 2.39996, r = .05 + (i % 7) * .045, z = .1 + ((i * .37) % 1) * .55;
+    const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: i % 3 ? 0x4FB8FF : 0x9ADCFF, transparent: true, blending: T3.NormalBlending, depthWrite: false, opacity: .9 }));
+    m.position.copy(c0).add(new T3.Vector3(Math.cos(a) * r, Math.sin(a) * r, z)); const s = .035 + (i % 3) * .015; m.scale.set(s, s, 1); sc.add(m); }
+  if (Q.get('big')) { for (let i = 0; i < 40; i++) { const a = i * 2.39996, r = (i % 9) * .025, z = .06 + (i % 13) * .045;
+      const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: z > .4 ? 0x1A5AFF : (z > .2 ? 0x4FB8FF : 0x9ADCFF), transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: .55 }));
+      m.position.copy(c0).add(new T3.Vector3(Math.cos(a) * r, Math.sin(a) * r * .6, z)); const s = .22 - z * .25; m.scale.set(Math.max(.05, s) * .7, Math.max(.05, s), 1); sc.add(m); } }
+  for (let i = 0; i < 7; i++) { const m = new T3.Sprite(new T3.SpriteMaterial({ map: GT, color: 0xBFE6FF, transparent: true, depthWrite: false, opacity: .28 }));
+    m.position.copy(c0).add(new T3.Vector3(.05 * Math.sin(i), .04 * i, .25 + i * .13)); const s = .3 + i * .07; m.scale.set(s, s, 1); sc.add(m); }
+    }
   // camera
   // camera: ?vcam=lonOffset,latOffset,dist,elev,yaw (relative to the pin), ?wcam=... for 16:9; defaults = Centralia framing
   const camQ = (Q.get(MODE === 'v' ? 'vcam' : 'wcam') || (MODE === 'v' ? '-0.41,0.15,9.6,66,4' : '-0.61,0.1,8.4,62,0')).split(',').map(Number);

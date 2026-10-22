@@ -43,8 +43,8 @@
         tl.fromTo(a, { x: 0, scale: 1 }, { x: -60, scale: 1.12, duration: .32, ease: 'power4.in', ...IR }, t - .32);  // push-in keeps the frame filled
         tl.to(a, { x: -420, duration: .34, ease: 'power2.out' }, t);
         hide(a, t + .36);
+        tl.set(b, { opacity: .35 }, t - .001);  // must come BEFORE the fade-in (fix 22 Oct: it used to run after it and left every curve-cut shot at 35%)
         tl.fromTo(b, { opacity: .35, x: 230, scale: 1.04, filter: BLUR0 }, { opacity: 1, x: 0, scale: 1, duration: .34, ease: 'power4.out', ...IR }, t);
-        tl.set(b, { opacity: .35 }, t);
       },
       // accent: new chapter (forward zoom-through) — exit 1 -> 1.2 + blur 18, power3.in 0.2 s; entry settles 1.3 -> 1, expo.out 0.5 s.
       // inverse (zoomIn = arrival/payoff): softer exit 1 -> 1.08, entry 1.18 -> 1 over 0.7 s power3.out.

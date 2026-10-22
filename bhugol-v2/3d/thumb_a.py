@@ -11,7 +11,9 @@ config: {
   "number": "1962",                   # a number/date NOT already in the title
   "bubble": "/path/scene.jpg", "bubble_v": [-70, -70, 760], "bubble_w": [-34, -34, 368],   # img left, top, width inside the bubble
   "emoji": ["😱", "🔥", "🇺🇸"],
-  "vcam": "-0.41,0.15,9.6,66,4", "wcam": "-0.61,0.1,8.4,62,0"   # optional camera framing (see thumb3d.html)
+  "vcam": "-0.41,0.15,9.6,66,4", "wcam": "-0.61,0.1,8.4,62,0",  # optional camera framing (see thumb3d.html)
+  "flag": "/path/flag_xx.png",        # optional: fill the region with this flag (else flat blue)
+  "glow": "fire" | "water"            # optional: what glows at the payoff spot (default fire)
 }
 Writes <name>_FINAL_thumb_v.jpg / _16x9.jpg and <name>_HI_FINAL_thumb_v.jpg / _16x9.jpg, plus a 140 px feed test sheet.
 """
@@ -21,13 +23,14 @@ HERE = os.path.dirname(os.path.abspath(__file__)); KIT = '/home/claude/bhugol-ki
 C = json.load(open(sys.argv[1])); W = os.path.join(C['out'], '_work'); os.makedirs(os.path.join(W, 'assets'), exist_ok=True)
 for f in ('ne.jpg', 'pa_close.jpg', 'pa_mask.png', 'hillshade.png', 'dem8.png'): shutil.copy(os.path.join(C['art'], f), os.path.join(W, 'assets', f))
 shutil.copy(C['bubble'], os.path.join(W, 'assets', 'bubble.jpg'))
+if C.get('flag'): shutil.copy(C['flag'], os.path.join(W, 'assets', 'flag.png'))
 FONTS = {'bsd900.woff2': 'big-shoulders-display/files/big-shoulders-display-latin-900-normal.woff2', 'muk800.woff2': 'mukta/files/mukta-devanagari-800-normal.woff2'}
 for d, s in FONTS.items(): shutil.copy(os.path.join(KIT, 'node_modules/@fontsource', s), os.path.join(W, 'assets', d))
 shutil.copy('/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf', os.path.join(W, 'assets', 'emoji.ttf')); shutil.copy(os.path.join(KIT, 'assets/bhugol_badge.png'), os.path.join(W, 'assets', 'bhugol_badge.png'))
 shutil.copy(os.path.join(HERE, 'thumb3d.html'), W)
 three = next(p for p in ('/home/claude/work/node_modules/three/build/three.min.js', os.path.join(HERE, 'three.min.js')) if os.path.exists(p)); shutil.copy(three, W)
 open(os.path.join(W, 'map3d.js'), 'w').write('const M3=' + open(os.path.join(C['art'], 'map3d.json')).read() + ';')
-q = f"&vcam={C.get('vcam', '-0.41,0.15,9.6,66,4')}&wcam={C.get('wcam', '-0.61,0.1,8.4,62,0')}"
+q = f"&vcam={C.get('vcam', '-0.41,0.15,9.6,66,4')}&wcam={C.get('wcam', '-0.61,0.1,8.4,62,0')}&glow={C.get('glow', 'fire')}" + ('&flag=flag.png' if C.get('flag') else '')
 open(os.path.join(W, 'bare.mjs'), 'w').write("""import { chromium } from '/opt/npm-tools/node_modules/playwright/index.mjs';
 const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--allow-file-access-from-files'] });
 const out = {};

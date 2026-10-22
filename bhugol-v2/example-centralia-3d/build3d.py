@@ -48,8 +48,19 @@ _G = motion_plan.gaps(PLAN, [{'t': t} for t in _BT], _end, extra=[t[2] for t in 
 for a, b in _G: print(f'PLAN GAP {a:.1f}-{b:.1f} s ({b - a:.1f} s) with nothing new on screen: add a beat (circle/arrow/grow/flap/card/punch) or a cut')
 if _G and '--allow-gaps' not in sys.argv: sys.exit('plan check failed: fix the gaps above in the spec (or rerun with --allow-gaps and say why)')
 print('plan check: no stretch over 5 s without a new visual moment (0-%.1f s)' % _end)
+# ---- 22 Oct 2026 hardening: sharp-beat check, shader lint, pre-render gates (see qa/) ----
+_SG = motion_plan.sharp_gaps(PLAN, [{'t': C(*b['at']), 'kind': b['kind']} for b in SPEC.get('beats', [])], _end)
+for a, b in _SG: print(f'SHARP GAP {a:.1f}-{b:.1f} s ({b - a:.1f} s): no cut/punch/slam/count/grow/flap/card - continuous motion hides soft beats from viewers and QA; add a punch or count here')
+if _SG and '--allow-gaps' not in sys.argv: sys.exit('sharp-beat check failed (or rerun with --allow-gaps and say why)')
+import subprocess as _sp
+_QA = os.path.join(os.path.dirname(MOT), 'qa')
+_sp.run(['python3', os.path.join(_QA, 'shader_lint.py'), os.path.join(HERE, 'template3d.html')], check=True)
+
 tpl = open(os.path.join(HERE, 'template3d.html')).read().replace('__MBLUR__', open(os.path.join(MOT, 'vendor/motion-blur.html')).read())
 shutil.copy(os.path.join(HERE, 'flag_us.png'), os.path.join(out, 'assets/flag_us.png'))
 open(os.path.join(out, 'index.html'), 'w').write(tpl.replace('__DATA__', json.dumps(D, ensure_ascii=False)).replace('__DUR__', '%.3f' % DUR))
 json.dump({'dur': DUR, 'end': D['end'], 'C': Cd}, open(os.path.join(out, 'times.json'), 'w'), indent=1)
 print('built', out, 'dur', DUR)
+
+if '--no-gate' not in sys.argv:   # scene gate (every shot draws, no WebGL errors) + layout gate (marks/labels on screen, out of captions)
+    if _sp.run(['bash', os.path.join(_QA, 'gates.sh'), os.path.abspath(out)]).returncode: sys.exit('pre-render gates failed: do not render')
