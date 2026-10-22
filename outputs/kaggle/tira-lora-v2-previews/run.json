@@ -1,0 +1,95 @@
+{
+ "job": "tira-lora-v2-previews",
+ "kernel": "shubhzzgupta07/me-tira-lora-v2-previews",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-lora-v2-previews",
+ "gpu_quota_before": {
+  "used_h": 21.68,
+  "remaining_h": 8.32,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/tira-lora-checkpoints",
+ "staged_files": [
+  "tira_zimage_lora.safetensors",
+  "tira_zimage_lora_000001000.safetensors",
+  "tira_zimage_lora_000001400.safetensors",
+  "tira_zimage_lora_000001600.safetensors",
+  "tira_zimage_lora_000001800.safetensors"
+ ],
+ "stage_diag": {
+  "downloaded": [
+   {
+    "file": "tira_zimage_lora.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000001000.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000001400.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000001600.safetensors",
+    "mb": 85.1
+   },
+   {
+    "file": "tira_zimage_lora_000001800.safetensors",
+    "mb": 85.1
+   }
+  ],
+  "version_before": 4,
+  "create": [
+   {
+    "license": "other",
+    "existed": true,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "ready (version 4)",
+   "ready (version 5)"
+  ],
+  "version_ready": 5
+ },
+ "pushed_at": "2026-10-22T07:03:15+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-10-22T08:20:43+00:00",
+ "files": [
+  "final_p1.jpg",
+  "final_p2.jpg",
+  "final_p3.jpg",
+  "final_p4.jpg",
+  "final_p5.jpg",
+  "me-tira-lora-v2-previews.log",
+  "run_log.json",
+  "step1000_p1.jpg",
+  "step1000_p2.jpg",
+  "step1000_p3.jpg",
+  "step1000_p4.jpg",
+  "step1000_p5.jpg",
+  "step1400_p1.jpg",
+  "step1400_p2.jpg",
+  "step1400_p3.jpg",
+  "step1400_p4.jpg",
+  "step1400_p5.jpg",
+  "step1600_p1.jpg",
+  "step1600_p2.jpg",
+  "step1600_p3.jpg",
+  "step1600_p4.jpg",
+  "step1600_p5.jpg",
+  "step1800_p1.jpg",
+  "step1800_p2.jpg",
+  "step1800_p3.jpg",
+  "step1800_p4.jpg",
+  "step1800_p5.jpg"
+ ],
+ "gpu_quota_after": {
+  "used_h": 22.96,
+  "remaining_h": 7.04,
+  "total_h": 30.0
+ }
+}

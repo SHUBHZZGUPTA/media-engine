@@ -1,0 +1,214 @@
+{
+ "params": {
+  "prompts": [
+   "tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo",
+   "tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo",
+   "tirav1 woman, close-up portrait, three-quarter view, soft smile, black tank top, long hair worn down, apartment, daylight, candid iPhone photo"
+  ],
+  "lora_glob": "tira_zimage_lora*.safetensors",
+  "seed": 42,
+  "width": 768,
+  "height": 1024,
+  "steps": 9,
+  "lora_scale": 1.0,
+  "include_base": false
+ },
+ "timings": {
+  "found 5 LoRA files": 41.6,
+  "model loaded to RAM": 286.1,
+  "5 prompts encoded": 342.8,
+  "step1000 prompt 1 denoised": 573.4,
+  "step1000 prompt 2 denoised": 725.2,
+  "step1000 prompt 3 denoised": 876.4,
+  "step1000 prompt 4 denoised": 1027.7,
+  "step1000 prompt 5 denoised": 1179.0,
+  "step1400 prompt 1 denoised": 1423.1,
+  "step1400 prompt 2 denoised": 1575.4,
+  "step1400 prompt 3 denoised": 1727.1,
+  "step1400 prompt 4 denoised": 1878.5,
+  "step1400 prompt 5 denoised": 2030.0,
+  "step1600 prompt 1 denoised": 2265.6,
+  "step1600 prompt 2 denoised": 2417.5,
+  "step1600 prompt 3 denoised": 2569.4,
+  "step1600 prompt 4 denoised": 2721.8,
+  "step1600 prompt 5 denoised": 2873.8,
+  "step1800 prompt 1 denoised": 3106.8,
+  "step1800 prompt 2 denoised": 3258.8,
+  "step1800 prompt 3 denoised": 3410.9,
+  "step1800 prompt 4 denoised": 3563.1,
+  "step1800 prompt 5 denoised": 3715.2,
+  "final prompt 1 denoised": 3947.0,
+  "final prompt 2 denoised": 4098.5,
+  "final prompt 3 denoised": 4250.2,
+  "final prompt 4 denoised": 4402.1,
+  "final prompt 5 denoised": 4553.8,
+  "all images saved": 4607.4
+ },
+ "images": [
+  {
+   "file": "step1000_p1.jpg",
+   "version": "step1000",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step1000_p2.jpg",
+   "version": "step1000",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step1000_p3.jpg",
+   "version": "step1000",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step1000_p4.jpg",
+   "version": "step1000",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step1000_p5.jpg",
+   "version": "step1000",
+   "prompt": 5,
+   "nan": false
+  },
+  {
+   "file": "step1400_p1.jpg",
+   "version": "step1400",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step1400_p2.jpg",
+   "version": "step1400",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step1400_p3.jpg",
+   "version": "step1400",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step1400_p4.jpg",
+   "version": "step1400",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step1400_p5.jpg",
+   "version": "step1400",
+   "prompt": 5,
+   "nan": false
+  },
+  {
+   "file": "step1600_p1.jpg",
+   "version": "step1600",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step1600_p2.jpg",
+   "version": "step1600",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step1600_p3.jpg",
+   "version": "step1600",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step1600_p4.jpg",
+   "version": "step1600",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step1600_p5.jpg",
+   "version": "step1600",
+   "prompt": 5,
+   "nan": false
+  },
+  {
+   "file": "step1800_p1.jpg",
+   "version": "step1800",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step1800_p2.jpg",
+   "version": "step1800",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step1800_p3.jpg",
+   "version": "step1800",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step1800_p4.jpg",
+   "version": "step1800",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step1800_p5.jpg",
+   "version": "step1800",
+   "prompt": 5,
+   "nan": false
+  },
+  {
+   "file": "final_p1.jpg",
+   "version": "final",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "final_p2.jpg",
+   "version": "final",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "final_p3.jpg",
+   "version": "final",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "final_p4.jpg",
+   "version": "final",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "final_p5.jpg",
+   "version": "final",
+   "prompt": 5,
+   "nan": false
+  }
+ ],
+ "diffusers": "0.40.0",
+ "versions": [
+  "step1000",
+  "step1400",
+  "step1600",
+  "step1800",
+  "final"
+ ],
+ "version_errors": {},
+ "attention": {
+  "fp16_calls": 7830,
+  "fp32_fallbacks": 0
+ }
+}
