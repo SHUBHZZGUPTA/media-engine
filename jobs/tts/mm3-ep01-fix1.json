@@ -1,0 +1,35 @@
+{
+ "id": "mm3-ep01-fix1",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "bill_promise_1",
+   "direction": "Voice a funny cartoon character: a nervous, slightly sad banknote. Say the line quietly and a little deflated, but pronounce every word clearly, especially the word 'promise'. Short and punchy.",
+   "speakers": {
+    "Bill": "Puck"
+   },
+   "lines": [
+    [
+     "Bill",
+     "So I'm basically a promise?"
+    ]
+   ]
+  },
+  {
+   "name": "bill_promise_2",
+   "direction": "Voice a funny cartoon character: a nervous, slightly sad banknote. Say the line quietly and a little deflated, but pronounce every word clearly, especially the word 'promise'. Short and punchy.",
+   "speakers": {
+    "Bill": "Puck"
+   },
+   "lines": [
+    [
+     "Bill",
+     "So I'm basically a promise?"
+    ]
+   ]
+  }
+ ]
+}
