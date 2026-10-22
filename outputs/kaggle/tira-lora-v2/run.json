@@ -41,11 +41,52 @@
  "pushed_at": "2026-10-21T21:56:36+00:00",
  "accelerator": "NvidiaTeslaT4",
  "version": 1,
- "status": "RUNNING",
- "checked_at": "2026-10-22T06:01:21+00:00",
+ "status": "COMPLETE",
+ "checked_at": "2026-10-22T07:01:07+00:00",
  "gpu_quota_now": {
-  "used_h": 21.09,
-  "remaining_h": 8.91,
+  "used_h": 21.68,
+  "remaining_h": 8.32,
+  "total_h": 30.0
+ },
+ "files": [
+  "config.yaml",
+  "me-tira-lora-v2.log",
+  "train_log.txt",
+  "train_run.json"
+ ],
+ "kept_on_kaggle": [
+  {
+   "file": "lora/optimizer.pt",
+   "mb": 86.9
+  },
+  {
+   "file": "lora/tira_zimage_lora.safetensors",
+   "mb": 85.1
+  },
+  {
+   "file": "lora/tira_zimage_lora_000001000.safetensors",
+   "mb": 85.1
+  },
+  {
+   "file": "lora/tira_zimage_lora_000001200.safetensors",
+   "mb": 85.1
+  },
+  {
+   "file": "lora/tira_zimage_lora_000001400.safetensors",
+   "mb": 85.1
+  },
+  {
+   "file": "lora/tira_zimage_lora_000001600.safetensors",
+   "mb": 85.1
+  },
+  {
+   "file": "lora/tira_zimage_lora_000001800.safetensors",
+   "mb": 85.1
+  }
+ ],
+ "gpu_quota_after": {
+  "used_h": 21.68,
+  "remaining_h": 8.32,
   "total_h": 30.0
  }
 }
