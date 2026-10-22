@@ -1,0 +1,15 @@
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 14321.50it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+depth money-mirage/ep01v3/src/p_earlymoney.jpg
+depth money-mirage/ep01v3/src/p_backpack.jpg
+depth money-mirage/ep01v3/src/p_bank1933.jpg
+depth money-mirage/ep01v3/src/p_ship.jpg
+depth money-mirage/ep01v3/src/p_dam.jpg
+depth money-mirage/ep01v3/src/p_mirage.jpg
+upscale money-mirage/ep01v3/src/p_earlymoney.jpg
+upscale money-mirage/ep01v3/src/p_backpack.jpg
+upscale money-mirage/ep01v3/src/p_bank1933.jpg
+upscale money-mirage/ep01v3/src/p_ship.jpg
+upscale money-mirage/ep01v3/src/p_dam.jpg
+upscale money-mirage/ep01v3/src/p_mirage.jpg
+{'depth': [{'src': 'money-mirage/ep01v3/src/p_earlymoney.jpg', 'secs': 2.5}, {'src': 'money-mirage/ep01v3/src/p_backpack.jpg', 'secs': 2.4}, {'src': 'money-mirage/ep01v3/src/p_bank1933.jpg', 'secs': 2.4}, {'src': 'money-mirage/ep01v3/src/p_ship.jpg', 'secs': 2.4}, {'src': 'money-mirage/ep01v3/src/p_dam.jpg', 'secs': 2.4}, {'src': 'money-mirage/ep01v3/src/p_mirage.jpg', 'secs': 2.4}], 'upscale': [{'src': 'money-mirage/ep01v3/src/p_earlymoney.jpg', 'secs': 77.2}, {'src': 'money-mirage/ep01v3/src/p_backpack.jpg', 'secs': 75.7}, {'src': 'money-mirage/ep01v3/src/p_bank1933.jpg', 'secs': 76.7}, {'src': 'money-mirage/ep01v3/src/p_ship.jpg', 'secs': 72.8}, {'src': 'money-mirage/ep01v3/src/p_dam.jpg', 'secs': 70.6}, {'src': 'money-mirage/ep01v3/src/p_mirage.jpg', 'secs': 69.7}]}
