@@ -1,0 +1,106 @@
+{
+ "params": {
+  "prompts": [
+   "tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo",
+   "tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo",
+   "tirav1 woman, close-up portrait, three-quarter view, soft smile, black tank top, long hair worn down, apartment, daylight, candid iPhone photo"
+  ],
+  "lora_glob": "tira_zimage_lora*.safetensors",
+  "seed": 42,
+  "width": 768,
+  "height": 1024,
+  "steps": 9,
+  "lora_scale": 1.0,
+  "include_base": false
+ },
+ "timings": {
+  "found 2 LoRA files": 66.0,
+  "model loaded to RAM": 303.2,
+  "5 prompts encoded": 360.8,
+  "step2200 prompt 1 denoised": 556.6,
+  "step2200 prompt 2 denoised": 709.0,
+  "step2200 prompt 3 denoised": 860.9,
+  "step2200 prompt 4 denoised": 1013.5,
+  "step2200 prompt 5 denoised": 1166.7,
+  "step2400 prompt 1 denoised": 1375.7,
+  "step2400 prompt 2 denoised": 1527.8,
+  "step2400 prompt 3 denoised": 1679.6,
+  "step2400 prompt 4 denoised": 1832.9,
+  "step2400 prompt 5 denoised": 1985.1,
+  "all images saved": 2014.2
+ },
+ "images": [
+  {
+   "file": "step2200_p1.jpg",
+   "version": "step2200",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step2200_p2.jpg",
+   "version": "step2200",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step2200_p3.jpg",
+   "version": "step2200",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step2200_p4.jpg",
+   "version": "step2200",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step2200_p5.jpg",
+   "version": "step2200",
+   "prompt": 5,
+   "nan": false
+  },
+  {
+   "file": "step2400_p1.jpg",
+   "version": "step2400",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step2400_p2.jpg",
+   "version": "step2400",
+   "prompt": 2,
+   "nan": false
+  },
+  {
+   "file": "step2400_p3.jpg",
+   "version": "step2400",
+   "prompt": 3,
+   "nan": false
+  },
+  {
+   "file": "step2400_p4.jpg",
+   "version": "step2400",
+   "prompt": 4,
+   "nan": false
+  },
+  {
+   "file": "step2400_p5.jpg",
+   "version": "step2400",
+   "prompt": 5,
+   "nan": false
+  }
+ ],
+ "diffusers": "0.40.0",
+ "versions": [
+  "step2200",
+  "step2400"
+ ],
+ "version_errors": {},
+ "attention": {
+  "fp16_calls": 3240,
+  "fp32_fallbacks": 0
+ }
+}
