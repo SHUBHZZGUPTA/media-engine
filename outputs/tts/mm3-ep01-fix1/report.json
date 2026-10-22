@@ -1,0 +1,21 @@
+{
+ "job": "mm3-ep01-fix1",
+ "items": [
+  {
+   "name": "bill_promise_1",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 4.4,
+   "took": 5.4
+  },
+  {
+   "name": "bill_promise_2",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 3.92,
+   "took": 3.1
+  }
+ ]
+}
