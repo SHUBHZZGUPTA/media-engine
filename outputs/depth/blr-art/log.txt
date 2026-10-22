@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 9691.29it/s]
+depth library/scenes/blr_lake.jpg
+depth library/scenes/blr_city0.jpg
+depth library/scenes/blr_ridge.jpg
+depth library/scenes/blr_casc0.jpg
+depth library/scenes/blr_bund.jpg
+depth library/scenes/blr_fort.jpg
+depth library/scenes/blr_stadium.jpg
+depth library/scenes/blr_market.jpg
+depth library/scenes/blr_busstand.jpg
+upscale library/scenes/blr_lake.jpg
+upscale library/scenes/blr_city0.jpg
+upscale library/scenes/blr_ridge.jpg
+upscale library/scenes/blr_casc0.jpg
+upscale library/scenes/blr_bund.jpg
+upscale library/scenes/blr_fort.jpg
+upscale library/scenes/blr_stadium.jpg
+upscale library/scenes/blr_market.jpg
+upscale library/scenes/blr_busstand.jpg
+upscale library/scenes/blr_city1.jpg
+upscale library/scenes/blr_casc1.jpg
+upscale library/characters/c_drop.png
+upscale library/characters/c_bus.png
+{'depth': [{'src': 'library/scenes/blr_lake.jpg', 'secs': 2.8}, {'src': 'library/scenes/blr_city0.jpg', 'secs': 2.7}, {'src': 'library/scenes/blr_ridge.jpg', 'secs': 2.6}, {'src': 'library/scenes/blr_casc0.jpg', 'secs': 2.7}, {'src': 'library/scenes/blr_bund.jpg', 'secs': 2.6}, {'src': 'library/scenes/blr_fort.jpg', 'secs': 2.5}, {'src': 'library/scenes/blr_stadium.jpg', 'secs': 2.6}, {'src': 'library/scenes/blr_market.jpg', 'secs': 2.6}, {'src': 'library/scenes/blr_busstand.jpg', 'secs': 2.5}], 'upscale': [{'src': 'library/scenes/blr_lake.jpg', 'secs': 170.7}, {'src': 'library/scenes/blr_city0.jpg', 'secs': 169.8}, {'src': 'library/scenes/blr_ridge.jpg', 'secs': 167.3}, {'src': 'library/scenes/blr_casc0.jpg', 'secs': 167.6}, {'src': 'library/scenes/blr_bund.jpg', 'secs': 168.6}, {'src': 'library/scenes/blr_fort.jpg', 'secs': 170.5}, {'src': 'library/scenes/blr_stadium.jpg', 'secs': 167.5}, {'src': 'library/scenes/blr_market.jpg', 'secs': 167.1}, {'src': 'library/scenes/blr_busstand.jpg', 'secs': 169.3}, {'src': 'library/scenes/blr_city1.jpg', 'secs': 168.2}, {'src': 'library/scenes/blr_casc1.jpg', 'secs': 168.4}, {'src': 'library/characters/c_drop.png', 'secs': 190.9}, {'src': 'library/characters/c_bus.png', 'secs': 184.8}]}
