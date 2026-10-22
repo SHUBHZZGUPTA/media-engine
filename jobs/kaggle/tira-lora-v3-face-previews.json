@@ -7,7 +7,7 @@
  "wait_minutes": 100,
  "stage": {
   "from_kernel": "shubhzzgupta07/me-tira-lora-v3-face",
-  "file_pattern": "tira_zimage_lora(_0000(02000|02200|02400))?\\.safetensors$",
+  "file_pattern": "tira_zimage_lora_0000(02200|02400)\\.safetensors$",
   "dataset_slug": "tira-lora-checkpoints",
   "title": "Tira LoRA checkpoints"
  },
