@@ -80,8 +80,14 @@ stamp("ai-toolkit installed")
 from PIL import Image  # noqa: E402
 
 data_dir = f"{WORK}/dataset"
+face_dir = f"{WORK}/dataset_face"
+face_repeats = int(P.get("face_repeats", 1))
 os.makedirs(data_dir, exist_ok=True)
+os.makedirs(face_dir, exist_ok=True)
 for item in P["dataset"]:
+    # With face_repeats > 1, close-ups go in their own folder that is shown that many times per
+    # pass over the data, so the face gets more of the training than the full-body shots.
+    folder = face_dir if face_repeats > 1 and "close-up" in item["caption"] else data_dir
     raw = f"{WORK}/{item['name']}.download"
     for attempt in range(3):
         try:
@@ -91,8 +97,8 @@ for item in P["dataset"]:
             time.sleep(5)
     im = Image.open(raw).convert("RGB")
     im.thumbnail((1536, 1536))
-    im.save(f"{data_dir}/{item['name']}.png")
-    with open(f"{data_dir}/{item['name']}.txt", "w") as f:
+    im.save(f"{folder}/{item['name']}.png")
+    with open(f"{folder}/{item['name']}.txt", "w") as f:
         f.write(item["caption"])
     os.remove(raw)
 stamp(f"dataset ready ({len(P['dataset'])} images)")
@@ -156,8 +162,10 @@ config = {
             "network": {"type": "lora", "linear": int(P.get("rank", 16)), "linear_alpha": int(P.get("rank", 16))},
             "save": {"dtype": "float16", "save_every": int(P.get("save_every", 250)),
                      "max_step_saves_to_keep": 20},
-            "datasets": [{"folder_path": data_dir, "caption_ext": "txt", "caption_dropout_rate": 0.05,
-                          "cache_latents_to_disk": True, "resolution": P.get("resolutions", [512, 768])}],
+            "datasets": [{"folder_path": d, "caption_ext": "txt", "caption_dropout_rate": 0.05,
+                          "cache_latents_to_disk": True, "resolution": P.get("resolutions", [512, 768]),
+                          "num_repeats": r}
+                         for d, r in ((data_dir, 1), (face_dir, face_repeats)) if os.listdir(d)],
             "train": {"batch_size": 1, "steps": steps, "gradient_accumulation_steps": 1, "train_unet": True,
                       "train_text_encoder": False, "gradient_checkpointing": True, "noise_scheduler": "flowmatch",
                       "timestep_type": "weighted", "optimizer": "adamw8bit", "lr": float(P.get("lr", 1e-4)),
