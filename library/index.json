@@ -27,7 +27,9 @@
   "c_core": "Earth's inner core personified: white-hot glowing iron ball with flame wisps, sunglasses pushed up; smug grin; faces right. (Dig)",
   "c_fish": "Small orange-and-white striped reef fish standing on its tail, fins on hips; indignant, one eyebrow raised; faces left. (Dig)",
   "c_officer_a": "1945 US Army officer (generic): olive uniform, brown side-parted hair, holding a wooden ruler; determined slight smile; faces right. (Korea, 2026-10-22; from the bhugol kit)",
-  "c_officer_b": "1945 US Army officer (generic): olive uniform, blond side-parted hair, round wire glasses, rolled-up map in both hands; worried, one eyebrow up; faces left. Codex edit of c_officer_a. (Korea, 2026-10-22)"
+  "c_officer_b": "1945 US Army officer (generic): olive uniform, blond side-parted hair, round wire glasses, rolled-up map in both hands; worried, one eyebrow up; faces left. Codex edit of c_officer_a. (Korea, 2026-10-22)",
+  "c_drop": "Cheerful raindrop personified: clear-blue water-drop body, arms up like on a water slide, splash at the base; huge delighted grin; faces right. (Bengaluru, 2026-10-22)",
+  "c_bus": "Tired old city bus personified: red-and-silver bus, windscreen face, deadpan half-closed eyes, blank route sign, puddle under wheels; faces left/front. (Bengaluru)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -63,6 +65,17 @@
   "korea_office": "1945 US government office late at night: desk left with unfolded East Asia map under green lamp (~250,300), rotary phone, night window with city lights top centre, wall clock top right, polished wooden floor lower middle empty.",
   "korea_sign": "1953 plain wooden armistice signing hall: two long green-felt tables left and right with blank documents, wooden chairs, bright windows at back, empty wooden floor down the middle.",
   "korea_dmz": "Korean DMZ at misty dawn: wetland + young forest, double barbed-wire fence across middle distance (~y 300-330), guard tower right, mountains, red-crowned cranes in the shallows lower half (y ~1150-1500).",
-  "korea_dio_dmz": "3D isometric diorama on dark navy: long diagonal slab, wild green strip with wetland + tiny cranes between two fences, guard towers at both ends (top-right ~1780,40 of 1848 preview; bottom-left)."
+  "korea_dio_dmz": "3D isometric diorama on dark navy: long diagonal slab, wild green strip with wetland + tiny cranes between two fences, guard towers at both ends (top-right ~1780,40 of 1848 preview; bottom-left).",
+  "blr_lake": "Golden-hour aerial (~45 deg) of a big city lake in a modern South Indian city: wooded island ~448,768, water fills the middle/lower half, glass towers + apartments on the far shore, sun ~742,150. (Bengaluru, 2026-10-22)",
+  "blr_city0": "Top-down storybook map of a green South Indian valley c.1900: chain of 5 lakes top to bottom (~512,90 / 450,300 / 486,550 / 550,870 / 486,1254) joined by canals, paddy fields, villages, boulders. (Bengaluru)",
+  "blr_city1": "Codex EDIT of blr_city0: same valley today, dense city, ring road, stadium; only the bottom lake (~486,1254) remains, murky green. Roughly aligned with blr_city0. (Bengaluru)",
+  "blr_ridge": "3D isometric cutaway diorama on navy: land block with a ridge, toy city on top (~602,333), dry slopes, blue river at the bottom-left edge (~180,770 to 475,1050). (Bengaluru)",
+  "blr_casc0": "3D isometric diorama on navy: sloping valley with 5 empty cracked tank basins stepping down from top-right to bottom-left (~781,218 / 666,410 / 563,614 / 461,858 / 346,1075), earth bunds, sluice gates, dry canals. (Bengaluru)",
+  "blr_casc1": "Codex EDIT of blr_casc0: all 5 basins full of blue water, waterfalls through the sluice gates, green fields; pixel-aligned with blr_casc0. (Bengaluru)",
+  "blr_bund": "Deccan valley c.850 in the first monsoon: freshly built curved red-earth embankment across the valley (~77-922, y~563), muddy pool behind (~640,474), granite boulders, rain clouds; wet open ground lower middle. (Bengaluru)",
+  "blr_fort": "1537 South Indian mud fort at morning: earthen ramparts + gate (~717,294), big tank with granite steps (~205,614) and water (~640,666), shrine, palms; open dirt ground lower half. (Bengaluru)",
+  "blr_stadium": "Sunny aerial of a present-day athletics stadium (red track, green field ~550,666) in a leafy South Indian city, lake on the horizon; dry ground lower half. (Bengaluru)",
+  "blr_market": "Early-morning aerial of a big old South Indian flower/vegetable market: arched stone building, stalls with marigolds, empty paved square (~512,820). (Bengaluru)",
+  "blr_busstand": "Dusk aerial of a huge city bus terminal: semicircular lit canopy, rows of plain red/white and blue/white buses (~512,576), empty bus lane lower half. (Bengaluru)"
  }
 }
