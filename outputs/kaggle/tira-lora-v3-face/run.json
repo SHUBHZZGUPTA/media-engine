@@ -1,0 +1,46 @@
+{
+ "job": "tira-lora-v3-face",
+ "kernel": "shubhzzgupta07/me-tira-lora-v3-face",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-lora-v3-face",
+ "gpu_quota_before": {
+  "used_h": 22.96,
+  "remaining_h": 7.04,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/tira-lora-checkpoints",
+ "staged_files": [
+  "optimizer.pt",
+  "tira_zimage_lora.safetensors"
+ ],
+ "stage_diag": {
+  "downloaded": [
+   {
+    "file": "optimizer.pt",
+    "mb": 86.9
+   },
+   {
+    "file": "tira_zimage_lora.safetensors",
+    "mb": 85.1
+   }
+  ],
+  "version_before": 5,
+  "create": [
+   {
+    "license": "other",
+    "existed": true,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "ready (version 5)",
+   "ready (version 6)"
+  ],
+  "version_ready": 6
+ },
+ "pushed_at": "2026-10-22T09:51:53+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "QUEUED",
+ "checked_at": "2026-10-22T10:03:57+00:00"
+}
