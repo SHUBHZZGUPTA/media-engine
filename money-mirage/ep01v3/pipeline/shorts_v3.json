@@ -1,0 +1,554 @@
+{
+ "shorts": [
+  {
+   "id": "01_what_broke",
+   "line": "Your $100 bill used to buy almost 5 ounces of gold. Now it buys a fortieth. What broke?",
+   "pieces": [
+    [
+     10.93,
+     18.44
+    ],
+    [
+     31.03,
+     44.89
+    ]
+   ],
+   "hook": {
+    "img": "wallet_desk__film.jpg",
+    "pos": "45% 50%",
+    "dur": 7.69,
+    "text": "4.84 OZ → *0.024 OZ*",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "Your *$100* bill used to",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48,
+       0.84,
+       1.2,
+       1.56
+      ],
+      "en": 1.89
+     },
+     {
+      "txt": "buy almost *5* ounces of",
+      "sn": 1.89,
+      "wt": [
+       1.92,
+       2.28,
+       2.64,
+       3.0,
+       3.36
+      ],
+      "en": 3.69
+     },
+     {
+      "txt": "gold.",
+      "sn": 3.69,
+      "wt": [
+       3.72
+      ],
+      "en": 4.27
+     },
+     {
+      "txt": "Now it buys a fortieth.",
+      "sn": 4.27,
+      "wt": [
+       4.3,
+       4.66,
+       5.02,
+       5.38,
+       5.74
+      ],
+      "en": 6.29
+     },
+     {
+      "txt": "What broke?",
+      "sn": 6.29,
+      "wt": [
+       6.32,
+       6.68
+      ],
+      "en": 7.88
+     }
+    ]
+   },
+   "dur": 29.06
+  },
+  {
+   "id": "02_why_gold",
+   "line": "Before coins, you could lose a whole day trading chickens for one goat. Why did gold end up as money?",
+   "pieces": [
+    [
+     64.57,
+     96.92
+    ]
+   ],
+   "hook": {
+    "img": "barter_market__film.jpg",
+    "pos": "50% 50%",
+    "dur": 8.41,
+    "text": "WHY *GOLD* WON",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "Before coins,",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48
+      ],
+      "en": 1.03
+     },
+     {
+      "txt": "you could lose a whole",
+      "sn": 1.03,
+      "wt": [
+       1.06,
+       1.42,
+       1.78,
+       2.14,
+       2.5
+      ],
+      "en": 2.83
+     },
+     {
+      "txt": "day trading chickens for one",
+      "sn": 2.83,
+      "wt": [
+       2.86,
+       3.22,
+       3.58,
+       3.94,
+       4.3
+      ],
+      "en": 4.63
+     },
+     {
+      "txt": "goat.",
+      "sn": 4.63,
+      "wt": [
+       4.66
+      ],
+      "en": 5.21
+     },
+     {
+      "txt": "Why did gold end up",
+      "sn": 5.21,
+      "wt": [
+       5.24,
+       5.6,
+       5.96,
+       6.32,
+       6.68
+      ],
+      "en": 7.01
+     },
+     {
+      "txt": "as money?",
+      "sn": 7.01,
+      "wt": [
+       7.04,
+       7.4
+      ],
+      "en": 8.6
+     }
+    ]
+   },
+   "dur": 40.76
+  },
+  {
+   "id": "03_first_paper_money",
+   "line": "1,000 years ago, your savings in China cost you a backpack of iron. So why did paper win, and what broke?",
+   "pieces": [
+    [
+     109.8,
+     156.86
+    ]
+   ],
+   "hook": {
+    "img": "chengdu_market__film.jpg",
+    "pos": "50% 50%",
+    "dur": 8.99,
+    "text": "FIRST *PAPER MONEY*",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "*1,000* years ago,",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48,
+       0.84
+      ],
+      "en": 1.39
+     },
+     {
+      "txt": "your savings in China cost",
+      "sn": 1.39,
+      "wt": [
+       1.42,
+       1.78,
+       2.14,
+       2.5,
+       2.86
+      ],
+      "en": 3.19
+     },
+     {
+      "txt": "you a backpack of iron.",
+      "sn": 3.19,
+      "wt": [
+       3.22,
+       3.58,
+       3.94,
+       4.3,
+       4.66
+      ],
+      "en": 5.21
+     },
+     {
+      "txt": "So why did paper win,",
+      "sn": 5.21,
+      "wt": [
+       5.24,
+       5.6,
+       5.96,
+       6.32,
+       6.68
+      ],
+      "en": 7.23
+     },
+     {
+      "txt": "and what broke?",
+      "sn": 7.23,
+      "wt": [
+       7.26,
+       7.62,
+       7.98
+      ],
+      "en": 9.18
+     }
+    ]
+   },
+   "dur": 56.05
+  },
+  {
+   "id": "04_gold_prison",
+   "line": "You could risk 10 years in prison for keeping gold in 1933. But why?",
+   "pieces": [
+    [
+     194.94,
+     240.34
+    ]
+   ],
+   "hook": {
+    "img": "doc_eo6102__none.jpg",
+    "pos": "50% 30%",
+    "dur": 6.03,
+    "text": "ORDER *6102*",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "You could risk *10* years",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48,
+       0.84,
+       1.2,
+       1.56
+      ],
+      "en": 1.89
+     },
+     {
+      "txt": "in prison for keeping gold",
+      "sn": 1.89,
+      "wt": [
+       1.92,
+       2.28,
+       2.64,
+       3.0,
+       3.36
+      ],
+      "en": 3.69
+     },
+     {
+      "txt": "in *1933.* But why?",
+      "sn": 3.69,
+      "wt": [
+       3.72,
+       4.08,
+       4.66,
+       5.02
+      ],
+      "en": 6.22
+     }
+    ]
+   },
+   "dur": 51.43
+  },
+  {
+   "id": "05_france_gold",
+   "line": "Your dollar's gold promise started cracking in 1965. Why did France want 300 million dollars in gold?",
+   "pieces": [
+    [
+     294.12,
+     338.56
+    ]
+   ],
+   "hook": {
+    "img": "p_ship__film.jpg",
+    "pos": "40% 50%",
+    "dur": 7.11,
+    "text": "$300,000,000 → *GOLD*",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "Your dollar's gold promise started",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48,
+       0.84,
+       1.2,
+       1.56
+      ],
+      "en": 1.89
+     },
+     {
+      "txt": "cracking in *1965.* Why did",
+      "sn": 1.89,
+      "wt": [
+       1.92,
+       2.28,
+       2.64,
+       3.22,
+       3.58
+      ],
+      "en": 3.91
+     },
+     {
+      "txt": "France want *300* million dollars",
+      "sn": 3.91,
+      "wt": [
+       3.94,
+       4.3,
+       4.66,
+       5.02,
+       5.38
+      ],
+      "en": 5.71
+     },
+     {
+      "txt": "in gold?",
+      "sn": 5.71,
+      "wt": [
+       5.74,
+       6.1
+      ],
+      "en": 7.3
+     }
+    ]
+   },
+   "dur": 51.55
+  },
+  {
+   "id": "06_sunday_1971",
+   "line": "Your money lost its last link to gold on August 15th, 1971. What happened that Sunday?",
+   "pieces": [
+    [
+     351.2,
+     388.98
+    ]
+   ],
+   "hook": {
+    "img": "tv_1971__film.jpg",
+    "pos": "60% 50%",
+    "dur": 6.97,
+    "text": "SUN AUG 15 *1971*",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "Your money lost its last",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48,
+       0.84,
+       1.2,
+       1.56
+      ],
+      "en": 1.89
+     },
+     {
+      "txt": "link to gold on August",
+      "sn": 1.89,
+      "wt": [
+       1.92,
+       2.28,
+       2.64,
+       3.0,
+       3.36
+      ],
+      "en": 3.69
+     },
+     {
+      "txt": "*15th,* *1971.* What happened that",
+      "sn": 3.69,
+      "wt": [
+       3.72,
+       4.3,
+       4.88,
+       5.24,
+       5.6
+      ],
+      "en": 5.93
+     },
+     {
+      "txt": "Sunday?",
+      "sn": 5.93,
+      "wt": [
+       5.96
+      ],
+      "en": 7.16
+     }
+    ]
+   },
+   "dur": 44.75
+  },
+  {
+   "id": "07_dollar_network",
+   "line": "Why do you still pay in dollars, 50 years after gold left? Blame your family group chat.",
+   "pieces": [
+    [
+     419.6,
+     455.48
+    ]
+   ],
+   "hook": {
+    "img": "trading_room__film.jpg",
+    "pos": "50% 50%",
+    "dur": 7.33,
+    "text": "*89%* OF TRADES",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "Why do you still pay",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48,
+       0.84,
+       1.2,
+       1.56
+      ],
+      "en": 1.89
+     },
+     {
+      "txt": "in dollars,",
+      "sn": 1.89,
+      "wt": [
+       1.92,
+       2.28
+      ],
+      "en": 2.83
+     },
+     {
+      "txt": "*50* years after gold left?",
+      "sn": 2.83,
+      "wt": [
+       2.86,
+       3.22,
+       3.58,
+       3.94,
+       4.3
+      ],
+      "en": 4.85
+     },
+     {
+      "txt": "Blame your family group chat.",
+      "sn": 4.85,
+      "wt": [
+       4.88,
+       5.24,
+       5.6,
+       5.96,
+       6.32
+      ],
+      "en": 7.52
+     }
+    ]
+   },
+   "dur": 43.21
+  },
+  {
+   "id": "08_gold_cube",
+   "line": "Why can't you just go back to gold? All 222,600 tonnes would cost you more than you think.",
+   "pieces": [
+    [
+     474.31,
+     503.56
+    ]
+   ],
+   "hook": {
+    "img": "gold_cube__film.jpg",
+    "pos": "35% 50%",
+    "dur": 7.47,
+    "text": "*22.6 m* OF GOLD",
+    "textOut": 2.2,
+    "chunks": [
+     {
+      "txt": "Why can't you just go",
+      "sn": 0.09,
+      "wt": [
+       0.12,
+       0.48,
+       0.84,
+       1.2,
+       1.56
+      ],
+      "en": 1.89
+     },
+     {
+      "txt": "back to gold?",
+      "sn": 1.89,
+      "wt": [
+       1.92,
+       2.28,
+       2.64
+      ],
+      "en": 3.19
+     },
+     {
+      "txt": "All *222,600* tonnes would cost",
+      "sn": 3.19,
+      "wt": [
+       3.22,
+       3.58,
+       3.94,
+       4.3,
+       4.66
+      ],
+      "en": 4.99
+     },
+     {
+      "txt": "you more than you think.",
+      "sn": 4.99,
+      "wt": [
+       5.02,
+       5.38,
+       5.74,
+       6.1,
+       6.46
+      ],
+      "en": 7.66
+     }
+    ]
+   },
+   "dur": 36.72
+  }
+ ]
+}
