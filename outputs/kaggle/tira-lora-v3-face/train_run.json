@@ -1,0 +1,47 @@
+{
+ "params": {
+  "aitk_commit": "04733873cf1da8060fce01316ec45daedbd4a918",
+  "trigger": "tirav1",
+  "steps": 2600,
+  "rank": 16,
+  "lr": 0.0001,
+  "resolutions": [
+   512,
+   768
+  ],
+  "save_every": 200,
+  "sample_every": 0,
+  "max_minutes": 320,
+  "sample_prompts": [
+   "tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo",
+   "tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo",
+   "tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo"
+  ],
+  "resume_glob": "tira_zimage_lora*.safetensors",
+  "resume_step": 2000,
+  "face_repeats": 2
+ },
+ "images": 50,
+ "timings": {
+  "ai-toolkit installed": 80.3,
+  "dataset ready (50 images)": 168.4,
+  "resuming from tira_zimage_lora.safetensors (step 2000)": 179.7,
+  "config written": 179.7,
+  "training stopped at the time limit": 19205.0
+ },
+ "resumed_optimizer": "/kaggle/input/datasets/shubhzzgupta07/tira-lora-checkpoints/optimizer.pt",
+ "resumed_from": "/kaggle/input/datasets/shubhzzgupta07/tira-lora-checkpoints/tira_zimage_lora.safetensors",
+ "resumed_step": 2000,
+ "last_step": 2537,
+ "sec_per_step": 22.91,
+ "exit_code": -15,
+ "stopped_by_time_limit": true,
+ "lora_files": [
+  "optimizer.pt",
+  "tira_zimage_lora_000002000.safetensors",
+  "tira_zimage_lora_000002200.safetensors",
+  "tira_zimage_lora_000002400.safetensors"
+ ],
+ "samples": []
+}

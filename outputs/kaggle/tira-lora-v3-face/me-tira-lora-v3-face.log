@@ -1,0 +1,86 @@
+[{"stream_name":"stdout","time":0.926311316,"data":"$ git init -q /tmp/ai-toolkit \u0026\u0026 cd /tmp/ai-toolkit \u0026\u0026 git remote add origin https://github.com/ostris/ai-toolkit.git \u0026\u0026 git fetch -q --depth 1 origin 04733873cf1da8060fce01316ec45daedbd4a918 \u0026\u0026 git checkout -q FETCH_HEAD \u0026\u0026 git submodule update --init --recursive --depth 1 -q || true\n"}
+,{"stream_name":"stdout","time":3.515496958,"data":"$ /usr/bin/python3 -m pip install -q -r /tmp/train/requirements.txt\n"}
+,{"stream_name":"stdout","time":19.948447753,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 2.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.832276331,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 2.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.303640856,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 79.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.339684911,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.3/200.3 kB 11.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.426540772,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 68.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.465788647,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 290.4/290.4 kB 13.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.500121285,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.7/109.7 kB 5.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.541390969,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 32.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.580575792,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.0/557.0 kB 25.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.613623971,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.726682072,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 90.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.840845129,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 51.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":25.888419465,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 53.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.334026035,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 47.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.397472304,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 82.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.430177413,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.8/53.8 kB 2.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.814487796,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 50.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.849183454,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.7/195.7 kB 11.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.912856677,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 69.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.972086159,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 2.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":77.399780395,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":77.399823898,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":77.39983148499999,"data":"ydata-profiling 4.18.4 requires matplotlib\u003c=3.10,\u003e=3.5, but you have matplotlib 3.10.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":77.796875381,"data":"$ /usr/bin/python3 -m pip install -q torchao\n"}
+,{"stream_name":"stdout","time":81.242382401,"data":"[    80.3s] ai-toolkit installed\n"}
+,{"stream_name":"stdout","time":169.294919021,"data":"[   168.4s] dataset ready (50 images)\n"}
+,{"stream_name":"stdout","time":180.585166281,"data":"[   179.7s] resuming from tira_zimage_lora.safetensors (step 2000)\n"}
+,{"stream_name":"stdout","time":180.636234047,"data":"[   179.7s] config written\n"}
+,{"stream_name":"stdout","time":19200.922723974,"data":"Time limit of 320.0 min reached; stopping training.\n"}
+,{"stream_name":"stdout","time":19205.929263306,"data":"[ 19205.0s] training stopped at the time limit\n"}
+,{"stream_name":"stdout","time":19205.9302827,"data":"{\n"}
+,{"stream_name":"stdout","time":19205.930306571,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":19205.930312744,"data":"  \"aitk_commit\": \"04733873cf1da8060fce01316ec45daedbd4a918\",\n"}
+,{"stream_name":"stdout","time":19205.930318456,"data":"  \"trigger\": \"tirav1\",\n"}
+,{"stream_name":"stdout","time":19205.930323863,"data":"  \"steps\": 2600,\n"}
+,{"stream_name":"stdout","time":19205.93032927,"data":"  \"rank\": 16,\n"}
+,{"stream_name":"stdout","time":19205.930335051,"data":"  \"lr\": 0.0001,\n"}
+,{"stream_name":"stdout","time":19205.930340462,"data":"  \"resolutions\": [\n"}
+,{"stream_name":"stdout","time":19205.930345868,"data":"   512,\n"}
+,{"stream_name":"stdout","time":19205.930351077,"data":"   768\n"}
+,{"stream_name":"stdout","time":19205.930356314,"data":"  ],\n"}
+,{"stream_name":"stdout","time":19205.930361752,"data":"  \"save_every\": 200,\n"}
+,{"stream_name":"stdout","time":19205.930367028,"data":"  \"sample_every\": 0,\n"}
+,{"stream_name":"stdout","time":19205.930372527,"data":"  \"max_minutes\": 320,\n"}
+,{"stream_name":"stdout","time":19205.930377906,"data":"  \"sample_prompts\": [\n"}
+,{"stream_name":"stdout","time":19205.930383354,"data":"   \"tirav1 woman, close-up portrait, front view, looking at the camera, white t-shirt, long hair worn down, sitting by a window, daylight, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":19205.930389384,"data":"   \"tirav1 woman, full body front view, standing in a gym, black sports bra and black leggings, white sneakers, hair in a low bun, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":19205.930407483,"data":"   \"tirav1 woman, rear three-quarter view looking over her shoulder, walking on a beach at sunset, red bikini, hair in a low bun, candid iPhone photo\",\n"}
+,{"stream_name":"stdout","time":19205.930412466,"data":"   \"tirav1 woman, sitting at a cafe table holding a coffee cup, beige knit sweater, blue jeans, smiling, long hair worn down, candid iPhone photo\"\n"}
+,{"stream_name":"stdout","time":19205.930417193,"data":"  ],\n"}
+,{"stream_name":"stdout","time":19205.930421453,"data":"  \"resume_glob\": \"tira_zimage_lora*.safetensors\",\n"}
+,{"stream_name":"stdout","time":19205.930425971,"data":"  \"resume_step\": 2000,\n"}
+,{"stream_name":"stdout","time":19205.930430277,"data":"  \"face_repeats\": 2\n"}
+,{"stream_name":"stdout","time":19205.930434496,"data":" },\n"}
+,{"stream_name":"stdout","time":19205.930438746,"data":" \"images\": 50,\n"}
+,{"stream_name":"stdout","time":19205.930443006,"data":" \"timings\": {\n"}
+,{"stream_name":"stdout","time":19205.930447179,"data":"  \"ai-toolkit installed\": 80.3,\n"}
+,{"stream_name":"stdout","time":19205.930451555,"data":"  \"dataset ready (50 images)\": 168.4,\n"}
+,{"stream_name":"stdout","time":19205.930455987,"data":"  \"resuming from tira_zimage_lora.safetensors (step 2000)\": 179.7,\n"}
+,{"stream_name":"stdout","time":19205.930460317,"data":"  \"config written\": 179.7,\n"}
+,{"stream_name":"stdout","time":19205.930464604,"data":"  \"training stopped at the time limit\": 19205.0\n"}
+,{"stream_name":"stdout","time":19205.93046887,"data":" },\n"}
+,{"stream_name":"stdout","time":19205.930473023,"data":" \"resumed_optimizer\": \"/kaggle/input/datasets/shubhzzgupta07/tira-lora-checkpoints/optimizer.pt\",\n"}
+,{"stream_name":"stdout","time":19205.93047766,"data":" \"resumed_from\": \"/kaggle/input/datasets/shubhzzgupta07/tira-lora-checkpoints/tira_zimage_lora.safetensors\",\n"}
+,{"stream_name":"stdout","time":19205.930482625,"data":" \"resumed_step\": 2000,\n"}
+,{"stream_name":"stdout","time":19205.930486968,"data":" \"last_step\": 2537,\n"}
+,{"stream_name":"stdout","time":19205.930491096,"data":" \"sec_per_step\": 22.91,\n"}
+,{"stream_name":"stdout","time":19205.930495309,"data":" \"exit_code\": -15,\n"}
+,{"stream_name":"stdout","time":19205.930499547,"data":" \"stopped_by_time_limit\": true,\n"}
+,{"stream_name":"stdout","time":19205.93050385,"data":" \"lora_files\": [\n"}
+,{"stream_name":"stdout","time":19205.930508187,"data":"  \"optimizer.pt\",\n"}
+,{"stream_name":"stdout","time":19205.930512436,"data":"  \"tira_zimage_lora_000002000.safetensors\",\n"}
+,{"stream_name":"stdout","time":19205.930516906,"data":"  \"tira_zimage_lora_000002200.safetensors\",\n"}
+,{"stream_name":"stdout","time":19205.93053847,"data":"  \"tira_zimage_lora_000002400.safetensors\"\n"}
+,{"stream_name":"stdout","time":19205.930543871,"data":" ],\n"}
+,{"stream_name":"stdout","time":19205.930548003,"data":" \"samples\": []\n"}
+,{"stream_name":"stdout","time":19205.930552231,"data":"}\n"}
+,{"stream_name":"stderr","time":19212.305153193,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":19212.305194394,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":19212.694258416,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":19212.694286914,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":19214.669687014,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":19215.818753874,"data":"[NbConvertApp] Writing 353657 bytes to __results__.html\n"}
+]
