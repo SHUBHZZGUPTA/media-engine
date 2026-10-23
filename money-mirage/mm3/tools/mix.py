@@ -28,7 +28,7 @@ def place(x, t, gain, peak_align=False):
     st = int(round(t * SR)) - (int(np.argmax(np.abs(x))) if peak_align else int(np.argmax(np.abs(x) > .25)) - int(.006 * SR)); s0 = max(0, st); x = x[s0 - st:]; n = min(len(x), N - s0)   # attack lands on the beat
     if n > 0: fx[s0:s0 + n] += x[:n] * gain
 P = [{'scene': s['id'], 't': s['t'], 'cut': s['cut']} for s in T['shots']]
-B = [b for b in T['beats'] if b['kind'] in ('slam', 'count', 'punch', 'charslam', 'grow', 'flap', 'circle', 'arrow')]
+B = [b for b in T['beats'] if b['kind'] in ('slam', 'count', 'punch', 'charslam', 'card', 'grow', 'flap', 'circle', 'arrow')]
 cues = motion_plan.sfx(P, [{'kind': b['kind'], 't': b['t']} for b in B])
 # auto punch-ins (gap fillers) get only a soft whoosh, not the full punch kit
 auto = {round(b['t'], 3) for b in T['beats'] if b.get('auto')}
@@ -52,7 +52,7 @@ for b in T['beats']:
 # hero moments: bundled cinematic layer (peak-aligned), as sfxlayer.py does
 for p in P[1:]:
     if p['cut'] == 'flash': place(S(BUN + 'whoosh-cinematic.mp3'), p['t'] + .05, .28, True); place(S(BUN + 'impact-bass-2.mp3'), p['t'] + .3, .3, True)
-cs = [b for b in T['beats'] if b['kind'] == 'charslam']
+cs = [b for b in T['beats'] if b['kind'] in ('charslam', 'card')]
 for b in cs: place(S(BUN + 'impact-bass-1.mp3'), b['t'] + .3, .3, True)
 fx *= .5
 if FXONLY:
