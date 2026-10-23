@@ -38,7 +38,10 @@
   "c_llivia": "Llívia personified (Codex EDIT of c_buda): grey stone castle-tower body, battlements, small gold crown, red-and-yellow striped scarf; offended, hand on chest, mouth 'o'; faces right. (Spain borders, 2026-10-23)",
   "c_pheasant": "Pheasant Island personified: round grassy mound body with bushes, pale stone obelisk worn as a hat, scarf half red-yellow / half blue-white-red; exhausted deadpan, droopy eyes, sweat drop; faces left. (Spain borders)",
   "c_halley": "Halley's Comet personified as a vain diva: lumpy charcoal-grey frosty comet-nucleus body, long glowing pale-blue tail worn as flowing hair, tiny diamond tiara, one hand flicking the tail; offended haughty look; faces right. (Halley, 2026-10-23, Codex)",
-  "c_earth": "Planet Earth personified as a tired house-proud mum: round Earth-ball body (India on front), pink apron, yellow rubber gloves, broom with a little heap of glowing dust; weary flat-mouthed look; faces left. (Halley, 2026-10-23, Codex)"
+  "c_earth": "Planet Earth personified as a tired house-proud mum: round Earth-ball body (India on front), pink apron, yellow rubber gloves, broom with a little heap of glowing dust; weary flat-mouthed look; faces left. (Halley, 2026-10-23, Codex)",
+  "c_everest": "Mount Everest personified: grey rocky peak body with thick snow cap, red scarf, big sweat drop; nervous worried 'o' mouth; faces right. (Challenger Deep, 2026-10-23)",
+  "c_sailor": "1870s British navy sailor chibi (Codex EDIT of c_captain): navy jumper with square striped collar, white flat cap, rope coil over shoulder; proud hearty grin; looks left (mirror for facing right). (Challenger Deep)",
+  "c_ping": "Sonar ping personified: glowing cyan blob of concentric rings, stubby hands raised palms-out, bounce lines; defensive pout, one eyebrow up; faces left. (Challenger Deep)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -115,6 +118,13 @@
   "halley_solar1": "Codex EDIT of halley_solar0: the ellipse filled with glowing golden dust along its whole length; pixel-aligned. (Halley)",
   "halley_cross0": "2.28x crop (287,861)-(737,1536) of halley_solar0 resized to 1024x1536: inner rings, Sun ~(512,770), Earth ~(790,624); ellipse crosses Earth's ring at back ~(370,540) and (636,524). (Halley)",
   "halley_cross1": "Same crop of halley_solar1 (dust band). (Halley)",
-  "halley_atm": "3D clay diorama on navy: tall sky-slice column (x ~330-690) on a rocky base with a snowy Everest; Everest peaks stacked up the column to near the top, meteor streak at the top ~(560,40); sky blue to violet. (Halley)"
+  "halley_atm": "3D clay diorama on navy: tall sky-slice column (x ~330-690) on a rocky base with a snowy Everest; Everest peaks stacked up the column to near the top, meteor streak at the top ~(560,40); sky blue to violet. (Halley)",
+  "deep_ev0": "3D isometric cutaway diorama on navy: steep V-shaped ocean trench, water surface y~280, floor y~1415 (x 455-560), toy research ship ~(760,260), snowy toy Everest floating ABOVE the surface (~510,40-235). (Challenger Deep, 2026-10-23)",
+  "deep_ev1": "Codex EDIT of deep_ev0: snowy Everest now fills the trench V underwater, peak ~(510,410), base on the floor; nothing above the surface; pixel-aligned. (Challenger Deep)",
+  "deep_tr": "Codex EDIT of deep_ev0: the same trench with NO mountain at all (empty V, surface y~285, floor y~1415); pixel-aligned. (Challenger Deep)",
+  "deep_sh": "Painterly 1875 golden-hour deck of a three-masted steam corvette (no flags/text): rope reel ~(560,680), davit + pulley ~(880,360), hemp rope down to an iron sounding weight ~(895,1060) over the water at right; open deck lower-left. (Challenger Deep)",
+  "deep_sn": "3D clay diorama on navy: ocean column with 4 coloured water layers (centres y~385/615/845/1000), toy survey ship on top ~(505,230), glowing cyan sonar cone with 3 echo rings, rocky seafloor top y~1100 with a notch trench ~(512,1370). (Challenger Deep)",
+  "deep_bs": "3D clay diorama on navy: diagonal trench floor with THREE elongated glowing basins ~(380,1040)/(610,680)/(790,390), rock ridges between, spiky walls. (Challenger Deep)",
+  "deep_jp": "Painterly split above/below water view: modern white-and-navy research vessel at dusk (no logos), waterline y~540, sonar dome ~(515,625) with a wide cyan beam fan down to the seafloor. (Challenger Deep)"
  }
 }
