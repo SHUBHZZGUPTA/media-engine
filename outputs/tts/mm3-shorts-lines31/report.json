@@ -1,0 +1,23 @@
+{
+ "job": "mm3-shorts-lines31",
+ "items": [
+  {
+   "name": "hooks",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.1-flash-tts-preview",
+     "error": "RemoteDisconnected('Remote end closed connection without response')"
+    }
+   ]
+  },
+  {
+   "name": "ctas",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 59.36,
+   "took": 20.1
+  }
+ ]
+}
