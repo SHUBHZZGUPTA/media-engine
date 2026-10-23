@@ -1,0 +1,27 @@
+{
+ "id": "mm-ep02-commons-q",
+ "delay": 1,
+ "ua": "media-engine/1.0 (YouTube documentary research; contact via GitHub SHUBHZZGUPTA/media-engine)",
+ "files": [
+  {
+   "name": "q_boe.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=filetype%3Abitmap+Bank+of+England+building+Threadneedle+Street&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription%7CDateTimeOriginal&iiurlwidth=400"
+  },
+  {
+   "name": "q_treasury.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=filetype%3Abitmap+HM+Treasury+building+Great+George+Street&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription%7CDateTimeOriginal&iiurlwidth=400"
+  },
+  {
+   "name": "q_bundesbank.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=filetype%3Abitmap+Deutsche+Bundesbank+Zentrale+Frankfurt&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription%7CDateTimeOriginal&iiurlwidth=400"
+  },
+  {
+   "name": "q_berlinwall.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=filetype%3Abitmap+Berlin+Wall+1989+crowd&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription%7CDateTimeOriginal&iiurlwidth=400"
+  },
+  {
+   "name": "q_bis.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=filetype%3Abitmap+Bank+for+International+Settlements+Basel+tower&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription%7CDateTimeOriginal&iiurlwidth=400"
+  }
+ ]
+}
