@@ -1,0 +1,187 @@
+{
+ "slug": "mm-ep01-v3",
+ "title": "1971: The Day Money Became a Promise",
+ "src": "money-mirage/ep01v3/src",
+ "depth_jobs": [
+  "mm3-plates-a",
+  "mm3-plates-b",
+  "mm3-plates-c"
+ ],
+ "tts_parts": [
+  [
+   0,
+   1
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   4,
+   5
+  ],
+  [
+   6,
+   7
+  ]
+ ],
+ "tts_speakers": {
+  "Narrator": "Sadaltager",
+  "Chars": "Puck"
+ },
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "music": {
+  "tracks": [
+   "1_keys",
+   "2_never",
+   "3_something",
+   "4_standoff",
+   "5_rapid",
+   "6_system",
+   "5b_shadows",
+   "7_fact"
+  ],
+  "offsets": {
+   "2_never": 7.7
+  },
+  "source": "YouTube Audio Library, chosen by Shubham"
+ },
+ "outro_img": "wallet_desk__soft.jpg",
+ "shorts": [
+  {
+   "id": "01_what_broke",
+   "hook": "Your $100 bill used to buy almost 5 ounces of gold. Now it buys a fortieth. What broke?",
+   "onscreen": "4.84 OZ → *0.024 OZ*",
+   "img": "wallet_desk__film.jpg",
+   "pos": "45% 50%",
+   "pieces": [
+    [
+     1,
+     1,
+     0.3
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "cta": "So what replaced gold in your wallet?"
+  },
+  {
+   "id": "02_why_gold",
+   "hook": "Before coins, you could lose a whole day trading chickens for one goat. Why did gold end up as money?",
+   "onscreen": "WHY *GOLD* WON",
+   "img": "barter_market__film.jpg",
+   "pos": "50% 50%",
+   "pieces": [
+    [
+     8,
+     10
+    ]
+   ],
+   "cta": "Then gold got too heavy to carry."
+  },
+  {
+   "id": "03_first_paper_money",
+   "hook": "1,000 years ago, your savings in China cost you a backpack of iron. So why did paper win, and what broke?",
+   "onscreen": "FIRST *PAPER MONEY*",
+   "img": "chengdu_market__film.jpg",
+   "pos": "50% 50%",
+   "pieces": [
+    [
+     14,
+     18
+    ]
+   ],
+   "cta": "Then Europe chained paper to gold.",
+   "pcam": {
+    "s14": 0.8
+   }
+  },
+  {
+   "id": "04_gold_prison",
+   "hook": "You could risk 10 years in prison for keeping gold in 1933. But why?",
+   "onscreen": "ORDER *6102*",
+   "img": "p_bank1933__film.jpg",
+   "pos": "50% 50%",
+   "pieces": [
+    [
+     23,
+     27
+    ]
+   ],
+   "cta": "So what did 1971 do to your dollar?"
+  },
+  {
+   "id": "05_france_gold",
+   "hook": "Your dollar's gold promise started cracking in 1965. Why did France want 300 million dollars in gold?",
+   "onscreen": "$300,000,000 → *GOLD*",
+   "img": "p_ship__film.jpg",
+   "pos": "40% 50%",
+   "pieces": [
+    [
+     33,
+     35
+    ]
+   ],
+   "cta": "Three years later, Nixon shut the gold window.",
+   "pcam": {
+    "s36": 0.46
+   }
+  },
+  {
+   "id": "06_sunday_1971",
+   "hook": "Your money lost its last link to gold on August 15th, 1971. What happened that Sunday?",
+   "onscreen": "SUN AUG 15 *1971*",
+   "img": "tv_1971__film.jpg",
+   "pos": "60% 50%",
+   "pieces": [
+    [
+     37,
+     41
+    ]
+   ],
+   "cta": "So why does the world still run on dollars?"
+  },
+  {
+   "id": "07_dollar_network",
+   "hook": "Why do you still pay in dollars, 50 years after gold left? Blame your family group chat.",
+   "onscreen": "*89%* OF TRADES",
+   "img": "trading_room__film.jpg",
+   "pos": "50% 50%",
+   "pieces": [
+    [
+     44,
+     45
+    ]
+   ],
+   "cta": "But central banks are quietly buying gold again."
+  },
+  {
+   "id": "08_gold_cube",
+   "hook": "Why can't you just go back to gold? All 222,600 tonnes would cost you more than you think.",
+   "onscreen": "*22.6 m* OF GOLD",
+   "img": "gold_cube__film.jpg",
+   "pos": "35% 50%",
+   "pieces": [
+    [
+     [
+      49,
+      8
+     ],
+     50
+    ]
+   ],
+   "cta": "So what actually backs your money today?"
+  }
+ ]
+}
