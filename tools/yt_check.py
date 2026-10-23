@@ -26,7 +26,7 @@ for name in job["tokens"]:
     s, tok = call("https://oauth2.googleapis.com/token", {"client_id": CID, "client_secret": CSEC, "refresh_token": rt, "grant_type": "refresh_token"})
     if s != 200: r["refresh"] = {"ok": False, "status": s, "error": tok.get("error"), "detail": tok.get("error_description")}; report["tokens"].append(r); continue
     at = tok["access_token"]; r["refresh"] = {"ok": True}; r["scopes"] = sorted(tok.get("scope", "").split())
-    s, ch = call("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true", token=at)
+    s, ch = call("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics,contentDetails&mine=true", token=at)
     items = ch.get("items", []) if s == 200 else []
     r["channels"] = [{"id": c["id"], "title": c["snippet"]["title"], "handle": c["snippet"].get("customUrl"),
                       "videos": c["statistics"].get("videoCount"), "subscribers": c["statistics"].get("subscriberCount")} for c in items]
@@ -35,6 +35,10 @@ for name in job["tokens"]:
         end = datetime.date.today(); start = end - datetime.timedelta(days=28)
         q = urllib.parse.urlencode({"ids": "channel==MINE", "startDate": start.isoformat(), "endDate": end.isoformat(), "metrics": "views,engagedViews"})
         s, an = call("https://youtubeanalytics.googleapis.com/v2/reports?" + q, token=at)
+        up = ch["items"][0].get("contentDetails", {}).get("relatedPlaylists", {}).get("uploads")
+        if up:
+            s2, pl = call("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,status&maxResults=30&playlistId=" + up, token=at)
+            r["recent_uploads"] = [{"title": i["snippet"]["title"], "published": i["snippet"].get("publishedAt"), "privacy": i.get("status", {}).get("privacyStatus")} for i in pl.get("items", [])] if s2 == 200 else {"error": pl.get("error", {}).get("message")}
         r["analytics"] = {"ok": s == 200, "status": s, "rows": an.get("rows") if s == 200 else None, "error": None if s == 200 else an.get("error", {}).get("message")}
     report["tokens"].append(r)
 json.dump(report, open(os.path.join(out, "report.json"), "w"), indent=1, ensure_ascii=False)
