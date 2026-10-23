@@ -1,0 +1,51 @@
+{
+ "client_id_set": true,
+ "client_secret_set": true,
+ "tokens": [
+  {
+   "secret": "YT_RT_BHUGOL_EN",
+   "present": true,
+   "refresh": {
+    "ok": true
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/youtube.force-ssl",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/yt-analytics.readonly"
+   ],
+   "channels": [
+    {
+     "id": "UC6Uc7hcy5EWXpNW6aTaWOlg",
+     "title": "BhuGol",
+     "handle": "@bhugolyt",
+     "videos": "18",
+     "subscribers": "88"
+    }
+   ],
+   "analytics": {
+    "ok": true,
+    "status": 200,
+    "rows": [
+     [
+      19435,
+      11381
+     ]
+    ],
+    "error": null
+   }
+  },
+  {
+   "secret": "YT_RT_BHUGOL_HI",
+   "present": false
+  },
+  {
+   "secret": "YT_RT_MM_EN",
+   "present": false
+  },
+  {
+   "secret": "YT_RT_MM_HI",
+   "present": false
+  }
+ ]
+}
