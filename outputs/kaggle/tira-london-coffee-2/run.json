@@ -1,0 +1,51 @@
+{
+ "job": "tira-london-coffee-2",
+ "kernel": "shubhzzgupta07/me-tira-london-coffee-2",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tira-london-coffee-2",
+ "gpu_quota_before": {
+  "used_h": 29.47,
+  "remaining_h": 0.53,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/tira-lora-checkpoints",
+ "staged_files": [
+  "tira_zimage_lora_000002200.safetensors"
+ ],
+ "stage_diag": {
+  "downloaded": [
+   {
+    "file": "tira_zimage_lora_000002200.safetensors",
+    "mb": 85.1
+   }
+  ],
+  "version_before": 9,
+  "create": [
+   {
+    "license": "other",
+    "existed": true,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "ready (version 9)",
+   "ready (version 10)"
+  ],
+  "version_ready": 10
+ },
+ "pushed_at": "2026-10-23T12:34:08+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-10-23T12:47:12+00:00",
+ "files": [
+  "me-tira-london-coffee-2.log",
+  "run_log.json",
+  "step2200_p1.jpg"
+ ],
+ "gpu_quota_after": {
+  "used_h": 29.69,
+  "remaining_h": 0.31,
+  "total_h": 30.0
+ }
+}

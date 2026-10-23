@@ -1,0 +1,33 @@
+[{"stream_name":"stdout","time":44.511317013,"data":"[   43.6s] found 1 LoRA files\n"}
+,{"stream_name":"stderr","time":44.511802654,"data":"/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.\n"}
+,{"stream_name":"stderr","time":44.511816886,"data":"  deprecate(\"torch_dtype\", \"1.0.0\", _TORCH_DTYPE_DEPRECATION_MESSAGE)\n"}
+,{"stream_name":"stderr","time":44.961681205,"data":"\rFetching 18 files:   0%|          | 0/18 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":182.62912679,"data":"\rFetching 18 files:  11%|█         | 2/18 [00:00\u003c00:01, 14.34it/s]\rFetching 18 files:  44%|████▍     | 8/18 [00:00\u003c00:00, 30.03it/s]\rFetching 18 files:  61%|██████    | 11/18 [00:00\u003c00:00, 14.63it/s]\rFetching 18 files:  67%|██████▋   | 12/18 [00:19\u003c00:00, 14.63it/s]\rFetching 18 files:  72%|███████▏  | 13/18 [00:22\u003c00:14,  2.88s/it]\rFetching 18 files:  78%|███████▊  | 14/18 [01:25\u003c00:48, 12.21s/it]\rFetching 18 files:  89%|████████▉ | 16/18 [01:38\u003c00:21, 10.50s/it]\rFetching 18 files:  94%|█████████▍| 17/18 [02:17\u003c00:15, 15.67s/it]\rFetching 18 files: 100%|██████████| 18/18 [02:17\u003c00:00,  7.65s/it]\n"}
+,{"stream_name":"stderr","time":191.080744406,"data":"\rLoading pipeline components...:   0%|          | 0/5 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":191.189964728,"data":"\rLoading weights:   0%|          | 0/398 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":191.295220452,"data":"\rLoading weights:   9%|▉         | 37/398 [00:00\u003c00:01, 355.71it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":191.401164,"data":"\rLoading weights:  20%|██        | 80/398 [00:00\u003c00:00, 387.02it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":191.518509753,"data":"\rLoading weights:  34%|███▍      | 135/398 [00:00\u003c00:00, 447.68it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":191.625510806,"data":"\rLoading weights:  45%|████▌     | 180/398 [00:00\u003c00:00, 420.69it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":191.732494542,"data":"\rLoading weights:  56%|█████▌    | 223/398 [00:00\u003c00:00, 414.07it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":191.835875141,"data":"\rLoading weights:  70%|██████▉   | 277/398 [00:00\u003c00:00, 444.47it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":191.88615805,"data":"\rLoading weights:  87%|████████▋ | 346/398 [00:00\u003c00:00, 515.11it/s]\u001b[A\rLoading weights: 100%|██████████| 398/398 [00:00\u003c00:00, 497.44it/s]\n"}
+,{"stream_name":"stderr","time":194.327610814,"data":"\rLoading pipeline components...:  20%|██        | 1/5 [00:09\u003c00:37,  9.32s/it]\rLoading pipeline components...:  40%|████      | 2/5 [00:10\u003c00:13,  4.64s/it]\rLoading pipeline components...:  60%|██████    | 3/5 [00:11\u003c00:05,  2.89s/it]\rLoading pipeline components...:  80%|████████  | 4/5 [00:11\u003c00:01,  1.82s/it]\n"}
+,{"stream_name":"stderr","time":220.97666284,"data":"\rLoading checkpoint shards:   0%|          | 0/3 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":260.465245826,"data":"\rLoading checkpoint shards:  33%|███▎      | 1/3 [00:26\u003c00:53, 26.65s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":279.351425406,"data":"\rLoading checkpoint shards:  67%|██████▋   | 2/3 [01:06\u003c00:34, 34.20s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":279.35165222,"data":"\rLoading checkpoint shards: 100%|██████████| 3/3 [01:25\u003c00:00, 27.21s/it]\u001b[A\rLoading checkpoint shards: 100%|██████████| 3/3 [01:25\u003c00:00, 28.34s/it]\n"}
+,{"stream_name":"stderr","time":279.357884827,"data":"\rLoading pipeline components...: 100%|██████████| 5/5 [01:36\u003c00:00, 31.84s/it]\rLoading pipeline components...: 100%|██████████| 5/5 [01:36\u003c00:00, 19.35s/it]\n"}
+,{"stream_name":"stdout","time":279.357901942,"data":"[  278.4s] model loaded to RAM\n"}
+,{"stream_name":"stdout","time":324.448006321,"data":"[  323.5s] 1 prompts encoded\n"}
+,{"stream_name":"stderr","time":736.359066026,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:35\u003c04:43, 35.49s/it]\r 22%|██▏       | 2/9 [01:14\u003c04:20, 37.28s/it]\r 33%|███▎      | 3/9 [01:59\u003c04:05, 41.00s/it]\r 44%|████▍     | 4/9 [02:46\u003c03:36, 43.25s/it]\r 56%|█████▌    | 5/9 [03:32\u003c02:57, 44.37s/it]\r 67%|██████▋   | 6/9 [04:18\u003c02:15, 45.02s/it]\r 78%|███████▊  | 7/9 [05:05\u003c01:31, 45.51s/it]\r 89%|████████▉ | 8/9 [05:51\u003c00:45, 45.84s/it]\r100%|██████████| 9/9 [06:38\u003c00:00, 46.13s/it]\r100%|██████████| 9/9 [06:38\u003c00:00, 44.29s/it]\n"}
+,{"stream_name":"stdout","time":737.393878328,"data":"[  736.5s] step2200 prompt 1 denoised\n"}
+,{"stream_name":"stderr","time":748.378573102,"data":"There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\n"}
+,{"stream_name":"stdout","time":754.38831617,"data":"[  753.5s] all images saved\n"}
+,{"stream_name":"stderr","time":764.949186734,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":764.949221519,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":765.307380951,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":765.307416869,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":766.501427713,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":767.572880048,"data":"[NbConvertApp] Writing 311845 bytes to __results__.html\n"}
+]
