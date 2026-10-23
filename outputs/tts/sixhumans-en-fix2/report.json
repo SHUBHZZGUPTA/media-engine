@@ -1,0 +1,13 @@
+{
+ "job": "sixhumans-en-fix2",
+ "items": [
+  {
+   "name": "fix_left",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 4.13,
+   "took": 2.9
+  }
+ ]
+}
