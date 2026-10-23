@@ -1,0 +1,13 @@
+{
+ "job": "deep-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 111.52,
+   "took": 35.0
+  }
+ ]
+}
