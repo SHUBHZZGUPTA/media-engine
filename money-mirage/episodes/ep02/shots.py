@@ -21,7 +21,7 @@ GOLD = '#E9B44C'; RED = '#FF3B30'; BLUE = '#8FA7C9'
 shot('s00', 'boe_dawn', 'film', A(0), cam0={'x': .55, 'y': .55, 'z': 1.3, 'yaw': -4, 'pitch': 2}, cam1={'x': .55, 'y': .5, 'z': 1.05, 'yaw': 3})
 beat('charslam', {'abs': 0.3}, text='BLACK *WEDNESDAY*', y=120, size=150, blur=True, until=A(0, 2))
 beat('punch', A(0, 1, .05), shot='s00', level=1.14)
-shot('s00b', 'vault_full', 'film', A(0, 2, -.05), cut='flash', cam0={'x': .5, 'y': .5, 'z': 1.1}, cam1={'x': .5, 'y': .52, 'z': 1.45, 'yaw': 4}, handheld=.12)
+shot('s00b', 'vault_full', 'film', A(0, 2, -.05), cut='whip', cam0={'x': .5, 'y': .5, 'z': 1.1}, cam1={'x': .5, 'y': .52, 'z': 1.45, 'yaw': 4}, handheld=.12)
 beat('slam', A(0, 2), to=1992, size=110, **R, until=A(0, 4, -.15), shake=False)
 beat('punch', A(0, 3, .4), shot='s00b', level=1.2)
 shot('s00c', 'note_falling', 'film', A(0, 4, -.1), cut='whip', cam0={'x': .5, 'y': .5, 'z': 1.2}, cam1={'x': .5, 'y': .55, 'z': 1.55})
