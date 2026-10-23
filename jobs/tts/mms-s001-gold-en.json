@@ -1,0 +1,70 @@
+{
+ "id": "mms-s001-gold-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Your safe haven just lost twenty-eight percent from its record, in the middle of a war. Why is gold falling?"
+    ],
+    [
+     "Narrator",
+     "This week, attacks on Saudi oil sent Brent crude to a hundred and twelve dollars. Stocks are sliding."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Relax. This is my moment."
+    ],
+    [
+     "Narrator",
+     "Then gold dipped below four thousand dollars."
+    ],
+    [
+     "Narrator",
+     "So why does the shield crack exactly when you need it?"
+    ],
+    [
+     "Narrator",
+     "First, gold pays you nothing. A US government bond pays about five percent."
+    ],
+    [
+     "Narrator",
+     "Oil means inflation. Inflation means rates stay high. And holding nothing gets expensive."
+    ],
+    [
+     "Chars",
+     "[delighted, squeaky nervous banknote, surprised to be winning] For once, paper wins!"
+    ],
+    [
+     "Narrator",
+     "Second, when stocks crash, people sell what they can, not what they love. Gold is the cash machine."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: gold isn't a crisis shield. It's mostly a bet that rates will fall."
+    ],
+    [
+     "Narrator",
+     "So when a crisis pushes rates up... your safe haven isn't."
+    ],
+    [
+     "Chars",
+     "[sulking, deep, wounded pride, lying face down] I'm not falling. I'm resting."
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}

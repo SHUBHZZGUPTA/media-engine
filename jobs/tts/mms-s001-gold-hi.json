@@ -1,0 +1,70 @@
+{
+ "id": "mms-s001-gold-hi",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian money explainer channel talks, for a premium documentary YouTube Shorts channel about money. Same narrator as always: a deep, warm, confident storyteller with a hint of mystery, energetic and punchy, never slow. Numbers and English words are spoken in English. Questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "आपका safe haven अपने record से twenty-eight percent गिर चुका है, वो भी जंग के बीच। Gold क्यों गिर रहा है?"
+    ],
+    [
+     "Narrator",
+     "इस हफ्ते Saudi oil पर हमलों से Brent crude one hundred twelve dollar पहुँच गया। Stocks फिसल रहे हैं।"
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] आराम से। अब मेरा time है।"
+    ],
+    [
+     "Narrator",
+     "फिर gold four thousand dollar से नीचे चला गया।"
+    ],
+    [
+     "Narrator",
+     "तो ये ढाल ठीक तभी क्यों टूटती है, जब ज़रूरत हो?"
+    ],
+    [
+     "Narrator",
+     "पहली बात, gold आपको कुछ नहीं देता। US सरकार का bond करीब five percent देता है।"
+    ],
+    [
+     "Narrator",
+     "Oil मतलब inflation. Inflation मतलब rates ऊँचे. और खाली चीज़ रखना महँगा पड़ता है।"
+    ],
+    [
+     "Chars",
+     "[delighted, squeaky nervous banknote, surprised to be winning] पहली बार, काग़ज़ जीता!"
+    ],
+    [
+     "Narrator",
+     "दूसरी बात, stocks गिरें तो लोग वो बेचते हैं जो बिके, वो नहीं जो पसंद हो। Gold बनता है ATM."
+    ],
+    [
+     "Narrator",
+     "यही है mirage: gold crisis की ढाल नहीं। ये ज़्यादातर दाँव है कि rates गिरेंगे।"
+    ],
+    [
+     "Narrator",
+     "तो जब crisis rates ऊपर धकेले... आपका safe haven, safe नहीं।"
+    ],
+    [
+     "Chars",
+     "[sulking, deep, wounded pride, lying face down] मैं गिर नहीं रहा। आराम कर रहा हूँ।"
+    ],
+    [
+     "Narrator",
+     "ये है Money Mirage. ऐसी कहानियों के लिए follow करें।"
+    ]
+   ]
+  }
+ ]
+}
