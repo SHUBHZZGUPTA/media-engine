@@ -1,0 +1,46 @@
+{
+ "params": {
+  "prompts": [
+   "tirav1 woman, full body front three-quarter view, standing on a cobbled street outside a small cafe in Notting Hill, London, holding a white takeaway coffee cup with a brown sleeve near her lips mid-sip, eyes looking at the camera with a playful smile over the cup, her face clearly visible, tight white fitted crew-neck t-shirt, black mini skirt ending mid-thigh, white Nike Air Force 1 sneakers with white socks, small black shoulder bag, long hair worn down, silver hoop earrings, soft natural curvy figure, pastel painted terraced houses and the cafe window with chalkboard menu behind her, soft overcast London daylight, real unretouched skin texture, candid iPhone photo shot by a friend at about 2.5 metres, photorealistic",
+   "tirav1 woman, sitting at a small round outdoor cafe table on a London pavement, three-quarter view from the front, legs crossed so her white Nike Air Force 1 sneakers are visible, holding a ceramic latte cup with latte art in both hands, looking at the camera with a warm relaxed smile, her face clearly visible, tight white fitted long-sleeve top, black mini skirt, long hair worn down, silver hoop earrings, soft natural curvy figure, black cafe chairs, a red double-decker bus softly passing in the background, Georgian brick buildings, soft overcast autumn daylight, real unretouched skin texture, candid iPhone photo, photorealistic"
+  ],
+  "lora_glob": "tira_zimage_lora*.safetensors",
+  "seed": 11,
+  "width": 1152,
+  "height": 1536,
+  "steps": 9,
+  "lora_scale": 1.0,
+  "include_base": false
+ },
+ "timings": {
+  "found 1 LoRA files": 44.7,
+  "model loaded to RAM": 276.5,
+  "2 prompts encoded": 324.2,
+  "step2200 prompt 1 denoised": 730.6,
+  "step2200 prompt 2 denoised": 1059.7,
+  "all images saved": 1079.5
+ },
+ "images": [
+  {
+   "file": "step2200_p1.jpg",
+   "version": "step2200",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step2200_p2.jpg",
+   "version": "step2200",
+   "prompt": 2,
+   "nan": false
+  }
+ ],
+ "diffusers": "0.40.0",
+ "versions": [
+  "step2200"
+ ],
+ "version_errors": {},
+ "attention": {
+  "fp16_calls": 684,
+  "fp32_fallbacks": 0
+ }
+}
