@@ -1,0 +1,22 @@
+{
+ "id": "sixhumans-en-fix2",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "fix_left",
+   "direction": "One short line, said by the Narrator as a smug, slow, deadpan cave-man character. Short crisp vowel in the last word: 'left' (as in 'left the room'), not 'laughed'.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "So technically... we never left."
+    ]
+   ]
+  }
+ ]
+}
