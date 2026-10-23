@@ -1,0 +1,26 @@
+{
+ "id": "tira-london-coffee-2",
+ "script": "gpu/zimage_lora_previews.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 75,
+ "stage": {
+  "from_kernel": "shubhzzgupta07/me-tira-lora-v3-face",
+  "file_pattern": "tira_zimage_lora_000002200\\.safetensors$",
+  "dataset_slug": "tira-lora-checkpoints",
+  "title": "Tira LoRA checkpoints"
+ },
+ "params": {
+  "prompts": [
+   "tirav1 woman, full body front three-quarter view, standing on a cobbled street outside a small cafe in Notting Hill, London, holding a white takeaway coffee cup with a brown sleeve at chest height after a sip, looking at the camera with a playful smile, her whole face clearly visible and unobstructed, tight white stretch top with a low scoop neckline showing cleavage, full natural bust, black high-waisted shorts ending at upper thigh, white Nike Air Force 1 sneakers with plain white swoosh and white socks, small black shoulder bag, long hair worn down, silver hoop earrings, balanced hourglass figure with proportional natural hips and soft curves, not exaggerated, pastel painted terraced houses and the cafe window with a chalkboard menu behind her, soft overcast London daylight, real unretouched skin texture, candid iPhone photo shot by a friend at about 2.5 metres, photorealistic, no logos on the cup"
+  ],
+  "lora_glob": "tira_zimage_lora*.safetensors",
+  "seed": 11,
+  "width": 1152,
+  "height": 1536,
+  "steps": 9,
+  "lora_scale": 1.0,
+  "include_base": false
+ }
+}
