@@ -14,6 +14,7 @@ def key(t, x=None, y=None, z=None, yaw=None, pitch=None, d=.32, e='power3.out'):
 NUM = dict(align='center', y=250, size=170)
 SCALE = 'scale' if os.path.exists(os.path.join(HERE, 'art/baked/scale__film.jpg')) else 'central_bank'   # new Codex plate, library fallback
 FOLLOW_W = {'en': 4, 'hi': 8}[LANG]   # index of the spoken "Follow" in the sign-off line
+NW = {'112': {'en': 10, 'hi': 9}[LANG], '4000': {'en': 4, 'hi': 2}[LANG], '5': {'en': 11, 'hi': 12}[LANG]}   # word index of each spoken number (numbers land on their word)
 
 # ---- 1 HOOK: safe haven lost 28% ... why is gold falling?
 shot('s00', 'gold_cube', 'film', A(0), cam0={'x': .76, 'y': .42, 'z': 1.3, 'yaw': -4}, cam1={'x': .72, 'y': .45, 'z': 1.05, 'yaw': 4})   # aim at the cube's edge so it reads as a block in portrait
@@ -26,24 +27,23 @@ beat('punch', A(0, 2, .5), shot='s01', level=1.4)
 # ---- 2 oil $112, stocks sliding
 shot('s02', 'oil_tanker', 'film', A(1, 0, -.15), cut='zoom', cam0={'x': .32, 'y': .38, 'z': 1.3}, cam1={'z': 1.4},
      keys=[key(A(1, 2, -.35), x=.82, y=.26, z=1.45, d=.9, e='power2.inOut')])
-beat('count', A(1, 2, .1), to=112, prefix='$', **NUM, until=A(1, 3, -.1))
+beat('count', Wd(1, NW['112'], -.05), to=112, prefix='$', **NUM, until=A(1, 3, -.1))
 shot('s03', 'trading_room', 'film', A(1, 3, -.15), cut='whip', cam0={'x': .45, 'y': .3, 'z': 1.3}, cam1={'x': .45, 'y': .32, 'z': 1.45, 'yaw': -3}, handheld=.1)
 beat('arrow', A(1, 3, .2), shot='s03', **{'from': [.4, .2], 'to': [.5, .42]}, col='#FF3B30', until=A(2, 0, -.3))
 # ---- 3-4 Goldie brags, gold dips below $4,000
 shot('s04', 'gold_cube', 'film', A(2, 0, -.35), cam0={'x': .3, 'y': .45, 'z': 1.08}, cam1={'x': .33, 'y': .45, 'z': 1.18})
 beat('moment', A(2, 0, -.3), what='char', shot='s04', who='c_goldie', side='M', lines=[2], shrink=A(3, 0, .9), leave=A(4, 0, -.25))
-beat('slam', A(3, 0, .7), to=4000, prefix='$', **NUM, until=A(4, 0, -.2))
-beat('moment', A(3, 0, .8), what='grade', shot='s04', bright=.62, sat=.35, d=.7)
+beat('slam', Wd(3, NW['4000'], -.03), to=4000, prefix='$', **NUM, until=A(4, 0, -.2))
+beat('moment', Wd(3, NW['4000'], .15), what='grade', shot='s04', bright=.62, sat=.35, d=.7)
 # ---- 5 why does the shield crack?
 shot('s05', 'p_dam', 'film', A(4, 0, -.15), cam0={'x': .5, 'y': .4, 'z': 1.15}, cam1={'x': .55, 'y': .47, 'z': 1.5})
-beat('moment', A(4, 0, .4), what='cracks', shot='s05', lines=[[[.56, .28], [.54, .4], [.57, .5], [.55, .62]], [[.6, .3], [.63, .42], [.61, .55]]], until=A(5, 0, -.2))
 beat('shake', A(4, 0, .9), k=.6)
 beat('circle', A(4, 1, .1), shot='s05', c=[.555, .47], r=[170, 230], until=A(5, 0, -.2))
 # ---- 6 gold pays nothing, a bond pays 5%
 shot('s06', 'bank_vault_1700s', 'film', A(5, 0, -.15), cut='zoomIn', cam0={'x': .2, 'y': .38, 'z': 1.25}, cam1={'x': .22, 'y': .38, 'z': 1.55})
 beat('punch', A(5, 0, .7), shot='s06', level=1.3)
 shot('s07', SCALE, 'film', A(5, 1, -.15), cam0={'x': .5, 'y': .45, 'z': 1.1}, cam1={'x': .5, 'y': .45, 'z': 1.3})
-beat('count', A(5, 1, 1.1), to=5, suffix='%', **NUM, until=A(6, 0, -.1))
+beat('count', Wd(5, NW['5'], -.05), to=5, suffix='%', **NUM, until=A(6, 0, -.1))
 # ---- 7 oil -> inflation -> rates high -> nothing gets expensive
 shot('s08', 'central_bank', 'film', A(6, 0, -.15), cut='whip', cam0={'x': .6, 'y': .4, 'z': 1.2}, cam1={'x': .66, 'y': .4, 'z': 1.4})
 beat('arrow', A(6, 1, .2), shot='s08', **{'from': [.62, .62], 'to': [.62, .22]}, col='#FFC23A', until=A(6, 2, -.1))
@@ -52,7 +52,7 @@ beat('punch', A(6, 2, .7), shot='s08', level=1.25)
 shot('s09', SCALE, 'film', A(7, 0, -.35), cam0={'x': .5, 'y': .5, 'z': 1.12}, cam1={'z': 1.18})
 beat('moment', A(7, 0, -.3), what='char', shot='s09', who='c_bill', side='M', lines=[7], grow=A(7, 1, 0), leave=A(8, 0, -.25))
 # ---- 9 forced selling: gold is the cash machine
-shot('s10', 'trading_room', 'soft', A(8, 0, -.15), cut='zoom', cam0={'x': .5, 'y': .32, 'z': 1.2}, cam1={'x': .5, 'y': .34, 'z': 1.35}, handheld=.1)
+shot('s10', 'trading_room', 'film', A(8, 0, -.15), cut='zoom', cam0={'x': .5, 'y': .32, 'z': 1.2}, cam1={'x': .5, 'y': .34, 'z': 1.35}, handheld=.1)
 beat('punch', A(8, 1, .3), shot='s10', level=1.2)
 shot('s11', 'gold_window', 'film', A(8, 2, -.15), cut='whip', cam0={'x': .5, 'y': .45, 'z': 1.15}, cam1={'x': .5, 'y': .48, 'z': 1.4})
 beat('circle', A(8, 3, .2), shot='s11', c=[.52, .48], r=[180, 140], col='#FFC23A', until=A(9, 0, -.2))
