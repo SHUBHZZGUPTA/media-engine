@@ -23,13 +23,13 @@ def job(a):
     f = [{'name': 'globe_bmng.jpg', 'url': GIBS + '&LAYERS=BlueMarble_NextGeneration&BBOX=-90,-180,90,180&WIDTH=8192&HEIGHT=4096'},
          {'name': 'ne_bmng.jpg', 'url': GIBS + f'&LAYERS=BlueMarble_NextGeneration&BBOX={B0},{L0},{B1},{L1}&WIDTH=4096&HEIGHT={int(4096 * (B1 - B0) / (L1 - L0))}'},
          {'name': 'pa_weld.jpg', 'url': GIBS + f'&LAYERS=Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&BBOX={c[2]},{c[0]},{c[3]},{c[1]}&WIDTH=4096&HEIGHT={int(4096 * (c[3] - c[2]) / (c[1] - c[0]))}'}]
-    z = 8; tx = lambda lon: int((lon + 180) / 360 * 2 ** z)
+    z = getattr(a, 'zoom', 8) or 8; tx = lambda lon: int((lon + 180) / 360 * 2 ** z)
     ty = lambda lat: int((1 - math.log(math.tan(math.radians(lat)) + 1 / math.cos(math.radians(lat))) / math.pi) / 2 * 2 ** z)
     for x in range(tx(L0), tx(L1) + 1):
         for y in range(ty(B1), ty(B0) + 1):
             f.append({'name': f'dem_{z}_{x}_{y}.png', 'url': f'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'})
     os.makedirs('jobs/fetch', exist_ok=True)
-    json.dump({'id': a.id, 'delay': .3, 'bbox': [L0, L1, B0, B1], 'close': c, 'files': f}, open(f'jobs/fetch/{a.id}.json', 'w'), indent=1)
+    json.dump({'id': a.id, 'delay': .3, 'bbox': [L0, L1, B0, B1], 'close': c, 'zoom': z, 'files': f}, open(f'jobs/fetch/{a.id}.json', 'w'), indent=1)
     print(f'jobs/fetch/{a.id}.json with {len(f)} files; push it, then run build')
 
 
@@ -42,8 +42,8 @@ def build(a):
     if J and 'bbox' not in J: J = None
     L0, L1, B0, B1 = (J['bbox'] if J else [float(x) for x in a.bbox.split(',')]); CL = J['close'] if J else [float(x) for x in a.close.split(',')]
     # DEM mosaic (web mercator z8 terrarium) -> equirect 1024x512 over the bbox
-    N = 2 ** 8; tiles = {}
-    for f in glob.glob(F + 'dem_8_*.png'):
+    ZM = (J or {}).get('zoom', 8); N = 2 ** ZM; tiles = {}
+    for f in glob.glob(F + f'dem_{ZM}_*.png'):
         _, _, x, y = os.path.basename(f)[:-4].split('_'); tiles[(int(x), int(y))] = np.array(Image.open(f).convert('RGB')).astype(np.float64)
     W, H = 1024, 512; LON, LAT = np.meshgrid(np.linspace(L0, L1, W), np.linspace(B1, B0, H))
     X = (LON + 180) / 360 * N; Y = (1 - np.log(np.tan(np.radians(LAT)) + 1 / np.cos(np.radians(LAT))) / np.pi) / 2 * N
@@ -89,7 +89,7 @@ def build(a):
 
 
 ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest='cmd', required=True)
-j = sp.add_parser('job'); j.add_argument('id'); [j.add_argument(k, type=float) for k in ('lon0', 'lon1', 'lat0', 'lat1')]; j.add_argument('--close', required=True)
+j = sp.add_parser('job'); j.add_argument('id'); [j.add_argument(k, type=float) for k in ('lon0', 'lon1', 'lat0', 'lat1')]; j.add_argument('--close', required=True); j.add_argument('--zoom', type=int, default=8)  # 7 for very wide (continent-scale) regions
 b = sp.add_parser('build'); b.add_argument('fetch_dir'); b.add_argument('art_dir'); b.add_argument('--admin1'); b.add_argument('--admin0'); b.add_argument('--pin', required=True)
 b.add_argument('--bbox'); b.add_argument('--close')
 a = ap.parse_args(); job(a) if a.cmd == 'job' else build(a)
