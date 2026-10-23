@@ -1,0 +1,19 @@
+{
+ "job": "mm3-shorts-lines",
+ "items": [
+  {
+   "name": "all_lines",
+   "ok": true,
+   "attempts": [
+    {
+     "model": "gemini-3.1-flash-tts-preview",
+     "error": "KeyError('content')"
+    }
+   ],
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 106.17,
+   "took": 33.2
+  }
+ ]
+}
