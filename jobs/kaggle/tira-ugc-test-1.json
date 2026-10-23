@@ -1,0 +1,27 @@
+{
+ "id": "tira-ugc-test-1",
+ "script": "gpu/zimage_lora_previews.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 75,
+ "stage": {
+  "from_kernel": "shubhzzgupta07/me-tira-lora-v3-face",
+  "file_pattern": "tira_zimage_lora_000002200\\.safetensors$",
+  "dataset_slug": "tira-lora-checkpoints",
+  "title": "Tira LoRA checkpoints"
+ },
+ "params": {
+  "prompts": [
+   "tirav1 woman, front view mirror selfie in a modern gym, standing facing a large wall mirror, holding a black iPhone at chest height with one hand so her face is fully visible above the phone, other arm relaxed at her side, black racerback sports bra, high-waisted black leggings, white sneakers, hair in a neat low bun at the nape with a few loose strands, silver hoop earrings, soft natural curvy figure, relaxed confident half smile, dumbbell racks and cable machines behind her, bright daylight from tall windows mixed with overhead lights, faint smudges on the mirror, real unretouched skin texture with visible pores, candid iPhone photo, photorealistic",
+   "tirav1 woman, candid photo walking on the Marine Drive promenade in Mumbai at golden hour, three-quarter view, turning to look at the camera with a warm natural smile, white linen button-up shirt with sleeves rolled up, light blue straight-leg jeans, tan sandals, small brown shoulder bag, long hair worn down moving slightly in the sea breeze, silver hoop earrings, the Arabian Sea and the curved Mumbai skyline softly behind her, warm low sunlight on her face, real unretouched skin texture, shot by a friend on an iPhone at about 2 metres, photorealistic"
+  ],
+  "lora_glob": "tira_zimage_lora*.safetensors",
+  "seed": 7,
+  "width": 1152,
+  "height": 1536,
+  "steps": 9,
+  "lora_scale": 1.0,
+  "include_base": false
+ }
+}
