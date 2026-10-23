@@ -1,0 +1,107 @@
+{
+ "id": "halley-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline; a touch of wonder on the line about watching it burn. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You've probably never seen Hally's Comet."
+    ],
+    [
+     "Narrator",
+     "But right now, pieces of it are hitting your sky."
+    ],
+    [
+     "Narrator",
+     "And Hally itself is over five billion kilometres away."
+    ],
+    [
+     "Narrator",
+     "So how?"
+    ],
+    [
+     "Narrator",
+     "Rewind. Every seventy-six years, Hally swings close to the Sun."
+    ],
+    [
+     "Narrator",
+     "The heat cooks its ice, and it sheds dust. Lots of it."
+    ],
+    [
+     "Chars",
+     "[vain, posh, offended cosmic diva, flicking her hair] It's not dandruff. It's a tail."
+    ],
+    [
+     "Narrator",
+     "That dust stays behind, spread all along Hally's path."
+    ],
+    [
+     "Narrator",
+     "So how does it reach your sky?"
+    ],
+    [
+     "Narrator",
+     "Hally's path crosses Earth's path. Twice a year."
+    ],
+    [
+     "Narrator",
+     "In May, we clip it. In October, we hit it again."
+    ],
+    [
+     "Chars",
+     "[weary, exasperated, tired house-proud mum] Again? I just cleaned up in May!"
+    ],
+    [
+     "Narrator",
+     "Here's the twist. Hally goes around the Sun the wrong way."
+    ],
+    [
+     "Narrator",
+     "So we hit its dust head-on, at sixty-six kilometres a second."
+    ],
+    [
+     "Narrator",
+     "That's Delhi to Mumbai in about seventeen seconds."
+    ],
+    [
+     "Narrator",
+     "Each grain is about the size of sand."
+    ],
+    [
+     "Narrator",
+     "It burns up around a hundred kilometres above you. About eleven Everests up."
+    ],
+    [
+     "Narrator",
+     "Best seen after midnight, from both halves of the planet."
+    ],
+    [
+     "Narrator",
+     "Most of us have never seen Hally's Comet... But every October, you can watch it burn."
+    ],
+    [
+     "Narrator",
+     "Hally itself is due back in twenty sixty-one."
+    ],
+    [
+     "Chars",
+     "[weary, exasperated, tired house-proud mum, now flat and deadpan, resigned] Until then, I'll keep driving through its dust."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
