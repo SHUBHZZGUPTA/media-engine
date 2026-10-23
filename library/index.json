@@ -31,7 +31,10 @@
   "c_drop": "Cheerful raindrop personified: clear-blue water-drop body, arms up like on a water slide, splash at the base; huge delighted grin; faces right. (Bengaluru, 2026-10-22)",
   "c_bus": "Tired old city bus personified: red-and-silver bus, windscreen face, deadpan half-closed eyes, blank route sign, puddle under wheels; faces left/front. (Bengaluru)",
   "c_gravity": "Gravity personified: dark-violet planet sphere with ring and white down-arrow emblem, clutching a thick rope hanging down; grumpy frown; faces left. (Roadster fly, 2026-10-22)",
-  "c_mechanic": "Generic 1970s racing pit mechanic: navy overalls with red stripe (no logos), shaggy brown hair, big moustache, wrench behind back, sweat drop; too-innocent grin; faces right. (Roadster fly)"
+  "c_mechanic": "Generic 1970s racing pit mechanic: navy overalls with red stripe (no logos), shaggy brown hair, big moustache, wrench behind back, sweat drop; too-innocent grin; faces right. (Roadster fly)",
+  "c_pinkie": "Fossil finger bone personified (Denisovan pinkie): ivory knobbly bone body, tiny fur scarf, arms crossed; offended; faces left. (Six humans, 2026-10-23)",
+  "c_hobbit": "Homo floresiensis 'hobbit' chibi: messy dark hair, leaf-and-bark wrap, stone flake tool; smug grin; faces right. (Six humans, GPT Image 2.5 via Higgsfield)",
+  "c_neand": "Neanderthal chibi: brow ridge, red-brown hair + beard, fur cloak, wooden spear; knowing smirk; faces left. (Six humans, GPT Image 2.5 via Higgsfield)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -87,6 +90,13 @@
   "teslafly_p_pay": "Night: half-loop ramp at left with red hypercar upside down at the top (~246-486 x, 390-525 y), huge moonlit cloudy sky, wet tarmac. (Roadster fly)",
   "teslafly_p_thr": "Night: red hypercar mid-air above a giant loop ramp, white cold-gas jets from nozzles (~258,285 / 408,420 / 828,510), car ~228-858 x, 75-525 y. (Roadster fly)",
   "teslafly_p_hop": "Night: red hypercar flying high (~150-885 x, 240-390 y; nozzle jets ~205,410 and ~795,410) above a row of five parked EVs incl. a semi cab (~420-525 x, 925-1090 y), wet tarmac. (Roadster fly)",
-  "teslafly_p_end": "Dark showroom: red hypercar on a turntable with a half-pulled grey dust cover (car ~60-1000 x, 640-1070 y), single spotlight cone from above (~250-780 x). (Roadster fly)"
+  "teslafly_p_end": "Dark showroom: red hypercar on a turntable with a half-pulled grey dust cover (car ~60-1000 x, 640-1070 y), single spotlight cone from above (~250-780 x). (Roadster fly)",
+  "six_lineup0": "3D diorama: six chibi early-human kinds (sapiens, Neanderthal, Denisovan, erectus, floresiensis, luzonensis, left->right x~120/300/480/650/780/910, y~630) on a floating island over navy. (Six humans)",
+  "six_lineup1": "EDIT of six_lineup0: the five non-sapiens figures turned to grey stone; pixel-aligned. (Six humans)",
+  "six_cave": "Painterly Siberian (Altai) cave mouth looking out on snowy peaks; campfire left (~123,707); empty floor. (Six humans)",
+  "six_desk2": "3D diorama: palaeoanthropologist's study buried in paper stacks, hominin skull casts on shelves, green lamp (~619,627). (Six humans)",
+  "six_dna2": "3D diorama: glowing DNA helix (centre x~483), one orange rung (y~690), teal rungs (y~147/525/1040), floating hominin skulls, navy bg. (Six humans)",
+  "flores_cave": "Painterly tropical limestone cave mouth on Flores, jungle beyond; 2:3 crop of the v1 plate. (Six humans)",
+  "iceage_camp": "Painterly ice-age river valley camp, snow, campfire left (~105,846), hide rack; 2:3 crop of the v1 plate. (Six humans)"
  }
 }
