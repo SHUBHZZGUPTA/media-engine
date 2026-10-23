@@ -1,0 +1,23 @@
+{
+ "id": "sixhumans-en-fix",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "fix_left",
+   "direction": "A short cartoon character line. Chars is a deep, smug, slow, deadpan cave-man. Say the last word 'left' crisply and clearly: LEFT, as in 'we never left the room'.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Chars",
+     "[deep, smug, slow, deadpan] So technically... we never left."
+    ]
+   ]
+  }
+ ]
+}
