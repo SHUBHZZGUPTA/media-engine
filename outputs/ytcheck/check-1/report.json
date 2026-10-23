@@ -1,0 +1,34 @@
+{
+ "client_id_set": true,
+ "client_secret_set": true,
+ "tokens": [
+  {
+   "secret": "YT_RT_BHUGOL_EN",
+   "present": true,
+   "refresh": {
+    "ok": true
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/youtube.force-ssl",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/yt-analytics.readonly"
+   ],
+   "channels": [
+    {
+     "id": "UC6Uc7hcy5EWXpNW6aTaWOlg",
+     "title": "BhuGol",
+     "handle": "@bhugolyt",
+     "videos": "18",
+     "subscribers": "88"
+    }
+   ],
+   "analytics": {
+    "ok": false,
+    "status": 403,
+    "rows": null,
+    "error": "YouTube Analytics API has not been used in project 336654115245 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtubeanalytics.googleapis.com/overview?project=336654115245 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+   }
+  }
+ ]
+}
