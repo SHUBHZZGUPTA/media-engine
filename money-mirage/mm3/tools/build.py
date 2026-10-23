@@ -1,5 +1,6 @@
 # Money Mirage ep01 v3: spec + timing + shot plan -> HyperFrames project (one page per render segment).
-# Usage: python3 build.py [--fake] [--seg=60] [--preview=A,B]
+# Usage: python3 build.py [--fake] [--seg=60] [--preview=A,B] [--port]
+#   --port      native portrait Short (1080x1920, its own script and shot plan; money-mirage-shorts skill)
 #   --fake      estimate timings at 2.45 words/s (engine work before the voice exists)
 import json, os, sys, shutil, re, math
 import numpy as np
@@ -10,7 +11,7 @@ import motion_plan
 from note import note_svg
 arg = lambda k, d=None: next((a.split('=', 1)[1] for a in sys.argv if a.startswith(k + '=')), d)
 SPEC = json.load(open(os.path.join(HERE, 'spec.json'))); PLAN = json.load(open(os.path.join(HERE, 'shots.json')))
-OUT = arg('--out', os.path.join(HERE, 'proj')); SHORT = arg('--short')   # --short=<id> --out=proj_short/<id>: one portrait page from shorts_v3.json
+OUT = arg('--out', os.path.join(HERE, 'proj')); SHORT = arg('--short'); NATIVE = '--port' in sys.argv   # --short=<id> --out=proj_short/<id>: one portrait page from shorts_v3.json
 if '--fake' in sys.argv:
     t = .3; lines = []
     for L in SPEC['lines']:
@@ -83,8 +84,9 @@ def depth_png(stem):
     if stem == 'doc_eo6102': Image.open(os.path.join(ART, 'depth_doc_eo6102.png')).save(dst); return f'depth_{stem}.png'
     src = next((os.path.join(DEP, j, stem + '_depth.png') for j in DEPTH_JOBS if os.path.exists(os.path.join(DEP, j, stem + '_depth.png'))), None)
     if not src: Image.new('L', (768, 432), 128).save(dst); print('  (no depth yet for', stem, '- flat)'); return f'depth_{stem}.png'
-    d = np.array(Image.open(src)).astype(np.float32); d = d / max(1.0, d.max())
-    Image.fromarray((d * 255).astype(np.uint8)).resize((768, 432), Image.BILINEAR).filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(3)).save(dst)
+    d = np.array(Image.open(src)).astype(np.float32); d = d / max(1.0, d.max()); h0, w0 = d.shape[:2]
+    sz = (768, 432) if w0 >= h0 else (round(768 * w0 / h0), 768)   # keep a portrait plate's aspect
+    Image.fromarray((d * 255).astype(np.uint8)).resize(sz, Image.BILINEAR).filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(3)).save(dst)
     return f'depth_{stem}.png'
 need = set()
 for s in SH:
@@ -93,12 +95,14 @@ for s in SH:
     if not os.path.exists(p): need.add(f'{base}:{look}'); s['tex'] = fn
     else: shutil.copy(p, os.path.join(OUT, 'assets', fn)); s['tex'] = fn
     s['dep'] = depth_png(s.get('depthOf', base)); s['ar'] = 16 / 9
+    if os.path.exists(p): w0, h0 = Image.open(p).size; s['ar'] = round(w0 / h0, 4)   # portrait plates keep their own aspect
 if need: print('NEED BAKE:', ' '.join(sorted(need)))
 for f in ('c_goldie.png', 'c_bill.png'): shutil.copy(os.path.join(SRC, f), os.path.join(OUT, 'assets', f))
 shutil.copy(os.path.join(LIB, 'img/coin_lion.png'), os.path.join(OUT, 'assets/coin_lion.png'))
 shutil.copy(os.path.join(LIB, 'img/logo.png'), os.path.join(OUT, 'assets/logo.png'))
 shutil.copy(os.path.join(LIB, 'fonts/emoji.ttf'), os.path.join(OUT, 'assets/emoji.ttf'))
 for w in ('800', '900'): shutil.copy(os.path.join(LIB, f'fonts/inter{w}.woff2'), os.path.join(OUT, f'assets/inter{w}.woff2'))
+for w in ('700', '800'): shutil.copy(os.path.join(LIB, f'fonts/mukta{w}.woff2'), os.path.join(OUT, f'assets/mukta{w}.woff2'))   # Devanagari fallback
 for f, s in (('gsap.min.js', 'node_modules/gsap/dist/gsap.min.js'), ('three.min.js', 'node_modules/three/build/three.min.js'), ('motion_ls.js', 'motion_ls.js')):
     shutil.copy(os.path.join(ENG, s), os.path.join(OUT, f))
 AR = {}
@@ -120,7 +124,8 @@ if SHORT:   # portrait Short: hook card + pieces of the main timeline, one page
         if f.endswith('.html'): os.remove(os.path.join(OUT, f))
     open(os.path.join(OUT, 'index.html'), 'w').write(tpl.replace('__DATA__', json.dumps(Ds, ensure_ascii=False)).replace('__DUR__', '%.3f' % dur).replace('__W__', '1080').replace('__H__', '1920'))
     print('short', SHORT, 'dur %.1f s' % dur, OUT); sys.exit()
-tpl = tpl.replace('__W__', '1920').replace('__H__', '1080')
+if NATIVE: D.update(port=True, native=True, lang=EPC.get('lang', 'en')); tpl = tpl.replace('__W__', '1080').replace('__H__', '1920')
+else: tpl = tpl.replace('__W__', '1920').replace('__H__', '1080')
 SEG = float(arg('--seg', 60)); segs = []; a = 0.0
 while a < DUR - .01: b = min(DUR, a + SEG); segs.append([round(a, 3), round(b, 3)]); a = b
 for f in os.listdir(OUT):

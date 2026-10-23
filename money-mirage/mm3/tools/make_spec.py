@@ -17,7 +17,7 @@ for ci, s in enumerate(secs):
 
 def chunk(marked):
     toks = marked.split(' '); out = []; cur = []; i = 0
-    P = lambda w: re.search(r'[.,!?;:]["*\']*$', w) is not None
+    P = lambda w: re.search(r'[.,!?;:।]["*\']*$', w) is not None   # । = Hindi full stop
     while i < len(toks):
         w = toks[i]; cur.append(w); i += 1
         open_key = sum(x.count('*') for x in cur) % 2 == 1

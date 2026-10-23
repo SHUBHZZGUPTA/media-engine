@@ -11,6 +11,9 @@
 @font-face { font-family: 'Inter'; font-weight: 800; src: url(assets/inter800.woff2) format('woff2'); }
 @font-face { font-family: 'Inter'; font-weight: 900; src: url(assets/inter900.woff2) format('woff2'); }
 @font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Mukta'; font-weight: 700; src: url(assets/mukta700.woff2) format('woff2'); }
+@font-face { font-family: 'Mukta'; font-weight: 800 900; src: url(assets/mukta800.woff2) format('woff2'); }
+html.hi * { letter-spacing: 0 !important; }
 :root { --gold: #E9B44C; --ink: #F7F1E3; --red: #E8321C; --navy: #0B1324; --shadow: rgba(4,8,16,.85); }
 body { margin: 0; background: #05080F; }
 #root { position: relative; width: __W__px; height: __H__px; overflow: hidden; background: #05080F; }
@@ -27,27 +30,27 @@ body { margin: 0; background: #05080F; }
 #capFade { top: auto; height: 300px; bottom: 0; background: linear-gradient(rgba(5,8,15,0), rgba(5,8,15,.55)); }
 #flash { background: #FFF6E0; opacity: 0; }
 #dim { background: #05080F; opacity: 0; }
-.num { position: absolute; white-space: nowrap; font-family: 'Inter', sans-serif; font-weight: 900; line-height: 1; color: var(--gold); paint-order: stroke fill; -webkit-text-stroke: 14px #0A0F1A; font-variant-numeric: tabular-nums; letter-spacing: -.01em; opacity: 0; }
+.num { position: absolute; white-space: nowrap; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 900; line-height: 1; color: var(--gold); paint-order: stroke fill; -webkit-text-stroke: 14px #0A0F1A; font-variant-numeric: tabular-nums; letter-spacing: -.01em; opacity: 0; }
 .num .knum { display: inline-block; } .num .ksuf { display: inline-block; color: var(--ink); margin-left: .18em; font-size: .52em; -webkit-text-stroke-width: 9px; }
-.tl { position: absolute; left: 0; width: 1920px; text-align: center; white-space: nowrap; font-family: 'Inter', sans-serif; font-weight: 900; color: var(--ink); paint-order: stroke fill; -webkit-text-stroke: 16px #0A0F1A; line-height: 1; opacity: 0; }
+.tl { position: absolute; left: 0; width: 1920px; text-align: center; white-space: nowrap; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 900; color: var(--ink); paint-order: stroke fill; -webkit-text-stroke: 16px #0A0F1A; line-height: 1; opacity: 0; }
 .tl .k { color: var(--gold); }
 .flapBox { position: absolute; left: 0; width: 1920px; text-align: center; opacity: 0; }
 .flapRow { display: flex; justify-content: center; gap: 6px; }
-.flap { display: inline-block; width: 54px; height: 84px; border-radius: 8px; background: linear-gradient(#1A2230 0 49%, #0B1018 51% 100%); color: #F4F1E6; font-family: 'Inter', sans-serif; font-weight: 900;
+.flap { display: inline-block; width: 54px; height: 84px; border-radius: 8px; background: linear-gradient(#1A2230 0 49%, #0B1018 51% 100%); color: #F4F1E6; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 900;
   font-size: 62px; line-height: 84px; text-align: center; box-shadow: 0 6px 0 rgba(0,0,0,.55), inset 0 0 0 2px rgba(255,255,255,.07); transform-origin: 50% 50%; }
 .cap { position: absolute; left: 0; width: 1920px; bottom: 74px; text-align: center; white-space: nowrap; opacity: 0; }
-.cl { display: inline-block; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 58px; line-height: 1.12; color: #FFFFFF; paint-order: stroke fill; -webkit-text-stroke: 10px #05080F;
+.cl { display: inline-block; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 800; font-size: 58px; line-height: 1.12; color: #FFFFFF; paint-order: stroke fill; -webkit-text-stroke: 10px #05080F;
   text-shadow: 0 4px 0 rgba(0,0,0,.45); }
 .cl span { opacity: 0; display: inline-block; white-space: pre; }
-.lbl { position: absolute; white-space: nowrap; font-family: 'Inter', sans-serif; font-weight: 900; color: var(--ink); paint-order: stroke fill; -webkit-text-stroke: 9px #0A0F1A; line-height: 1; opacity: 0; }
+.lbl { position: absolute; white-space: nowrap; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 900; color: var(--ink); paint-order: stroke fill; -webkit-text-stroke: 9px #0A0F1A; line-height: 1; opacity: 0; }
 .emo { position: absolute; font-family: 'Emo', sans-serif; line-height: 1; opacity: 0; filter: drop-shadow(0 10px 12px rgba(0,0,0,.5)); }
 .notew { position: absolute; transform-origin: 50% 50%; opacity: 0; }
 .notew svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 34px 44px rgba(0,0,0,.65)); }
 .dsvg { position: absolute; left: 0; top: 0; overflow: visible; }
-.btn { position: absolute; height: 104px; border-radius: 52px; background: #E8321C; color: #fff; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 46px; letter-spacing: .06em;
+.btn { position: absolute; height: 104px; border-radius: 52px; background: #E8321C; color: #fff; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 900; font-size: 46px; letter-spacing: .06em;
   display: flex; align-items: center; justify-content: center; gap: 18px; box-shadow: 0 14px 30px rgba(0,0,0,.5); opacity: 0; }
 .phone { position: absolute; width: 420px; height: 820px; border-radius: 58px; background: #0E1118; border: 12px solid #1E2430; box-shadow: 0 30px 60px rgba(0,0,0,.6); overflow: hidden; opacity: 0; }
-.bub { position: absolute; left: 26px; max-width: 300px; padding: 16px 22px; border-radius: 26px; background: #2A3242; color: #fff; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 26px; opacity: 0; }
+.bub { position: absolute; left: 26px; max-width: 300px; padding: 16px 22px; border-radius: 26px; background: #2A3242; color: #fff; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 800; font-size: 26px; opacity: 0; }
 .bub.me { left: auto; right: 26px; background: #2F6B4F; }
 /* portrait (Shorts): plates full-bleed, the 16:9 overlay layer rides a scaled band, big wrapped captions */
 .port .cv { width: 1080px; height: 1920px; }
@@ -56,7 +59,7 @@ body { margin: 0; background: #05080F; }
 .port #capFade { height: 820px; background: linear-gradient(rgba(5,8,15,0), rgba(5,8,15,.7)); }
 #hookS { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
 #hookS img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hookT { position: absolute; left: 50px; width: 980px; top: 330px; text-align: center; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 118px; line-height: 1.05; color: var(--ink);
+.hookT { position: absolute; left: 50px; width: 980px; top: 330px; text-align: center; font-family: 'Inter', 'Mukta', sans-serif; font-weight: 900; font-size: 118px; line-height: 1.05; color: var(--ink);
   paint-order: stroke fill; -webkit-text-stroke: 18px #0A0F1A; opacity: 0; }
 .hookT .k { color: var(--gold); }
 .hookT > span { display: inline-block; white-space: nowrap; }   /* wrap between words, never inside one */
@@ -93,8 +96,10 @@ const inWin = (a, b) => WINS.some(w => b >= w[0] && a <= w[1]);
 const MBW = [], mbWin = (a, b) => MBW.push([a, b]); let MAINTL = null;   // motion blur only samples inside these windows (sampling every frame costs ~2.5 s/frame)
 window.__hfMbGate = () => { if (!MAINTL) return true; const t = MAINTL.time(); return MBW.some(w => t >= w[0] && t <= w[1]); };
 const PORT = !!D.port, VW = PORT ? 1080 : 1920, VH = PORT ? 1920 : 1080, BS = .75, BX = (1080 - 1920 * BS) / 2, BY = 380;
+const NATIVE = !!D.native, OW = NATIVE ? 1080 : 1920, OH = NATIVE ? 1920 : 1080;   // native portrait Short: overlays laid out in 1080x1920, no 16:9 band
+if (D.lang === 'hi') document.documentElement.classList.add('hi');
 if (PORT) document.documentElement.classList.add('port');
-const band = el => { if (PORT) Object.assign(el.style, { left: BX + 'px', top: BY + 'px', width: '1920px', height: '1080px', right: 'auto', bottom: 'auto', transform: `scale(${BS})`, transformOrigin: '0 0' }); return el; };
+const band = el => { if (PORT && !NATIVE) Object.assign(el.style, { left: BX + 'px', top: BY + 'px', width: '1920px', height: '1080px', right: 'auto', bottom: 'auto', transform: `scale(${BS})`, transformOrigin: '0 0' }); return el; };
 ['fx', 'hud', 'titles'].forEach(id => band($(id)));
 
 /* ---------- keyframe tracks (time-only) ---------- */
@@ -144,9 +149,10 @@ function plate3(o) {
   return S;
 }
 const world = (S, u, v, lift) => { const d = S.depI ? sampleCPU(S.depI, u, 1 - v) : .5; return new T3.Vector3((u - .5) * S.W, (.5 - v) * PH, (d - .5) * S.U.dScale.value + (lift || 0)); };
-const toScreen = (cam, p) => { const v = p.clone().project(cam); const x = (v.x + 1) / 2 * VW, y = (1 - v.y) / 2 * VH; return PORT ? { x: (x - BX) / BS, y: (y - BY) / BS, z: v.z } : { x, y, z: v.z }; };
+const toScreen = (cam, p) => { const v = p.clone().project(cam); const x = (v.x + 1) / 2 * VW, y = (1 - v.y) / 2 * VH; return (PORT && !NATIVE) ? { x: (x - BX) / BS, y: (y - BY) / BS, z: v.z } : { x, y, z: v.z }; };
 function setCam(S, s) { const Z = Math.max(1.0, s.z); const hv = PH / 2 / Z / 1.12; const dist = hv / Math.tan(FOV * Math.PI / 360); const hw = hv * ASP;
   let tx = ((S.px !== undefined ? S.px : s.x) - .5) * S.W, ty = (.5 - s.y) * PH;   // Shorts can re-aim a shot sideways (portrait sees ~30% of the plate width) const mx = Math.max(0, S.W / 2 - hw), my = Math.max(0, PH / 2 - hv); tx = clamp(tx, -mx, mx); ty = clamp(ty, -my, my);
+  if (NATIVE) { const mx = Math.max(0, S.W / 2 - hw), my = Math.max(0, PH / 2 - hv); tx = clamp(tx, -mx, mx); ty = clamp(ty, -my, my); }   // native: never show past the plate edge
   const yw = s.yaw * Math.PI / 180, pt = s.pitch * Math.PI / 180;
   S.cam.position.set(tx + Math.sin(yw) * Math.cos(pt) * dist, ty + Math.sin(pt) * dist, Math.cos(yw) * Math.cos(pt) * dist); S.cam.lookAt(tx, ty, 0); S.cam.updateMatrixWorld(); }
 function renderPlate(S, t) { if (!S.live) return; setCam(S, valAt(S.cam0, t)); S.U.time.value = t; for (const k in S.uT) S.U[k].value = valAt(S.uT[k], t);
@@ -159,7 +165,7 @@ const shotOf = id => SCN[id];
 
 /* ---------- characters (screen space, inside a scene so they ride its cuts) ---------- */
 const CH = {};
-function addChar(S, name, side, o) { o = o || {}; const H = o.h || 640, FEET = o.feet || 1000; const w = H * D.ar[name]; const x = (PORT ? { L: 640, R: 1290, M: 960, LL: 560, RR: 1370 } : { L: 470, R: 1450, M: 960, LL: 330, RR: 1590 })[side] || side;
+function addChar(S, name, side, o) { o = o || {}; const H = o.h || (NATIVE ? 760 : 640), FEET = o.feet || (NATIVE ? 1360 : 1000); const w = H * D.ar[name]; const x = (NATIVE ? { L: 300, R: 780, M: 540, LL: 240, RR: 840 } : PORT ? { L: 640, R: 1290, M: 960, LL: 560, RR: 1370 } : { L: 470, R: 1450, M: 960, LL: 330, RR: 1590 })[side] || side;
   const sh = mk('div', { class: 'shadow' }, S.chars); Object.assign(sh.style, { left: (x - w * .4) + 'px', top: (FEET - 26) + 'px', width: (w * .8) + 'px' });
   const c = mk('div', { class: 'char' }, S.chars); Object.assign(c.style, { left: (x - w / 2) + 'px', top: (FEET - H) + 'px', width: w + 'px', height: H + 'px' });
   mk('img', { src: `assets/${name}.png`, alt: '' }, c); return { c, sh, x, S }; }
@@ -195,8 +201,10 @@ function build() {
     else if (b.kind === 'grow' || b.kind === 'count' || b.kind === 'slam') numBeat(tl, MO, b, t, u);
     else if (b.kind === 'flap') { const el = mk('div', { class: 'flapBox', style: `top:${b.y || 70}px` }, $('titles')); el.innerHTML = '<div class="flapRow"></div>';
       tl.set(el, { opacity: 1 }, t); MO.flap(el.querySelector('.flapRow'), String(b.text), t, { stagger: .035 }); MO.textOut(el, u); }
-    else if (b.kind === 'charslam') { const el = mk('div', { class: 'tl', style: `top:${b.y || 110}px;font-size:${b.size || 150}px` }, $('titles')); markup(b.text, el);
+    else if (b.kind === 'charslam') { const el = mk('div', { class: 'tl', style: `top:${b.y || 110}px;font-size:${b.size || 150}px;width:${OW}px` }, $('titles')); markup(b.text, el);
       tl.set(el, { opacity: 1 }, t); MO.charSlam(el, t, { blur: b.blur ? 'css' : false }); MO.textOut(el, u); }
+    else if (b.kind === 'card') { const el = mk('div', { class: 'hookT', style: `top:${b.y || 300}px;font-size:${b.size || 118}px` }, $('titles')); markup(b.text, el);   // Shorts hook text card (words differ from the spoken hook)
+      tl.set(el, { opacity: 1 }, t); MO.charSlam(el, t, { blur: b.blur ? 'css' : false }); if (b.blur) mbWin(t - .05, t + .8); MO.textOut(el, u); }
     else if (b.kind === 'shake') shake(t, b.k);
     else if (b.kind === 'flash') tl.fromTo($('flash'), { opacity: 0 }, { keyframes: [{ opacity: b.a || .55, duration: .06 }, { opacity: 0, duration: .45 }], ...IR }, t);
     else if (b.kind === 'moment' && MOMENTS[b.what]) MOMENTS[b.what](tl, MO, S, b, t, u, IR);
@@ -221,9 +229,9 @@ function build() {
 let NOTE_N = 0;
 /* ---------- numbers ---------- */
 function numBeat(tl, MO, b, t, u) { const el = mk('div', { class: 'num' }, $('hud')); const fs = b.size || 150;
-  Object.assign(el.style, { fontSize: fs + 'px', top: (PORT ? Math.max(10, (b.y || 120) - 190) : (b.y || 120)) + 'px' });   // portrait: numbers sit centred, so lift them clear of centred objects
+  Object.assign(el.style, { fontSize: fs + 'px', top: (PORT && !NATIVE ? Math.max(10, (b.y || 120) - 190) : (b.y || 120)) + 'px' });   // portrait: numbers sit centred, so lift them clear of centred objects
   const al = PORT ? 'center' : b.align;   // portrait band crops the 16:9 edges: numbers go centre
-  if (al === 'left') el.style.left = (b.x || 120) + 'px'; else if (al === 'right') el.style.right = (b.x || 120) + 'px'; else { el.style.left = '0'; el.style.width = '1920px'; el.style.textAlign = 'center'; }
+  if (al === 'left') el.style.left = (b.x || 120) + 'px'; else if (al === 'right') el.style.right = (b.x || 120) + 'px'; else { el.style.left = '0'; el.style.width = OW + 'px'; el.style.textAlign = 'center'; }
   el.innerHTML = `<span class="knum">${b.text || ''}</span>${b.unit ? `<span class="ksuf">${b.unit}</span>` : ''}`;
   const n = el.querySelector('.knum'), suf = el.querySelector('.ksuf');
   tl.set(el, { opacity: 1 }, t);
@@ -240,7 +248,7 @@ function noteEl(parent, o) { const w = o.w || 1100, h = w * 640 / 1440; const d 
   Object.assign(d.style, { left: (o.x - w / 2) + 'px', top: (o.y - h / 2) + 'px', width: w + 'px', height: h + 'px' });
   d.innerHTML = `<svg viewBox="0 0 1440 640">${(o.promise === false ? NOTE_NP : NOTE).replace(/NTID/g, o.id || ('n' + (++NOTE_N)))}${o.coin ? '<image class="ncoin" href="assets/coin_lion.png" x="560" y="160" width="320" height="317"/>' : ''}</svg>`;
   return d; }
-const svgIn = (parent, w, h) => mk('svg', { class: 'dsvg', width: w || 1920, height: h || 1080, viewBox: `0 0 ${w || 1920} ${h || 1080}` }, parent, true);
+const svgIn = (parent, w, h) => mk('svg', { class: 'dsvg', width: w || OW, height: h || OH, viewBox: `0 0 ${w || OW} ${h || OH}` }, parent, true);
 const drawOn = (tl, el, at, dur, IR) => { const L = el.getTotalLength ? el.getTotalLength() || 2000 : 2000; tl.fromTo(el, { attr: { 'stroke-dasharray': L, 'stroke-dashoffset': L }, opacity: 1 }, { attr: { 'stroke-dashoffset': 0 }, duration: dur || .5, ease: 'power2.inOut', ...IR }, at); };
 const popIn = (tl, el, at, IR, d) => tl.fromTo(el, { opacity: 0, scale: .3 }, { opacity: 1, scale: 1, duration: d || .4, ease: 'back.out(2)', transformOrigin: '50% 50%', ...IR }, at);
 const fadeOut = (tl, el, at, d) => tl.to(el, { opacity: 0, duration: d || .25, ease: 'power2.in' }, at);
@@ -403,6 +411,15 @@ const MOMENTS = {
     tl.fromTo(vg, { opacity: 0 }, { opacity: 1, duration: .6, ...IR }, t - .1);
     const im = mk('img', { src: 'assets/logo.png', style: 'position:absolute;left:560px;top:150px;width:800px;opacity:0;filter:drop-shadow(0 0 28px rgba(233,180,76,.35)) brightness(1.15)' }, host);
     tl.fromTo(im, { opacity: 0, y: 40, scale: .92 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'expo.out', ...IR }, t); },
+  // native Short outro {click, btn}: dim, logo, FOLLOW button tapped on the spoken 'Follow'
+  follow(tl, MO, S, b, t, u, IR) { const host = $('fx'); const dm = mk('div', { style: 'position:absolute;inset:0;background:rgba(5,8,15,.62);opacity:0' }, host); tl.fromTo(dm, { opacity: 0 }, { opacity: 1, duration: .4, ...IR }, t);
+    const lg = mk('img', { src: 'assets/logo.png', alt: '', style: `position:absolute;left:140px;top:${b.y || 360}px;width:800px;opacity:0;filter:drop-shadow(0 0 28px rgba(233,180,76,.35)) brightness(1.15)` }, host);
+    tl.fromTo(lg, { opacity: 0, y: 40, scale: .9 }, { opacity: 1, y: 0, scale: 1, duration: .6, ease: 'expo.out', ...IR }, t + .1);
+    const btn = mk('div', { class: 'btn', style: `left:290px;top:${(b.y || 360) + 640}px;width:500px` }, host); btn.innerHTML = '<span>＋</span><span>FOLLOW</span>';
+    const bt = b.btn || t + .5; tl.fromTo(btn, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2)', transformOrigin: '50% 50%', ...IR }, bt);
+    const cl = b.click || bt + 1.0; tl.to(btn, { keyframes: [{ scale: .93, duration: .1 }, { scale: 1, duration: .12 }] }, cl); tl.set(btn, { backgroundColor: '#3A3F4B' }, cl + .1); tl.set(btn.lastChild, { textContent: 'FOLLOWING' }, cl + .1); tl.set(btn.firstChild, { textContent: '✓' }, cl + .1);
+    const hand = mk('div', { class: 'emo', style: `left:600px;top:${(b.y || 360) + 720}px;font-size:120px` }, host); hand.textContent = '👆';
+    tl.fromTo(hand, { opacity: 0, x: 120, y: 140 }, { opacity: 1, x: 0, y: 0, duration: .35, ease: 'power3.out', ...IR }, cl - .4); tl.to(hand, { opacity: 0, duration: .3 }, cl + .5); },
   // anvil drops on a coin purse
   anvil(tl, MO, S, b, t, u, IR) { const e = mk('div', { class: 'emo', style: 'left:860px;top:430px;font-size:200px' }, S.ov); e.textContent = '👝'; const a = mk('div', { class: 'emo', style: 'left:850px;top:180px;font-size:220px' }, S.ov); a.textContent = '🧱';
     popIn(tl, e, t, IR); tl.fromTo(a, { opacity: 1, y: -700 }, { y: 0, duration: .35, ease: 'power3.in', ...IR }, b.drop); tl.to(e, { scaleY: .6, scaleX: 1.2, transformOrigin: '50% 100%', duration: .1 }, b.drop + .35); tl.to(e, { scaleY: 1, scaleX: 1, duration: .2 }, b.drop + .5);
@@ -438,7 +455,7 @@ const MOMENTS = {
     tl.fromTo(ch.c, from === 'L' ? { opacity: 0, x: -700 } : from === 'R' ? { opacity: 0, x: 700 } : { opacity: 0, y: 500 }, { opacity: 1, x: 0, y: 0, duration: .5, ease: 'back.out(1.6)', ...IR }, t); tl.to(ch.sh, { opacity: 1, duration: .3 }, t + .1);
     for (const li of b.lines || []) { const a = LN[li].a, e = LN[li].b; const n = Math.max(2, Math.floor((e - a) / .3));
       tl.fromTo(ch.c, { scaleY: 1, rotation: 0, transformOrigin: '50% 100%' }, { keyframes: Array.from({ length: n }, (_, i) => [{ scaleY: 1.045, rotation: i % 2 ? 2 : -2, duration: .15 }, { scaleY: 1, rotation: 0, duration: .15 }]).flat(), ...IR }, a);
-      if (b.zoom !== false) { tl.to(S.push, { scale: 1.12, x: (960 - ch.x) * .35, y: -20, duration: .3, ease: 'power3.out' }, a - .2); tl.to(S.push, { scale: 1, x: 0, y: 0, duration: .4, ease: 'power2.inOut' }, e + .1); } }
+      if (b.zoom !== false) { tl.to(S.push, { scale: 1.12, x: (OW / 2 - ch.x) * .35, y: -20, duration: .3, ease: 'power3.out' }, a - .2); tl.to(S.push, { scale: 1, x: 0, y: 0, duration: .4, ease: 'power2.inOut' }, e + .1); } }
     if (b.shrink) tl.to(ch.c, { scale: .55, transformOrigin: '50% 100%', duration: .5, ease: 'power3.inOut' }, b.shrink);
     if (b.grow) tl.to(ch.c, { scale: 1.15, transformOrigin: '50% 100%', duration: .5, ease: 'power3.out' }, b.grow);
     if (b.tag) { const tg = mk('div', { class: 'emo', style: `left:${ch.x + 60}px;top:${(b.feet || 1000) - (b.h || 640) * .75}px;font-size:120px` }, S.chars); tg.textContent = '🏷️'; popIn(tl, tg, b.tag, IR); tl.to(tg, { scale: 1.6, duration: .6, ease: 'power3.out' }, b.tag + .4); fadeOut(tl, tg, u); }
