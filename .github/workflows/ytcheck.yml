@@ -1,0 +1,39 @@
+name: ytcheck
+# Read-only check of the YouTube sign-in tokens (which channel, which permissions). Runs when a job file is pushed to jobs/ytcheck/.
+on:
+  push:
+    branches: [main]
+    paths: ['jobs/ytcheck/*.json']
+permissions:
+  contents: write
+concurrency:
+  group: ytcheck
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Check tokens
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_RT_MM_EN: ${{ secrets.YT_RT_MM_EN }}
+          YT_RT_MM_HI: ${{ secrets.YT_RT_MM_HI }}
+          YT_RT_BHUGOL_EN: ${{ secrets.YT_RT_BHUGOL_EN }}
+          YT_RT_BHUGOL_HI: ${{ secrets.YT_RT_BHUGOL_HI }}
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'jobs/ytcheck/*.json' || true)
+          for f in $CHANGED; do [ -f "$f" ] && python3 tools/yt_check.py "$f"; done
+      - name: Commit outputs
+        if: always()
+        run: |
+          git config user.name "media-engine-bot"
+          git config user.email "media-engine-bot@users.noreply.github.com"
+          git add outputs || true
+          git diff --cached --quiet && exit 0
+          git commit -m "ytcheck outputs [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
