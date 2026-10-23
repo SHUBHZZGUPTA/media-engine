@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=__W__, height=__H__" />
+<title>Money Mirage ep01 (3D)</title>
+<script src="./gsap.min.js"></script>
+<script src="./three.min.js"></script>
+<script src="./motion_ls.js"></script>
+<style>
+@font-face { font-family: 'Inter'; font-weight: 800; src: url(assets/inter800.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 900; src: url(assets/inter900.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+:root { --gold: #E9B44C; --ink: #F7F1E3; --red: #E8321C; --navy: #0B1324; --shadow: rgba(4,8,16,.85); }
+body { margin: 0; background: #05080F; }
+#root { position: relative; width: __W__px; height: __H__px; overflow: hidden; background: #05080F; }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+.push { position: absolute; inset: 0; transform-origin: 50% 50%; }
+.cv { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.ov, .chars { position: absolute; inset: 0; }
+.char { position: absolute; opacity: 0; }
+.char img { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 22px 26px rgba(0,0,0,.6)); }
+.shadow { position: absolute; height: 46px; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(0,0,0,.55), rgba(0,0,0,0) 70%); opacity: 0; }
+#vig { background: radial-gradient(ellipse 78% 70% at 50% 48%, rgba(5,8,15,0) 58%, rgba(5,8,15,.55) 100%); }
+#capFade { top: auto; height: 300px; bottom: 0; background: linear-gradient(rgba(5,8,15,0), rgba(5,8,15,.55)); }
+#flash { background: #FFF6E0; opacity: 0; }
+#dim { background: #05080F; opacity: 0; }
+.num { position: absolute; white-space: nowrap; font-family: 'Inter', sans-serif; font-weight: 900; line-height: 1; color: var(--gold); paint-order: stroke fill; -webkit-text-stroke: 14px #0A0F1A; font-variant-numeric: tabular-nums; letter-spacing: -.01em; opacity: 0; }
+.num .knum { display: inline-block; } .num .ksuf { display: inline-block; color: var(--ink); margin-left: .18em; font-size: .52em; -webkit-text-stroke-width: 9px; }
+.tl { position: absolute; left: 0; width: 1920px; text-align: center; white-space: nowrap; font-family: 'Inter', sans-serif; font-weight: 900; color: var(--ink); paint-order: stroke fill; -webkit-text-stroke: 16px #0A0F1A; line-height: 1; opacity: 0; }
+.tl .k { color: var(--gold); }
+.flapBox { position: absolute; left: 0; width: 1920px; text-align: center; opacity: 0; }
+.flapRow { display: flex; justify-content: center; gap: 6px; }
+.flap { display: inline-block; width: 54px; height: 84px; border-radius: 8px; background: linear-gradient(#1A2230 0 49%, #0B1018 51% 100%); color: #F4F1E6; font-family: 'Inter', sans-serif; font-weight: 900;
+  font-size: 62px; line-height: 84px; text-align: center; box-shadow: 0 6px 0 rgba(0,0,0,.55), inset 0 0 0 2px rgba(255,255,255,.07); transform-origin: 50% 50%; }
+.cap { position: absolute; left: 0; width: 1920px; bottom: 74px; text-align: center; white-space: nowrap; opacity: 0; }
+.cl { display: inline-block; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 58px; line-height: 1.12; color: #FFFFFF; paint-order: stroke fill; -webkit-text-stroke: 10px #05080F;
+  text-shadow: 0 4px 0 rgba(0,0,0,.45); }
+.cl span { opacity: 0; display: inline-block; white-space: pre; }
+.lbl { position: absolute; white-space: nowrap; font-family: 'Inter', sans-serif; font-weight: 900; color: var(--ink); paint-order: stroke fill; -webkit-text-stroke: 9px #0A0F1A; line-height: 1; opacity: 0; }
+.emo { position: absolute; font-family: 'Emo', sans-serif; line-height: 1; opacity: 0; filter: drop-shadow(0 10px 12px rgba(0,0,0,.5)); }
+.notew { position: absolute; transform-origin: 50% 50%; opacity: 0; }
+.notew svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 34px 44px rgba(0,0,0,.65)); }
+.dsvg { position: absolute; left: 0; top: 0; overflow: visible; }
+.btn { position: absolute; height: 104px; border-radius: 52px; background: #E8321C; color: #fff; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 46px; letter-spacing: .06em;
+  display: flex; align-items: center; justify-content: center; gap: 18px; box-shadow: 0 14px 30px rgba(0,0,0,.5); opacity: 0; }
+.phone { position: absolute; width: 420px; height: 820px; border-radius: 58px; background: #0E1118; border: 12px solid #1E2430; box-shadow: 0 30px 60px rgba(0,0,0,.6); overflow: hidden; opacity: 0; }
+.bub { position: absolute; left: 26px; max-width: 300px; padding: 16px 22px; border-radius: 26px; background: #2A3242; color: #fff; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 26px; opacity: 0; }
+.bub.me { left: auto; right: 26px; background: #2F6B4F; }
+/* portrait (Shorts): plates full-bleed, the 16:9 overlay layer rides a scaled band, big wrapped captions */
+.port .cv { width: 1080px; height: 1920px; }
+.port .cap { width: 1080px; bottom: 300px; white-space: normal; padding: 0 60px; box-sizing: border-box; }
+.port .cl { font-size: 74px; -webkit-text-stroke: 12px #05080F; }
+.port #capFade { height: 820px; background: linear-gradient(rgba(5,8,15,0), rgba(5,8,15,.7)); }
+#hookS { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+#hookS img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hookT { position: absolute; left: 50px; width: 980px; top: 330px; text-align: center; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 118px; line-height: 1.05; color: var(--ink);
+  paint-order: stroke fill; -webkit-text-stroke: 18px #0A0F1A; opacity: 0; }
+.hookT .k { color: var(--gold); }
+.hookT > span { display: inline-block; white-space: nowrap; }   /* wrap between words, never inside one */
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="__W__" data-height="__H__" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="cshake" class="scr"><div id="scenes" class="scr"></div></div></div>
+    <div id="vig" class="scr"></div>
+    <div id="fx" class="scr"></div>
+    <div id="dim" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <div id="capFade" class="scr"></div>
+    <div id="hud" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+  </div>
+</div>
+__MBLUR__
+<script>
+const D = __DATA__;
+const T3 = THREE, NS = 'http://www.w3.org/2000/svg';
+const $ = id => document.getElementById(id);
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); }
+  let end = false; const m = word.match(/^(.*?)\*([.,!?;:"']*)$/); if (m) { word = m[1] + m[2]; end = true; }
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const C = (li, ci, off) => (D.C[li + '.' + (ci || 0)] !== undefined ? D.C[li + '.' + (ci || 0)] : 0) + (off || 0);
+const LN = D.LN; const W0 = D.seg ? D.seg[0] - 1.5 : -1, W1 = D.seg ? D.seg[1] + 1.5 : 1e9;   // only scenes inside this window load textures
+const WINS = D.pieces ? D.pieces.map(p => [p[0] - 1.5, p[1] + 1.5]) : [[W0, W1]];
+const inWin = (a, b) => WINS.some(w => b >= w[0] && a <= w[1]);
+const MBW = [], mbWin = (a, b) => MBW.push([a, b]); let MAINTL = null;   // motion blur only samples inside these windows (sampling every frame costs ~2.5 s/frame)
+window.__hfMbGate = () => { if (!MAINTL) return true; const t = MAINTL.time(); return MBW.some(w => t >= w[0] && t <= w[1]); };
+const PORT = !!D.port, VW = PORT ? 1080 : 1920, VH = PORT ? 1920 : 1080, BS = .75, BX = (1080 - 1920 * BS) / 2, BY = 380;
+if (PORT) document.documentElement.classList.add('port');
+const band = el => { if (PORT) Object.assign(el.style, { left: BX + 'px', top: BY + 'px', width: '1920px', height: '1080px', right: 'auto', bottom: 'auto', transform: `scale(${BS})`, transformOrigin: '0 0' }); return el; };
+['fx', 'hud', 'titles'].forEach(id => band($(id)));
+
+/* ---------- keyframe tracks (time-only) ---------- */
+const EZ = {}; const ease = n => EZ[n || 'power2.inOut'] || (EZ[n || 'power2.inOut'] = gsap.parseEase(n || 'power2.inOut'));
+function Track(base) { return { base, last: base, keys: [] }; }
+function key(T, to, at, dur, e) { const from = (typeof T.last === 'object') ? Object.assign({}, T.last) : T.last;
+  const tgt = (typeof to === 'object') ? Object.assign({}, from, to) : to; T.keys.push({ a: at, d: Math.max(.04, dur), from, to: tgt, e: ease(e) }); T.last = tgt; }
+function valAt(T, t) { let v = T.base;
+  for (const k of T.keys) { if (t < k.a) break; const p = k.e(Math.min(1, (t - k.a) / k.d));
+    if (typeof k.to === 'object') { v = {}; for (const q in k.to) v[q] = k.from[q] + (k.to[q] - k.from[q]) * p; } else v = k.from + (k.to - k.from) * p; }
+  return v; }
+
+/* ---------- assets ---------- */
+const loader = new T3.TextureLoader(); const TX = {}; const READY = [];
+function tex(n) { if (!TX[n]) TX[n] = new Promise(r => loader.load('assets/' + n, t => { t.anisotropy = 4; t.minFilter = T3.LinearFilter; t.generateMipmaps = false; r(t); })); return TX[n]; }
+const CPU = {};
+function cpuImg(n) { if (!CPU[n]) CPU[n] = new Promise(r => { const im = new Image(); im.onload = () => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); r({ w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }); }; im.src = 'assets/' + n; }); return CPU[n]; }
+const sampleCPU = (I, u, v) => { const x = clamp(Math.round(u * (I.w - 1)), 0, I.w - 1), y = clamp(Math.round((1 - v) * (I.h - 1)), 0, I.h - 1); return I.d[(y * I.w + x) * 4] / 255; };
+
+/* ---------- one shared WebGL renderer; each scene copies its frame into its own 2D canvas ---------- */
+const GLC = document.createElement('canvas'); GLC.width = VW; GLC.height = VH;
+const RND = new T3.WebGLRenderer({ canvas: GLC, antialias: false, preserveDrawingBuffer: true }); RND.setPixelRatio(1); RND.setSize(VW, VH, false);
+const PH = 2, FOV = 32, ASP = VW / VH;
+const VS = `uniform sampler2D dep; uniform float dScale; varying vec2 vUv;
+void main(){ vUv = uv; float d = texture2D(dep, uv).r; vec3 p = position; p.z += (d - 0.5) * dScale; gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`;
+const FS = `uniform sampler2D tex; uniform float bright, sat, time, shim, warm; uniform vec4 shimRect; varying vec2 vUv;
+void main(){ vec2 uv = vUv;
+  if (shim > 0.0) { float m = smoothstep(shimRect.x, shimRect.x + 0.06, uv.x) * smoothstep(shimRect.z, shimRect.z - 0.06, uv.x) * smoothstep(shimRect.y, shimRect.y + 0.06, uv.y) * smoothstep(shimRect.w, shimRect.w - 0.06, uv.y);
+    uv += shim * m * vec2(sin(uv.y * 160.0 + time * 6.0) * 0.0022, sin(uv.x * 110.0 + time * 4.6) * 0.0016); }
+  vec3 c = texture2D(tex, uv).rgb; c += warm * vec3(0.16, 0.06, 0.0);
+  float l = dot(c, vec3(0.299, 0.587, 0.114)); c = mix(vec3(l), c, sat) * bright; gl_FragColor = vec4(c, 1.0); }`;
+const SCN = {};
+function plate3(o) {
+  const el = mk('div', { class: 'scene', id: 'sc_' + o.id }, $('scenes')); const push = mk('div', { class: 'push' }, el);
+  const cv = mk('canvas', { width: VW, height: VH, class: 'cv' }, push); const ov = band(mk('div', { class: 'ov' }, push)); const chars = band(mk('div', { class: 'chars' }, push));
+  const S = { id: o.id, px: (PORT && D.pcam && D.pcam[o.id] !== undefined) ? D.pcam[o.id] : undefined, el, push, cv, ov, chars, o, cam0: Track(Object.assign({ x: .5, y: .5, z: 1, yaw: 0, pitch: 0 }, o.cam0 || {})), uT: {}, hooks: [], live: o.live };
+  if (!o.live) return S;   // outside this render segment: DOM only, no textures
+  S.ctx = cv.getContext('2d');
+  const sc = new T3.Scene(); sc.background = new T3.Color(0x05080F); const cam = new T3.PerspectiveCamera(FOV, ASP, .02, 100); sc.add(cam);
+  const W = PH * (o.ar || ASP);
+  const U = { tex: { value: null }, dep: { value: null }, dScale: { value: o.dScale || .3 }, bright: { value: 1 }, sat: { value: 1 }, time: { value: 0 }, shim: { value: 0 }, warm: { value: 0 },
+    shimRect: { value: new T3.Vector4(0, 0, 1, 1) } };
+  if (o.shimRect) U.shimRect.value.set(o.shimRect[0], 1 - o.shimRect[3], o.shimRect[2], 1 - o.shimRect[1]);
+  sc.add(new T3.Mesh(new T3.PlaneGeometry(W, PH, 320, 180), new T3.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS })));
+  Object.assign(S, { sc, cam, U, W });
+  READY.push(tex(o.tex).then(t => U.tex.value = t), tex(o.dep).then(t => U.dep.value = t), cpuImg(o.dep).then(I => S.depI = I));
+  return S;
+}
+const world = (S, u, v, lift) => { const d = S.depI ? sampleCPU(S.depI, u, 1 - v) : .5; return new T3.Vector3((u - .5) * S.W, (.5 - v) * PH, (d - .5) * S.U.dScale.value + (lift || 0)); };
+const toScreen = (cam, p) => { const v = p.clone().project(cam); const x = (v.x + 1) / 2 * VW, y = (1 - v.y) / 2 * VH; return PORT ? { x: (x - BX) / BS, y: (y - BY) / BS, z: v.z } : { x, y, z: v.z }; };
+function setCam(S, s) { const Z = Math.max(1.0, s.z); const hv = PH / 2 / Z / 1.12; const dist = hv / Math.tan(FOV * Math.PI / 360); const hw = hv * ASP;
+  let tx = ((S.px !== undefined ? S.px : s.x) - .5) * S.W, ty = (.5 - s.y) * PH;   // Shorts can re-aim a shot sideways (portrait sees ~30% of the plate width) const mx = Math.max(0, S.W / 2 - hw), my = Math.max(0, PH / 2 - hv); tx = clamp(tx, -mx, mx); ty = clamp(ty, -my, my);
+  const yw = s.yaw * Math.PI / 180, pt = s.pitch * Math.PI / 180;
+  S.cam.position.set(tx + Math.sin(yw) * Math.cos(pt) * dist, ty + Math.sin(pt) * dist, Math.cos(yw) * Math.cos(pt) * dist); S.cam.lookAt(tx, ty, 0); S.cam.updateMatrixWorld(); }
+function renderPlate(S, t) { if (!S.live) return; setCam(S, valAt(S.cam0, t)); S.U.time.value = t; for (const k in S.uT) S.U[k].value = valAt(S.uT[k], t);
+  RND.render(S.sc, S.cam); S.ctx.drawImage(GLC, 0, 0); for (const h of S.hooks) h(t); }
+const proj = (S, u, v, t) => { if (!S.live) return { x: u * 1920, y: v * 1080 }; setCam(S, valAt(S.cam0, t)); return toScreen(S.cam, world(S, u, v, .02)); };
+
+/* ---------- build scenes from the shot list ---------- */
+for (const s of D.shots) { const live = inWin(s.win[0], s.win[1]); SCN[s.id] = plate3(Object.assign({}, s, { live })); }
+const shotOf = id => SCN[id];
+
+/* ---------- characters (screen space, inside a scene so they ride its cuts) ---------- */
+const CH = {};
+function addChar(S, name, side, o) { o = o || {}; const H = o.h || 640, FEET = o.feet || 1000; const w = H * D.ar[name]; const x = (PORT ? { L: 640, R: 1290, M: 960, LL: 560, RR: 1370 } : { L: 470, R: 1450, M: 960, LL: 330, RR: 1590 })[side] || side;
+  const sh = mk('div', { class: 'shadow' }, S.chars); Object.assign(sh.style, { left: (x - w * .4) + 'px', top: (FEET - 26) + 'px', width: (w * .8) + 'px' });
+  const c = mk('div', { class: 'char' }, S.chars); Object.assign(c.style, { left: (x - w / 2) + 'px', top: (FEET - H) + 'px', width: w + 'px', height: H + 'px' });
+  mk('img', { src: `assets/${name}.png`, alt: '' }, c); return { c, sh, x, S }; }
+
+/* ---------- titles, numbers, captions ---------- */
+const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps')); const d = mk('div', { class: 'cl' }, g); markup(c.txt, d); return { c, g, d, words: [...d.querySelectorAll('span')] }; });
+
+/* ---------- timeline ---------- */
+function build() {
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false };
+  const MO = BhugolMotion(tl, {});
+  const cam = (S, to, at, dur, e) => key(S.cam0, to, at, dur, e || 'sine.inOut');
+  const on = (T, at, d, v) => key(T, v === undefined ? 1 : v, at, d || .4, 'power1.inOut');
+  const shake = (at, k) => MO.shake(at, .6, 'rig-6d-wobble', k || .7);
+  const nextChunk = t => { const c = D.chunks.find(c => c.sn > t + .5); return c ? c.sn - .12 : t + 2; };
+  // shots + cuts (one source of truth with the sound plan)
+  const PL = D.shots.map(s => ({ S: SCN[s.id], el: SCN[s.id].el, at: s.t, cut: s.cut }));
+  MO.shots(PL);
+  // camera per shot: from cam0 to cam1 over the shot, plus optional mid keys
+  for (const s of D.shots) { const S = SCN[s.id]; const a = s.t, b = s.win[1];
+    if (s.cam1) cam(S, s.cam1, Math.max(0, a - .45), Math.max(.5, b - a + .45), s.camEase || 'sine.inOut');
+    for (const k of s.keys || []) cam(S, k.to, k.t, k.d || .8, k.e || 'power2.inOut');
+    if (s.shim) { S.uT.shim = Track(0); key(S.uT.shim, s.shim[0], s.t, .6); }
+    if (s.handheld) MO.shake(a, Math.max(.5, b - a), 'handheld-normal-mild', s.handheld, { decay: false });
+    if (s.iris) tl.fromTo(S.push, { clipPath: 'ellipse(9% 16% at 50% 50%)' }, { clipPath: 'ellipse(80% 95% at 50% 50%)', duration: .55, ease: 'power3.out', ...IR }, a); }
+  // beats
+  const B = D.beats || [];
+  for (const b of B) { const S = b.shot ? SCN[b.shot] : null; const t = b.t, u = b.u || nextChunk(b.t);
+    if ((D.seg || D.pieces) && !inWin(t, Math.max(b.tend || t, u))) continue;   // beat lies outside this render segment
+    if (b.kind === 'punch' && S) MO.punch(S.push, t, b.level || 1.15, b.back);
+    else if (b.kind === 'circle' && S) MO.hwCircle(S.ov, tt => proj(S, b.c[0], b.c[1], tt), b.r[0], b.r[1], t, u, { seed: 3 + t, col: b.col || '#FF3B30' });
+    else if (b.kind === 'arrow' && S) MO.hwArrow(S.ov, tt => { const p0 = proj(S, b.from[0], b.from[1], tt), p1 = proj(S, b.to[0], b.to[1], tt); return { x0: p0.x, y0: p0.y, x1: p1.x, y1: p1.y }; }, t, u, { seed: 7 + t, col: b.col || '#FF3B30' });
+    else if (b.kind === 'grow' || b.kind === 'count' || b.kind === 'slam') numBeat(tl, MO, b, t, u);
+    else if (b.kind === 'flap') { const el = mk('div', { class: 'flapBox', style: `top:${b.y || 70}px` }, $('titles')); el.innerHTML = '<div class="flapRow"></div>';
+      tl.set(el, { opacity: 1 }, t); MO.flap(el.querySelector('.flapRow'), String(b.text), t, { stagger: .035 }); MO.textOut(el, u); }
+    else if (b.kind === 'charslam') { const el = mk('div', { class: 'tl', style: `top:${b.y || 110}px;font-size:${b.size || 150}px` }, $('titles')); markup(b.text, el);
+      tl.set(el, { opacity: 1 }, t); MO.charSlam(el, t, { blur: b.blur ? 'css' : false }); MO.textOut(el, u); }
+    else if (b.kind === 'shake') shake(t, b.k);
+    else if (b.kind === 'flash') tl.fromTo($('flash'), { opacity: 0 }, { keyframes: [{ opacity: b.a || .55, duration: .06 }, { opacity: 0, duration: .45 }], ...IR }, t);
+    else if (b.kind === 'moment' && MOMENTS[b.what]) MOMENTS[b.what](tl, MO, S, b, t, u, IR);
+  }
+  // captions: karaoke + red bar behind keywords
+  for (const K of CAPS) { const c = K.c; if ((D.seg || D.pieces) && !inWin(c.sn, c.en)) continue; tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { y: 10 }, { y: 0, duration: .18, ease: 'power3.out', ...IR }, c.sn);
+    MO.karaoke(K.words, c.wt, w => w.classList.contains('k'));
+    K.words.forEach((w, i) => { if (w.classList.contains('k')) MO.sweep(w, c.wt[Math.min(i, c.wt.length - 1)], '#E8321C'); }); }
+  MO.shakeOn($('cshake'), D.dur);
+  // anything whose FIRST tween fades it in from 0 starts hidden (fromTo with immediateRender:false leaves it visible before its start)
+  { const first = new Map(); for (const tw of tl.getChildren(true, true, false)) { const g = tw.globalTime(0); for (const el of tw.targets()) { if (!(el instanceof Element)) continue; const f = first.get(el); if (!f || g < f.g) first.set(el, { g, tw }); } }
+    for (const [el, f] of first) { const st = f.tw.vars.startAt; if (st && st.opacity === 0) el.style.opacity = '0'; } }
+  // sort keyframes; one render driver reads time only
+  for (const id in SCN) { const S = SCN[id]; for (const T of [S.cam0, ...Object.values(S.uT)]) T.keys.sort((a, b) => a.a - b.a); }
+  const clk = { t: 0 };
+  tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => { const t = clk.t;
+    for (const s of D.shots) if (t >= s.win[0] - .05 && t <= s.win[1] + .1) renderPlate(SCN[s.id], t); } }, 0);
+  return tl;
+}
+
+let NOTE_N = 0;
+/* ---------- numbers ---------- */
+function numBeat(tl, MO, b, t, u) { const el = mk('div', { class: 'num' }, $('hud')); const fs = b.size || 150;
+  Object.assign(el.style, { fontSize: fs + 'px', top: (PORT ? Math.max(10, (b.y || 120) - 190) : (b.y || 120)) + 'px' });   // portrait: numbers sit centred, so lift them clear of centred objects
+  const al = PORT ? 'center' : b.align;   // portrait band crops the 16:9 edges: numbers go centre
+  if (al === 'left') el.style.left = (b.x || 120) + 'px'; else if (al === 'right') el.style.right = (b.x || 120) + 'px'; else { el.style.left = '0'; el.style.width = '1920px'; el.style.textAlign = 'center'; }
+  el.innerHTML = `<span class="knum">${b.text || ''}</span>${b.unit ? `<span class="ksuf">${b.unit}</span>` : ''}`;
+  const n = el.querySelector('.knum'), suf = el.querySelector('.ksuf');
+  tl.set(el, { opacity: 1 }, t);
+  if (b.kind === 'grow') MO.countGrow(n, b.to, t, { dur: b.dur || 1.2, from: b.from_ || 0, prefix: b.prefix, startScale: .4, suffixEl: suf });
+  else if (b.kind === 'count') MO.countUp(n, b.to, t, { from: b.from_ || 0, dur: b.dur || 1.2, prefix: b.prefix, suffix: b.suffix || '', decimals: b.dec || 0, plain: b.to >= 1000 && b.to <= 2100 && !b.prefix && !b.suffix });
+  else { if (b.to !== undefined) n.textContent = (b.prefix || '') + Number(b.to).toLocaleString('en-US', { minimumFractionDigits: b.dec || 0, maximumFractionDigits: b.dec || 0, useGrouping: !(b.to >= 1000 && b.to <= 2100 && !b.prefix) }) + (b.suffix || '');
+    el.setAttribute('data-hf-motion-blur', '{"samplesPerFrame": 8}'); mbWin(t - .05, t + .5); MO.slam(el, t, { shake: b.shake !== false }); }
+  MO.textOut(el, u);
+}
+
+/* ---------- hand-made moments (each = DOM + tweens; positions in screen px unless noted) ---------- */
+const NOTE = D.noteSvg, NOTE_NP = D.noteSvgNP;
+function noteEl(parent, o) { const w = o.w || 1100, h = w * 640 / 1440; const d = mk('div', { class: 'notew' }, parent);
+  Object.assign(d.style, { left: (o.x - w / 2) + 'px', top: (o.y - h / 2) + 'px', width: w + 'px', height: h + 'px' });
+  d.innerHTML = `<svg viewBox="0 0 1440 640">${(o.promise === false ? NOTE_NP : NOTE).replace(/NTID/g, o.id || ('n' + (++NOTE_N)))}${o.coin ? '<image class="ncoin" href="assets/coin_lion.png" x="560" y="160" width="320" height="317"/>' : ''}</svg>`;
+  return d; }
+const svgIn = (parent, w, h) => mk('svg', { class: 'dsvg', width: w || 1920, height: h || 1080, viewBox: `0 0 ${w || 1920} ${h || 1080}` }, parent, true);
+const drawOn = (tl, el, at, dur, IR) => { const L = el.getTotalLength ? el.getTotalLength() || 2000 : 2000; tl.fromTo(el, { attr: { 'stroke-dasharray': L, 'stroke-dashoffset': L }, opacity: 1 }, { attr: { 'stroke-dashoffset': 0 }, duration: dur || .5, ease: 'power2.inOut', ...IR }, at); };
+const popIn = (tl, el, at, IR, d) => tl.fromTo(el, { opacity: 0, scale: .3 }, { opacity: 1, scale: 1, duration: d || .4, ease: 'back.out(2)', transformOrigin: '50% 50%', ...IR }, at);
+const fadeOut = (tl, el, at, d) => tl.to(el, { opacity: 0, duration: d || .25, ease: 'power2.in' }, at);
+const COINSYM = ['£', '₣', '¥', '₹', '€', '$'];
+function coinDisc(parent, x, y, r, sym, col) { const g = mk('g', { transform: `translate(${x},${y})` }, parent, true);
+  mk('circle', { r, fill: col || '#E9B44C', stroke: '#8A5A12', 'stroke-width': r * .08 }, g, true); mk('circle', { r: r * .78, fill: 'none', stroke: '#FFF1C4', 'stroke-width': r * .04, opacity: .6 }, g, true);
+  const t = mk('text', { y: r * .36, 'text-anchor': 'middle', 'font-family': 'Inter', 'font-weight': 900, 'font-size': r * 1.05, fill: '#5A3A08' }, g, true); t.textContent = sym; return g; }
+function goldBarSvg(parent, x, y, s) { const g = mk('g', { transform: `translate(${x},${y}) scale(${s})` }, parent, true);
+  mk('path', { d: 'M-90,30 L90,30 L65,-30 L-65,-30 Z', fill: '#E9B44C', stroke: '#8A5A12', 'stroke-width': 5 }, g, true); mk('path', { d: 'M-65,-30 L65,-30 L55,-22 L-55,-22 Z', fill: '#FFE7A6', opacity: .8 }, g, true); return g; }
+function noteSvgSmall(parent, x, y, s, rot) { const g = mk('g', { transform: `translate(${x},${y}) rotate(${rot || 0}) scale(${s})` }, parent, true);
+  mk('rect', { x: -80, y: -36, width: 160, height: 72, rx: 6, fill: '#D9E0C7', stroke: '#2F4A37', 'stroke-width': 4 }, g, true); mk('ellipse', { cx: 0, cy: 0, rx: 20, ry: 24, fill: 'none', stroke: '#2F4A37', 'stroke-width': 3 }, g, true); return g; }
+
+const MOMENTS = {
+
+  // screen-space hand-drawn circle {c:[x,y], r:[rx,ry]}
+  mark(tl, MO, S, b, t, u, IR) { MO.hwCircle($('fx'), () => ({ x: b.c[0], y: b.c[1] }), b.r[0], b.r[1], t, u, { seed: 5 + t, col: b.col || '#FF3B30' }); },
+  // a year counter that runs back through time and prints BC below zero
+  yearrun(tl, MO, S, b, t, u, IR) { const el = mk('div', { class: 'num', style: `left:0;width:1920px;text-align:center;top:${b.y || 860}px;font-size:${b.size || 130}px` }, $('hud'));
+    const st = { v: b.frm }; const f = v => { v = Math.round(v); return v > 0 ? String(v) : (v === 0 ? '1 BC' : (-v) + ' BC'); };
+    tl.set(el, { opacity: 1, textContent: f(b.frm) }, t); tl.fromTo(st, { v: b.frm }, { v: b.to, duration: b.d || 1.6, ease: 'power2.inOut', ...IR, onUpdate: () => { el.textContent = f(st.v); } }, t); MO.textOut(el, u); },
+  // the real Lydian coin as a hero object
+  coin(tl, MO, S, b, t, u, IR) { const im = mk('img', { src: 'assets/coin_lion.png', style: `position:absolute;left:${b.x - b.h * .505}px;top:${b.y - b.h / 2}px;height:${b.h}px;opacity:0;filter:drop-shadow(0 34px 50px rgba(0,0,0,.7))` }, S ? S.ov : $('fx'));
+    im.setAttribute('data-hf-motion-blur', '{"samplesPerFrame": 8}'); mbWin(t - .05, t + .45);
+    tl.fromTo(im, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: .35, ease: 'expo.out', ...IR }, t);
+    if (b.grow) tl.to(im, { scale: 1.12, rotation: 3, duration: Math.max(.5, u - t - .4), ease: 'none' }, t + .4); fadeOut(tl, im, u); },
+  // hard punch-ins on the coin: cuts [[t, scale, dx, dy]]
+  coinshot(tl, MO, S, b, t, u, IR) { const w = mk('div', { style: 'position:absolute;inset:0;opacity:0' }, S.ov); const im = mk('img', { src: 'assets/coin_lion.png', style: 'position:absolute;left:556px;top:140px;height:800px;filter:drop-shadow(0 34px 50px rgba(0,0,0,.7))' }, w);
+    tl.set(w, { opacity: 1 }, t); for (const [ct, sc, dx, dy] of b.cuts) tl.set(im, { scale: sc, x: dx, y: dy, transformOrigin: '50% 50%' }, ct);
+    tl.fromTo(im, { rotation: -3 }, { rotation: 3, duration: Math.max(.5, u - t), ease: 'none', ...IR }, t); fadeOut(tl, w, u); },
+  // paper ticket -> gold in the vault
+  ticket(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); mk('rect', { x: 260, y: 280, width: 1400, height: 520, rx: 34, fill: 'rgba(8,12,22,.78)' }, sv, true);
+    const n = noteSvgSmall(sv, 560, 540, 2.6, -4); const g = goldBarSvg(sv, 1360, 560, 2.0); const ar = mk('path', { d: 'M800,540 Q1000,470 1180,540', fill: 'none', stroke: '#E9B44C', 'stroke-width': 14, 'stroke-linecap': 'round', opacity: 0 }, sv, true);
+    const hd = mk('path', { d: 'M1140,500 L1185,542 L1130,566', fill: 'none', stroke: '#E9B44C', 'stroke-width': 14, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0 }, sv, true);
+    tl.fromTo(sv, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t); popIn(tl, n, t + .1, IR); drawOn(tl, ar, b.vault - .2, .45, IR); tl.fromTo(hd, { opacity: 0 }, { opacity: 1, duration: .1, ...IR }, b.vault + .25); popIn(tl, g, b.vault + .2, IR); fadeOut(tl, sv, u); },
+  // the carrier note: {x,y,w,enter:'bottomleft'|'right'|'left'|'none', coin, promise, out, dive:{t,to:[x,y,scale],d}, back:{t,d}, coinTo:[[t,s],...], swap:t, shimmer:t}
+  note(tl, MO, S, b, t, u, IR) { if (PORT && b.x !== undefined && b.x !== 960) { const dx = 960 - b.x; b = Object.assign({}, b, { x: 960 }); if (b.dive) b.dive = Object.assign({}, b.dive, { to: [b.dive.to[0] - dx, b.dive.to[1], b.dive.to[2]] }); }   // portrait band crops the sides: centre the note
+    const host = S ? S.ov : $('fx'); const d = noteEl(host, b);
+    const from = { bottomleft: { x: -900, y: 500, rotation: -24 }, right: { x: 1300, y: 0, rotation: 16 }, left: { x: -1300, y: 0, rotation: -16 }, top: { x: 0, y: -900, rotation: 8 }, none: { x: 0, y: 0, rotation: b.rot || -3 } }[b.enter || 'none'];
+    tl.fromTo(d, Object.assign({ opacity: b.enter === 'none' ? 0 : 1, scale: 1 }, from), { opacity: 1, x: 0, y: 0, rotation: b.rot === undefined ? -3 : b.rot, duration: b.enter === 'none' ? .3 : .8, ease: 'expo.out', ...IR }, t);
+    if (b.dive) tl.to(d, { x: b.dive.to[0], y: b.dive.to[1], scale: b.dive.to[2], rotation: 0, duration: b.dive.d || 1.0, ease: 'power2.inOut' }, b.dive.t);
+    if (b.back) tl.to(d, { x: 0, y: 0, scale: 1, rotation: b.rot === undefined ? -3 : b.rot, duration: b.back.d || .8, ease: 'power2.inOut' }, b.back.t);
+    if (b.coinTo) { const c = d.querySelector('.ncoin'); for (const [ct, cs] of b.coinTo) tl.to(c, { scale: cs, transformOrigin: '50% 50%', duration: .8, ease: 'power3.inOut' }, ct); }
+    if (b.swap) { tl.to(d, { x: -1500, rotation: -12, duration: .45, ease: 'power3.in' }, b.swap); tl.fromTo(d, { x: 1500, rotation: 12 }, { x: 0, rotation: -3, duration: .55, ease: 'expo.out', immediateRender: false }, b.swap + .5); }
+    if (b.shimmer) { const f = { v: 0 }; tl.fromTo(f, { v: 0 }, { v: 1, duration: 2.4, ease: 'none', ...IR, onUpdate: () => { const k = Math.sin(f.v * Math.PI); d.style.filter = `blur(${(k * 2.2).toFixed(2)}px) brightness(${(1 + k * .25).toFixed(3)})`; d.style.transform += ''; } }, b.shimmer);
+      tl.fromTo(d, { skewX: 0 }, { keyframes: Array.from({ length: 8 }, (_, i) => ({ skewX: i % 2 ? -2.5 : 2.5, duration: .3, ease: 'sine.inOut' })).concat([{ skewX: 0, duration: .2 }]), ...IR }, b.shimmer); }
+    if (b.fly) { tl.to(d, { scale: .55, rotation: 6, y: -60, duration: b.fly.d || 2, ease: 'sine.inOut' }, b.fly.t); tl.to(d, { scale: 7, duration: .6, ease: 'power3.in' }, b.fly.t2); }
+    if (b.out) tl.to(d, { x: 1600, rotation: 14, duration: .5, ease: 'power3.in' }, b.out);
+    return d; },
+  // ticks: {items:[[t,x,y]]} hand-drawn checkmarks
+  ticks(tl, MO, S, b, t, u, IR) { const sv = svgIn(S ? S.ov : $('fx')); for (const [tt, x, y] of b.items) { const p = mk('path', { d: `M${x - 40},${y} L${x - 8},${y + 34} L${x + 52},${y - 44}`, fill: 'none', stroke: '#3DDC84', 'stroke-width': 18, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0, style: 'filter:drop-shadow(0 4px 0 rgba(0,0,0,.5))' }, sv, true); drawOn(tl, p, tt, .28, IR); }
+    fadeOut(tl, sv, u); },
+  // chain behind the note snaps at b.snap
+  chain(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const L = mk('g', {}, sv, true), R = mk('g', {}, sv, true); const y = b.y || 540;
+    for (let i = 0; i < 22; i++) { const x = 60 + i * 86; mk('ellipse', { cx: x, cy: y, rx: 50, ry: 22, fill: 'none', stroke: i % 2 ? '#C9962E' : '#E9B44C', 'stroke-width': 14 }, i < 11 ? L : R, true); }
+    tl.fromTo(sv, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t);
+    tl.to(L, { rotation: -14, y: 260, transformOrigin: '0px 540px', duration: .7, ease: 'power3.in' }, b.snap); tl.to(R, { rotation: 14, y: 260, transformOrigin: '1920px 540px', duration: .7, ease: 'power3.in' }, b.snap);
+    fadeOut(tl, sv, u); },
+  // money stack vs gold stack (money cannot outgrow gold)
+  pile(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const g = mk('g', {}, sv, true); const gold = mk('g', {}, g, true), money = mk('g', {}, g, true);
+    for (let i = 0; i < 6; i++) goldBarSvg(gold, 700, 760 - i * 62, 1.3);
+    const notes = []; for (let i = 0; i < 9; i++) notes.push(noteSvgSmall(money, 1220, 780 - i * 62, 1.5, (i % 2 ? 2 : -2)));
+    tl.fromTo(g, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .4, ...IR }, t);
+    notes.forEach((n, i) => { tl.fromTo(n, { opacity: 0 }, { opacity: i < 6 ? 1 : .35, duration: .15, ...IR }, t + .3 + i * .12); });
+    const cap = mk('line', { x1: 1060, x2: 1380, y1: 380, y2: 380, stroke: '#FF3B30', 'stroke-width': 10, 'stroke-dasharray': '24 14', opacity: 0 }, sv, true); drawOn(tl, cap, t + 1.1, .4, IR);
+    fadeOut(tl, sv, u); },
+  // split screen: lock (ordinary people) vs open gate (foreign governments); crack at b.crack
+  split(tl, MO, S, b, t, u, IR) { const box = mk('div', { style: 'position:absolute;inset:0;opacity:0' }, S.ov);
+    box.innerHTML = `<div style="position:absolute;left:120px;top:250px;width:780px;height:480px;border-radius:30px;background:rgba(8,12,22,.82);border:4px solid #FF3B30"></div>
+      <div style="position:absolute;left:1020px;top:250px;width:780px;height:480px;border-radius:30px;background:rgba(8,12,22,.82);border:4px solid #3DDC84"></div>
+      <div class="lbl" style="opacity:1;left:120px;width:780px;text-align:center;top:640px;font-size:48px">ORDINARY PEOPLE</div>
+      <div class="lbl" style="opacity:1;left:1020px;width:780px;text-align:center;top:640px;font-size:48px">FOREIGN GOVERNMENTS</div>
+      <div class="emo" style="opacity:1;left:420px;top:330px;font-size:220px">🔒</div><div class="emo" style="opacity:1;left:1310px;top:330px;font-size:220px">🏛️</div>`;
+    tl.fromTo(box, { opacity: 0, scale: .94 }, { opacity: 1, scale: 1, duration: .35, ease: 'power3.out', ...IR }, t);
+    if (b.crack) { const sv = svgIn(box); const p = mk('path', { d: 'M960,180 L930,330 L990,420 L940,560 L1000,690 L960,860', fill: 'none', stroke: '#FFFFFF', 'stroke-width': 12, 'stroke-linejoin': 'round', opacity: 0 }, sv, true); drawOn(tl, p, b.crack, .3, IR); }
+    fadeOut(tl, box, u); },
+  // peg diagram: currencies -> $ -> gold
+  peg(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const back = mk('rect', { x: 150, y: 200, width: 1620, height: 640, rx: 34, fill: 'rgba(8,12,22,.78)' }, sv, true);
+    const ys = [330, 520, 710], syms = ['£', '₣', '¥']; const coins = ys.map((y, i) => coinDisc(sv, 420, y, 62, syms[i], '#C9CFDA'));
+    const dol = coinDisc(sv, 960, 520, 110, '$'); const bar = goldBarSvg(sv, 1500, 520, 1.6);
+    tl.fromTo(sv, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t); [back].forEach(e => tl.fromTo(e, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t));
+    coins.forEach((c, i) => popIn(tl, c, t + .1 + i * .12, IR)); b.a1 = b.a1 || t + .6; b.a2 = b.a2 || t + 1.6;
+    ys.forEach((y, i) => { const p = mk('path', { d: `M490,${y} Q700,${(y + 520) / 2 - 30} 840,520`, fill: 'none', stroke: '#F7F1E3', 'stroke-width': 9, 'stroke-linecap': 'round', opacity: 0 }, sv, true); drawOn(tl, p, b.a1 + i * .1, .4, IR); });
+    popIn(tl, dol, b.a1 + .35, IR); const p2 = mk('path', { d: 'M1080,520 L1360,520', fill: 'none', stroke: '#E9B44C', 'stroke-width': 12, 'stroke-linecap': 'round', opacity: 0 }, sv, true); drawOn(tl, p2, b.a2, .4, IR); popIn(tl, bar, b.a2 + .3, IR);
+    fadeOut(tl, sv, u); },
+  // ring that fills to pct with a count in the middle
+  ring(tl, MO, S, b, t, u, IR) { const sv = svgIn(S ? S.ov : $('fx')); const cx = b.cx || 960, cy = b.cy || 470, r = b.r || 230;
+    mk('circle', { cx, cy, r: r + 40, fill: 'rgba(8,12,22,.72)' }, sv, true); mk('circle', { cx, cy, r, fill: 'none', stroke: 'rgba(255,255,255,.18)', 'stroke-width': 44 }, sv, true);
+    const arc = mk('circle', { cx, cy, r, fill: 'none', stroke: '#E9B44C', 'stroke-width': 44, 'stroke-linecap': 'round', transform: `rotate(-90 ${cx} ${cy})`, 'stroke-dasharray': `0 ${2 * Math.PI * r}` }, sv, true);
+    const tx = mk('text', { x: cx, y: cy + r * .22, 'text-anchor': 'middle', 'font-family': 'Inter', 'font-weight': 900, 'font-size': r * .62, fill: '#F7F1E3', stroke: '#0A0F1A', 'stroke-width': 12, 'paint-order': 'stroke fill' }, sv, true); tx.textContent = '0%';
+    tl.fromTo(sv, { opacity: 0, scale: .8 }, { opacity: 1, scale: 1, transformOrigin: `${cx}px ${cy}px`, duration: .35, ease: 'power3.out', ...IR }, t);
+    const st = { v: 0 }, L = 2 * Math.PI * r; tl.fromTo(st, { v: 0 }, { v: b.pct, duration: b.dur || 1.3, ease: 'power3.out', ...IR, onUpdate: () => { arc.setAttribute('stroke-dasharray', `${(L * st.v / 100).toFixed(1)} ${L}`); tx.textContent = Math.round(st.v) + '%'; } }, t + .2);
+    fadeOut(tl, sv, u); },
+  // seesaw: overseas dollars pile up vs fixed gold, tips at b.tip
+  seesaw(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const g = mk('g', {}, sv, true); mk('path', { d: 'M960,860 L900,960 L1020,960 Z', fill: '#8A93A6' }, sv, true);
+    mk('rect', { x: 460, y: 840, width: 1000, height: 20, rx: 10, fill: '#C9CFDA' }, g, true); for (let i = 0; i < 3; i++) goldBarSvg(g, 600, 800 - i * 60, 1.2);
+    const notes = []; for (let i = 0; i < 10; i++) notes.push(noteSvgSmall(g, 1310 + (i % 2 ? 14 : -14), 800 - i * 50, 1.3, i % 2 ? 4 : -4));
+    tl.fromTo(sv, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t);
+    notes.forEach((n, i) => tl.fromTo(n, { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: .2, ease: 'power3.out', ...IR }, t + .3 + i * ((b.tip - t - .5) / 10)));
+    tl.fromTo(g, { rotation: -4 }, { rotation: 9, transformOrigin: '960px 850px', duration: .5, ease: 'power3.in', ...IR }, b.tip);
+    fadeOut(tl, sv, u); },
+  // map arc between two points in plate-normalised coords {from:[u,v], to:[u,v], d}
+  arc(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const p = mk('path', { fill: 'none', stroke: '#E9B44C', 'stroke-width': 10, 'stroke-linecap': 'round', 'stroke-dasharray': '1 0' }, sv, true);
+    const pins = [0, 1].map(() => mk('circle', { r: 16, fill: '#FF3B30', stroke: '#fff', 'stroke-width': 5, opacity: 0 }, sv, true));
+    S.hooks.push(tt => { if (tt < t - .1 || tt > u + .4) { sv.style.opacity = 0; return; } sv.style.opacity = clamp((u + .3 - tt) / .3, 0, 1);
+      const a = proj(S, b.from[0], b.from[1], tt), c = proj(S, b.to[0], b.to[1], tt); const k = clamp((tt - t - .2) / (b.d || .9), 0, 1), e = 1 - Math.pow(1 - k, 3);
+      const mx = (a.x + c.x) / 2, my = Math.min(a.y, c.y) - Math.abs(c.x - a.x) * .32; pins[0].setAttribute('cx', a.x); pins[0].setAttribute('cy', a.y); pins[1].setAttribute('cx', c.x); pins[1].setAttribute('cy', c.y);
+      pins[0].setAttribute('opacity', tt >= t ? 1 : 0); pins[1].setAttribute('opacity', k >= 1 ? 1 : 0);
+      p.setAttribute('d', `M${a.x},${a.y} Q${mx},${my} ${c.x},${c.y}`); const L = p.getTotalLength(); p.setAttribute('stroke-dasharray', `${L * e} ${L}`); }); },
+  // pins popping on a map {pts:[[u,v],...], dur}
+  pins(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const cs = b.pts.map(() => mk('circle', { r: 12, fill: '#E9B44C', stroke: '#0A0F1A', 'stroke-width': 4, opacity: 0 }, sv, true));
+    S.hooks.push(tt => { sv.style.opacity = tt < u + .3 ? 1 : 0; b.pts.forEach((q, i) => { const p = proj(S, q[0], q[1], tt); const ti = t + i * (b.dur || 1.4) / b.pts.length; const k = clamp((tt - ti) / .18, 0, 1);
+      cs[i].setAttribute('cx', p.x); cs[i].setAttribute('cy', p.y); cs[i].setAttribute('opacity', k); cs[i].setAttribute('r', (12 * (k < 1 ? .5 + k * .8 : 1)).toFixed(1)); }); }); },
+  // currency coins float up and drift
+  float(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const cs = COINSYM.map((s, i) => coinDisc(sv, (PORT ? 410 : 260) + i * (PORT ? 220 : 280), 1180, 70, s, s === '$' ? '#E9B44C' : '#C9CFDA'));
+    cs.forEach((c, i) => tl.fromTo(c, { y: 0 }, { y: -700 - (i % 3) * 120, x: (i % 2 ? 40 : -40), duration: 3.2, ease: 'power2.out', ...IR }, t + i * .12)); fadeOut(tl, sv, u); },
+  // phone with a family chat; a morning meme; then everyone becomes $
+  phone(tl, MO, S, b, t, u, IR) { const ph = mk('div', { class: 'phone', style: `left:${PORT ? 750 : 1300}px;top:120px` }, S.ov); const ix0 = PORT ? 585 : 190;
+    const msgs = [['Dinner at 8?', 0], ['👍', 1], ['Good morning 🌞🌸🙏', 0], ['😂', 1]]; const els = msgs.map(([m, me], i) => { const e = mk('div', { class: 'bub' + (me ? ' me' : '') }, ph); e.textContent = m; e.style.top = (60 + i * 120) + 'px'; return e; });
+    if (PORT) gsap.set(ph, { scale: 1.45, transformOrigin: '50% 0%' });   // portrait: the phone is the whole story here, make it big
+    tl.fromTo(ph, { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: .45, ease: 'power3.out', ...IR }, t);
+    els.forEach((e, i) => popIn(tl, e, (b.times || [])[i] || t + .5 + i * .45, IR, .3));
+    const sv = svgIn(S.ov); const icons = ['🏦', '🚢', '🏛️', '🧑'].map((ic, i) => { const e = mk('div', { class: 'emo', style: `left:${ix0 + i * 250}px;top:300px;font-size:150px` }, S.ov); e.textContent = ic; return e; });
+    icons.forEach((e, i) => popIn(tl, e, b.icons + i * .15, IR)); const dl = icons.map((e, i) => { const c = coinDisc(sv, ix0 + 75 + i * 250, 560, 52, '$'); tl.fromTo(c, { opacity: 0 }, { opacity: 1, duration: .2, ...IR }, b.icons + .6 + i * .15); return c; });
+    fadeOut(tl, ph, PORT ? b.icons - .1 : u); fadeOut(tl, sv, u); icons.forEach(e => fadeOut(tl, e, u)); },
+  // horizontal bars {rows:[[label,val,col]], max}
+  hbars(tl, MO, S, b, t, u, IR) { const box = mk('div', { style: 'position:absolute;left:260px;top:300px;width:1400px;height:420px;opacity:0' }, S.ov);
+    box.innerHTML = '<div style="position:absolute;inset:-40px;border-radius:30px;background:rgba(8,12,22,.8)"></div>';
+    tl.fromTo(box, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t);
+    b.rows.forEach(([lab, val, col, at], i) => { const y = 40 + i * 190; const l = mk('div', { class: 'lbl', style: `opacity:1;left:20px;top:${y + 26}px;font-size:56px` }, box); l.textContent = lab;
+      const bar = mk('div', { style: `position:absolute;left:300px;top:${y}px;height:110px;width:${1000 * val / b.max}px;border-radius:14px;background:${col};transform-origin:0 50%` }, box);
+      const n = mk('div', { class: 'lbl', style: `opacity:1;left:${320 + 1000 * val / b.max}px;top:${y + 18}px;font-size:76px;color:${col}` }, box);
+      tl.fromTo(bar, { scaleX: 0 }, { scaleX: 1, duration: 1.0, ease: 'power3.out', ...IR }, at); MO.countUp(n, val, at, { suffix: '%', dur: 1.0, noScale: true }); });
+    fadeOut(tl, box, u); },
+  // vertical bars {rows:[[label,val,at]], max, unit}
+  vbars(tl, MO, S, b, t, u, IR) { const box = mk('div', { style: 'position:absolute;left:300px;top:150px;width:1320px;height:760px;opacity:0' }, S.ov);
+    box.innerHTML = '<div style="position:absolute;inset:-30px;border-radius:30px;background:rgba(8,12,22,.78)"></div>';
+    tl.fromTo(box, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t);
+    b.rows.forEach(([lab, val, at], i) => { const x = 60 + i * 320, H = 520 * val / b.max;
+      const bar = mk('div', { style: `position:absolute;left:${x}px;top:${640 - H}px;width:220px;height:${H}px;border-radius:12px 12px 0 0;background:linear-gradient(#FFE7A6,#E9B44C 40%,#B07A1E);transform-origin:50% 100%` }, box);
+      const l = mk('div', { class: 'lbl', style: `opacity:1;left:${x - 20}px;width:260px;text-align:center;top:660px;font-size:52px` }, box); l.textContent = lab;
+      const n = mk('div', { class: 'lbl', style: `opacity:1;left:${x - 40}px;width:300px;text-align:center;top:${580 - H}px;font-size:52px;color:#E9B44C` }, box);
+      tl.fromTo(bar, { scaleY: 0 }, { scaleY: 1, duration: .7, ease: 'power3.out', ...IR }, at); MO.countUp(n, val, at, { dur: .7, noScale: true, suffix: b.unit || '' }); tl.set(n, { opacity: 0 }, 0); tl.set(n, { opacity: 1 }, at); });
+    fadeOut(tl, box, u); },
+  // three pillars rising under the note
+  pillars(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const ic = ['🏦', '🧾', '🤝'];
+    b.times.forEach((at, i) => { const x = 560 + i * 400; const g = mk('g', {}, sv, true); mk('rect', { x: x - 80, y: 485, width: 160, height: 390, fill: '#E7E0CC', stroke: '#8A8270', 'stroke-width': 6 }, g, true);
+      for (let k = 0; k < 4; k++) mk('rect', { x: x - 64 + k * 34, y: 505, width: 14, height: 350, fill: '#CFC6AE' }, g, true); mk('rect', { x: x - 110, y: 455, width: 220, height: 36, fill: '#E7E0CC', stroke: '#8A8270', 'stroke-width': 6 }, g, true);
+      tl.fromTo(g, { y: 460 }, { y: 0, duration: .55, ease: 'power3.out', ...IR }, at); const e = mk('div', { class: 'emo', style: `left:${x - 55}px;top:600px;font-size:110px` }, S.ov); e.textContent = ic[i]; popIn(tl, e, at + .4, IR); fadeOut(tl, e, u); });
+    fadeOut(tl, sv, u); },
+  // magnifying glass sweep + subscribe button with click + bell
+  subscribe(tl, MO, S, b, t, u, IR) { const host = S ? S.ov : $('fx'); const btn = mk('div', { class: 'btn', style: `left:${b.x || 690}px;top:${b.y || 820}px;width:${b.w || 540}px` }, host); btn.innerHTML = '<span>🔔</span><span>SUBSCRIBE</span>';
+    if (b.glass) { const g = mk('div', { style: 'position:absolute;left:0;top:0;width:300px;height:300px;border-radius:50%;border:16px solid #C9CFDA;box-shadow:0 0 0 8px rgba(0,0,0,.4), inset 0 0 60px rgba(255,255,255,.35);opacity:0' }, host);
+      tl.fromTo(g, { opacity: 0, x: 200, y: 200 }, { opacity: 1, x: 1400, y: 300, duration: 2.2, ease: 'sine.inOut', ...IR }, b.glass); fadeOut(tl, g, b.glass + 2.1); }
+    tl.fromTo(btn, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2)', transformOrigin: '50% 50%', ...IR }, b.btn || t);
+    const cl = b.click || (b.btn || t) + 1.0; tl.to(btn, { keyframes: [{ scale: .93, duration: .1 }, { scale: 1, duration: .12 }] }, cl); tl.set(btn, { backgroundColor: '#3A3F4B' }, cl + .1);
+    tl.set(btn.firstChild, { rotation: 0 }, 0); tl.to(btn.firstChild, { keyframes: [{ rotation: 18, duration: .08 }, { rotation: -16, duration: .08 }, { rotation: 10, duration: .08 }, { rotation: 0, duration: .08 }], transformOrigin: '50% 10%' }, cl + .15);
+    fadeOut(tl, btn, u); },
+  // logo sting (end card)
+  logo(tl, MO, S, b, t, u, IR) { const host = S ? S.ov : $('fx'); const vg = mk('div', { style: 'position:absolute;left:260px;top:40px;width:1400px;height:820px;background:radial-gradient(ellipse at center, rgba(4,6,12,.72) 0%, rgba(4,6,12,.45) 45%, rgba(4,6,12,0) 72%);opacity:0' }, host);
+    tl.fromTo(vg, { opacity: 0 }, { opacity: 1, duration: .6, ...IR }, t - .1);
+    const im = mk('img', { src: 'assets/logo.png', style: 'position:absolute;left:560px;top:150px;width:800px;opacity:0;filter:drop-shadow(0 0 28px rgba(233,180,76,.35)) brightness(1.15)' }, host);
+    tl.fromTo(im, { opacity: 0, y: 40, scale: .92 }, { opacity: 1, y: 0, scale: 1, duration: .8, ease: 'expo.out', ...IR }, t); },
+  // anvil drops on a coin purse
+  anvil(tl, MO, S, b, t, u, IR) { const e = mk('div', { class: 'emo', style: 'left:860px;top:430px;font-size:200px' }, S.ov); e.textContent = '👝'; const a = mk('div', { class: 'emo', style: 'left:850px;top:180px;font-size:220px' }, S.ov); a.textContent = '🧱';
+    popIn(tl, e, t, IR); tl.fromTo(a, { opacity: 1, y: -700 }, { y: 0, duration: .35, ease: 'power3.in', ...IR }, b.drop); tl.to(e, { scaleY: .6, scaleX: 1.2, transformOrigin: '50% 100%', duration: .1 }, b.drop + .35); tl.to(e, { scaleY: 1, scaleX: 1, duration: .2 }, b.drop + .5);
+    fadeOut(tl, e, u); fadeOut(tl, a, u); },
+  // notes multiply in a grid while a price line climbs
+  multiply(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const ns = []; for (let i = 0; i < 24; i++) ns.push(noteSvgSmall(sv, 200 + (i % 6) * 190, 220 + Math.floor(i / 6) * 110, 1.0, (i % 3) * 3 - 3));
+    ns.forEach((n, i) => tl.fromTo(n, { opacity: 0, scale: .2 }, { opacity: 1, scale: 1, transformOrigin: 'center', duration: .18, ease: 'back.out(2)', ...IR }, t + i * .06));
+    const ln = mk('path', { d: 'M1320,840 L1440,780 L1520,690 L1600,560 L1680,380 L1760,200', fill: 'none', stroke: '#FF3B30', 'stroke-width': 16, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0 }, sv, true);
+    mk('path', { d: 'M1300,180 L1300,860 L1800,860', fill: 'none', stroke: '#F7F1E3', 'stroke-width': 8, opacity: .8 }, sv, true); drawOn(tl, ln, b.line, .8, IR); fadeOut(tl, sv, u); },
+  // copies of Bill pop in around him
+  clones(tl, MO, S, b, t, u, IR) { const pts = [[260, 260], [1560, 240], [180, 640], [1640, 620], [520, 120], [1300, 110]]; pts.forEach(([x, y], i) => { const im = mk('img', { src: 'assets/c_bill.png', style: `position:absolute;left:${x}px;top:${y}px;height:300px;opacity:0;filter:drop-shadow(0 10px 12px rgba(0,0,0,.5))` }, S.ov); popIn(tl, im, t + i * .12, IR); fadeOut(tl, im, u); }); },
+  emoji(tl, MO, S, b, t, u, IR) { const e = mk('div', { class: 'emo', style: `left:${b.x}px;top:${b.y}px;font-size:${b.size || 160}px` }, S ? S.ov : $('fx')); e.textContent = b.ch; popIn(tl, e, t, IR); fadeOut(tl, e, u); },
+  // shutters slam down over the frame
+  shutter(tl, MO, S, b, t, u, IR) { const box = mk('div', { style: 'position:absolute;inset:0;overflow:hidden' }, S.ov); const sh = mk('div', { style: 'position:absolute;left:0;top:0;width:1920px;height:1080px;background:repeating-linear-gradient(#6E737D 0 46px,#4A4F59 46px 54px);box-shadow:0 20px 40px rgba(0,0,0,.6)' }, box);
+    tl.fromTo(sh, { y: -1100 }, { y: 0, duration: .32, ease: 'power3.in', ...IR }, t); },
+  // gold coin falls out of the note's oval / vanish handled by note.coinTo; here: dimension arrows on the cube
+  dims(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const g = mk('g', {}, sv, true);
+    S.hooks.push(tt => { if (tt < t - .1 || tt > u + .4) { sv.style.opacity = 0; return; } sv.style.opacity = 1; const a = proj(S, b.a[0], b.a[1], tt), c = proj(S, b.b[0], b.b[1], tt); const k = clamp((tt - t) / .6, 0, 1);
+      g.innerHTML = `<line x1="${a.x}" y1="${a.y}" x2="${a.x + (c.x - a.x) * k}" y2="${a.y + (c.y - a.y) * k}" stroke="#F7F1E3" stroke-width="8" stroke-dasharray="20 12"/><circle cx="${a.x}" cy="${a.y}" r="10" fill="#F7F1E3"/>${k >= 1 ? `<circle cx="${c.x}" cy="${c.y}" r="10" fill="#F7F1E3"/>` : ''}`; }); },
+  // line that sinks the longer it stays tied to a gold weight
+  sink(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); mk('rect', { x: 240, y: 200, width: 1440, height: 640, rx: 30, fill: 'rgba(8,12,22,.9)', stroke: 'rgba(255,255,255,.16)', 'stroke-width': 3 }, sv, true);
+    mk('path', { d: 'M320,260 L320,800 L1620,800', fill: 'none', stroke: 'rgba(247,241,227,.55)', 'stroke-width': 5 }, sv, true);
+    const ln = mk('path', { d: 'M320,320 C600,330 820,420 1000,560 S1400,760 1600,780', fill: 'none', stroke: '#FF3B30', 'stroke-width': 14, 'stroke-linecap': 'round', opacity: 0 }, sv, true);
+    const w = goldBarSvg(sv, 1600, 820, 1.1); tl.fromTo(sv, { opacity: 0 }, { opacity: 1, duration: .3, ...IR }, t); drawOn(tl, ln, t + .3, 1.6, IR); popIn(tl, w, t + 1.8, IR); fadeOut(tl, sv, u); },
+  // cracks spreading across the plate (plate-normalised polylines)
+  cracks(tl, MO, S, b, t, u, IR) { const sv = svgIn(S.ov); const ps = b.lines.map(() => mk('path', { fill: 'none', stroke: '#FFF4D6', 'stroke-width': 7, 'stroke-linejoin': 'round', style: 'filter:drop-shadow(0 0 8px rgba(255,240,200,.9))' }, sv, true));
+    S.hooks.push(tt => { b.lines.forEach((pl, i) => { const ti = t + i * .35; const k = clamp((tt - ti) / .6, 0, 1); if (k <= 0) { ps[i].setAttribute('d', ''); return; }
+      const pts = pl.map(q => proj(S, q[0], q[1], tt)); const n = Math.max(2, Math.ceil(pts.length * k)); ps[i].setAttribute('d', 'M' + pts.slice(0, n).map(p => p.x.toFixed(1) + ' ' + p.y.toFixed(1)).join(' L')); }); }); },
+  // a plate's colour fades (bright/sat) e.g. the coin vanishes in the mirage
+  grade(tl, MO, S, b, t, u, IR) { if (!S.live) return; for (const k of ['bright', 'sat', 'warm', 'shim']) if (b[k] !== undefined) { if (!S.uT[k]) S.uT[k] = Track(k === 'bright' || k === 'sat' ? 1 : 0); key(S.uT[k], b[k], t, b.d || .8, 'power2.inOut'); } },
+  // characters: {who, side, lines:[li...], leave}
+  char(tl, MO, S, b, t, u, IR) { const ch = addChar(S, b.who, b.side, b); const from = b.from || (b.side === 'L' || b.side === 'LL' ? 'L' : b.side === 'M' ? 'B' : 'R');
+    tl.fromTo(ch.c, from === 'L' ? { opacity: 0, x: -700 } : from === 'R' ? { opacity: 0, x: 700 } : { opacity: 0, y: 500 }, { opacity: 1, x: 0, y: 0, duration: .5, ease: 'back.out(1.6)', ...IR }, t); tl.to(ch.sh, { opacity: 1, duration: .3 }, t + .1);
+    for (const li of b.lines || []) { const a = LN[li].a, e = LN[li].b; const n = Math.max(2, Math.floor((e - a) / .3));
+      tl.fromTo(ch.c, { scaleY: 1, rotation: 0, transformOrigin: '50% 100%' }, { keyframes: Array.from({ length: n }, (_, i) => [{ scaleY: 1.045, rotation: i % 2 ? 2 : -2, duration: .15 }, { scaleY: 1, rotation: 0, duration: .15 }]).flat(), ...IR }, a);
+      if (b.zoom !== false) { tl.to(S.push, { scale: 1.12, x: (960 - ch.x) * .35, y: -20, duration: .3, ease: 'power3.out' }, a - .2); tl.to(S.push, { scale: 1, x: 0, y: 0, duration: .4, ease: 'power2.inOut' }, e + .1); } }
+    if (b.shrink) tl.to(ch.c, { scale: .55, transformOrigin: '50% 100%', duration: .5, ease: 'power3.inOut' }, b.shrink);
+    if (b.grow) tl.to(ch.c, { scale: 1.15, transformOrigin: '50% 100%', duration: .5, ease: 'power3.out' }, b.grow);
+    if (b.tag) { const tg = mk('div', { class: 'emo', style: `left:${ch.x + 60}px;top:${(b.feet || 1000) - (b.h || 640) * .75}px;font-size:120px` }, S.chars); tg.textContent = '🏷️'; popIn(tl, tg, b.tag, IR); tl.to(tg, { scale: 1.6, duration: .6, ease: 'power3.out' }, b.tag + .4); fadeOut(tl, tg, u); }
+    if (b.leave) { tl.to(ch.c, { y: 600, opacity: 0, duration: .35, ease: 'power3.in' }, b.leave); tl.to(ch.sh, { opacity: 0, duration: .2 }, b.leave); } },
+};
+
+window.__timelines = window.__timelines || {};
+// Shorts: a hook card (own plate, on-screen text, own captions) then pieces of the main timeline back to back
+function buildHook(H) { const hk = gsap.timeline({ paused: true }); const IR = { immediateRender: false }; const M2 = BhugolMotion(hk, {});
+  const box = mk('div', { id: 'hookS' }, $('scenes')); const im = mk('img', { src: 'assets/' + H.img, alt: '', style: `object-position:${H.pos || '50% 50%'}` }, box);
+  hk.set(box, { opacity: 1 }, 0); hk.fromTo(im, { scale: 1.04 }, { scale: 1.18, duration: H.dur, ease: 'none', ...IR }, 0); hk.set(box, { opacity: 0 }, H.dur);
+  const tt = mk('div', { class: 'hookT' }, $('caps')); markup(H.text, tt); hk.set(tt, { opacity: 1 }, .05); M2.charSlam(tt, .05, {}); hk.to(tt, { opacity: 0, duration: .25 }, H.textOut || Math.min(2.4, H.dur - .3));
+  for (const c of H.chunks) { const g = mk('div', { class: 'cap' }, $('caps')); const d = mk('div', { class: 'cl' }, g); markup(c.txt, d); const words = [...d.querySelectorAll('span')];
+    hk.set(g, { opacity: 1 }, c.sn); hk.set(g, { opacity: 0 }, Math.min(c.en, H.dur - .04)); M2.karaoke(words, c.wt, w => w.classList.contains('k'));
+    words.forEach((w, i) => { if (w.classList.contains('k')) M2.sweep(w, c.wt[Math.min(i, c.wt.length - 1)], '#E8321C'); }); }
+  if (H.punch) M2.punch(box, H.punch, 1.12);
+  return hk; }
+// Shorts: CTA outro (dimmed wallet, logo, 'full video' plug, red FOLLOW button tapped, karaoke CTA captions)
+function buildOutro(O) { const ot = gsap.timeline({ paused: true }); const IR = { immediateRender: false }; const M3 = BhugolMotion(ot, {});
+  const box = mk('div', { id: 'outroS', style: 'position:absolute;inset:0;overflow:hidden;opacity:0;background:#05080F' }, $('scenes'));
+  const im = mk('img', { src: 'assets/' + O.img, alt: '', style: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 50%;filter:brightness(.55) blur(3px)' }, box);
+  ot.set(box, { opacity: 1 }, 0); ot.fromTo(box, { opacity: 0 }, { opacity: 1, duration: .25, ...IR }, 0); ot.fromTo(im, { scale: 1.08 }, { scale: 1.18, duration: O.dur, ease: 'none', ...IR }, 0);
+  const lg = mk('img', { src: 'assets/logo.png', alt: '', style: 'position:absolute;left:140px;top:250px;width:800px;opacity:0;filter:drop-shadow(0 0 28px rgba(233,180,76,.35)) brightness(1.15)' }, box);
+  ot.fromTo(lg, { opacity: 0, y: 40, scale: .9 }, { opacity: 1, y: 0, scale: 1, duration: .6, ease: 'expo.out', ...IR }, .1);
+  const pl = mk('div', { class: 'hookT', style: 'top:820px;font-size:84px' }, box); markup('FULL VIDEO ON *THE CHANNEL*', pl); ot.set(pl, { opacity: 1 }, O.plug || .5); M3.charSlam(pl, O.plug || .5, {});
+  const btn = mk('div', { class: 'btn', style: 'left:290px;top:1010px;width:500px' }, box); btn.innerHTML = '<span>＋</span><span>FOLLOW</span>';
+  ot.fromTo(btn, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2)', transformOrigin: '50% 50%', ...IR }, O.btn || 1.0);
+  const cl = O.click || (O.btn || 1.0) + 1.0; ot.to(btn, { keyframes: [{ scale: .93, duration: .1 }, { scale: 1, duration: .12 }] }, cl); ot.set(btn, { backgroundColor: '#3A3F4B' }, cl + .1); ot.set(btn.lastChild, { textContent: 'FOLLOWING' }, cl + .1); ot.set(btn.firstChild, { textContent: '✓' }, cl + .1);
+  const hand = mk('div', { class: 'emo', style: 'left:600px;top:1090px;font-size:120px' }, box); hand.textContent = '👆';
+  ot.fromTo(hand, { opacity: 0, x: 120, y: 140 }, { opacity: 1, x: 0, y: 0, duration: .35, ease: 'power3.out', ...IR }, cl - .4); ot.to(hand, { opacity: 0, duration: .3 }, cl + .5);
+  for (const c of O.chunks) { const g = mk('div', { class: 'cap' }, $('caps')); const d = mk('div', { class: 'cl' }, g); markup(c.txt, d); const words = [...d.querySelectorAll('span')];
+    ot.set(g, { opacity: 1 }, c.sn); ot.set(g, { opacity: 0 }, Math.min(c.en, O.dur - .04)); M3.karaoke(words, c.wt, w => w.classList.contains('k'));
+    words.forEach((w, i) => { if (w.classList.contains('k')) M3.sweep(w, c.wt[Math.min(i, c.wt.length - 1)], '#E8321C'); }); }
+  return ot; }
+document.fonts.ready.then(() => Promise.all(READY)).then(() => { const tl = build(); MAINTL = tl;
+  if (D.pieces) { const m = gsap.timeline({ paused: true }); let cur = 0;
+    if (D.hook) { m.add(buildHook(D.hook).tweenFromTo(0, D.hook.dur, { ease: 'none' }), 0); cur = D.hook.dur; }
+    for (const p of D.pieces) { m.add(tl.tweenFromTo(p[0], p[1], { ease: 'none' }), cur); cur += p[1] - p[0]; }
+    if (D.outro) { m.set([...CAPS.map(K => K.g), $('hud'), $('titles'), $('fx')], { opacity: 0 }, cur); m.add(buildOutro(D.outro).tweenFromTo(0, D.outro.dur, { ease: 'none' }), cur); }
+    window.__timelines['main'] = m; }
+  else if (D.seg) { const m = gsap.timeline({ paused: true }); m.add(tl.tweenFromTo(D.seg[0], D.seg[1], { ease: 'none' }), 0); window.__timelines['main'] = m; } else window.__timelines['main'] = tl; });
+</script>
+</body>
+</html>
