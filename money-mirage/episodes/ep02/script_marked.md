@@ -11,7 +11,7 @@ N: So how does *one fund* beat a *whole country?* To answer that, we need to go 
 N: Imagine your *rupee,* your *pound* or your *dollar* changed value against its neighbours *every single day.* For a factory selling across Europe in the *1980s,* that was normal. Profits could vanish because a currency *wobbled* overnight.
 N: So in *1979,* a group of European countries built a *fence.* It was called the *Exchange Rate Mechanism,* or *ERM.* Each currency could drift, but only *inside a band.* Hit the edge of the band, and the central bank had to *step in* and defend it.
 N: Britain stayed out for over a decade. Then, on *October 8th, 1990,* it *jumped in.* The rate: one pound for *2.95 Deutschmarks.* The band: *six percent* either way. The floor: *2.778.* Below that, the Bank of England had to *buy pounds,* whatever it cost. The man who signed Britain up was the finance minister, Chancellor *John Major.* The same day, rates were cut from *15 to 14 percent.*
-N: Why tie yourself to *Germany?* Because Britain had a *price problem.* In *1990,* inflation hit *10.9 percent.* Germany's central bank, the *Bundesbank,* was the toughest inflation fighter in the world. Peg your money to the *Deutschmark,* and you *borrow its reputation.*
+N: Why tie yourself to *Germany?* Because Britain had a *problem.* In *1990,* inflation hit *10.9 percent.* Germany's central bank, the *Bundesbank,* was the toughest inflation fighter in the world. Peg your money to the *Deutschmark,* and you *borrow its reputation.*
 N: It's like a student who can't stop spending, handing his card to the *strictest friend he has.* It works... as long as the friend's plans *match yours.*
 BILL: [nervous] I don't like *leashes.*
 GOLDIE: [smug] Darling, I *invented* them.
