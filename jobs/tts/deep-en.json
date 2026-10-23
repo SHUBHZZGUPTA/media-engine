@@ -1,0 +1,107 @@
+{
+ "id": "deep-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline; a touch of wonder for the deep-sea lines. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You could sink Everest in this hole... with two kilometres to spare."
+    ],
+    [
+     "Narrator",
+     "And after a hundred and fifty years, we still can't say how deep it is."
+    ],
+    [
+     "Chars",
+     "[nervous giant mountain, deep booming voice, gulping] Wait. I'm going IN there?"
+    ],
+    [
+     "Narrator",
+     "This is the Challenger Deep, about three hundred kilometres from Guam."
+    ],
+    [
+     "Narrator",
+     "Rewind to eighteen seventy-five. Sailors on H M S Challenger lowered a weighted rope."
+    ],
+    [
+     "Narrator",
+     "It hit bottom at eight thousand, one hundred and eighty-four metres. The deep still carries their ship's name."
+    ],
+    [
+     "Chars",
+     "[proud Victorian sailor, hearty, then a small unsure pause] Deepest spot on Earth! ...Probably."
+    ],
+    [
+     "Narrator",
+     "Then came sonar. Nineteen fifty-one: ten thousand, eight hundred and sixty-three metres. Nineteen fifty-seven, a Soviet ship: eleven thousand and thirty-three."
+    ],
+    [
+     "Narrator",
+     "That's half an Eiffel Tower... of disagreement."
+    ],
+    [
+     "Narrator",
+     "So why can't anyone agree?"
+    ],
+    [
+     "Narrator",
+     "Sonar doesn't measure depth. It times an echo... then uses the speed of sound."
+    ],
+    [
+     "Narrator",
+     "And in seawater, that speed changes with temperature, salt and pressure."
+    ],
+    [
+     "Narrator",
+     "Guess the speed wrong... and the bottom moves."
+    ],
+    [
+     "Chars",
+     "[tiny bouncy sonar ping, high and chirpy, defensive] Don't look at me. I just bounce."
+    ],
+    [
+     "Narrator",
+     "And the bottom isn't one point. It's three narrow basins."
+    ],
+    [
+     "Narrator",
+     "So this year, a Japanese team mapped it again, with five sound-speed models."
+    ],
+    [
+     "Narrator",
+     "Best answer: ten thousand, nine hundred and twenty-seven metres. The models alone disagreed by eighteen."
+    ],
+    [
+     "Narrator",
+     "The twist? In nineteen eighty-four, a Japanese ship got ten thousand, nine hundred and twenty."
+    ],
+    [
+     "Narrator",
+     "Forty-two years later... the answer moved seven metres."
+    ],
+    [
+     "Narrator",
+     "The deepest point on Earth isn't a number. It's a range."
+    ],
+    [
+     "Chars",
+     "[nervous giant mountain, deep booming voice, worried] So how far down am I going?"
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
