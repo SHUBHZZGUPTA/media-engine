@@ -1,0 +1,46 @@
+{
+ "params": {
+  "prompts": [
+   "tirav1 woman, front view mirror selfie in a modern gym, standing facing a large wall mirror, holding a black iPhone at chest height with one hand so her face is fully visible above the phone, other arm relaxed at her side, black racerback sports bra, high-waisted black leggings, white sneakers, hair in a neat low bun at the nape with a few loose strands, silver hoop earrings, soft natural curvy figure, relaxed confident half smile, dumbbell racks and cable machines behind her, bright daylight from tall windows mixed with overhead lights, faint smudges on the mirror, real unretouched skin texture with visible pores, candid iPhone photo, photorealistic",
+   "tirav1 woman, candid photo walking on the Marine Drive promenade in Mumbai at golden hour, three-quarter view, turning to look at the camera with a warm natural smile, white linen button-up shirt with sleeves rolled up, light blue straight-leg jeans, tan sandals, small brown shoulder bag, long hair worn down moving slightly in the sea breeze, silver hoop earrings, the Arabian Sea and the curved Mumbai skyline softly behind her, warm low sunlight on her face, real unretouched skin texture, shot by a friend on an iPhone at about 2 metres, photorealistic"
+  ],
+  "lora_glob": "tira_zimage_lora*.safetensors",
+  "seed": 7,
+  "width": 1152,
+  "height": 1536,
+  "steps": 9,
+  "lora_scale": 1.0,
+  "include_base": false
+ },
+ "timings": {
+  "found 1 LoRA files": 42.4,
+  "model loaded to RAM": 272.1,
+  "2 prompts encoded": 320.4,
+  "step2200 prompt 1 denoised": 696.7,
+  "step2200 prompt 2 denoised": 1068.9,
+  "all images saved": 1089.7
+ },
+ "images": [
+  {
+   "file": "step2200_p1.jpg",
+   "version": "step2200",
+   "prompt": 1,
+   "nan": false
+  },
+  {
+   "file": "step2200_p2.jpg",
+   "version": "step2200",
+   "prompt": 2,
+   "nan": false
+  }
+ ],
+ "diffusers": "0.40.0",
+ "versions": [
+  "step2200"
+ ],
+ "version_errors": {},
+ "attention": {
+  "fp16_calls": 684,
+  "fp32_fallbacks": 0
+ }
+}

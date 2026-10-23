@@ -1,0 +1,35 @@
+[{"stream_name":"stdout","time":43.309490518,"data":"[   42.4s] found 1 LoRA files\n"}
+,{"stream_name":"stderr","time":43.309968012,"data":"/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.\n"}
+,{"stream_name":"stderr","time":43.309983834,"data":"  deprecate(\"torch_dtype\", \"1.0.0\", _TORCH_DTYPE_DEPRECATION_MESSAGE)\n"}
+,{"stream_name":"stderr","time":43.508479298,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":180.290811608,"data":"\rFetching 18 files:   0%|          | 0/18 [00:00\u003c?, ?it/s]\rFetching 18 files:  11%|█         | 2/18 [00:00\u003c00:01, 14.56it/s]\rFetching 18 files:  39%|███▉      | 7/18 [00:00\u003c00:00, 31.78it/s]\rFetching 18 files:  61%|██████    | 11/18 [00:00\u003c00:00, 15.30it/s]\rFetching 18 files:  72%|███████▏  | 13/18 [00:19\u003c00:00, 15.30it/s]\rFetching 18 files:  78%|███████▊  | 14/18 [01:14\u003c00:33,  8.30s/it]\rFetching 18 files:  83%|████████▎ | 15/18 [01:22\u003c00:24,  8.23s/it]\rFetching 18 files:  89%|████████▉ | 16/18 [01:39\u003c00:16,  8.23s/it]\rFetching 18 files:  94%|█████████▍| 17/18 [02:16\u003c00:13, 13.59s/it]\rFetching 18 files: 100%|██████████| 18/18 [02:16\u003c00:00,  7.59s/it]\n"}
+,{"stream_name":"stderr","time":192.860241308,"data":"\rLoading pipeline components...:   0%|          | 0/5 [00:00\u003c?, ?it/s]\rLoading pipeline components...:  20%|██        | 1/5 [00:10\u003c00:40, 10.22s/it]\rLoading pipeline components...:  40%|████      | 2/5 [00:11\u003c00:15,  5.05s/it]\rLoading pipeline components...:  60%|██████    | 3/5 [00:12\u003c00:05,  2.94s/it]\n"}
+,{"stream_name":"stderr","time":192.961025761,"data":"\rLoading weights:   0%|          | 0/398 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":193.070262666,"data":"\rLoading weights:  11%|█         | 43/398 [00:00\u003c00:00, 427.31it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":193.174336994,"data":"\rLoading weights:  22%|██▏       | 86/398 [00:00\u003c00:00, 406.99it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":193.277663936,"data":"\rLoading weights:  33%|███▎      | 130/398 [00:00\u003c00:00, 413.94it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":193.378784424,"data":"\rLoading weights:  45%|████▍     | 179/398 [00:00\u003c00:00, 437.56it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":193.478833376,"data":"\rLoading weights:  61%|██████    | 241/398 [00:00\u003c00:00, 499.64it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":193.58010652,"data":"\rLoading weights:  75%|███████▌  | 300/398 [00:00\u003c00:00, 529.59it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":193.591562864,"data":"\rLoading weights:  92%|█████████▏| 368/398 [00:00\u003c00:00, 575.70it/s]\u001b[A\rLoading weights: 100%|██████████| 398/398 [00:00\u003c00:00, 544.35it/s]\n"}
+,{"stream_name":"stderr","time":193.661399612,"data":"\rLoading pipeline components...:  80%|████████  | 4/5 [00:13\u003c00:02,  2.28s/it]\n"}
+,{"stream_name":"stderr","time":215.174772518,"data":"\rLoading checkpoint shards:   0%|          | 0/3 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":254.030816508,"data":"\rLoading checkpoint shards:  33%|███▎      | 1/3 [00:21\u003c00:43, 21.51s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":272.980640793,"data":"\rLoading checkpoint shards:  67%|██████▋   | 2/3 [01:00\u003c00:31, 31.71s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":272.981504023,"data":"\rLoading checkpoint shards: 100%|██████████| 3/3 [01:19\u003c00:00, 25.88s/it]\u001b[A\rLoading checkpoint shards: 100%|██████████| 3/3 [01:19\u003c00:00, 26.44s/it]\n"}
+,{"stream_name":"stderr","time":272.986930802,"data":"\rLoading pipeline components...: 100%|██████████| 5/5 [01:32\u003c00:00, 30.07s/it]\rLoading pipeline components...: 100%|██████████| 5/5 [01:32\u003c00:00, 18.54s/it]\n"}
+,{"stream_name":"stdout","time":272.98896796,"data":"[  272.1s] model loaded to RAM\n"}
+,{"stream_name":"stdout","time":321.289282347,"data":"[  320.4s] 2 prompts encoded\n"}
+,{"stream_name":"stderr","time":696.651830746,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:34\u003c04:34, 34.25s/it]\r 22%|██▏       | 2/9 [01:11\u003c04:10, 35.81s/it]\r 33%|███▎      | 3/9 [01:54\u003c03:54, 39.11s/it]\r 44%|████▍     | 4/9 [02:34\u003c03:18, 39.68s/it]\r 56%|█████▌    | 5/9 [03:17\u003c02:42, 40.63s/it]\r 67%|██████▋   | 6/9 [03:58\u003c02:02, 40.84s/it]\r 78%|███████▊  | 7/9 [04:40\u003c01:22, 41.21s/it]\r 89%|████████▉ | 8/9 [05:21\u003c00:41, 41.29s/it]\r100%|██████████| 9/9 [06:03\u003c00:00, 41.47s/it]\r100%|██████████| 9/9 [06:03\u003c00:00, 40.40s/it]\n"}
+,{"stream_name":"stdout","time":697.569555053,"data":"[  696.7s] step2200 prompt 1 denoised\n"}
+,{"stream_name":"stderr","time":1068.902032183,"data":"\r  0%|          | 0/9 [00:00\u003c?, ?it/s]\r 11%|█         | 1/9 [00:40\u003c05:22, 40.29s/it]\r 22%|██▏       | 2/9 [01:21\u003c04:45, 40.73s/it]\r 33%|███▎      | 3/9 [02:02\u003c04:05, 40.95s/it]\r 44%|████▍     | 4/9 [02:43\u003c03:25, 41.13s/it]\r 56%|█████▌    | 5/9 [03:25\u003c02:45, 41.27s/it]\r 67%|██████▋   | 6/9 [04:06\u003c02:04, 41.36s/it]\r 78%|███████▊  | 7/9 [04:48\u003c01:22, 41.39s/it]\r 89%|████████▉ | 8/9 [05:29\u003c00:41, 41.40s/it]\r100%|██████████| 9/9 [06:11\u003c00:00, 41.41s/it]\r100%|██████████| 9/9 [06:11\u003c00:00, 41.26s/it]\n"}
+,{"stream_name":"stdout","time":1069.81139494,"data":"[ 1068.9s] step2200 prompt 2 denoised\n"}
+,{"stream_name":"stderr","time":1080.848174863,"data":"There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.\n"}
+,{"stream_name":"stdout","time":1090.632712855,"data":"[ 1089.7s] all images saved\n"}
+,{"stream_name":"stderr","time":1101.104551442,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1101.104583554,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1101.45685521,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1101.456883829,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1102.866048612,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1103.942507298,"data":"[NbConvertApp] Writing 312150 bytes to __results__.html\n"}
+]
