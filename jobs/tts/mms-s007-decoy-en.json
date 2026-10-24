@@ -1,0 +1,57 @@
+{
+ "id": "mms-s007-decoy-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Why does the medium popcorn cost almost as much as the large? It might be a decoy."
+    ],
+    [
+     "Narrator",
+     "Picture it: small, three dollars. Large, seven dollars. Now add a medium at six fifty."
+    ],
+    [
+     "Narrator",
+     "Suddenly the large looks like a steal. The medium isn't there to sell. It's there to make the large look cheap."
+    ],
+    [
+     "Narrator",
+     "The famous proof? An Economist offer: web, fifty-nine dollars. Print, a hundred and twenty-five. Print plus web, also a hundred and twenty-five."
+    ],
+    [
+     "Narrator",
+     "Dan Ariely said eighty-four percent of his students picked the combo. Remove the useless print option, and only thirty-two percent did."
+    ],
+    [
+     "Narrator",
+     "But here's the twist. That test used students, not real subscribers."
+    ],
+    [
+     "Narrator",
+     "Two of Ariely's other papers have since been retracted over data problems. And bigger studies found the decoy effect is often weak in real life."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: even the trick about tricks can be an illusion."
+    ],
+    [
+     "Narrator",
+     "So don't fear the medium. Just ask: would I buy the large without it?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
