@@ -122,8 +122,12 @@ class Plate:
                 roi = base[y0:y1, x0:x1]; roi[:] = (rgba[:, :, :3] * a + roi * (1 - a)).astype(np.uint8)
         ih, iw = base.shape[:2]; z = zoom / self.k; vw, vh = self.W / z, self.H / z
         x0 = min(max(cx * iw - vw / 2, 0), iw - vw); y0 = min(max(cy * ih - vh / 2, 0), ih - vh)
-        M = np.float32([[z, 0, -x0 * z], [0, z, -y0 * z]])
+        M = np.float32([[z, 0, -x0 * z], [0, z, -y0 * z]]); self.view = (z, x0, y0, iw, ih)
         return cv2.warpAffine(base, M, (self.W, self.H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+    def to_screen(self, nx, ny):
+        """Plate point (0..1 of the plate) -> screen pixels for the current camera."""
+        if self.img is None: return nx * self.W, ny * self.H
+        z, x0, y0, iw, ih = self.view; return (nx * iw - x0) * z, (ny * ih - y0) * z
 
 def layer_state(L, t):
     """Return (x, y_bottom, h, alpha) for a layer at time t, or None if hidden."""
@@ -133,6 +137,7 @@ def layer_state(L, t):
     if "move" in L: x, y = keyed(L["move"], t)
     a, du, en = 1.0, t - t_in, L.get("enter", "pop")
     if en == "pop" and du < .35:   h *= max(ease(du / .35, "back"), .01)
+    elif en == "slam" and du < .22: h *= 2.1 - 1.1 * ease(du / .22, "out"); a = min(1.0, du / .08)
     elif en == "slideL" and du < .45: x -= (1 - ease(du / .45, "out")) * 900
     elif en == "slideR" and du < .45: x += (1 - ease(du / .45, "out")) * 900
     elif en == "up" and du < .4:   y += (1 - ease(du / .4, "out")) * 300
@@ -149,12 +154,27 @@ def layer_state(L, t):
 
 def render_frame(shot, t, plates, W, H):
     cam = shot["bg"].get("cam", [[shot["t0"], .5, .5, 1.0]])
-    frame = plates[id(shot)].render(*keyed(cam, t), t=t)
+    plate = plates[id(shot)]
+    frame = plate.render(*keyed(cam, t), t=t)
     for L in shot.get("layers", []):
+        if "circle" in L:                                   # hand-drawn marker loop on the named thing
+            if not (L.get("in", 0) <= t < L.get("out", 1e9)): continue
+            c = L["circle"]; u = ease((t - L.get("in", 0)) / L.get("dur", .55), "out")
+            cx, cy = plate.to_screen(c["cx"], c["cy"]) if c.get("space") == "plate" else (c["cx"], c["cy"])
+            col = hex_bgr(c.get("color", "#ff3b30")); end = -100 + 400 * u
+            for k, (dx, dy, s) in enumerate([(0, 0, 1.0), (3, -2, 1.04)]):
+                if k and u < .8: break
+                cv2.ellipse(frame, (int(cx + dx), int(cy + dy)), (int(c["rx"] * s), int(c["ry"] * s)), -8, -100, end, col, 9 - 3 * k, cv2.LINE_AA)
+            continue
         st = layer_state(L, t)
         if not st: continue
         x, y, h, a = st
         src = L["img"]
+        if isinstance(src, dict) and "count" in L:          # number counts up with its spoken word
+            cn = L["count"]; u = ease((t - L.get("in", 0)) / cn.get("dur", 1.2), "out")
+            v = cn["from"] + (cn["to"] - cn["from"]) * u
+            src = dict(src, text=cn["fmt"].format(v=int(round(v))))
+            h = text_rgba(src["text"], src.get("size", 64), src.get("color", "#ffffff"), src.get("box"), src.get("font")).shape[0] * (h / L["h"])
         key = ("text", src["text"], src.get("size", 64), src.get("color", "#ffffff"), src.get("box"), src.get("font")) \
               if isinstance(src, dict) else ("img", src)
         spr = scaled(key, int(h * (1 if key[0] == "img" else 1)) if key[0] == "img" else int(h), bool(L.get("flip")))
@@ -180,22 +200,93 @@ def main():
     # text layers need a height: derive from font size if missing
     for s in shots:
         for L in s.get("layers", []):
-            if isinstance(L["img"], dict) and "h" not in L:      # text keeps its natural rendered size
+            if isinstance(L.get("img"), dict) and "h" not in L:      # text keeps its natural rendered size
                 src = L["img"]
                 L["h"] = text_rgba(src["text"], src.get("size", 64), src.get("color", "#ffffff"), src.get("box"), src.get("font")).shape[0]
     plates = {}
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
                             "-r", str(fps), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
                             "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
+    caps = Captions(spec.get("captions", []), W, H)
+    punches = sorted(spec.get("punch", [])); shakes = spec.get("shake", [])
     n = int(round((T1 - T0) * fps)); si = 0
     for i in range(n):
         t = T0 + i / fps
-        while si < len(shots) - 1 and t >= shots[si]["t1"]:
-            plates.pop(id(shots[si]), None); si += 1
+        while si < len(shots) - 1 and t >= shots[si]["t1"]: si += 1
         shot = shots[si]
-        if id(shot) not in plates: plates[id(shot)] = Plate(shot["bg"], W, H)
-        enc.stdin.write(render_frame(shot, t, plates, W, H).tobytes())
+        for s in (shots[si - 1] if si else None, shot):
+            if s is not None and id(s) not in plates: plates[id(s)] = Plate(s["bg"], W, H)
+        for k in list(plates):                              # free plates no longer needed
+            if k not in (id(shot), id(shots[si - 1]) if si else None): plates.pop(k)
+        frame = render_frame(shot, t, plates, W, H)
+        cut, du = shot.get("cut", "curve"), t - shot["t0"]
+        if si and cut != "hard" and du < CUT_LEN.get(cut, .3):
+            frame = transition(render_frame(shots[si - 1], t, plates, W, H), frame, cut, du / CUT_LEN.get(cut, .3), W, H)
+        z, dx, dy = 1.0, 0.0, 0.0
+        for pt, lvl in punches:                              # punch-in: fast zoom up, settle back
+            if pt <= t < pt + .9:
+                d = t - pt; env = ease(d / .09, "out") if d < .09 else math.exp(-(d - .09) / .28)
+                z = max(z, 1 + (lvl - 1) * env)
+        for st, dur, amp in shakes:                          # decaying camera shake on impacts
+            if st <= t < st + dur:
+                k = 1 - (t - st) / dur; dx += math.sin(t * 71) * amp * k; dy += math.cos(t * 53) * amp * k
+        if z != 1.0 or dx or dy:
+            M = np.float32([[z, 0, (1 - z) * W / 2 + dx], [0, z, (1 - z) * H / 2 + dy]])
+            frame = cv2.warpAffine(frame, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+        caps.draw(frame, t)
+        enc.stdin.write(frame.tobytes())
     enc.stdin.close(); enc.wait()
+
+CUT_LEN = {"curve": .32, "whip": .3, "zoom": .4, "flash": .45}
+def transition(a, b, cut, u, W, H):
+    """Blend outgoing frame a into incoming frame b; u = 0..1 through the cut. Full-bleed: never shows an edge."""
+    def scale(img, s):
+        M = np.float32([[s, 0, (1 - s) * W / 2], [0, s, (1 - s) * H / 2]])
+        return cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+    e = ease(u, "io")
+    if cut == "curve":
+        return cv2.addWeighted(scale(a, 1 + .05 * e), 1 - e, scale(b, 1.06 - .06 * e), e, 0)
+    if cut == "zoom":
+        return cv2.addWeighted(scale(a, 1 + .35 * e), 1 - e, scale(b, 1.25 - .25 * e), e, 0)
+    if cut == "whip":
+        off = int(W * e); k = int(9 + 70 * math.sin(math.pi * u)) | 1
+        out = np.empty_like(a); out[:, :W - off] = a[:, off:]; out[:, W - off:] = b[:, :off]
+        return cv2.blur(out, (k, 1))
+    if cut == "flash":
+        w = max(0.0, 1 - u / .55); img = b if u > .12 else a
+        return cv2.addWeighted(img, 1 - w * .9, np.full_like(img, 255), w * .9, 0)
+    return b
+
+class Captions:
+    """Anchor-style caption rail: dark rounded bar, spoken words white, upcoming words dim,
+    keywords get a red bar once spoken. Rendered per chunk state and cached."""
+    FONT = "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+    def __init__(self, chunks, W, H, size=58):
+        self.chunks = chunks; self.W, self.H = W, H; self.size = size; self.cache = {}
+        self.f = ImageFont.truetype(self.FONT, size)
+    def img(self, ci, n):
+        key = (ci, n)
+        if key in self.cache: return self.cache[key]
+        words = self.chunks[ci]["words"]; d0 = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
+        sp = d0.textlength(" ", font=self.f); ws = [d0.textlength(w[0], font=self.f) for w in words]
+        pad, hgt = 34, int(self.size * 1.55); width = int(sum(ws) + sp * (len(ws) - 1) + 2 * pad)
+        im = Image.new("RGBA", (width, hgt), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        d.rounded_rectangle([0, 0, width - 1, hgt - 1], radius=hgt // 2, fill=(14, 14, 18, 190))
+        x = pad
+        for k, (w, wl) in enumerate(zip(words, ws)):
+            if k < n and w[3]: d.rounded_rectangle([x - 8, 10, x + wl + 8, hgt - 10], radius=10, fill=(255, 59, 48, 255))
+            d.text((x, hgt / 2), w[0], font=self.f, anchor="lm", fill=(255, 255, 255, 255) if k < n else (255, 255, 255, 120))
+            x += wl + sp
+        arr = cv2.cvtColor(np.array(im), cv2.COLOR_RGBA2BGRA); self.cache[key] = arr
+        if len(self.cache) > 400: self.cache.pop(next(iter(self.cache)))
+        return arr
+    def draw(self, frame, t):
+        for ci, c in enumerate(self.chunks):
+            if c["t0"] <= t < c["t1"]:
+                n = sum(1 for w in c["words"] if w[1] <= t)
+                spr = self.img(ci, max(n, 1)); h, w = spr.shape[:2]
+                blend(frame, spr, (self.W - w) // 2, self.H - h - 46)
+                return
 
 if __name__ == "__main__":
     main()

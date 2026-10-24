@@ -44,13 +44,30 @@ music[:n * hop] *= np.repeat(duck, hop)
 
 # --- sound on cuts and pops
 sfx = np.zeros(N, np.float32); d = cfg["sfx_dir"]
-whoosh = decode(f"{d}/whoosh-short.mp3"); pop = decode(f"{d}/pop.mp3")
-for s in spec["shots"][1:]: place(sfx, whoosh, s["t0"] - .08, db(-16))
+S = {k: decode(f"{d}/{f}") for k, f in {"whoosh": "whoosh-short.mp3", "whip": "whoosh.mp3", "zoom": "whoosh-cinematic.mp3",
+     "pop": "pop.mp3", "impact": "impact-bass-1.mp3", "impact2": "impact-bass-2.mp3", "riser": "riser.mp3", "thud": "thud.mp3",
+     "tick": "click-soft.mp3", "mark": "click.mp3", "thump": "thump.mp3"}.items()}
+pop = S["pop"]
+for s in spec["shots"][1:]:                       # a designed sound for every cut type
+    c = s.get("cut", "curve")
+    if c == "flash":
+        place(sfx, S["riser"], s["t0"] - len(S["riser"]) / SR, db(-20)); place(sfx, S["impact2"], s["t0"], db(-12))
+    elif c == "whip": place(sfx, S["whip"], s["t0"] - .12, db(-14))
+    elif c == "zoom": place(sfx, S["zoom"], s["t0"] - .2, db(-14))
+    else: place(sfx, S["whoosh"], s["t0"] - .08, db(-17 if c == "curve" else -15))
+for kind, t0, g in spec.get("fx", []):            # beats: slams, counts, marks, punch-ins
+    if kind == "ticks":
+        k = 0.0
+        while k < g: place(sfx, S["tick"], t0 + k, db(-24)); k += .075
+    elif kind == "impact-bass-1": place(sfx, S["impact"], t0, db(g))
+    elif kind == "thud": place(sfx, S["thud"], t0, db(g))
+    elif kind == "mark": place(sfx, S["mark"], t0, db(g))
+    elif kind == "punch": place(sfx, S["thump"], t0, db(g))
 last = -1
 for s in spec["shots"]:
     for L in s.get("layers", []):
         t = L.get("in")
-        if t is None or L.get("enter", "pop") != "pop" or t < s["t0"]: continue
+        if t is None or "circle" in L or L.get("enter", "pop") != "pop" or t < s["t0"]: continue
         if t - last < .35: continue
         place(sfx, pop, t, db(-20)); last = t
 

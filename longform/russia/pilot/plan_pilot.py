@@ -20,6 +20,8 @@ STALIN = os.path.join(HERE, "..", "..", "..", "outputs", "fetch", "ru-pilot-arch
 FONT = "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
 EN = json.load(open(os.path.join(HERE, "lines_en.json")))     # keyword fractions come from the English text
 L = json.load(open(sys.argv[1])); END = L[-1]["t1"] + 1.4
+WORDS = sys.argv[3] if len(sys.argv) > 3 else os.path.join(HERE, "..", "..", "..", "outputs", "align", "ru-pilot-en", "words.txt")
+SPEED = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0
 GREY = "#d6d6d6"
 
 def a(n): return os.path.join(A, n + ".png")
@@ -230,6 +232,101 @@ for s in shots:
     if len(cam) >= 2: cam[-1][0] = max(cam[-1][0], s["t1"])
     else: cam.append([s["t1"], cam[0][1], cam[0][2], cam[0][3] * 1.06])
     if all(abs(cam[0][q] - cam[-1][q]) < 1e-3 for q in (1, 2, 3)): cam[-1][3] = cam[0][3] * 1.06   # never a static plate
-json.dump({"w": 1920, "h": 1080, "fps": 30, "shots": shots}, open(sys.argv[2], "w"), indent=1)
+# ================= retention pass (YT agent + HyperFrames motion doctrine) =================
+import re, math
+sys.path.insert(0, os.path.join(HERE, "..", "..", "engine"))
+from maps import Proj
+punch, shake, fx = [], [], []
+def find(pred):
+    return [(s, L) for s in shots for L in s["layers"] if pred(L)]
+def text_of(L): return L["img"]["text"] if isinstance(L["img"], dict) else ""
+
+# 1) cut grammar: curve primary; zoom into chapters; whip for time jumps; hard for rapid lists; 2 hero flashes
+gallery = {g[2] for g in G}
+for k, s in enumerate(shots):
+    texts = [text_of(L) for L in s["layers"]]; bg = str(s["bg"]["img"])
+    s["cut"] = "curve"
+    if any("chapter1" in str(L["img"]) for L in s["layers"]): s["cut"] = "zoom"
+    elif "~800 AD" in texts or "Back to the beginning" in texts: s["cut"] = "whip"
+    elif any(x in gallery for x in texts): s["cut"] = "hard"
+    elif "map_mongol" in bg and not s["bg"].get("blur"): s["cut"] = "flash"
+first5 = next(s for s in shots if any("cycle5" in str(L["img"]) for L in s["layers"])); first5["cut"] = "flash"
+shots[0]["cut"] = "hard"
+
+# 2) hook: title slam in the first second + punch-ins on every stressed phrase (rising)
+for s, LY in find(lambda L: text_of(L) == "1867"):
+    LY["enter"] = "slam"; LY["in"] = 0.15; shake.append([0.15, .5, 14]); fx.append(["impact-bass-1", 0.15, -10])
+for i, w, lvl in [(0, "bigger", 1.12), (0, "Germany", 1.15), (1, "two cents", 1.2), (2, "Alaska", 1.24), (2, "gold", 1.28), (2, "oil", 1.32)]:
+    punch.append([T(i, kw(i, w)), lvl])
+
+# 3) numbers count up with their spoken word; climax numbers slam
+for s, LY in find(lambda L: text_of(L) == "11 time zones"):
+    LY["count"] = {"from": 0, "to": 11, "fmt": "{v} time zones", "dur": 1.0}; fx.append(["ticks", LY["in"], 1.0])
+for s, LY in find(lambda L: text_of(L) == "700+ years"):
+    LY["count"] = {"from": 0, "to": 700, "fmt": "{v}+ years", "dur": 1.3}; fx.append(["ticks", LY["in"], 1.3])
+for word in ("862", "945", "988"):
+    for s, LY in find(lambda L, w=word: text_of(L) == w):
+        LY["enter"] = "slam"; shake.append([LY["in"], .35, 8]); fx.append(["thud", LY["in"], -14])
+
+# 4) hand-drawn circles on the exact thing the voice names (plate space, so they ride the camera)
+def plate_pt(name, lon=None, lat=None, pname=None):
+    js = json.load(open(os.path.join(M, pname + ".json")))
+    if lon is not None:
+        P = Proj(PLATES[pname], js["w"], js["h"]); x, y = P(lon, lat)
+    else: x, y = js["points"][name]
+    return x / js["w"], y / js["h"]
+PLATES = {p["name"]: p["bbox"] for p in json.load(open(os.path.join(HERE, "..", "maps", "maps_pilot.json")))["plates"]}
+def circle(shot_pred, nx, ny, t, rx=150, ry=95, dur_out=2.6):
+    for s in shots:
+        if shot_pred(s) and s["t0"] <= t < s["t1"]:
+            s["layers"].append({"circle": {"cx": nx, "cy": ny, "rx": rx, "ry": ry, "space": "plate"}, "in": t, "dur": .55, "out": min(t + dur_out, s["t1"])})
+            fx.append(["mark", t, -18]); return
+ax, ay = plate_pt(None, -152, 64.5, "map_alaska")
+circle(lambda s: "map_alaska" in str(s["bg"]["img"]), ax, ay, T(2, kw(2, "Alaska")), rx=300, ry=200)
+for nm, i, w in [("Novgorod", 26, "Novgorod"), ("Kyiv", 29, "Kyiv"), ("Constantinople", 30, "Constantinople")]:
+    nx, ny = plate_pt(nm, pname="map_rus")
+    circle(lambda s: "map_rus" in str(s["bg"]["img"]), nx, ny, T(i, kw(i, w)), rx=120, ry=80)
+
+# 5) labels never sit in the caption band
+for s in shots:
+    for LY in s["layers"]:
+        if isinstance(LY.get("img"), dict) and LY["y"] > 860: LY["y"] = 250
+
+# 6) anchor-style captions on narration (skit lines keep their own dialogue text)
+words = [l.split(None, 2) for l in open(WORDS) if l.strip()]
+Wt = [(float(a) / SPEED, float(b) / SPEED, w.strip()) for a, b, w in words]
+SCRIPT = [m.group(2) for m in (re.match(r"^([A-Z][A-Z0-9 &]*?):\s*(.+)$", r.strip()) for r in open(os.path.join(HERE, "script_en.md")))
+          if m and not m.group(0).startswith("[SKIT")]
+assert len(SCRIPT) == len(L), (len(SCRIPT), len(L))
+stars = [set(re.findall(r"\*([^*]+)\*", s)) for s in SCRIPT]
+STOP = {"and", "the", "a", "an", "of", "to", "in", "on", "it", "is"}
+keyw = [{x.lower().strip(".,!?") for st in s for x in st.split()} - STOP for s in stars]
+caps = []
+for i, ln in enumerate(L):
+    if ln["who"] != "Narrator": continue
+    ws = [w for w in Wt if ln["t0"] - .05 <= w[0] < ln["t1"] + .05]
+    chunk = []
+    for k, (a, b, w) in enumerate(ws):
+        chunk.append([w, a, b, w.lower().strip(".,!?;:'\"") in keyw[i]])
+        if len(chunk) >= 4 or w[-1:] in ".,!?;:" or k == len(ws) - 1:
+            caps.append({"t0": chunk[0][1] - .05, "t1": chunk[-1][2] + .25, "words": chunk}); chunk = []
+for a, b in zip(caps, caps[1:]): a["t1"] = min(a["t1"], b["t0"])
+
+# 7) fill every gap over 2.6 s with a gentle punch-in (doctrine: an event every <= 2.7 s)
+ev = sorted([s["t0"] for s in shots] + [LY["in"] for s in shots for LY in s["layers"] if "in" in LY] + [p[0] for p in punch])
+filled = []
+for a, b in zip(ev, ev[1:]):
+    g = b - a
+    if g > 2.6:
+        n = int(g // 2.4)
+        for k in range(1, n + 1): filled.append([a + g * k / (n + 1), 1.045])
+punch += filled
+for p_ in punch:
+    if p_[1] > 1.1: fx.append(["punch", p_[0], -24])   # only hook punch-ins get a sound
+
+json.dump({"w": 1920, "h": 1080, "fps": 30, "shots": shots, "punch": punch, "shake": shake, "captions": caps, "fx": fx},
+          open(sys.argv[2], "w"), indent=1)
+print("cuts:", {c: sum(1 for s in shots if s.get("cut") == c) for c in ("curve", "zoom", "whip", "hard", "flash")},
+      "| punches:", len(punch), "(gap fill", len(filled), ") | captions:", len(caps), "chunks")
 gaps = [round(s["t1"] - s["t0"], 1) for s in shots]
 print(len(shots), "shots; mean", round(sum(gaps) / len(gaps), 1), "s; longest", max(gaps), "s; end", round(END, 1))
