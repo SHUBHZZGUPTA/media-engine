@@ -1,0 +1,95 @@
+{
+ "id": "gulf-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy: a smug, proud warm ocean current (lines 7 and 18), then a slow deadpan defensive mountain range (line 15).",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "लंदन, अमेरिका के forty-eight मेनलैंड स्टेट्स से भी ज़्यादा उत्तर में है।"
+    ],
+    [
+     "Narrator",
+     "फिर भी जनवरी में न्यूयॉर्क ज़्यादा ठंडा होता है। करीब five डिग्री।"
+    ],
+    [
+     "Narrator",
+     "कैलगरी भी लंदन वाली लाइन पर है। माइनस eight... बनाम प्लस five।"
+    ],
+    [
+     "Narrator",
+     "तो यूरोप इतना गर्म क्यों है?"
+    ],
+    [
+     "Narrator",
+     "सब यहीं इशारा करेंगे। गल्फ़ स्ट्रीम।"
+    ],
+    [
+     "Narrator",
+     "एक गर्म धारा, जो मेक्सिको की खाड़ी से यूरोप तक बहती है।"
+    ],
+    [
+     "Chars",
+     "[smug, proud] सेंट्रल हीटिंग। आपका स्वागत है, यूरोप।"
+    ],
+    [
+     "Narrator",
+     "लेकिन two thousand two में, कोलंबिया यूनिवर्सिटी के वैज्ञानिकों ने हिसाब लगाया।"
+    ],
+    [
+     "Narrator",
+     "समुद्र की गर्मी यूरोप को बस कुछ डिग्री गर्म करती है। और अमेरिका की तरफ़ भी।"
+    ],
+    [
+     "Narrator",
+     "तो बाकी का फ़र्क कहाँ से आता है?"
+    ],
+    [
+     "Narrator",
+     "हवा से। यहाँ हवा पश्चिम से पूरब बहती है।"
+    ],
+    [
+     "Narrator",
+     "यूरोप की हवा पूरा समुद्र पार करके आती है। और समुद्र, गर्मियों की गर्मी सर्दियों तक रखता है। एक बड़ी गर्म पानी की बोतल।"
+    ],
+    [
+     "Narrator",
+     "न्यूयॉर्क की हवा एक जमे हुए महाद्वीप को पार करके आती है।"
+    ],
+    [
+     "Narrator",
+     "ऊपर से रॉकी पहाड़ इसे और बुरा बनाते हैं।"
+    ],
+    [
+     "Chars",
+     "[deadpan, slow, defensive] मुझे मत देखो। मैं तो बस खड़ा हूँ।"
+    ],
+    [
+     "Narrator",
+     "वो जेट स्ट्रीम को मोड़ देते हैं। आर्कटिक हवा अमेरिका पर... और हल्की गर्म हवा यूरोप की तरफ़।"
+    ],
+    [
+     "Narrator",
+     "तो गल्फ़ स्ट्रीम मदद करती है। पर यूरोप का असली हीटर? उसकी हवा का रास्ता।"
+    ],
+    [
+     "Chars",
+     "[smug, unbothered] क्रेडिट तो फिर भी मैं ही लूँगी।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफ़ी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}

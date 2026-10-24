@@ -1,0 +1,95 @@
+{
+ "id": "gulf-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy: a smug, proud warm ocean current (lines 7 and 18), then a slow deadpan defensive mountain range (line 15).",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "London is further north than all forty-eight mainland US states."
+    ],
+    [
+     "Narrator",
+     "Yet in January, New York is colder. By about five degrees."
+    ],
+    [
+     "Narrator",
+     "Same with Calgary. London's latitude. Minus eight... versus plus five."
+    ],
+    [
+     "Narrator",
+     "So why is Europe so warm?"
+    ],
+    [
+     "Narrator",
+     "Ask anyone, and they'll point here. The Gulf Stream."
+    ],
+    [
+     "Narrator",
+     "A warm current, flowing from the Gulf of Mexico all the way to Europe."
+    ],
+    [
+     "Chars",
+     "[smug, proud] Central heating. You're welcome, Europe."
+    ],
+    [
+     "Narrator",
+     "But in two thousand two, scientists at Columbia University ran the numbers."
+    ],
+    [
+     "Narrator",
+     "The ocean's heat warms Europe by just a few degrees. And it warms America's side too."
+    ],
+    [
+     "Narrator",
+     "So where does the rest of the gap come from?"
+    ],
+    [
+     "Narrator",
+     "The wind. Up here, it blows west to east."
+    ],
+    [
+     "Narrator",
+     "Europe's wind has just crossed a whole ocean. And oceans hold summer heat into winter. A giant hot-water bottle."
+    ],
+    [
+     "Narrator",
+     "New York's wind has just crossed a frozen continent."
+    ],
+    [
+     "Narrator",
+     "Then the Rockies make it worse."
+    ],
+    [
+     "Chars",
+     "[deadpan, slow, defensive] Don't look at me. I'm just standing here."
+    ],
+    [
+     "Narrator",
+     "They bend the jet stream. Arctic air down onto eastern America... mild air up toward Europe."
+    ],
+    [
+     "Narrator",
+     "So the Gulf Stream helps. But Europe's real heater? Where its wind has been."
+    ],
+    [
+     "Chars",
+     "[smug, unbothered] Still taking all the credit, though."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
