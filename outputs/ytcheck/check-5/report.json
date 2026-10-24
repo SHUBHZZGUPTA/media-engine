@@ -1,0 +1,46 @@
+{
+ "client_id_set": true,
+ "client_secret_set": true,
+ "tokens": [
+  {
+   "secret": "YT_RT_BHUGOL_HI",
+   "present": true,
+   "refresh": {
+    "ok": true
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/youtube.force-ssl",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/yt-analytics.readonly"
+   ],
+   "channels": [
+    {
+     "id": "UCJMYXEUkRvGmE2N8zoWmAMg",
+     "title": "Bhugol Hindi",
+     "handle": "@bhugolhindi",
+     "videos": "1",
+     "subscribers": "1160"
+    }
+   ],
+   "recent_uploads": [
+    {
+     "title": "Real Ghosts of India!",
+     "published": "2026-10-16T15:16:55Z",
+     "privacy": "public"
+    }
+   ],
+   "analytics": {
+    "ok": true,
+    "status": 200,
+    "rows": [
+     [
+      7,
+      4
+     ]
+    ],
+    "error": null
+   }
+  }
+ ]
+}
