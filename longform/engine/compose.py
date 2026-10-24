@@ -54,6 +54,7 @@ def load_rgba(path):
 def text_rgba(text, size, color, box, font):
     f = ImageFont.truetype(font, size) if font else ImageFont.load_default(size)
     l, t, r, b = ImageDraw.Draw(Image.new("RGBA", (1, 1))).multiline_textbbox((0, 0), text, font=f, align="center", spacing=int(size * .18))
+    l, t, r, b = int(l), int(t), int(r + .999), int(b + .999)
     pad = int(size * 0.35) if box else 4
     im = Image.new("RGBA", (r - l + 2 * pad, b - t + 2 * pad), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
@@ -171,8 +172,9 @@ def main():
     # text layers need a height: derive from font size if missing
     for s in shots:
         for L in s.get("layers", []):
-            if isinstance(L["img"], dict) and "h" not in L:
-                n = L["img"]["text"].count("\n") + 1; L["h"] = int(L["img"].get("size", 64) * (1.18 * n + .5))
+            if isinstance(L["img"], dict) and "h" not in L:      # text keeps its natural rendered size
+                src = L["img"]
+                L["h"] = text_rgba(src["text"], src.get("size", 64), src.get("color", "#ffffff"), src.get("box"), src.get("font")).shape[0]
     plates = {}
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
                             "-r", str(fps), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",

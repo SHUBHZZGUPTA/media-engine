@@ -42,7 +42,7 @@ def txt(s, x, y, t, size=72, box=None, color="#ffffff", out=None, enter="pop"):
     L_ = {"img": {"text": s, "size": size, "color": color, "box": box, "font": font}, "x": x, "y": y, "in": t, "enter": enter}
     if out is not None: L_["out"] = out
     return L_
-def say(i, x, y=360, width=26, size=44):
+def say(i, x, y=380, width=24, size=54):
     """Skit dialogue shown above the speaker (English text in both videos)."""
     s = EN[i]["text"]
     import re; s = re.sub(r"\[[^\]]*\]\s*", "", s).replace("*", "").strip()
@@ -88,8 +88,8 @@ board(T(4, kw(4, "Because")), [imgcard(card("bars"), 1200, 900, 1100, T(4, kw(4,
 shot(T(5, -.15), mp("map_eurasia"), [txt("11 time zones", 960, 230, T(5, .05), size=96)],
      cam=[[T(5), .5, .42, 1.05], [T(5, 1), .5, .42, 1.12]],
      over=[{"img": ov("map_eurasia", "span"), "in": T(5, .02), "dur": 2.2, "mode": "draw"}])
-board(T(5, kw(5, "When")), [txt("Moscow\n11 PM", 1000, 640, T(5, kw(5, "When")), size=80, box="#2b3a67"),
-                             txt("Far East\n8 AM, next day", 1520, 640, T(5, kw(5, "the far")), size=80, box="#e0902f")])
+board(T(5, kw(5, "When")), [txt("Moscow\n11 PM", 840, 640, T(5, kw(5, "When")), size=80, box="#2b3a67"),
+                             txt("Far East\n8 AM, next day", 1490, 640, T(5, kw(5, "the far")), size=80, box="#e0902f")])
 # rogues' gallery: one quick cut per ruler
 G = [("Viking", "c_rurik", "Viking chiefs"), ("Mongol", "c_khan", "Mongol khans"), ("a tsar", "c_ivan4", "Killed his own son"),
      ("a giant", "c_peter1", "Banned beards"), ("a German", None, "Took her husband's throne"), ("a dictator", None, "Erased people from photos")]
@@ -112,7 +112,7 @@ for k, (w, c) in enumerate([("Vikings", "c_rurik"), ("Mongols", "c_khan"), ("Tsa
     lay = [ch(c, 1250, 1045, 620, t=t0 + .05)] if c else [imgcard(STALIN, 1250, 1000, 430, t0 + .05)]
     board(t0, lay + [txt(w, 1250, 300, t0 + .1, size=80, box="#222222")])
 board(T(10, kw(10, "Different")), [imgcard(card("cycle5"), 1200, 1000, 1000, T(10, kw(10, "Different")))])
-shot(T(11, -.15), mp("map_eurasia"), [txt("How?", 960, 260, T(11, .1), size=120), txt("Why?", 960, 260, T(11, kw(11, "why")), size=120)],
+shot(T(11, -.15), mp("map_eurasia"), [txt("How?", 960, 260, T(11, .1), size=120, out=T(11, kw(11, "why"))), txt("Why?", 960, 260, T(11, kw(11, "why")), size=120)],
      cam=[[T(11), .48, .42, 1.0], [T(11, 1), .3, .45, 1.6]])
 board(T(12, -.15), [say(12, 760, 330)], talks=[12])
 board(T(13, -.15), [txt("Back to the beginning", 1200, 600, T(13, .05), size=90, box="#222222")], talks=[13])
@@ -187,7 +187,7 @@ shot(T(48, kw(48, "and had")), arc("baptism.jpg", os.path.join(A, "ru_kyiv.png")
 shot(T(49, -.15), mp("map_rus"), [txt("Yaroslav the Wise", 960, 250, T(49, kw(49, "Yaroslav")), size=96)],
      cam=[[T(49), .45, .45, 1.0], [T(49, 1), .45, .45, 1.1]],
      over=[{"img": ov("map_rus", "kievanrus"), "in": 0, "dur": .01}, {"img": ov("map_rus", "trade"), "in": 0, "dur": .01, "mode": "draw"}])
-board(T(50, -.15), [], talks=[])
+board(T(50, -.15), [txt("Family feud...", 1200, 620, T(50, kw(50, "family")), size=100, box="#222222")])
 board(T(51, -.15), [say(51, 760, 330)], talks=[51])
 plate_pan(T(52, -.15), a("ru_rivers"), [[T(52), .5, .6, 1.2], [T(52, 1), .5, .6, 1.4]],
           [ch("c_slav_elder1", 640, enter="none", talks=[52]), ch("c_slav_elder2", 1000, enter="none", flip=True, talks=[52]),

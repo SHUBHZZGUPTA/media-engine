@@ -8,9 +8,9 @@
  {"name": "map_rus", "bbox": [16, 50, 38, 62], "rivers": ["Dnieper", "Zapadnaya Dvina", "Volga"],
   "points": {"Novgorod": [31.27, 58.52], "Kyiv": [30.52, 50.45], "Constantinople": [28.98, 41.01]},
   "overlays": [
-   {"name": "pin_novgorod", "kind": "pin", "point": "Novgorod", "color": [214, 66, 58]},
-   {"name": "pin_kyiv", "kind": "pin", "point": "Kyiv", "color": [214, 66, 58]},
-   {"name": "pin_const", "kind": "pin", "point": "Constantinople", "color": [255, 206, 64]},
+   {"name": "pin_novgorod", "kind": "pin", "point": "Novgorod", "color": [214, 66, 58], "r": 34},
+   {"name": "pin_kyiv", "kind": "pin", "point": "Kyiv", "color": [214, 66, 58], "r": 34},
+   {"name": "pin_const", "kind": "pin", "point": "Constantinople", "color": [255, 206, 64], "r": 34},
    {"name": "oleg", "kind": "arrow", "path": [[31.27, 58.52], [31.0, 55.5], [30.7, 52.5], [30.52, 50.9]], "color": [214, 66, 58], "width": 14},
    {"name": "trade", "kind": "route", "dash": true, "path": [[24.0, 59.8], [29.8, 59.9], [31.27, 58.52], [31.0, 55.5], [30.6, 52.3], [30.52, 50.45], [32.4, 47.5], [31.6, 46.6], [30.6, 44.2], [29.4, 41.9], [28.98, 41.01]], "color": [255, 236, 200], "width": 12},
    {"name": "kievanrus", "kind": "fill", "poly": [[23.5, 50.0], [24.5, 54.5], [27.5, 57.0], [29.5, 60.0], [34.5, 61.5], [40.0, 59.0], [42.0, 56.0], [40.0, 52.8], [37.0, 50.0], [34.0, 47.8], [30.0, 47.2], [26.0, 48.6]], "color": [214, 66, 58], "alpha": 150}]},
