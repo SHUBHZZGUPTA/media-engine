@@ -3,7 +3,7 @@
 Usage: python3 tools/yt_publish.py <queue dir containing publish.json> <out json>
 publish.json: {"id", "file", "token_secret": "YT_RT_BHUGOL_EN", "title", "description", "tags": [...], "categoryId": "27",
                "privacy": "public"|"unlisted"|"private", "publishAt": "2026-10-25T12:30:00Z" | null,
-               "containsSyntheticMedia": false, "madeForKids": false, "language": "en"}
+               "containsSyntheticMedia": false, "madeForKids": false, "language": "en", "thumbnail": "thumbnail.jpg" (optional)}
 With publishAt the video is uploaded private and YouTube publishes it at that time.
 Upload pattern adapted from darkzOGx/youtube-automation-agent (MIT).
 """
@@ -34,6 +34,13 @@ while resp is None:
 vid = resp["id"]; print("video id", vid)
 R = {"id": P["id"], "video_id": vid, "url": f"https://youtube.com/shorts/{vid}", "channel": me["snippet"]["title"], "channel_id": me["id"],
      "requested": status, "returned_status": resp.get("status"), "checks": []}
+if P.get("thumbnail"):   # optional custom thumbnail (long-form; JPG/PNG under 2 MB). Shorts thumbnails can't be set by API.
+    try:
+        th = yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(os.path.join(qdir, P["thumbnail"]), mimetype="image/jpeg")).execute()
+        R["thumbnail"] = {"ok": True, "url": ((th.get("items") or [{}])[0].get("maxres") or (th.get("items") or [{}])[0].get("high") or {}).get("url")}
+    except Exception as e:
+        R["thumbnail"] = {"ok": False, "error": str(e)[:300]}
+    print("thumbnail", R["thumbnail"], flush=True)
 for wait in (60, 180):   # the private lock and processing show up after the upload finishes
     time.sleep(wait)
     v = yt.videos().list(part="status,processingDetails", id=vid).execute().get("items", [])
