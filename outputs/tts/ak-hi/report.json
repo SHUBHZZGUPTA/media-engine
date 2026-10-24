@@ -1,0 +1,29 @@
+{
+ "job": "ak-hi",
+ "items": [
+  {
+   "name": "part1",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 109.37,
+   "took": 35.3
+  },
+  {
+   "name": "part2",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 93.69,
+   "took": 42.2
+  },
+  {
+   "name": "part3",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 100.05,
+   "took": 37.8
+  }
+ ]
+}
