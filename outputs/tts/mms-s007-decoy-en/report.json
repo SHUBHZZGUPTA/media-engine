@@ -1,0 +1,13 @@
+{
+ "job": "mms-s007-decoy-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 63.49,
+   "took": 19.5
+  }
+ ]
+}
