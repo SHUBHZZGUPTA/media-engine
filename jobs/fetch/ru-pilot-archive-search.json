@@ -1,0 +1,30 @@
+{
+ "id": "ru-pilot-archive-search",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "files": [
+  {
+   "name": "s_catherine.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=8&srsearch=Catherine%20II%20Roslin%20portrait"
+  },
+  {
+   "name": "s_varangians.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=8&srsearch=Vasnetsov%20Varangians"
+  },
+  {
+   "name": "s_baptism.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=8&srsearch=Vasnetsov%20Baptism%20Vladimir"
+  },
+  {
+   "name": "s_olga.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srnamespace=6&srlimit=8&srsearch=Olga%20revenge%20Drevlians"
+  },
+  {
+   "name": "stalin_full.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stalin_Full_Image.jpg?width=1200"
+  },
+  {
+   "name": "stalin_info.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=extmetadata&titles=File:Stalin_Full_Image.jpg"
+  }
+ ]
+}
