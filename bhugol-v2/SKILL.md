@@ -360,7 +360,7 @@ Fix the spec/template, rebuild, rerun. Both gates were checked against the Benga
 - (22 Oct) ffmpeg `split` on one input feeding a long concat + LUT blend buffered ~6 GB and was OOM-killed; open the same file as separate inputs per segment.
 - (22 Oct) `motion.js` curve cut set the incoming shot to 35% opacity after its fade-in; fixed. A scene reused later in the plan is hidden at 0 by its later cuts unless the first shot is forced visible (templates do this now).
 - (22 Oct) Never name a map-scene field `ll`: it is the lon/lat->globe function; use `lls` for lon/lat labels.
-- (24 Oct, Gulf Stream) `MO.charSlam` splits the hook title into letters, which breaks Devanagari conjuncts (dotted circles): Hindi builds slam the whole title line instead (template check `D.lang !== 'hi'`).
+- (24 Oct, Gulf Stream) `MO.charSlam` splits the hook title into letters, which breaks Devanagari conjuncts (dotted circles): Hindi builds animate the whole title line instead (template check `D.lang !== 'hi'` before `charSlam`).
 - (24 Oct) `hindi_spec.py` deep-copies the English spec at that moment: after ANY change to `shots`/`beats` (even renaming a scene), regenerate the Hindi spec, or the Hindi page fails to build (scene gate times out on `waitForFunction`).
 - (24 Oct) The headless shell path can change between sessions: if `chromium_headless_shell-1194` is missing, use `ls /opt/pw-browsers/` (e.g. `chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`) and set `HYPERFRAMES_BROWSER_PATH` to it.
 - `pkill -f` patterns can kill your own shell; avoid them, or anchor the pattern.

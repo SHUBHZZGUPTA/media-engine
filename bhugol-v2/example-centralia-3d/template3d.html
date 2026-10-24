@@ -546,7 +546,7 @@ function build() {
   const cs = beat('charslam')[0];
   // titles
   for (const id in TT) { const { g, t } = TT[id];
-    if (id === 'tFog' && cs) { tl.set(g, { opacity: 1 }, cs.t); MO.charSlam(TT.tFog.lines[0], cs.t, { blur: true }); }
+    if (id === 'tFog' && cs && D.lang !== 'hi') {  /* Devanagari: per-letter split breaks conjuncts, so Hindi uses the whole-line branches below */ tl.set(g, { opacity: 1 }, cs.t); MO.charSlam(TT.tFog.lines[0], cs.t, { blur: true }); }
     else if (id === 't1962' || id === 't250') MO.slam(g, t.a, { shake: id === 't250' }); else MO.textIn(g, t.a);
     MO.textOut(g, t.b); }
   { const sp = TT.t42k && TT.t42k.lines[0].querySelector('span'); if (sp) MO.countUp(sp, 42000, TT.t42k.t.a, { prefix: '$', dur: 1.3, noScale: true }); }
