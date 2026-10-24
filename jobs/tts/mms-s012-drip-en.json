@@ -1,7 +1,7 @@
 {
  "id": "mms-s012-drip-en",
  "models": [
-  "gemini-2.5-flash-preview-tts"
+  "gemini-3.1-flash-tts-preview"
  ],
  "items": [
   {
@@ -53,5 +53,6 @@
     ]
    ]
   }
- ]
+ ],
+ "try": 2
 }

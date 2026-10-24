@@ -1,7 +1,7 @@
 {
  "id": "mms-s008-ponzi-en",
  "models": [
-  "gemini-2.5-flash-preview-tts"
+  "gemini-3.1-flash-tts-preview"
  ],
  "items": [
   {
@@ -57,5 +57,6 @@
     ]
    ]
   }
- ]
+ ],
+ "try": 2
 }
