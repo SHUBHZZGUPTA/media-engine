@@ -1,0 +1,27 @@
+[
+ {
+  "name": "catherine.jpg",
+  "ok": true,
+  "bytes": 114702
+ },
+ {
+  "name": "varangians.jpg",
+  "ok": true,
+  "bytes": 313129
+ },
+ {
+  "name": "baptism.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "olga_revenge.jpg",
+  "ok": false,
+  "error": "<HTTPError 429: 'Too many requests (f061ab2)'>"
+ },
+ {
+  "name": "info.json",
+  "ok": true,
+  "bytes": 23151
+ }
+]
