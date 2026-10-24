@@ -1,0 +1,13 @@
+{
+ "job": "lf-keytest",
+ "items": [
+  {
+   "name": "test",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 7.4,
+   "took": 5.8
+  }
+ ]
+}
