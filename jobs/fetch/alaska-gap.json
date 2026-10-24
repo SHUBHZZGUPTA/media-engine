@@ -1,0 +1,21 @@
+{
+ "id": "alaska-gap",
+ "files": [
+  {
+   "name": "gap_e.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=170,42,180,74&WIDTH=600&HEIGHT=1920"
+  },
+  {
+   "name": "gap_w.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-180,42,-168,74&WIDTH=720&HEIGHT=1920"
+  },
+  {
+   "name": "gap_e2.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=170,42,179.999,74&WIDTH=600&HEIGHT=1920"
+  },
+  {
+   "name": "gap_w2.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-179.999,42,-168,74&WIDTH=720&HEIGHT=1920"
+  }
+ ]
+}
