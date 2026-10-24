@@ -1,0 +1,2928 @@
+{
+ "w": 1920,
+ "h": 1080,
+ "fps": 30,
+ "shots": [
+  {
+   "t0": 0.0,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_alaska.png",
+    "cam": [
+     [
+      1.4,
+      0.22,
+      0.45,
+      1.25
+     ],
+     [
+      7.4,
+      0.52,
+      0.38,
+      1.15
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_alaska__alaska.png",
+      "in": 4.58,
+      "dur": 0.6,
+      "mode": "fade"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "1867",
+      "size": 110,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 1.52,
+     "enter": "pop"
+    }
+   ],
+   "t1": 7.81
+  },
+  {
+   "t0": 7.81,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "~2\u00a2 per acre",
+      "size": 120,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 620,
+     "in": 8.77,
+     "enter": "pop"
+    }
+   ],
+   "t1": 11.43
+  },
+  {
+   "t0": 11.43,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_alaska.png",
+    "cam": [
+     [
+      11.58,
+      0.52,
+      0.36,
+      1.5
+     ],
+     [
+      14.760000000000002,
+      0.55,
+      0.36,
+      1.7
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_alaska__alaska.png",
+      "in": 0,
+      "dur": 0.01,
+      "mode": "fade"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "America",
+      "size": 90,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1500,
+     "y": 900,
+     "in": 11.7072,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "ALASKA",
+      "size": 100,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 900,
+     "y": 330,
+     "in": 13.916326530612245,
+     "enter": "pop"
+    }
+   ],
+   "t1": 14.435510204081634
+  },
+  {
+   "t0": 14.435510204081634,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Gold",
+      "size": 110,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1050,
+     "y": 560,
+     "in": 16.57714285714286,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Oil",
+      "size": 110,
+      "color": "#ffffff",
+      "box": "#111111",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1500,
+     "y": 560,
+     "in": 17.622,
+     "enter": "pop"
+    }
+   ],
+   "t1": 18.41
+  },
+  {
+   "t0": 18.41,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       18.56,
+       21.78
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Oof. Worst garage sale in\nhistory.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 18.56,
+     "enter": "pop",
+     "out": 22.03
+    }
+   ],
+   "t1": 22.39
+  },
+  {
+   "t0": 22.39,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_eurasia.png",
+    "cam": [
+     [
+      22.54,
+      0.45,
+      0.4,
+      1.6
+     ],
+     [
+      27.604,
+      0.5,
+      0.42,
+      1.0
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Still #1",
+      "size": 100,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 260,
+     "in": 29.305396825396826,
+     "enter": "pop"
+    }
+   ],
+   "t1": 26.023174603174603
+  },
+  {
+   "t0": 26.023174603174603,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/bars.png",
+     "x": 1200,
+     "y": 900,
+     "h": 700,
+     "in": 26.023174603174603,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 30.830000000000002
+  },
+  {
+   "t0": 30.830000000000002,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_eurasia.png",
+    "cam": [
+     [
+      30.98,
+      0.5,
+      0.42,
+      1.05
+     ],
+     [
+      38.86,
+      0.5,
+      0.42,
+      1.12
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_eurasia__span.png",
+      "in": 31.1376,
+      "dur": 2.2,
+      "mode": "draw"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "11 time zones",
+      "size": 96,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 230,
+     "in": 31.374,
+     "enter": "pop"
+    }
+   ],
+   "t1": 32.64802919708029
+  },
+  {
+   "t0": 32.64802919708029,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Moscow\n11 PM",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#2b3a67",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1000,
+     "y": 640,
+     "in": 32.64802919708029,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Far East\n8 AM, next day",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#e0902f",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1520,
+     "y": 640,
+     "in": 35.293868613138685,
+     "enter": "pop"
+    }
+   ],
+   "t1": 39.43
+  },
+  {
+   "t0": 39.43,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Viking chiefs",
+      "size": 70,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 39.53,
+     "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_rurik.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 39.48
+    }
+   ],
+   "t1": 44.93969111969112
+  },
+  {
+   "t0": 44.93969111969112,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Mongol khans",
+      "size": 70,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 45.03969111969112,
+     "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_khan.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 44.989691119691116
+    }
+   ],
+   "t1": 45.98185328185328
+  },
+  {
+   "t0": 45.98185328185328,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Killed his own son",
+      "size": 70,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 46.081853281853284,
+     "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_ivan4.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 46.03185328185328
+    }
+   ],
+   "t1": 48.289498069498066
+  },
+  {
+   "t0": 48.289498069498066,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Banned beards",
+      "size": 70,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 48.38949806949807,
+     "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_peter1.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 48.33949806949806
+    }
+   ],
+   "t1": 51.86262548262548
+  },
+  {
+   "t0": 51.86262548262548,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Took her husband's throne",
+      "size": 70,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 51.962625482625484,
+     "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../../../outputs/fetch/ru-pilot-archive/catherine.jpg",
+     "x": 1250,
+     "y": 1000,
+     "h": 681,
+     "in": 51.91262548262548,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 55.80795366795367
+  },
+  {
+   "t0": 55.80795366795367,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Erased people from photos",
+      "size": 70,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 55.90795366795367,
+     "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../../../outputs/fetch/ru-pilot-archive-search/stalin_full.jpg",
+     "x": 1250,
+     "y": 1000,
+     "h": 643,
+     "in": 55.857953667953666,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 59.33
+  },
+  {
+   "t0": 59.33,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       59.48,
+       62.76
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "I've been to their family\ndinners. Bring a helmet.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 59.48,
+     "enter": "pop",
+     "out": 63.01
+    }
+   ],
+   "t1": 62.61
+  },
+  {
+   "t0": 62.61,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_eurasia.png",
+    "cam": [
+     [
+      62.76,
+      0.5,
+      0.42,
+      1.0
+     ],
+     [
+      67.16,
+      0.5,
+      0.44,
+      1.2
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "The same story",
+      "size": 100,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 240,
+     "in": 66.31087719298245,
+     "enter": "pop"
+    }
+   ],
+   "t1": 67.53
+  },
+  {
+   "t0": 67.53,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle1.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 67.53,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 70.24970414201184
+  },
+  {
+   "t0": 70.24970414201184,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle2.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 70.24970414201184,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 72.89727810650888
+  },
+  {
+   "t0": 72.89727810650888,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle3.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 72.89727810650888,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 76.16781065088757
+  },
+  {
+   "t0": 76.16781065088757,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle4.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 76.16781065088757,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 77.72520710059172
+  },
+  {
+   "t0": 77.72520710059172,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle5.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 77.72520710059172,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 80.69
+  },
+  {
+   "t0": 80.69,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_rurik.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 80.74
+    },
+    {
+     "img": {
+      "text": "Vikings",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 80.78999999999999,
+     "enter": "pop"
+    }
+   ],
+   "t1": 81.655625
+  },
+  {
+   "t0": 81.655625,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_khan.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 81.705625
+    },
+    {
+     "img": {
+      "text": "Mongols",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 81.755625,
+     "enter": "pop"
+    }
+   ],
+   "t1": 82.47125
+  },
+  {
+   "t0": 82.47125,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_ivan4.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 82.52125
+    },
+    {
+     "img": {
+      "text": "Tsars",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 82.57124999999999,
+     "enter": "pop"
+    }
+   ],
+   "t1": 83.105625
+  },
+  {
+   "t0": 83.105625,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../../../outputs/fetch/ru-pilot-archive-search/stalin_full.jpg",
+     "x": 1250,
+     "y": 1000,
+     "h": 643,
+     "in": 83.155625,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
+     "img": {
+      "text": "Communists",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 83.205625,
+     "enter": "pop"
+    }
+   ],
+   "t1": 84.19312500000001
+  },
+  {
+   "t0": 84.19312500000001,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle5.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 84.19312500000001,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 86.49
+  },
+  {
+   "t0": 86.49,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_eurasia.png",
+    "cam": [
+     [
+      86.64,
+      0.48,
+      0.42,
+      1.0
+     ],
+     [
+      94.36,
+      0.3,
+      0.45,
+      1.6
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "How?",
+      "size": 120,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 260,
+     "in": 87.412,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Why?",
+      "size": 120,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 260,
+     "in": 92.12694214876034,
+     "enter": "pop"
+    }
+   ],
+   "t1": 95.08999999999999
+  },
+  {
+   "t0": 95.08999999999999,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       95.24,
+       96.1
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Hold on to something.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 95.24,
+     "enter": "pop",
+     "out": 96.35
+    }
+   ],
+   "t1": 96.50999999999999
+  },
+  {
+   "t0": 96.50999999999999,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       96.66,
+       98.74
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Back to the beginning",
+      "size": 90,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1200,
+     "y": 600,
+     "in": 96.764,
+     "enter": "pop"
+    }
+   ],
+   "t1": 98.83999999999999
+  },
+  {
+   "t0": 98.83999999999999,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/chapter1.png",
+     "x": 960,
+     "y": 980,
+     "h": 794,
+     "in": 98.89,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 100.69
+  },
+  {
+   "t0": 100.69,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_rivers.png",
+    "cam": [
+     [
+      100.84,
+      0.3,
+      0.5,
+      1.25
+     ],
+     [
+      107.08,
+      0.7,
+      0.5,
+      1.25
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "~800 AD",
+      "size": 90,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 101.152,
+     "enter": "pop"
+    }
+   ],
+   "t1": 106.92999999999999
+  },
+  {
+   "t0": 106.92999999999999,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_rivers.png",
+    "cam": [
+     [
+      107.08,
+      0.5,
+      0.55,
+      1.0
+     ],
+     [
+      114.9,
+      0.5,
+      0.55,
+      1.1
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder2.png",
+     "x": 760,
+     "y": 1045,
+     "h": 560,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 109.035
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder3.png",
+     "x": 1180,
+     "y": 1045,
+     "h": 560,
+     "enter": "pop",
+     "talk": [],
+     "flip": true,
+     "in": 110.208
+    },
+    {
+     "img": {
+      "text": "East Slavs",
+      "size": 90,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 109.38,
+     "enter": "pop"
+    }
+   ],
+   "t1": 114.75
+  },
+  {
+   "t0": 114.75,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_rivers.png",
+    "cam": [
+     [
+      114.9,
+      0.5,
+      0.6,
+      1.2
+     ],
+     [
+      119.96,
+      0.5,
+      0.6,
+      1.35
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder2.png",
+     "x": 760,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       114.9,
+       119.96
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder3.png",
+     "x": 1160,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       114.9,
+       119.96
+      ]
+     ],
+     "flip": true
+    }
+   ],
+   "t1": 119.80999999999999
+  },
+  {
+   "t0": 119.80999999999999,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Foreigners?!",
+      "size": 110,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1200,
+     "y": 600,
+     "in": 124.4088,
+     "enter": "pop"
+    }
+   ],
+   "t1": 127.93
+  },
+  {
+   "t0": 127.93,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_novgorod.png",
+    "cam": [
+     [
+      128.08,
+      0.5,
+      0.5,
+      1.3
+     ],
+     [
+      129.66,
+      0.5,
+      0.5,
+      1.1
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_rurik.png",
+     "x": 960,
+     "y": 1045,
+     "h": 640,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 129.31837837837838
+    },
+    {
+     "img": {
+      "text": "Vikings!",
+      "size": 110,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 260,
+     "in": 129.31837837837838,
+     "enter": "pop"
+    }
+   ],
+   "t1": 129.60999999999999
+  },
+  {
+   "t0": 129.60999999999999,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_cabin.png",
+    "cam": [
+     [
+      129.76,
+      0.5,
+      0.55,
+      1.0
+     ],
+     [
+      151.196,
+      0.5,
+      0.55,
+      1.12
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder1.png",
+     "x": 520,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideL",
+     "talk": [
+      [
+       129.76,
+       137.473
+      ],
+      [
+       142.615,
+       144.282
+      ],
+      [
+       148.057,
+       150.038
+      ],
+      [
+       150.258,
+       151.196
+      ]
+     ],
+     "flip": false,
+     "in": 129.60999999999999
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder2.png",
+     "x": 1060,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       138.33,
+       142.186
+      ],
+      [
+       148.057,
+       150.038
+      ]
+     ],
+     "flip": true,
+     "in": 132.8452
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder3.png",
+     "x": 1440,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       144.467,
+       147.698
+      ]
+     ],
+     "flip": true,
+     "in": 144.26700000000002
+    },
+    {
+     "img": {
+      "text": "\"Dear Vikings. Our land is\nhuge and rich... but\nnobody is in charge.\"",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 560,
+     "y": 360,
+     "in": 129.76,
+     "enter": "pop",
+     "out": 137.723
+    },
+    {
+     "img": {
+      "text": "The Vikings? The ones who\nraid monasteries for fun?",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1080,
+     "y": 360,
+     "in": 138.33,
+     "enter": "pop",
+     "out": 142.436
+    },
+    {
+     "img": {
+      "text": "You have a better plan?",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 560,
+     "y": 360,
+     "in": 142.615,
+     "enter": "pop",
+     "out": 144.532
+    },
+    {
+     "img": {
+      "text": "We could... stop fighting\neach other?",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1440,
+     "y": 360,
+     "in": 144.467,
+     "enter": "pop",
+     "out": 147.948
+    },
+    {
+     "img": {
+      "text": "Hah! Good one.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 800,
+     "y": 360,
+     "in": 148.057,
+     "enter": "pop",
+     "out": 150.288
+    },
+    {
+     "img": {
+      "text": "Sign it.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 560,
+     "y": 360,
+     "in": 150.258,
+     "enter": "pop",
+     "out": 151.446
+    }
+   ],
+   "t1": 151.25
+  },
+  {
+   "t0": 151.25,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       151.4,
+       155.44
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Historians aren't sure\nthat letter ever happened.\nBut it's a great story.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 151.4,
+     "enter": "pop",
+     "out": 155.69
+    }
+   ],
+   "t1": 155.87
+  },
+  {
+   "t0": 155.87,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus.png",
+    "cam": [
+     [
+      156.02,
+      0.45,
+      0.3,
+      1.6
+     ],
+     [
+      164.78,
+      0.45,
+      0.32,
+      1.8
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__pin_novgorod.png",
+      "in": 164.21685714285715,
+      "dur": 0.3,
+      "mode": "fade"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "862",
+      "size": 110,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 158.89828571428572,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Novgorod",
+      "size": 76,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1450,
+     "y": 330,
+     "in": 164.21685714285715,
+     "enter": "pop"
+    }
+   ],
+   "t1": 164.63
+  },
+  {
+   "t0": 164.63,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Rus  \u2192  Russia",
+      "size": 120,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1200,
+     "y": 620,
+     "in": 168.38418604651162,
+     "enter": "pop"
+    }
+   ],
+   "t1": 170.21
+  },
+  {
+   "t0": 170.21,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_rurik.png",
+     "x": 1050,
+     "y": 1045,
+     "h": 600,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 170.26000000000002
+    },
+    {
+     "img": {
+      "text": "700+ years",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1500,
+     "y": 560,
+     "in": 173.08857142857144,
+     "enter": "pop"
+    }
+   ],
+   "t1": 174.71
+  },
+  {
+   "t0": 174.71,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus.png",
+    "cam": [
+     [
+      174.86,
+      0.45,
+      0.45,
+      1.1
+     ],
+     [
+      182.3,
+      0.45,
+      0.55,
+      1.3
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__pin_novgorod.png",
+      "in": 0,
+      "dur": 0.01,
+      "mode": "fade"
+     },
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__oleg.png",
+      "in": 177.17622641509436,
+      "dur": 2.5,
+      "mode": "draw"
+     },
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__pin_kyiv.png",
+      "in": 181.928,
+      "dur": 0.3,
+      "mode": "fade"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Kyiv",
+      "size": 80,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1150,
+     "y": 690,
+     "in": 181.928,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Oleg",
+      "size": 90,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 176.82528301886794,
+     "enter": "pop"
+    }
+   ],
+   "t1": 182.15
+  },
+  {
+   "t0": 182.15,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus.png",
+    "cam": [
+     [
+      182.3,
+      0.45,
+      0.5,
+      1.0
+     ],
+     [
+      187.69,
+      0.45,
+      0.55,
+      1.05
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__pin_novgorod.png",
+      "in": 0,
+      "dur": 0.01
+     },
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__pin_kyiv.png",
+      "in": 0,
+      "dur": 0.01
+     },
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__trade.png",
+      "in": 182.79000000000002,
+      "dur": 3.5,
+      "mode": "draw"
+     },
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__pin_const.png",
+      "in": 187.55695364238412,
+      "dur": 0.3
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Constantinople",
+      "size": 70,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 900,
+     "y": 960,
+     "in": 187.55695364238412,
+     "enter": "pop"
+    }
+   ],
+   "t1": 188.59536423841058
+  },
+  {
+   "t0": 188.59536423841058,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_kyiv.png",
+    "cam": [
+     [
+      188.59536423841058,
+      0.4,
+      0.5,
+      1.2
+     ],
+     [
+      192.1,
+      0.6,
+      0.5,
+      1.2
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Furs & honey  \u2193",
+      "size": 70,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 520,
+     "y": 260,
+     "in": 188.59536423841058,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Silver & silk  \u2191",
+      "size": 70,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1400,
+     "y": 260,
+     "in": 190.3476821192053,
+     "enter": "pop"
+    }
+   ],
+   "t1": 191.95
+  },
+  {
+   "t0": 191.95,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus.png",
+    "cam": [
+     [
+      192.1,
+      0.45,
+      0.45,
+      1.0
+     ],
+     [
+      199.24,
+      0.45,
+      0.45,
+      1.08
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__kievanrus.png",
+      "in": 194.284,
+      "dur": 1.0,
+      "mode": "fade"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Kievan Rus",
+      "size": 110,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 194.284,
+     "enter": "pop"
+    }
+   ],
+   "t1": 198.84
+  },
+  {
+   "t0": 198.84,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       199.24,
+       201.8
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle2.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 198.84,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
+     "img": {
+      "text": "Step 1  \u2713",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#2f8f4f",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1500,
+     "y": 230,
+     "in": 200.008,
+     "enter": "pop"
+    }
+   ],
+   "t1": 201.65
+  },
+  {
+   "t0": 201.65,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_kyiv.png",
+    "cam": [
+     [
+      201.8,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      207.96,
+      0.5,
+      0.55,
+      1.15
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_olga.png",
+     "x": 960,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 206.93333333333334
+    },
+    {
+     "img": {
+      "text": "Princess Olga",
+      "size": 96,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 260,
+     "in": 206.93333333333334,
+     "enter": "pop"
+    }
+   ],
+   "t1": 209.13
+  },
+  {
+   "t0": 209.13,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_kyiv.png",
+    "cam": [
+     [
+      209.28,
+      0.5,
+      0.55,
+      1.15
+     ],
+     [
+      214.22,
+      0.5,
+      0.55,
+      1.3
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_olga.png",
+     "x": 960,
+     "y": 1045,
+     "h": 620,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "945",
+      "size": 110,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 209.4159633027523,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Prince Igor: killed",
+      "size": 66,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1350,
+     "y": 330,
+     "in": 211.50073394495413,
+     "enter": "pop"
+    }
+   ],
+   "t1": 214.07
+  },
+  {
+   "t0": 214.07,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_dock.png",
+    "cam": [
+     [
+      214.22,
+      0.5,
+      0.55,
+      1.0
+     ],
+     [
+      221.34,
+      0.5,
+      0.55,
+      1.1
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_drevlian.png",
+     "x": 1350,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       218.02,
+       221.34
+      ]
+     ],
+     "flip": true,
+     "in": 214.98
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_olga.png",
+     "x": 560,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideL",
+     "talk": [
+      [
+       221.34,
+       225.9
+      ]
+     ],
+     "flip": false,
+     "in": 216.12
+    },
+    {
+     "img": {
+      "text": "Great Princess! Our prince\nwould like to marry you!",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1350,
+     "y": 360,
+     "in": 218.02,
+     "enter": "pop",
+     "out": 221.59
+    },
+    {
+     "img": {
+      "text": "How lovely. Come. I'll\ngive you a great welcome.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 560,
+     "y": 360,
+     "in": 221.34,
+     "enter": "pop",
+     "out": 226.15
+    }
+   ],
+   "t1": 226.35
+  },
+  {
+   "t0": 226.35,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_dock.png",
+    "cam": [
+     [
+      226.5,
+      0.5,
+      0.6,
+      1.2
+     ],
+     [
+      230.28,
+      0.5,
+      0.7,
+      1.45
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Buried alive",
+      "size": 96,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 228.58662420382166,
+     "enter": "pop"
+    }
+   ],
+   "t1": 230.4592356687898
+  },
+  {
+   "t0": 230.4592356687898,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_bathhouse.png",
+    "cam": [
+     [
+      230.4592356687898,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      234.9,
+      0.5,
+      0.5,
+      1.3
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "The doors were locked",
+      "size": 86,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 233.93694267515923,
+     "enter": "pop"
+    }
+   ],
+   "t1": 235.37
+  },
+  {
+   "t0": 235.37,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       235.52,
+       238.5
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Never accept a spa\ninvitation in the tenth\ncentury.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 235.52,
+     "enter": "pop",
+     "out": 238.75
+    }
+   ],
+   "t1": 238.35
+  },
+  {
+   "t0": 238.35,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_bathhouse.png",
+    "cam": [
+     [
+      238.5,
+      0.5,
+      0.4,
+      1.0
+     ],
+     [
+      243.12,
+      0.5,
+      0.5,
+      1.15
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Burned to the ground",
+      "size": 86,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 980,
+     "in": 240.25690140845072,
+     "enter": "pop"
+    }
+   ],
+   "t1": 242.97
+  },
+  {
+   "t0": 242.97,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_olga.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 600,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 243.02
+    },
+    {
+     "img": {
+      "text": "SAINT",
+      "size": 120,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 246.06666666666666,
+     "enter": "pop"
+    }
+   ],
+   "t1": 246.37
+  },
+  {
+   "t0": 246.37,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       246.52,
+       249.32
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "A saint? Bold choice.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 246.52,
+     "enter": "pop",
+     "out": 249.57
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_olga.png",
+     "x": 1500,
+     "y": 1045,
+     "h": 520,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    }
+   ],
+   "t1": 249.75
+  },
+  {
+   "t0": 249.75,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_hall.png",
+    "cam": [
+     [
+      249.9,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      255.32,
+      0.5,
+      0.55,
+      1.12
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_vladimir.png",
+     "x": 960,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 250.72894117647058
+    },
+    {
+     "img": {
+      "text": "Vladimir",
+      "size": 96,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 260,
+     "in": 250.72894117647058,
+     "enter": "pop"
+    }
+   ],
+   "t1": 255.69
+  },
+  {
+   "t0": 255.69,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Job interview:\nReligion",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1200,
+     "y": 640,
+     "in": 257.166,
+     "enter": "pop"
+    }
+   ],
+   "t1": 259.96
+  },
+  {
+   "t0": 259.96,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_hall.png",
+    "cam": [
+     [
+      260.26,
+      0.5,
+      0.55,
+      1.0
+     ],
+     [
+      270.94,
+      0.5,
+      0.55,
+      1.12
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_vladimir.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       260.26,
+       264.84
+      ],
+      [
+       269.12,
+       270.94
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_byz_envoy.png",
+     "x": 1380,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       265.94,
+       269.12
+      ]
+     ],
+     "flip": true,
+     "in": 265.54
+    },
+    {
+     "img": {
+      "text": "No alcohol? In this\nwinter? Next.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 620,
+     "y": 360,
+     "in": 260.26,
+     "enter": "pop",
+     "out": 265.09
+    },
+    {
+     "img": {
+      "text": "Sire... the churches in\nConstantinople are\nbeautiful.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1380,
+     "y": 360,
+     "in": 265.94,
+     "enter": "pop",
+     "out": 269.37
+    },
+    {
+     "img": {
+      "text": "Now we're talking.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 620,
+     "y": 360,
+     "in": 269.12,
+     "enter": "pop",
+     "out": 271.19
+    }
+   ],
+   "t1": 271.67
+  },
+  {
+   "t0": 271.67,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_constantinople.png",
+    "cam": [
+     [
+      271.82,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      274.356,
+      0.5,
+      0.45,
+      1.15
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "988",
+      "size": 110,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 272.3161739130435,
+     "enter": "pop"
+    }
+   ],
+   "t1": 275.4586086956522
+  },
+  {
+   "t0": 275.4586086956522,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_kyiv.png",
+    "cam": [
+     [
+      275.4586086956522,
+      0.5,
+      0.45,
+      1.0
+     ],
+     [
+      278.16,
+      0.5,
+      0.5,
+      1.15
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Baptism of Kyiv",
+      "size": 80,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 980,
+     "in": 276.94713043478265,
+     "enter": "pop"
+    }
+   ],
+   "t1": 278.01000000000005
+  },
+  {
+   "t0": 278.01000000000005,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus.png",
+    "cam": [
+     [
+      278.16,
+      0.45,
+      0.45,
+      1.0
+     ],
+     [
+      288.0,
+      0.45,
+      0.45,
+      1.1
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__kievanrus.png",
+      "in": 0,
+      "dur": 0.01
+     },
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_rus__trade.png",
+      "in": 0,
+      "dur": 0.01,
+      "mode": "draw"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Yaroslav the Wise",
+      "size": 96,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 284.187,
+     "enter": "pop"
+    }
+   ],
+   "t1": 287.85
+  },
+  {
+   "t0": 287.85,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    }
+   ],
+   "t1": 292.13
+  },
+  {
+   "t0": 292.13,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       292.28,
+       294.18
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "They started fighting each\nother.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 292.28,
+     "enter": "pop",
+     "out": 294.43
+    }
+   ],
+   "t1": 294.69
+  },
+  {
+   "t0": 294.69,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../art/ru_rivers.png",
+    "cam": [
+     [
+      294.84,
+      0.5,
+      0.6,
+      1.2
+     ],
+     [
+      300.54,
+      0.5,
+      0.6,
+      1.4
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder1.png",
+     "x": 640,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       294.84,
+       300.54
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder2.png",
+     "x": 1000,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       294.84,
+       300.54
+      ]
+     ],
+     "flip": true
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_slav_elder3.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "pop",
+     "talk": [
+      [
+       294.84,
+       300.54
+      ]
+     ],
+     "flip": true,
+     "in": 297.12
+    },
+    {
+     "img": {
+      "text": "Brothers vs brothers",
+      "size": 86,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 295.125,
+     "enter": "pop"
+    }
+   ],
+   "t1": 300.59000000000003
+  },
+  {
+   "t0": 300.59000000000003,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/cards/cycle_chaos.png",
+     "x": 1200,
+     "y": 1000,
+     "h": 745,
+     "in": 300.59000000000003,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 302.71000000000004
+  },
+  {
+   "t0": 302.71000000000004,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_mongol.png",
+    "cam": [
+     [
+      302.86,
+      0.75,
+      0.5,
+      1.4
+     ],
+     [
+      310.26,
+      0.45,
+      0.5,
+      1.0
+     ]
+    ],
+    "over": [
+     {
+      "img": "/home/claude/media-engine/longform/russia/pilot/../maps/out/map_mongol__horde.png",
+      "in": 309.639020979021,
+      "dur": 2.0,
+      "mode": "draw"
+     }
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Mongols",
+      "size": 100,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1500,
+     "y": 400,
+     "in": 307.6208391608392,
+     "enter": "pop"
+    }
+   ],
+   "t1": 310.11
+  },
+  {
+   "t0": 310.11,
+   "bg": {
+    "img": "#d6d6d6"
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       310.26,
+       312.82
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Oh no. It's them.",
+      "size": 44,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 310.26,
+     "enter": "pop",
+     "out": 313.07
+    }
+   ],
+   "t1": 314.21999999999997
+  }
+ ]
+}

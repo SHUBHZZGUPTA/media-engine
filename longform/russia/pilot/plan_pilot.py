@@ -11,6 +11,11 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 A = os.path.join(HERE, "..", "art"); M = os.path.join(HERE, "..", "maps", "out"); C = os.path.join(HERE, "cards")
 ARC = os.path.join(HERE, "..", "..", "..", "outputs", "fetch", "ru-pilot-archive")
+ARC2 = os.path.join(HERE, "..", "..", "..", "outputs", "fetch", "ru-pilot-archive2")
+def arc(name, fallback):
+    for d in (ARC2, ARC):
+        if os.path.exists(os.path.join(d, name)): return os.path.join(d, name)
+    return fallback
 STALIN = os.path.join(HERE, "..", "..", "..", "outputs", "fetch", "ru-pilot-archive-search", "stalin_full.jpg")
 FONT = "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
 EN = json.load(open(os.path.join(HERE, "lines_en.json")))     # keyword fractions come from the English text
@@ -165,7 +170,7 @@ plate_pan(T(38, -.15), a("ru_dock"), [[T(38), .5, .6, 1.2], [T(38, .45), .5, .7,
 plate_pan(T(38, kw(38, "The second")), a("ru_bathhouse"), [[T(38, kw(38, "The second")), .5, .5, 1.0], [T(38, 1), .5, .5, 1.3]],
           [txt("The doors were locked", 960, 250, T(38, kw(38, "doors")), size=86)])
 board(T(39, -.15), [say(39, 760, 330)], talks=[39])
-shot(T(40, -.15), os.path.join(ARC, "olga_revenge.jpg"), [txt("Burned to the ground", 960, 980, T(40, kw(40, "burned")), size=86)],
+shot(T(40, -.15), arc("olga_revenge.jpg", os.path.join(A, "ru_bathhouse.png")), [txt("Burned to the ground", 960, 980, T(40, kw(40, "burned")), size=86)],
      cam=[[T(40), .5, .4, 1.0], [T(40, 1), .5, .5, 1.15]])
 board(T(41, -.15), [ch("c_olga", 1250, t=T(41, -.1), h=600), txt("SAINT", 1250, 300, T(41, kw(41, "saint")), size=120, box="#c99400")])
 board(T(42, -.15), [say(42, 760, 330), ch("c_olga", 1500, h=520, enter="none")], talks=[42])
@@ -177,7 +182,7 @@ plate_pan(T(45, -.3), a("ru_hall"), [[T(45), .5, .55, 1.0], [T(47, 1), .5, .55, 
           [ch("c_vladimir", 620, enter="none", talks=[45, 47]), ch("c_byz_envoy", 1380, enter="slideR", t=T(46, -.4), flip=True, talks=[46]),
            say(45, 620), say(46, 1380), say(47, 620)])
 plate_pan(T(48, -.15), a("ru_constantinople"), [[T(48), .5, .5, 1.0], [T(48, .4), .5, .45, 1.15]], [txt("988", 300, 230, T(48, kw(48, "nine")), size=110)])
-shot(T(48, kw(48, "and had")), os.path.join(ARC, "baptism.jpg"), [txt("Baptism of Kyiv", 960, 980, T(48, kw(48, "baptized")), size=80)],
+shot(T(48, kw(48, "and had")), arc("baptism.jpg", os.path.join(A, "ru_kyiv.png")), [txt("Baptism of Kyiv", 960, 980, T(48, kw(48, "baptized")), size=80)],
      cam=[[T(48, kw(48, "and had")), .5, .45, 1.0], [T(48, 1), .5, .5, 1.15]])
 shot(T(49, -.15), mp("map_rus"), [txt("Yaroslav the Wise", 960, 250, T(49, kw(49, "Yaroslav")), size=96)],
      cam=[[T(49), .45, .45, 1.0], [T(49, 1), .45, .45, 1.1]],
