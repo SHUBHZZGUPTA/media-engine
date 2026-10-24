@@ -1,0 +1,51 @@
+{
+ "client_id_set": true,
+ "client_secret_set": true,
+ "tokens": [
+  {
+   "secret": "YT_RT_BHUGOL_HI",
+   "present": true,
+   "refresh": {
+    "ok": true
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/youtube.force-ssl",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/yt-analytics.readonly"
+   ],
+   "channels": [
+    {
+     "id": "UCJMYXEUkRvGmE2N8zoWmAMg",
+     "title": "Bhugol Hindi",
+     "handle": "@bhugolhindi",
+     "videos": "1",
+     "subscribers": "1160"
+    }
+   ],
+   "recent_uploads": [
+    {
+     "title": "अमेरिका ने बनाई पेड़ों की विशाल दीवार!",
+     "published": "2026-10-24T06:58:20Z",
+     "privacy": "private"
+    },
+    {
+     "title": "दुबई देश नहीं है! तो UAE क्या है?",
+     "published": "2026-10-24T03:27:19Z",
+     "privacy": "public"
+    }
+   ],
+   "analytics": {
+    "ok": true,
+    "status": 200,
+    "rows": [
+     [
+      7,
+      4
+     ]
+    ],
+    "error": null
+   }
+  }
+ ]
+}
