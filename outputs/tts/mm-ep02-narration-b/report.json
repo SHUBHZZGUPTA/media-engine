@@ -1,0 +1,21 @@
+{
+ "job": "mm-ep02-narration-b",
+ "items": [
+  {
+   "name": "part_5",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 107.64,
+   "took": 34.0
+  },
+  {
+   "name": "part_6",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 108.04,
+   "took": 33.7
+  }
+ ]
+}
