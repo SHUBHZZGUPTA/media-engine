@@ -214,7 +214,7 @@ plate_pan(T(52, -.15), a("ru_rivers"), [[T(52), .5, .6, 1.2], [T(52, 1), .5, .6,
            ch("c_slav_elder3", 1340, t=T(52, .4), flip=True, talks=[52]), txt("Brothers vs brothers", 960, 250, T(52, .05), size=86)])
 board(T(53, -.15), [imgcard(card("cycle_chaos"), 1210, 1010, 1120, T(53, -.15))])
 shot(T(54, -.15), mp("map_mongol"), [txt("Mongols", 1500, 400, T(54, kw(54, "army")), size=100)],
-     cam=[[T(54), .75, .5, 1.4], [T(54, 1), .45, .5, 1.0]],
+     cam=[[T(54), .62, .5, 1.3], [T(54, 1), .45, .5, 1.0]],
      over=[{"img": ov("map_mongol", "horde"), "in": T(54, kw(54, "riding")), "dur": 2.0, "mode": "draw"}])
 board(T(55, -.15), [say(55, 760, 330)], talks=[55])
 
@@ -264,7 +264,7 @@ for s, LY in find(lambda L: text_of(L) == "11 time zones"):
     LY["count"] = {"from": 0, "to": 11, "fmt": "{v} time zones", "dur": 1.0}; fx.append(["ticks", LY["in"], 1.0])
 for s, LY in find(lambda L: text_of(L) == "700+ years"):
     LY["count"] = {"from": 0, "to": 700, "fmt": "{v}+ years", "dur": 1.3}; fx.append(["ticks", LY["in"], 1.3])
-for word in ("862", "945", "988"):
+for word in ("862", "945", "988", "How?", "Why?"):
     for s, LY in find(lambda L, w=word: text_of(L) == w):
         LY["enter"] = "slam"; shake.append([LY["in"], .35, 8]); fx.append(["thud", LY["in"], -14])
 
@@ -287,6 +287,9 @@ for nm, i, w in [("Novgorod", 26, "Novgorod"), ("Kyiv", 29, "Kyiv"), ("Constanti
     nx, ny = plate_pt(nm, pname="map_rus")
     circle(lambda s: "map_rus" in str(s["bg"]["img"]), nx, ny, T(i, kw(i, w)), rx=120, ry=80)
 
+mx, my = plate_pt(None, 104.0, 47.0, "map_mongol")
+circle(lambda s: "map_mongol" in str(s["bg"]["img"]) and not s["bg"].get("blur"), mx, my, T(54, kw(54, "far")), rx=180, ry=120)
+shake.append([T(54, kw(54, "west")), .6, 12]); fx.append(["impact-bass-1", T(54, kw(54, "west")), -12])
 # 5) labels never sit in the caption band
 for s in shots:
     for LY in s["layers"]:
@@ -319,7 +322,7 @@ for a, b in zip(ev, ev[1:]):
     g = b - a
     if g > 2.6:
         n = int(g // 2.4)
-        for k in range(1, n + 1): filled.append([a + g * k / (n + 1), 1.045])
+        for k in range(1, n + 1): filled.append([a + g * k / (n + 1), 1.075])
 punch += filled
 for p_ in punch:
     if p_[1] > 1.1: fx.append(["punch", p_[0], -24])   # only hook punch-ins get a sound
