@@ -220,6 +220,16 @@ board(T(55, -.15), [say(55, 760, 330)], talks=[55])
 shots.sort(key=lambda s: s["t0"])
 for s, n in zip(shots, shots[1:] + [None]): s["t1"] = n["t0"] if n else END
 shots[0]["t0"] = 0.0
+# camera moves: keep the centre inside the picture at that zoom, and run the move to the end of the shot
+for s in shots:
+    cam = s["bg"].get("cam")
+    if not cam: continue
+    for k in cam:
+        z = max(k[3], 1.0); lo, hi = .5 / z, 1 - .5 / z
+        k[1] = min(max(k[1], lo), hi); k[2] = min(max(k[2], lo), hi)
+    if len(cam) >= 2: cam[-1][0] = max(cam[-1][0], s["t1"])
+    else: cam.append([s["t1"], cam[0][1], cam[0][2], cam[0][3] * 1.06])
+    if all(abs(cam[0][q] - cam[-1][q]) < 1e-3 for q in (1, 2, 3)): cam[-1][3] = cam[0][3] * 1.06   # never a static plate
 json.dump({"w": 1920, "h": 1080, "fps": 30, "shots": shots}, open(sys.argv[2], "w"), indent=1)
 gaps = [round(s["t1"] - s["t0"], 1) for s in shots]
 print(len(shots), "shots; mean", round(sum(gaps) / len(gaps), 1), "s; longest", max(gaps), "s; end", round(END, 1))
