@@ -1,0 +1,13 @@
+{
+ "job": "ru-pilot-hi",
+ "items": [
+  {
+   "name": "pilot_hi",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 313.16,
+   "took": 94.9
+  }
+ ]
+}
