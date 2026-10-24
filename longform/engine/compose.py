@@ -8,6 +8,7 @@ talking bob. Frames are composed with OpenCV/numpy and piped to ffmpeg.
 Usage: python3 compose.py spec.json out.mp4 [--from S --to S] [--fps 30]
 Spec: {"w":1920,"h":1080,"fps":30,"shots":[{t0,t1,bg,layers}...]}
   bg:     {"img": path | "#rrggbb", "cam": [[t, cx, cy, zoom], ...],   cx,cy in 0..1 of the plate, zoom>=1
+           "blur": px, "dim": 0..1   (backdrop mode: blurred, darkened copy of a scene)
            "over": [{"img": overlay.png, "in": t, "dur": s, "mode": "fade|draw", "out": t}]}  (draw needs overlay.npy)
   layer:  {"img": path | {"text": str, "size": px, "color": "#fff", "box": "#000"|null, "font": path},
            "x": px (centre), "y": px (bottom), "h": px height,
@@ -91,6 +92,10 @@ class Plate:
         s = max(W / im.shape[1], H / im.shape[0]); self.k = min(2.0, max(1.0, 1 / s))
         size = (math.ceil(im.shape[1] * s * self.k), math.ceil(im.shape[0] * s * self.k))
         self.img = cv2.resize(im, size, interpolation=cv2.INTER_AREA if s * self.k < 1 else cv2.INTER_CUBIC)
+        if bg.get("blur"):                                  # backdrop mode: soft, darker copy of a scene
+            r = int(bg["blur"] * self.k) | 1
+            self.img = cv2.GaussianBlur(self.img, (0, 0), r)
+        if bg.get("dim"): self.img = (self.img.astype(np.float32) * bg["dim"]).astype(np.uint8)
         self.over = []
         for ov in bg.get("over", []):
             o = cv2.resize(cv2.imread(ov["img"], cv2.IMREAD_UNCHANGED), size, interpolation=cv2.INTER_AREA)
@@ -133,6 +138,9 @@ def layer_state(L, t):
     elif en == "up" and du < .4:   y += (1 - ease(du / .4, "out")) * 300
     elif en == "fade" and du < .3: a = du / .3
     if L.get("exit") == "fade" and t_out - t < .25: a *= (t_out - t) / .25
+    if not isinstance(L["img"], dict) and not L.get("still"):   # idle sway so characters never freeze
+        ph = (L["x"] * 0.013) % 6.283
+        y -= (math.sin(t * 2 * math.pi * .45 + ph) * .5 + .5) * h * .012; x += math.sin(t * 2 * math.pi * .23 + ph) * h * .006
     for p, q in L.get("talk", []):                    # talking bob + squash
         if p <= t < q:
             ph = (t - p) * 2 * math.pi * 3.2

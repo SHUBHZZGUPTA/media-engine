@@ -37,7 +37,8 @@ def talk(i): return [T(i), T(i, 1)]
 def aspect_h(path, w):
     im = Image.open(path); return int(w * im.height / im.width)
 
-def txt(s, x, y, t, size=72, box=None, color="#ffffff", out=None, enter="pop"):
+def txt(s, x, y, t, size=72, box=None, color="#ffffff", out=None, enter="pop", scale=1.25):
+    size = int(size * scale)
     font = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if any(c in s for c in "→✓↓↑") else FONT
     L_ = {"img": {"text": s, "size": size, "color": color, "box": box, "font": font}, "x": x, "y": y, "in": t, "enter": enter}
     if out is not None: L_["out"] = out
@@ -46,7 +47,7 @@ def say(i, x, y=380, width=24, size=54):
     """Skit dialogue shown above the speaker (English text in both videos)."""
     s = EN[i]["text"]
     import re; s = re.sub(r"\[[^\]]*\]\s*", "", s).replace("*", "").strip()
-    return txt("\n".join(textwrap.wrap(s, width)), x, y, T(i), size=size, box="#ffffffee", color="#222222", out=T(i, 1) + .25)
+    return txt("\n".join(textwrap.wrap(s, width)), x, y, T(i), size=size, box="#ffffffee", color="#222222", out=T(i, 1) + .25, scale=1.0)
 def ch(name, x, y=1045, h=560, t=None, enter="pop", talks=(), flip=False, out=None):
     d = {"img": a(name), "x": x, "y": y, "h": h, "enter": enter, "talk": [talk(i) for i in talks], "flip": flip}
     if t is not None: d["in"] = t
@@ -55,15 +56,29 @@ def ch(name, x, y=1045, h=560, t=None, enter="pop", talks=(), flip=False, out=No
 def traveller(talks=(), t=None, x=360, h=700, enter="none"):
     return ch("c_traveller", x, 1030, h, t=t, enter=enter, talks=talks)
 
-shots = []
-def shot(t0, bg, layers=(), cam=None, over=()):
-    b = {"img": bg}
+shots = []; LAST = [None]
+def shot(t0, bg, layers=(), cam=None, over=(), **kw):
+    b = {"img": bg, **kw}
     if cam: b["cam"] = cam
     if over: b["over"] = list(over)
+    if not bg.startswith("#") and not kw.get("blur"): LAST[0] = bg
     shots.append({"t0": t0, "bg": b, "layers": list(layers)})
-def board(t0, layers=(), talks=()):
-    shot(t0, GREY, [traveller(talks)] + list(layers))
+def board(t0, layers=(), talks=(), dur=6.0):
+    """Mascot + cards on a blurred, darkened copy of the scene we just left (never a blank screen)."""
+    bg = LAST[0] or mp("map_eurasia")
+    shot(t0, bg, [traveller(talks)] + list(layers), cam=[[t0, .5, .5, 1.0], [t0 + dur, .5, .5, 1.08]], blur=14, dim=.5)
+def panel(path):
+    """Bake a light rounded panel behind a transparent card so dark text stays readable on dark backdrops."""
+    out = path[:-4] + "_panel.png"
+    if not os.path.exists(out):
+        from PIL import ImageDraw
+        im = Image.open(path).convert("RGBA"); pad = 50
+        pn = Image.new("RGBA", (im.width + 2 * pad, im.height + 2 * pad), (0, 0, 0, 0))
+        ImageDraw.Draw(pn).rounded_rectangle([0, 0, pn.width - 1, pn.height - 1], radius=40, fill=(244, 240, 232, 240))
+        pn.alpha_composite(im, (pad, pad)); pn.save(out)
+    return out
 def imgcard(path, x, y, w, t, out=None):
+    if path.startswith(C) and "chapter" not in path: path = panel(path)
     d = {"img": path, "x": x, "y": y, "h": aspect_h(path, w), "in": t, "enter": "pop", "shadow": False}
     if out is not None: d["out"] = out
     return d
@@ -88,8 +103,8 @@ board(T(4, kw(4, "Because")), [imgcard(card("bars"), 1200, 900, 1100, T(4, kw(4,
 shot(T(5, -.15), mp("map_eurasia"), [txt("11 time zones", 960, 230, T(5, .05), size=96)],
      cam=[[T(5), .5, .42, 1.05], [T(5, 1), .5, .42, 1.12]],
      over=[{"img": ov("map_eurasia", "span"), "in": T(5, .02), "dur": 2.2, "mode": "draw"}])
-board(T(5, kw(5, "When")), [txt("Moscow\n11 PM", 840, 640, T(5, kw(5, "When")), size=80, box="#2b3a67"),
-                             txt("Far East\n8 AM, next day", 1490, 640, T(5, kw(5, "the far")), size=80, box="#e0902f")])
+board(T(5, kw(5, "When")), [txt("Moscow\n11 PM", 830, 640, T(5, kw(5, "When")), size=80, box="#2b3a67"),
+                             txt("Far East\n8 AM, next day", 1530, 640, T(5, kw(5, "the far")), size=80, box="#e0902f")])
 # rogues' gallery: one quick cut per ruler
 G = [("Viking", "c_rurik", "Viking chiefs"), ("Mongol", "c_khan", "Mongol khans"), ("a tsar", "c_ivan4", "Killed his own son"),
      ("a giant", "c_peter1", "Banned beards"), ("a German", None, "Took her husband's throne"), ("a dictator", None, "Erased people from photos")]
@@ -106,17 +121,17 @@ shot(T(8, -.15), mp("map_eurasia"), [txt("The same story", 960, 240, T(8, kw(8, 
 steps = [("chaos", 1), ("total control", 2), ("freedom", 3), ("too far", 4), ("collapses", 5)]
 for k, (w, n) in enumerate(steps):
     t0 = T(9, -.15) if k == 0 else T(9, kw(9, w))
-    board(t0, [imgcard(card(f"cycle{n}"), 1200, 1000, 1000, t0, )])
+    board(t0, [imgcard(card(f"cycle{n}"), 1210, 1010, 1120, t0, )])
 for k, (w, c) in enumerate([("Vikings", "c_rurik"), ("Mongols", "c_khan"), ("Tsars", "c_ivan4"), ("Communists", None)]):
     t0 = T(10, -.15) if k == 0 else T(10, kw(10, w))
     lay = [ch(c, 1250, 1045, 620, t=t0 + .05)] if c else [imgcard(STALIN, 1250, 1000, 430, t0 + .05)]
     board(t0, lay + [txt(w, 1250, 300, t0 + .1, size=80, box="#222222")])
-board(T(10, kw(10, "Different")), [imgcard(card("cycle5"), 1200, 1000, 1000, T(10, kw(10, "Different")))])
+board(T(10, kw(10, "Different")), [imgcard(card("cycle5"), 1210, 1010, 1120, T(10, kw(10, "Different")))])
 shot(T(11, -.15), mp("map_eurasia"), [txt("How?", 960, 260, T(11, .1), size=120, out=T(11, kw(11, "why"))), txt("Why?", 960, 260, T(11, kw(11, "why")), size=120)],
      cam=[[T(11), .48, .42, 1.0], [T(11, 1), .3, .45, 1.6]])
 board(T(12, -.15), [say(12, 760, 330)], talks=[12])
-board(T(13, -.15), [txt("Back to the beginning", 1200, 600, T(13, .05), size=90, box="#222222")], talks=[13])
-shot(T(13, 1) + .1, GREY, [imgcard(card("chapter1"), 960, 980, 1500, T(13, 1) + .15)])
+shot(T(13, -.15), mp("map_eurasia"), [imgcard(card("chapter1"), 960, 1000, 1550, T(13, -.1))],
+     cam=[[T(13), .5, .5, 1.0], [T(14), .5, .5, 1.06]], blur=14, dim=.5)
 
 # ---------------- CHAPTER 1 ----------------
 plate_pan(T(14, -.15), a("ru_rivers"), [[T(14), .3, .5, 1.25], [T(14, 1), .7, .5, 1.25]], [txt("~800 AD", 300, 230, T(14, .05), size=90)])
@@ -155,8 +170,11 @@ plate_pan(T(30, kw(30, "Furs")), a("ru_kyiv"), [[T(30, kw(30, "Furs")), .4, .5, 
           [txt("Furs & honey  ↓", 520, 260, T(30, kw(30, "Furs")), size=70), txt("Silver & silk  ↑", 1400, 260, T(30, kw(30, "Silver")), size=70)])
 shot(T(31, -.15), mp("map_rus"), [txt("Kievan Rus", 960, 250, T(31, kw(31, "Kievan")), size=110)],
      cam=[[T(31), .45, .45, 1.0], [T(31, 1), .45, .45, 1.08]],
-     over=[{"img": ov("map_rus", "kievanrus"), "in": T(31, kw(31, "Kievan")), "dur": 1.0, "mode": "fade"}])
-board(T(32, -.4), [imgcard(card("cycle2"), 1200, 1000, 1000, T(32, -.4)), txt("Step 1  ✓", 1500, 230, T(32, .3), size=80, box="#2f8f4f")], talks=[32])
+     over=[{"img": ov("map_rus", "trade"), "in": 0, "dur": .01, "mode": "draw"},
+           {"img": ov("map_rus", "pin_novgorod"), "in": 0, "dur": .01}, {"img": ov("map_rus", "pin_kyiv"), "in": 0, "dur": .01},
+           {"img": ov("map_rus", "pin_const"), "in": 0, "dur": .01},
+           {"img": ov("map_rus", "kievanrus"), "in": T(31, kw(31, "Kievan")), "dur": 1.0, "mode": "fade"}])
+board(T(32, -.4), [imgcard(card("cycle2"), 1210, 1010, 1120, T(32, -.4)), txt("Step 1  ✓", 1500, 230, T(32, .3), size=80, box="#2f8f4f")], talks=[32])
 # Olga
 plate_pan(T(33, -.15), a("ru_kyiv"), [[T(33), .5, .5, 1.0], [T(33, 1), .5, .55, 1.15]],
           [ch("c_olga", 960, t=T(33, kw(33, "Princess")), h=620), txt("Princess Olga", 960, 260, T(33, kw(33, "Princess")), size=96)])
@@ -192,7 +210,7 @@ board(T(51, -.15), [say(51, 760, 330)], talks=[51])
 plate_pan(T(52, -.15), a("ru_rivers"), [[T(52), .5, .6, 1.2], [T(52, 1), .5, .6, 1.4]],
           [ch("c_slav_elder1", 640, enter="none", talks=[52]), ch("c_slav_elder2", 1000, enter="none", flip=True, talks=[52]),
            ch("c_slav_elder3", 1340, t=T(52, .4), flip=True, talks=[52]), txt("Brothers vs brothers", 960, 250, T(52, .05), size=86)])
-board(T(53, -.15), [imgcard(card("cycle_chaos"), 1200, 1000, 1000, T(53, -.15))])
+board(T(53, -.15), [imgcard(card("cycle_chaos"), 1210, 1010, 1120, T(53, -.15))])
 shot(T(54, -.15), mp("map_mongol"), [txt("Mongols", 1500, 400, T(54, kw(54, "army")), size=100)],
      cam=[[T(54), .75, .5, 1.4], [T(54, 1), .45, .5, 1.0]],
      over=[{"img": ov("map_mongol", "horde"), "in": T(54, kw(54, "riding")), "dur": 2.0, "mode": "draw"}])
