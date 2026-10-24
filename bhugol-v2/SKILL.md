@@ -18,11 +18,11 @@ One video per chat (it keeps Claude usage low); if this chat already holds a fin
 | Extra prep | none | ~15 min (depth + 2x job, map fetch, dioramas; mostly in parallel) |
 | Finish | `finish.sh`, two-pass, < 30 MiB | `3d/finish_hq.sh`, CRF 17, ~120-140 MB |
 | Total extra wait vs 2D | — | about +75-90 min |
-| Thumbnail | 2D flag-filled vector map (`thumbnail_template.html`) | recipe A on the 3D terrain (`3d/thumb_a.py`) |
+| Thumbnail | split thumbnail, the default for both styles and both languages (`thumb_split/split.py`, §11) | same split thumbnail (recipe A `3d/thumb_a.py` only on request) |
 
 (Measured on Centralia, 21-22 Oct 2026. The v2 motion upgrades add ~14%, measured on 3D: a 6 s slice took 228 s before,
-238 s with them, 259 s with motion blur too; the 2D figure assumes the same ~14%. Recommend 2D for trend topics with a tight posting window.) The thumbnail always
-matches the chosen style.
+238 s with them, 259 s with motion blur too; the 2D figure assumes the same ~14%. Recommend 2D for trend topics with a tight posting window.) The thumbnail is the split
+thumbnail (§11) unless the user asks for another.
 
 **Both styles always get the motion and retention pass** (§9a): story-aware cuts, sound locked to every cut, karaoke
 captions with keyword highlight bars, count-ups, slams, hook punch-ins, plus the v2 HyperFrames library ports (hook kit,
@@ -59,6 +59,7 @@ Task list:
      - `bhugol-v2/`: `build.py`, `template.html`, `finish.sh`, `thumbnail_template.html`, `thumb_shot.mjs`, `thumbnail_rules.md`, `voice.md`, `example-budapest/` (legacy 2D)
      - `bhugol-v2/motion/`: `motion.js` (v2), `motion_plan.py` (plan, sfx, `unwarp`), `retention_qa.py`, `shader_xfade.js` (3D hero cut), `vendor/motion-blur.html`, `sfxlayer.py`, `sfx_check.py`, README (the motion and retention pass)
      - `bhugol-v2/grade/`: `teal-orange-blockbuster.cube` (BHUGOL default), `bleach-bypass.cube`, `film-fade.cube`
+     - `bhugol-v2/thumb_split/`: `split.py` + `shot.mjs` + example config `gulf.json` (the default thumbnail, §11)
      - `bhugol-v2/3d/`: `map3d_prep.py`, `prep3d.py`, `burnmap.py`, `thumb3d.html`, `thumb_a.py`, `finish_hq.sh`
      - `bhugol-v2/example-centralia-2d/` and `example-centralia-3d/`: the reference builds with the motion pass wired in (`template*.html`, `build*.py`; the 3D folder also holds the full-length spec, 47 beats over 80 s, and `mkscore.py`)
      - `bhugol-v2/example-bengaluru-3d/`: second 3D reference (one scene in several shots, lon/lat map labels + arrows, labelled circles, water/city reveals without fire flicker, full EN + HI spec); its README lists every mistake of that run and the guard that now prevents it
@@ -359,6 +360,9 @@ Fix the spec/template, rebuild, rerun. Both gates were checked against the Benga
 - (22 Oct) ffmpeg `split` on one input feeding a long concat + LUT blend buffered ~6 GB and was OOM-killed; open the same file as separate inputs per segment.
 - (22 Oct) `motion.js` curve cut set the incoming shot to 35% opacity after its fade-in; fixed. A scene reused later in the plan is hidden at 0 by its later cuts unless the first shot is forced visible (templates do this now).
 - (22 Oct) Never name a map-scene field `ll`: it is the lon/lat->globe function; use `lls` for lon/lat labels.
+- (24 Oct, Gulf Stream) `MO.charSlam` splits the hook title into letters, which breaks Devanagari conjuncts (dotted circles): Hindi builds slam the whole title line instead (template check `D.lang !== 'hi'`).
+- (24 Oct) `hindi_spec.py` deep-copies the English spec at that moment: after ANY change to `shots`/`beats` (even renaming a scene), regenerate the Hindi spec, or the Hindi page fails to build (scene gate times out on `waitForFunction`).
+- (24 Oct) The headless shell path can change between sessions: if `chromium_headless_shell-1194` is missing, use `ls /opt/pw-browsers/` (e.g. `chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`) and set `HYPERFRAMES_BROWSER_PATH` to it.
 - `pkill -f` patterns can kill your own shell; avoid them, or anchor the pattern.
 - `~` is `/root`; use absolute `/home/claude` paths.
 - YouTube blocks full video/caption downloads from GitHub runners ("not a bot"); listings and thumbnails work. Script text of past BHUGOL videos lives in their Artifact pages (`read` with `path: index.html`, then extract the `"text"` fields).
