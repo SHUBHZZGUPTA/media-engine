@@ -110,9 +110,9 @@
       ]
      },
      "to": {
-      "x": 0.71,
-      "y": 0.2,
-      "z": 1.9
+      "x": 0.33,
+      "y": 0.6,
+      "z": 1.5
      },
      "d": 0.45,
      "e": "power2.inOut"
@@ -127,7 +127,7 @@
      },
      "to": {
       "x": 0.5,
-      "y": 0.55,
+      "y": 0.6,
       "z": 1.1
      },
      "d": 0.5,
@@ -173,14 +173,14 @@
    },
    "cut": "whip",
    "cam0": {
-    "x": 0.62,
-    "y": 0.3,
+    "x": 0.3,
+    "y": 0.6,
     "z": 1.5,
     "yaw": 3
    },
    "cam1": {
-    "x": 0.6,
-    "y": 0.35,
+    "x": 0.32,
+    "y": 0.62,
     "z": 1.7
    },
    "keys": [],
@@ -324,9 +324,55 @@
    "dScale": 0.3
   },
   {
+   "id": "s08b",
+   "img": "ny_office_window",
+   "look": "film",
+   "at": {
+    "@": [
+     5,
+     3,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.45,
+    "z": 1.15
+   },
+   "cam1": {
+    "x": 0.4,
+    "z": 1.3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s08c",
+   "img": "ny_tower_night",
+   "look": "film",
+   "at": {
+    "@": [
+     5,
+     5,
+     -0.1
+    ]
+   },
+   "cut": "zoom",
+   "cam0": {
+    "x": 0.55,
+    "y": 0.3,
+    "z": 1.4
+   },
+   "cam1": {
+    "z": 1.55
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
    "id": "s09",
    "img": "boe_dawn",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      6,
@@ -422,9 +468,56 @@
    "iris": true
   },
   {
+   "id": "s10b",
+   "img": "presses_marks",
+   "look": "film",
+   "at": {
+    "@": [
+     7,
+     3,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.45,
+    "z": 1.1
+   },
+   "cam1": {
+    "x": 0.55,
+    "z": 1.25
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s10c",
+   "img": "euro_notes_pile",
+   "look": "film",
+   "at": {
+    "@": [
+     7,
+     5,
+     -0.1
+    ]
+   },
+   "cut": "whip",
+   "cam0": {
+    "z": 1.3,
+    "yaw": 4
+   },
+   "cam1": {
+    "z": 1.15,
+    "yaw": -4
+   },
+   "keys": [],
+   "dScale": 0.3,
+   "handheld": 0.12
+  },
+  {
    "id": "s11",
    "img": "map_world",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      8,
@@ -434,14 +527,14 @@
    },
    "cut": "curve",
    "cam0": {
-    "x": 0.5,
-    "y": 0.32,
-    "z": 2.2
+    "x": 0.53,
+    "y": 0.3,
+    "z": 1.6
    },
    "cam1": {
-    "x": 0.5,
-    "y": 0.32,
-    "z": 2.5
+    "x": 0.53,
+    "y": 0.3,
+    "z": 1.85
    },
    "keys": [],
    "dScale": 0.0
@@ -515,7 +608,7 @@
   {
    "id": "s14",
    "img": "canal_buoys",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      9,
@@ -611,7 +704,7 @@
   {
    "id": "s18",
    "img": "euro_notes_pile",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      10,
@@ -773,6 +866,31 @@
    "dScale": 0.3
   },
   {
+   "id": "s24b",
+   "img": "bundesbank_photo",
+   "look": "print",
+   "at": {
+    "@": [
+     15,
+     4,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.72,
+    "y": 0.83,
+    "z": 2.3
+   },
+   "cam1": {
+    "x": 0.74,
+    "y": 0.84,
+    "z": 2.6
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
    "id": "s25",
    "img": "uk_high_street_1991",
    "look": "film",
@@ -819,6 +937,29 @@
    "dScale": 0.3
   },
   {
+   "id": "s26b",
+   "img": "uk_high_street_1991",
+   "look": "film",
+   "at": {
+    "@": [
+     16,
+     6,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.6,
+    "z": 1.15
+   },
+   "cam1": {
+    "x": 0.5,
+    "z": 1.3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
    "id": "s27",
    "img": "medicine_bottle",
    "look": "film",
@@ -837,6 +978,29 @@
    "cam1": {
     "x": 0.5,
     "z": 1.3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s27b",
+   "img": "medicine_bottle",
+   "look": "film",
+   "at": {
+    "@": [
+     17,
+     4,
+     -0.1
+    ]
+   },
+   "cut": "zoom",
+   "cam0": {
+    "x": 0.52,
+    "y": 0.5,
+    "z": 1.35
+   },
+   "cam1": {
+    "z": 1.5
    },
    "keys": [],
    "dScale": 0.3
@@ -981,7 +1145,7 @@
   {
    "id": "s34",
    "img": "ny_tower_night",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      22,
@@ -1026,6 +1190,52 @@
    "dScale": 0.3
   },
   {
+   "id": "s35b",
+   "img": "euro_notes_pile",
+   "look": "film",
+   "at": {
+    "@": [
+     23,
+     1,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.4,
+    "z": 1.2
+   },
+   "cam1": {
+    "x": 0.55,
+    "z": 1.3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s35c",
+   "img": "trading_room",
+   "look": "film",
+   "at": {
+    "@": [
+     23,
+     5,
+     -0.1
+    ]
+   },
+   "cut": "whip",
+   "cam0": {
+    "z": 1.15,
+    "yaw": 3
+   },
+   "cam1": {
+    "z": 1.25,
+    "yaw": -3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
    "id": "s36",
    "img": "coin_spin",
    "look": "film",
@@ -1049,9 +1259,55 @@
    "dScale": 0.3
   },
   {
+   "id": "s36b",
+   "img": "canal_buoys",
+   "look": "film",
+   "at": {
+    "@": [
+     24,
+     1,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.42,
+    "y": 0.7,
+    "z": 1.5
+   },
+   "cam1": {
+    "x": 0.45,
+    "y": 0.68,
+    "z": 1.65
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s36c",
+   "img": "coin_spin",
+   "look": "film",
+   "at": {
+    "@": [
+     24,
+     5,
+     -0.1
+    ]
+   },
+   "cut": "zoom",
+   "cam0": {
+    "z": 1.2
+   },
+   "cam1": {
+    "z": 1.4
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
    "id": "s37",
    "img": "coin_spin",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      25,
@@ -1096,7 +1352,7 @@
   {
    "id": "s39",
    "img": "presses_marks",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      26,
@@ -1134,24 +1390,54 @@
    "cam1": {
     "z": 1.2
    },
-   "keys": [
-    {
-     "t": {
-      "@": [
-       26,
-       11,
-       0.0
-      ]
-     },
-     "to": {
-      "x": 0.5,
-      "y": 0.78,
-      "z": 1.6
-     },
-     "d": 0.6,
-     "e": "power2.inOut"
-    }
-   ],
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s40b",
+   "img": "presses_marks",
+   "look": "film",
+   "at": {
+    "@": [
+     26,
+     9,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "z": 1.15
+   },
+   "cam1": {
+    "z": 1.3,
+    "yaw": 3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s40c",
+   "img": "vault_full",
+   "look": "film",
+   "at": {
+    "@": [
+     26,
+     11,
+     -0.1
+    ]
+   },
+   "cut": "zoom",
+   "cam0": {
+    "x": 0.5,
+    "y": 0.6,
+    "z": 1.2
+   },
+   "cam1": {
+    "x": 0.5,
+    "y": 0.78,
+    "z": 1.6
+   },
+   "keys": [],
    "dScale": 0.3
   },
   {
@@ -1206,7 +1492,7 @@
   {
    "id": "s43",
    "img": "bundesbank_frankfurt",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      27,
@@ -1265,6 +1551,51 @@
    "cam1": {
     "z": 1.2,
     "yaw": 3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s45b",
+   "img": "red_phone",
+   "look": "film",
+   "at": {
+    "@": [
+     30,
+     2,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.4,
+    "z": 1.1
+   },
+   "cam1": {
+    "x": 0.5,
+    "z": 1.25
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s45c",
+   "img": "treasury_courtyard",
+   "look": "film",
+   "at": {
+    "@": [
+     30,
+     4,
+     -0.1
+    ]
+   },
+   "cut": "whip",
+   "cam0": {
+    "z": 1.15
+   },
+   "cam1": {
+    "z": 1.3,
+    "yaw": -3
    },
    "keys": [],
    "dScale": 0.3
@@ -1366,7 +1697,7 @@
   {
    "id": "s50",
    "img": "presses_newspaper",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      32,
@@ -1414,7 +1745,7 @@
   {
    "id": "s52",
    "img": "dealing_room_1992",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      33,
@@ -1548,6 +1879,30 @@
    "dScale": 0.3
   },
   {
+   "id": "s57b",
+   "img": "boe_photo",
+   "look": "print",
+   "at": {
+    "@": [
+     38,
+     2,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.6,
+    "y": 0.5,
+    "z": 1.2
+   },
+   "cam1": {
+    "x": 0.55,
+    "z": 1.35
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
    "id": "s58",
    "img": "dealing_room_1992",
    "look": "film",
@@ -1610,13 +1965,13 @@
    },
    "cut": "hard",
    "cam0": {
-    "x": 0.71,
-    "y": 0.2,
-    "z": 1.9
+    "x": 0.3,
+    "y": 0.6,
+    "z": 1.7
    },
    "cam1": {
-    "x": 0.6,
-    "y": 0.35,
+    "x": 0.4,
+    "y": 0.6,
     "z": 1.2
    },
    "keys": [],
@@ -1684,13 +2039,13 @@
    },
    "cut": "zoom",
    "cam0": {
-    "x": 0.71,
-    "y": 0.2,
-    "z": 1.8
+    "x": 0.72,
+    "y": 0.65,
+    "z": 1.6
    },
    "cam1": {
-    "x": 0.5,
-    "y": 0.5,
+    "x": 0.55,
+    "y": 0.6,
     "z": 1.1
    },
    "keys": [],
@@ -1699,7 +2054,7 @@
   {
    "id": "s64",
    "img": "uk_high_street_1991",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      41,
@@ -1743,7 +2098,7 @@
   {
    "id": "s66",
    "img": "phones_offhook",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      41,
@@ -1859,7 +2214,7 @@
   {
    "id": "s71",
    "img": "vault_full",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      45,
@@ -1903,7 +2258,7 @@
   {
    "id": "s73",
    "img": "note_falling",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      46,
@@ -1928,7 +2283,7 @@
   {
    "id": "s74",
    "img": "trading_room",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      46,
@@ -1999,7 +2354,7 @@
   {
    "id": "s77",
    "img": "vault_empty",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      48,
@@ -2021,7 +2376,7 @@
   {
    "id": "s78",
    "img": "red_phone",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      48,
@@ -2036,6 +2391,49 @@
    "cam1": {
     "z": 1.3,
     "yaw": -3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s78b",
+   "img": "treasury_photo",
+   "look": "print",
+   "at": {
+    "@": [
+     48,
+     7,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "z": 1.15
+   },
+   "cam1": {
+    "z": 1.3,
+    "yaw": 3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s78c",
+   "img": "uk_high_street_1991",
+   "look": "film",
+   "at": {
+    "@": [
+     48,
+     8,
+     -0.1
+    ]
+   },
+   "cut": "whip",
+   "cam0": {
+    "z": 1.1
+   },
+   "cam1": {
+    "z": 1.25
    },
    "keys": [],
    "dScale": 0.3
@@ -2109,7 +2507,7 @@
   {
    "id": "s82",
    "img": "map_world",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      52,
@@ -2119,14 +2517,14 @@
    },
    "cut": "curve",
    "cam0": {
-    "x": 0.52,
-    "y": 0.28,
-    "z": 2.2
+    "x": 0.55,
+    "y": 0.25,
+    "z": 1.6
    },
    "cam1": {
-    "x": 0.52,
-    "y": 0.26,
-    "z": 2.5
+    "x": 0.55,
+    "y": 0.24,
+    "z": 1.85
    },
    "keys": [],
    "dScale": 0.0
@@ -2225,6 +2623,54 @@
    "dScale": 0.3
   },
   {
+   "id": "s86b",
+   "img": "boe_photo",
+   "look": "print",
+   "at": {
+    "@": [
+     54,
+     2,
+     -0.1
+    ]
+   },
+   "cut": "hard",
+   "cam0": {
+    "x": 0.55,
+    "z": 1.15
+   },
+   "cam1": {
+    "x": 0.6,
+    "z": 1.3
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
+   "id": "s86c",
+   "img": "target_board",
+   "look": "film",
+   "at": {
+    "@": [
+     54,
+     5,
+     -0.1
+    ]
+   },
+   "cut": "zoom",
+   "cam0": {
+    "x": 0.45,
+    "y": 0.5,
+    "z": 1.4
+   },
+   "cam1": {
+    "x": 0.42,
+    "y": 0.5,
+    "z": 1.7
+   },
+   "keys": [],
+   "dScale": 0.3
+  },
+  {
    "id": "s87",
    "img": "brass_key",
    "look": "film",
@@ -2252,7 +2698,7 @@
   {
    "id": "s88",
    "img": "red_phone",
-   "look": "soft",
+   "look": "film",
    "at": {
     "@": [
      54,
