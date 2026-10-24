@@ -1,0 +1,60 @@
+{
+ "id": "mm-ep02-fix1",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "goldie_limit_1",
+   "direction": "Voice a funny cartoon character: a smug, rich, deep-voiced gold bar. Say the line warmly and smugly, with a little pause before 'darling'. Pronounce every word clearly, especially 'limit'. Short and punchy.",
+   "speakers": {
+    "Goldie": "Puck"
+   },
+   "lines": [
+    [
+     "Goldie",
+     "And a limit, darling."
+    ]
+   ]
+  },
+  {
+   "name": "n_promise_1",
+   "direction": "Narrate this for a premium documentary YouTube channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, never slow, never announcer-like. This is the closing line of the video: slow down slightly, calm and resonant, a short pause after 'behind it'. Pronounce every word clearly.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "A promise is only as strong as what stands behind it. When that runs out, the mirage disappears."
+    ]
+   ]
+  },
+  {
+   "name": "goldie_limit_2",
+   "direction": "Voice a funny cartoon character: a smug, rich, deep-voiced gold bar. Say the line warmly and smugly, with a little pause before 'darling'. Pronounce every word clearly, especially 'limit'. Short and punchy.",
+   "speakers": {
+    "Goldie": "Puck"
+   },
+   "lines": [
+    [
+     "Goldie",
+     "And a limit, darling."
+    ]
+   ]
+  },
+  {
+   "name": "n_promise_2",
+   "direction": "Narrate this for a premium documentary YouTube channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, never slow, never announcer-like. This is the closing line of the video: slow down slightly, calm and resonant, a short pause after 'behind it'. Pronounce every word clearly.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "A promise is only as strong as what stands behind it. When that runs out, the mirage disappears."
+    ]
+   ]
+  }
+ ]
+}
