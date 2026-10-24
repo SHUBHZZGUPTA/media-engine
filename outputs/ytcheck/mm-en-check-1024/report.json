@@ -1,0 +1,55 @@
+{
+ "client_id_set": true,
+ "client_secret_set": true,
+ "tokens": [
+  {
+   "secret": "YT_RT_MM_EN",
+   "present": true,
+   "refresh": {
+    "ok": true
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/youtube.force-ssl",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/yt-analytics.readonly"
+   ],
+   "channels": [
+    {
+     "id": "UCiSFGdbq0TksbPPPm3oaIYQ",
+     "title": "MoneyMirageYT",
+     "handle": "@moneymirageyt1",
+     "videos": "2",
+     "subscribers": "0"
+    }
+   ],
+   "recent_uploads": [
+    {
+     "title": "1971: The Day Money Became a Promise",
+     "published": "2026-10-23T19:42:01Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Why Gold Fell 28% From Its Record?",
+     "published": "2026-10-23T14:03:26Z",
+     "privacy": "public"
+    }
+   ],
+   "analytics": {
+    "ok": true,
+    "status": 200,
+    "rows": [
+     [
+      0,
+      0
+     ]
+    ],
+    "error": null
+   }
+  },
+  {
+   "secret": "YT_RT_MM_HI",
+   "present": false
+  }
+ ]
+}
