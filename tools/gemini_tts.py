@@ -14,6 +14,7 @@ Job format:
 }
 Writes outputs/tts/<id>/<name>.wav (24 kHz mono 16-bit) and outputs/tts/<id>/report.json.
 The API key comes from the GEMINI_API_KEY environment variable and is never written or printed.
+A job with "key": "longform" uses GEMINI_API_KEY_LONGFORM instead (BHUGOL long-form only; no fallback to the main key).
 """
 import base64, json, os, sys, time, urllib.error, urllib.request, wave
 
@@ -60,14 +61,15 @@ def build(item):
 
 
 def main(job_path):
-    key = os.environ.get("GEMINI_API_KEY", "")
     job = json.load(open(job_path))
+    key_var = "GEMINI_API_KEY_LONGFORM" if job.get("key") == "longform" else "GEMINI_API_KEY"
+    key = os.environ.get(key_var, "")
     out = os.path.join("outputs", "tts", job["id"]); os.makedirs(out, exist_ok=True)
     report = {"job": job["id"], "items": []}
     for item in job["items"]:
         entry = {"name": item["name"], "ok": False}
         if not key:
-            entry["error"] = "GEMINI_API_KEY secret is missing"; report["items"].append(entry); continue
+            entry["error"] = key_var + " secret is missing"; report["items"].append(entry); continue
         for model in item.get("models") or job.get("models", ["gemini-3.1-flash-tts-preview"]):
             try:
                 t0 = time.time(); res = call_with_wait(model, build(item), key)

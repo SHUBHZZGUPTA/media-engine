@@ -1,0 +1,9 @@
+{
+ "id": "lf-keytest",
+ "key": "longform",
+ "models": ["gemini-3.1-flash-tts-preview"],
+ "items": [
+  {"name": "test", "direction": "Deep, warm, confident storyteller.", "speakers": {"Narrator": "Sadaltager"},
+   "lines": [["Narrator", "In eighteen sixty-seven, Russia sold Alaska. This is a voice test."]]}
+ ]
+}

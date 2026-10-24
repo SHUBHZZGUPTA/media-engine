@@ -24,6 +24,7 @@ jobs:
       - name: Synthesize new jobs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_LONGFORM: ${{ secrets.GEMINI_API_KEY_LONGFORM }}
         run: |
           set -e
           CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'jobs/tts/*.json' || true)
