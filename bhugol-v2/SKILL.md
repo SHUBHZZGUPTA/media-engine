@@ -301,16 +301,18 @@ Fix the spec/template, rebuild, rerun. Both gates were checked against the Benga
 10. **Hindi:** the same composition with Hindi caption chunks, `i18n` labels and titles, and a Devanagari font (bundle Mukta 700/800 from the kit's node_modules as a fallback in `.cl`/`.tl`/`.lbl`/`.plbl`), re-timed to the Hindi alignment. Captions follow the user's English/Hindi answer from §5. The v2 on-screen elements (flip boards, hook numbers like "64 YEARS", map cards) **stay in English** in the Hindi video (the user's choice: Hindi speakers who prefer reading English). Check 6-8 stills for clipped Devanagari.
 11. File names: `BHUGOL_<Title>.mp4` and `BHUGOL_<Title>_HI.mp4`.
 
-## 11. Thumbnails (follow thumbnail_rules.md; match the video's style)
-1. **3D style → recipe A** (`3d/thumb_a.py <config.json>`):
-   - the video's own **3D satellite terrain**, the subject region filled in its **flag colours** with a glowing gold border (config `"flag": "<flag png>"`; without it the region is flat blue)
-   - **fire/glow at the payoff spot** inside a **red hand-drawn circle** (config `"glow": "fire"` default, or `"water"` for water stories)
-   - a **zoom bubble** (white ring, red outline, dotted leader) showing the video's key scene
-   - a **giant glowing number** not already in the title, with **1-3 words** above it (never repeating the title; lint with `title.py`)
-   - 2-3 emoji stickers (😱 + a topic emoji + the flag emoji), badge small, top-left; no characters, people or faces
-2. **2D style →** `thumbnail_template.html` + `thumb_shot.mjs`: map-led, the subject region in its flag colours, red hand-drawn circle + arrow on the payoff spot, 2-3 emoji, 1-3 words, a number if the title has none, high saturation with red accents, badge small top-left.
-3. **Two versions**, both languages: vertical 1080x1920 and 16:9 1280x720 (text left, subject right). Hindi thumbnails get Hindi words.
-4. **Shrink both to ~140 px wide and check the subject, circle and words survive** (yt-audit); `thumb_a.py` writes `feed_test.jpg`.
+## 11. Thumbnails (follow thumbnail_rules.md; same recipe for English and Hindi)
+1. **Default for every video, 2D or 3D, English and Hindi → the split thumbnail** (`thumb_split/split.py <config.json>`; the user's pick on 24 Oct 2026, modelled on a GeoGlobeTales outlier):
+   - two satellite halves side by side with a **white divider**: the "cold / before / A" place on the left, the "warm / after / B" place on the right
+   - in each half **one region filled in a bold flat colour** with a light edge and soft drop shadow (e.g. USA blue, Europe orange)
+   - a **look** per half that tells the story at a glance: `cold` (frosty blue grade + snow specks), `warm` (golden grade + glowing embers) or `none`
+   - **one label per half, highlighted**: black text on a **yellow highlight bar** with a thin white border (Hindi labels in Devanagari: अमेरिका | यूरोप); 1-2 words each, kept inside its half
+   - no characters, people, faces, emoji clutter or extra headline; badge optional
+   - config lists the two halves (`lon` span, Mercator centre `lat`, `iso` or `continent` + `exclude`, `keep` filter, `look`, `fill`, `edge`, `label` {en, hi}, `label_at`); Blue Marble via a `jobs/fetch/` job (see `thumb_split/gulf.json`)
+   - for a topic with no natural pair, show the user one split option and one recipe-A / map-led option, and let them choose
+2. **Alternatives (only when the user asks, or as the second option above):** 3D recipe A (`3d/thumb_a.py`, flag-filled terrain + fire/glow + red circle + zoom bubble + giant number) or the 2D map-led design (`thumbnail_template.html`: flag-coloured region, red hand-drawn circle + arrow, 2-3 emoji, 1-3 words).
+3. **Two versions per language**, English and Hindi: vertical 1080x1920 (`split_<lang>_v.jpg`) and 16:9 1280x720 (`split_<lang>_w.jpg`); `split.py` makes all four in one run.
+4. **Shrink to ~140 px wide and check both regions and both labels survive** (yt-audit); `split.py` writes `feed_split_<lang>_*.jpg`.
 5. **Show all four to the user and get a yes before burning frame 0 into the videos.** If they want another direction, build 2-3 variants, show them side by side with the 140 px test, recommend one with the evidence, and ask.
 
 ## 12. YouTube kits (yt-seo + yt-package), English first, then Hindi

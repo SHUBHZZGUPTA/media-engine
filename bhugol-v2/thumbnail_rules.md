@@ -36,3 +36,11 @@ Recipe A keeps that pattern and still shows the story moment:
 - **A giant glowing number** not already in the title, plus 1-3 words above it.
 - 2-3 emoji, badge top-left; vertical and 16:9; English + Hindi; pass the 140 px feed test.
 Build it with `3d/thumb_a.py` (config-driven) and show all four to the user before burning frame 0.
+
+## Default recipe S: the split thumbnail (chosen 24 Oct 2026, Gulf Stream; replaces recipe A as the default)
+The user picked the GeoGlobeTales "USA vs Europe" style after seeing recipe A and a map-led version: he has seen these
+get more attention. Two satellite halves, one bold flat-colour region in each (cold blue | warm orange), a white
+divider, and one **highlighted** label per half (black on a yellow bar). English and Hindi (Devanagari labels).
+Build it with `thumb_split/split.py` (config-driven, both languages, vertical + 16:9 + 140 px feed tests).
+The "Must" list above still applies where it fits (no faces, map is the hero, colour in the region, readable at feed
+size, high saturation); the red circle, emoji and number are dropped in this recipe by the user's choice.
