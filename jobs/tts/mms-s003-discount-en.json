@@ -1,0 +1,65 @@
+{
+ "id": "mms-s003-discount-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "That seventy percent off tag? The price it's off from may never have existed."
+    ],
+    [
+     "Narrator",
+     "Here's the trick. Right before a sale, the \"was\" price goes up."
+    ],
+    [
+     "Narrator",
+     "Nineteen ninety-nine rupees, crossed out. Now nine ninety-nine. You feel like you won."
+    ],
+    [
+     "Narrator",
+     "But say it sold for nine ninety-nine all last month anyway."
+    ],
+    [
+     "Narrator",
+     "Your brain anchors on the first number it sees. That's the whole game."
+    ],
+    [
+     "Narrator",
+     "So why don't shops get caught? Nobody had to show the real old price."
+    ],
+    [
+     "Narrator",
+     "That's changing. From January twenty twenty-seven, India's new rule puts the lowest price of the last thirty days next to every discount."
+    ],
+    [
+     "Narrator",
+     "Europe already has this rule. In an EU check of three hundred and fourteen online shops, about thirty percent still showed discounts wrong."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the discount isn't counted from the real price. It's counted from a made-up one."
+    ],
+    [
+     "Narrator",
+     "So ignore the crossed-out number. Check the price history."
+    ],
+    [
+     "Narrator",
+     "Sometimes the best deal was always this price."
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
