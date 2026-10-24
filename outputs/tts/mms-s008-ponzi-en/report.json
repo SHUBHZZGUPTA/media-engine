@@ -3,13 +3,11 @@
  "items": [
   {
    "name": "narration_en",
-   "ok": false,
-   "attempts": [
-    {
-     "model": "gemini-3.1-flash-tts-preview",
-     "error": "KeyError('content')"
-    }
-   ]
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 67.8,
+   "took": 22.2
   }
  ]
 }
