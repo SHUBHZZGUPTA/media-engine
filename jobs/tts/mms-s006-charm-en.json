@@ -1,0 +1,53 @@
+{
+ "id": "mms-s006-charm-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Why does everything cost nine ninety-nine? Because your brain reads it as nine dollars."
+    ],
+    [
+     "Narrator",
+     "It's called the left-digit effect. You read a price left to right, and the first digit sticks."
+    ],
+    [
+     "Narrator",
+     "Ten dollars feels like ten. Nine ninety-nine feels like nine-something. One cent moves a whole dollar in your head."
+    ],
+    [
+     "Narrator",
+     "It even works on cars. Across twenty-two million auction sales, used cars sold for about two hundred dollars less once the odometer crossed a ten thousand mile mark."
+    ],
+    [
+     "Narrator",
+     "But here's the weird part. In one experiment, a dress sold better at thirty-nine dollars than at thirty-four."
+    ],
+    [
+     "Narrator",
+     "Cheaper, and fewer buyers. Why? Years of sales taught us that a nine means bargain."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the nine isn't a discount. It's a signal that feels like one."
+    ],
+    [
+     "Narrator",
+     "So round up. Nine ninety-nine is ten dollars."
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
