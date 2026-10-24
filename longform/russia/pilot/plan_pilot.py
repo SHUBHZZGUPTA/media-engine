@@ -304,14 +304,41 @@ assert len(SCRIPT) == len(L), (len(SCRIPT), len(L))
 stars = [set(re.findall(r"\*([^*]+)\*", s)) for s in SCRIPT]
 STOP = {"and", "the", "a", "an", "of", "to", "in", "on", "it", "is"}
 keyw = [{x.lower().strip(".,!?") for st in s for x in st.split()} - STOP for s in stars]
+import difflib
+NUMS = [("eighteen sixty-seven", "1867"), ("eight sixty-two", "862"), ("nine forty-five", "945"), ("nine eighty-eight", "988"),
+        ("eleven hundred", "1,100"), ("twelve hundred", "1,200"), ("seven hundred", "700"), ("eleven time", "11 time"), ("two cents", "2 cents")]
+def norm(w): return re.sub(r"[^a-z0-9']", "", w.lower())
 caps = []
 for i, ln in enumerate(L):
     if ln["who"] != "Narrator": continue
-    ws = [w for w in Wt if ln["t0"] - .05 <= w[0] < ln["t1"] + .05]
+    text = re.sub(r"\[[^\]]*\]", "", SCRIPT[i]).replace("†", "")
+    for a_, b_ in NUMS: text = re.sub(re.escape(a_), b_, text, flags=re.I)
+    toks = text.split(); keys = [t_.startswith("*") or t_.rstrip(".,!?;:").endswith("*") for t_ in toks]
+    # a starred phrase marks every word inside it
+    inside = False
+    for k, t_ in enumerate(toks):
+        if t_.startswith("*"): inside = True
+        keys[k] = inside and norm(t_) not in STOP
+        if t_.rstrip(".,!?;:\"").endswith("*"): inside = False
+    toks = [t_.replace("*", "") for t_ in toks]
+    ws = [w for w in Wt if ln["t0"] - .1 <= w[0] < ln["t1"] + .1]
+    sm = difflib.SequenceMatcher(None, [norm(x) for x in toks], [norm(w[2]) for w in ws], autojunk=False)
+    tim = [None] * len(toks)
+    for a_, b_, n_ in sm.get_matching_blocks():
+        for q in range(n_): tim[a_ + q] = (ws[b_ + q][0], ws[b_ + q][1])
+    # unmatched words (numbers, names the transcriber misheard): interpolate between matched neighbours
+    known = [k for k, v in enumerate(tim) if v]
+    for k in range(len(toks)):
+        if tim[k]: continue
+        lo = max([q for q in known if q < k], default=None); hi = min([q for q in known if q > k], default=None)
+        t_lo = tim[lo][1] if lo is not None else ln["t0"]; t_hi = tim[hi][0] if hi is not None else ln["t1"]
+        span = (hi if hi is not None else len(toks)) - (lo if lo is not None else -1)
+        f = (k - (lo if lo is not None else -1)) / span; s_ = t_lo + (t_hi - t_lo) * (f - 1 / span) if span else t_lo
+        tim[k] = (s_, s_ + (t_hi - t_lo) / max(span, 1))
     chunk = []
-    for k, (a, b, w) in enumerate(ws):
-        chunk.append([w, a, b, w.lower().strip(".,!?;:'\"") in keyw[i]])
-        if len(chunk) >= 4 or w[-1:] in ".,!?;:" or k == len(ws) - 1:
+    for k, w in enumerate(toks):
+        chunk.append([w, tim[k][0], tim[k][1], keys[k]])
+        if len(chunk) >= 4 or w[-1:] in ".,!?;:" or k == len(toks) - 1:
             caps.append({"t0": chunk[0][1] - .05, "t1": chunk[-1][2] + .25, "words": chunk}); chunk = []
 for a, b in zip(caps, caps[1:]): a["t1"] = min(a["t1"], b["t0"])
 
