@@ -42,6 +42,17 @@ def mk(img, pos, big, sub, bs, ss, st, tag=False, circ=None):
     return dict(css=css, body=body, svg=scribble(*circ) if circ else '', treat=[], assets=[img])
 V['a'] = mk('boe_photo__print.jpg', '60% 40%', '15%', 'FAILED', 470, 250, 600, circ=(470, 370, 430, 235, -4, 3, 1.12, 18))
 V['b'] = mk('vault_empty__film.jpg', '45% 50%', '£3.3BN', 'LOST', 300, 250, 470, tag=True, circ=(560, 300, 540, 175, -3, 5, 1.12, 16))
+POP = '''
+#hero{position:absolute;left:560px;top:0;width:1360px;height:1080px;object-fit:cover;object-position:45% 50%}
+.glow{position:absolute;left:1180px;top:120px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(255,196,80,.55) 0%,rgba(255,170,50,.18) 40%,rgba(255,170,50,0) 70%);mix-blend-mode:screen}
+.fade{position:absolute;left:520px;top:0;width:520px;height:1080px;background:linear-gradient(90deg,#0A1430 0%,rgba(10,20,48,.8) 40%,rgba(10,20,48,0) 100%)}
+.bgl{position:absolute;left:0;top:0;width:600px;height:1080px;background:radial-gradient(ellipse 120% 70% at 30% 35%,#1B2E63 0%,#0A1430 70%)}
+.big{position:absolute;left:84px;top:150px;font-weight:900;font-size:310px;line-height:.86;letter-spacing:-14px;color:#FFD34D;-webkit-text-stroke:6px #2A1600;text-shadow:0 0 60px rgba(255,200,60,.55),0 14px 0 rgba(0,0,0,.7)}
+.tag{position:absolute;left:74px;top:470px;padding:6px 34px 20px;background:#FF1F1F;font-weight:900;font-size:260px;line-height:.9;letter-spacing:-6px;color:#fff;transform:rotate(-3deg);box-shadow:0 14px 0 rgba(0,0,0,.55),0 0 60px rgba(255,40,40,.5)}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse 85% 85% at 55% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}
+'''
+V['b2'] = dict(css=POP, body='<div class="bgl"></div><img id="hero" src="assets/vault_pop.jpg"><div class="glow"></div><div class="fade"></div><div class="vig"></div><div class="big">£3.3BN</div><div class="tag">LOST</div><svg class="ov" width="1920" height="1080">%C%</svg>',
+    svg=scribble(570, 290, 560, 180, -3, 5, 1.12, 20, '#FF2A2A'), treat=[], assets=['vault_pop.jpg'])
 V['c'] = mk('treasury_courtyard__film.jpg', '55% 50%', 'BROKEN', 'IN HOURS', 250, 170, 420, tag=False, circ=(1500, 690, 130, 210, 4, 7, 1.12, 14))
 for k, v in V.items():
     d = os.path.join(HERE, 'v' + k); os.makedirs(d + '/assets', exist_ok=True)
