@@ -1,0 +1,21 @@
+{
+ "job": "mm-ep02-shorts-fix1",
+ "items": [
+  {
+   "name": "hook8_1",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 10.72,
+   "took": 5.4
+  },
+  {
+   "name": "hook8_2",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 12.4,
+   "took": 6.6
+  }
+ ]
+}
