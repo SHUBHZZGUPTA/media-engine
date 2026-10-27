@@ -1,0 +1,29 @@
+{
+ "job": "ru-full-en-a",
+ "items": [
+  {
+   "name": "ch2",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 209.72,
+   "took": 64.2
+  },
+  {
+   "name": "ch3_4",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 285.32,
+   "took": 87.4
+  },
+  {
+   "name": "ch5_6",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 331.28,
+   "took": 101.0
+  }
+ ]
+}
