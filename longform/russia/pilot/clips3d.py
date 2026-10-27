@@ -118,5 +118,20 @@ for cid, idx, data in CL:
     if not os.path.exists(out): continue
     s["bg"] = {"video": out, "img": "#02070d"}
     s["layers"] = [L for L in s["layers"] if "circle" not in L and not (cid == "D_trade" and isinstance(L.get("img"), dict) and L["img"]["text"] == "Constantinople")]
+# mascot/board shots that follow a 3D clip blur that clip's last frame instead of the old flat map
+import cv2
+for cid, idx, data in CL:
+    out = os.path.join(OUT, cid + ".mp4")
+    if not os.path.exists(out): continue
+    still = os.path.join(OUT, cid + "_last.jpg")
+    if not os.path.exists(still) or os.path.getmtime(still) < os.path.getmtime(out):
+        cap = cv2.VideoCapture(out); n = int(cap.get(cv2.CAP_PROP_FRAME_COUNT)); cap.set(cv2.CAP_PROP_POS_FRAMES, max(0, n - int(.7 * 30)))
+        ok, fr = cap.read(); cap.release()
+        if ok: cv2.imwrite(still, fr, [cv2.IMWRITE_JPEG_QUALITY, 92])
+    flat = None
+    for j in range(idx + 1, len(shots)):
+        b = shots[j]["bg"]
+        if not b.get("blur"): break
+        b["img"] = still
 json.dump(spec, open(args[1], "w"))
 print("clips:", [(c, round(d["dur"], 1)) for c, _, d in CL])
