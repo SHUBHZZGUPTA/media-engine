@@ -32,7 +32,7 @@ if "selfDeclaredMadeForKids" not in new and "madeForKids" in before: new["selfDe
 unsched = J["status"].pop("unschedule", False)
 if unsched:
     if before.get("privacyStatus") != "private": sys.exit("unschedule only applies to a private (scheduled) video")
-    new.pop("publishAt", None); new["privacyStatus"] = "private"
+    new["publishAt"] = None; new["privacyStatus"] = "private"   # explicit null clears the schedule
 new.update(J["status"])
 yt.videos().update(part="status", body={"id": J["video_id"], "status": new}).execute()
 after = yt.videos().list(part="status", id=J["video_id"]).execute()["items"][0]["status"]
