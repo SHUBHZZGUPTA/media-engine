@@ -122,7 +122,7 @@ def plate(t0, img, cam=None, layers=(), zoom=(1.0, 1.12), c=(.5, .5)):
 def pic(t0, key, layers=(), zoom=(1.0, 1.15), c0=(.5, .5), c1=None, fallback=None):
     """Archive picture / photo with a slow Ken Burns move (falls back to a plate if it didn't download)."""
     p = arc(key) or fallback
-    if p is None: return board(t0, [tag(f"[{key}]", t0 + .1)])
+    if p is None: return board(t0, list(layers))
     c1 = c1 or c0
     return shot(t0, p, layers, cam=[[t0, c0[0], c0[1], zoom[0]], [t0 + 6, c1[0], c1[1], zoom[1]]])
 def chapter_card(n, i):
@@ -243,8 +243,8 @@ skit(c + 14, c + 17, "ru_kremlin_night", {"IVAN": (620, False), "SERVANT": (1340
 t = T(c + 18, -.15)
 globe("G_siberia", t, [[t, 50, 57, 2.4], [T(c + 18, 1), 75, 60, 2.6]],
       over=[ov("ov_rudj_red", [[0, 0]])],
-      arcs=[arcp([[56.2, 58.0], [60.0, 58.3], [65.5, 57.2], [68.25, 58.2]], K(c + 18, "Siberia"), 2.0, rad=.008)],
-      pins=[pin(68.25, 58.2, K(c + 18, "Yermak"), "Siberia opens", "#FFD84A")],
+      arcs=[arcp([[56.2, 58.0], [60.0, 58.3], [65.5, 57.2], [68.25, 58.2]], t + .5, 2.0, rad=.008)],
+      pins=[pin(56.2, 58.0, t + .3, "Urals"), pin(68.25, 58.2, t + 2.4, "Siberia", "#FFD84A")],
       layers=[lab("1584", T(c + 18, .02), x=300, y=230, size=110)])
 pic(K(c + 18, "thanks"), "yermak", [tag("Yermak", K(c + 18, "Yermak"))])
 board(T(c + 19, -.15), [txt("Exhausted\nTerrified\nBroke", 1250, 600, K(c + 19, "exhausted"), size=86, box="#222222")])
@@ -367,8 +367,8 @@ plate(K(c + 14, "Cossacks"), a("ru_snow_retreat"), layers=[tag("A small fraction
 quip(c + 15)
 pic(T(c + 16, -.15), "russians_paris", [lab("Paris, 1814", K(c + 16, "Paris"), size=96)])
 board(T(c + 17, -.15), [txt("Constitutions?", 1250, 600, K(c + 17, "Constitutions"), size=100, box="#2b3a67")])
-pic(T(c + 18, -.15), "decembrists", [lab("The Decembrists", K(c + 18, "Decembrists"), size=96)])
-pic(T(c + 19, -.15), "decembrists", [tag("5 hanged · 100+ to Siberia", K(c + 19, "Five"))], zoom=(1.3, 1.4), c0=(.4, .5), c1=(.6, .5))
+pic(T(c + 18, -.15), "decembrists", [lab("The Decembrists", K(c + 18, "Decembrists"), size=96)], fallback=arc("hermitage"))
+board(T(c + 19, -.15), [txt("5 hanged\n100+ to Siberia", 1250, 600, K(c + 19, "Five"), size=90, box="#222222")])
 pic(T(c + 20, -.15), "crimean_war", [lab("The Crimean War", K(c + 20, "Crimean"), size=96)])
 pic(T(c + 21, -.15), "alexander2", [lab("1861", K(c + 21, "eighteen"), x=300, y=230, size=110), txt("23 million\nserfs freed", 1450, 640, K(c + 21, "twenty"), size=90, box="#2f8f4f")])
 board(K(c + 21, "Two years"), [txt("2 years before\nLincoln", 1250, 600, K(c + 21, "Two years"), size=90, box="#2b3a67")])
@@ -616,11 +616,16 @@ for s in shots:
     t0 = s["t0"]; G = CLIP[cid]["data"]["globe"]; dur = round(s["t1"] - t0 + .6, 3)
     loc = lambda x: round(max(0.0, x - t0), 3)
     G["cam"] = [[loc(k[0])] + k[1:] for k in G["cam"]]; G["cam"][-1][0] = max(G["cam"][-1][0], dur - .6)
-    for o in G["over"]: o["a"] = [[loc(k[0]) if k[0] else 0, k[1]] for k in o["a"]]
+    def fit(K):     # keyframes in local time, shifted earlier if the event would finish after the shot ends
+        K = [[loc(k[0]) if k[0] else 0, k[1]] for k in K]
+        over_ = K[-1][0] - (dur - 1.0)
+        if over_ > 0 and len(K) > 1: K = [K[0]] + [[max(0.0, round(k[0] - over_, 3)), k[1]] for k in K[1:]]
+        return K
+    for o in G["over"]: o["a"] = fit(o["a"])
     for x in G["arcs"]:
-        x["draw"] = [[loc(k[0]) if k[0] else 0, k[1]] for k in x["draw"]]
-        if "fade" in x: x["fade"] = [[loc(k[0]) if k[0] else 0, k[1]] for k in x["fade"]]
-    for p in G["pins"]: p["at"] = loc(p["at"])
+        x["draw"] = fit(x["draw"])
+        if "fade" in x: x["fade"] = fit(x["fade"])
+    for p in G["pins"]: p["at"] = min(loc(p["at"]), round(dur - 1.6, 3))
     clips_out[cid] = dict(CLIP[cid]["data"], dur=dur)
 json.dump(clips_out, open(os.path.join(os.path.dirname(os.path.abspath(args[1])), "clips3d_full.json"), "w"), indent=1)
 
