@@ -1,0 +1,143 @@
+{
+ "id": "ru-full-search2",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 12,
+ "files": [
+  {
+   "name": "s_false_dmitry.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=False+Dmitry+I+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_poles_kremlin.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Polish+garrison+Kremlin+1612+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_minin_pozharsky.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Monument+to+Minin+and+Pozharsky+Red+Square&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_michael_romanov.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Michael+Feodorovich+Romanov+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_streltsy.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Streltsy+uprising+1682+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_peter_portrait.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Peter+the+Great+portrait+1717&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_peter_shipyard.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Peter+the+Great+Zaandam+shipyard+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_alaska_settlement.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Three+Saints+Bay+Kodiak+settlement+1784&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_napoleon_portrait.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Napoleon+in+his+study+David&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_borodino.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Battle+of+Borodino+painting+Lejeune&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_moscow_fire.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Moscow+fire+1812+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_napoleon_retreat.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Napoleon+retreat+from+Moscow+Northen&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_russians_paris.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Russian+army+enters+Paris+1814&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_decembrists.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Decembrist+revolt+Kolman&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_rasputin.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Grigori+Rasputin+photograph&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_feb_revolution.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=February+Revolution+1917+Petrograd+demonstration&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_lenin_1917.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Lenin+1917+speech+photograph&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_winter_palace_1917.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Winter+Palace+1917+storming&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_civil_war.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Russian+Civil+War+1919+Red+Army&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_ipatiev.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Ipatiev+House+Yekaterinburg&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_ussr_1922.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Soviet+Union+emblem+1923&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_berlin_1945.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Soviet+soldiers+Berlin+1945+Reichstag&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_stalin_funeral.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Stalin+funeral+1953&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_sputnik.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Sputnik+1+replica&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_gagarin.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Yuri+Gagarin+photograph&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_cuba_missiles.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Cuban+missile+crisis+reconnaissance+photo+San+Cristobal&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_b59.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Soviet+submarine+B-59+surfaced&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_arkhipov.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Vasily+Arkhipov&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_kyiv_2022.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Kyiv+2022+Russian+invasion&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_kulikovo.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Battle+of+Kulikovo&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_ugra.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Standing+on+the+Ugra+river&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_golden_horde_tribute.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Golden+Horde+Russian+princes&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_soviet_queue.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Soviet+Union+queue+shop+1990&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_moscow_1990s.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Moscow+1992+street&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  }
+ ]
+}
