@@ -51,7 +51,10 @@
   "c_moon": "The Moon personified as a vain sassy diva: cratered grey body, tiny silver tiara, pink feather boa, hand on hip; smug half-closed eyes, long lashes; faces right. (Moon, 2026-10-27)",
   "c_theia": "Theia, the Moon-forming protoplanet, personified: reddish-orange rocky ball with glowing lava cracks, curl on top, big friendly wave; innocent, too-sweet smile; faces left. (Moon)",
   "c_chimbo": "Mount Chimborazo personified: wide squat dark-grey volcano-dome body with thick white glacier cap, knitted yellow-blue-red striped scarf, one hand in a lazy wave; chill half-closed eyes, small confident smile; faces left. (Chimborazo, 2026-10-27, Codex)",
-  "c_explorer": "Generic early-1800s naturalist explorer chibi (no real likeness): dark felt wide-brim hat, navy tailcoat, cravat, red scarf blowing, green plant tin on strap, wooden staff + brass barometer; dizzy altitude-sick, green cheeks, sweat drop; faces right. (Chimborazo, Codex)"
+  "c_explorer": "Generic early-1800s naturalist explorer chibi (no real likeness): dark felt wide-brim hat, navy tailcoat, cravat, red scarf blowing, green plant tin on strap, wooden staff + brass barometer; dizzy altitude-sick, green cheeks, sweat drop; faces right. (Chimborazo, Codex)",
+  "c_delhi": "Delhi personified: India Gate arch as the head, cream kurta, maroon Nehru jacket, small brass umbrella; offended shocked 'o' mouth; faces right. (Himalayas, 2026-10-27, Codex)",
+  "c_delhi_cold": "Delhi personified (winter): same as c_delhi + grey wool shawl, red muffler, frost/icicles on the arch, snowflakes; deadpan shivering; faces right. (Himalayas, 2026-10-27, Codex edit)",
+  "c_everest_smug": "Mount Everest personified (re-dress of c_everest): no sweat drop, calm smug half-closed eyes, arms folded, red scarf; faces right. (Himalayas, 2026-10-27, Codex edit)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -154,6 +157,14 @@
   "chimbo_summit": "Chimborazo glaciated summit plateau at dawn: ice cliffs left/middle, penitentes, sea of pink-gold clouds, distant cone volcano ~(880,317) with sun ~(962,317), wide snow field lower half. (Chimborazo)",
   "chimbo_1802": "1802 Andean volcano slope: dark scree ridge climbing to a glaciated summit in cloud ~(540,120), mist; rocky ledge lower middle with wooden staff + canvas rucksack ~(270,1000). (Chimborazo)",
   "chimbo_bulge": "3D clay diorama on navy: squashed oblate Earth (Americas) centre ~(512,747), glowing gold equator ring from ~(62,696) to ~(962,696), white dashed circle around, spin arrow above N pole. (Chimborazo)",
-  "chimbo_cross": "3D clay diorama on navy (Codex EDIT): oblate Earth cut in half, glowing core ~(524,710); broad snowy volcano poking out sideways at the right equator edge, summit ~(985,724); sharp snowy pyramid on the upper-right curve, summit ~(790,430). (Chimborazo)"
+  "chimbo_cross": "3D clay diorama on navy (Codex EDIT): oblate Earth cut in half, glowing core ~(524,710); broad snowy volcano poking out sideways at the right equator edge, summit ~(985,724); sharp snowy pyramid on the upper-right curve, summit ~(790,430). (Chimborazo)",
+  "hm_map0": "India from space, high-angle 3D relief looking north, real layout: snowy Himalaya band along the top (y~0-330), Ganges plain, Deccan, Sri Lanka ~(600,1290). Pairs with hm_map1. (Himalayas)",
+  "hm_map1": "Pixel-aligned AFTER of hm_map0 (composite): Himalaya wall moved to a band across mid-India (y~505-746) with monsoon clouds on its south face; north is dry beige plain, south lush green.",
+  "hm_dio_monsoon": "3D isometric cutaway diorama on navy: ocean left, clouds piling on a tall snowy mountain wall (peak ~620,330), rain on the green south slope, dry brown plateau right. (Himalayas)",
+  "hm_leh": "Ladakh cold desert valley at noon: barren brown mountains with snowy tops, wide gravel plain, thin river and poplars far away. (Himalayas)",
+  "hm_delhi_rain": "Delhi boulevard in heavy monsoon rain, India Gate in the middle distance (~512,520), wet reflective road. Pairs with hm_delhi_dry. (Himalayas)",
+  "hm_delhi_dry": "Pixel-aligned AFTER of hm_delhi_rain: dry, cracked, frosty, cold haze, bare trees. (Himalayas)",
+  "hm_everest_plains": "Giant Everest peak (summit ~512,90) towering over flat East-Indian farmland and a small town with mining headframes (~600,640). (Himalayas)",
+  "hm_south": "Lush south-India hills in a monsoon downpour, waterfalls on cliffs, terraces and palms, swollen river; muddy open ground lower middle. (Himalayas)"
  }
 }
