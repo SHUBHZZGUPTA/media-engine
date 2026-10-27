@@ -58,7 +58,8 @@ function drawTube(scene, pts, rad, col, opa) {
   const m = new T3.Mesh(g, new T3.MeshBasicMaterial({ color: col, transparent: true, opacity: opa || 1, depthWrite: false })); scene.add(m);
   const halo = new T3.Mesh(new T3.TubeGeometry(curve, SEG, rad * 2.6, RS, false), new T3.MeshBasicMaterial({ color: col, transparent: true, opacity: .28, blending: T3.AdditiveBlending, depthWrite: false })); scene.add(halo);
   const head = new T3.Mesh(new T3.ConeGeometry(rad * 3.2, rad * 7, 18), new T3.MeshBasicMaterial({ color: col })); scene.add(head);
-  return { set(p) { const c = Math.floor(n * clamp(p, 0, 1) / (RS * 6)) * RS * 6; m.geometry.setDrawRange(0, c); halo.geometry.setDrawRange(0, c);
+  return { op(a) { m.material.opacity = (opa || 1) * a; halo.material.opacity = .28 * a; head.material.transparent = true; head.material.opacity = a; },
+    set(p) { const c = Math.floor(n * clamp(p, 0, 1) / (RS * 6)) * RS * 6; m.geometry.setDrawRange(0, c); halo.geometry.setDrawRange(0, c);
       m.visible = halo.visible = c > 0; head.visible = p > .01 && D.head !== false;
       if (head.visible) { const u = clamp(p, .001, 1); const at = curve.getPointAt(u), tg = curve.getTangentAt(u); head.position.copy(at).addScaledVector(tg, rad * 2.5);
         head.quaternion.setFromUnitVectors(new T3.Vector3(0, 1, 0), tg); } } };
@@ -92,7 +93,7 @@ if (D.mode === 'globe') {
   render = t => { const c = keyed(G.cam, t); const pos = ll(c[0], c[1], c[2]); cam.position.copy(pos);
     const look = c.length > 4 ? ll(c[3], c[4], 1) : new T3.Vector3(); cam.up.set(0, 1, 0); cam.lookAt(look);
     for (const { m, o } of OV) m.material.opacity = k1(o.a, t);
-    for (const { a, tube } of ARC) tube.set(k1(a.draw, t));
+    for (const { a, tube } of ARC) { tube.set(k1(a.draw, t)); if (a.fade) tube.op(k1(a.fade, t, 1)); }
     for (const { p, P } of PINS) setPin(P, t, p.at, p.s || .05);
     R.render(sc, cam); drawLabels(cam, t); };
 } else {

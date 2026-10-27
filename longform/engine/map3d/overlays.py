@@ -25,7 +25,19 @@ def rings(region):
             g = f["geometry"]; polys = [g["coordinates"]] if g["type"] == "Polygon" else g["coordinates"]
             out += [poly[0] for poly in polys]
     if not out: raise SystemExit(f"region not found: {region}")
+    if "drop" in region:      # drop the polygon parts that contain any of these [lon, lat] points (e.g. Crimea from Russia)
+        out = [r for r in out if not any(inside(r, *p) for p in region["drop"])]
+    if "add" in region:       # add polygon parts of other regions that contain these points (e.g. Crimea to Ukraine)
+        for src_reg, p in region["add"]:
+            out += [r for r in rings(src_reg) if inside(r, *p)]
     return out
+
+def inside(ring, x, y):
+    c = False; n = len(ring)
+    for k in range(n):
+        x1, y1 = ring[k][:2]; x2, y2 = ring[k - 1][:2]
+        if (y1 > y) != (y2 > y) and x < (x2 - x1) * (y - y1) / (y2 - y1) + x1: c = not c
+    return c
 
 def mask(regions, w=W, h=H, to=xy):
     m = Image.new("L", (w, h), 0); d = ImageDraw.Draw(m)
