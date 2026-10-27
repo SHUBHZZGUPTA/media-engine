@@ -4184,9 +4184,7 @@
   {
    "t0": 444.04099999999994,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/peter_portrait.jpg",
     "cam": [
      [
       442.14099999999996,
@@ -4198,20 +4196,11 @@
       448.14099999999996,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "1672",
@@ -4232,7 +4221,7 @@
   {
    "t0": 446.002,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/peter_portrait.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4293,9 +4282,7 @@
   {
    "t0": 452.716,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/streltsy.jpg",
     "cam": [
      [
       452.716,
@@ -4304,23 +4291,14 @@
       1.0
      ],
      [
-      463.091,
+      456.1743333333333,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "The Streltsy",
@@ -4335,13 +4313,87 @@
      "enter": "pop"
     }
    ],
-   "t1": 463.091,
+   "t1": 456.1743333333333,
    "cut": "curve"
+  },
+  {
+   "t0": 456.1743333333333,
+   "t1": 459.6326666666667,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/streltsy.jpg",
+    "cam": [
+     [
+      456.1743333333333,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      459.6326666666667,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "The Streltsy",
+      "size": 112,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 456.1743333333333,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 459.6326666666667,
+   "t1": 463.091,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/streltsy.jpg",
+    "cam": [
+     [
+      459.6326666666667,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      463.091,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "The Streltsy",
+      "size": 112,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 459.6326666666667,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 463.091,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/streltsy.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4399,7 +4451,7 @@
   {
    "t0": 472.377,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/streltsy.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4462,7 +4514,7 @@
   {
    "t0": 476.055,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/streltsy.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -6618,9 +6670,7 @@
   {
    "t0": 708.162,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/pugachev.jpg",
     "cam": [
      [
       708.162,
@@ -6629,23 +6679,14 @@
       1.0
      ],
      [
-      718.27,
+      711.5313333333334,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Pugachev's rising",
@@ -6660,13 +6701,87 @@
      "enter": "pop"
     }
    ],
-   "t1": 718.27,
+   "t1": 711.5313333333334,
    "cut": "curve"
+  },
+  {
+   "t0": 711.5313333333334,
+   "t1": 714.9006666666667,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/pugachev.jpg",
+    "cam": [
+     [
+      711.5313333333334,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      714.9006666666667,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Pugachev's rising",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 711.5313333333334,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 714.9006666666667,
+   "t1": 718.27,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/pugachev.jpg",
+    "cam": [
+     [
+      714.9006666666667,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      718.27,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Pugachev's rising",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 714.9006666666667,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 718.27,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/pugachev.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -6723,7 +6838,7 @@
   {
    "t0": 725.359,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/pugachev.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -11667,9 +11782,7 @@
   {
    "t0": 1280.725,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-pilot-archive-search/stalin_full.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/trotsky.jpg",
     "cam": [
      [
       1280.725,
@@ -11678,23 +11791,39 @@
       1.0
      ],
      [
-      1292.9569999999999,
+      1284.8023333333333,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
+   "layers": [],
+   "t1": 1284.8023333333333,
+   "cut": "curve"
+  },
+  {
+   "t0": 1284.8023333333333,
+   "t1": 1288.8796666666665,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/trotsky.jpg",
+    "cam": [
+     [
+      1284.8023333333333,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1288.8796666666665,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Trotsky",
@@ -11707,6 +11836,43 @@
      "y": 420,
      "in": 1286.2838397790056,
      "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 1288.8796666666665,
+   "t1": 1292.9569999999999,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/trotsky.jpg",
+    "cam": [
+     [
+      1288.8796666666665,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      1292.9569999999999,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Trotsky",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 1288.8796666666665,
+     "enter": "none"
     },
     {
      "img": {
@@ -11721,14 +11887,12 @@
      "in": 1289.6263812154696,
      "enter": "pop"
     }
-   ],
-   "t1": 1292.9569999999999,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 1292.9569999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-pilot-archive-search/stalin_full.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive3/trotsky.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
