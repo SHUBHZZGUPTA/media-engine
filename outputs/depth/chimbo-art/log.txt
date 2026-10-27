@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 5560.25it/s]
+depth library/scenes/chimbo_everest.jpg
+depth library/scenes/chimbo_summit.jpg
+depth library/scenes/chimbo_1802.jpg
+depth library/scenes/chimbo_bulge.jpg
+depth library/scenes/chimbo_cross.jpg
+upscale library/scenes/chimbo_everest.jpg
+upscale library/scenes/chimbo_summit.jpg
+upscale library/scenes/chimbo_1802.jpg
+upscale library/scenes/chimbo_bulge.jpg
+upscale library/scenes/chimbo_cross.jpg
+upscale library/characters/c_chimbo.png
+upscale library/characters/c_explorer.png
+upscale library/characters/c_everest.png
+upscale library/characters/c_earth.png
+{'depth': [{'src': 'library/scenes/chimbo_everest.jpg', 'secs': 2.9}, {'src': 'library/scenes/chimbo_summit.jpg', 'secs': 2.9}, {'src': 'library/scenes/chimbo_1802.jpg', 'secs': 2.9}, {'src': 'library/scenes/chimbo_bulge.jpg', 'secs': 2.9}, {'src': 'library/scenes/chimbo_cross.jpg', 'secs': 2.9}], 'upscale': [{'src': 'library/scenes/chimbo_everest.jpg', 'secs': 196.0}, {'src': 'library/scenes/chimbo_summit.jpg', 'secs': 194.2}, {'src': 'library/scenes/chimbo_1802.jpg', 'secs': 193.4}, {'src': 'library/scenes/chimbo_bulge.jpg', 'secs': 193.6}, {'src': 'library/scenes/chimbo_cross.jpg', 'secs': 193.6}, {'src': 'library/characters/c_chimbo.png', 'secs': 210.8}, {'src': 'library/characters/c_explorer.png', 'secs': 210.3}, {'src': 'library/characters/c_everest.png', 'secs': 212.6}, {'src': 'library/characters/c_earth.png', 'secs': 213.7}]}
