@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>BHUGOL long-form 3D map clip</title>
+<script src="./gsap.min.js"></script>
+<script src="./three.min.js"></script>
+<style>
+@font-face { font-family: 'Pop'; font-weight: 700; src: url(assets/poppins700.ttf); }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #02070D; }
+#cv { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+#ov { position: absolute; inset: 0; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(2,7,13,0) 60%, rgba(2,7,13,.55) 100%); }
+.lbl { position: absolute; left: 0; top: 0; white-space: nowrap; font-family: 'Pop', sans-serif; font-weight: 700; color: #fff;
+  paint-order: stroke fill; -webkit-text-stroke: 10px #06101A; line-height: 1; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <canvas id="cv" width="1920" height="1080"></canvas>
+    <div id="vig"></div>
+    <div id="ov"></div>
+  </div>
+</div>
+<script>
+/* One 3D map clip, driven only by time t (seek-safe). Modes: "globe" (Blue Marble sphere + overlay textures + arcs + pins)
+   and "terrain" (DEM relief with region glow, flag fill, rising border wall, draped route, pins). Data in D. */
+const D = __DATA__;
+const T3 = THREE, W = 1920, H = 1080, ASP = W / H;
+const $ = id => document.getElementById(id);
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const EZ = {}; const ease = n => EZ[n || 'power2.inOut'] || (EZ[n || 'power2.inOut'] = gsap.parseEase(n || 'power2.inOut'));
+/* keyframes: list of [t, ...values]; eased between neighbours */
+function keyed(K, t, e) { if (!K || !K.length) return null; if (t <= K[0][0]) return K[0].slice(1);
+  for (let i = 1; i < K.length; i++) { const a = K[i - 1], b = K[i]; if (t <= b[0]) { const p = ease(b[b.length] || e)(clamp((t - a[0]) / Math.max(1e-6, b[0] - a[0]), 0, 1));
+      return a.slice(1).map((v, k) => v + (b[k + 1] - v) * p); } }
+  return K[K.length - 1].slice(1); }
+const k1 = (K, t, d) => { const v = keyed(K, t); return v ? v[0] : (d || 0); };
+const loader = new T3.TextureLoader(); const READY = [];
+function tex(n, nearest) { return new Promise(r => loader.load('assets/' + n, t => { t.anisotropy = 8; if (nearest) { t.generateMipmaps = false; t.minFilter = t.magFilter = T3.LinearFilter; } r(t); })); }
+function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.25, 'rgba(255,255,255,.55)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new T3.CanvasTexture(c); }
+const GLOW = glowTex();
+const R = new T3.WebGLRenderer({ canvas: $('cv'), antialias: true, preserveDrawingBuffer: true }); R.setPixelRatio(1); R.setSize(W, H, false);
+const toScreen = (cam, v) => { const p = v.clone().project(cam); return { x: (p.x + 1) / 2 * W, y: (1 - p.y) / 2 * H, z: p.z }; };
+const LBL = [];
+function label(txt, pos3, at, size, col) { const e = document.createElement('div'); e.className = 'lbl'; e.textContent = txt; e.style.fontSize = (size || 52) + 'px'; if (col) e.style.color = col; $('ov').appendChild(e);
+  LBL.push({ e, pos3, at }); }
+function drawLabels(cam, t) { for (const L of LBL) { const a = clamp((t - L.at) / .3, 0, 1); L.e.style.opacity = a; if (a <= 0) continue; const q = toScreen(cam, L.pos3());
+    L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight - 26).toFixed(1)}px) scale(${(.7 + .3 * a).toFixed(3)})`; } }
+/* tube that draws itself along a curve; returns {mesh, head, set(p)} */
+function drawTube(scene, pts, rad, col, opa) {
+  const curve = new T3.CatmullRomCurve3(pts, false, 'centripetal'); const SEG = Math.max(64, pts.length * 4), RS = 10;
+  const g = new T3.TubeGeometry(curve, SEG, rad, RS, false); const n = g.index.count;
+  const m = new T3.Mesh(g, new T3.MeshBasicMaterial({ color: col, transparent: true, opacity: opa || 1, depthWrite: false })); scene.add(m);
+  const halo = new T3.Mesh(new T3.TubeGeometry(curve, SEG, rad * 2.6, RS, false), new T3.MeshBasicMaterial({ color: col, transparent: true, opacity: .28, blending: T3.AdditiveBlending, depthWrite: false })); scene.add(halo);
+  const head = new T3.Mesh(new T3.ConeGeometry(rad * 3.2, rad * 7, 18), new T3.MeshBasicMaterial({ color: col })); scene.add(head);
+  return { set(p) { const c = Math.floor(n * clamp(p, 0, 1) / (RS * 6)) * RS * 6; m.geometry.setDrawRange(0, c); halo.geometry.setDrawRange(0, c);
+      m.visible = halo.visible = c > 0; head.visible = p > .01 && D.head !== false;
+      if (head.visible) { const u = clamp(p, .001, 1); const at = curve.getPointAt(u), tg = curve.getTangentAt(u); head.position.copy(at).addScaledVector(tg, rad * 2.5);
+        head.quaternion.setFromUnitVectors(new T3.Vector3(0, 1, 0), tg); } } };
+}
+function pin(scene, pos, col) { const g = new T3.Group(); g.position.copy(pos); scene.add(g);
+  const head = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: col, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 })); g.add(head);
+  const dot = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0xffffff, transparent: true, depthWrite: false, opacity: 0 })); g.add(dot);
+  return { g, head, dot }; }
+function setPin(P, t, at, s) { const a = clamp((t - at) / .35, 0, 1); const pulse = 1 + .25 * Math.sin((t - at) * 6);
+  P.head.material.opacity = a * .95; P.dot.material.opacity = a; P.head.scale.setScalar(s * 2.2 * pulse * (a < 1 ? 1 + (1 - a) * 2 : 1)); P.dot.scale.setScalar(s * .7); }
+
+let render;
+if (D.mode === 'globe') {
+  const G = D.globe; const sc = new T3.Scene(); sc.background = new T3.Color(0x01040A); const cam = new T3.PerspectiveCamera(30, ASP, .005, 100);
+  const ll = (lon, lat, r) => { const ph = (lon + 180) * Math.PI / 180, th = (90 - lat) * Math.PI / 180; return new T3.Vector3(-Math.cos(ph) * Math.sin(th) * r, Math.cos(th) * r, Math.sin(ph) * Math.sin(th) * r); };
+  const globe = new T3.Mesh(new T3.SphereGeometry(1, 220, 160), new T3.MeshBasicMaterial({ color: 0xffffff })); sc.add(globe);
+  READY.push(tex(G.tex).then(t => { globe.material.map = t; globe.material.needsUpdate = true; }));
+  const atm = new T3.Mesh(new T3.SphereGeometry(1.06, 96, 72), new T3.ShaderMaterial({ side: T3.BackSide, transparent: true, blending: T3.AdditiveBlending, depthWrite: false,
+    vertexShader: `varying vec3 vN; varying vec3 vP; void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vP; void main(){ float f = pow(clamp(1.0 - abs(dot(normalize(-vP), vN)), 0.0, 1.0), 2.2); gl_FragColor = vec4(0.35, 0.65, 1.0, f * 0.45); }` })); sc.add(atm);
+  { const n = 1800, p = new Float32Array(n * 3); for (let i = 0; i < n; i++) { const a = (i * 2.399963) % (Math.PI * 2), z = 1 - 2 * ((i + .5) / n), r = Math.sqrt(1 - z * z); p.set([Math.cos(a) * r * 30, z * 30, Math.sin(a) * r * 30], i * 3); }
+    const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(p, 3)); sc.add(new T3.Points(g, new T3.PointsMaterial({ color: 0xffffff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: .7 }))); }
+  const OV = (G.over || []).map((o, i) => { const m = new T3.Mesh(new T3.SphereGeometry(1.0012 + i * .0004, 220, 160), new T3.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false,
+      blending: o.add ? T3.AdditiveBlending : T3.NormalBlending })); sc.add(m); READY.push(tex(o.img).then(t => { m.material.map = t; m.material.needsUpdate = true; })); return { m, o }; });
+  const slerp = (a, b, n, lift) => { const A = ll(a[0], a[1], 1), B = ll(b[0], b[1], 1), out = []; const ang = A.angleTo(B);
+    for (let i = 0; i <= n; i++) { const u = i / n; const v = new T3.Vector3().copy(A).multiplyScalar(Math.sin((1 - u) * ang) / Math.sin(ang)).addScaledVector(B, Math.sin(u * ang) / Math.sin(ang));
+      out.push(v.normalize().multiplyScalar(1.004 + lift * Math.sin(Math.PI * u) * ang)); } return out; };
+  const ARC = (G.arcs || []).map(a => { let pts = []; for (let i = 1; i < a.pts.length; i++) { const seg = slerp(a.pts[i - 1], a.pts[i], 40, a.lift || .08); pts = pts.concat(i > 1 ? seg.slice(1) : seg); }
+    return { a, tube: drawTube(sc, pts, a.rad || .006, new T3.Color(a.col || '#FFD84A'), 1) }; });
+  const PINS = (G.pins || []).map(p => { const P = pin(sc, ll(p.lon, p.lat, 1.006), new T3.Color(p.col || '#FF5A3A')); if (p.label) label(p.label, () => ll(p.lon, p.lat, 1.01), p.at + .15, p.size); return { p, P }; });
+  render = t => { const c = keyed(G.cam, t); const pos = ll(c[0], c[1], c[2]); cam.position.copy(pos);
+    const look = c.length > 4 ? ll(c[3], c[4], 1) : new T3.Vector3(); cam.up.set(0, 1, 0); cam.lookAt(look);
+    for (const { m, o } of OV) m.material.opacity = k1(o.a, t);
+    for (const { a, tube } of ARC) tube.set(k1(a.draw, t));
+    for (const { p, P } of PINS) setPin(P, t, p.at, p.s || .05);
+    R.render(sc, cam); drawLabels(cam, t); };
+} else {
+  const M = D.terrain; const [L0, L1, B0, B1] = M.bbox; const LC = (L0 + L1) / 2, BC = (B0 + B1) / 2, KX = Math.cos(BC * Math.PI / 180);
+  const sc = new T3.Scene(); sc.background = new T3.Color(0x0A1424); sc.fog = new T3.Fog(0x0A1424, 40, 90);
+  const cam = new T3.PerspectiveCamera(32, ASP, .02, 200); cam.up.set(0, 0, 1);
+  const Wt = (L1 - L0) * KX, Ht = (B1 - B0);
+  const FR = new T3.Vector4(...(M.frect || [0, 0, 1, 1]));
+  const TU = { dem: { value: null }, ne: { value: null }, mask: { value: null }, hs: { value: null }, hl: { value: 0 }, exag: { value: M.exag || .35 }, flag: { value: null }, flagA: { value: 0 }, frect: { value: FR } };
+  const terr = new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 900, Math.round(900 * Ht / Wt)), new T3.ShaderMaterial({ uniforms: TU,
+    vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform sampler2D ne, mask, hs, flag; uniform float hl, flagA; uniform vec4 frect; varying vec2 vUv;
+      void main(){ vec3 c = texture2D(ne, vUv).rgb;
+        float h = texture2D(hs, vUv).r; c *= 0.42 + 0.78 * h; float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, 0.8);
+        float m = texture2D(mask, vUv).r; c = mix(c, c * vec3(1.15, 1.02, 0.7) + vec3(0.07, 0.045, 0.0), m * hl * 0.6); c *= mix(1.0, 0.6, hl * (1.0 - m));
+        if (flagA > 0.0) { vec2 fq = clamp((vUv - frect.xy) / (frect.zw - frect.xy), 0.0, 1.0); vec3 fc = texture2D(flag, fq).rgb; float lu2 = dot(c, vec3(0.299,0.587,0.114));
+          c = mix(c, fc * (0.62 + 0.75 * lu2), m * flagA * 0.8); }
+        gl_FragColor = vec4(c, 1.0); }` }));
+  sc.add(terr);
+  const loadCPU = n => new Promise(r => { const im = new Image(); im.onload = () => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0);
+    r({ w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }); }; im.src = 'assets/' + n; });
+  let DEM = null; const hAt = (lon, lat) => { if (!DEM) return 0; const x = clamp(Math.round((lon - L0) / (L1 - L0) * (DEM.w - 1)), 0, DEM.w - 1), y = clamp(Math.round((B1 - lat) / (B1 - B0) * (DEM.h - 1)), 0, DEM.h - 1);
+    return DEM.d[(y * DEM.w + x) * 4] / 255 * TU.exag.value; };
+  const wpos = (lon, lat, up) => new T3.Vector3((lon - LC) * KX, lat - BC, hAt(lon, lat) + (up || 0));
+  const WU = { rise: { value: 0 }, wh: { value: M.wall || .9 } };
+  const wallMat = new T3.ShaderMaterial({ uniforms: WU, transparent: true, depthWrite: false, side: T3.DoubleSide, blending: T3.AdditiveBlending,
+    vertexShader: `uniform float rise, wh; attribute float k; varying float vK; void main(){ vK = k; vec3 p = position; p.z += k * wh * rise; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform float rise; varying float vK; void main(){ float a = (1.0 - vK) * (1.0 - vK) * rise; gl_FragColor = vec4(1.0, 0.68, 0.18, a * 0.95); }` });
+  const ROUTES = [], PINS = [];
+  READY.push(tex(M.ne).then(t => TU.ne.value = t), tex(M.mask).then(t => TU.mask.value = t), tex(M.hs).then(t => TU.hs.value = t), tex(M.dem, 1).then(t => TU.dem.value = t),
+    M.flag ? tex(M.flag).then(t => TU.flag.value = t) : Promise.resolve(),
+    loadCPU(M.dem).then(I => { DEM = I;
+      if (M.outline) { const pts = M.outline.map(([lo, la]) => wpos(lo, la, .01)); const pos = [], kk = [];
+        for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; pos.push(a.x, a.y, a.z, b.x, b.y, b.z, b.x, b.y, b.z, a.x, a.y, a.z, b.x, b.y, b.z, a.x, a.y, a.z); kk.push(0, 0, 1, 0, 1, 1); }
+        const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.Float32BufferAttribute(pos, 3)); g.setAttribute('k', new T3.Float32BufferAttribute(kk, 1)); sc.add(new T3.Mesh(g, wallMat)); }
+      for (const r of (M.routes || [])) { const dense = []; for (let i = 1; i < r.pts.length; i++) { const a = r.pts[i - 1], b = r.pts[i]; const n = 24;
+          for (let j = (i > 1 ? 1 : 0); j <= n; j++) { const u = j / n; dense.push(wpos(a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u, .06)); } }
+        ROUTES.push({ r, tube: drawTube(sc, dense, r.rad || .07, new T3.Color(r.col || '#FFD84A'), 1) }); }
+      for (const p of (M.pins || [])) { const P = pin(sc, wpos(p.lon, p.lat, .25), new T3.Color(p.col || '#FF5A3A')); PINS.push({ p, P });
+        if (p.label) label(p.label, () => wpos(p.lon, p.lat, .45), p.at + .15, p.size); } }));
+  render = t => { const k = keyed(M.cam, t); const [lon, lat, dist, el, yaw] = k; const tg = new T3.Vector3((lon - LC) * KX, lat - BC, 0); const e = el * Math.PI / 180, y = yaw * Math.PI / 180;
+    cam.position.set(tg.x + Math.sin(y) * Math.cos(e) * dist, tg.y - Math.cos(y) * Math.cos(e) * dist, Math.sin(e) * dist); cam.lookAt(tg); cam.updateMatrixWorld();
+    TU.hl.value = k1(M.hl, t); TU.flagA.value = k1(M.flagA, t); WU.rise.value = k1(M.rise, t);
+    for (const { r, tube } of ROUTES) tube.set(k1(r.draw, t));
+    for (const { p, P } of PINS) setPin(P, t, p.at, p.s || .5);
+    R.render(sc, cam); drawLabels(cam, t); };
+}
+function build() { const tl = gsap.timeline({ paused: true }); const clk = { t: 0 };
+  tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', immediateRender: false, onUpdate: () => render(clk.t) }, 0); render(0); return tl; }
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => Promise.all(READY)).then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>

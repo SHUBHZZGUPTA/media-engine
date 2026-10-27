@@ -7,7 +7,8 @@ talking bob. Frames are composed with OpenCV/numpy and piped to ffmpeg.
 
 Usage: python3 compose.py spec.json out.mp4 [--from S --to S] [--fps 30]
 Spec: {"w":1920,"h":1080,"fps":30,"shots":[{t0,t1,bg,layers}...]}
-  bg:     {"img": path | "#rrggbb", "cam": [[t, cx, cy, zoom], ...],   cx,cy in 0..1 of the plate, zoom>=1
+  bg:     {"video": clip.mp4} plays a pre-rendered clip from the shot's start (camera keys ignored), or
+          {"img": path | "#rrggbb", "cam": [[t, cx, cy, zoom], ...],   cx,cy in 0..1 of the plate, zoom>=1
            "blur": px, "dim": 0..1   (backdrop mode: blurred, darkened copy of a scene)
            "over": [{"img": overlay.png, "in": t, "dur": s, "mode": "fade|draw", "out": t}]}  (draw needs overlay.npy)
   layer:  {"img": path | {"text": str, "size": px, "color": "#fff", "box": "#000"|null, "font": path},
@@ -84,8 +85,11 @@ def blend(frame, spr, x, y, alpha=1.0):
 class Plate:
     """Background plate kept at up to 2x frame resolution so camera zooms stay sharp.
     Optional overlays (same size as the source plate) fade or draw on in plate space."""
-    def __init__(self, bg, W, H):
-        self.W, self.H = W, H; src = bg["img"]
+    def __init__(self, bg, W, H, t0=0.0):
+        self.W, self.H = W, H; src = bg["img"]; self.video = None
+        if bg.get("video"):                                  # pre-rendered clip (e.g. a 3D map), frame = time since shot start
+            self.video = bg["video"]; self.t0 = t0; self.cap = None; self.idx = -1; self.last = None
+            self.img = None; self.col = hex_bgr("#02070d"); return
         if isinstance(src, str) and src.startswith("#"):
             self.img = None; self.col = hex_bgr(src); return
         im = load_rgba(src)[:, :, :3]
@@ -106,7 +110,19 @@ class Plate:
             if ov.get("mode") == "draw":
                 order = cv2.resize(np.load(ov["img"][:-4] + ".npy").astype(np.float32), size, interpolation=cv2.INTER_NEAREST)[y0:y1, x0:x1]
             self.over.append(dict(ov, rgba=o[y0:y1, x0:x1], box=(y0, y1, x0, x1), order=order))
+    def vframe(self, t):
+        if self.cap is None:
+            self.cap = cv2.VideoCapture(self.video); self.fps = self.cap.get(cv2.CAP_PROP_FPS) or 30; self.idx = -1
+        want = max(0, int(round((t - self.t0) * self.fps)))
+        if want < self.idx: self.cap.release(); self.cap = None; return self.vframe(t)
+        while self.idx < want:
+            ok, fr = self.cap.read()
+            if not ok: break
+            self.idx += 1; self.last = fr
+        f = self.last if self.last is not None else np.zeros((self.H, self.W, 3), np.uint8)
+        return f if f.shape[:2] == (self.H, self.W) else cv2.resize(f, (self.W, self.H), interpolation=cv2.INTER_AREA)
     def render(self, cx, cy, zoom, t=0.0):
+        if self.video: return self.vframe(t).copy()
         if self.img is None:
             return np.full((self.H, self.W, 3), self.col, np.uint8)
         base = self.img
@@ -215,7 +231,7 @@ def main():
         while si < len(shots) - 1 and t >= shots[si]["t1"]: si += 1
         shot = shots[si]
         for s in (shots[si - 1] if si else None, shot):
-            if s is not None and id(s) not in plates: plates[id(s)] = Plate(s["bg"], W, H)
+            if s is not None and id(s) not in plates: plates[id(s)] = Plate(s["bg"], W, H, s["t0"])
         for k in list(plates):                              # free plates no longer needed
             if k not in (id(shot), id(shots[si - 1]) if si else None): plates.pop(k)
         frame = render_frame(shot, t, plates, W, H)
