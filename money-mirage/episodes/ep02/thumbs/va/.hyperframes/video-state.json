@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "historyId": "c14a4a4d-4e8d-486f-bcfc-fdfac4bac710",
+  "currentRevision": "06f98c31-415c-49ff-965f-db7fbc5aa254",
+  "pendingChanges": false,
+  "files": {
+    "assets/inter800.woff2": {
+      "hash": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d",
+      "content": "/root/.cache/hyperframes/history/c14a4a4d-4e8d-486f-bcfc-fdfac4bac710/blobs/a7/a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
+    },
+    "assets/inter900.woff2": {
+      "hash": "d5c0ed7b8b5dde97d48b97947d740bbd8ad3ba9f2c5cc6b8280f16acba2d828e",
+      "content": "/root/.cache/hyperframes/history/c14a4a4d-4e8d-486f-bcfc-fdfac4bac710/blobs/d5/d5c0ed7b8b5dde97d48b97947d740bbd8ad3ba9f2c5cc6b8280f16acba2d828e"
+    },
+    "gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "/root/.cache/hyperframes/history/c14a4a4d-4e8d-486f-bcfc-fdfac4bac710/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "index.html": {
+      "hash": "3c416f3fcb2b19a257fca0dcbf1f12e8a26d00a2cb22e38af2841ee542db6249",
+      "content": "/root/.cache/hyperframes/history/c14a4a4d-4e8d-486f-bcfc-fdfac4bac710/blobs/3c/3c416f3fcb2b19a257fca0dcbf1f12e8a26d00a2cb22e38af2841ee542db6249"
+    },
+    "assets/boe_photo__print.jpg": {
+      "hash": "b2cd2c177361b163c4f8d178099bd02a08eac43b80210ae19d3015bd3e94042a",
+      "content": "/root/.cache/hyperframes/history/c14a4a4d-4e8d-486f-bcfc-fdfac4bac710/blobs/b2/b2cd2c177361b163c4f8d178099bd02a08eac43b80210ae19d3015bd3e94042a"
+    }
+  },
+  "revisions": {
+    "06f98c31-415c-49ff-965f-db7fbc5aa254": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793074339308,
+      "endedAt": 1793074339309,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/c14a4a4d-4e8d-486f-bcfc-fdfac4bac710/blobs/c7/c7b33b4e87f9d88c0f7a0cefd39d4950bab5fd9d49c5b97f5f83fd57252984b3",
+          "after": "/root/.cache/hyperframes/history/c14a4a4d-4e8d-486f-bcfc-fdfac4bac710/blobs/3c/3c416f3fcb2b19a257fca0dcbf1f12e8a26d00a2cb22e38af2841ee542db6249"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "06f98c31-415c-49ff-965f-db7fbc5aa254",
+      "id": "02ca1a24-646a-4d10-af23-45a6410499f4-0"
+    },
+    "revisions": {
+      "06f98c31-415c-49ff-965f-db7fbc5aa254": [
+        {
+          "scope": "full",
+          "id": "02ca1a24-646a-4d10-af23-45a6410499f4-0",
+          "image": "/home/claude/media-engine/money-mirage/episodes/ep02/thumbs/snap_a/frame-00-at-0.5s.png",
+          "time": 0.5,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793074341812,
+          "contentHash": "c0e8cb35a0b5e872614075b1fe939aba926beeb07418ad1500a2d660a207ae04",
+          "revision": "06f98c31-415c-49ff-965f-db7fbc5aa254",
+          "inputFingerprint": "a628284489ff225674fff3a543c9d992a1caeac25f7a77e9f905504820763124",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": []
+  }
+}
