@@ -1,0 +1,59 @@
+{
+ "id": "mn-en",
+ "video_id": "scwBU9oJNsg",
+ "url": "https://youtube.com/shorts/scwBU9oJNsg",
+ "channel": "BhuGol",
+ "channel_id": "UC6Uc7hcy5EWXpNW6aTaWOlg",
+ "requested": {
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false,
+  "privacyStatus": "private",
+  "publishAt": "2026-10-30T13:30:00Z"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-10-30T13:30:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-10-30T13:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-10-30T13:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "thumbnail": {
+  "ok": true,
+  "url": "https://i9.ytimg.com/vi/scwBU9oJNsg/maxresdefault.jpg?sqp=CIC0gdcG&rs=AOn4CLB38hclmMBKjji-Kb5u2t9B2yT00g"
+ },
+ "locked_private": false,
+ "ok": true
+}
