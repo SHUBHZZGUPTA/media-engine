@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "893727b2-25b5-41fd-b549-7a27eeef3097",
-  "currentRevision": null,
+  "currentRevision": "503b283d-cd9a-4dab-ba50-c65911d94c7e",
   "pendingChanges": false,
   "files": {
     "assets/inter800.woff2": {
@@ -21,11 +21,42 @@
       "content": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
     },
     "index.html": {
-      "hash": "262e2a555daf5b5ed15c41fc74b0bb9e2cf09661929bd4125d4f1c506def7342",
-      "content": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/26/262e2a555daf5b5ed15c41fc74b0bb9e2cf09661929bd4125d4f1c506def7342"
+      "hash": "044b46931612c54831bfc2388375b97f7c58b4d71e666b59f0e586c49f5f6c53",
+      "content": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/04/044b46931612c54831bfc2388375b97f7c58b4d71e666b59f0e586c49f5f6c53"
     }
   },
-  "revisions": {},
+  "revisions": {
+    "4b6dc82f-9c1a-4ddc-9fcd-b88408028f6f": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793074596112,
+      "endedAt": 1793074596113,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/26/262e2a555daf5b5ed15c41fc74b0bb9e2cf09661929bd4125d4f1c506def7342",
+          "after": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/59/59b9df0a84e840d83ebc9b0dfea707d23454df8b6ddc363f63d2ae0d0f841c32"
+        }
+      }
+    },
+    "503b283d-cd9a-4dab-ba50-c65911d94c7e": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793074611377,
+      "endedAt": 1793074611378,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/59/59b9df0a84e840d83ebc9b0dfea707d23454df8b6ddc363f63d2ae0d0f841c32",
+          "after": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/04/044b46931612c54831bfc2388375b97f7c58b4d71e666b59f0e586c49f5f6c53"
+        }
+      }
+    }
+  },
   "checks": {
     "latest": null,
     "revisions": {},
@@ -33,31 +64,34 @@
   },
   "snapshots": {
     "latest": {
-      "revision": null,
-      "id": "90e61c98-ea9d-430d-a336-779573fc0057-0"
+      "revision": "503b283d-cd9a-4dab-ba50-c65911d94c7e",
+      "id": "ec6b556f-281f-4b5e-821b-ff0010c2ce38-0"
     },
-    "revisions": {},
-    "unversioned": [
-      {
-        "scope": "full",
-        "id": "90e61c98-ea9d-430d-a336-779573fc0057-0",
-        "image": "/home/claude/media-engine/money-mirage/episodes/ep02/thumbs/snap_b2/frame-00-at-0.5s.png",
-        "time": 0.5,
-        "metadata": {
-          "width": 1920,
-          "height": 1080,
-          "zoomScale": 1,
-          "browserGpuMode": "auto",
-          "warnings": [],
-          "partial": false
-        },
-        "createdAt": 1793074460100,
-        "contentHash": "8cb17b7d60550cdf85c466338c8be259cc27135142cb4d17a30a7cc21d209eaf",
-        "revision": null,
-        "inputFingerprint": "be8c4d0ea0853b9e78b240c2ddc0ab6028723e46f40203b2667e64346bca3591",
-        "inputScope": "local-project-files",
-        "attribution": "unversioned"
-      }
-    ]
+    "revisions": {
+      "4b6dc82f-9c1a-4ddc-9fcd-b88408028f6f": [],
+      "503b283d-cd9a-4dab-ba50-c65911d94c7e": [
+        {
+          "scope": "full",
+          "id": "ec6b556f-281f-4b5e-821b-ff0010c2ce38-0",
+          "image": "/home/claude/media-engine/money-mirage/episodes/ep02/thumbs/snap_b2/frame-00-at-0.5s.png",
+          "time": 0.5,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793074613369,
+          "contentHash": "20ea985ad6ba474b7b0b5336ad900b70bf31c2d071baed61fd91aaee5409f5a9",
+          "revision": "503b283d-cd9a-4dab-ba50-c65911d94c7e",
+          "inputFingerprint": "5585271fc9ea2991b4fd418b2e7bdf708b8df43593144b4845ff72ceb657ad22",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": []
   }
 }
