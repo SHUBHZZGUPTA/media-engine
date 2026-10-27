@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "893727b2-25b5-41fd-b549-7a27eeef3097",
-  "currentRevision": "503b283d-cd9a-4dab-ba50-c65911d94c7e",
+  "currentRevision": "18950ca6-f1b7-4180-be59-6258d75ead53",
   "pendingChanges": false,
   "files": {
     "assets/inter800.woff2": {
@@ -21,8 +21,8 @@
       "content": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
     },
     "index.html": {
-      "hash": "044b46931612c54831bfc2388375b97f7c58b4d71e666b59f0e586c49f5f6c53",
-      "content": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/04/044b46931612c54831bfc2388375b97f7c58b4d71e666b59f0e586c49f5f6c53"
+      "hash": "9da6e3b0e79f49b61139bbc113a8aa2395a922a85d33c98411c0581d1af06fd6",
+      "content": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/9d/9da6e3b0e79f49b61139bbc113a8aa2395a922a85d33c98411c0581d1af06fd6"
     }
   },
   "revisions": {
@@ -55,6 +55,21 @@
           "after": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/04/044b46931612c54831bfc2388375b97f7c58b4d71e666b59f0e586c49f5f6c53"
         }
       }
+    },
+    "18950ca6-f1b7-4180-be59-6258d75ead53": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793074701353,
+      "endedAt": 1793074701354,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/04/044b46931612c54831bfc2388375b97f7c58b4d71e666b59f0e586c49f5f6c53",
+          "after": "/root/.cache/hyperframes/history/893727b2-25b5-41fd-b549-7a27eeef3097/blobs/9d/9da6e3b0e79f49b61139bbc113a8aa2395a922a85d33c98411c0581d1af06fd6"
+        }
+      }
     }
   },
   "checks": {
@@ -64,15 +79,16 @@
   },
   "snapshots": {
     "latest": {
-      "revision": "503b283d-cd9a-4dab-ba50-c65911d94c7e",
-      "id": "ec6b556f-281f-4b5e-821b-ff0010c2ce38-0"
+      "revision": "18950ca6-f1b7-4180-be59-6258d75ead53",
+      "id": "3654dbc2-e377-4059-9c4c-1977598d86ff-0"
     },
     "revisions": {
       "4b6dc82f-9c1a-4ddc-9fcd-b88408028f6f": [],
-      "503b283d-cd9a-4dab-ba50-c65911d94c7e": [
+      "503b283d-cd9a-4dab-ba50-c65911d94c7e": [],
+      "18950ca6-f1b7-4180-be59-6258d75ead53": [
         {
           "scope": "full",
-          "id": "ec6b556f-281f-4b5e-821b-ff0010c2ce38-0",
+          "id": "3654dbc2-e377-4059-9c4c-1977598d86ff-0",
           "image": "/home/claude/media-engine/money-mirage/episodes/ep02/thumbs/snap_b2/frame-00-at-0.5s.png",
           "time": 0.5,
           "metadata": {
@@ -83,10 +99,10 @@
             "warnings": [],
             "partial": false
           },
-          "createdAt": 1793074613369,
-          "contentHash": "20ea985ad6ba474b7b0b5336ad900b70bf31c2d071baed61fd91aaee5409f5a9",
-          "revision": "503b283d-cd9a-4dab-ba50-c65911d94c7e",
-          "inputFingerprint": "5585271fc9ea2991b4fd418b2e7bdf708b8df43593144b4845ff72ceb657ad22",
+          "createdAt": 1793074703324,
+          "contentHash": "1ca75fe930f9336ce02bf02dd55a104d1028985ec504acef45b3101e65e87ee0",
+          "revision": "18950ca6-f1b7-4180-be59-6258d75ead53",
+          "inputFingerprint": "37fc15f406e025688f1fddfc87cc972e0ea5320eafea4155c4aac770c6767350",
           "inputScope": "local-project-files",
           "attribution": "recorded-revision"
         }

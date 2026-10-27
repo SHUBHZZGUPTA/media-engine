@@ -34,7 +34,7 @@ def marker_arrow(x0, y0, x1, y1, bend=-120, w=24, color='#FF2A2A'):
     import math
     mx, my = (x0 + x1) / 2, (y0 + y1) / 2; dx, dy = x1 - x0, y1 - y0; L = math.hypot(dx, dy)
     cx, cy = mx - dy / L * bend, my + dx / L * bend
-    ang = math.atan2(y1 - cy, x1 - cx); h = 140
+    ang = math.atan2(y1 - cy, x1 - cx); h = 165
     p1 = (x1 - h * math.cos(ang - .5), y1 - h * math.sin(ang - .5)); p2 = (x1 - h * math.cos(ang + .5), y1 - h * math.sin(ang + .5))
     d = f'M{x0},{y0} Q{cx:.0f},{cy:.0f} {x1},{y1} M{p1[0]:.0f},{p1[1]:.0f} L{x1},{y1} L{p2[0]:.0f},{p2[1]:.0f}'
     return (f'<path d="{d}" fill="none" stroke="rgba(0,0,0,.45)" stroke-width="{w+8}" stroke-linecap="round" stroke-linejoin="round" transform="translate(5,8)"/>'
@@ -64,7 +64,7 @@ POP = '''
 .vig{position:absolute;inset:0;background:radial-gradient(ellipse 85% 85% at 55% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}
 '''
 V['b2'] = dict(css=POP, body='<div class="bgl"></div><img id="hero" src="assets/vault_pop.jpg"><div class="glow"></div><div class="fade"></div><div class="vig"></div><div class="big">£3.3BN</div><div class="tag">LOST</div><svg class="ov" width="1920" height="1080">%C%</svg>',
-    svg=scribble(570, 290, 560, 180, -3, 5, 1.12, 20, '#FF2A2A') + marker_arrow(1720, 960, 1165, 405, bend=-110, w=28), treat=[], assets=['vault_pop.jpg'])
+    svg=scribble(570, 290, 560, 180, -3, 5, 1.12, 20, '#FF2A2A') + marker_arrow(1720, 960, 1165, 405, bend=-110, w=40), treat=[], assets=['vault_pop.jpg'])
 V['c'] = mk('treasury_courtyard__film.jpg', '55% 50%', 'BROKEN', 'IN HOURS', 250, 170, 420, tag=False, circ=(1500, 690, 130, 210, 4, 7, 1.12, 14))
 for k, v in V.items():
     d = os.path.join(HERE, 'v' + k); os.makedirs(d + '/assets', exist_ok=True)
