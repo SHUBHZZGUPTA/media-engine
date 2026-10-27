@@ -47,9 +47,9 @@ def a(n):
         p = os.path.join(d, n + ".png")
         if os.path.exists(p): return p
     return None
-ARC2 = os.path.join(ROOT, "outputs", "fetch", "ru-full-archive2")
+ARC2 = os.path.join(ROOT, "outputs", "fetch", "ru-full-archive2"); ARC3 = os.path.join(ROOT, "outputs", "fetch", "ru-full-archive3")
 def arc(key):
-    for d in (ARC2, ARC):
+    for d in (ARC3, ARC2, ARC):
         for ext in (".jpg", ".png"):
             p = os.path.join(d, key + ext)
             if os.path.exists(p) and os.path.getsize(p) > 2000: return p
