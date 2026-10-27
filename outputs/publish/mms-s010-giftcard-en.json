@@ -1,0 +1,55 @@
+{
+ "id": "mms-s010-giftcard-en",
+ "video_id": "7YHLgf7ui9A",
+ "url": "https://youtube.com/shorts/7YHLgf7ui9A",
+ "channel": "MoneyMirageYT",
+ "channel_id": "UCiSFGdbq0TksbPPPm3oaIYQ",
+ "requested": {
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false,
+  "privacyStatus": "private",
+  "publishAt": "2026-10-27T11:30:00Z"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-10-27T11:30:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-10-27T11:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-10-27T11:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "locked_private": false,
+ "ok": true
+}
