@@ -22,6 +22,7 @@ for fj in sorted(f for f in os.listdir(HERE) if f.startswith("ru-full-en-fix") a
     if not os.path.exists(os.path.join(ROOT, "outputs", "align", f"{jid}-fix_a", "words.txt")) and not os.path.exists(os.path.join(ROOT, "outputs", "align", jid + "-" + next(iter(json.load(open(os.path.join(HERE, fj))))), "words.txt")):
         print("fix not aligned yet:", jid); continue
     for item, m in json.load(open(os.path.join(HERE, fj))).items():
+        if not os.path.exists(os.path.join(ROOT, "outputs", "align", f"{jid}-{item}", "words.txt")): print("skip (no take yet):", jid, item); continue
         for k, g in enumerate(m["global"]): FIX[g] = (jid, item, k)
 FIXDATA = {}
 def fixdata(jid, item):
