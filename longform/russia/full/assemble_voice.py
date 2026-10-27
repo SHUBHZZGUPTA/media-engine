@@ -38,7 +38,8 @@ def fixdata(jid, item):
     Wd = [(float(a), float(b), wd.strip()) for a, b, wd in (r.split(None, 2) for r in open(words) if r.strip())]
     FIXDATA[(jid, item)] = (x, json.load(open(lj)), Wd); return FIXDATA[(jid, item)]
 G0 = 0
-allL, allW, chunks, off = [], [], [], 0.0
+LEAD = 2.0 * SPEED   # silence before chapter 2 (its chapter card)
+allL, allW, chunks, off = [], [], [], LEAD
 for job, name in PARTS:
     jf = json.load(open(os.path.join(ROOT, "jobs", "tts", job + ".json"))); item = next(i for i in jf["items"] if i["name"] == name)
     one = os.path.join(W, name + "_job.json"); json.dump({"items": [item]}, open(one, "w"))
@@ -73,13 +74,33 @@ for job, name in PARTS:
         PW = [w_ for w_ in PW if w_[0] < a0] + [(a_ - b0 + a0, b_ - b0 + a0, w_) for a_, b_, w_ in fw if b0 <= a_ < b1] + \
              [(a_ + delta, b_ + delta, w_) for a_, b_, w_ in PW if a_ >= a1]
         print(f"  spliced {item} lines {G0 + k0}-{G0 + k1}: {a1 - a0:.1f}s -> {b1 - b0:.1f}s", flush=True)
+    # the TTS sometimes reads a [style tag] aloud ("Whispering, he hasn't..."): cut those words out
+    import re as _re, difflib as _dl
+    nz = lambda w: _re.sub(r"[^a-z]", "", w.lower())
+    for q in range(len(PL) - 1, -1, -1):
+        m = _re.match(r"\s*\[([^\]]*)\]", PL[q]["text"])
+        if not m: continue
+        tagw = {nz(w) for w in m.group(1).split()} - {""}
+        lo = PL[q - 1]["t1"] - .05 if q else max(0.0, PL[q]["t0"] - 2.5)
+        ws = [w_ for w_ in PW if max(lo, PL[q]["t0"] - 2.5) <= w_[0] < PL[q]["t1"]]
+        n = 0
+        while n < len(ws) and any(_dl.SequenceMatcher(None, nz(ws[n][2]), t_).ratio() > .75 for t_ in tagw): n += 1
+        if n == 0 or n >= len(ws) or not any(len(nz(w_[2])) >= 4 for w_ in ws[:n]): continue
+        c0, c1 = max(0.0, ws[0][0] - .04), ws[n][0] - .06
+        if c1 <= c0: continue
+        x = np.concatenate([x[:int(c0 * sr)], x[int(c1 * sr):]]); d = c1 - c0
+        PL[q] = dict(PL[q], t0=min(PL[q]["t0"], c0 + .04) if PL[q]["t0"] > c1 else PL[q]["t0"], t1=PL[q]["t1"] - d)
+        if PL[q]["t0"] > c0: PL[q]["t0"] = max(c0, PL[q]["t0"] - d)
+        for r_ in range(q + 1, len(PL)): PL[r_] = dict(PL[r_], t0=PL[r_]["t0"] - d, t1=PL[r_]["t1"] - d)
+        PW = [w_ for w_ in PW if w_[0] < c0] + [(a_ - d, b_ - d, w_) for a_, b_, w_ in PW if a_ >= c1]
+        print(f"  cut spoken tag in line {G0 + q}: {' '.join(w_[2] for w_ in ws[:n])!r} ({d:.2f}s)", flush=True)
     dur = len(x) / sr; G0 += len(PL)
     for l in PL: allL.append(dict(l, t0=l["t0"] + off, t1=l["t1"] + off))
     for a_, b_, wd in PW: allW.append(f"{a_ + off:.3f} {b_ + off:.3f} {wd}")
     chunks.append(x); chunks.append(np.zeros(int(GAP * sr), np.int16)); off += dur + GAP
     print(name, round(dur, 1), "s; lines", len(PL), flush=True)
 raw = os.path.join(W, "voice_raw.wav")
-with wave.open(raw, "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes(np.concatenate(chunks).tobytes())
+with wave.open(raw, "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes(np.concatenate([np.zeros(int(LEAD * sr), np.int16)] + chunks).tobytes())
 run("ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"atempo={SPEED}", os.path.join(HERE, "voice_full.wav"))
 for i, l in enumerate(allL): l["i"] = i; l["t0"] = round(l["t0"] / SPEED, 3); l["t1"] = round(l["t1"] / SPEED, 3)
 json.dump(allL, open(os.path.join(HERE, "lines_full.json"), "w"), indent=0)

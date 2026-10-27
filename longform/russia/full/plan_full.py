@@ -62,13 +62,16 @@ def card(n):
 def txt(s, x, y, t, size=72, box=None, color="#ffffff", out=None, enter="pop", scale=1.25):
     size = int(size * scale)
     font = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if any(c in s for c in "→✓↓↑✗") else FONT
+    wmax = max(len(r) for r in s.split("\n")) * size * .56 + (60 if box else 0)
+    x = int(min(max(x, 40 + wmax / 2), 1880 - wmax / 2)) if wmax < 1800 else 960
     d = {"img": {"text": s, "size": size, "color": color, "box": box, "font": font}, "x": x, "y": y, "in": t, "enter": enter}
     if out is not None: d["out"] = out
     return d
 def lab(s, t, x=960, y=250, size=90, box=None, **k): return txt(s, x, y, t, size=size, box=box, **k)
-def tag(s, t, x=1250, y=300, size=70): return txt(s, x, y, t, size=size, box="#222222")
+def tag(s, t, x=1250, y=420, size=70): return txt(s, x, y, t, size=size, box="#222222")
 def say(i, x, y=380, width=24, size=54):
-    s = "\n".join(textwrap.wrap(EN[i], width))
+    if len(EN[i]) > 110: width = 34
+    s = "\n".join(textwrap.wrap(EN[i], width)); y = max(y, 70 + s.count("\n") * 34 + 34)
     return txt(s, x, y, T(i), size=size, box="#ffffffee", color="#222222", out=T(i, 1) + .25, scale=1.0)
 def ch(name, x, y=1045, h=560, t=None, enter="pop", talks=(), flip=False, out=None):
     p = a(name)
@@ -230,7 +233,7 @@ globe("G_volga", t, [[t, 45, 54, 2.3], [T(c + 5, 1), 47, 50, 1.9]],
       over=[ov("ov_rudj_red", [[0, 0]])],
       arcs=[arcp([[37.6, 55.75], [44.0, 56.3], [49.1, 55.8], [48.5, 52.0], [46.0, 48.5], [48.0, 46.35]], K(c + 5, "conquered"), 2.6, rad=.008)],
       pins=[pin(37.6, 55.75, t, "Moscow"), pin(49.1, 55.8, K(c + 5, "Kazan"), "Kazan", "#FFD84A"), pin(48.0, 46.35, K(c + 5, "Astrakhan"), "Astrakhan", "#FFD84A")],
-      layers=[lab("The Volga is Moscow's", K(c + 5, "opening"), y=230, size=80)])
+      layers=[lab("The Volga: now Moscow's", K(c + 5, "opening"), y=230, size=80)])
 pic(T(c + 6, -.15), "st_basil", [lab("Saint Basil's", K(c + 6, "Saint"), size=96)], fallback=a("ru_red_square"))
 quip(c + 7)
 board(T(c + 8, -.15), [tag("1560: Anastasia dies", T(c + 8, .05), y=300), ch("c_ivan4", 1300, h=560, t=K(c + 8, "broke"))])
@@ -437,7 +440,7 @@ t = T(c + 40, -.15)
 globe("L_ussr1922", t, [[t, 60, 55, 2.5], [T(c + 40, 1), 75, 55, 3.0]],
       over=[ov("ov_ussr_red", fadein(K(c + 40, "brand"), .9)), ove("ov_ussr_edge", fadein(K(c + 40, "brand"), 1))],
       layers=[lab("1922", K(c + 40, "nineteen"), x=300, y=230, size=110), lab("USSR", K(c + 40, "USSR"), y=900 - 650, size=120)])
-quip(c + 41, [imgcard(card("cycle1"), 1350, 1000, 700, K(c + 41, "Collapse"))])
+quip(c + 41, [imgcard(card("cycle5"), 1350, 1000, 700, K(c + 41, "Collapse"))])
 
 # ======================= CHAPTER 9: STALIN =======================
 c = CHAP[9]
@@ -561,10 +564,17 @@ for k, (who, key, word) in enumerate([("Vikings", "c_rurik", "Vikings"), ("Mongo
 board(T(c + 6, -.15), [txt("1,100 years", 1250, 380, K(c + 6, "Eleven"), size=96, box="#222222"), txt("Same story.", 1250, 640, K(c + 6, "Same"), size=110, box="#d6423a")])
 quip(c + 7)
 board(T(c + 8, -.15), [txt("Nobody knows.", 1250, 600, T(c + 8, .05), size=100, box="#222222")])
-quip(c + 9, [txt("Next: the Ottomans", 1500, 650, K(c + 9, "Ottomans"), size=80, box="#c99400")])
+quip(c + 9, [txt("Next: the Ottomans", 1250, 760, K(c + 9, "Ottomans"), size=80, box="#c99400")])
 
 # ======================= close the timeline =======================
 shots.sort(key=lambda s: s["t0"])
+for k, s in enumerate(shots[:-1]):
+    if any("chapter" in str(L_.get("img")) for L_ in s["layers"]):
+        s["t0"] = max(0.0, s["t0"]); hold = s["t0"] + 2.4
+        for n in shots[k + 1:]:
+            if n["t0"] < hold: n["t0"] = hold
+shots.sort(key=lambda s: s["t0"])
+shots[:] = [s for s, n in zip(shots, shots[1:] + [None]) if not n or n["t0"] - s["t0"] > .25]
 for s, n in zip(shots, shots[1:] + [None]): s["t1"] = n["t0"] if n else END
 for s in shots:
     cam = s["bg"].get("cam")
