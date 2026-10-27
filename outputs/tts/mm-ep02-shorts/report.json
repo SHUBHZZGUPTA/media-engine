@@ -1,0 +1,21 @@
+{
+ "job": "mm-ep02-shorts",
+ "items": [
+  {
+   "name": "hooks",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 69.44,
+   "took": 23.2
+  },
+  {
+   "name": "ctas",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 59.88,
+   "took": 20.5
+  }
+ ]
+}
