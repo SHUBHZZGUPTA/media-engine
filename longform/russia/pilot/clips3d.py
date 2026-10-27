@@ -29,8 +29,8 @@ def once(path, fn):
 RU = [{"admin0": "Russia"}]; AK = [{"admin1": "Alaska"}]; MN = [{"admin0": "Mongolia"}]
 once(os.path.join(A, "flag_ru.png"), OVL.flag_ru)
 shutil.copy("/home/claude/media-engine/bhugol-v2/example-centralia-3d/flag_us.png", os.path.join(A, "flag_us.png"))
-o_ru = once(os.path.join(A, "ov_ru_flag.png"), lambda p: OVL.fill(p, RU, flag=os.path.join(A, "flag_ru.png"), alpha=180, box=[27, 180, 41, 78]))
-o_rue = once(os.path.join(A, "ov_ru_edge.png"), lambda p: OVL.edge(p, RU, (255, 230, 160), 4, 9))
+o_ru = "ov_rudj_flag.png"   # internationally recognised borders (built by ../full/ovl_full.py)
+o_rue = "ov_rudj_edge.png"
 o_akg = once(os.path.join(A, "ov_ak_gold.png"), lambda p: OVL.fill(p, AK, color=(255, 200, 40), alpha=230))
 o_aku = once(os.path.join(A, "ov_ak_us.png"), lambda p: OVL.fill(p, AK, flag=os.path.join(A, "flag_us.png"), alpha=235, box=[-168, -141, 54, 71.5]))
 o_ake = once(os.path.join(A, "ov_ak_edge.png"), lambda p: OVL.edge(p, AK, (255, 220, 120), 4, 9))

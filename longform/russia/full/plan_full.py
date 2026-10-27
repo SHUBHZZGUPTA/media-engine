@@ -575,6 +575,39 @@ for s in shots:
     if len(cam) >= 2: cam[-1][0] = max(cam[-1][0], s["t1"])
     else: cam.append([s["t1"], cam[0][1], cam[0][2], cam[0][3] * 1.06])
     if all(abs(cam[0][q] - cam[-1][q]) < 1e-3 for q in (1, 2, 3)): cam[-1][3] = cam[0][3] * 1.06
+# long still shots: split into two framings (hard cut to a tighter crop) so the picture changes at least every ~6 s
+import copy
+def split_long(maxlen=6.5):
+    out = []
+    for s in shots:
+        d = s["t1"] - s["t0"]; b = s["bg"]
+        if d <= maxlen or s.get("clip") or "video" in b or not b.get("cam") or b.get("blur") or str(b.get("img", "")).startswith("#"):
+            out.append(s); continue
+        n = int(d // 5.0); seg = d / (n + 1)
+        for k in range(n + 1):
+            a0, a1 = s["t0"] + seg * k, s["t0"] + seg * (k + 1)
+            if k == 0:
+                s2 = copy.deepcopy(s); s2["t1"] = a1; s2["bg"]["cam"] = [[a0, .5, .5, b["cam"][0][3]], [a1, .5, .5, b["cam"][0][3] * 1.06]]
+                s2["layers"] = [L_ for L_ in s["layers"] if L_.get("in", a0) < a1]
+            else:
+                z = 1.35 if k % 2 else 1.15; cx, cy = (.38, .45) if k % 2 else (.62, .5)
+                s2 = {"t0": a0, "t1": a1, "bg": dict(copy.deepcopy(b), cam=[[a0, cx, cy, z], [a1, cx + (.04 if k % 2 else -.04), cy, z * 1.05]]), "cut": "hard",
+                      "layers": []}
+                for L_ in s["layers"]:
+                    t_in = L_.get("in", s["t0"]); t_out = L_.get("out", 1e9)
+                    if t_out <= a0 or t_in >= a1: continue
+                    L2 = copy.deepcopy(L_)
+                    if t_in < a0: L2["in"] = a0; L2["enter"] = "none"
+                    s2["layers"].append(L2)
+            out.append(s2)
+    return out
+shots[:] = split_long()
+for s in shots:
+    cam = s["bg"].get("cam")
+    if cam:
+        for k in cam:
+            z = max(k[3], 1.0); lo, hi = .5 / z, 1 - .5 / z
+            k[1] = min(max(k[1], lo), hi); k[2] = min(max(k[2], lo), hi)
 # 3D clips: local times; camera runs to the end of the shot
 clips_out = {}
 for s in shots:
@@ -595,7 +628,7 @@ json.dump(clips_out, open(os.path.join(os.path.dirname(os.path.abspath(args[1]))
 punch, shake, fx = [], [], []
 def text_of(L_): return L_["img"]["text"] if isinstance(L_.get("img"), dict) else ""
 for k, s in enumerate(shots):
-    s["cut"] = "curve"
+    s["cut"] = s.get("cut") or "curve"
     if any("chapter" in str(L_.get("img")) for L_ in s["layers"]): s["cut"] = "zoom"
     elif s.get("clip") and k and not shots[k - 1].get("clip"): s["cut"] = "whip"
 for s in shots:   # big years and numbers slam in
