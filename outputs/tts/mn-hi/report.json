@@ -1,0 +1,29 @@
+{
+ "job": "mn-hi",
+ "items": [
+  {
+   "name": "part1",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 98.01,
+   "took": 46.8
+  },
+  {
+   "name": "part2",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 94.25,
+   "took": 44.8
+  },
+  {
+   "name": "part3",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 97.41,
+   "took": 37.4
+  }
+ ]
+}
