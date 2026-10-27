@@ -47,10 +47,12 @@ def a(n):
         p = os.path.join(d, n + ".png")
         if os.path.exists(p): return p
     return None
+ARC2 = os.path.join(ROOT, "outputs", "fetch", "ru-full-archive2")
 def arc(key):
-    for ext in (".jpg", ".png"):
-        p = os.path.join(ARC, key + ext)
-        if os.path.exists(p): return p
+    for d in (ARC2, ARC):
+        for ext in (".jpg", ".png"):
+            p = os.path.join(d, key + ext)
+            if os.path.exists(p) and os.path.getsize(p) > 2000: return p
     return None
 def card(n):
     for d in (C2, C1):

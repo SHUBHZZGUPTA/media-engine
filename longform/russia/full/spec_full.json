@@ -41,7 +41,8 @@
   {
    "t0": 3.8,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/F_kalka.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -56,19 +57,6 @@
      "y": 230,
      "in": 5.000168421052631,
      "enter": "slam"
-    },
-    {
-     "img": {
-      "text": "[3D F_kalka]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1.9,
-     "enter": "pop"
     }
    ],
    "clip": "F_kalka",
@@ -78,7 +66,7 @@
   {
    "t0": 17.546000000000003,
    "bg": {
-    "img": "#1d2733",
+    "img": "/home/claude/media-engine/longform/russia/full/clips3d/F_kalka_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -132,9 +120,7 @@
   {
    "t0": 22.6,
    "bg": {
-    "img": "#1d2733",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kalka.png",
     "cam": [
      [
       22.6,
@@ -146,20 +132,11 @@
       28.939,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "14 years of silence",
@@ -180,7 +157,8 @@
   {
    "t0": 28.939,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/F_batu.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -194,19 +172,6 @@
      "x": 1450,
      "y": 250,
      "in": 33.484040816326534,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D F_batu]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 28.939,
      "enter": "pop"
     }
    ],
@@ -308,7 +273,8 @@
   {
    "t0": 52.171,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/F_horde.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -323,19 +289,6 @@
      "y": 230,
      "in": 58.204815028901734,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D F_horde]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 52.171,
-     "enter": "pop"
     }
    ],
    "clip": "F_horde",
@@ -345,7 +298,7 @@
   {
    "t0": 63.421,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/clips3d/F_horde_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -393,7 +346,7 @@
   {
    "t0": 74.361,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_mongol_tent.png",
     "cam": [
      [
       74.361,
@@ -410,6 +363,28 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_prince_kneel.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       74.661,
+       77.911
+      ],
+      [
+       82.232,
+       83.018
+      ],
+      [
+       88.107,
+       89.732
+      ]
+     ],
+     "flip": false
+    },
     {
      "img": "/home/claude/media-engine/longform/russia/full/../art/c_khan.png",
      "x": 1340,
@@ -455,7 +430,7 @@
    "t0": 78.92075,
    "t1": 83.4805,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_mongol_tent.png",
     "cam": [
      [
       78.92075,
@@ -473,6 +448,29 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_prince_kneel.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       74.661,
+       77.911
+      ],
+      [
+       82.232,
+       83.018
+      ],
+      [
+       88.107,
+       89.732
+      ]
+     ],
+     "flip": false,
+     "in": 78.92075
+    },
     {
      "img": "/home/claude/media-engine/longform/russia/full/../art/c_khan.png",
      "x": 1340,
@@ -530,7 +528,7 @@
    "t0": 83.4805,
    "t1": 88.04025,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_mongol_tent.png",
     "cam": [
      [
       83.4805,
@@ -548,6 +546,29 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_prince_kneel.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       74.661,
+       77.911
+      ],
+      [
+       82.232,
+       83.018
+      ],
+      [
+       88.107,
+       89.732
+      ]
+     ],
+     "flip": false,
+     "in": 83.4805
+    },
     {
      "img": "/home/claude/media-engine/longform/russia/full/../art/c_khan.png",
      "x": 1340,
@@ -591,7 +612,7 @@
    "t0": 88.04025,
    "t1": 92.6,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_mongol_tent.png",
     "cam": [
      [
       88.04025,
@@ -609,6 +630,29 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_prince_kneel.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       74.661,
+       77.911
+      ],
+      [
+       82.232,
+       83.018
+      ],
+      [
+       88.107,
+       89.732
+      ]
+     ],
+     "flip": false,
+     "in": 88.04025
+    },
     {
      "img": "/home/claude/media-engine/longform/russia/full/../art/c_khan.png",
      "x": 1340,
@@ -665,9 +709,7 @@
   {
    "t0": 92.6,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/golden_horde_tribute.png",
     "cam": [
      [
       92.6,
@@ -676,23 +718,14 @@
       1.0
      ],
      [
-      99.243,
+      95.9215,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "240 years",
@@ -705,6 +738,45 @@
      "y": 250,
      "in": 93.9875,
      "enter": "pop"
+    }
+   ],
+   "t1": 95.9215,
+   "cut": "curve"
+  },
+  {
+   "t0": 95.9215,
+   "t1": 99.243,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/golden_horde_tribute.png",
+    "cam": [
+     [
+      95.9215,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      99.243,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "240 years",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 95.9215,
+     "enter": "none"
     },
     {
      "img": {
@@ -719,14 +791,12 @@
      "in": 97.425,
      "enter": "pop"
     }
-   ],
-   "t1": 99.243,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 99.243,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_red_square.png",
     "cam": [
      [
       99.243,
@@ -750,7 +820,7 @@
    "t0": 103.457,
    "t1": 107.67099999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_red_square.png",
     "cam": [
      [
       103.457,
@@ -786,9 +856,7 @@
   {
    "t0": 107.67099999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kalita.jpg",
     "cam": [
      [
       107.67099999999999,
@@ -797,23 +865,39 @@
       1.0
      ],
      [
-      116.136,
+      111.9035,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
+   "layers": [],
+   "t1": 111.9035,
+   "cut": "curve"
+  },
+  {
+   "t0": 111.9035,
+   "t1": 116.136,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kalita.jpg",
+    "cam": [
+     [
+      111.9035,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      116.136,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Ivan \"Moneybag\"",
@@ -827,14 +911,12 @@
      "in": 115.05314159292035,
      "enter": "pop"
     }
-   ],
-   "t1": 116.136,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 116.136,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kalita.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -888,7 +970,7 @@
   {
    "t0": 120.975,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kalita.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -936,7 +1018,7 @@
   {
    "t0": 129.671,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kalita.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -984,9 +1066,7 @@
   {
    "t0": 137.296,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kulikovo.jpg",
     "cam": [
      [
       137.296,
@@ -995,23 +1075,14 @@
       1.0
      ],
      [
-      148.243,
+      140.945,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "1380",
@@ -1023,6 +1094,45 @@
      "x": 300,
      "y": 230,
      "in": 137.62716447368422,
+     "enter": "slam"
+    }
+   ],
+   "t1": 140.945,
+   "cut": "curve"
+  },
+  {
+   "t0": 140.945,
+   "t1": 144.594,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kulikovo.jpg",
+    "cam": [
+     [
+      140.945,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      144.594,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "1380",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 140.945,
      "enter": "slam"
     },
     {
@@ -1038,14 +1148,62 @@
      "in": 141.97511184210526,
      "enter": "pop"
     }
-   ],
+   ]
+  },
+  {
+   "t0": 144.594,
    "t1": 148.243,
-   "cut": "curve"
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kulikovo.jpg",
+    "cam": [
+     [
+      144.594,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      148.243,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "1380",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 144.594,
+     "enter": "slam"
+    },
+    {
+     "img": {
+      "text": "Kulikovo Field",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 144.594,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 148.243,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/batu_suzdal.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/kulikovo.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -1325,9 +1483,7 @@
   {
    "t0": 172.457,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/ugra.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ivan3.jpg",
     "cam": [
      [
       172.457,
@@ -1336,23 +1492,14 @@
       1.0
      ],
      [
-      181.12269230769232,
+      176.78984615384616,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Ivan the Third",
@@ -1380,8 +1527,58 @@
      "enter": "pop"
     }
    ],
-   "t1": 181.12269230769232,
+   "t1": 176.78984615384616,
    "cut": "curve"
+  },
+  {
+   "t0": 176.78984615384616,
+   "t1": 181.12269230769232,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ivan3.jpg",
+    "cam": [
+     [
+      176.78984615384616,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      181.12269230769232,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Ivan the Third",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 176.78984615384616,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "Land \u00d73",
+      "size": 112,
+      "color": "#ffffff",
+      "box": "#2f8f4f",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1450,
+     "y": 700,
+     "in": 176.78984615384616,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 181.12269230769232,
@@ -1515,9 +1712,7 @@
   {
    "t0": 193.36200000000002,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ivan4_portrait.jpg",
     "cam": [
      [
       191.46200000000002,
@@ -1529,20 +1724,11 @@
       197.46200000000002,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Ruler at age 3",
@@ -1563,7 +1749,7 @@
   {
    "t0": 196.662,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ivan4_portrait.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -1621,7 +1807,7 @@
   {
    "t0": 202.073,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "cam": [
      [
       202.073,
@@ -1659,7 +1845,7 @@
    "t0": 205.77533333333335,
    "t1": 209.47766666666666,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "cam": [
      [
       205.77533333333335,
@@ -1696,7 +1882,7 @@
    "t0": 209.47766666666666,
    "t1": 213.18,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "cam": [
      [
       209.47766666666666,
@@ -1732,7 +1918,7 @@
   {
    "t0": 213.18,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -1786,7 +1972,7 @@
   {
    "t0": 215.98399999999998,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "cam": [
      [
       215.98399999999998,
@@ -1821,7 +2007,7 @@
    "t0": 220.957,
    "t1": 225.93,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/double_eagle.png",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "cam": [
      [
       220.957,
@@ -1880,7 +2066,8 @@
   {
    "t0": 225.93,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/G_volga.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -1894,19 +2081,6 @@
      "x": 960,
      "y": 230,
      "in": 235.35232142857143,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_volga]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 225.93,
      "enter": "pop"
     }
    ],
@@ -2399,7 +2573,7 @@
   {
    "t0": 292.709,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/ivan_son.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "cam": [
      [
       292.709,
@@ -2433,6 +2607,25 @@
       ]
      ],
      "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_servant.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       293.009,
+       295.402
+      ],
+      [
+       297.705,
+       299.473
+      ]
+     ],
+     "flip": true,
+     "in": 292.509
     },
     {
      "img": {
@@ -2470,7 +2663,7 @@
    "t0": 297.2035,
    "t1": 301.69800000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/ivan_son.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_kremlin_night.png",
     "cam": [
      [
       297.2035,
@@ -2505,6 +2698,25 @@
       ]
      ],
      "flip": false,
+     "in": 297.2035
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_servant.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       293.009,
+       295.402
+      ],
+      [
+       297.705,
+       299.473
+      ]
+     ],
+     "flip": true,
      "in": 297.2035
     },
     {
@@ -3016,7 +3228,7 @@
   {
    "t0": 354.084,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/famine_1601.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_polish_hall.png",
     "cam": [
      [
       354.084,
@@ -3033,6 +3245,43 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_polish_noble.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       358.795,
+       360.348
+      ],
+      [
+       363.187,
+       364.241
+      ]
+     ],
+     "flip": true
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_false_dmitry.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideL",
+     "talk": [
+      [
+       354.384,
+       358.009
+      ],
+      [
+       361.116,
+       361.723
+      ]
+     ],
+     "flip": false,
+     "in": 353.884
+    },
     {
      "img": {
       "text": "I am Dmitry, the lost\nson of Ivan the\nTerrible!",
@@ -3055,7 +3304,7 @@
    "t0": 357.71133333333336,
    "t1": 361.33866666666665,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/famine_1601.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_polish_hall.png",
     "cam": [
      [
       357.71133333333336,
@@ -3073,6 +3322,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_polish_noble.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       358.795,
+       360.348
+      ],
+      [
+       363.187,
+       364.241
+      ]
+     ],
+     "flip": true,
+     "in": 357.71133333333336
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_false_dmitry.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       354.384,
+       358.009
+      ],
+      [
+       361.116,
+       361.723
+      ]
+     ],
+     "flip": false,
+     "in": 357.71133333333336
+    },
     {
      "img": {
       "text": "I am Dmitry, the lost\nson of Ivan the\nTerrible!",
@@ -3121,7 +3408,7 @@
    "t0": 361.33866666666665,
    "t1": 364.966,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/famine_1601.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_polish_hall.png",
     "cam": [
      [
       361.33866666666665,
@@ -3139,6 +3426,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_polish_noble.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       358.795,
+       360.348
+      ],
+      [
+       363.187,
+       364.241
+      ]
+     ],
+     "flip": true,
+     "in": 361.33866666666665
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_false_dmitry.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       354.384,
+       358.009
+      ],
+      [
+       361.116,
+       361.723
+      ]
+     ],
+     "flip": false,
+     "in": 361.33866666666665
+    },
     {
      "img": {
       "text": "I got better.",
@@ -3359,7 +3684,8 @@
   {
    "t0": 388.377,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/H_poles.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -3374,19 +3700,6 @@
      "y": 230,
      "in": 393.48281595092027,
      "enter": "slam"
-    },
-    {
-     "img": {
-      "text": "[3D H_poles]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 388.377,
-     "enter": "pop"
     }
    ],
    "clip": "H_poles",
@@ -3396,7 +3709,7 @@
   {
    "t0": 398.94800000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/false_dmitry.png",
+    "img": "/home/claude/media-engine/longform/russia/full/clips3d/H_poles_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3444,7 +3757,7 @@
   {
    "t0": 402.41200000000003,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/false_dmitry.png",
+    "img": "/home/claude/media-engine/longform/russia/full/clips3d/H_poles_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3566,9 +3879,7 @@
   {
    "t0": 416.94800000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/poles_kremlin.jpg",
     "cam": [
      [
       416.94800000000004,
@@ -3577,23 +3888,14 @@
       1.0
      ],
      [
-      423.48400000000004,
+      420.216,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "1612",
@@ -3608,13 +3910,50 @@
      "enter": "slam"
     }
    ],
-   "t1": 423.48400000000004,
+   "t1": 420.216,
    "cut": "curve"
+  },
+  {
+   "t0": 420.216,
+   "t1": 423.48400000000004,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/poles_kremlin.jpg",
+    "cam": [
+     [
+      420.216,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      423.48400000000004,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "1612",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 420.216,
+     "enter": "slam"
+    }
+   ]
   },
   {
    "t0": 423.48400000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/poles_kremlin.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3668,9 +4007,7 @@
   {
    "t0": 426.32300000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "cam": [
      [
       426.32300000000004,
@@ -3682,20 +4019,11 @@
       432.32300000000004,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "1613",
@@ -3729,7 +4057,7 @@
   {
    "t0": 432.127,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3777,7 +4105,7 @@
   {
    "t0": 435.93,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3821,7 +4149,7 @@
   {
    "t0": 441.64099999999996,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3856,7 +4184,7 @@
   {
    "t0": 444.04099999999994,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3904,7 +4232,7 @@
   {
    "t0": 446.002,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3965,7 +4293,7 @@
   {
    "t0": 452.716,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4013,7 +4341,7 @@
   {
    "t0": 463.091,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4071,7 +4399,7 @@
   {
    "t0": 472.377,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4134,7 +4462,7 @@
   {
    "t0": 476.055,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/michael_romanov.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4182,7 +4510,7 @@
   {
    "t0": 485.64500000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_dutch_shipyard.png",
     "cam": [
      [
       485.64500000000004,
@@ -4220,7 +4548,7 @@
    "t0": 488.9535,
    "t1": 492.262,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_dutch_shipyard.png",
     "cam": [
      [
       488.9535,
@@ -4256,7 +4584,7 @@
   {
    "t0": 492.262,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_dutch_shipyard.png",
     "cam": [
      [
       492.262,
@@ -4273,6 +4601,43 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_dutch_foreman.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       492.562,
+       492.866
+      ],
+      [
+       496.098,
+       498.902
+      ]
+     ],
+     "flip": true
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_peter_worker.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideL",
+     "talk": [
+      [
+       492.866,
+       495.634
+      ],
+      [
+       500.58,
+       501.437
+      ]
+     ],
+     "flip": false,
+     "in": 492.366
+    },
     {
      "img": {
       "text": "Name?",
@@ -4309,7 +4674,7 @@
    "t0": 495.699,
    "t1": 499.136,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_dutch_shipyard.png",
     "cam": [
      [
       495.699,
@@ -4327,6 +4692,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_dutch_foreman.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       492.562,
+       492.866
+      ],
+      [
+       496.098,
+       498.902
+      ]
+     ],
+     "flip": true,
+     "in": 495.699
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_peter_worker.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       492.866,
+       495.634
+      ],
+      [
+       500.58,
+       501.437
+      ]
+     ],
+     "flip": false,
+     "in": 495.699
+    },
     {
      "img": {
       "text": "Peter. Just a regular\ncarpenter.",
@@ -4361,7 +4764,7 @@
    "t0": 499.136,
    "t1": 502.57300000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_dutch_shipyard.png",
     "cam": [
      [
       499.136,
@@ -4379,6 +4782,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_dutch_foreman.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       492.562,
+       492.866
+      ],
+      [
+       496.098,
+       498.902
+      ]
+     ],
+     "flip": true,
+     "in": 499.136
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_peter_worker.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       492.866,
+       495.634
+      ],
+      [
+       500.58,
+       501.437
+      ]
+     ],
+     "flip": false,
+     "in": 499.136
+    },
     {
      "img": {
       "text": "You're seven feet tall\nand fifty men follow you\neverywhere.",
@@ -4412,7 +4853,7 @@
   {
    "t0": 502.57300000000004,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/minin_pozharsky.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_dutch_shipyard.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4682,7 +5123,8 @@
   {
    "t0": 539.484,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/I_baltic.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -4697,19 +5139,6 @@
      "y": 230,
      "in": 542.9975322580644,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D I_baltic]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 539.484,
-     "enter": "pop"
     }
    ],
    "clip": "I_baltic",
@@ -4719,7 +5148,7 @@
   {
    "t0": 549.833134920635,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/poltava.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_spb_build.png",
     "cam": [
      [
       549.833134920635,
@@ -4756,7 +5185,7 @@
   {
    "t0": 553.3770000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/poltava.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_spb_build.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -5201,7 +5630,7 @@
   {
    "t0": 603.287,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/peter3.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       603.287,
@@ -5218,6 +5647,16 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_catherine.png",
+     "x": 960,
+     "y": 1045,
+     "h": 620,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 606.60026446281
+    },
     {
      "img": {
       "text": "1744",
@@ -5239,7 +5678,7 @@
    "t0": 607.0550000000001,
    "t1": 610.823,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/peter3.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       607.0550000000001,
@@ -5258,6 +5697,16 @@
    "cut": "hard",
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_catherine.png",
+     "x": 960,
+     "y": 1045,
+     "h": 620,
+     "enter": "none",
+     "talk": [],
+     "flip": false,
+     "in": 607.0550000000001
+    },
+    {
      "img": {
       "text": "1744",
       "size": 137,
@@ -5275,7 +5724,7 @@
   {
    "t0": 610.823,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/peter3.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -5302,6 +5751,16 @@
      "enter": "none",
      "talk": [],
      "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_catherine.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 600,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 610.973
     },
     {
      "img": {
@@ -5499,7 +5958,7 @@
   {
    "t0": 636.673,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/peter3.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       636.673,
@@ -5516,6 +5975,43 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_catherine.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       642.562,
+       643.259
+      ],
+      [
+       648.955,
+       650.723
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_officer.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       636.973,
+       641.384
+      ],
+      [
+       644.223,
+       647.527
+      ]
+     ],
+     "flip": true,
+     "in": 636.473
+    },
     {
      "img": {
       "text": "Your Majesty, the guards\nare... unhappy with your\nhusband.",
@@ -5538,7 +6034,7 @@
    "t0": 640.43825,
    "t1": 644.2035000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/peter3.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       640.43825,
@@ -5556,6 +6052,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_catherine.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       642.562,
+       643.259
+      ],
+      [
+       648.955,
+       650.723
+      ]
+     ],
+     "flip": false,
+     "in": 640.43825
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_officer.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       636.973,
+       641.384
+      ],
+      [
+       644.223,
+       647.527
+      ]
+     ],
+     "flip": true,
+     "in": 640.43825
+    },
     {
      "img": {
       "text": "Your Majesty, the guards\nare... unhappy with your\nhusband.",
@@ -5590,7 +6124,7 @@
    "t0": 644.2035000000001,
    "t1": 647.96875,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/peter3.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       644.2035000000001,
@@ -5608,6 +6142,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_catherine.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       642.562,
+       643.259
+      ],
+      [
+       648.955,
+       650.723
+      ]
+     ],
+     "flip": false,
+     "in": 644.2035000000001
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_officer.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       636.973,
+       641.384
+      ],
+      [
+       644.223,
+       647.527
+      ]
+     ],
+     "flip": true,
+     "in": 644.2035000000001
+    },
     {
      "img": {
       "text": "About ten thousand\nsoldiers unhappy.",
@@ -5628,7 +6200,7 @@
    "t0": 647.96875,
    "t1": 651.734,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/peter3.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       647.96875,
@@ -5646,6 +6218,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_catherine.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       642.562,
+       643.259
+      ],
+      [
+       648.955,
+       650.723
+      ]
+     ],
+     "flip": false,
+     "in": 647.96875
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_officer.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       636.973,
+       641.384
+      ],
+      [
+       644.223,
+       647.527
+      ]
+     ],
+     "flip": true,
+     "in": 647.96875
+    },
     {
      "img": {
       "text": "Then I suppose I should\nget dressed.",
@@ -5926,23 +6536,10 @@
   {
    "t0": 678.5550000000001,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/J_crimea1783.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D J_crimea1783]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 678.5550000000001,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "J_crimea1783",
    "t1": 687.037,
    "cut": "whip"
@@ -5950,23 +6547,10 @@
   {
    "t0": 687.037,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/J_alaska1784.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D J_alaska1784]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 687.037,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "J_alaska1784",
    "t1": 700.02,
    "cut": "curve"
@@ -5974,9 +6558,7 @@
   {
    "t0": 700.02,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/hermitage.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
     "cam": [
      [
       700.02,
@@ -5985,23 +6567,39 @@
       1.0
      ],
      [
-      708.162,
+      704.091,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
+   "layers": [],
+   "t1": 704.091,
+   "cut": "curve"
+  },
+  {
+   "t0": 704.091,
+   "t1": 708.162,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
+    "cam": [
+     [
+      704.091,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      708.162,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Serfs",
@@ -6015,14 +6613,12 @@
      "in": 704.1943902439024,
      "enter": "pop"
     }
-   ],
-   "t1": 708.162,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 708.162,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/hermitage.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -6070,7 +6666,7 @@
   {
    "t0": 718.27,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/hermitage.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -6127,7 +6723,7 @@
   {
    "t0": 725.359,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/hermitage.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/serfs.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -6260,6 +6856,16 @@
      "flip": false
     },
     {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_napoleon.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 560,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 737.7172916666667
+    },
+    {
      "img": {
       "text": "A short French general",
       "size": 87,
@@ -6351,7 +6957,8 @@
   {
    "t0": 748.966,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/K_napoleon.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -6366,19 +6973,6 @@
      "y": 230,
      "in": 758.9482873563218,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D K_napoleon]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 748.966,
-     "enter": "pop"
     }
    ],
    "clip": "K_napoleon",
@@ -6388,7 +6982,7 @@
   {
    "t0": 762.145,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/napoleon_portrait.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/clips3d/K_napoleon_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -6759,7 +7353,7 @@
   {
    "t0": 802.0840000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_fire.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_moscow_fire.png",
     "cam": [
      [
       802.0840000000001,
@@ -6776,6 +7370,47 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_napoleon.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       802.384,
+       803.295
+      ],
+      [
+       805.259,
+       807.955
+      ],
+      [
+       814.134,
+       814.491
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_french_aide.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       804.062,
+       804.687
+      ],
+      [
+       808.67,
+       811.902
+      ]
+     ],
+     "flip": true,
+     "in": 803.562
+    },
     {
      "img": {
       "text": "Has the tsar answered?",
@@ -6826,7 +7461,7 @@
    "t0": 806.4673333333334,
    "t1": 810.8506666666667,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_fire.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_moscow_fire.png",
     "cam": [
      [
       806.4673333333334,
@@ -6844,6 +7479,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_napoleon.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       802.384,
+       803.295
+      ],
+      [
+       805.259,
+       807.955
+      ],
+      [
+       814.134,
+       814.491
+      ]
+     ],
+     "flip": false,
+     "in": 806.4673333333334
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_french_aide.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       804.062,
+       804.687
+      ],
+      [
+       808.67,
+       811.902
+      ]
+     ],
+     "flip": true,
+     "in": 806.4673333333334
+    },
     {
      "img": {
       "text": "Then send him another\nletter. A nicer one.",
@@ -6878,7 +7555,7 @@
    "t0": 810.8506666666667,
    "t1": 815.234,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_fire.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_moscow_fire.png",
     "cam": [
      [
       810.8506666666667,
@@ -6896,6 +7573,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_napoleon.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       802.384,
+       803.295
+      ],
+      [
+       805.259,
+       807.955
+      ],
+      [
+       814.134,
+       814.491
+      ]
+     ],
+     "flip": false,
+     "in": 810.8506666666667
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_french_aide.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       804.062,
+       804.687
+      ],
+      [
+       808.67,
+       811.902
+      ]
+     ],
+     "flip": true,
+     "in": 810.8506666666667
+    },
     {
      "img": {
       "text": "Sire, this one has a\nlittle drawing of us\nshaking hands.",
@@ -6929,7 +7648,7 @@
   {
    "t0": 815.234,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_fire.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_moscow_fire.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -7014,7 +7733,7 @@
   {
    "t0": 831.0884285714285,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_fire.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_snow_retreat.png",
     "cam": [
      [
       831.0884285714285,
@@ -7052,7 +7771,7 @@
    "t0": 834.8842142857143,
    "t1": 838.6800000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_fire.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_snow_retreat.png",
     "cam": [
      [
       834.8842142857143,
@@ -7088,7 +7807,7 @@
   {
    "t0": 838.6800000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_fire.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_snow_retreat.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -8123,7 +8842,7 @@
   {
    "t0": 959.889,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/alexander2_assassination.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       957.989,
@@ -8140,6 +8859,16 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_nicholas2.png",
+     "x": 960,
+     "y": 1045,
+     "h": 640,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 958.3605
+    },
     {
      "img": {
       "text": "1894",
@@ -8263,6 +8992,16 @@
      "flip": false
     },
     {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_nicholas2.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 600,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 971.536
+    },
+    {
      "img": {
       "text": "Unprepared",
       "size": 87,
@@ -8373,7 +9112,7 @@
   {
    "t0": 1004.129,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_ship_deck.png",
     "cam": [
      [
       1004.129,
@@ -8390,6 +9129,47 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_sailor_ru.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1004.429,
+       1006.446
+      ],
+      [
+       1008.554,
+       1012.589
+      ],
+      [
+       1016.714,
+       1018.75
+      ]
+     ],
+     "flip": true
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_admiral.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideL",
+     "talk": [
+      [
+       1007.286,
+       1007.589
+      ],
+      [
+       1014.071,
+       1015.696
+      ]
+     ],
+     "flip": false,
+     "in": 1006.786
+    },
     {
      "img": {
       "text": "Admiral! Enemy ships!",
@@ -8426,7 +9206,7 @@
    "t0": 1007.9745,
    "t1": 1011.8199999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_ship_deck.png",
     "cam": [
      [
       1007.9745,
@@ -8444,6 +9224,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_sailor_ru.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1004.429,
+       1006.446
+      ],
+      [
+       1008.554,
+       1012.589
+      ],
+      [
+       1016.714,
+       1018.75
+      ]
+     ],
+     "flip": true,
+     "in": 1007.9745
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_admiral.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1007.286,
+       1007.589
+      ],
+      [
+       1014.071,
+       1015.696
+      ]
+     ],
+     "flip": false,
+     "in": 1007.9745
+    },
     {
      "img": {
       "text": "Definitely! They're...\nthey're holding fishing\nnets, sir.",
@@ -8464,7 +9286,7 @@
    "t0": 1011.8199999999999,
    "t1": 1015.6655,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_ship_deck.png",
     "cam": [
      [
       1011.8199999999999,
@@ -8482,6 +9304,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_sailor_ru.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1004.429,
+       1006.446
+      ],
+      [
+       1008.554,
+       1012.589
+      ],
+      [
+       1016.714,
+       1018.75
+      ]
+     ],
+     "flip": true,
+     "in": 1011.8199999999999
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_admiral.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1007.286,
+       1007.589
+      ],
+      [
+       1014.071,
+       1015.696
+      ]
+     ],
+     "flip": false,
+     "in": 1011.8199999999999
+    },
     {
      "img": {
       "text": "Definitely! They're...\nthey're holding fishing\nnets, sir.",
@@ -8516,7 +9380,7 @@
    "t0": 1015.6655,
    "t1": 1019.511,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_ship_deck.png",
     "cam": [
      [
       1015.6655,
@@ -8534,6 +9398,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_sailor_ru.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1004.429,
+       1006.446
+      ],
+      [
+       1008.554,
+       1012.589
+      ],
+      [
+       1016.714,
+       1018.75
+      ]
+     ],
+     "flip": true,
+     "in": 1015.6655
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_admiral.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1007.286,
+       1007.589
+      ],
+      [
+       1014.071,
+       1015.696
+      ]
+     ],
+     "flip": false,
+     "in": 1015.6655
+    },
     {
      "img": {
       "text": "Sailor. Where are we?",
@@ -9106,6 +10012,16 @@
      "flip": false
     },
     {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_nicholas2.png",
+     "x": 1100,
+     "y": 1045,
+     "h": 540,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 1089.7628
+    },
+    {
      "img": {
       "text": "Alexandra in charge",
       "size": 87,
@@ -9125,7 +10041,7 @@
   {
    "t0": 1095.975,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/tannenberg.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       1095.975,
@@ -9149,7 +10065,7 @@
    "t0": 1099.7611787564765,
    "t1": 1103.5473575129533,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/tannenberg.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_palace_room.png",
     "cam": [
      [
       1099.7611787564765,
@@ -9167,6 +10083,16 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_rasputin.png",
+     "x": 960,
+     "y": 1045,
+     "h": 660,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 1099.9422124352332
+    },
     {
      "img": {
       "text": "Rasputin",
@@ -9347,6 +10273,16 @@
      "enter": "none",
      "talk": [],
      "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_rasputin.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 560,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 1119.821
     },
     {
      "img": {
@@ -9544,9 +10480,7 @@
   {
    "t0": 1143.529,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/rasputin.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/feb_revolution.jpg",
     "cam": [
      [
       1143.529,
@@ -9555,23 +10489,14 @@
       1.0
      ],
      [
-      1153.029,
+      1148.279,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "February 1917",
@@ -9586,40 +10511,66 @@
      "enter": "pop"
     }
    ],
-   "t1": 1153.029,
+   "t1": 1148.279,
    "cut": "curve"
+  },
+  {
+   "t0": 1148.279,
+   "t1": 1153.029,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/feb_revolution.jpg",
+    "cam": [
+     [
+      1148.279,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1153.029,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "February 1917",
+      "size": 112,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1148.279,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 1153.029,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/rasputin.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/feb_revolution.jpg",
     "cam": [
      [
       1153.029,
       0.5,
       0.5,
-      1.0
+      1.3
      ],
      [
       1159.1889999999999,
       0.5,
       0.5,
-      1.08
+      1.4
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "The soldiers switch sides",
@@ -9785,9 +10736,7 @@
   {
    "t0": 1176.118,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/lenin_1917.jpg",
     "cam": [
      [
       1176.118,
@@ -9796,23 +10745,39 @@
       1.0
      ],
      [
-      1185.968,
+      1181.0430000000001,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
+   "layers": [],
+   "t1": 1181.0430000000001,
+   "cut": "curve"
+  },
+  {
+   "t0": 1181.0430000000001,
+   "t1": 1185.968,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/lenin_1917.jpg",
+    "cam": [
+     [
+      1181.0430000000001,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1185.968,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Peace. Land. Bread.",
@@ -9826,14 +10791,12 @@
      "in": 1182.8598898305086,
      "enter": "pop"
     }
-   ],
-   "t1": 1185.968,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 1185.968,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_backroom.png",
     "cam": [
      [
       1185.968,
@@ -9850,6 +10813,47 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_comrade.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1186.268,
+       1191.018
+      ],
+      [
+       1194.196,
+       1196.268
+      ],
+      [
+       1202.286,
+       1204.768
+      ]
+     ],
+     "flip": true
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_lenin.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideL",
+     "talk": [
+      [
+       1191.179,
+       1193.268
+      ],
+      [
+       1197.696,
+       1199.018
+      ]
+     ],
+     "flip": false,
+     "in": 1190.679
+    },
     {
      "img": {
       "text": "Comrade Lenin, our\nslogan. \"Peace, land,\nbread\"?",
@@ -9872,7 +10876,7 @@
    "t0": 1190.8715,
    "t1": 1195.775,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_backroom.png",
     "cam": [
      [
       1190.8715,
@@ -9890,6 +10894,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_comrade.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1186.268,
+       1191.018
+      ],
+      [
+       1194.196,
+       1196.268
+      ],
+      [
+       1202.286,
+       1204.768
+      ]
+     ],
+     "flip": true,
+     "in": 1190.8715
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_lenin.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1191.179,
+       1193.268
+      ],
+      [
+       1197.696,
+       1199.018
+      ]
+     ],
+     "flip": false,
+     "in": 1190.8715
+    },
     {
      "img": {
       "text": "Comrade Lenin, our\nslogan. \"Peace, land,\nbread\"?",
@@ -9938,7 +10984,7 @@
    "t0": 1195.775,
    "t1": 1200.6785,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_backroom.png",
     "cam": [
      [
       1195.775,
@@ -9956,6 +11002,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_comrade.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1186.268,
+       1191.018
+      ],
+      [
+       1194.196,
+       1196.268
+      ],
+      [
+       1202.286,
+       1204.768
+      ]
+     ],
+     "flip": true,
+     "in": 1195.775
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_lenin.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1191.179,
+       1193.268
+      ],
+      [
+       1197.696,
+       1199.018
+      ]
+     ],
+     "flip": false,
+     "in": 1195.775
+    },
     {
      "img": {
       "text": "And when do we deliver\nthe peace?",
@@ -9990,7 +11078,7 @@
    "t0": 1200.6785,
    "t1": 1205.5819999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/nicholas2_family.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_backroom.png",
     "cam": [
      [
       1200.6785,
@@ -10008,6 +11096,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_comrade.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1186.268,
+       1191.018
+      ],
+      [
+       1194.196,
+       1196.268
+      ],
+      [
+       1202.286,
+       1204.768
+      ]
+     ],
+     "flip": true,
+     "in": 1200.6785
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_lenin.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1191.179,
+       1193.268
+      ],
+      [
+       1197.696,
+       1199.018
+      ]
+     ],
+     "flip": false,
+     "in": 1200.6785
+    },
     {
      "img": {
       "text": "...Peace, after war. Got\nit.",
@@ -10127,9 +11257,7 @@
   {
    "t0": 1210.9479999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/civil_war.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ipatiev.jpg",
     "cam": [
      [
       1210.9479999999999,
@@ -10141,20 +11269,11 @@
       1216.9479999999999,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "July 1918",
@@ -10238,7 +11357,7 @@
   {
    "t0": 1214.395,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/civil_war.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ipatiev.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -10301,7 +11420,7 @@
   {
    "t0": 1250.4,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/civil_war.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ipatiev.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -10916,9 +12035,7 @@
   {
    "t0": 1321.6889999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/collectivisation.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gulag.jpg",
     "cam": [
      [
       1321.6889999999999,
@@ -10927,23 +12044,53 @@
       1.0
      ],
      [
-      1333.0639999999999,
+      1325.4806666666666,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
     {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
+     "img": {
+      "text": "~700,000 shot",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 300,
+     "in": 1324.9225,
+     "enter": "pop"
+    }
+   ],
+   "t1": 1325.4806666666666,
+   "cut": "curve"
+  },
+  {
+   "t0": 1325.4806666666666,
+   "t1": 1329.272333333333,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gulag.jpg",
+    "cam": [
+     [
+      1325.4806666666666,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1329.272333333333,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
     {
      "img": {
       "text": "1.5 million arrested",
@@ -10967,17 +12114,65 @@
      },
      "x": 960,
      "y": 300,
-     "in": 1324.9225,
-     "enter": "pop"
+     "in": 1325.4806666666666,
+     "enter": "none"
     }
-   ],
+   ]
+  },
+  {
+   "t0": 1329.272333333333,
    "t1": 1333.0639999999999,
-   "cut": "curve"
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gulag.jpg",
+    "cam": [
+     [
+      1329.272333333333,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      1333.0639999999999,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "1.5 million arrested",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1329.272333333333,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "~700,000 shot",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 300,
+     "in": 1329.272333333333,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 1333.0639999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/collectivisation.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gulag.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -11088,7 +12283,7 @@
   {
    "t0": 1343.736,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/yezhov_photo.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_photo_lab.png",
     "cam": [
      [
       1343.736,
@@ -11105,6 +12300,47 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_official.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1344.036,
+       1346.304
+      ],
+      [
+       1348.429,
+       1349.268
+      ],
+      [
+       1354.679,
+       1355.125
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_photo_editor.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       1346.911,
+       1347.589
+      ],
+      [
+       1350.179,
+       1353.5
+      ]
+     ],
+     "flip": true,
+     "in": 1346.411
+    },
     {
      "img": {
       "text": "Comrade. Who is this man\nnext to Comrade Stalin?",
@@ -11141,7 +12377,7 @@
    "t0": 1347.887,
    "t1": 1352.038,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/yezhov_photo.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_photo_lab.png",
     "cam": [
      [
       1347.887,
@@ -11159,6 +12395,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_official.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1344.036,
+       1346.304
+      ],
+      [
+       1348.429,
+       1349.268
+      ],
+      [
+       1354.679,
+       1355.125
+      ]
+     ],
+     "flip": false,
+     "in": 1347.887
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_photo_editor.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1346.911,
+       1347.589
+      ],
+      [
+       1350.179,
+       1353.5
+      ]
+     ],
+     "flip": true,
+     "in": 1347.887
+    },
     {
      "img": {
       "text": "That one. Right there.",
@@ -11193,7 +12471,7 @@
    "t0": 1352.038,
    "t1": 1356.1889999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/yezhov_photo.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_photo_lab.png",
     "cam": [
      [
       1352.038,
@@ -11211,6 +12489,48 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_official.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1344.036,
+       1346.304
+      ],
+      [
+       1348.429,
+       1349.268
+      ],
+      [
+       1354.679,
+       1355.125
+      ]
+     ],
+     "flip": false,
+     "in": 1352.038
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_photo_editor.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1346.911,
+       1347.589
+      ],
+      [
+       1350.179,
+       1353.5
+      ]
+     ],
+     "flip": true,
+     "in": 1352.038
+    },
     {
      "img": {
       "text": "I see only Comrade\nStalin. And a very\nbeautiful canal.",
@@ -11731,9 +13051,7 @@
   {
    "t0": 1408.8139999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/barbarossa.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/leningrad_siege.jpg",
     "cam": [
      [
       1408.8139999999999,
@@ -11742,23 +13060,14 @@
       1.0
      ],
      [
-      1420.386,
+      1412.6713333333332,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Leningrad: ~900 days",
@@ -11771,6 +13080,82 @@
      "y": 250,
      "in": 1412.3630732984293,
      "enter": "pop"
+    }
+   ],
+   "t1": 1412.6713333333332,
+   "cut": "curve"
+  },
+  {
+   "t0": 1412.6713333333332,
+   "t1": 1416.5286666666666,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/leningrad_siege.jpg",
+    "cam": [
+     [
+      1412.6713333333332,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1416.5286666666666,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Leningrad: ~900 days",
+      "size": 107,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1412.6713333333332,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 1416.5286666666666,
+   "t1": 1420.386,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/leningrad_siege.jpg",
+    "cam": [
+     [
+      1416.5286666666666,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      1420.386,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Leningrad: ~900 days",
+      "size": 107,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1416.5286666666666,
+     "enter": "none"
     },
     {
      "img": {
@@ -11785,16 +13170,12 @@
      "in": 1418.3253821989529,
      "enter": "pop"
     }
-   ],
-   "t1": 1420.386,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 1420.386,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/barbarossa.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/moscow_1941.jpg",
     "cam": [
      [
       1420.386,
@@ -11803,23 +13184,39 @@
       1.0
      ],
      [
-      1428.368,
+      1424.377,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
+   "layers": [],
+   "t1": 1424.377,
+   "cut": "curve"
+  },
+  {
+   "t0": 1424.377,
+   "t1": 1428.368,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/moscow_1941.jpg",
+    "cam": [
+     [
+      1424.377,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1428.368,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "...winter. Again.",
@@ -11833,14 +13230,12 @@
      "in": 1424.563891891892,
      "enter": "pop"
     }
-   ],
-   "t1": 1428.368,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 1428.368,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/barbarossa.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/moscow_1941.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -12225,7 +13620,7 @@
   {
    "t0": 1472.146,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-pilot-archive-search/stalin_full.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_corridor.png",
     "cam": [
      [
       1472.146,
@@ -12242,6 +13637,43 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_a.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1472.446,
+       1473.732
+      ],
+      [
+       1475.839,
+       1478.446
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_b.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       1474.607,
+       1475.018
+      ],
+      [
+       1479.446,
+       1480.571
+      ]
+     ],
+     "flip": true,
+     "in": 1474.107
+    },
     {
      "img": {
       "text": "He hasn't come out all\nday.",
@@ -12292,7 +13724,7 @@
    "t0": 1476.846,
    "t1": 1481.5459999999998,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-pilot-archive-search/stalin_full.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_corridor.png",
     "cam": [
      [
       1476.846,
@@ -12310,6 +13742,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_a.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1472.446,
+       1473.732
+      ],
+      [
+       1475.839,
+       1478.446
+      ]
+     ],
+     "flip": false,
+     "in": 1476.846
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_guard_b.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1474.607,
+       1475.018
+      ],
+      [
+       1479.446,
+       1480.571
+      ]
+     ],
+     "flip": true,
+     "in": 1476.846
+    },
     {
      "img": {
       "text": "You knock. The last man\nwho woke him up is in\nSiberia.",
@@ -12343,7 +13813,7 @@
   {
    "t0": 1481.5459999999998,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-pilot-archive-search/stalin_full.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_corridor.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -12738,9 +14208,7 @@
   {
    "t0": 1542.3319999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/cuba_missiles.jpg",
     "cam": [
      [
       1542.3319999999999,
@@ -12749,23 +14217,14 @@
       1.0
      ],
      [
-      1550.975,
+      1546.6535,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "13 days",
@@ -12780,13 +14239,50 @@
      "enter": "pop"
     }
    ],
-   "t1": 1550.975,
+   "t1": 1546.6535,
    "cut": "curve"
+  },
+  {
+   "t0": 1546.6535,
+   "t1": 1550.975,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/cuba_missiles.jpg",
+    "cam": [
+     [
+      1546.6535,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1550.975,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "13 days",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1546.6535,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 1550.975,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_submarine.png",
     "cam": [
      [
       1550.975,
@@ -12810,7 +14306,7 @@
    "t0": 1555.1236666666666,
    "t1": 1559.272333333333,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_submarine.png",
     "cam": [
      [
       1555.1236666666666,
@@ -12847,7 +14343,7 @@
    "t0": 1559.272333333333,
    "t1": 1563.4209999999998,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_submarine.png",
     "cam": [
      [
       1559.272333333333,
@@ -12883,7 +14379,7 @@
   {
    "t0": 1563.4209999999998,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_submarine.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -12931,7 +14427,7 @@
   {
    "t0": 1566.075,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_submarine.png",
     "cam": [
      [
       1566.075,
@@ -12948,6 +14444,43 @@
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_sub_captain.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1566.375,
+       1569.625
+      ],
+      [
+       1573.696,
+       1573.875
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_arkhipov.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       1569.625,
+       1572.5
+      ],
+      [
+       1574.518,
+       1577.946
+      ]
+     ],
+     "flip": true,
+     "in": 1569.125
+    },
     {
      "img": {
       "text": "They're bombing us! The\nwar has started! Prepare\nthe torpedo!",
@@ -12984,7 +14517,7 @@
    "t0": 1570.1963333333333,
    "t1": 1574.3176666666666,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_submarine.png",
     "cam": [
      [
       1570.1963333333333,
@@ -13002,6 +14535,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_sub_captain.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1566.375,
+       1569.625
+      ],
+      [
+       1573.696,
+       1573.875
+      ]
+     ],
+     "flip": false,
+     "in": 1570.1963333333333
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_arkhipov.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1569.625,
+       1572.5
+      ],
+      [
+       1574.518,
+       1577.946
+      ]
+     ],
+     "flip": true,
+     "in": 1570.1963333333333
+    },
     {
      "img": {
       "text": "Or... they're knocking.",
@@ -13036,7 +14607,7 @@
    "t0": 1574.3176666666666,
    "t1": 1578.4389999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/gagarin.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_submarine.png",
     "cam": [
      [
       1574.3176666666666,
@@ -13054,6 +14625,44 @@
    },
    "cut": "hard",
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_sub_captain.png",
+     "x": 620,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1566.375,
+       1569.625
+      ],
+      [
+       1573.696,
+       1573.875
+      ]
+     ],
+     "flip": false,
+     "in": 1574.3176666666666
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_arkhipov.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       1569.625,
+       1572.5
+      ],
+      [
+       1574.518,
+       1577.946
+      ]
+     ],
+     "flip": true,
+     "in": 1574.3176666666666
+    },
     {
      "img": {
       "text": "They want us to come up.\nSo... we come up.",
@@ -13237,7 +14846,7 @@
   {
    "t0": 1593.2959999999998,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/arkhipov.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_soviet_shop.png",
     "cam": [
      [
       1593.2959999999998,
@@ -13261,7 +14870,7 @@
    "t0": 1597.5104999999999,
    "t1": 1601.725,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/arkhipov.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_soviet_shop.png",
     "cam": [
      [
       1597.5104999999999,
@@ -13310,9 +14919,7 @@
   {
    "t0": 1601.725,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/arkhipov.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../art2/ru_soviet_shop.png",
     "cam": [
      [
       1601.725,
@@ -13324,20 +14931,11 @@
       1607.725,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "The queue",
@@ -13358,9 +14956,7 @@
   {
    "t0": 1606.368,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/arkhipov.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gorbachev.jpg",
     "cam": [
      [
       1606.368,
@@ -13369,23 +14965,14 @@
       1.0
      ],
      [
-      1614.2959999999998,
+      1610.3319999999999,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "1985",
@@ -13397,6 +14984,45 @@
      "x": 300,
      "y": 230,
      "in": 1606.6877903225807,
+     "enter": "slam"
+    }
+   ],
+   "t1": 1610.3319999999999,
+   "cut": "curve"
+  },
+  {
+   "t0": 1610.3319999999999,
+   "t1": 1614.2959999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gorbachev.jpg",
+    "cam": [
+     [
+      1610.3319999999999,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1614.2959999999998,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "1985",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 1610.3319999999999,
      "enter": "slam"
     },
     {
@@ -13412,9 +15038,7 @@
      "in": 1613.0266290322581,
      "enter": "pop"
     }
-   ],
-   "t1": 1614.2959999999998,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 1614.2959999999998,
@@ -13469,7 +15093,7 @@
   {
    "t0": 1626.7069999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/arkhipov.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gorbachev.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -13946,34 +15570,48 @@
   {
    "t0": 1673.028,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_1990s.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gorbachev.jpg",
     "cam": [
      [
       1673.028,
       0.5,
       0.5,
-      1.0
+      1.2
      ],
      [
-      1679.5459999999998,
+      1676.2869999999998,
       0.5,
       0.5,
-      1.08
+      1.272
      ]
     ]
    },
+   "layers": [],
+   "t1": 1676.2869999999998,
+   "cut": "curve"
+  },
+  {
+   "t0": 1676.2869999999998,
+   "t1": 1679.5459999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gorbachev.jpg",
+    "cam": [
+     [
+      1676.2869999999998,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1679.5459999999998,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/russia/full/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "Pizza Hut ad",
@@ -13987,14 +15625,12 @@
      "in": 1677.569826923077,
      "enter": "pop"
     }
-   ],
-   "t1": 1679.5459999999998,
-   "cut": "curve"
+   ]
   },
   {
    "t0": 1679.5459999999998,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_1990s.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gorbachev.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -14048,7 +15684,7 @@
   {
    "t0": 1684.403,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/moscow_1990s.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/gorbachev.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -14674,6 +16310,15 @@
      "flip": false
     },
     {
+     "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive/_framed_michael_romanov.png",
+     "x": 1250,
+     "y": 960,
+     "h": 692,
+     "in": 1750.0959999999998,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "Romanovs",
       "size": 87,
@@ -14720,6 +16365,16 @@
      "enter": "none",
      "talk": [],
      "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/russia/full/../art2/c_lenin.png",
+     "x": 1250,
+     "y": 1045,
+     "h": 600,
+     "enter": "pop",
+     "talk": [],
+     "flip": false,
+     "in": 1753.293
     },
     {
      "img": {
@@ -15128,7 +16783,7 @@
    1.075
   ],
   [
-   177.0,
+   177.7,
    1.075
   ],
   [
@@ -16060,6 +17715,16 @@
    8
   ],
   [
+   140.945,
+   0.35,
+   8
+  ],
+  [
+   144.594,
+   0.35,
+   8
+  ],
+  [
    152.57943859649123,
    0.35,
    8
@@ -16096,6 +17761,11 @@
   ],
   [
    417.2558,
+   0.35,
+   8
+  ],
+  [
+   420.216,
    0.35,
    8
   ],
@@ -16201,6 +17871,11 @@
   ],
   [
    1606.6877903225807,
+   0.35,
+   8
+  ],
+  [
+   1610.3319999999999,
    0.35,
    8
   ],
@@ -44099,6 +45774,16 @@
   ],
   [
    "thud",
+   140.945,
+   -14
+  ],
+  [
+   "thud",
+   144.594,
+   -14
+  ],
+  [
+   "thud",
    152.57943859649123,
    -14
   ],
@@ -44135,6 +45820,11 @@
   [
    "thud",
    417.2558,
+   -14
+  ],
+  [
+   "thud",
+   420.216,
    -14
   ],
   [
@@ -44240,6 +45930,11 @@
   [
    "thud",
    1606.6877903225807,
+   -14
+  ],
+  [
+   "thud",
+   1610.3319999999999,
    -14
   ],
   [
