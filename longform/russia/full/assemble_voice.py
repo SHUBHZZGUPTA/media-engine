@@ -15,6 +15,28 @@ PITCH = {"TRAVELLER": 2, "PRINCE": 1, "KHAN": -4, "SERVANT": 3, "IVAN": -5, "DMI
          "CAPTAIN": -1, "ARKHIPOV": -4}
 W = os.path.join(HERE, "voice_work"); os.makedirs(W, exist_ok=True)
 def run(*a): subprocess.run(list(a), check=True)
+# re-voiced tails: {global line idx: (fix job, item, local idx in item)}
+FIX = {}
+for fj in sorted(f for f in os.listdir(HERE) if f.startswith("ru-full-en-fix") and f.endswith("_map.json")):
+    jid = fj[:-9]
+    if not os.path.exists(os.path.join(ROOT, "outputs", "align", f"{jid}-fix_a", "words.txt")) and not os.path.exists(os.path.join(ROOT, "outputs", "align", jid + "-" + next(iter(json.load(open(os.path.join(HERE, fj))))), "words.txt")):
+        print("fix not aligned yet:", jid); continue
+    for item, m in json.load(open(os.path.join(HERE, fj))).items():
+        for k, g in enumerate(m["global"]): FIX[g] = (jid, item, k)
+FIXDATA = {}
+def fixdata(jid, item):
+    if (jid, item) in FIXDATA: return FIXDATA[(jid, item)]
+    jf = json.load(open(os.path.join(ROOT, "jobs", "tts", jid + ".json"))); it = next(i for i in jf["items"] if i["name"] == item)
+    one = os.path.join(W, f"{jid}_{item}_job.json"); json.dump({"items": [it]}, open(one, "w"))
+    wav = os.path.join(ROOT, "outputs", "tts", jid, item + ".wav"); words = os.path.join(ROOT, "outputs", "align", f"{jid}-{item}", "words.txt")
+    lj = os.path.join(W, f"{jid}_{item}_lines.json"); run("python3", os.path.join(ENG, "linetimes.py"), one, words, lj, wav)
+    spk = json.load(open(os.path.join(HERE, jid + "_map.json")))[item]["speakers"]
+    cj = os.path.join(W, f"{jid}_{item}_cast.json"); json.dump({"speakers": spk, "pitch": {k: PITCH.get(k, 0) for k in set(spk.values())}}, open(cj, "w"))
+    pv = os.path.join(W, f"{jid}_{item}_pitched.wav"); run("python3", os.path.join(ENG, "charvoices.py"), wav, lj, cj, pv)
+    with wave.open(pv) as w: x = np.frombuffer(w.readframes(w.getnframes()), np.int16)
+    Wd = [(float(a), float(b), wd.strip()) for a, b, wd in (r.split(None, 2) for r in open(words) if r.strip())]
+    FIXDATA[(jid, item)] = (x, json.load(open(lj)), Wd); return FIXDATA[(jid, item)]
+G0 = 0
 allL, allW, chunks, off = [], [], [], 0.0
 for job, name in PARTS:
     jf = json.load(open(os.path.join(ROOT, "jobs", "tts", job + ".json"))); item = next(i for i in jf["items"] if i["name"] == name)
@@ -27,12 +49,34 @@ for job, name in PARTS:
     cj = os.path.join(W, name + "_cast.json"); json.dump(cast, open(cj, "w"))
     pv = os.path.join(W, name + "_pitched.wav"); run("python3", os.path.join(ENG, "charvoices.py"), wav, lj, cj, pv)
     with wave.open(pv) as w: sr = w.getframerate(); x = np.frombuffer(w.readframes(w.getnframes()), np.int16)
-    dur = len(x) / sr
-    for l in json.load(open(lj)): allL.append(dict(l, t0=l["t0"] + off, t1=l["t1"] + off))
-    for r in open(words):
-        if r.strip(): a, b, wd = r.split(None, 2); allW.append(f"{float(a) + off:.3f} {float(b) + off:.3f} {wd.strip()}")
+    PL = json.load(open(lj)); PW = [(float(a), float(b), wd.strip()) for a, b, wd in (r.split(None, 2) for r in open(words) if r.strip())]
+    # splice re-voiced runs (contiguous global lines from the same fix item)
+    runs, k = [], 0
+    while k < len(PL):
+        g = G0 + k
+        if g in FIX:
+            j = k
+            while j + 1 < len(PL) and G0 + j + 1 in FIX and FIX[G0 + j + 1][:2] == FIX[g][:2]: j += 1
+            runs.append((k, j)); k = j + 1
+        else: k += 1
+    for k0, k1 in reversed(runs):
+        jid, item, f0 = FIX[G0 + k0]; f1 = FIX[G0 + k1][2]; fx, fl, fw = fixdata(jid, item)
+        a0 = max(0.0, PL[k0]["t0"] - .12); a1 = PL[k1]["t1"] + .25 if k1 + 1 < len(PL) else len(x) / sr
+        if k1 + 1 < len(PL): a1 = min(a1, PL[k1 + 1]["t0"] - .05)
+        b0 = max(0.0, fl[f0]["t0"] - .12); b1 = fl[f1]["t1"] + .25 if f1 + 1 < len(fl) else len(fx) / sr
+        if f1 + 1 < len(fl): b1 = min(b1, fl[f1 + 1]["t0"] - .05)
+        piece = fx[int(b0 * sr):int(b1 * sr)]; delta = (b1 - b0) - (a1 - a0)
+        x = np.concatenate([x[:int(a0 * sr)], piece, x[int(a1 * sr):]])
+        for q in range(k0, k1 + 1): PL[q] = dict(PL[q], t0=fl[f0 + q - k0]["t0"] - b0 + a0, t1=fl[f0 + q - k0]["t1"] - b0 + a0)
+        for q in range(k1 + 1, len(PL)): PL[q] = dict(PL[q], t0=PL[q]["t0"] + delta, t1=PL[q]["t1"] + delta)
+        PW = [w_ for w_ in PW if w_[0] < a0] + [(a_ - b0 + a0, b_ - b0 + a0, w_) for a_, b_, w_ in fw if b0 <= a_ < b1] + \
+             [(a_ + delta, b_ + delta, w_) for a_, b_, w_ in PW if a_ >= a1]
+        print(f"  spliced {item} lines {G0 + k0}-{G0 + k1}: {a1 - a0:.1f}s -> {b1 - b0:.1f}s", flush=True)
+    dur = len(x) / sr; G0 += len(PL)
+    for l in PL: allL.append(dict(l, t0=l["t0"] + off, t1=l["t1"] + off))
+    for a_, b_, wd in PW: allW.append(f"{a_ + off:.3f} {b_ + off:.3f} {wd}")
     chunks.append(x); chunks.append(np.zeros(int(GAP * sr), np.int16)); off += dur + GAP
-    print(name, round(dur, 1), "s; lines", len(json.load(open(lj))), flush=True)
+    print(name, round(dur, 1), "s; lines", len(PL), flush=True)
 raw = os.path.join(W, "voice_raw.wav")
 with wave.open(raw, "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes(np.concatenate(chunks).tobytes())
 run("ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"atempo={SPEED}", os.path.join(HERE, "voice_full.wav"))
