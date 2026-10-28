@@ -1,0 +1,137 @@
+[
+ {
+  "name": "bld_00.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_01.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_02.json",
+  "ok": true,
+  "bytes": 2297384
+ },
+ {
+  "name": "bld_03.json",
+  "ok": true,
+  "bytes": 728926
+ },
+ {
+  "name": "bld_10.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_11.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_12.json",
+  "ok": true,
+  "bytes": 4758686
+ },
+ {
+  "name": "bld_13.json",
+  "ok": true,
+  "bytes": 5707053
+ },
+ {
+  "name": "bld_20.json",
+  "ok": true,
+  "bytes": 89787
+ },
+ {
+  "name": "bld_21.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_22.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_23.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_30.json",
+  "ok": true,
+  "bytes": 287
+ },
+ {
+  "name": "bld_31.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_32.json",
+  "ok": true,
+  "bytes": 6557803
+ },
+ {
+  "name": "bld_33.json",
+  "ok": true,
+  "bytes": 12819012
+ },
+ {
+  "name": "coast.json",
+  "ok": true,
+  "bytes": 1651158
+ },
+ {
+  "name": "water.json",
+  "ok": true,
+  "bytes": 1806058
+ },
+ {
+  "name": "roads.json",
+  "ok": true,
+  "bytes": 5238616
+ },
+ {
+  "name": "landmarks.json",
+  "ok": true,
+  "bytes": 98178
+ },
+ {
+  "name": "landuse.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "dem_11_1337_875.png",
+  "ok": true,
+  "bytes": 757
+ },
+ {
+  "name": "dem_11_1337_876.png",
+  "ok": true,
+  "bytes": 21897
+ },
+ {
+  "name": "dem_11_1338_875.png",
+  "ok": true,
+  "bytes": 33201
+ },
+ {
+  "name": "dem_11_1338_876.png",
+  "ok": true,
+  "bytes": 36510
+ },
+ {
+  "name": "dem_11_1339_875.png",
+  "ok": true,
+  "bytes": 37407
+ },
+ {
+  "name": "dem_11_1339_876.png",
+  "ok": true,
+  "bytes": 37246
+ }
+]
