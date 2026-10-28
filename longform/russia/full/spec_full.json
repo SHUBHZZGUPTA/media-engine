@@ -11551,7 +11551,8 @@
   {
    "t0": 1238.5549999999998,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/russia/full/clips3d/L_ussr1922.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -11579,19 +11580,6 @@
      "y": 250,
      "in": 1248.4253999999999,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D L_ussr1922]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1238.5549999999998,
-     "enter": "pop"
     }
    ],
    "clip": "L_ussr1922",
@@ -11601,7 +11589,7 @@
   {
    "t0": 1250.5729999999999,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ipatiev.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/clips3d/L_ussr1922_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -11664,7 +11652,7 @@
   {
    "t0": 1256.391,
    "bg": {
-    "img": "/home/claude/media-engine/longform/russia/full/../../../outputs/fetch/ru-full-archive2/ipatiev.jpg",
+    "img": "/home/claude/media-engine/longform/russia/full/clips3d/L_ussr1922_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
