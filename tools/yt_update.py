@@ -25,7 +25,11 @@ creds = Credentials(None, refresh_token=os.environ[J["token_secret"]], token_uri
 creds.refresh(Request())
 yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
 me = yt.channels().list(part="id", mine=True).execute()["items"][0]["id"]
-v = yt.videos().list(part="snippet,status", id=J["video_id"]).execute()["items"][0]
+items = yt.videos().list(part="snippet,status", id=J["video_id"]).execute().get("items", [])
+if not items:
+    json.dump({"id": J["id"], "video_id": J["video_id"], "ok": False, "error": "video not found on this channel (deleted or never processed)"}, open(os.path.join(out, J["id"] + ".json"), "w"), indent=1)
+    sys.exit("video not found")
+v = items[0]
 if v["snippet"]["channelId"] != me: sys.exit("video does not belong to this token's channel")
 before = v["status"]
 new = {k: before[k] for k in KEEP if k in before}
