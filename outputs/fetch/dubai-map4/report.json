@@ -1,0 +1,152 @@
+[
+ {
+  "name": "bld_00_01.json",
+  "ok": true,
+  "bytes": 853983
+ },
+ {
+  "name": "bld_00_02.json",
+  "ok": true,
+  "bytes": 2547078
+ },
+ {
+  "name": "bld_00_20.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_00_21.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_01_01.json",
+  "ok": true,
+  "bytes": 372153
+ },
+ {
+  "name": "bld_01_10.json",
+  "ok": true,
+  "bytes": 635542
+ },
+ {
+  "name": "bld_01_20.json",
+  "ok": true,
+  "bytes": 2233584
+ },
+ {
+  "name": "bld_01_22.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_10_00.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_10_01.json",
+  "ok": true,
+  "bytes": 639369
+ },
+ {
+  "name": "bld_10_02.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_10_22.json",
+  "ok": true,
+  "bytes": 287
+ },
+ {
+  "name": "bld_11_21.json",
+  "ok": true,
+  "bytes": 2284671
+ },
+ {
+  "name": "bld_11_22.json",
+  "ok": true,
+  "bytes": 2433311
+ },
+ {
+  "name": "bld_21_00.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_21_01.json",
+  "ok": true,
+  "bytes": 657056
+ },
+ {
+  "name": "bld_21_02.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_21_11.json",
+  "ok": true,
+  "bytes": 33353
+ },
+ {
+  "name": "bld_21_12.json",
+  "ok": true,
+  "bytes": 2024751
+ },
+ {
+  "name": "bld_21_22.json",
+  "ok": true,
+  "bytes": 250667
+ },
+ {
+  "name": "bld_22_11.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_23_00.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_23_01.json",
+  "ok": true,
+  "bytes": 1155901
+ },
+ {
+  "name": "bld_23_02.json",
+  "ok": true,
+  "bytes": 283982
+ },
+ {
+  "name": "bld_23_10.json",
+  "ok": true,
+  "bytes": 146107
+ },
+ {
+  "name": "bld_23_11.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "bld_23_12.json",
+  "ok": true,
+  "bytes": 1193573
+ },
+ {
+  "name": "bld_23_20.json",
+  "ok": true,
+  "bytes": 882016
+ },
+ {
+  "name": "bld_23_21.json",
+  "ok": true,
+  "bytes": 1971628
+ },
+ {
+  "name": "bld_23_22.json",
+  "ok": true,
+  "bytes": 1086411
+ }
+]
