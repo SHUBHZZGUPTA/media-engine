@@ -1,0 +1,67 @@
+{
+ "id": "ru-full-en-fix2",
+ "key": "longform",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "fix_b",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, khans, princes, tsars, servants, nobles, officers, an empress): short, punchy, expressive, following the bracketed style tags.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "The new government then made one fatal mistake. It kept fighting the war."
+    ],
+    [
+     "Narrator",
+     "And a bald, furious revolutionary named Vladimir Lenin promised Russians exactly what they wanted: Peace. Land. Bread."
+    ],
+    [
+     "Chars",
+     "Comrade Lenin, our slogan. \"Peace, land, bread\"?"
+    ],
+    [
+     "Chars",
+     "[nodding] Simple. Strong."
+    ],
+    [
+     "Chars",
+     "And when do we deliver the peace?"
+    ],
+    [
+     "Chars",
+     "[pause] After the civil war."
+    ],
+    [
+     "Chars",
+     "[writing slowly] ...Peace, after war. Got it."
+    ],
+    [
+     "Narrator",
+     "In October nineteen seventeen, Lenin's Bolsheviks seized power."
+    ],
+    [
+     "Narrator",
+     "Then came a brutal civil war: Lenin's Reds against the anti-communist Whites. Britain, France, America and Japan all sent troops. Millions died from fighting, hunger and disease."
+    ],
+    [
+     "Narrator",
+     "In July nineteen eighteen, in a cellar in the city of Yekaterinburg, the Bolsheviks shot Nicholas, Alexandra, their four daughters, their son Alexei, and their servants."
+    ],
+    [
+     "Narrator",
+     "The Reds won. And in nineteen twenty-two, the old empire became a brand new country: the Union of Soviet Socialist Republics. The USSR."
+    ],
+    [
+     "Chars",
+     "[checking his watch] Collapse... then a new man promises order. You know what comes next."
+    ]
+   ]
+  }
+ ]
+}
