@@ -1,0 +1,13 @@
+{
+ "job": "ru-full-en-fix2",
+ "items": [
+  {
+   "name": "fix_b",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 88.8,
+   "took": 30.7
+  }
+ ]
+}
