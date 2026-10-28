@@ -27,7 +27,9 @@ for fj in sorted(f for f in os.listdir(HERE) if f.startswith("ru-full-en-fix") a
 FIXDATA = {}
 def fixdata(jid, item):
     if (jid, item) in FIXDATA: return FIXDATA[(jid, item)]
-    jf = json.load(open(os.path.join(ROOT, "jobs", "tts", jid + ".json"))); it = next(i for i in jf["items"] if i["name"] == item)
+    jf = json.load(open(os.path.join(ROOT, "jobs", "tts", jid + ".json"))); it = dict(next(i for i in jf["items"] if i["name"] == item))
+    drop = json.load(open(os.path.join(HERE, jid + "_map.json")))[item].get("drop", [])
+    it["lines"] = [l for q, l in enumerate(it["lines"]) if q not in drop]      # lines the take skipped
     one = os.path.join(W, f"{jid}_{item}_job.json"); json.dump({"items": [it]}, open(one, "w"))
     wav = os.path.join(ROOT, "outputs", "tts", jid, item + ".wav"); words = os.path.join(ROOT, "outputs", "align", f"{jid}-{item}", "words.txt")
     lj = os.path.join(W, f"{jid}_{item}_lines.json"); run("python3", os.path.join(ENG, "linetimes.py"), one, words, lj, wav)
