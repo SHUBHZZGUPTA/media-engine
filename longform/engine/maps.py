@@ -45,7 +45,7 @@ def draw_ring(d, P, ring, **kw):
 
 def plate(cfg, out):
     w, h = cfg.get("w", 3200), cfg.get("h", 1800); P = Proj(cfg["bbox"], w, h)
-    countries = json.load(open(os.path.join(D, "ne_50m_admin_0_countries.geojson")))["features"]
+    countries = json.load(open(os.environ.get("MAP_COUNTRIES") or os.path.join(D, "ne_50m_admin_0_countries.geojson")))["features"]  # MAP_COUNTRIES: per-video border override (e.g. India official view)
     hi = set(cfg.get("highlight", []))
     img = Image.new("RGB", (w, h), OCEAN); d = ImageDraw.Draw(img)
     for f in countries:

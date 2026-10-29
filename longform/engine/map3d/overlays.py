@@ -19,7 +19,8 @@ def rings(region):
     src = "ne_50m_admin_1_states_provinces.geojson" if "admin1" in region else "ne_50m_admin_0_countries.geojson"
     want = region.get("admin1") or region.get("admin0")
     out = []
-    for f in json.load(open(os.path.join(D, src)))["features"]:
+    path = os.environ.get("MAP_COUNTRIES") if (src.startswith("ne_50m_admin_0") and os.environ.get("MAP_COUNTRIES")) else os.path.join(D, src)  # per-video border override
+    for f in json.load(open(path))["features"]:
         p = f["properties"]
         if want in (p.get("name"), p.get("NAME"), p.get("ADMIN"), p.get("NAME_EN")):
             g = f["geometry"]; polys = [g["coordinates"]] if g["type"] == "Polygon" else g["coordinates"]
