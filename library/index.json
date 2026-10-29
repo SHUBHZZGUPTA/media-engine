@@ -60,6 +60,14 @@
   },
   "c_jupiter": {
    "desc": "Jupiter personified: big round ball with cream/tan/orange cloud bands and Great Red Spot on the belly, dark sunglasses pushed up on the forehead, arms folded; lazy smug half-closed eyes, satisfied smile; faces left. (Twinkle, 2026-10-29, Codex)"
+  },
+  "c_owl": {
+   "id": "c_owl",
+   "file": "characters/c_owl.png",
+   "desc": "wise old owl fact-checker: round glasses, magnifying glass in right wing, tweed capelet, dry unimpressed look",
+   "facing": "left",
+   "video": "Woman's Land (Oregon), Oct 2026",
+   "source": "Codex gpt-image"
   }
  },
  "scenes": {
@@ -186,6 +194,48 @@
   },
   "tw_scope": {
    "desc": "Space: generic Hubble-type space telescope (no logos) upper middle (~490,420), Earth's curved limb with blue atmosphere and city lights in the lower half (horizon ~y 820). (Twinkle, 2026-10-29)"
+  },
+  "wl_aerial": {
+   "id": "wl_aerial",
+   "file": "scenes/wl_aerial.jpg",
+   "desc": "drone view of southern Oregon forested hills, homestead clearing lower middle (cabins ~520,1000; garden ~470,1120)",
+   "video": "Woman's Land (Oregon), Oct 2026",
+   "source": "Codex gpt-image"
+  },
+  "wl_solar": {
+   "id": "wl_solar",
+   "file": "scenes/wl_solar.jpg",
+   "desc": "off-grid cabin: solar panels (~500,570), water tank (~275,420), raised garden beds (~200,700)",
+   "video": "Woman's Land (Oregon), Oct 2026",
+   "source": "Codex gpt-image"
+  },
+  "wl_gate": {
+   "id": "wl_gate",
+   "file": "scenes/wl_gate.jpg",
+   "desc": "closed wooden farm gate on dirt road (~520,580), cabin uphill (~745,330), misty firs",
+   "video": "Woman's Land (Oregon), Oct 2026",
+   "source": "Codex gpt-image"
+  },
+  "wl_circle": {
+   "id": "wl_circle",
+   "file": "scenes/wl_circle.jpg",
+   "desc": "circle of 12 wooden chairs in a hillside meadow, basket centre (~507,555), lake behind",
+   "video": "Woman's Land (Oregon), Oct 2026",
+   "source": "Codex gpt-image"
+  },
+  "wl_1976": {
+   "id": "wl_1976",
+   "file": "scenes/wl_1976.jpg",
+   "desc": "1970s hand-built cabin on grassy hill (~300,330), hand pump (~130,500), stick-fenced garden",
+   "video": "Woman's Land (Oregon), Oct 2026",
+   "source": "Codex gpt-image"
+  },
+  "wl_dio": {
+   "id": "wl_dio",
+   "file": "scenes/wl_dio.jpg",
+   "desc": "3D isometric diorama of Oregon hills with 8 tiny farm clearings + river, navy background",
+   "video": "Woman's Land (Oregon), Oct 2026",
+   "source": "Codex gpt-image"
   }
  }
 }
