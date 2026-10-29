@@ -45,3 +45,13 @@ Archive images: public domain unless listed below (Wikimedia Commons).
 
 #history #russia #bhugol
 ```
+
+## Title + thumbnail pairings (ranked)
+1. **The Entire History of Russia** + thumbnail A `SAME STORY` (thumbs/thumb_A_loop.jpg)
+2. **Russia: 1,100 Years of the Same Loop** (title check 100/100) + thumbnail B `2¢ AN ACRE` (thumbs/thumb_B_alaska.jpg)
+3. **The History of Russia in 35 Minutes** (100/100) + thumbnail B
+
+## Posting slot (proposed)
+- Moon long-form already scheduled Fri 30 Oct 13:30 UTC (7:00 pm IST); keep Russia at least a day apart.
+- Proposed: Sat 31 Oct, 14:30 UTC = 8:00 pm IST = 10:30 am US Eastern.
+- Altered or synthetic content: No.
