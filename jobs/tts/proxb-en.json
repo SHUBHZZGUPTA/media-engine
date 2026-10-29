@@ -1,0 +1,83 @@
+{
+ "id": "proxb-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis, a touch of awe on the space lines, and a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy: first planet Earth as a proud, slightly offended tired mum, then a calm deadpan friendly alien planet at the end.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Earth's closest twin is just four point two light-years away."
+    ],
+    [
+     "Narrator",
+     "And we still can't visit. Not even close."
+    ],
+    [
+     "Narrator",
+     "Meet Proxima b. A rocky world, at least as heavy as Earth."
+    ],
+    [
+     "Narrator",
+     "It sits in its star's habitable zone, where water could stay liquid."
+    ],
+    [
+     "Chars",
+     "[offended, proud, a tired mum, dry] Twin? I was told I'm unique."
+    ],
+    [
+     "Narrator",
+     "So why not go? Even light needs four point two years."
+    ],
+    [
+     "Narrator",
+     "Voyager One, at sixty thousand kilometres an hour? About seventy-six thousand years."
+    ],
+    [
+     "Narrator",
+     "That's about six times longer than humans have been farming."
+    ],
+    [
+     "Narrator",
+     "And the trip isn't even the worst part."
+    ],
+    [
+     "Narrator",
+     "A year there lasts just eleven days. It hugs its star, about twenty times closer than we are to the Sun."
+    ],
+    [
+     "Narrator",
+     "So one side probably faces it forever. Endless day. Endless night."
+    ],
+    [
+     "Narrator",
+     "And its star throws tantrums. In twenty nineteen it flared fourteen thousand times brighter in ultraviolet, in seconds."
+    ],
+    [
+     "Narrator",
+     "So does it still have air? Nobody knows yet."
+    ],
+    [
+     "Narrator",
+     "Our closest twin might be half desert, half ice."
+    ],
+    [
+     "Chars",
+     "[deadpan, calm, friendly, slow] Visitors welcome. Bring sunscreen. And a jacket."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "id": "proxb-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate in natural spoken Hindi like a popular Indian geography explainer YouTube channel. The Narrator is a deep, warm, confident storyteller: curious and brisk but never rushed, a touch of awe on the space lines, a short comic pause before each punchline. Numbers and English words are spoken in English. Chars voices funny cartoon characters in Hindi: planet Earth as a proud, slightly offended tired mum, then a calm deadpan friendly alien planet.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "धरती का सबसे पास वाला जुड़वाँ सिर्फ़ four point two light-years दूर है।"
+    ],
+    [
+     "Narrator",
+     "फिर भी हम वहाँ नहीं जा सकते। बिल्कुल भी नहीं।"
+    ],
+    [
+     "Narrator",
+     "मिलिए Proxima b से। एक पथरीली दुनिया, कम से कम धरती जितनी भारी।"
+    ],
+    [
+     "Narrator",
+     "ये अपने तारे के habitable zone में है, जहाँ पानी तरल रह सकता है।"
+    ],
+    [
+     "Chars",
+     "[offended, proud, a tired mum, dry] जुड़वाँ? मुझे तो बताया गया था मैं अकेली हूँ।"
+    ],
+    [
+     "Narrator",
+     "तो चलते क्यों नहीं? रोशनी को भी four point two साल लगते हैं।"
+    ],
+    [
+     "Narrator",
+     "Voyager One, sixty thousand kilometre प्रति घंटे पर? करीब seventy-six thousand साल।"
+    ],
+    [
+     "Narrator",
+     "यानी इंसानों की खेती के इतिहास से करीब छह गुना लंबा।"
+    ],
+    [
+     "Narrator",
+     "और सफ़र तो सबसे बुरी बात भी नहीं है।"
+    ],
+    [
+     "Narrator",
+     "वहाँ एक साल सिर्फ़ eleven दिन का है। ये अपने तारे से चिपका है, धरती और सूरज की दूरी से करीब twenty गुना पास।"
+    ],
+    [
+     "Narrator",
+     "इसलिए शायद इसका एक हिस्सा हमेशा तारे की ओर रहता है। हमेशा दिन। हमेशा रात।"
+    ],
+    [
+     "Narrator",
+     "और इसका तारा गुस्सैल है। twenty nineteen में ये ultraviolet में कुछ सेकंड में fourteen thousand गुना तेज़ चमका।"
+    ],
+    [
+     "Narrator",
+     "तो क्या वहाँ अब भी हवा है? अभी कोई नहीं जानता।"
+    ],
+    [
+     "Narrator",
+     "हमारा सबसे पास का जुड़वाँ शायद आधा रेगिस्तान है, आधा बर्फ़।"
+    ],
+    [
+     "Chars",
+     "[deadpan, calm, friendly, slow] स्वागत है। सनस्क्रीन लाना। और जैकेट भी।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}
