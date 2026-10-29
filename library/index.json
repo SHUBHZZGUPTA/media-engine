@@ -54,7 +54,13 @@
   "c_explorer": "Generic early-1800s naturalist explorer chibi (no real likeness): dark felt wide-brim hat, navy tailcoat, cravat, red scarf blowing, green plant tin on strap, wooden staff + brass barometer; dizzy altitude-sick, green cheeks, sweat drop; faces right. (Chimborazo, Codex)",
   "c_delhi": "Delhi personified: India Gate arch as the head, cream kurta, maroon Nehru jacket, small brass umbrella; offended shocked 'o' mouth; faces right. (Himalayas, 2026-10-27, Codex)",
   "c_delhi_cold": "Delhi personified (winter): same as c_delhi + grey wool shawl, red muffler, frost/icicles on the arch, snowflakes; deadpan shivering; faces right. (Himalayas, 2026-10-27, Codex edit)",
-  "c_everest_smug": "Mount Everest personified (re-dress of c_everest): no sweat drop, calm smug half-closed eyes, arms folded, red scarf; faces right. (Himalayas, 2026-10-27, Codex edit)"
+  "c_everest_smug": "Mount Everest personified (re-dress of c_everest): no sweat drop, calm smug half-closed eyes, arms folded, red scarf; faces right. (Himalayas, 2026-10-27, Codex edit)",
+  "c_sirius": {
+   "desc": "Sirius personified: glowing pearly white-blue star-sphere body with 8 rounded star points as a crown, thin silver sash, one hand palm-out 'not me', other hand on hip; proud offended diva, half-closed eyes; faces right. (Twinkle, 2026-10-29, Codex)"
+  },
+  "c_jupiter": {
+   "desc": "Jupiter personified: big round ball with cream/tan/orange cloud bands and Great Red Spot on the belly, dark sunglasses pushed up on the forehead, arms folded; lazy smug half-closed eyes, satisfied smile; faces left. (Twinkle, 2026-10-29, Codex)"
+  }
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -165,6 +171,21 @@
   "hm_delhi_rain": "Delhi boulevard in heavy monsoon rain, India Gate in the middle distance (~512,520), wet reflective road. Pairs with hm_delhi_dry. (Himalayas)",
   "hm_delhi_dry": "Pixel-aligned AFTER of hm_delhi_rain: dry, cracked, frosty, cold haze, bare trees. (Himalayas)",
   "hm_everest_plains": "Giant Everest peak (summit ~512,90) towering over flat East-Indian farmland and a small town with mining headframes (~600,640). (Himalayas)",
-  "hm_south": "Lush south-India hills in a monsoon downpour, waterfalls on cliffs, terraces and palms, swollen river; muddy open ground lower middle. (Himalayas)"
+  "hm_south": "Lush south-India hills in a monsoon downpour, waterfalls on cliffs, terraces and palms, swollen river; muddy open ground lower middle. (Himalayas)",
+  "tw_air": {
+   "desc": "3D clay diorama on navy: tall atmosphere column of warm-orange and cold-blue swirling air pockets on a land block with a toy town; starlight beam from a tiny star at the top (~440,45) zigzags down to a child on a roof (~480,1080). (Twinkle, 2026-10-29)"
+  },
+  "tw_road": {
+   "desc": "Straight empty desert highway at hot midday, road-level view; heat mirage on the far road at the horizon (~512,480), asphalt fills the lower half. (Twinkle, 2026-10-29)"
+  },
+  "tw_hanle": {
+   "desc": "Codex EDIT of hm_leh at night: Ladakh valley under a huge Milky Way; three white observatory domes on a low ridge left (~140-350 x, ~640-700 y); empty gravel plain lower half. (Twinkle, 2026-10-29)"
+  },
+  "tw_elt": {
+   "desc": "Atacama mountaintop at night: giant white telescope dome (~720,700) with a slit open and an orange laser beam straight up (~763, 0-650), Milky Way, red rocky ground lower half. (Twinkle, 2026-10-29)"
+  },
+  "tw_scope": {
+   "desc": "Space: generic Hubble-type space telescope (no logos) upper middle (~490,420), Earth's curved limb with blue atmosphere and city lights in the lower half (horizon ~y 820). (Twinkle, 2026-10-29)"
+  }
  }
 }
