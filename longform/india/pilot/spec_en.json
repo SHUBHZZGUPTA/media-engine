@@ -1632,7 +1632,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1216,
-     "y": 300,
+     "y": 430,
      "in": 132.42909356725147,
      "enter": "pop"
     },
@@ -2775,7 +2775,9 @@
   {
    "t0": 234.457,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/priest_king.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_script.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       234.457,
@@ -2787,34 +2789,52 @@
       240.457,
       0.5,
       0.5,
-      1.15
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/_framed_priest_king.png",
+     "x": 1050,
+     "y": 980,
+     "h": 297,
+     "in": 234.507,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
-      "text": "Their name?  Kings?  Gods?",
+      "text": "Their name?\nKings?\nGods?",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1216,
-     "y": 300,
+     "x": 1580,
+     "y": 420,
      "in": 234.74985294117647,
      "enter": "pop"
     },
     {
      "img": {
       "text": "UNKNOWN",
-      "size": 137,
+      "size": 112,
       "color": "#ffffff",
       "box": "#d6423a",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 960,
-     "y": 700,
+     "x": 1580,
+     "y": 760,
      "in": 239.0830588235294,
      "enter": "pop"
     }
@@ -3651,7 +3671,9 @@
   {
    "t0": 312.439,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       312.439,
@@ -3660,14 +3682,23 @@
       1.0
      ],
      [
-      316.189,
+      319.939,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
     {
      "img": {
       "text": "1920s",
@@ -3680,65 +3711,37 @@
      "y": 230,
      "in": 313.22164,
      "enter": "slam"
-    }
-   ],
-   "t1": 316.189,
-   "cut": "curve"
-  },
-  {
-   "t0": 316.189,
-   "t1": 319.939,
-   "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dancing_girl.jpg",
-    "cam": [
-     [
-      316.189,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      319.939,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
+    },
     {
-     "img": {
-      "text": "1920s",
-      "size": 137,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 300,
-     "y": 230,
-     "in": 316.189,
-     "enter": "slam"
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/_framed_dancing_girl.png",
+     "x": 1050,
+     "y": 980,
+     "h": 559,
+     "in": 312.489,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
-      "text": "One of the oldest civilisations",
-      "size": 87,
+      "text": "One of the oldest\ncivilisations\non Earth",
+      "size": 82,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1094,
-     "y": 420,
+     "x": 1459,
+     "y": 620,
      "in": 317.5974,
      "enter": "pop"
     }
-   ]
+   ],
+   "t1": 319.939,
+   "cut": "curve"
   },
   {
    "t0": 319.939,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3782,7 +3785,7 @@
   {
    "t0": 326.17100000000005,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3826,7 +3829,7 @@
   {
    "t0": 332.975,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4265,11 +4268,6 @@
   ],
   [
    313.22164,
-   0.35,
-   8
-  ],
-  [
-   316.189,
    0.35,
    8
   ]
@@ -9459,11 +9457,6 @@
   [
    "thud",
    313.22164,
-   -14
-  ],
-  [
-   "thud",
-   316.189,
    -14
   ]
  ]
