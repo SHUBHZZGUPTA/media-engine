@@ -12,6 +12,8 @@ N: Not Britain. Not China. Not America.
 N: *India.*‡
 N: Spices, cotton, steel, diamonds. Ships came from the other side of the planet just to buy what India made.
 TRAVELLER: [checking his pocket watch, impressed] Richest shop on the planet. And it was always open.
+N: India was so rich, people had a name for it: *Sone ki Chidiya*. The *Golden Bird*.
+TRAVELLER: [nervous] And when you're a golden bird... everyone wants to catch you.
 N: Then, in less than two hundred and fifty years... that quarter shrank to about *four percent*.‡
 TRAVELLER: [winces] Ah. Someone forgot to lock the shop.
 N: And here's the strange part. This wasn't the first time. India has been *rich*... and *robbed*... and *rebuilt*... again and again, for five thousand years.
