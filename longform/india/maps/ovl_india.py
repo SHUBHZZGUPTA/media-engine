@@ -32,3 +32,14 @@ def build():
     once("ov_in_red.png", lambda p: OVL.fill(p, [IN], color=(214, 66, 58), alpha=200))
 if __name__ == "__main__":
     build(); print(sorted(os.listdir(A)))
+
+# ---- pilot (Indus) overlays ----
+INDUS = {"poly": [[61.6, 25.2], [64.0, 27.5], [66.5, 30.0], [68.5, 32.5], [71.0, 33.8], [74.6, 33.2], [76.5, 31.5], [77.8, 29.5], [77.5, 28.0],
+                  [75.5, 26.5], [73.5, 24.0], [73.2, 22.0], [74.8, 19.5], [72.8, 20.8], [72.5, 21.8], [70.0, 21.2], [68.8, 22.4], [67.5, 23.8],
+                  [66.6, 25.4], [63.0, 25.2]]}   # approximate extent of Mature Harappan sites (Sutkagen Dor - Manda - Alamgirpur - Daimabad)
+def build_pilot():
+    build()
+    once("ov_indus.png", lambda p: OVL.fill(p, [INDUS], color=(240, 186, 50), alpha=170))
+    once("ov_indus_edge.png", lambda p: OVL.edge(p, [INDUS], (255, 226, 140), 4, 10))
+if __name__ == "__main__" and "--pilot" in sys.argv:
+    build_pilot(); print(sorted(os.listdir(A)))
