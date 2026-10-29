@@ -1,0 +1,16 @@
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 8395.75it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+depth library/scenes/wl_aerial.jpg
+depth library/scenes/wl_solar.jpg
+depth library/scenes/wl_gate.jpg
+depth library/scenes/wl_circle.jpg
+depth library/scenes/wl_1976.jpg
+depth library/scenes/wl_dio.jpg
+upscale library/scenes/wl_aerial.jpg
+upscale library/scenes/wl_solar.jpg
+upscale library/scenes/wl_gate.jpg
+upscale library/scenes/wl_circle.jpg
+upscale library/scenes/wl_1976.jpg
+upscale library/scenes/wl_dio.jpg
+upscale library/characters/c_owl.png
+{'depth': [{'src': 'library/scenes/wl_aerial.jpg', 'secs': 1.4}, {'src': 'library/scenes/wl_solar.jpg', 'secs': 1.3}, {'src': 'library/scenes/wl_gate.jpg', 'secs': 1.3}, {'src': 'library/scenes/wl_circle.jpg', 'secs': 1.3}, {'src': 'library/scenes/wl_1976.jpg', 'secs': 1.3}, {'src': 'library/scenes/wl_dio.jpg', 'secs': 1.3}], 'upscale': [{'src': 'library/scenes/wl_aerial.jpg', 'secs': 50.1}, {'src': 'library/scenes/wl_solar.jpg', 'secs': 53.7}, {'src': 'library/scenes/wl_gate.jpg', 'secs': 52.6}, {'src': 'library/scenes/wl_circle.jpg', 'secs': 52.2}, {'src': 'library/scenes/wl_1976.jpg', 'secs': 52.0}, {'src': 'library/scenes/wl_dio.jpg', 'secs': 52.8}, {'src': 'library/characters/c_owl.png', 'secs': 69.7}]}
