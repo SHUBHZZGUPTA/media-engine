@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 3274.36it/s]
+depth library/scenes/halley_sky0.jpg
+depth library/scenes/tw_air.jpg
+depth library/scenes/tw_road.jpg
+depth library/scenes/tw_hanle.jpg
+depth library/scenes/tw_elt.jpg
+depth library/scenes/tw_scope.jpg
+depth library/scenes/stars.png
+depth library/scenes/obs.png
+upscale library/scenes/halley_sky0.jpg
+upscale library/scenes/tw_air.jpg
+upscale library/scenes/tw_road.jpg
+upscale library/scenes/tw_hanle.jpg
+upscale library/scenes/tw_elt.jpg
+upscale library/scenes/tw_scope.jpg
+upscale library/scenes/stars.png
+upscale library/scenes/obs.png
+upscale library/characters/c_sirius.png
+upscale library/characters/c_jupiter.png
+{'depth': [{'src': 'library/scenes/halley_sky0.jpg', 'secs': 1.5}, {'src': 'library/scenes/tw_air.jpg', 'secs': 1.7}, {'src': 'library/scenes/tw_road.jpg', 'secs': 1.6}, {'src': 'library/scenes/tw_hanle.jpg', 'secs': 1.6}, {'src': 'library/scenes/tw_elt.jpg', 'secs': 1.5}, {'src': 'library/scenes/tw_scope.jpg', 'secs': 1.5}, {'src': 'library/scenes/stars.png', 'secs': 1.7}, {'src': 'library/scenes/obs.png', 'secs': 1.6}], 'upscale': [{'src': 'library/scenes/halley_sky0.jpg', 'secs': 89.1}, {'src': 'library/scenes/tw_air.jpg', 'secs': 87.6}, {'src': 'library/scenes/tw_road.jpg', 'secs': 87.9}, {'src': 'library/scenes/tw_hanle.jpg', 'secs': 87.6}, {'src': 'library/scenes/tw_elt.jpg', 'secs': 87.5}, {'src': 'library/scenes/tw_scope.jpg', 'secs': 89.4}, {'src': 'library/scenes/stars.png', 'secs': 88.8}, {'src': 'library/scenes/obs.png', 'secs': 90.7}, {'src': 'library/characters/c_sirius.png', 'secs': 113.5}, {'src': 'library/characters/c_jupiter.png', 'secs': 107.6}]}
