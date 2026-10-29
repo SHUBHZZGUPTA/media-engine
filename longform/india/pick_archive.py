@@ -3,10 +3,6 @@
 Usage: pick_archive.py job_id search_dir [search_dir2 ...]  (later dirs override earlier); OVR = manual picks by title substring."""
 import json, glob, os, sys
 OVR = {"great_bath": "Great bath view Mohenjodaro", "unicorn_seal": "IndusValleySeals"}
-       "berlin_wall": "people walking", "peter_alexei": "Interrogating the Tsarevich Alexei Petr", "yeltsin_tank": "Yeltsin's tanks", "gorbachev": "Mikhail Gorbachev 1987.jpg",
-       "nicholas2_family": "Romanov", "yermak": "Surikov Pokoreniye", "trotsky": "Leon Trotsky, 1924", "alaska_check": "Alaska Purchase (hi-res)",
-       "st_basil": "Red Square, Moscow, Russia", "lenin_mausoleum": "Red Square Lenin's mausoleum.jpg", "moscow_1941": "RIAN archive 284", "putin_2000": "Presidential Oath",
-       "stalingrad": "RIAN archive 2251", "gulag": "Canal Mer Blanche.jpg", "chernobyl": "IAEA 02790036", "collectivisation": "В нашем колхозе", "barbarossa": "NARA - 540155.jpg", "kyiv_1240": "Siege of Kiev (1240).png", "kalita": "Ivan Kalita.jpg", "arkhipov": "Vasili Arkhipov.jpg", "berlin_1945": "Ruins of the Reichstag", "false_dmitry": "False Dmitry I portrait.png", "feb_revolution": "Soldiers demonstration", "gagarin": "Yuri Gagarin (1961) - Restoration", "ipatiev": "Ipat'jev Haus", "golden_horde_tribute": "Менгу-Тимур", "streltsy": "Streltsy Uprising, 1839", "minin_pozharsky": "Moscow - 2025 - Bas-relief", "peter_portrait": "Andrei Matveev", "winter_palace_1917": "Winter Palace (21134849722)", "moscow_1990s": "White House Moscow (1992)", "cuba_missiles": "Cuban missiles.jpg", "poles_kremlin": "Lissner.jpg", "michael_romanov": "Michael titularnik2", "alaska_settlement": "Shelikhov settlement", "decembrists": "CPA 1591"}
 SKIP_EXT = (".pdf", ".djvu", ".tif", ".tiff", ".svg", ".gif", ".webm", ".ogv")
 job_id, dirs = sys.argv[1], sys.argv[2:]
 res = {}
