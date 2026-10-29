@@ -1,0 +1,10 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 3928.03it/s]
+depth library/scenes/tw2_pb.jpg
+depth library/scenes/tw2_hz.jpg
+depth library/scenes/tw2_vy.jpg
+depth library/scenes/tw2_fl.jpg
+depth library/scenes/tw2_tm.jpg
+depth library/scenes/earth.png
+depth library/scenes/nile.jpg
+{'depth': [{'src': 'library/scenes/tw2_pb.jpg', 'secs': 2.1}, {'src': 'library/scenes/tw2_hz.jpg', 'secs': 2.0}, {'src': 'library/scenes/tw2_vy.jpg', 'secs': 1.9}, {'src': 'library/scenes/tw2_fl.jpg', 'secs': 2.0}, {'src': 'library/scenes/tw2_tm.jpg', 'secs': 1.9}, {'src': 'library/scenes/earth.png', 'secs': 2.0}, {'src': 'library/scenes/nile.jpg', 'secs': 2.0}], 'upscale': []}
