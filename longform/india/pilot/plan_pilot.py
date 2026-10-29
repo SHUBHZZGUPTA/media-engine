@@ -222,13 +222,13 @@ plate(T(c, -.15), a("in_indus"), layers=[lab("~2500 BCE", T(c, .03), x=330, y=23
 t = K(c, "Indus River")
 globe("G_indus", t, [[t, 74, 24, 2.6], [K(c + 1, "huge"), 69, 27, 1.75]],
       over=[ove("ov_in_edge", [[0, .45]]), ov("ov_indus", fadein(K(c, "Pakistan"), .85, .8)), ove("ov_indus_edge", fadein(K(c, "Pakistan"), 1, .8))],
-      layers=[tag("Today: Pakistan + NW India", K(c, "Pakistan"), x=1400, y=300), lab("Indus Valley Civilisation", K(c + 1, "Indus"), y=200, size=80)])
+      layers=[tag("Today: Pakistan + NW India", K(c, "Pakistan"), x=1400, y=430), lab("Indus Valley Civilisation", K(c + 1, "Indus"), y=200, size=80)])
 board(K(c + 1, "huge"), [txt("HUGE", 1250, 330, K(c + 1, "huge"), size=120, box="#d6423a"),
                           txt("Bigger than\nEgypt + Mesopotamia\ncombined", 1250, 680, K(c + 1, "more land"), size=72, box="#222222")])
 t = T(c + 2, -.15)
 globe("G_cities", t, [[t, 70, 27, 1.75], [T(c + 2, 1), 70.5, 27.5, 1.6]],
       over=[ove("ov_in_edge", [[0, .45]]), ov("ov_indus", [[0, .85]]), ove("ov_indus_edge", [[0, 1]])],
-      pins=[pin(*HAR, K(c + 2, "Harappa"), "Harappa", "#FFD84A"), pin(*MOH, K(c + 2, "Mohenjo"), "Mohenjo-daro", "#FFD84A")],
+      pins=[pin(*HAR, K(c + 2, "Harappa"), "Harappa", "#FFD84A", size=64), pin(*MOH, K(c + 2, "Mohenjo"), "Mohenjo-daro", "#FFD84A", size=64)],
       layers=[tag("Tens of thousands of people", K(c + 2, "tens"), x=1400, y=900 - 600)])
 pic(T(c + 3, -.15), "mohenjo_ruins", [lab("Weirdly modern", K(c + 3, "modern"), size=100)])
 plate(T(c + 4, -.15), a("in_street"), layers=[lab("Straight streets", K(c + 4, "Streets"), size=90), tag("Same-size bricks", K(c + 4, "same"), y=420)],
@@ -250,7 +250,8 @@ board(T(c + 17, -.15), [txt("The mystery", 1250, 600, T(c + 17, .05), size=120, 
 pic(T(c + 18, -.15), "indus_script", [lab("Hundreds of signs", K(c + 18, "Hundreds"), size=90)])
 pic(T(c + 19, -.15), "indus_script", [lab("Nobody can read them", K(c + 19, "nobody"), size=96, box="#d6423a")], zoom=(1.3, 1.5))
 quip(c + 20, [imgcard(arc("unicorn_seal"), 1500, 760, 560, T(c + 20, -.1), framed=True)])
-pic(T(c + 21, -.15), "priest_king", [tag("Their name?  Kings?  Gods?", K(c + 21, "we don't"), y=300), lab("UNKNOWN", K(c + 21, "stories"), y=700, size=110, box="#d6423a")])
+board(T(c + 21, -.15), [imgcard(arc("priest_king"), 1050, 980, 440, T(c + 21, -.1), framed=True), txt("Their name?\nKings?\nGods?", 1580, 420, K(c + 21, "we don't"), size=70, box="#222222"),
+                        txt("UNKNOWN", 1580, 760, K(c + 21, "stories"), size=90, box="#d6423a")])
 pic(T(c + 22, -.15), "harappa_ruins", [lab("No palaces. No royal tombs.", K(c + 22, "palaces"), size=76, box="#222222")])
 pic(T(c + 23, -.15), "dholavira", [lab("~1900 BCE", K(c + 23, "nineteen"), x=330, y=230, size=100), tag("The cities emptied", K(c + 23, "emptied"), y=420)])
 plate(T(c + 24, -.15), a("in_indus"), layers=[tag("Rivers moved", K(c + 24, "rivers"), y=300), tag("A river dried up", K(c + 24, "drying"), y=450),
@@ -264,8 +265,8 @@ plate(T(c + 29, -.15), a("in_railway"), layers=[lab("Harappa", K(c + 29, "Harapp
       zoom=(1.2, 1.5), c=(.75, .6))
 skit(c + 30, c + 32, "in_railway", {"FOREMAN": (520, False), "ENGINEER": (1380, True), "TRAVELLER": (960, False)})
 plate(T(c + 33, -.15), a("in_railway"), layers=[lab("Under the tracks", K(c + 33, "under"), size=100)], zoom=(1.0, 1.2), c=(.3, .55))
-pic(T(c + 34, -.15), "dancing_girl", [lab("1920s", K(c + 34, "nineteen"), x=300, y=230, size=110),
-                                       tag("One of the oldest civilisations", K(c + 34, "oldest"), y=420)])
+board(T(c + 34, -.15), [lab("1920s", K(c + 34, "nineteen"), x=300, y=230, size=110), imgcard(arc("dancing_girl"), 1050, 980, 380, T(c + 34, -.1), framed=True),
+                        txt("One of the oldest\ncivilisations\non Earth", 1560, 620, K(c + 34, "oldest"), size=66, box="#222222")])
 cycle(T(c + 35, -.15), "shine")
 cycle(T(c + 36, -.15), "shatter")
 quip(c + 37, [txt("Step 1  ✓", 1500, 230, T(c + 37, .3), size=80, box="#2f8f4f")])
