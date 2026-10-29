@@ -1,0 +1,519 @@
+{
+ "name": "Dubai",
+ "bbox": [
+  25.04,
+  25.31,
+  55.1,
+  55.42
+ ],
+ "origin": [
+  25.19,
+  55.24
+ ],
+ "land_res": 8,
+ "sea_seeds": [
+  [
+   55.12,
+   25.29
+  ],
+  [
+   55.2,
+   25.3
+  ],
+  [
+   55.11,
+   25.2
+  ]
+ ],
+ "sea_level_m": 0.5,
+ "default_reclaim_year": 1998,
+ "_note": "Birth years are APPROXIMATE by district (era zones below), except OSM start_date where present and the hero landmarks.",
+ "spread_from": {
+  "lat": 25.263,
+  "lon": 55.3,
+  "y0": 1958,
+  "per_km": 2.0
+ },
+ "zones": [
+  {
+   "name": "Bastakiya / Al Fahidi",
+   "lat": 25.2642,
+   "lon": 55.3002,
+   "r_km": 0.45,
+   "years": [
+    1800,
+    1955
+   ]
+  },
+  {
+   "name": "Deira old souk",
+   "lat": 25.269,
+   "lon": 55.2985,
+   "r_km": 0.5,
+   "years": [
+    1800,
+    1955
+   ]
+  },
+  {
+   "name": "Creek ring",
+   "lat": 25.262,
+   "lon": 55.305,
+   "r_km": 2.0,
+   "years": [
+    1956,
+    1980
+   ]
+  },
+  {
+   "name": "Deira",
+   "lat": 25.27,
+   "lon": 55.322,
+   "r_km": 3.0,
+   "years": [
+    1962,
+    1992
+   ]
+  },
+  {
+   "name": "Karama / Satwa",
+   "lat": 25.238,
+   "lon": 55.285,
+   "r_km": 2.4,
+   "years": [
+    1968,
+    1992
+   ]
+  },
+  {
+   "name": "Port Rashid",
+   "lat": 25.27,
+   "lon": 55.277,
+   "r_km": 0.8,
+   "years": [
+    1971,
+    1974
+   ]
+  },
+  {
+   "name": "Airport",
+   "lat": 25.25,
+   "lon": 55.36,
+   "r_km": 2.2,
+   "years": [
+    1960,
+    2005
+   ]
+  },
+  {
+   "name": "Sheikh Zayed Rd A",
+   "lat": 25.222,
+   "lon": 55.282,
+   "r_km": 0.7,
+   "years": [
+    1979,
+    2000
+   ],
+   "tower": [
+    60,
+    220
+   ]
+  },
+  {
+   "name": "Sheikh Zayed Rd B",
+   "lat": 25.212,
+   "lon": 55.274,
+   "r_km": 0.7,
+   "years": [
+    1995,
+    2008
+   ],
+   "tower": [
+    70,
+    300
+   ]
+  },
+  {
+   "name": "Downtown Dubai",
+   "lat": 25.195,
+   "lon": 55.277,
+   "r_km": 1.3,
+   "years": [
+    2004,
+    2012
+   ],
+   "tower": [
+    60,
+    300
+   ]
+  },
+  {
+   "name": "Business Bay",
+   "lat": 25.186,
+   "lon": 55.284,
+   "r_km": 1.3,
+   "years": [
+    2006,
+    2018
+   ],
+   "tower": [
+    60,
+    220
+   ]
+  },
+  {
+   "name": "Jumeirah 1",
+   "lat": 25.225,
+   "lon": 55.255,
+   "r_km": 2.5,
+   "years": [
+    1975,
+    2000
+   ]
+  },
+  {
+   "name": "Jumeirah 2-3",
+   "lat": 25.185,
+   "lon": 55.225,
+   "r_km": 3.0,
+   "years": [
+    1980,
+    2003
+   ]
+  },
+  {
+   "name": "Umm Suqeim",
+   "lat": 25.15,
+   "lon": 55.2,
+   "r_km": 2.5,
+   "years": [
+    1985,
+    2006
+   ]
+  },
+  {
+   "name": "Al Quoz",
+   "lat": 25.14,
+   "lon": 55.235,
+   "r_km": 3.0,
+   "years": [
+    1980,
+    2006
+   ]
+  },
+  {
+   "name": "Media / Knowledge City",
+   "lat": 25.095,
+   "lon": 55.155,
+   "r_km": 2.0,
+   "years": [
+    1999,
+    2010
+   ],
+   "tower": [
+    20,
+    60
+   ]
+  },
+  {
+   "name": "Dubai Marina / JBR",
+   "lat": 25.08,
+   "lon": 55.14,
+   "r_km": 1.6,
+   "years": [
+    2003,
+    2012
+   ],
+   "tower": [
+    80,
+    300
+   ]
+  },
+  {
+   "name": "JLT",
+   "lat": 25.07,
+   "lon": 55.145,
+   "r_km": 1.2,
+   "years": [
+    2005,
+    2012
+   ],
+   "tower": [
+    80,
+    250
+   ]
+  },
+  {
+   "name": "Palm Jumeirah",
+   "lat": 25.115,
+   "lon": 55.135,
+   "r_km": 4.0,
+   "years": [
+    2006,
+    2010
+   ],
+   "tower": [
+    20,
+    60
+   ]
+  }
+ ],
+ "reclaim": [
+  {
+   "name": "Port Rashid",
+   "lat": 25.27,
+   "lon": 55.277,
+   "r_km": 0.9,
+   "year": 1971,
+   "force": true
+  },
+  {
+   "name": "Palm Jumeirah",
+   "lat": 25.115,
+   "lon": 55.135,
+   "r_km": 4.0,
+   "year": 2004
+  },
+  {
+   "name": "The World",
+   "lat": 25.222,
+   "lon": 55.17,
+   "r_km": 6.0,
+   "year": 2007
+  },
+  {
+   "name": "Burj Al Arab island",
+   "lat": 25.1412,
+   "lon": 55.1853,
+   "r_km": 0.25,
+   "year": 1996,
+   "force": true
+  }
+ ],
+ "old_town": [
+  {
+   "lat": 25.2642,
+   "lon": 55.3002,
+   "r_km": 0.45
+  },
+  {
+   "lat": 25.269,
+   "lon": 55.2985,
+   "r_km": 0.5
+  }
+ ],
+ "heroes": [
+  {
+   "name": "Burj Khalifa",
+   "lat": 25.19716,
+   "lon": 55.27438,
+   "w": 100,
+   "d": 100,
+   "h": 828,
+   "year": 2004.7,
+   "grow": 5.3
+  },
+  {
+   "name": "Burj Al Arab",
+   "lat": 25.14125,
+   "lon": 55.18531,
+   "w": 70,
+   "d": 35,
+   "h": 321,
+   "year": 1994.5,
+   "grow": 5.0,
+   "rot": 0.6
+  },
+  {
+   "name": "Dubai World Trade Centre",
+   "lat": 25.2265,
+   "lon": 55.2865,
+   "w": 35,
+   "d": 35,
+   "h": 149,
+   "year": 1976.5,
+   "grow": 2.0
+  },
+  {
+   "name": "Al Fahidi Fort",
+   "lat": 25.2635,
+   "lon": 55.2972,
+   "w": 45,
+   "d": 45,
+   "h": 9,
+   "year": 1786.5,
+   "grow": 0.8
+  },
+  {
+   "name": "Al Sufouh Umm an-Nar tomb",
+   "lat": 25.1118,
+   "lon": 55.1758,
+   "w": 14,
+   "d": 14,
+   "h": 3,
+   "year": -2500,
+   "grow": 3
+  },
+  {
+   "name": "Jumeirah site house 0",
+   "lat": 25.1968,
+   "lon": 55.2418,
+   "w": 14,
+   "d": 10,
+   "h": 3.5,
+   "year": 850,
+   "grow": 4
+  },
+  {
+   "name": "Jumeirah site house 1",
+   "lat": 25.196890464990048,
+   "lon": 55.2421970868974,
+   "w": 14,
+   "d": 10,
+   "h": 3.5,
+   "year": 865,
+   "grow": 4
+  },
+  {
+   "name": "Jumeirah site house 2",
+   "lat": 25.197026162475122,
+   "lon": 55.24150218482695,
+   "w": 14,
+   "d": 10,
+   "h": 3.5,
+   "year": 880,
+   "grow": 4
+  },
+  {
+   "name": "Jumeirah site house 3",
+   "lat": 25.19648337253483,
+   "lon": 55.241948907586526,
+   "w": 14,
+   "d": 10,
+   "h": 3.5,
+   "year": 895,
+   "grow": 4
+  },
+  {
+   "name": "Jumeirah site house 4",
+   "lat": 25.196619070019903,
+   "lon": 55.24135327724042,
+   "w": 14,
+   "d": 10,
+   "h": 3.5,
+   "year": 910,
+   "grow": 4
+  },
+  {
+   "name": "Jumeirah site house 5",
+   "lat": 25.196664302514925,
+   "lon": 55.242395630346095,
+   "w": 14,
+   "d": 10,
+   "h": 3.5,
+   "year": 925,
+   "grow": 4
+  }
+ ],
+ "labels": [
+  {
+   "t": "AL SUFOUH SITE",
+   "lat": 25.1113,
+   "lon": 55.175,
+   "from": -2600,
+   "to": -1900
+  },
+  {
+   "t": "JUMEIRAH SITE",
+   "lat": 25.1968,
+   "lon": 55.2418,
+   "from": 850,
+   "to": 1800
+  },
+  {
+   "t": "AL FAHIDI FORT",
+   "lat": 25.2635,
+   "lon": 55.2972,
+   "from": 1787,
+   "to": 1960
+  },
+  {
+   "t": "DUBAI CREEK",
+   "lat": 25.255,
+   "lon": 55.318,
+   "from": -2600,
+   "to": 2100
+  },
+  {
+   "t": "BUR DUBAI",
+   "lat": 25.258,
+   "lon": 55.293,
+   "from": 1833,
+   "to": 2100
+  },
+  {
+   "t": "DEIRA",
+   "lat": 25.272,
+   "lon": 55.312,
+   "from": 1833,
+   "to": 2100
+  },
+  {
+   "t": "PALM JUMEIRAH",
+   "lat": 25.112,
+   "lon": 55.135,
+   "from": 2003,
+   "to": 2100
+  },
+  {
+   "t": "BURJ KHALIFA",
+   "lat": 25.19716,
+   "lon": 55.27438,
+   "from": 2008,
+   "to": 2100
+  },
+  {
+   "t": "BURJ AL ARAB",
+   "lat": 25.14125,
+   "lon": 55.18531,
+   "from": 1999,
+   "to": 2100
+  }
+ ],
+ "dug": [
+  {
+   "name": "Business Bay creek extension (approx.)",
+   "year": 2007,
+   "box": [
+    55.275,
+    55.315,
+    25.15,
+    25.215
+   ]
+  },
+  {
+   "name": "Dubai Water Canal",
+   "year": 2016,
+   "box": [
+    55.2,
+    55.275,
+    25.15,
+    25.215
+   ]
+  }
+ ],
+ "coast_line": [
+  [
+   25.31,
+   55.375
+  ],
+  [
+   25.04,
+   55.095
+  ]
+ ],
+ "inland_point": [
+  25.14,
+  55.26
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "title": "Dubai test (60 s)",
+ "dur": 72,
+ "fov": 30,
+ "shadow": 2048,
+ "msaa": 4,
+ "tilt": 7,
+ "focus": 0.55,
+ "electric": 1961,
+ "sweep": 3.5,
+ "hudOn": 16.6,
+ "labelsIn": 17.0,
+ "highlight": [
+  3.6,
+  6.9
+ ],
+ "flash": [
+  9.0
+ ],
+ "nights": [
+  {
+   "on": 52.0,
+   "off": 63.5
+  }
+ ],
+ "year": [
+  [
+   0,
+   2026,
+   "lin"
+  ],
+  [
+   6.6,
+   2026,
+   "lin"
+  ],
+  [
+   9.0,
+   1800,
+   "in"
+  ],
+  [
+   9.01,
+   -2600,
+   "lin"
+  ],
+  [
+   17.0,
+   -2600,
+   "lin"
+  ],
+  [
+   25.0,
+   -2000,
+   "inout"
+  ],
+  [
+   33.0,
+   850,
+   "inout"
+  ],
+  [
+   39.0,
+   1000,
+   "lin"
+  ],
+  [
+   43.0,
+   1780,
+   "inout"
+  ],
+  [
+   47.0,
+   1790,
+   "lin"
+  ],
+  [
+   49.5,
+   1833,
+   "inout"
+  ],
+  [
+   72.0,
+   1834,
+   "lin"
+  ]
+ ],
+ "cam": [
+  [
+   0,
+   25.226,
+   55.2835,
+   12000,
+   292,
+   28,
+   "lin"
+  ],
+  [
+   8.8,
+   25.226,
+   55.2835,
+   10800,
+   294,
+   28,
+   "inout"
+  ],
+  [
+   9.01,
+   25.125,
+   55.195,
+   19000,
+   330,
+   33,
+   "lin"
+  ],
+  [
+   30.0,
+   25.14,
+   55.205,
+   16500,
+   328,
+   34,
+   "inout"
+  ],
+  [
+   41.0,
+   25.205,
+   55.25,
+   10000,
+   318,
+   34,
+   "inout"
+  ],
+  [
+   50.0,
+   25.2625,
+   55.2985,
+   3600,
+   305,
+   36,
+   "inout"
+  ],
+  [
+   72.0,
+   25.263,
+   55.299,
+   3250,
+   300,
+   36,
+   "inout"
+  ]
+ ],
+ "hook": {
+  "today": [
+   0.2,
+   6.4
+  ],
+  "todaySub": "c. 4.8 million people",
+  "todayMain": "DUBAI TODAY",
+  "tag": [
+   3.9,
+   6.4
+  ],
+  "tagText": "4,500 YEARS  \u00b7  FROM DESERT COAST TO GLOBAL CITY",
+  "pre": [
+   9.5,
+   12.0
+  ],
+  "preText": "4,500 YEARS EARLIER \u2026",
+  "title": [
+   12.0,
+   17.0
+  ],
+  "t0": "FROM DESERT COAST TO GLOBAL CITY",
+  "t1": "DUBAI",
+  "t2": "2500 BC \u2013 2026",
+  "series": "CITIES THROUGH TIME  \u00b7  #1",
+  "presents": [
+   0.25,
+   3.7
+  ],
+  "presentsSeries": "CITIES THROUGH TIME"
+ },
+ "polity": [
+  {
+   "from": -3000,
+   "t": "UMM AN-NAR CULTURE",
+   "s": "Bronze Age, southeast Arabia"
+  },
+  {
+   "from": -1999,
+   "t": "SOUTHEAST ARABIA",
+   "s": ""
+  },
+  {
+   "from": 750,
+   "t": "ABBASID CALIPHATE",
+   "s": ""
+  },
+  {
+   "from": 1258,
+   "t": "SOUTHEAST ARABIA",
+   "s": ""
+  },
+  {
+   "from": 1833,
+   "t": "AL BU FALASAH",
+   "s": "Maktoum bin Butti"
+  }
+ ],
+ "eras": [
+  {
+   "from": -3000,
+   "t": "BRONZE AGE"
+  },
+  {
+   "from": -1300,
+   "t": "IRON AGE"
+  },
+  {
+   "from": 632,
+   "t": "ISLAMIC ERA"
+  },
+  {
+   "from": 1833,
+   "t": "A NEW TOWN ON THE CREEK"
+  }
+ ],
+ "pop": [
+  [
+   1953,
+   "50,000"
+  ],
+  [
+   1968,
+   "59,000"
+  ],
+  [
+   1975,
+   "183,000"
+  ],
+  [
+   1985,
+   "371,000"
+  ],
+  [
+   1995,
+   "689,000"
+  ],
+  [
+   2005,
+   "1.3 million"
+  ],
+  [
+   2010,
+   "1.9 million"
+  ],
+  [
+   2016,
+   "2.7 million"
+  ],
+  [
+   2026,
+   "4.8 million"
+  ]
+ ],
+ "popToday": "4.8 million",
+ "cards": [
+  {
+   "t0": 17.6,
+   "t1": 24.6,
+   "h": "c. 2500 BC \u00b7 AL SUFOUH",
+   "p": "People of the Umm an-Nar culture build a round stone tomb near today's Palm Jumeirah."
+  },
+  {
+   "t0": 33.4,
+   "t1": 39.6,
+   "h": "c. AD 900 \u00b7 JUMEIRAH",
+   "p": "An Islamic-era settlement grows on the coast, at its peak under the Abbasid Caliphate."
+  },
+  {
+   "t0": 43.0,
+   "t1": 48.2,
+   "h": "c. 1787 \u00b7 AL FAHIDI FORT",
+   "p": "A fort is built to guard the creek. Today it is the oldest building still standing in Dubai."
+  },
+  {
+   "t0": 49.6,
+   "t1": 62.5,
+   "h": "1833 \u00b7 THE AL BU FALASAH ARRIVE",
+   "p": "Led by Maktoum bin Butti, they settle by the creek. His descendants still rule Dubai today."
+  }
+ ],
+ "_sources": {
+  "Al Sufouh 2500-2000 BC, Jumeirah 900-1800 AD (Abbasid peak)": "https://www.khaleejtimes.com/uae/dubais-archaeological-treasures-17-sites-reveal-over-300000-years-of-the-past",
+  "Al Fahidi Fort c.1787": "https://en.wikipedia.org/wiki/Timeline_of_Dubai",
+  "1833 Al Bu Falasah / Maktoum bin Butti": "https://en.wikipedia.org/wiki/House_of_Al_Falasi",
+  "population 1953-2016": "https://gulfmigration.grc.net/uae-dubai-estimates-of-total-population-by-sex-1953-1968-census-dates-2006-2016/",
+  "population 2026 (4.8 million, Sept 2026)": "https://www.emirates247.com/uae/dubai-population-hits-48-million-in-september-2026-up-226885-people-since-january-2026/6122"
+ }
+}
