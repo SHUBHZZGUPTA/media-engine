@@ -1,0 +1,103 @@
+{
+ "id": "twinkle-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline, a touch of wonder on the night-sky lines. Chars voices funny cartoon characters, short and punchy: first a proud, slightly offended diva star, then a big lazy smug giant planet, and at the end the same star, deadpan and tired.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "That star you're looking at flew eight point six years to reach you."
+    ],
+    [
+     "Narrator",
+     "Something wrecked it in the last millisecond. What?"
+    ],
+    [
+     "Chars",
+     "[proud, offended, a little diva, calm] Don't look at me. I'm perfectly steady."
+    ],
+    [
+     "Narrator",
+     "Stars don't twinkle. Not one."
+    ],
+    [
+     "Narrator",
+     "The twinkle happens in about one hundred kilometres of air above your head."
+    ],
+    [
+     "Narrator",
+     "Warm and cold pockets bend light differently. Like shimmer over a hot road."
+    ],
+    [
+     "Narrator",
+     "A star is so far away, its light arrives as one tiny point."
+    ],
+    [
+     "Narrator",
+     "So every air pocket shoves that point around. Brighter. Dimmer. Left. Right."
+    ],
+    [
+     "Narrator",
+     "But planets? Much closer. A tiny disc, not a point."
+    ],
+    [
+     "Chars",
+     "[big, slow, lazy, smug giant] Twinkle? Sorry, I don't do that."
+    ],
+    [
+     "Narrator",
+     "Steady light? Probably a planet. Free tip."
+    ],
+    [
+     "Narrator",
+     "So how do astronomers get the twinkle out?"
+    ],
+    [
+     "Narrator",
+     "They climb above as much air as they can."
+    ],
+    [
+     "Narrator",
+     "Chile's Atacama, one of Earth's driest deserts. Telescopes two thousand six hundred metres up."
+    ],
+    [
+     "Narrator",
+     "India chose Haan-ley, in Ladakh. Four thousand five hundred metres. Now India's first dark sky reserve."
+    ],
+    [
+     "Narrator",
+     "Europe's new thirty-nine metre telescope will bend its mirror about one thousand times a second."
+    ],
+    [
+     "Narrator",
+     "And NASA? Just left. Hubble orbits about four hundred eighty kilometres up. No air. No twinkle."
+    ],
+    [
+     "Narrator",
+     "So every twinkle you ever wished on... was our air. Not the star."
+    ],
+    [
+     "Chars",
+     "[deadpan, tired, sighing] Eight point six years of travel. Ruined by a breeze."
+    ],
+    [
+     "Narrator",
+     "Next time a star twinkles, remember: it was steady the whole way."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
