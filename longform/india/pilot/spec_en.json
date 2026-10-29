@@ -6,7 +6,8 @@
   {
    "t0": 0.882,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_world.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -34,19 +35,6 @@
      "y": 300,
      "in": 4.945692307692308,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_world]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 0.882,
-     "enter": "pop"
     }
    ],
    "clip": "G_world",
@@ -56,7 +44,7 @@
   {
    "t0": 8.939,
    "bg": {
-    "img": "#1d2733",
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_world_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -130,7 +118,8 @@
   {
    "t0": 13.925,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_india.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -196,19 +185,6 @@
      "x": 1560,
      "y": 750,
      "in": 17.228037735849057,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_india]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 13.925,
      "enter": "pop"
     }
    ],
@@ -1643,7 +1619,8 @@
   {
    "t0": 130.67470760233917,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_indus.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -1671,19 +1648,6 @@
      "y": 200,
      "in": 135.73025,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_indus]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 130.67470760233917,
-     "enter": "pop"
     }
    ],
    "clip": "G_indus",
@@ -1693,7 +1657,7 @@
   {
    "t0": 138.39341666666667,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_indus.png",
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_indus_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -1754,7 +1718,8 @@
   {
    "t0": 143.511,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_cities.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -1768,19 +1733,6 @@
      "x": 1192,
      "y": 300,
      "in": 147.18472413793103,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_cities]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 143.511,
      "enter": "pop"
     }
    ],
@@ -2627,23 +2579,10 @@
   {
    "t0": 208.011,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_trade.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D G_trade]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 208.011,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "G_trade",
    "t1": 214.671,
    "cut": "whip"
@@ -2651,7 +2590,7 @@
   {
    "t0": 214.671,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_weights.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_trade_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3954,7 +3893,8 @@
   {
    "t0": 335.975,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_nw.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -3969,19 +3909,6 @@
      "y": 300,
      "in": 342.36246268656714,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_nw]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 335.975,
-     "enter": "pop"
     }
    ],
    "clip": "G_nw",
@@ -3991,7 +3918,7 @@
   {
    "t0": 343.939,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_nw_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4052,7 +3979,7 @@
   {
    "t0": 352.886,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_nw_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
