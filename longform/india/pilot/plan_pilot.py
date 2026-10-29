@@ -229,7 +229,7 @@ t = T(c + 2, -.15)
 globe("G_cities", t, [[t, 70, 27, 1.75], [T(c + 2, 1), 70.5, 27.5, 1.6]],
       over=[ove("ov_in_edge", [[0, .45]]), ov("ov_indus", [[0, .85]]), ove("ov_indus_edge", [[0, 1]])],
       pins=[pin(*HAR, K(c + 2, "Harappa"), "Harappa", "#FFD84A", size=64), pin(*MOH, K(c + 2, "Mohenjo"), "Mohenjo-daro", "#FFD84A", size=64)],
-      layers=[tag("Tens of thousands of people", K(c + 2, "tens"), x=1400, y=900 - 600)])
+      layers=[tag("Tens of thousands of people", K(c + 2, "tens"), x=1450, y=760)])
 pic(T(c + 3, -.15), "mohenjo_ruins", [lab("Weirdly modern", K(c + 3, "modern"), size=100)])
 plate(T(c + 4, -.15), a("in_street"), layers=[lab("Straight streets", K(c + 4, "Streets"), size=90), tag("Same-size bricks", K(c + 4, "same"), y=420)],
       zoom=(1.0, 1.15), c=(.5, .5))
@@ -250,7 +250,7 @@ board(T(c + 17, -.15), [txt("The mystery", 1250, 600, T(c + 17, .05), size=120, 
 pic(T(c + 18, -.15), "indus_script", [lab("Hundreds of signs", K(c + 18, "Hundreds"), size=90)])
 pic(T(c + 19, -.15), "indus_script", [lab("Nobody can read them", K(c + 19, "nobody"), size=96, box="#d6423a")], zoom=(1.3, 1.5))
 quip(c + 20, [imgcard(arc("unicorn_seal"), 1500, 760, 560, T(c + 20, -.1), framed=True)])
-board(T(c + 21, -.15), [imgcard(arc("priest_king"), 1050, 980, 440, T(c + 21, -.1), framed=True), txt("Their name?\nKings?\nGods?", 1580, 420, K(c + 21, "we don't"), size=70, box="#222222"),
+board(T(c + 21, -.15), [imgcard(arc("priest_king"), 1000, 1000, 820, T(c + 21, -.1), framed=True), txt("Their name?\nKings?\nGods?", 1580, 420, K(c + 21, "we don't"), size=70, box="#222222"),
                         txt("UNKNOWN", 1580, 760, K(c + 21, "stories"), size=90, box="#d6423a")])
 pic(T(c + 22, -.15), "harappa_ruins", [lab("No palaces. No royal tombs.", K(c + 22, "palaces"), size=76, box="#222222")])
 pic(T(c + 23, -.15), "dholavira", [lab("~1900 BCE", K(c + 23, "nineteen"), x=330, y=230, size=100), tag("The cities emptied", K(c + 23, "emptied"), y=420)])
@@ -265,7 +265,7 @@ plate(T(c + 29, -.15), a("in_railway"), layers=[lab("Harappa", K(c + 29, "Harapp
       zoom=(1.2, 1.5), c=(.75, .6))
 skit(c + 30, c + 32, "in_railway", {"FOREMAN": (520, False), "ENGINEER": (1380, True), "TRAVELLER": (960, False)})
 plate(T(c + 33, -.15), a("in_railway"), layers=[lab("Under the tracks", K(c + 33, "under"), size=100)], zoom=(1.0, 1.2), c=(.3, .55))
-board(T(c + 34, -.15), [lab("1920s", K(c + 34, "nineteen"), x=300, y=230, size=110), imgcard(arc("dancing_girl"), 1050, 980, 380, T(c + 34, -.1), framed=True),
+board(T(c + 34, -.15), [lab("1920s", K(c + 34, "nineteen"), x=300, y=230, size=110), imgcard(arc("dancing_girl"), 1050, 1000, 440, T(c + 34, -.1), framed=True),
                         txt("One of the oldest\ncivilisations\non Earth", 1560, 620, K(c + 34, "oldest"), size=66, box="#222222")])
 cycle(T(c + 35, -.15), "shine")
 cycle(T(c + 36, -.15), "shatter")
