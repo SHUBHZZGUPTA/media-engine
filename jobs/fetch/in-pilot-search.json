@@ -1,0 +1,55 @@
+{
+ "id": "in-pilot-search",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 10,
+ "files": [
+  {
+   "name": "s_mohenjo_ruins.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Mohenjo-daro+ruins+citadel&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_great_bath.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Great+Bath+Mohenjo-daro&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_unicorn_seal.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Indus+seal+unicorn+National+Museum&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_priest_king.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Priest-King+Mohenjo-daro+statue&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_dancing_girl.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Dancing+Girl+Mohenjo-daro+bronze&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_harappa_ruins.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Harappa+archaeological+site&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_mohenjo_drain.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Mohenjo-daro+drain&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_dholavira.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Dholavira+archaeological+site&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_indus_script.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Indus+script+seal+inscription&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_harappa_bricks.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Harappa+brick+wall&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_lothal.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Lothal+dockyard&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_indus_weights.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=6&gsrsearch=Harappan+cubical+weights+chert&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  }
+ ]
+}
