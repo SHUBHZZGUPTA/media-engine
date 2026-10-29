@@ -1,0 +1,19 @@
+{
+ "id": "ru-thumb-putin-search",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 8,
+ "files": [
+  {
+   "name": "s_putin_a.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Vladimir+Putin+official+portrait+2024&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1600&iiextmetadatafilter=LicenseShortName%7CArtist"
+  },
+  {
+   "name": "s_putin_b.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Vladimir+Putin+2023+kremlin.ru&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1600&iiextmetadatafilter=LicenseShortName%7CArtist"
+  },
+  {
+   "name": "s_putin_c.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Vladimir+Putin+2022+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1600&iiextmetadatafilter=LicenseShortName%7CArtist"
+  }
+ ]
+}
