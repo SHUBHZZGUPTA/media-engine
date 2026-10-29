@@ -5,6 +5,8 @@ Usage: python3 mixdown.py spec.json voice.wav music.json out.wav
 music.json: {"sfx_dir": path, "sections": [{"file": mp3, "from": t, "to": t, "gain_db": -18}]}
 - music sections crossfade (1.5 s) and sit ~18 dB below the voice, ducked further while speaking
 - a short whoosh on every shot cut, a soft pop on every layer that pops in (capped per second)
+Optional (opt-in, e.g. India): "below_voice_db": 21, "swell_db": 3 -> each music section is levelled (3 s RMS, so a track that
+builds stays flat) to sit `below_voice_db` under the narration while it speaks, and rises only `swell_db` in pauses.
 """
 import json, subprocess, sys
 import numpy as np
@@ -35,9 +37,19 @@ for sec in cfg["sections"]:
 # duck: envelope of the voice (fast attack, ~0.8 s release)
 hop = int(SR * .01); n = N // hop
 rms = np.sqrt((v[:n * hop].reshape(n, hop) ** 2).mean(1)); speaking = rms > max(np.percentile(rms, 40), 1e-4)
+BELOW = cfg.get("below_voice_db"); DUCK = -cfg.get("swell_db", 3) if BELOW is not None else -7
+if BELOW is not None:
+    # level the bed: target = (voice RMS while speaking) - BELOW + swell, measured on 3 s windows, gain smoothed
+    vr = 20 * np.log10(np.sqrt(np.mean(rms[speaking] ** 2)) + 1e-9); tgt = vr - BELOW - DUCK
+    mr = np.sqrt((music[:n * hop].reshape(n, hop) ** 2).mean(1)); w = 300
+    mr = np.sqrt(np.convolve(mr ** 2, np.ones(w) / w, "same")) + 1e-9
+    g = tgt - 20 * np.log10(mr); g = np.clip(g, np.median(g) - 6, np.median(g) + 6)   # cap boosts/cuts at +-6 dB around the typical gain
+    g = np.convolve(g, np.ones(w) / w, "same")
+    music[:n * hop] *= np.repeat(db(g).astype(np.float32), hop)
+    print(f"music levelled: voice {vr:.1f} dBFS, bed {tgt + DUCK:.1f} under speech, {tgt:.1f} in pauses", flush=True)
 duck = np.ones(n, np.float32); level = 1.0; rel = 1 - np.exp(-1 / 80)
 for k in range(n):
-    target = db(-7) if speaking[k] else 1.0
+    target = db(DUCK) if speaking[k] else 1.0
     level = target if target < level else level + (target - level) * rel
     duck[k] = level
 music[:n * hop] *= np.repeat(duck, hop)
