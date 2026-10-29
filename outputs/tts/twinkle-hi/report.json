@@ -1,0 +1,13 @@
+{
+ "job": "twinkle-hi",
+ "items": [
+  {
+   "name": "narration_hi",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 93.17,
+   "took": 43.8
+  }
+ ]
+}
