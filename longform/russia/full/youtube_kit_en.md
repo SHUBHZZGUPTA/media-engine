@@ -42,11 +42,13 @@ Archive images: public domain unless listed below (Wikimedia Commons).
 - Winter Palace (21134849722).jpg — Jorge Láscar from Melbourne, Australia — CC BY 2.0
 - Yeltsin's tanks (8000380340).jpg — Ole Husby from Melhus, Norway — CC BY-SA 2.0
 
+Thumbnail photo: Vladimir Putin (2022-06-30) — Presidential Executive Office of Russia (kremlin.ru) — CC BY 4.0
 
 #history #russia #bhugol
 ```
 
 ## Title + thumbnail pairings (ranked)
+0. **The Entire History of Russia** + thumbnail A2 `SAME STORY` with Putin (thumbs/thumb_A2_putin_loop.jpg) — or C `1,100 YEARS` (thumbs/thumb_C_putin_1100.jpg)
 1. **The Entire History of Russia** + thumbnail A `SAME STORY` (thumbs/thumb_A_loop.jpg)
 2. **Russia: 1,100 Years of the Same Loop** (title check 100/100) + thumbnail B `2¢ AN ACRE` (thumbs/thumb_B_alaska.jpg)
 3. **The History of Russia in 35 Minutes** (100/100) + thumbnail B
