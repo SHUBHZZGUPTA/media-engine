@@ -2,14 +2,14 @@
 """Assemble India narration from the TTS parts (pilot: hook + ch1).
 For each part: line timings (linetimes.py), character pitches (charvoices.py). Then concatenate with a short gap,
 speed up (atempo), and write voice_full.wav, lines_full.json (sped-up times) and words_full.txt (raw times; plan divides by speed).
-Usage: python3 assemble_voice.py <job_id> <out_dir> <part,part,...> [speed]  e.g. in-pilot-en pilot p01,p02,p03
+Usage: python3 assemble_voice.py <job_id> <out_dir> <part|job:part,...> [speed]  e.g. in-pilot-en pilot p01,p02,p03
 """
 import json, os, subprocess, sys, wave
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", ".."); ENG = os.path.join(HERE, "..", "engine")
 JOB, OUTD, PARTN = sys.argv[1], os.path.join(HERE, sys.argv[2]), sys.argv[3].split(",")
 SPEED = float(sys.argv[4]) if len(sys.argv) > 4 else 1.12
-PARTS = [(JOB, n) for n in PARTN]
+PARTS = [tuple(n.split(":")) if ":" in n else (JOB, n) for n in PARTN]   # "job:item" picks a take from another job
 GAP = 0.9
 PITCH = {"TRAVELLER": 2, "INSPECTOR": -3, "BRICKMAKER": 3, "ENGINEER": -1, "FOREMAN": -2}
 W = os.path.join(OUTD, "voice_work"); os.makedirs(W, exist_ok=True)
@@ -42,9 +42,9 @@ G0 = 0
 LEAD = 0.25 * SPEED
 allL, allW, chunks, off = [], [], [], LEAD
 for job, name in PARTS:
-    jf = json.load(open(os.path.join(ROOT, "jobs", "tts", job + ".json"))); item = next(i for i in jf["items"] if i["name"] == name)
+    jf = json.load(open(os.path.join(ROOT, "jobs", "tts", job + ".json"))); item = next(i for i in jf["items"] if i["name"] == (name[:-2] if name.endswith("pc") else name))   # "<item>pc" = pitch-corrected copy of <item>
     one = os.path.join(W, name + "_job.json"); json.dump({"items": [item]}, open(one, "w"))
-    wav = os.path.join(ROOT, "outputs", "tts", job, name + ".wav"); words = os.path.join(ROOT, "outputs", "align", f"{JOB}-{name}", "words.txt")
+    wav = os.path.join(ROOT, "outputs", "tts", job, name + ".wav"); words = os.path.join(ROOT, "outputs", "align", f"{job}-{name}", "words.txt")
     lj = os.path.join(W, name + "_lines.json")
     run("python3", os.path.join(ENG, "linetimes.py"), one, words, lj, wav)
     spk = json.load(open(os.path.join(OUTD, job + "_speakers.json")))[name]
