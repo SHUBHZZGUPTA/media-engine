@@ -1,0 +1,42 @@
+{
+ "slug": "mms-s019-fakepay",
+ "title": "Fake payment screenshot",
+ "lang": "en",
+ "src": "money-mirage/ep01v3/src",
+ "depth_jobs": [
+  "mm3-plates-a",
+  "mm3-plates-b",
+  "mm3-plates-c",
+  "mm-ep02-plates-a",
+  "mm-ep02-plates-b",
+  "mms-s019-21-art"
+ ],
+ "tts_parts": [
+  [
+   0,
+   0
+  ]
+ ],
+ "tts_speakers": {
+  "Narrator": "Sadaltager",
+  "Chars": "Puck"
+ },
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "music": {
+  "tracks": [
+   "2_never"
+  ],
+  "offsets": {},
+  "source": "YouTube Audio Library, chosen by Shubham"
+ },
+ "related": null
+}

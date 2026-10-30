@@ -1,0 +1,78 @@
+{
+ "id": "mms-s019-fakepay-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Your shop could lose money to a screenshot. Over two hundred shopkeepers already did. Would you spot it?"
+    ],
+    [
+     "Narrator",
+     "\"Payment successful.\" Green tick. Even a ding. This month, police in Punjab arrested two men for faking it."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky banknote, trembling] I never even left his wallet."
+    ],
+    [
+     "Narrator",
+     "So how do you get paid... without paying?"
+    ],
+    [
+     "Narrator",
+     "A fake app that copies a real payment screen, sound and all."
+    ],
+    [
+     "Narrator",
+     "Or an edited screenshot. Sometimes a fake bank SMS."
+    ],
+    [
+     "Narrator",
+     "One man in Delhi told police he fooled over two hundred this way."
+    ],
+    [
+     "Narrator",
+     "And the trick works best when you're busiest."
+    ],
+    [
+     "Narrator",
+     "A rush. A queue. No time to check."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the screen in his hand isn't your bank."
+    ],
+    [
+     "Narrator",
+     "India runs about half the world's real-time payments. Scammers love volume."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Never trust a screen. Trust a vault."
+    ],
+    [
+     "Narrator",
+     "So before the goods leave, check your app. Not theirs."
+    ],
+    [
+     "Narrator",
+     "Comment: do you check every payment?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}

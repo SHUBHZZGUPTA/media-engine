@@ -1,0 +1,78 @@
+{
+ "id": "mms-s020-newton-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "The man who discovered gravity lost up to twenty thousand pounds in a bubble. Could it happen to you?"
+    ],
+    [
+     "Narrator",
+     "In seventeen twenty, all of London wanted shares in the South Sea Company."
+    ],
+    [
+     "Narrator",
+     "In six months, the price jumped from about a hundred and thirty pounds to over a thousand pounds."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Even I don't rise that fast."
+    ],
+    [
+     "Narrator",
+     "So what did the smartest man in England do?"
+    ],
+    [
+     "Narrator",
+     "He sold most of his shares early. A smart, tidy profit."
+    ],
+    [
+     "Narrator",
+     "Then prices kept climbing. Everyone around him kept getting richer."
+    ],
+    [
+     "Narrator",
+     "And that's where genius stopped helping."
+    ],
+    [
+     "Narrator",
+     "He bought back in, at roughly double the price. Then the bubble burst."
+    ],
+    [
+     "Narrator",
+     "Isaac Newton lost a fortune. Historians still debate exactly how much."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: being smart doesn't protect you from the crowd."
+    ],
+    [
+     "Narrator",
+     "He supposedly said he could calculate the stars, but not the madness of people."
+    ],
+    [
+     "Chars",
+     "[delighted, squeaky banknote, surprised to be winning] Gravity always wins!"
+    ],
+    [
+     "Narrator",
+     "Comment: have you ever bought at the top?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
