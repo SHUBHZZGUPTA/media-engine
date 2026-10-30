@@ -1,0 +1,13 @@
+{
+ "job": "mms-s016-rupee-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 64.04,
+   "took": 20.8
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "job": "mms-s017-pig-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 72.32,
+   "took": 23.3
+  }
+ ]
+}
