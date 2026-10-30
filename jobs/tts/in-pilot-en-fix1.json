@@ -1,0 +1,47 @@
+{
+ "id": "in-pilot-en-fix1",
+ "key": "longform",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "fix_a",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would. IMPORTANT: keep the Narrator in the same full, warm, projected speaking voice and volume on every line, exactly like a normal documentary read. Never whisper, never drop into a hushed, breathy or intimate tone, even on dramatic or mysterious lines.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Because if you look closely, India keeps living the same story."
+    ],
+    [
+     "Narrator",
+     "First, someone stitches the land together. Then it shines, the richest place on Earth. Then it shatters into pieces. Outsiders march in to take it..."
+    ],
+    [
+     "Narrator",
+     "...and then something strange happens. India absorbs them. The invaders end up eating its food, speaking its languages, and building its monuments."
+    ],
+    [
+     "Narrator",
+     "Stitch. Shine. Shatter. Absorb. Again and again."
+    ],
+    [
+     "Narrator",
+     "So how did one land become the richest place in the world, lose it all, and start climbing back?"
+    ],
+    [
+     "Chars",
+     "[winding his watch] Hold on to something."
+    ],
+    [
+     "Narrator",
+     "Let's go back to the very beginning."
+    ]
+   ]
+  }
+ ]
+}
