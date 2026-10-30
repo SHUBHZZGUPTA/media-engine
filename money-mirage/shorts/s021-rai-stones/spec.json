@@ -1,0 +1,179 @@
+{
+ "slug": "mms-s021-rai",
+ "lines": [
+  {
+   "o": 0,
+   "text": "A 4-tonne coin sank to the bottom of the sea, and people kept spending it. Would you accept it?",
+   "chunks": [
+    "A *4-tonne* coin sank to the",
+    "bottom of the *sea,*",
+    "and people kept *spending* it.",
+    "Would you *accept* it?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "This is Yap, in the Pacific. Its money: rai, huge carved stone discs.",
+   "chunks": [
+    "This is *Yap,*",
+    "in the Pacific.",
+    "Its money:",
+    "*rai,* huge carved stone *discs.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "The biggest is 3.6 meters wide.",
+   "chunks": [
+    "The biggest is *3.6 meters* wide."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "Imagine breaking that for change.",
+   "chunks": [
+    "Imagine breaking that for change."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA",
+   "speaker": "bill"
+  },
+  {
+   "o": 0,
+   "text": "So how do you pay with a coin you can't lift?",
+   "chunks": [
+    "So how do you *pay* with",
+    "a coin you can't *lift?*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "You don't move it. Everyone just agrees who owns it now.",
+   "chunks": [
+    "You don't move it.",
+    "Everyone just *agrees* who owns it now."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "They were cut on Palau, 400 km away, and carried home by sea.",
+   "chunks": [
+    "They were cut on *Palau,*",
+    "*400 km* away,",
+    "and carried home by *sea.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "And one stone never made it home.",
+   "chunks": [
+    "And one stone never made it home."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "It sank on the way. The islanders agreed it still existed, and kept trading it.",
+   "chunks": [
+    "It *sank* on the way.",
+    "The islanders agreed it still *existed,*",
+    "and kept *trading* it."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "That's the mirage: money was never the stone. It was the story everyone believed.",
+   "chunks": [
+    "That's the *mirage:*",
+    "money was never the *stone.*",
+    "It was the *story* everyone *believed.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "Today, your money is mostly numbers in a computer.",
+   "chunks": [
+    "Today, *your* money is mostly *numbers* in a computer."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "Speak for yourself. I'm real.",
+   "chunks": [
+    "Speak for yourself.",
+    "I'm real."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA",
+   "speaker": "goldie"
+  },
+  {
+   "o": 0,
+   "text": "So is your money in your account? Or in everyone's agreement?",
+   "chunks": [
+    "So is your money in your *account?*",
+    "Or in everyone's *agreement?*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "Comment: would you accept a sunken coin?",
+   "chunks": [
+    "Comment: would you accept a sunken coin?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  },
+  {
+   "o": 0,
+   "text": "This is Money Mirage. Follow for more.",
+   "chunks": [
+    "This is *Money Mirage.*",
+    "*Follow* for more."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE MONEY AT THE BOTTOM OF THE SEA"
+  }
+ ],
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.42,
+  "tempo": 1.0,
+  "long_before": {
+   "3": 0.55,
+   "11": 0.55
+  }
+ },
+ "tail": 3.0
+}
