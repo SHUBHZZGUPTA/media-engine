@@ -10,7 +10,7 @@ N: And then things got really strange.
 N: A gold coin worth *25* silver coins fell to *22,* or less.
 N: A Cairo writer said it stayed low for about *12 years.*
 N: That's the *mirage:* gold isn't valuable for being *gold.* It's valuable for being *rare.*
-BILL: [delighted, squeaky] So I'm rare too?
+BILL: [delighted, squeaky] So am I rare too?
 N: Flood a city with it, and even a *king's* gold becomes *ordinary.*
 N: Comment: what would you do with a ton of gold?
 N: This is *Money Mirage.* *Follow* for more.

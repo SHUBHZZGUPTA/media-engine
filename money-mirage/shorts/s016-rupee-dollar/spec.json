@@ -1,0 +1,159 @@
+{
+ "slug": "mms-s016-rupee",
+ "lines": [
+  {
+   "o": 0,
+   "text": "Your grandparents may say one rupee once equalled one dollar. Today a dollar costs about 95. Was it ever true?",
+   "chunks": [
+    "Your grandparents may say one *rupee*",
+    "once equalled one *dollar.*",
+    "Today a dollar costs about *95.*",
+    "Was it ever true?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "Ninety-five of you, for one of me?",
+   "chunks": [
+    "Ninety-five of you,",
+    "for one of me?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?",
+   "speaker": "bill"
+  },
+  {
+   "o": 0,
+   "text": "So when was a rupee worth a dollar?",
+   "chunks": [
+    "So when *was* a rupee worth a dollar?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "In 1947? Never. Sorry, Grandpa. A dollar cost about 3.3 rupees.",
+   "chunks": [
+    "In *1947?*",
+    "Never. Sorry,",
+    "Grandpa. A dollar cost about *3.3* rupees."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "It was tied to the British pound, not the dollar.",
+   "chunks": [
+    "It was tied to the *British pound,*",
+    "not the dollar."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "In 1966, after a war and a drought, India devalued to 7.5.",
+   "chunks": [
+    "In *1966,*",
+    "after a *war* and a *drought,*",
+    "India *devalued* to *7.5.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "In 1991, India nearly ran out of dollars. A year later: past 30.",
+   "chunks": [
+    "In *1991,*",
+    "India nearly ran out of *dollars.*",
+    "A year later:",
+    "past *30.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "And here's the part almost nobody mentions.",
+   "chunks": [
+    "And here's the part almost nobody mentions."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "A falling rupee isn't always failure. It makes Indian exports cheaper.",
+   "chunks": [
+    "A *falling* rupee isn't always *failure.*",
+    "It makes Indian *exports* cheaper."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "That's the mirage: the golden age of one rupee, one dollar never existed.",
+   "chunks": [
+    "That's the *mirage:*",
+    "the golden age of *one rupee, one dollar* never *existed.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "Near a record low, the real question isn't the rupee. It's whether your income outruns the dollar.",
+   "chunks": [
+    "Near a *record low,*",
+    "the real question isn't the rupee.",
+    "It's whether *your* income outruns the *dollar.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "Comment: what did your grandparents tell you?",
+   "chunks": [
+    "Comment: what did your grandparents tell you?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  },
+  {
+   "o": 0,
+   "text": "This is Money Mirage. Follow for more.",
+   "chunks": [
+    "This is *Money Mirage.*",
+    "*Follow* for more."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: ONE RUPEE = ONE DOLLAR?"
+  }
+ ],
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.42,
+  "tempo": 1.05,
+  "long_before": {
+   "1": 0.55
+  }
+ },
+ "tail": 3.0
+}
