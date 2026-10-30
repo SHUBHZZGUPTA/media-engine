@@ -1,0 +1,106 @@
+{
+ "client_id_set": true,
+ "client_secret_set": true,
+ "tokens": [
+  {
+   "secret": "YT_RT_MM_EN",
+   "present": true,
+   "refresh": {
+    "ok": true
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/youtube.force-ssl",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/yt-analytics.readonly"
+   ],
+   "channels": [
+    {
+     "id": "UCiSFGdbq0TksbPPPm3oaIYQ",
+     "title": "MoneyMirageYT",
+     "handle": "@moneymirageyt1",
+     "videos": "13",
+     "subscribers": "0"
+    }
+   ],
+   "recent_uploads": [
+    {
+     "title": "Why Your $100 Ticket Costs $130 🎟️",
+     "published": "2026-10-27T17:30:15Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Tulip Mania 1637: The Bubble That Wasn't? 🌷",
+     "published": "2026-10-27T15:30:00Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Pay With a Gift Card? It's a Scam. Every Time 🎁",
+     "published": "2026-10-27T11:30:38Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Why Zimbabwe Printed a $100 Trillion Note 💵",
+     "published": "2026-10-26T17:30:04Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Charles Ponzi Promised 50% in 45 Days 💸",
+     "published": "2026-10-26T15:30:01Z",
+     "privacy": "public"
+    },
+    {
+     "title": "The $6.50 Popcorn Trick Might Be a Myth 🍿",
+     "published": "2026-10-26T11:30:07Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Why Prices End in .99 (It's Not the Cents) 🏷️",
+     "published": "2026-10-25T17:30:03Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Why Costco's Hot Dog Is Still $1.50 🌭",
+     "published": "2026-10-25T15:30:30Z",
+     "privacy": "public"
+    },
+    {
+     "title": "SEBI Barred 59 for This Stock-Tip Trap 📉",
+     "published": "2026-10-25T11:30:17Z",
+     "privacy": "public"
+    },
+    {
+     "title": "That 70% Off Was Never Real 🏷️",
+     "published": "2026-10-24T17:30:13Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Milka Shrank 10%. Did You Notice? 🍫",
+     "published": "2026-10-24T15:30:26Z",
+     "privacy": "public"
+    },
+    {
+     "title": "YOU HAVE BEEN ROBBED BY THE GOVERNMENT! HOW TO CLAIM IT BACK!",
+     "published": "2026-10-23T19:42:01Z",
+     "privacy": "public"
+    },
+    {
+     "title": "Why Gold Fell 28% From Its Record?",
+     "published": "2026-10-23T14:03:26Z",
+     "privacy": "public"
+    }
+   ],
+   "analytics": {
+    "ok": true,
+    "status": 200,
+    "rows": [
+     [
+      56,
+      25
+     ]
+    ],
+    "error": null
+   }
+  }
+ ]
+}
