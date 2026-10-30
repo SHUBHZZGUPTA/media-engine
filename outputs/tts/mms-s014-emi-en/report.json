@@ -1,0 +1,13 @@
+{
+ "job": "mms-s014-emi-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 66.2,
+   "took": 21.3
+  }
+ ]
+}

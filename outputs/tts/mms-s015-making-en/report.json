@@ -1,0 +1,13 @@
+{
+ "job": "mms-s015-making-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 69.68,
+   "took": 22.1
+  }
+ ]
+}
