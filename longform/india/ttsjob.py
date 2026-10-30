@@ -8,7 +8,8 @@ import json, re, sys, os
 DIR = ("Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: "
        "relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. "
        "Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): "
-       "short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would.")
+       "short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would."
+       ' VOICE CONSISTENCY (most important): the Narrator is one deep, low-pitched baritone, calm and steady, like a late-night documentary host. Keep exactly the same voice, pitch, pace and volume from the first line to the last. Never raise the pitch with excitement, never sound younger or brighter, never whisper, never go breathy or hushed, even on dramatic or mysterious lines.')
 src, jid = sys.argv[1], sys.argv[2]; MAXW = int(sys.argv[3]) if len(sys.argv) > 3 else 330
 lines, sec = [], None
 for ln in open(src, encoding="utf-8"):
