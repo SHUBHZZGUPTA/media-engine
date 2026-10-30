@@ -286,6 +286,7 @@ for k, s in enumerate(shots[:-1]):
             if n["t0"] < hold: n["t0"] = hold
 shots.sort(key=lambda s: s["t0"])
 shots[:] = [s for s, n in zip(shots, shots[1:] + [None]) if not n or n["t0"] - s["t0"] > .25]
+shots[0]["t0"] = 0.0   # the video's first frame is 0:00, same as the audio (else pictures + captions run early)
 for s, n in zip(shots, shots[1:] + [None]): s["t1"] = n["t0"] if n else END
 for s in shots:
     cam = s["bg"].get("cam")

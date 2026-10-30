@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """India script markdown -> Gemini TTS job, chunked to <= ~330 words per request (longer takes degrade).
 Usage: ttsjob.py script.md job_id [max_words]
-Sections: '# HOOK', '# CHAPTER N: ...', '# ENDING'. Chunks break at line boundaries, preferring the end of a skit or a narrator line.
+Sections: '# HOOK', '# CHAPTER N: ...', '# ENDING'. Takes break only at a chapter start or right after a character line (hidden switch points).
 Writes jobs/tts/<job_id>.json and <script dir>/<job_id>_speakers.json (line index -> skit speaker, per chunk).
 """
 import json, re, sys, os
@@ -18,20 +18,26 @@ for ln in open(src, encoding="utf-8"):
     if ln.startswith("[SKIT"): lines.append(("SKIT", None, sec)); continue
     m = re.match(r"^([A-Z][A-Z0-9 .&']*?):\s*(.+)$", ln)
     if sec and m: lines.append((m.group(1), m.group(2).replace("*", ""), sec))
-chunks, cur, w = [], [], 0
+# Takes break ONLY at hidden points (BHUGOL rule, Oct 2026): a section start (chapter card) or right after a character
+# line / skit (other voices + a scene change cover the narrator's take-to-take voice difference). Within a section the
+# break is the hidden point that best balances the take lengths, each <= MAXW words.
 def wc(t): return len(t.split())
-i = 0
-while i < len(lines):
-    who, txt, sec = lines[i]
-    if who == "SKIT":                                  # keep a whole skit together
-        j = i + 1
-        while j < len(lines) and lines[j][0] not in ("N", "SKIT"): j += 1
-        block = [l for l in lines[i + 1:j]]; i = j
-    else: block = [lines[i]]; i += 1
-    bw = sum(wc(t) for _, t, _ in block)
-    if cur and (w + bw > MAXW or (block[0][2] != cur[-1][2] and w > MAXW * .6)): chunks.append(cur); cur, w = [], 0
-    cur += block; w += bw
-if cur: chunks.append(cur)
+secs = []
+for who, txt, sec in lines:
+    if not secs or secs[-1][0] != sec: secs.append((sec, []))
+    secs[-1][1].append((who, txt, sec))
+chunks = []
+for sec, ls in secs:
+    ls = [l for l in ls if l[0] != "SKIT"]
+    def split(ls):
+        tot = sum(wc(t) for _, t, _ in ls)
+        if tot <= MAXW: return [ls]
+        cand = [k for k in range(1, len(ls)) if ls[k - 1][0] != "N" and ls[k][0] == "N"]      # after a character line, before narration
+        cand = [k for k in cand if sum(wc(t) for _, t, _ in ls[:k]) <= MAXW] or cand
+        if not cand: raise SystemExit(f"{sec}: no hidden break point (add a skit or traveller line) - section is {tot} words")
+        k = min(cand, key=lambda k: abs(sum(wc(t) for _, t, _ in ls[:k]) - tot / 2) + (1e4 if sum(wc(t) for _, t, _ in ls[:k]) > MAXW else 0))
+        return split(ls[:k]) + split(ls[k:])
+    chunks += split(ls)
 items, spk = [], {}
 for k, ch in enumerate(chunks, 1):
     name = f"p{k:02d}"

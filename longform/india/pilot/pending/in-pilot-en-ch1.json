@@ -1,0 +1,377 @@
+{
+ "id": "in-pilot-en-ch1",
+ "key": "longform",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "c1a1",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would. VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "About forty-five hundred years ago, while Egypt was building its pyramids, a civilisation was growing along the Indus River, in what is today Pakistan and northwest India."
+    ],
+    [
+     "Narrator",
+     "We call it the Indus Valley Civilisation. And it was huge. It covered more land than Egypt and Mesopotamia put together."
+    ],
+    [
+     "Narrator",
+     "Its biggest cities, Harappa and Mohenjo-daro, were home to tens of thousands of people."
+    ],
+    [
+     "Narrator",
+     "And these cities were... weirdly modern."
+    ],
+    [
+     "Narrator",
+     "Streets ran in neat, straight lines. Houses were built from bricks of the same size, everywhere, for hundreds of years."
+    ],
+    [
+     "Narrator",
+     "Many houses had their own bathroom. Wastewater flowed into covered drains under the street."
+    ],
+    [
+     "Chars",
+     "[looking down at a drain, stunned] Four and a half thousand years ago. Underground drainage."
+    ],
+    [
+     "Chars",
+     "[to camera] Some cities today are still working on this."
+    ],
+    [
+     "Narrator",
+     "In the middle of Mohenjo-daro sat something archaeologists call the Great Bath. A brick pool, sealed with tar so it wouldn't leak."
+    ],
+    [
+     "Narrator",
+     "Nobody knows exactly what it was for. Maybe ceremonies. Maybe a very fancy swimming pool."
+    ],
+    [
+     "Chars",
+     "[holding up the brick] What is this?"
+    ],
+    [
+     "Chars",
+     "A brick, sir. A nice brick."
+    ],
+    [
+     "Chars",
+     "It's bigger. One to two to four. Every brick. Every city. Every time."
+    ],
+    [
+     "Chars",
+     "[quietly] I was trying to be creative."
+    ],
+    [
+     "Chars",
+     "[hands it back] Be creative with pots."
+    ],
+    [
+     "Narrator",
+     "They even used standard weights for trading, so nobody got cheated at the market."
+    ],
+    [
+     "Narrator",
+     "And they traded far. Indus seals have been found all the way in Mesopotamia, in today's Iraq."
+    ],
+    [
+     "Narrator",
+     "But here's the mystery."
+    ],
+    [
+     "Narrator",
+     "These people wrote. On seals, on pots, on tags. Hundreds of different signs."
+    ],
+    [
+     "Narrator",
+     "And nobody can read them. Not one word. To this day."
+    ],
+    [
+     "Chars",
+     "[squinting at a seal with a unicorn-like animal] Fish. Jar. Unicorn. [shrugs] Either a king's name or a grocery list."
+    ]
+   ]
+  },
+  {
+   "name": "c1a2",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would. VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "About forty-five hundred years ago, while Egypt was building its pyramids, a civilisation was growing along the Indus River, in what is today Pakistan and northwest India."
+    ],
+    [
+     "Narrator",
+     "We call it the Indus Valley Civilisation. And it was huge. It covered more land than Egypt and Mesopotamia put together."
+    ],
+    [
+     "Narrator",
+     "Its biggest cities, Harappa and Mohenjo-daro, were home to tens of thousands of people."
+    ],
+    [
+     "Narrator",
+     "And these cities were... weirdly modern."
+    ],
+    [
+     "Narrator",
+     "Streets ran in neat, straight lines. Houses were built from bricks of the same size, everywhere, for hundreds of years."
+    ],
+    [
+     "Narrator",
+     "Many houses had their own bathroom. Wastewater flowed into covered drains under the street."
+    ],
+    [
+     "Chars",
+     "[looking down at a drain, stunned] Four and a half thousand years ago. Underground drainage."
+    ],
+    [
+     "Chars",
+     "[to camera] Some cities today are still working on this."
+    ],
+    [
+     "Narrator",
+     "In the middle of Mohenjo-daro sat something archaeologists call the Great Bath. A brick pool, sealed with tar so it wouldn't leak."
+    ],
+    [
+     "Narrator",
+     "Nobody knows exactly what it was for. Maybe ceremonies. Maybe a very fancy swimming pool."
+    ],
+    [
+     "Chars",
+     "[holding up the brick] What is this?"
+    ],
+    [
+     "Chars",
+     "A brick, sir. A nice brick."
+    ],
+    [
+     "Chars",
+     "It's bigger. One to two to four. Every brick. Every city. Every time."
+    ],
+    [
+     "Chars",
+     "[quietly] I was trying to be creative."
+    ],
+    [
+     "Chars",
+     "[hands it back] Be creative with pots."
+    ],
+    [
+     "Narrator",
+     "They even used standard weights for trading, so nobody got cheated at the market."
+    ],
+    [
+     "Narrator",
+     "And they traded far. Indus seals have been found all the way in Mesopotamia, in today's Iraq."
+    ],
+    [
+     "Narrator",
+     "But here's the mystery."
+    ],
+    [
+     "Narrator",
+     "These people wrote. On seals, on pots, on tags. Hundreds of different signs."
+    ],
+    [
+     "Narrator",
+     "And nobody can read them. Not one word. To this day."
+    ],
+    [
+     "Chars",
+     "[squinting at a seal with a unicorn-like animal] Fish. Jar. Unicorn. [shrugs] Either a king's name or a grocery list."
+    ]
+   ]
+  },
+  {
+   "name": "c1b1",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would. VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "So we don't know what they called themselves. We don't know their kings, their gods, or their stories."
+    ],
+    [
+     "Narrator",
+     "Oddly, archaeologists haven't found grand palaces or giant royal tombs either. Just well-planned cities, built for ordinary people."
+    ],
+    [
+     "Narrator",
+     "Then, around nineteen hundred BCE, the great cities slowly emptied."
+    ],
+    [
+     "Narrator",
+     "Why? Nobody knows for sure. Historians suspect a mix: rivers changing course, a river drying up, and the monsoon growing weaker for years."
+    ],
+    [
+     "Narrator",
+     "People drifted east and south into smaller villages. The drains filled with mud. The cities were forgotten."
+    ],
+    [
+     "Narrator",
+     "For almost four thousand years."
+    ],
+    [
+     "Narrator",
+     "And how did the world rediscover them? Through a railway."
+    ],
+    [
+     "Narrator",
+     "In the eighteen-fifties, British engineers were building a railway line in Punjab. They needed lots of bricks."
+    ],
+    [
+     "Narrator",
+     "And near a village called Harappa, they found a huge pile of old, perfect bricks just lying in the ground."
+    ],
+    [
+     "Chars",
+     "Sir, there's an old ruin full of bricks over there."
+    ],
+    [
+     "Chars",
+     "[delighted] Free bricks? Splendid. Old ruins never matter."
+    ],
+    [
+     "Chars",
+     "[face in his hands] They matter. They really, really matter."
+    ],
+    [
+     "Narrator",
+     "Bricks from a four-thousand-year-old city ended up under the tracks."
+    ],
+    [
+     "Narrator",
+     "Only in the nineteen-twenties did archaeologists realise what they were digging up: one of the oldest civilisations on Earth."
+    ],
+    [
+     "Narrator",
+     "So that was India's first shine. Rich, organised, connected to the world."
+    ],
+    [
+     "Narrator",
+     "And then, its first shatter. Its cities fell silent."
+    ],
+    [
+     "Chars",
+     "[making a note] Loop step one. Check."
+    ],
+    [
+     "Narrator",
+     "But the land didn't stay empty for long. Over the mountains in the northwest, new people were coming. They brought horses, chariots..."
+    ],
+    [
+     "Narrator",
+     "...and a collection of hymns so sacred, it was passed down word for word, by memory alone, for more than three thousand years."
+    ],
+    [
+     "Chars",
+     "[watch ticking, leaning in] Now this one, people still argue about."
+    ]
+   ]
+  },
+  {
+   "name": "c1b2",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would. VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "So we don't know what they called themselves. We don't know their kings, their gods, or their stories."
+    ],
+    [
+     "Narrator",
+     "Oddly, archaeologists haven't found grand palaces or giant royal tombs either. Just well-planned cities, built for ordinary people."
+    ],
+    [
+     "Narrator",
+     "Then, around nineteen hundred BCE, the great cities slowly emptied."
+    ],
+    [
+     "Narrator",
+     "Why? Nobody knows for sure. Historians suspect a mix: rivers changing course, a river drying up, and the monsoon growing weaker for years."
+    ],
+    [
+     "Narrator",
+     "People drifted east and south into smaller villages. The drains filled with mud. The cities were forgotten."
+    ],
+    [
+     "Narrator",
+     "For almost four thousand years."
+    ],
+    [
+     "Narrator",
+     "And how did the world rediscover them? Through a railway."
+    ],
+    [
+     "Narrator",
+     "In the eighteen-fifties, British engineers were building a railway line in Punjab. They needed lots of bricks."
+    ],
+    [
+     "Narrator",
+     "And near a village called Harappa, they found a huge pile of old, perfect bricks just lying in the ground."
+    ],
+    [
+     "Chars",
+     "Sir, there's an old ruin full of bricks over there."
+    ],
+    [
+     "Chars",
+     "[delighted] Free bricks? Splendid. Old ruins never matter."
+    ],
+    [
+     "Chars",
+     "[face in his hands] They matter. They really, really matter."
+    ],
+    [
+     "Narrator",
+     "Bricks from a four-thousand-year-old city ended up under the tracks."
+    ],
+    [
+     "Narrator",
+     "Only in the nineteen-twenties did archaeologists realise what they were digging up: one of the oldest civilisations on Earth."
+    ],
+    [
+     "Narrator",
+     "So that was India's first shine. Rich, organised, connected to the world."
+    ],
+    [
+     "Narrator",
+     "And then, its first shatter. Its cities fell silent."
+    ],
+    [
+     "Chars",
+     "[making a note] Loop step one. Check."
+    ],
+    [
+     "Narrator",
+     "But the land didn't stay empty for long. Over the mountains in the northwest, new people were coming. They brought horses, chariots..."
+    ],
+    [
+     "Narrator",
+     "...and a collection of hymns so sacred, it was passed down word for word, by memory alone, for more than three thousand years."
+    ],
+    [
+     "Chars",
+     "[watch ticking, leaning in] Now this one, people still argue about."
+    ]
+   ]
+  }
+ ]
+}

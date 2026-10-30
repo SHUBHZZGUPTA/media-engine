@@ -2,15 +2,17 @@
 """Assemble India narration from the TTS parts (pilot: hook + ch1).
 For each part: line timings (linetimes.py), character pitches (charvoices.py). Then concatenate with a short gap,
 speed up (atempo), and write voice_full.wav, lines_full.json (sped-up times) and words_full.txt (raw times; plan divides by speed).
-Usage: python3 assemble_voice.py <job_id> <out_dir> <part|job:part,...> [speed]  e.g. in-pilot-en pilot p01,p02,p03
+Usage: python3 assemble_voice.py <job_id> <out_dir> <part|job:part,...> [speed] [--chapter-after=part,part]  e.g. in-pilot-en pilot p01,p02,p03
 """
 import json, os, subprocess, sys, wave
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", ".."); ENG = os.path.join(HERE, "..", "engine")
 JOB, OUTD, PARTN = sys.argv[1], os.path.join(HERE, sys.argv[2]), sys.argv[3].split(",")
-SPEED = float(sys.argv[4]) if len(sys.argv) > 4 else 1.12
+SPEED = float(sys.argv[4]) if len(sys.argv) > 4 and not sys.argv[4].startswith('--') else 1.12
 PARTS = [tuple(n.split(":")) if ":" in n else (JOB, n) for n in PARTN]   # "job:item" picks a take from another job
 GAP = 0.9
+LONG = [a.split('=')[1].split(',') for a in sys.argv if a.startswith('--chapter-after=')]; LONG = set(LONG[0]) if LONG else set()
+CHAPGAP = 2.6   # raw seconds of music-only beat after a part that ends a chapter (covers the take switch at the chapter card)
 PITCH = {"TRAVELLER": 2, "INSPECTOR": -3, "BRICKMAKER": 3, "ENGINEER": -1, "FOREMAN": -2}
 W = os.path.join(OUTD, "voice_work"); os.makedirs(W, exist_ok=True)
 def run(*a): subprocess.run(list(a), check=True)
@@ -98,7 +100,8 @@ for job, name in PARTS:
     dur = len(x) / sr; G0 += len(PL)
     for l in PL: allL.append(dict(l, t0=l["t0"] + off, t1=l["t1"] + off))
     for a_, b_, wd in PW: allW.append(f"{a_ + off:.3f} {b_ + off:.3f} {wd}")
-    chunks.append(x); chunks.append(np.zeros(int(GAP * sr), np.int16)); off += dur + GAP
+    g_ = CHAPGAP if name in LONG else GAP
+    chunks.append(x); chunks.append(np.zeros(int(g_ * sr), np.int16)); off += dur + g_
     print(name, round(dur, 1), "s; lines", len(PL), flush=True)
 raw = os.path.join(W, "voice_raw.wav")
 with wave.open(raw, "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes(np.concatenate([np.zeros(int(LEAD * sr), np.int16)] + chunks).tobytes())
