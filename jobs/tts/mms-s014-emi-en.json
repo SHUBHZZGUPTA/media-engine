@@ -1,0 +1,78 @@
+{
+ "id": "mms-s014-emi-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Your no-cost EMI can cost about twenty percent more than paying cash. How is that free?"
+    ],
+    [
+     "Narrator",
+     "The deal: a three hundred dollar phone, six easy payments, zero interest."
+    ],
+    [
+     "Narrator",
+     "But the bank still charges interest. The store just hides it."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Free money? Even I'm not that shiny."
+    ],
+    [
+     "Narrator",
+     "So where does the interest go?"
+    ],
+    [
+     "Narrator",
+     "Into the discount. Say cash buyers pay two hundred and fifty-five dollars. You skip that discount and pay three hundred."
+    ],
+    [
+     "Narrator",
+     "Then tax on that hidden interest, plus a processing fee."
+    ],
+    [
+     "Narrator",
+     "And here's the part almost nobody reads."
+    ],
+    [
+     "Narrator",
+     "In twenty thirteen, India's central bank said zero percent interest doesn't exist."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the interest didn't vanish. It moved into the price."
+    ],
+    [
+     "Narrator",
+     "In this example, you pay about twenty-one percent more, for the same phone."
+    ],
+    [
+     "Chars",
+     "[delighted, squeaky banknote, surprised to be winning] Wait. Cash is the discount?"
+    ],
+    [
+     "Narrator",
+     "So no cost does mean no cost... for the store."
+    ],
+    [
+     "Narrator",
+     "Comment: do you check the cash price first?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}

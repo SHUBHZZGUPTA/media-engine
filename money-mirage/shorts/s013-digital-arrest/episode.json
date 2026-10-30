@@ -1,0 +1,40 @@
+{
+ "slug": "mms-s013-arrest",
+ "title": "Arrested on a Video Call? It's a $200M Scam",
+ "lang": "en",
+ "src": "money-mirage/ep01v3/src",
+ "depth_jobs": [
+  "mm3-plates-a",
+  "mm3-plates-b",
+  "mm3-plates-c",
+  "mms-s013-15-art"
+ ],
+ "tts_parts": [
+  [
+   0,
+   0
+  ]
+ ],
+ "tts_speakers": {
+  "Narrator": "Sadaltager",
+  "Chars": "Puck"
+ },
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "music": {
+  "tracks": [
+   "5b_shadows"
+  ],
+  "offsets": {},
+  "source": "YouTube Audio Library, chosen by Shubham"
+ },
+ "related": null
+}
