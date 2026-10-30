@@ -35,9 +35,9 @@ beat('moment', A(3, 0, -.3), what='char', shot='s04', who='c_goldie', side='M', 
 # ---- 5 OPEN LOOP 1: where does the interest go?
 shot('s05', CUPS, 'film', A(4, 0, -.15), cut='zoomIn', cam0=PORT(.5, .55, 1.3), cam1=PORT(.5, .58, 1.55))
 # ---- 6 into the discount: cash $255 vs you $300
-shot('s06', BUY, 'film', A(5, 0, -.15), cut='whip', cam0=PORT(.5, .5, 1.1), cam1=PORT(.5, .5, 1.25))
+shot('s06', BUY, 'film', A(5, 0, -.15), cut='whip', cam0=PORT(.55, .5, 1.1), cam1=PORT(.65, .52, 1.25))
 beat('slam', Wd(5, NW['255'], -.03), to=255, prefix='$', **NUM, until=A(5, 2, -.1))
-beat('circle', A(5, 2, .4), shot='s06', c=c('long_receipt', [.65, .75]), r=[180, 260], until=A(6, 0, -.1))
+beat('circle', A(5, 2, .4), shot='s06', c=c('long_receipt', [.65, .75]), r=[110, 230], until=A(6, 0, -.1))
 # ---- 7 tax on hidden interest + processing fee
 shot('s07', BUY, 'film', A(6, 0, -.12), cut='zoomIn', cam0=PORT(*c('long_receipt_cam', [.62, .7]), 1.45), cam1=PORT(*c('long_receipt_cam', [.62, .78]), 1.6))
 beat('punch', A(6, 1, .3), shot='s07', level=1.3)

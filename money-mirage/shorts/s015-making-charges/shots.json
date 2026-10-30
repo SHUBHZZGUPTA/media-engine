@@ -2,7 +2,7 @@
  "shots": [
   {
    "id": "s00",
-   "img": "gold_window",
+   "img": "gj_necklace",
    "look": "film",
    "at": {
     "@": [
@@ -14,12 +14,12 @@
    "cut": "curve",
    "cam0": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.15
    },
    "cam1": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.3
    },
    "keys": [],
@@ -54,7 +54,7 @@
   },
   {
    "id": "s02",
-   "img": "chengdu_market",
+   "img": "gj_shop",
    "look": "film",
    "at": {
     "@": [
@@ -79,7 +79,7 @@
   },
   {
    "id": "s03",
-   "img": "chengdu_market",
+   "img": "gj_shop",
    "look": "soft",
    "at": {
     "@": [
@@ -102,7 +102,7 @@
   },
   {
    "id": "s04",
-   "img": "gold_window",
+   "img": "gj_necklace",
    "look": "film",
    "at": {
     "@": [
@@ -114,12 +114,12 @@
    "cut": "zoomIn",
    "cam0": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.1
    },
    "cam1": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.4
    },
    "keys": [],
@@ -127,7 +127,7 @@
   },
   {
    "id": "s05",
-   "img": "gold_window",
+   "img": "gj_necklace",
    "look": "film",
    "at": {
     "@": [
@@ -144,7 +144,7 @@
    },
    "cam1": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.6
    },
    "keys": [],
@@ -152,7 +152,7 @@
   },
   {
    "id": "s06",
-   "img": "lydia_mint",
+   "img": "gj_goldsmith",
    "look": "film",
    "at": {
     "@": [
@@ -177,7 +177,7 @@
   },
   {
    "id": "s07",
-   "img": "chengdu_market",
+   "img": "gj_shop",
    "look": "film",
    "at": {
     "@": [
@@ -202,7 +202,7 @@
   },
   {
    "id": "s08",
-   "img": "p_earlymoney",
+   "img": "gj_scale",
    "look": "film",
    "at": {
     "@": [
@@ -227,7 +227,7 @@
   },
   {
    "id": "s09",
-   "img": "p_earlymoney",
+   "img": "gj_scale",
    "look": "film",
    "at": {
     "@": [
@@ -252,7 +252,7 @@
   },
   {
    "id": "s10",
-   "img": "p_earlymoney",
+   "img": "gj_scale",
    "look": "film",
    "at": {
     "@": [
@@ -263,13 +263,13 @@
    },
    "cut": "zoomIn",
    "cam0": {
-    "x": 0.5,
-    "y": 0.3,
+    "x": 0.6,
+    "y": 0.25,
     "z": 1.25
    },
    "cam1": {
-    "x": 0.5,
-    "y": 0.28,
+    "x": 0.6,
+    "y": 0.25,
     "z": 1.45
    },
    "keys": [],
@@ -311,7 +311,7 @@
   },
   {
    "id": "s12",
-   "img": "lydia_mint",
+   "img": "gj_goldsmith",
    "look": "film",
    "at": {
     "@": [
@@ -336,7 +336,7 @@
   },
   {
    "id": "s13",
-   "img": "gold_window",
+   "img": "gj_necklace",
    "look": "film",
    "at": {
     "@": [
@@ -348,12 +348,12 @@
    "cut": "zoom",
    "cam0": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.1
    },
    "cam1": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.3
    },
    "keys": [],
@@ -409,7 +409,7 @@
   },
   {
    "id": "s16",
-   "img": "gold_window",
+   "img": "gj_necklace",
    "look": "film",
    "at": {
     "@": [
@@ -421,12 +421,12 @@
    "cut": "zoom",
    "cam0": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.2
    },
    "cam1": {
     "x": 0.5,
-    "y": 0.5,
+    "y": 0.4,
     "z": 1.35
    },
    "keys": [],
@@ -588,8 +588,8 @@
    },
    "shot": "s06",
    "c": [
-    0.5,
-    0.55
+    0.6,
+    0.5
    ],
    "r": [
     220,
@@ -637,8 +637,8 @@
    },
    "shot": "s08",
    "c": [
-    0.5,
-    0.6
+    0.38,
+    0.39
    ],
    "r": [
     200,

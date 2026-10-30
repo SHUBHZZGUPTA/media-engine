@@ -12,7 +12,7 @@ LOOKS = {
     'soft': '{"preset":"vintage-wash","intensity":0.5,"adjust":{"exposure":-0.35},"effects":{"blur":0.55}}',
 }
 ENV = dict(os.environ, HYPERFRAMES_NO_TELEMETRY='1', DO_NOT_TRACK='1', HYPERFRAMES_NO_UPDATE_CHECK='1', HYPERFRAMES_SKIP_SKILLS='1',
-           HYPERFRAMES_BROWSER_PATH='/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell')
+           HYPERFRAMES_BROWSER_PATH=os.environ.get('HYPERFRAMES_BROWSER_PATH', '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell'))
 OUT = os.path.join(HERE, 'art/baked'); os.makedirs(OUT, exist_ok=True)
 for spec in sys.argv[1:]:
     name, look = spec.split(':'); stem = os.path.splitext(name)[0]; dst = os.path.join(OUT, f'{stem}__{look}.jpg')
@@ -30,10 +30,11 @@ for spec in sys.argv[1:]:
     if not src: src = os.path.join(HERE, 'art', name) if os.path.exists(os.path.join(HERE, 'art', name)) else os.path.join(SRC, name)
     print('  source', src)
     shutil.copy(src, d + '/assets/' + name); shutil.copy(os.path.join(ENG, 'node_modules/gsap/dist/gsap.min.js'), d)
+    w0, h0 = Image.open(src).size; CW, CH = (2560, 1440) if w0 >= h0 else (1440, round(1440 * h0 / w0))   # portrait plates keep their aspect
     open(d + '/index.html', 'w').write(f'''<!doctype html><html><head><meta charset="UTF-8"><script src="./gsap.min.js"></script>
-<style>body{{margin:0}}#root{{position:relative;width:2560px;height:1440px;overflow:hidden;background:#000}}</style></head><body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="2560" data-height="1440">
-<img id="m" src="assets/{name}" style="position:absolute;left:0;top:0;width:2560px;height:1440px;object-fit:cover" alt=""></div>
+<style>body{{margin:0}}#root{{position:relative;width:{CW}px;height:{CH}px;overflow:hidden;background:#000}}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="{CW}" data-height="{CH}">
+<img id="m" src="assets/{name}" style="position:absolute;left:0;top:0;width:{CW}px;height:{CH}px;object-fit:cover" alt=""></div>
 <script>window.__timelines={{}};window.__timelines.main=gsap.timeline({{paused:true}}).to({{}},{{duration:1}});</script></body></html>''')
     subprocess.run(['npx', 'hyperframes', 'media-treatment', '--project', d, '--selector', '#m', '--grading', LOOKS[look], '--apply'], env=ENV, check=True, capture_output=True, cwd=ENG)
     subprocess.run(['npx', 'hyperframes', 'snapshot', d, '-o', d + '/snap', '--at', '0.5', '--no-end', '--describe', 'false'], env=ENV, check=True, capture_output=True, cwd=ENG)

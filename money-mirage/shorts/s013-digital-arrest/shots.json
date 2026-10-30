@@ -2,7 +2,7 @@
  "shots": [
   {
    "id": "s00",
-   "img": "red_phone",
+   "img": "da_videocall",
    "look": "film",
    "at": {
     "@": [
@@ -27,7 +27,7 @@
   },
   {
    "id": "s01",
-   "img": "wallet_desk",
+   "img": "da_transfer",
    "look": "film",
    "at": {
     "@": [
@@ -78,7 +78,7 @@
   },
   {
    "id": "s03",
-   "img": "wallet_desk",
+   "img": "da_transfer",
    "look": "soft",
    "at": {
     "@": [
@@ -101,7 +101,7 @@
   },
   {
    "id": "s04",
-   "img": "red_phone",
+   "img": "da_videocall",
    "look": "film",
    "at": {
     "@": [
@@ -126,7 +126,7 @@
   },
   {
    "id": "s05",
-   "img": "medicine_bottle",
+   "img": "da_parcel",
    "look": "film",
    "at": {
     "@": [
@@ -151,7 +151,7 @@
   },
   {
    "id": "s06",
-   "img": "tv_1971",
+   "img": "da_fakeset",
    "look": "film",
    "at": {
     "@": [
@@ -176,7 +176,7 @@
   },
   {
    "id": "s07",
-   "img": "red_phone",
+   "img": "da_videocall",
    "look": "film",
    "at": {
     "@": [
@@ -226,7 +226,7 @@
   },
   {
    "id": "s09",
-   "img": "wallet_desk",
+   "img": "da_transfer",
    "look": "film",
    "at": {
     "@": [
@@ -251,7 +251,7 @@
   },
   {
    "id": "s10",
-   "img": "wallet_desk",
+   "img": "da_transfer",
    "look": "film",
    "at": {
     "@": [
@@ -310,7 +310,7 @@
   },
   {
    "id": "s12",
-   "img": "tv_1971",
+   "img": "da_fakeset",
    "look": "film",
    "at": {
     "@": [
@@ -335,7 +335,7 @@
   },
   {
    "id": "s13",
-   "img": "central_bank",
+   "img": "da_court",
    "look": "film",
    "at": {
     "@": [
@@ -360,7 +360,7 @@
   },
   {
    "id": "s14",
-   "img": "red_phone",
+   "img": "da_videocall",
    "look": "film",
    "at": {
     "@": [
@@ -595,8 +595,8 @@
    },
    "shot": "s05",
    "c": [
-    0.5,
-    0.5
+    0.45,
+    0.3
    ],
    "r": [
     200,
@@ -683,12 +683,12 @@
    },
    "shot": "s10",
    "from": [
-    0.3,
-    0.7
+    0.62,
+    0.46
    ],
    "to": [
-    0.5,
-    0.4
+    0.47,
+    0.28
    ],
    "col": "#FFC23A",
    "until": {
@@ -734,8 +734,8 @@
    },
    "shot": "s14",
    "c": [
-    0.5,
-    0.4
+    0.62,
+    0.33
    ],
    "r": [
     230,

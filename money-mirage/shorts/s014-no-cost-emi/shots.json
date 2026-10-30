@@ -2,7 +2,7 @@
  "shots": [
   {
    "id": "s00",
-   "img": "wallet_desk",
+   "img": "emi_counter",
    "look": "film",
    "at": {
     "@": [
@@ -27,7 +27,7 @@
   },
   {
    "id": "s01",
-   "img": "chess_queen",
+   "img": "emi_cups",
    "look": "film",
    "at": {
     "@": [
@@ -52,7 +52,7 @@
   },
   {
    "id": "s02",
-   "img": "coin_spin",
+   "img": "emi_envelopes",
    "look": "film",
    "at": {
     "@": [
@@ -77,7 +77,7 @@
   },
   {
    "id": "s03",
-   "img": "chess_queen",
+   "img": "emi_cups",
    "look": "film",
    "at": {
     "@": [
@@ -102,7 +102,7 @@
   },
   {
    "id": "s04",
-   "img": "wallet_desk",
+   "img": "emi_counter",
    "look": "soft",
    "at": {
     "@": [
@@ -125,7 +125,7 @@
   },
   {
    "id": "s05",
-   "img": "chess_queen",
+   "img": "emi_cups",
    "look": "film",
    "at": {
     "@": [
@@ -150,7 +150,7 @@
   },
   {
    "id": "s06",
-   "img": "uk_high_street_1991",
+   "img": "emi_buyers",
    "look": "film",
    "at": {
     "@": [
@@ -175,7 +175,7 @@
   },
   {
    "id": "s07",
-   "img": "uk_high_street_1991",
+   "img": "emi_buyers",
    "look": "film",
    "at": {
     "@": [
@@ -186,13 +186,13 @@
    },
    "cut": "zoomIn",
    "cam0": {
-    "x": 0.62,
-    "y": 0.7,
+    "x": 0.72,
+    "y": 0.55,
     "z": 1.45
    },
    "cam1": {
-    "x": 0.62,
-    "y": 0.78,
+    "x": 0.72,
+    "y": 0.55,
     "z": 1.6
    },
    "keys": [],
@@ -319,7 +319,7 @@
   },
   {
    "id": "s12",
-   "img": "wallet_desk",
+   "img": "emi_counter",
    "look": "film",
    "at": {
     "@": [
@@ -344,7 +344,7 @@
   },
   {
    "id": "s13",
-   "img": "uk_high_street_1991",
+   "img": "emi_buyers",
    "look": "film",
    "at": {
     "@": [
@@ -369,7 +369,7 @@
   },
   {
    "id": "s14",
-   "img": "coin_spin",
+   "img": "emi_envelopes",
    "look": "soft",
    "at": {
     "@": [
@@ -392,7 +392,7 @@
   },
   {
    "id": "s15",
-   "img": "chess_queen",
+   "img": "emi_cups",
    "look": "film",
    "at": {
     "@": [
@@ -417,7 +417,7 @@
   },
   {
    "id": "s16",
-   "img": "wallet_desk",
+   "img": "emi_counter",
    "look": "film",
    "at": {
     "@": [
@@ -560,8 +560,8 @@
    },
    "shot": "s03",
    "c": [
-    0.5,
-    0.6
+    0.42,
+    0.5
    ],
    "r": [
     170,
@@ -640,8 +640,8 @@
    },
    "shot": "s06",
    "c": [
-    0.65,
-    0.75
+    0.87,
+    0.6
    ],
    "r": [
     180,
