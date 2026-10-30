@@ -1,0 +1,37 @@
+{
+ "job": "in-pilot-en-v2",
+ "items": [
+  {
+   "name": "p01a",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 126.4,
+   "took": 44.7
+  },
+  {
+   "name": "p01b",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 122.08,
+   "took": 38.7
+  },
+  {
+   "name": "p02a",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 169.88,
+   "took": 53.3
+  },
+  {
+   "name": "p02b",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 176.04,
+   "took": 54.9
+  }
+ ]
+}
