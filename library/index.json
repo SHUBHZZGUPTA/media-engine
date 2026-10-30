@@ -71,7 +71,12 @@
   },
   "c_proxb": {
    "desc": "Proxima b personified: planet ball split vertically, left half sunlit orange cracked desert with sunglasses, right half frozen blue ice with icicles and red knitted scarf; left hand waving, right hand holding a blank sunscreen bottle; calm friendly half-smile; faces front-left. (Proxima b, 2026-10-29, Codex)"
-  }
+  },
+  "c_mayon": "Mayon Volcano personified: steep symmetric grey-violet cone body with green grassy skirt, white steam puff from the tip, hand to chin; smug half-closed eyes; faces left. (Mayon, 2026-10-30, Codex)",
+  "c_drop_mad": "Raindrop (c_drop) re-dressed: arms crossed, grumpy frown, sweat drop, splash at base; faces right. (Mayon, 2026-10-30, Codex edit)",
+  "c_turnip": "Grumpy Irish turnip personified: whitish-purple turnip body, leafy sprout tuft, carved jack-o'-lantern grin glowing on lower body, arms crossed; frown; faces right. (Halloween, 2026-10-30, Codex)",
+  "c_pumpkin": "Proud pumpkin personified: round glossy orange pumpkin body, curly stem, carved glowing grin, one arm flexing; delighted closed-eye grin; faces left. (Halloween, 2026-10-30, Codex)",
+  "c_sat": "Navigation satellite personified: gold-foil box body, blue solar-panel wings as arms, dish antenna hat; cheeky grin; faces left. (NavIC, 2026-10-30, Codex)"
  },
  "scenes": {
   "budapest_aerial": "Bird's-eye illustrated early-1800s twin towns on a vertical river; hills+castle left, flat town right, no bridges. Landmarks (1024x1536 px): castle 140,190; Buda town 180,470; river centre ~520,640; Pest market 820,690; north/Obuda 170,120.",
@@ -254,6 +259,51 @@
   },
   "tw2_tm": {
    "desc": "Alien surface on the day-night line: left blazing orange desert under a big red-orange sun (~128,179), right frozen blue ice under a starry night; open rocky ground lower middle. (Proxima b)"
+  },
+  "mayon_calm": {
+   "desc": "Mayon Volcano, Albay, clear morning: symmetric cone, summit ~(512,318), green fields + river foreground. (Mayon)"
+  },
+  "mayon_erupt": {
+   "desc": "Same view as mayon_calm (not pixel-aligned) with a grey ash column, summit ~(512,345). (Mayon)"
+  },
+  "old_hills_rain": {
+   "desc": "Old eroded hills in steady rain, gullies, waterfall gully ~(282,480). (Mayon)"
+  },
+  "xsec_volcano_layers": {
+   "desc": "3D diorama: stratovolcano cut in half, onion layers, glowing magma pipe; summit ~(512,190), chamber ~(512,1100). (Mayon)"
+  },
+  "xsec_subduction": {
+   "desc": "3D diorama: ocean plate diving under island plate, melt zone ~(790,820) feeding a cone volcano. (Mayon)"
+  },
+  "turnip_lantern": {
+   "desc": "Carved turnip jack-o'-lantern on Irish cottage windowsill at night, turnip ~(482,602). (Halloween)"
+  },
+  "hill_of_ward_dusk": {
+   "desc": "Hill of Ward / Tlachtga style ringfort hill at dusk, hilltop ~(512,421). (Halloween)"
+  },
+  "hill_of_ward_fire": {
+   "desc": "Same hill at night with a bonfire on top and beacon fires on far hills (~y 301). (Halloween)"
+  },
+  "irish_cottage_night": {
+   "desc": "Thatched Irish cottage at night with turnip lanterns in the window ~(361,572). (Halloween)"
+  },
+  "emigrant_ship": {
+   "desc": "19th-century three-masted ship on the rough Atlantic, deck foreground, ship ~(512,301). (Halloween)"
+  },
+  "us_porch_pumpkins": {
+   "desc": "American porch steps covered in glowing jack-o'-lanterns at night, steps ~(520,500). (Halloween)"
+  },
+  "phone_map_pin": {
+   "desc": "Unbranded smartphone on a table at night showing a map with a red pin ~(482,828). (NavIC)"
+  },
+  "rocket_launch_night": {
+   "desc": "Generic white rocket with 4 strap-ons lifting off at night from a coastal pad, nose ~(512,301). (NavIC)"
+  },
+  "nav_sat_over_india": {
+   "desc": "Gold-foil navigation satellite ~(587,361) above Earth with India and the Indian Ocean visible. (NavIC)"
+  },
+  "xsec_atomic_clock": {
+   "desc": "3D diorama: satellite atomic clock module cut open, violet glowing cell ~(482,722), cracked sparking corner ~(873,421). (NavIC)"
   }
  }
 }
