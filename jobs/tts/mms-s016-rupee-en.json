@@ -1,0 +1,70 @@
+{
+ "id": "mms-s016-rupee-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Your grandparents may say one rupee once equalled one dollar. Today a dollar costs about ninety-five. Was it ever true?"
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky banknote, trembling] Ninety-five of you, for one of me?"
+    ],
+    [
+     "Narrator",
+     "So when was a rupee worth a dollar?"
+    ],
+    [
+     "Narrator",
+     "In nineteen forty-seven? Never. Sorry, Grandpa. A dollar cost about three point three rupees."
+    ],
+    [
+     "Narrator",
+     "It was tied to the British pound, not the dollar."
+    ],
+    [
+     "Narrator",
+     "In nineteen sixty-six, after a war and a drought, India devalued to seven point five."
+    ],
+    [
+     "Narrator",
+     "In nineteen ninety-one, India nearly ran out of dollars. A year later: past thirty."
+    ],
+    [
+     "Narrator",
+     "And here's the part almost nobody mentions."
+    ],
+    [
+     "Narrator",
+     "A falling rupee isn't always failure. It makes Indian exports cheaper."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the golden age of one rupee, one dollar never existed."
+    ],
+    [
+     "Narrator",
+     "Near a record low, the real question isn't the rupee. It's whether your income outruns the dollar."
+    ],
+    [
+     "Narrator",
+     "Comment: what did your grandparents tell you?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "id": "mms-s017-pig-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Americans lost over seven billion dollars to crypto scams last year. Many begin with a wrong-number text. Would you reply?"
+    ],
+    [
+     "Narrator",
+     "A friendly stranger. Weeks of chats. Then your savings are gone."
+    ],
+    [
+     "Narrator",
+     "Scammers call it pig butchering. First, they fatten the pig."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Charming name. Very professional."
+    ],
+    [
+     "Narrator",
+     "So how do they fatten you?"
+    ],
+    [
+     "Narrator",
+     "They're patient. Daily chats. A friendship. Maybe romance."
+    ],
+    [
+     "Narrator",
+     "Then a tip: a crypto app where they're making a fortune."
+    ],
+    [
+     "Narrator",
+     "You invest a little. The app shows huge profits. You even withdraw some."
+    ],
+    [
+     "Narrator",
+     "And that's exactly when it turns."
+    ],
+    [
+     "Narrator",
+     "You invest more. To cash out, there's suddenly a \"tax\" to pay first."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the profits were just numbers on a fake app."
+    ],
+    [
+     "Narrator",
+     "Days ago, US prosecutors charged a ring whose workers got bonuses for stealing more."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky banknote, trembling] They had performance reviews?"
+    ],
+    [
+     "Narrator",
+     "So if a friendly stranger wants to teach you investing... you're the pig."
+    ],
+    [
+     "Narrator",
+     "Comment: ever got a wrong-number text?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}

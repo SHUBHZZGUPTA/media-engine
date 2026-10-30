@@ -1,0 +1,78 @@
+{
+ "id": "mms-s018-musa-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "One king's trip to Cairo made gold cheaper for twelve years. How do you make gold lose value?"
+    ],
+    [
+     "Narrator",
+     "In thirteen twenty-four, Mansa Musa, ruler of Mali, stopped there on his way to Mecca."
+    ],
+    [
+     "Narrator",
+     "The story goes his caravan carried tons of gold."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Finally, a man who understood me."
+    ],
+    [
+     "Narrator",
+     "So how did one man do that?"
+    ],
+    [
+     "Narrator",
+     "He gave it away. To officials, to emirs, to the treasury. His people spent it everywhere."
+    ],
+    [
+     "Narrator",
+     "Suddenly, Cairo had more gold than it knew what to do with."
+    ],
+    [
+     "Narrator",
+     "And then things got really strange."
+    ],
+    [
+     "Narrator",
+     "A gold coin worth twenty-five silver coins fell to twenty-two, or less."
+    ],
+    [
+     "Narrator",
+     "A Cairo writer said it stayed low for about twelve years."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: gold isn't valuable for being gold. It's valuable for being rare."
+    ],
+    [
+     "Chars",
+     "[delighted, squeaky banknote, surprised to be winning] So I'm rare too?"
+    ],
+    [
+     "Narrator",
+     "Flood a city with it, and even a king's gold becomes ordinary."
+    ],
+    [
+     "Narrator",
+     "Comment: what would you do with a ton of gold?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}

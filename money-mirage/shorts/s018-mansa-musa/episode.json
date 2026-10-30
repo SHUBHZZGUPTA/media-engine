@@ -1,0 +1,42 @@
+{
+ "slug": "mms-s018-musa",
+ "title": "The King Who Crashed Gold in 1324",
+ "lang": "en",
+ "src": "money-mirage/ep01v3/src",
+ "depth_jobs": [
+  "mm3-plates-a",
+  "mm3-plates-b",
+  "mm3-plates-c",
+  "mm-ep02-plates-a",
+  "mm-ep02-plates-b",
+  "mms-s016-18-art"
+ ],
+ "tts_parts": [
+  [
+   0,
+   0
+  ]
+ ],
+ "tts_speakers": {
+  "Narrator": "Sadaltager",
+  "Chars": "Puck"
+ },
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "music": {
+  "tracks": [
+   "1_keys"
+  ],
+  "offsets": {},
+  "source": "YouTube Audio Library, chosen by Shubham"
+ },
+ "related": null
+}
