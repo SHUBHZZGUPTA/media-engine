@@ -43,7 +43,11 @@ if BELOW is not None:
     vr = 20 * np.log10(np.sqrt(np.mean(rms[speaking] ** 2)) + 1e-9); tgt = vr - BELOW - DUCK
     mr = np.sqrt((music[:n * hop].reshape(n, hop) ** 2).mean(1)); w = 300
     mr = np.sqrt(np.convolve(mr ** 2, np.ones(w) / w, "same")) + 1e-9
-    g = tgt - 20 * np.log10(mr); g = np.clip(g, np.median(g) - 6, np.median(g) + 6)   # cap boosts/cuts at +-6 dB around the typical gain
+    tg = np.full(n, tgt, np.float32)                                     # per-section override: {"below_voice_db": 20} on a section
+    for sec in cfg["sections"]:
+        if "below_voice_db" in sec:
+            a_, b_ = int(sec["from"] * SR) // hop, min(int(sec["to"] * SR) // hop, n); tg[a_:b_] = vr - sec["below_voice_db"] - DUCK
+    g = tg - 20 * np.log10(mr); med = np.median(g); g = np.clip(g, med - 6, med + 6)   # cap boosts/cuts at +-6 dB around the typical gain
     g = np.convolve(g, np.ones(w) / w, "same")
     music[:n * hop] *= np.repeat(db(g).astype(np.float32), hop)
     print(f"music levelled: voice {vr:.1f} dBFS, bed {tgt + DUCK:.1f} under speech, {tgt:.1f} in pauses", flush=True)
