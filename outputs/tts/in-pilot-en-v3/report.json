@@ -1,0 +1,21 @@
+{
+ "job": "in-pilot-en-v3",
+ "items": [
+  {
+   "name": "p02c",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 163.96,
+   "took": 51.0
+  },
+  {
+   "name": "p02d",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 155.6,
+   "took": 48.1
+  }
+ ]
+}
