@@ -3,7 +3,7 @@
 
   bars(path, title, rows)             rows = [(label, value, display, "#hex")]
   cycle(path, steps, upto, highlight) the repeating-story loop, revealed up to step `upto`
-  chapter(path, labels, current, title) parchment chapter map, current chapter highlighted
+  chapter(path, labels, current, title, cols=6) parchment chapter map, current chapter highlighted (cols=7 for 13-14 chapters)
 """
 import math
 from PIL import Image, ImageDraw, ImageFont
@@ -45,12 +45,12 @@ def cycle(path, steps, upto, highlight=None, w=1100, h=820):
     if upto >= n: d.text((cx, cy), "AGAIN", font=F(72), fill=RED, anchor="mm")
     im.save(path)
 
-def chapter(path, labels, current, title, w=1700, h=900):
+def chapter(path, labels, current, title, w=1700, h=900, cols=6):
     im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     d.rounded_rectangle([40, 40, w - 40, h - 40], radius=30, fill=PAPER, outline=PAPER_EDGE, width=10)
     for x in (40, w - 70):                    # scroll rollers
         d.rounded_rectangle([x, 20, x + 30, h - 20], radius=15, fill=PAPER_EDGE)
-    cols = 6; rows = math.ceil(len(labels) / cols); r = 92
+    rows = math.ceil(len(labels) / cols); r = 92 if cols <= 6 else 84
     for k, lab in enumerate(labels):
         gx, gy = k % cols, k // cols
         x = 240 + gx * ((w - 480) / (cols - 1)); y = 230 + gy * 260
@@ -58,6 +58,6 @@ def chapter(path, labels, current, title, w=1700, h=900):
         done, now = k < current, k == current
         fill = RED if now else ((214, 190, 140) if done else (246, 232, 200))
         d.ellipse([x - r, y - r, x + r, y + r], fill=fill, outline=PAPER_EDGE, width=6)
-        d.text((x, y), lab, font=F(30 if len(lab) < 9 else 24), fill=(255, 255, 255) if now else INK, anchor="mm")
+        d.text((x, y), lab, font=F(30 if len(lab) < (9 if r >= 92 else 7) else 24), fill=(255, 255, 255) if now else INK, anchor="mm")
     d.text((w // 2, h - 120), title, font=F(64), fill=INK, anchor="mm")
     im.save(path)

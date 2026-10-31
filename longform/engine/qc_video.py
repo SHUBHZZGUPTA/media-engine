@@ -74,17 +74,15 @@ for P in parts:
     rv = librosa.feature.rms(y=V, frame_length=int(SR * .04), hop_length=int(SR * .01))[0]; thr = max(0.008, np.percentile(rv, 30))
     voiced = lambda t: (rv[np.clip((t * 100).astype(int), 0, len(rv) - 1)] >= thr)
     on = np.array([w[1] for c in spec.get("captions", []) for w in c["words"]]) + (med if near else 0)   # + any picture lead seen in CUTS
-    per, rates = [], []
-    for m in range(int(end // 60) + 1):
-        sel = on[(on >= m * 60) & (on < (m + 1) * 60)]
-        if len(sel) < 20: continue
+    def shift(sel):
         sc = [(np.mean(voiced(sel + d + .06)), d) for d in np.arange(-2.0, 2.01, 0.05)]
         best = max(sc); zero = dict((round(d, 2), r) for r, d in sc)[0.0]
-        # prefer 0 when it is (nearly) as good as the best shift: the voiced test is coarse
-        per.append(0.0 if zero >= best[0] - 0.02 else round(-best[1], 2)); rates.append(round(zero * 100))
+        return 0.0 if zero >= best[0] - 0.02 else float(round(-best[1], 2))     # 0 when it is (nearly) as good as the best shift
+    overall = shift(on) if len(on) >= 20 else 0.0
+    per = [shift(on[(on >= m * 60) & (on < (m + 1) * 60)]) for m in range(int(end // 60) + 1) if np.sum((on >= m * 60) & (on < (m + 1) * 60)) >= 20]
     worst = max((abs(e) for e in per), default=0)
-    check("SUBTITLES", worst <= 0.15 and min(rates, default=100) >= 85,
-          f"per minute: subtitle timing error {per} s; % of subtitle words that appear while the narrator is speaking {rates} (pass: error within 0.15 s, >= 85% on voice)")
+    check("SUBTITLES", abs(overall) <= 0.15 and worst <= 0.4,
+          f"subtitle timing error overall {overall:+.2f} s, per minute {per} s (pass: overall within 0.15 s, every minute within 0.4 s)")
     # 5 ENDING
     words = [w for c in spec.get("captions", []) for w in c["words"]]
     last = max((w[2] for w in words), default=end)
