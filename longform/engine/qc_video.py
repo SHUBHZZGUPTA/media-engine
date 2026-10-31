@@ -67,19 +67,24 @@ for P in parts:
         lags.append(best[1])
         if best[0] < 0.2 or abs(best[1]) > 0.03: bad.append(f"{off + a:.0f}s(r={best[0]:.2f},lag={best[1]:+.2f})")
     check("AUDIO", not bad, f"{n} speech windows checked; narration present at offset 0 in all" if not bad else f"problem windows: {', '.join(bad[:8])}")
-    # 4 SUBTITLES: caption word onsets vs speech onsets in the narration, per minute
+    # 4 SUBTITLES: is the narrator actually speaking when each subtitle word appears? Per minute, find the shift that
+    #   puts the most subtitle-word starts on voiced audio (the subtitles' timing error); it must be ~0.
+    #   Measured on the narration track itself (no music), at the times the words are drawn in the video.
     import librosa
-    y = V; env = librosa.onset.onset_strength(y=y, sr=SR, hop_length=80); tt = np.arange(len(env)) * 80 / SR
-    on = np.array([w[1] for c in spec.get("captions", []) for w in c["words"]])
-    per = []
+    rv = librosa.feature.rms(y=V, frame_length=int(SR * .04), hop_length=int(SR * .01))[0]; thr = max(0.008, np.percentile(rv, 30))
+    voiced = lambda t: (rv[np.clip((t * 100).astype(int), 0, len(rv) - 1)] >= thr)
+    on = np.array([w[1] for c in spec.get("captions", []) for w in c["words"]]) + (med if near else 0)   # + any picture lead seen in CUTS
+    per, rates = [], []
     for m in range(int(end // 60) + 1):
         sel = on[(on >= m * 60) & (on < (m + 1) * 60)]
         if len(sel) < 20: continue
-        per.append(max(((np.mean(np.interp(sel + d, tt, env)), d) for d in np.arange(-2.0, 2.01, 0.02)))[1])
-    # captions are drawn at plan time t, which plays at off + t (+ any video lead, measured by CUTS)
-    eff = [float(round(p_ + (med if near else 0), 2)) for p_ in per]
-    worst = max((abs(e) for e in eff), default=0)
-    check("SUBTITLES", worst <= 0.15, f"subtitle lag vs speech per minute: {eff} s (pass: all within 0.15 s)")
+        sc = [(np.mean(voiced(sel + d + .06)), d) for d in np.arange(-2.0, 2.01, 0.05)]
+        best = max(sc); zero = dict((round(d, 2), r) for r, d in sc)[0.0]
+        # prefer 0 when it is (nearly) as good as the best shift: the voiced test is coarse
+        per.append(0.0 if zero >= best[0] - 0.02 else round(-best[1], 2)); rates.append(round(zero * 100))
+    worst = max((abs(e) for e in per), default=0)
+    check("SUBTITLES", worst <= 0.15 and min(rates, default=100) >= 85,
+          f"per minute: subtitle timing error {per} s; % of subtitle words that appear while the narrator is speaking {rates} (pass: error within 0.15 s, >= 85% on voice)")
     # 5 ENDING
     words = [w for c in spec.get("captions", []) for w in c["words"]]
     last = max((w[2] for w in words), default=end)

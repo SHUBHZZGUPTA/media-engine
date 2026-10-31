@@ -410,7 +410,36 @@ for i, ln in enumerate(L):
         chunk.append([w, tim[k][0], tim[k][1], keys[k]])
         if len(chunk) >= 4 or w[-1:] in ".,!?;:" or k == len(toks) - 1:
             caps.append({"t0": chunk[0][1] - .05, "t1": chunk[-1][2] + .25, "words": chunk}); chunk = []
+# snap subtitle words that start inside a pause to where the voice actually starts (word timings can include the silence
+# before a word, or drift a little inside a phrase). One ordered pass over all words: no word starts before the previous
+# word ends, then each chunk's start/end is rebuilt from its words.
+try:
+    import librosa as _lr, numpy as _np
+    _vp = os.path.join(os.path.dirname(os.path.abspath(WORDS)), "voice_en.wav")
+    _y, _sr = _lr.load(_vp, sr=16000); _r = _lr.feature.rms(y=_y, frame_length=320, hop_length=160)[0]; _thr = 0.008
+    _moved, _prev = 0, -1.0
+    for c_ in caps:
+        for w_ in c_["words"]:
+            i = int(w_[1] * 100)
+            if i < len(_r) and _r[i:i + 6].max() < _thr:                      # starts in a pause: move to the voice onset (max 1.2 s)
+                j = i
+                while j < min(len(_r), i + 120) and _r[j] < _thr: j += 1
+                if j < i + 120: w_[1] = j / 100; _moved += 1
+            w_[1] = max(w_[1], _prev); w_[2] = max(w_[2], w_[1] + .1); _prev = w_[2]
+    for k_, c_ in enumerate(caps):
+        c_["t0"] = c_["words"][0][1] - .05
+        if k_: c_["t0"] = max(c_["t0"], caps[k_ - 1]["words"][-1][2])
+        c_["t1"] = c_["words"][-1][2] + .25
+    print("subtitle words snapped to voice onset:", _moved)
+except Exception as e_: print("snap skipped:", e_)
 for x, y in zip(caps, caps[1:]): x["t1"] = min(x["t1"], y["t0"])
+_m = []                                                            # a chunk shown for < 0.35 s would flash: merge it into the next one
+for c_ in caps:
+    if _m and _m[-1]["t1"] - _m[-1]["t0"] < .35 and len(_m[-1]["words"]) + len(c_["words"]) <= 6:
+        c_ = {"t0": _m[-1]["t0"], "t1": c_["t1"], "words": _m.pop()["words"] + c_["words"]}
+    _m.append(c_)
+caps[:] = _m
+
 
 # punch-in every PUNCH seconds (approved look), nudged off cuts
 cuts = [s["t0"] for s in shots]
