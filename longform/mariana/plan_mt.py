@@ -41,11 +41,14 @@ def aspect_h(path, w):
 def exists(p): return p and os.path.exists(p)
 
 # ---- assets ----
+ART_FALLBACK = {"mt_floor": "challenger_deep", "mt_surface": "okeanos", "mt_twilight": "deep_discoverer", "mt_midnight": "atolla",
+                "mt_plastic": "marine_debris_deep", "mt_trieste": "trieste_1960", "mt_everest": "everest", "mt_plates": "subduction",
+                "mt_water": "subduction", "mt_champagne": "champagne_vent"}
 def a(n):
     for d in (A2, A1):
         p = os.path.join(d, n + ".png")
         if os.path.exists(p): return p
-    return None
+    return arc(ART_FALLBACK[n]) if n in ART_FALLBACK else None
 ARC2 = ARC3 = ARC
 def arc(key):
     for d in (ARC3, ARC2, ARC):
