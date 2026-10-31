@@ -21,7 +21,7 @@ TRAVELLER: [tightening his goggles, nervous] I'm going to need a bigger submarin
 
 N: First, where is it?
 N: Look at the western Pacific. South of Japan, east of the Philippines, near the island of *Guam*. There's a long, curved scar in the ocean floor, shaped like a crescent moon.
-N: It's about *two and a half thousand kilometres* long. That's roughly the distance from Delhi to Chennai.
+N: It's about *two and a half thousand kilometres* long. That's longer than a flight from Delhi all the way to Chennai.
 N: And at its southern end is the deepest spot ever measured on our planet: the *Challenger Deep*. Nearly *eleven kilometres* below the waves.
 N: To feel how deep that is, take the tallest mountain on Earth. *Mount Everest*. Pick it up... and drop it into the trench.
 TRAVELLER: [squinting down] Where did it go?
