@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "/home/runner/work/media-engine/media-engine/tools/whisper_words.py", line 14, in <module>
+    with wave.open(job["audio"]) as w:  # decode ourselves: avoids a PyAV version clash in faster-whisper
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/wave.py", line 649, in open
+    return Wave_read(f)
+           ^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/wave.py", line 286, in __init__
+    self.initfp(f)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/wave.py", line 253, in initfp
+    raise Error('file does not start with RIFF id')
+wave.Error: file does not start with RIFF id
+FAILED 1
