@@ -1,0 +1,58 @@
+{
+ "job": "render-bench-mm-ep02-seg01",
+ "kernel": "shubhzzgupta07/me-render-bench-mm-ep02-seg01",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-render-bench-mm-ep02-seg01",
+ "gpu_quota_before": {
+  "used_h": 0.0,
+  "remaining_h": 30.0,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/me-render-bench-mm-ep02",
+ "staged_files": [
+  "proj.tar.gz"
+ ],
+ "stage_diag": {
+  "bundled": [
+   {
+    "file": "proj.tar.gz",
+    "mb": 56.9
+   }
+  ],
+  "version_before": 0,
+  "create": [
+   {
+    "license": "other",
+    "existed": false,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "lookup failed: HTTPError: 403 Client Error: Forbidden for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus",
+   "ready (version 1)"
+  ],
+  "version_ready": 1
+ },
+ "pushed_at": "2026-10-31T10:55:57+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-10-31T10:57:28+00:00",
+ "files": [
+  "bench.json",
+  "doctor.log",
+  "me-render-bench-mm-ep02-seg01.log",
+  "nvidia_smi_end.txt",
+  "render_cpu4_software.log",
+  "render_t4_gpu_auto.log",
+  "step_browser.log",
+  "step_chrome_libs.log",
+  "step_node.log",
+  "step_npm.log"
+ ],
+ "gpu_quota_after": {
+  "used_h": 0.02,
+  "remaining_h": 29.98,
+  "total_h": 30.0
+ }
+}

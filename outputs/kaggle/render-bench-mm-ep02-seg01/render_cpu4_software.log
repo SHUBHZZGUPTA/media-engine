@@ -1,0 +1,24 @@
+
+◆  Rendering proj/seg01.html → /kaggle/working/cpu4_software.mp4
+   30fps · standard · 4 workers
+
+[?25l│
+◒  Checking browser[1G[J◇  Browser: env
+[?25h
+  Lint: 0 error(s), 2 warning(s) — run with --lint-verbose for full output.
+  Continuing render despite lint issues. Use --strict to block errors.
+
+
+--- stderr ---
+
+✗  No composition found in /kaggle/tmp/bench/proj
+
+   No index.html file found.
+   Run npx hyperframes init to create a new composition.
+
+
+✗  Chrome cannot launch (missing system libraries)
+
+   Chrome at /root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell is missing shared libraries on Ubuntu 24.04.1 LTS: libatk-1.0.so.0, libatk-bridge-2.0.so.0, libXcomposite.so.1, libatspi.so.0
+   sudo apt-get update && sudo apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libatspi2.0-0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2
+

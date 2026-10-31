@@ -1,0 +1,87 @@
+[{"stream_name":"stdout","time":28.050397064,"data":"node: rc=0 3.6s\n"}
+,{"stream_name":"stdout","time":34.149456375,"data":"chrome_libs: rc=100 6.1s\n"}
+,{"stream_name":"stdout","time":42.248709065,"data":"npm: rc=0 8.1s\n"}
+,{"stream_name":"stdout","time":46.209403323,"data":"browser: rc=0 4.0s\n"}
+,{"stream_name":"stdout","time":52.651801267,"data":"{\"name\": \"t4_gpu_auto\", \"args\": \"--workers 4\", \"rc\": 1, \"wall_s\": 3.2, \"video_s\": null, \"fps_rendered\": null, \"speedup_vs_baseline\": null, \"mb\": null, \"gpu_log_lines\": [\"\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_auto.mp4\", \"30fps \\u00b7 standard \\u00b7 4 workers\", \"GPU: browser GPU (auto-detect)\"], \"tail\": \"\\n\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_aut\n"}
+,{"stream_name":"stdout","time":55.70473556,"data":"{\"name\": \"cpu4_software\", \"args\": \"--workers 4 --no-browser-gpu\", \"rc\": 1, \"wall_s\": 3.0, \"video_s\": null, \"fps_rendered\": null, \"speedup_vs_baseline\": null, \"mb\": null, \"gpu_log_lines\": [\"30fps \\u00b7 standard \\u00b7 4 workers\"], \"tail\": \"\\n\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/cpu4_software.mp4\\n   30fps \\u00b7 standard \\u00b7 4 workers\\n\\n\\u001b[?25l\\u2502\\n\\u25d2  Checking b\n"}
+,{"stream_name":"stdout","time":56.099856139,"data":"{\n"}
+,{"stream_name":"stdout","time":56.099888396,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":56.099893123,"data":"  \"composition\": \"seg01.html\",\n"}
+,{"stream_name":"stdout","time":56.099896849,"data":"  \"hyperframes\": \"0.8.181\",\n"}
+,{"stream_name":"stdout","time":56.099900323,"data":"  \"deps\": {\n"}
+,{"stream_name":"stdout","time":56.099905633,"data":"   \"gsap\": \"3.15.0\",\n"}
+,{"stream_name":"stdout","time":56.099909208,"data":"   \"three\": \"0.149.0\"\n"}
+,{"stream_name":"stdout","time":56.099914512,"data":"  },\n"}
+,{"stream_name":"stdout","time":56.099918726,"data":"  \"quality\": \"looks\",\n"}
+,{"stream_name":"stdout","time":56.099922808,"data":"  \"render_timeout_s\": 3600,\n"}
+,{"stream_name":"stdout","time":56.099926528,"data":"  \"runs\": [\n"}
+,{"stream_name":"stdout","time":56.099930622,"data":"   {\n"}
+,{"stream_name":"stdout","time":56.09993436,"data":"    \"name\": \"t4_gpu_auto\",\n"}
+,{"stream_name":"stdout","time":56.099937965,"data":"    \"args\": \"--workers 4\"\n"}
+,{"stream_name":"stdout","time":56.099941432,"data":"   },\n"}
+,{"stream_name":"stdout","time":56.099944664,"data":"   {\n"}
+,{"stream_name":"stdout","time":56.099947793,"data":"    \"name\": \"cpu4_software\",\n"}
+,{"stream_name":"stdout","time":56.09995112,"data":"    \"args\": \"--workers 4 --no-browser-gpu\"\n"}
+,{"stream_name":"stdout","time":56.099954606,"data":"   }\n"}
+,{"stream_name":"stdout","time":56.099959421,"data":"  ]\n"}
+,{"stream_name":"stdout","time":56.099965996,"data":" },\n"}
+,{"stream_name":"stdout","time":56.099968237,"data":" \"steps\": {\n"}
+,{"stream_name":"stdout","time":56.099970552,"data":"  \"node\": {\n"}
+,{"stream_name":"stdout","time":56.099972752,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":56.099974981,"data":"   \"secs\": 3.6\n"}
+,{"stream_name":"stdout","time":56.099977332,"data":"  },\n"}
+,{"stream_name":"stdout","time":56.099979479,"data":"  \"chrome_libs\": {\n"}
+,{"stream_name":"stdout","time":56.099981736,"data":"   \"rc\": 100,\n"}
+,{"stream_name":"stdout","time":56.099983978,"data":"   \"secs\": 6.1,\n"}
+,{"stream_name":"stdout","time":56.099986418,"data":"   \"tail\": \"W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.\\nW: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)\\nE: Package 'libasound2' has no installation candidate\\n\"\n"}
+,{"stream_name":"stdout","time":56.100016305,"data":"  },\n"}
+,{"stream_name":"stdout","time":56.100020778,"data":"  \"npm\": {\n"}
+,{"stream_name":"stdout","time":56.100024621,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":56.100028519,"data":"   \"secs\": 8.1\n"}
+,{"stream_name":"stdout","time":56.100032286,"data":"  },\n"}
+,{"stream_name":"stdout","time":56.100035441,"data":"  \"browser\": {\n"}
+,{"stream_name":"stdout","time":56.100038669,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":56.100041802,"data":"   \"secs\": 4.0\n"}
+,{"stream_name":"stdout","time":56.100045009,"data":"  }\n"}
+,{"stream_name":"stdout","time":56.100048039,"data":" },\n"}
+,{"stream_name":"stdout","time":56.100051104,"data":" \"runs\": [\n"}
+,{"stream_name":"stdout","time":56.100054369,"data":"  {\n"}
+,{"stream_name":"stdout","time":56.100057456,"data":"   \"name\": \"t4_gpu_auto\",\n"}
+,{"stream_name":"stdout","time":56.100060787,"data":"   \"args\": \"--workers 4\",\n"}
+,{"stream_name":"stdout","time":56.100064561,"data":"   \"rc\": 1,\n"}
+,{"stream_name":"stdout","time":56.100067794,"data":"   \"wall_s\": 3.2,\n"}
+,{"stream_name":"stdout","time":56.100071024,"data":"   \"video_s\": null,\n"}
+,{"stream_name":"stdout","time":56.100076149,"data":"   \"fps_rendered\": null,\n"}
+,{"stream_name":"stdout","time":56.100083252,"data":"   \"speedup_vs_baseline\": null,\n"}
+,{"stream_name":"stdout","time":56.100085611,"data":"   \"mb\": null,\n"}
+,{"stream_name":"stdout","time":56.100087815,"data":"   \"gpu_log_lines\": [\n"}
+,{"stream_name":"stdout","time":56.100090186,"data":"    \"\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_auto.mp4\",\n"}
+,{"stream_name":"stdout","time":56.100092692,"data":"    \"30fps \\u00b7 standard \\u00b7 4 workers\",\n"}
+,{"stream_name":"stdout","time":56.100095175,"data":"    \"GPU: browser GPU (auto-detect)\"\n"}
+,{"stream_name":"stdout","time":56.100117187,"data":"   ],\n"}
+,{"stream_name":"stdout","time":56.100125934,"data":"   \"tail\": \"\\n\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_auto.mp4\\n   30fps \\u00b7 standard \\u00b7 4 workers\\n   GPU: browser GPU (auto-detect)\\n\\n\\u001b[?25l\\u2502\\n\\u25d2  Checking browser\\u001b[1G\\u001b[J\\u25c7  Browser: env\\n\\u001b[?25h\\n  Lint: 0 error(s), 2 warning(s) \\u2014 run with --lint-verbose for full output.\\n  Continuing render despite lint issues. Use --strict to block errors.\\n\\n\\n\\u2717  No composition found in /kaggle/tmp/bench/proj\\n\\n   No index.html file found.\\n   Run npx hyperframes init to create a new composition.\\n\\n\\n\\u2717  Chrome cannot launch (missing system libraries)\\n\\n   Chrome at /root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell is missing shared libraries on Ubuntu 24.04.1 LTS: libatk-1.0.so.0, libatk-bridge-2.0.so.0, libXcomposite.so.1, libatspi.so.0\\n   sudo apt-get update \u0026\u0026 sudo apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libatspi2.0-0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2\\n\\n\"\n"}
+,{"stream_name":"stdout","time":56.100136594,"data":"  },\n"}
+,{"stream_name":"stdout","time":56.100139797,"data":"  {\n"}
+,{"stream_name":"stdout","time":56.100142986,"data":"   \"name\": \"cpu4_software\",\n"}
+,{"stream_name":"stdout","time":56.100150547,"data":"   \"args\": \"--workers 4 --no-browser-gpu\",\n"}
+,{"stream_name":"stdout","time":56.100154142,"data":"   \"rc\": 1,\n"}
+,{"stream_name":"stdout","time":56.100157369,"data":"   \"wall_s\": 3.0,\n"}
+,{"stream_name":"stdout","time":56.100160594,"data":"   \"video_s\": null,\n"}
+,{"stream_name":"stdout","time":56.100163791,"data":"   \"fps_rendered\": null,\n"}
+,{"stream_name":"stdout","time":56.100167005,"data":"   \"speedup_vs_baseline\": null,\n"}
+,{"stream_name":"stdout","time":56.100170259,"data":"   \"mb\": null,\n"}
+,{"stream_name":"stdout","time":56.100173485,"data":"   \"gpu_log_lines\": [\n"}
+,{"stream_name":"stdout","time":56.100176715,"data":"    \"30fps \\u00b7 standard \\u00b7 4 workers\"\n"}
+,{"stream_name":"stdout","time":56.100180187,"data":"   ],\n"}
+,{"stream_name":"stdout","time":56.100183461,"data":"   \"tail\": \"\\n\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/cpu4_software.mp4\\n   30fps \\u00b7 standard \\u00b7 4 workers\\n\\n\\u001b[?25l\\u2502\\n\\u25d2  Checking browser\\u001b[1G\\u001b[J\\u25c7  Browser: env\\n\\u001b[?25h\\n  Lint: 0 error(s), 2 warning(s) \\u2014 run with --lint-verbose for full output.\\n  Continuing render despite lint issues. Use --strict to block errors.\\n\\n\\n\\u2717  No composition found in /kaggle/tmp/bench/proj\\n\\n   No index.html file found.\\n   Run npx hyperframes init to create a new composition.\\n\\n\\n\\u2717  Chrome cannot launch (missing system libraries)\\n\\n   Chrome at /root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell is missing shared libraries on Ubuntu 24.04.1 LTS: libatk-1.0.so.0, libatk-bridge-2.0.so.0, libXcomposite.so.1, libatspi.so.0\\n   sudo apt-get update \u0026\u0026 sudo apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libatspi2.0-0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2\\n\\n\"\n"}
+,{"stream_name":"stdout","time":56.100196521,"data":"  }\n"}
+,{"stream_name":"stdout","time":56.100199294,"data":" ],\n"}
+,{"stream_name":"stdout","time":56.100212541,"data":" \"machine\": {\n"}
+,{"stream_name":"stdout","time":56.100216747,"data":"  \"gpu\": \"Tesla T4, 15360 MiB, 580.178.04\\nTesla T4, 1536\n"}
+,{"stream_name":"stderr","time":59.181298018,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":59.181326577,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":59.73977562,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":59.739800795,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":62.933032033,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":64.407030915,"data":"[NbConvertApp] Writing 308390 bytes to __results__.html\n"}
+]

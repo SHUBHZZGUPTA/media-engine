@@ -1,0 +1,35 @@
+
+hyperframes doctor
+
+  ✓ Version          0.8.181 (latest)
+  ✓ Node.js          v22.11.0 (linux x64)
+  ✓ CPU              4 cores · Intel(R) Xeon(R) CPU @ 2.00GHz
+  ✓ Memory           30.0 GB total · 30.1 GB available
+  ✓ Disk             1048.0 GB free
+  ✓ Frames cache     /tmp/hyperframes-extract-cache-0 · 1048.0 GB free at /tmp · default
+  ✓ Archive extractor unzip
+  ✓ Settings lock    Not locked
+  ✓ /dev/shm         14336 MB
+  ✓ Environment      Docker · non-TTY
+  ✗ whisper-cpp      Not found (optional — needed for transcription)
+                     Build from source: https://github.com/ggml-org/whisper.cpp#building (requires cmake and a C compiler)
+  ✗ TTS (Kokoro)     Not installed (optional — local voice fallback)
+                     pip install kokoro-onnx soundfile
+  ✓ BGM (MusicGen)   MusicGen deps installed
+  ✓ onnxruntime-node Not installed (installs on first use)
+  ✓ @google/genai    Not installed (installs on first use)
+  ✓ FFmpeg           ffmpeg 6.1.1-3ubuntu5 at /usr/bin/ffmpeg
+  ✓ FFprobe          ffprobe 6.1.1-3ubuntu5 at /usr/bin/ffprobe
+  ✗ Chrome           Chrome at /root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell is missing shared libraries on Ubuntu 24.04.1 LTS: libatk-1.0.so.0, libatk-bridge-2.0.so.0, libXcomposite.so.1, libatspi.so.0
+                     sudo apt-get update && sudo apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libatspi2.0-0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2
+  ✗ Docker           Not found
+                     https://docs.docker.com/get-docker/
+  ✗ Docker running   Not running
+                     Start Docker Desktop or run: sudo systemctl start docker
+
+  ◇  Some checks failed — see hints above
+
+
+--- stderr ---
+[SystemMemory] cgroup memory limit detected: 30720 MiB. It governs memory-adaptive render behaviour instead of host RAM.
+/bin/sh: 1: docker: not found
