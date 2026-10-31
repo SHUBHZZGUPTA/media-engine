@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 9211.06it/s]
+depth library/scenes/turnip_lantern.jpg
+depth library/scenes/hill_of_ward_dusk.jpg
+depth library/scenes/hill_of_ward_fire.jpg
+depth library/scenes/irish_cottage_night.jpg
+depth library/scenes/emigrant_ship.jpg
+depth library/scenes/us_porch_pumpkins.jpg
+upscale library/scenes/turnip_lantern.jpg
+upscale library/scenes/hill_of_ward_dusk.jpg
+upscale library/scenes/hill_of_ward_fire.jpg
+upscale library/scenes/irish_cottage_night.jpg
+upscale library/scenes/emigrant_ship.jpg
+upscale library/scenes/us_porch_pumpkins.jpg
+upscale library/characters/c_turnip.png
+upscale library/characters/c_pumpkin.png
+{'depth': [{'src': 'library/scenes/turnip_lantern.jpg', 'secs': 1.3}, {'src': 'library/scenes/hill_of_ward_dusk.jpg', 'secs': 1.2}, {'src': 'library/scenes/hill_of_ward_fire.jpg', 'secs': 1.2}, {'src': 'library/scenes/irish_cottage_night.jpg', 'secs': 1.2}, {'src': 'library/scenes/emigrant_ship.jpg', 'secs': 1.2}, {'src': 'library/scenes/us_porch_pumpkins.jpg', 'secs': 1.2}], 'upscale': [{'src': 'library/scenes/turnip_lantern.jpg', 'secs': 45.4}, {'src': 'library/scenes/hill_of_ward_dusk.jpg', 'secs': 47.6}, {'src': 'library/scenes/hill_of_ward_fire.jpg', 'secs': 51.7}, {'src': 'library/scenes/irish_cottage_night.jpg', 'secs': 52.2}, {'src': 'library/scenes/emigrant_ship.jpg', 'secs': 52.6}, {'src': 'library/scenes/us_porch_pumpkins.jpg', 'secs': 52.9}, {'src': 'library/characters/c_turnip.png', 'secs': 66.5}, {'src': 'library/characters/c_pumpkin.png', 'secs': 71.7}]}
