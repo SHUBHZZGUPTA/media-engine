@@ -11,5 +11,10 @@
  "accelerator": "NvidiaTeslaT4",
  "version": 2,
  "status": "RUNNING",
- "checked_at": "2026-10-31T11:03:33+00:00"
+ "checked_at": "2026-10-31T11:16:28+00:00",
+ "gpu_quota_now": {
+  "used_h": 0.27,
+  "remaining_h": 29.73,
+  "total_h": 30.0
+ }
 }
