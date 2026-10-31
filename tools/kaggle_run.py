@@ -19,7 +19,8 @@ Job file fields:
   stage            optional {from_kernel, file_pattern, dataset_slug, title}: before the run, copy
                    matching files from an earlier notebook's output into a private Kaggle dataset on
                    the same account and attach it (outputs of a notebook that ended in an error
-                   can't be attached directly)
+                   can't be attached directly). With {repo_paths: [...], dataset_slug, title} instead,
+                   the listed files from this repo are uploaded (e.g. a built project as .tar.gz)
 
 Credentials: KAGGLE_API_TOKEN, or KAGGLE_USERNAME + KAGGLE_KEY. They are never printed.
 """
@@ -118,21 +119,32 @@ def stage_files(api, user, stage, diag):
     return the dataset ref to attach. Progress and errors are recorded in diag."""
     ref = f"{user}/{stage['dataset_slug']}"
     with tempfile.TemporaryDirectory() as dl, tempfile.TemporaryDirectory() as folder:
-        files, token = [], None
-        while True:
-            got, token = api.kernels_output(stage["from_kernel"], path=dl, file_pattern=stage["file_pattern"],
-                                            force=True, quiet=True, page_token=token, page_size=200)
-            files += got or []
-            if not token:
-                break
-        pat = re.compile(stage["file_pattern"])
-        files = [f for f in files if os.path.isfile(f) and pat.search(os.path.basename(f))]
-        diag["downloaded"] = [{"file": os.path.basename(f), "mb": round(os.path.getsize(f) / 1e6, 1)}
-                              for f in files]
-        if not files:
-            raise RuntimeError(f"nothing in {stage['from_kernel']} matched {stage['file_pattern']}")
-        for f in files:
-            shutil.move(f, os.path.join(folder, os.path.basename(f)))
+        if stage.get("repo_paths"):
+            # files from this repo (e.g. a built project packed as .tar.gz) instead of a notebook's output
+            files = [str(ROOT / p) for p in stage["repo_paths"]]
+            missing = [p for p, f in zip(stage["repo_paths"], files) if not os.path.isfile(f)]
+            if missing:
+                raise RuntimeError(f"repo_paths not found: {missing}")
+            diag["bundled"] = [{"file": os.path.basename(f), "mb": round(os.path.getsize(f) / 1e6, 1)}
+                               for f in files]
+            for f in files:
+                shutil.copy(f, os.path.join(folder, os.path.basename(f)))
+        else:
+            files, token = [], None
+            while True:
+                got, token = api.kernels_output(stage["from_kernel"], path=dl, file_pattern=stage["file_pattern"],
+                                                force=True, quiet=True, page_token=token, page_size=200)
+                files += got or []
+                if not token:
+                    break
+            pat = re.compile(stage["file_pattern"])
+            files = [f for f in files if os.path.isfile(f) and pat.search(os.path.basename(f))]
+            diag["downloaded"] = [{"file": os.path.basename(f), "mb": round(os.path.getsize(f) / 1e6, 1)}
+                                  for f in files]
+            if not files:
+                raise RuntimeError(f"nothing in {stage['from_kernel']} matched {stage['file_pattern']}")
+            for f in files:
+                shutil.move(f, os.path.join(folder, os.path.basename(f)))
         try:
             api.dataset_status(ref)
             exists = True
@@ -153,7 +165,8 @@ def stage_files(api, user, stage, diag):
             with open(os.path.join(folder, "dataset-metadata.json"), "w") as fh:
                 json.dump(meta, fh)
             if exists:
-                resp = api.dataset_create_version(folder, "staged from " + stage["from_kernel"], quiet=True)
+                resp = api.dataset_create_version(folder, "staged from " + stage.get("from_kernel", "repo files"),
+                                                  quiet=True)
             else:
                 resp = api.dataset_create_new(folder, public=False, quiet=True)
             err = getattr(resp, "error", None)
