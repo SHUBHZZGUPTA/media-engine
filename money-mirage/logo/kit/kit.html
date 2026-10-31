@@ -1,0 +1,73 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Brico;font-weight:800;src:url(assets/bricolage-grotesque-latin-800-normal.woff2)}
+@font-face{font-family:Brico;font-weight:600;src:url(assets/bricolage-grotesque-latin-600-normal.woff2)}
+body{margin:0;background:transparent}.c{position:relative;overflow:hidden}
+.grain{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='320' height='320' filter='url(%23n)'/></svg>")}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <radialGradient id="coin" cx="42%" cy="36%" r="70%"><stop offset="0" stop-color="#FFE7A6"/><stop offset=".45" stop-color="#EDBB52"/><stop offset="1" stop-color="#B07A1E"/></radialGradient>
+ <linearGradient id="hz" x1="0" x2="1"><stop offset="0" stop-color="#F3EBDD" stop-opacity="0"/><stop offset=".5" stop-color="#F3EBDD" stop-opacity=".95"/><stop offset="1" stop-color="#F3EBDD" stop-opacity="0"/></linearGradient>
+ <linearGradient id="hzN" x1="0" x2="1"><stop offset="0" stop-color="#0D1628" stop-opacity="0"/><stop offset=".5" stop-color="#0D1628" stop-opacity=".9"/><stop offset="1" stop-color="#0D1628" stop-opacity="0"/></linearGradient>
+ <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#E9B44C" stop-opacity=".5"/><stop offset=".5" stop-color="#E9B44C" stop-opacity=".1"/><stop offset="1" stop-color="#E9B44C" stop-opacity="0"/></radialGradient>
+ <radialGradient id="bgr" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#18284A"/><stop offset=".6" stop-color="#0D1628"/><stop offset="1" stop-color="#070C17"/></radialGradient>
+ <radialGradient id="bnr" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#1B2D52"/><stop offset=".55" stop-color="#0D1628"/><stop offset="1" stop-color="#060A14"/></radialGradient>
+ <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9B44C" stop-opacity=".22"/><stop offset="1" stop-color="#E9B44C" stop-opacity="0"/></linearGradient>
+ <filter id="mir" x="-20%" y="-20%" width="140%" height="160%"><feTurbulence type="fractalNoise" baseFrequency="0.004 0.055" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+
+<!-- 1 profile picture 800 -->
+<div class="c" id="pfp" style="width:800px;height:800px"><svg width="800" height="800"><rect width="800" height="800" fill="url(#bgr)"/><g transform="translate(120,140) scale(1.4)" class="em" data-k="p" data-s="#0F1A30"></g></svg><div class="grain"></div></div>
+
+<!-- 2 banner 2560x1440, safe area 1546x423 centred (507..2053, 508..931); content group auto-centred in it -->
+<div class="c" id="banner" style="width:2560px;height:1440px"><svg width="2560" height="1440">
+ <rect width="2560" height="1440" fill="url(#bnr)"/>
+ <ellipse cx="1280" cy="720" rx="1100" ry="260" fill="url(#halo)" opacity=".55"/>
+ <rect x="0" y="HZY" width="2560" height="700" fill="url(#sand)"/>
+ <rect x="120" y="HZY" width="2320" height="3" fill="url(#hz)" opacity=".7"/>
+ <g id="bgrp">
+  <g transform="translate(0,0) scale(.95)" class="em" data-k="b" data-s="#0F1A30"></g>
+  <text x="430" y="200" font-family="Brico" font-weight="800" font-size="128" letter-spacing="10"><tspan fill="#E9B44C">MONEY</tspan><tspan fill="#F3EBDD" dx="34">MIRAGE</tspan></text>
+  <text x="434" y="272" font-family="Brico" font-weight="600" font-size="40" letter-spacing="8" fill="#F3EBDD" opacity=".85">MONEY HISTORY · PRICING TRICKS · SCAMS</text>
+ </g>
+</svg><div class="grain"></div></div>
+
+<!-- 3 watermark 150 (transparent, badge) -->
+<div class="c" id="wm" style="width:150px;height:150px"><svg width="150" height="150"><circle cx="75" cy="75" r="72" fill="url(#bgr)" stroke="#E9B44C" stroke-width="4"/><g transform="translate(15,13) scale(.3)" class="em" data-k="w" data-s="#0F1A30"></g></svg></div>
+
+<!-- 4 emblem only, transparent 1000 -->
+<div class="c" id="emblem" style="width:1000px;height:1000px"><svg width="1000" height="1000"><g transform="translate(0,40) scale(2.5)" class="em" data-k="e" data-s="#0D1628"></g></svg></div>
+
+<!-- 4b emblem for light backgrounds, transparent -->
+<div class="c" id="emblem_l" style="width:1000px;height:1000px"><svg width="1000" height="1000"><g transform="translate(0,40) scale(2.5)" class="em" data-k="el" data-s="#FFFFFF" data-h="hzN"></g></svg></div>
+
+<!-- 5 lockup for dark backgrounds, transparent -->
+<div class="c" id="lock_dark" style="width:2400px;height:1500px"><svg width="2400" height="1500"><g transform="translate(800,40) scale(2)" class="em" data-k="d" data-s="#0D1628"></g>
+ <text x="1200" y="1180" text-anchor="middle" font-family="Brico" font-weight="800" font-size="230" letter-spacing="24"><tspan fill="#E9B44C">MONEY</tspan><tspan fill="#F3EBDD" dx="70">MIRAGE</tspan></text></svg></div>
+
+<!-- 6 lockup for light backgrounds, transparent -->
+<div class="c" id="lock_light" style="width:2400px;height:1500px"><svg width="2400" height="1500"><g transform="translate(800,40) scale(2)" class="em" data-k="l" data-s="#FFFFFF" data-h="hzN"></g>
+ <text x="1200" y="1180" text-anchor="middle" font-family="Brico" font-weight="800" font-size="230" letter-spacing="24"><tspan fill="#B07A1E">MONEY</tspan><tspan fill="#0D1628" dx="70">MIRAGE</tspan></text></svg></div>
+
+<!-- 7 horizontal lockup (emblem left), transparent, for headers/overlays -->
+<div class="c" id="lock_h" style="width:2700px;height:600px"><svg width="2700" height="600"><g transform="translate(40,40) scale(1.3)" class="em" data-k="h" data-s="#0D1628"></g>
+ <text x="600" y="370" font-family="Brico" font-weight="800" font-size="200" letter-spacing="18"><tspan fill="#E9B44C">MONEY</tspan><tspan fill="#F3EBDD" dx="56">MIRAGE</tspan></text></svg></div>
+
+<!-- 8 brand sheet 1920x1080 -->
+<div class="c" id="sheet" style="width:1920px;height:1080px;background:#0B1324;font-family:Brico;color:#F3EBDD">
+ <svg width="1920" height="1080" style="position:absolute"><g transform="translate(90,90) scale(.9)" class="em" data-k="s" data-s="#0B1324"></g></svg>
+ <div style="position:absolute;left:500px;top:150px;font-weight:800;font-size:110px;letter-spacing:10px"><span style="color:#E9B44C">MONEY</span> MIRAGE</div>
+ <div style="position:absolute;left:506px;top:290px;font-weight:600;font-size:34px;letter-spacing:6px;opacity:.8">BRAND KIT · 2026</div>
+ <div id="sw" style="position:absolute;left:90px;top:520px;display:flex;gap:36px"></div>
+ <div style="position:absolute;left:90px;top:860px;font-size:30px;font-weight:600;line-height:1.6;opacity:.9">Logo font: Bricolage Grotesque 800 &nbsp;·&nbsp; Captions: Inter 800/900 &nbsp;·&nbsp; Thumbnails: Big Shoulders Display 900<br>Accent red (captions, circles): #FF3B30 &nbsp;·&nbsp; Thumbnail yellow: #FFE01A</div>
+</div>
+<script>
+const T='<g>\n <circle cx="200" cy="170" r="180" fill="url(#halo)"/>\n <clipPath id="ab{K}"><rect x="0" y="0" width="400" height="230"/></clipPath><clipPath id="be{K}"><rect x="0" y="230" width="400" height="170"/></clipPath>\n <mask id="mf{K}" maskUnits="userSpaceOnUse" x="0" y="230" width="400" height="170"><rect x="0" y="230" width="400" height="150" fill="url(#fade)"/></mask>\n <g clip-path="url(#ab{K})"><circle cx="200" cy="170" r="92" fill="url(#coin)"/><circle cx="200" cy="170" r="78" fill="none" stroke="#A8711A" stroke-width="3" opacity=".55"/><circle cx="200" cy="170" r="71" fill="none" stroke="#FFF1C4" stroke-width="1.5" opacity=".45"/></g>\n <g clip-path="url(#be{K})"><g mask="url(#mf{K})"><g filter="url(#mir)"><g transform="translate(0,460) scale(1,-1)"><circle cx="200" cy="170" r="92" fill="url(#coin)"/></g></g></g>\n  {STRIPES}</g>\n <rect x="40" y="229" width="320" height="2.5" fill="url(#{H})"/>\n</g>';
+document.querySelectorAll('.em').forEach(g=>{const s=g.dataset.s;
+ const st=Array.from({length:6},(_,k)=>`<rect x="104" y="${238+k*22+k*k*1.1}" width="192" height="${1.4+k*.6}" fill="${s}" opacity=".9"/>`).join('');
+ g.innerHTML=T.replaceAll('{K}',g.dataset.k).replace('{STRIPES}',st).replace('{H}',g.dataset.h||'hz');});
+const C=[['Mirage Gold','#E9B44C'],['Coin Highlight','#FFE7A6'],['Deep Gold','#B07A1E'],['Sand Cream','#F3EBDD'],['Night Navy','#0D1628'],['Midnight','#070C17']];
+(()=>{const g=document.getElementById('bgrp');const b=g.getBBox();const sx=507+(1546-b.width)/2-b.x, sy=508+(423-b.height)/2-b.y;g.setAttribute('transform',`translate(${sx},${sy})`);
+ const hz=sy+230*.95; document.querySelectorAll('#banner rect[y="HZY"]').forEach(r=>r.setAttribute('y',hz));})();
+document.getElementById('sw').innerHTML=C.map(([n,h])=>`<div><div style="width:240px;height:200px;border-radius:18px;background:${h};border:2px solid #ffffff22"></div><div style="font-weight:800;font-size:28px;margin-top:14px">${n}</div><div style="font-weight:600;font-size:26px;opacity:.75">${h}</div></div>`).join('');
+</script></body></html>
