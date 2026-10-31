@@ -1,4 +1,5 @@
-Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 8456.79it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 4786.53it/s]
 depth library/scenes/phone_map_pin.jpg
 depth library/scenes/rocket_launch_night.jpg
 depth library/scenes/nav_sat_over_india.jpg
@@ -8,4 +9,4 @@ upscale library/scenes/rocket_launch_night.jpg
 upscale library/scenes/nav_sat_over_india.jpg
 upscale library/scenes/xsec_atomic_clock.jpg
 upscale library/characters/c_sat.png
-{'depth': [{'src': 'library/scenes/phone_map_pin.jpg', 'secs': 1.4}, {'src': 'library/scenes/rocket_launch_night.jpg', 'secs': 1.3}, {'src': 'library/scenes/nav_sat_over_india.jpg', 'secs': 1.3}, {'src': 'library/scenes/xsec_atomic_clock.jpg', 'secs': 1.4}], 'upscale': [{'src': 'library/scenes/phone_map_pin.jpg', 'secs': 50.0}, {'src': 'library/scenes/rocket_launch_night.jpg', 'secs': 45.5}, {'src': 'library/scenes/nav_sat_over_india.jpg', 'secs': 45.6}, {'src': 'library/scenes/xsec_atomic_clock.jpg', 'secs': 45.0}, {'src': 'library/characters/c_sat.png', 'secs': 61.5}]}
+{'depth': [{'src': 'library/scenes/phone_map_pin.jpg', 'secs': 1.4}, {'src': 'library/scenes/rocket_launch_night.jpg', 'secs': 1.3}, {'src': 'library/scenes/nav_sat_over_india.jpg', 'secs': 1.3}, {'src': 'library/scenes/xsec_atomic_clock.jpg', 'secs': 1.6}], 'upscale': [{'src': 'library/scenes/phone_map_pin.jpg', 'secs': 110.2}, {'src': 'library/scenes/rocket_launch_night.jpg', 'secs': 109.8}, {'src': 'library/scenes/nav_sat_over_india.jpg', 'secs': 109.9}, {'src': 'library/scenes/xsec_atomic_clock.jpg', 'secs': 110.9}, {'src': 'library/characters/c_sat.png', 'secs': 135.0}]}
