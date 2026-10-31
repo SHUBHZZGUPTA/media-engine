@@ -644,7 +644,7 @@ c = CHAP[12]
 chapter_card(12, c)
 board(T(c, .2), [txt("Congress  vs  Muslim League", 1250, 400, K(c, "Muslim"), size=76, box="#222222"), txt("Jinnah: a separate nation", 1250, 660, K(c, "Jinnah"), size=70, box="#222222")])
 t = T(c + 1, -.15)
-globe("G_partition", t, [[t, 80, 25, 3.0], [T(c + 3, 1), 79, 25, 2.8]],
+globe("G_partition", t, [[t, 79, 26, 2.5], [T(c + 3, 1), 77, 27, 2.2]],
       over=[ov("ov_raj", [[0, .75], [T(c + 1, .3), .75], [T(c + 1, .9), 0]]), ove("ov_raj_edge", [[0, 1], [T(c + 1, .3), 1], [T(c + 1, .9), 0]]),
             ov("ov_in_flag", fadein(T(c + 1, .5), .85, .8)), ove("ov_in_edge", fadein(T(c + 1, .5), 1, .8)), ov("ov_pak", fadein(T(c + 1, .5), .75, .8)),
             ove("ov_pak_edge", fadein(T(c + 1, .5), 1, .8))],
