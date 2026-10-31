@@ -10,14 +10,16 @@
   "render_timeout_s": 3600,
   "runs": [
    {
-    "name": "t4_gpu_auto",
-    "args": "--workers 4"
-   },
-   {
-    "name": "cpu4_software",
-    "args": "--workers 4 --no-browser-gpu"
+    "name": "t4_gpu_hw",
+    "args": "--workers 4",
+    "requires_gpu": true,
+    "env": {
+     "PRODUCER_BROWSER_GPU_MODE": "hardware",
+     "HYPERFRAMES_DEBUG_GPU_PROBE": "1"
+    }
    }
-  ]
+  ],
+  "gl_unpack": true
  },
  "steps": {
   "node": {
@@ -26,129 +28,74 @@
   },
   "chrome_libs": {
    "rc": 0,
-   "secs": 66.0
+   "secs": 58.8
   },
   "nvidia_gl": {
-   "rc": 100,
-   "secs": 3.3,
-   "tail": "want 580.178.04 found 580.178.04-1ubuntu1\nE: Unable to correct problems, you have held broken packages.\n"
+   "rc": 0,
+   "secs": 24.6
   },
   "npm": {
    "rc": 0,
-   "secs": 8.4
+   "secs": 8.3
   },
   "browser": {
    "rc": 0,
-   "secs": 8.9
+   "secs": 7.2
   }
  },
  "runs": [
   {
-   "name": "t4_gpu_auto",
+   "name": "t4_gpu_hw",
    "args": "--workers 4",
    "rc": 0,
-   "wall_s": 1819.0,
+   "wall_s": 284.1,
    "video_s": 60.0,
-   "fps_rendered": 0.99,
+   "fps_rendered": 6.34,
    "speedup_vs_baseline": null,
-   "mb": 92.8,
-   "gpu_util_max": 0,
-   "gpu_util_avg": 0.0,
+   "mb": 95.3,
+   "gpu_util_max": 59,
+   "gpu_util_avg": 14.9,
    "gpu_log_lines": [
-    "\u25c6  Rendering proj/seg01.html \u2192 /kaggle/working/t4_gpu_auto.mp4",
+    "\u25c6  Rendering proj/seg01.html \u2192 /kaggle/working/t4_gpu_hw.mp4",
     "30fps \u00b7 standard \u00b7 4 workers",
-    "GPU: browser GPU (auto-detect)",
+    "GPU: browser GPU (forced)",
     "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Checking browser GPU",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x1b94001ad400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x1b94001ad400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x1b94001ad400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x3a2c00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x3a2c00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x3a2c00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
-    "[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)",
+    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)",
+    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)",
+    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)",
     "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 1/1800 (4 workers)",
-    "[Browser:WARN] [.WebGL-0x3a2c00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
-    "[Browser:WARN] [.WebGL-0x1b94001ad400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 2/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 5/1800 (4 workers)",
     "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 6/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 9/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 10/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 13/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 14/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 17/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 18/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 21/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 22/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 23/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 11/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Streaming frame 16/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 20/1800 (4 workers)",
     "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 25/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 26/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 28/1800 (4 workers)"
-   ]
-  },
-  {
-   "name": "cpu4_software",
-   "args": "--workers 4 --no-browser-gpu",
-   "rc": 0,
-   "wall_s": 1872.5,
-   "video_s": 60.0,
-   "fps_rendered": 0.96,
-   "speedup_vs_baseline": null,
-   "mb": 92.4,
-   "gpu_util_max": 0,
-   "gpu_util_avg": 0.0,
-   "gpu_log_lines": [
-    "30fps \u00b7 standard \u00b7 4 workers",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Checking browser GPU",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)",
-    "[Browser:WARN] [.WebGL-0x2acc00174800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x2acc00174800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x2acc00174800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x2c5c00198800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x2c5c00198800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x2c5c00198800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x30a4001ace00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x30a4001ace00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x30a4001ace00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (4683ms)",
-    "[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (4734ms)",
-    "[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (4750ms)",
-    "[Browser:WARN] [.WebGL-0x285c001ac800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x285c001ac800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[Browser:WARN] [.WebGL-0x285c001ac800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (4881ms)",
-    "[Browser:WARN] [.WebGL-0x30a4001ace00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 1/1800 (4 workers)",
-    "[Browser:WARN] [.WebGL-0x2acc00174800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
-    "[Browser:WARN] [.WebGL-0x285c001ac800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 2/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 3/1800 (4 workers)",
-    "[Browser:WARN] [.WebGL-0x2c5c00198800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 4/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 5/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 7/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 8/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 9/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 10/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 12/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 13/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 14/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 15/1800 (4 workers)",
-    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  25%  Capturing frame 16/1800 (4 workers)"
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 29/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 34/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 39/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 43/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 46/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  26%  Streaming frame 49/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 52/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 53/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 56/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 58/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 60/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 62/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 63/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 66/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 68/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 70/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 72/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 73/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 76/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 78/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 79/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  27%  Streaming frame 81/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  28%  Streaming frame 83/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  28%  Streaming frame 85/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  28%  Streaming frame 87/1800 (4 workers)",
+    "\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  28%  Streaming frame 89/1800 (4 workers)"
    ]
   }
  ],
@@ -160,6 +107,12 @@
  },
  "project": "/kaggle/tmp/bench/proj",
  "gl_diag_before": "ls: cannot access '/usr/share/vulkan/icd.d': No such file or directory\n/etc/vulkan/icd.d:\n\n/usr/share/glvnd/egl_vendor.d:\n50_mesa.json\n",
- "gl_diag_after": "ls: cannot access '/usr/share/vulkan/icd.d': No such file or directory\n/usr/share/glvnd/egl_vendor.d:\n50_mesa.json\n",
- "browser_path": "/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell"
+ "gl_diag_after": "libEGL_nvidia.so.0\nlibEGL_nvidia.so.580.178.04\nlibGLESv1_CM_nvidia.so.1\nlibGLESv1_CM_nvidia.so.580.178.04\nlibGLESv2_nvidia.so.2\nlibGLESv2_nvidia.so.580.178.04\nlibGLX_nvidia.so.0\nlibGLX_nvidia.so.580.178.04\nlibnvidia-allocator.so.1\nlibnvidia-allocator.so.580.178.04\nlibnvidia-api.so.1\nlibnvidia-eglcore.so.580.178.04\nlibnvidia-egl-wayland.so.1\nlibnvidia-egl-wayland.so.1.1.23\nlibnvidia-glcore.so.580.178.04\nlibnvidia-glsi.so.580.178.04\nlibnvidia-glvkspirv.so.580.178.04\nlibnvidia-gpucomp.so.580.178.04\nlibnvidia-ngx.so.1\nlibnvidia-ngx.so.580.178.04\nlibnvidia-present.so.580.178.04\nlibnvidia-rtcore.so.580.178.04\nlibnvidia-tls.so.580.178.04\nlibnvidia-vksc-core.so.1\nlibnvidia-vksc-core.so.580.178.04\nnvidia\n/usr/share/glvnd/egl_vendor.d:\n10_nvidia.json\n50_mesa.json\n\n/usr/share/vulkan/icd.d:\nnvidia_icd.json\n",
+ "browser_path": "/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell",
+ "probe": {
+  "angle_gl_egl": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "angle_vulkan": "ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA Tesla T4 (0x00001EB8)), NVIDIA)",
+  "egl": "NO_WEBGL"
+ },
+ "gpu_webgl_ok": true
 }

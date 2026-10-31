@@ -1,4 +1,57 @@
-want 580.178.04 found 580.178.04-1ubuntu1
+libnvidia-gl-580 want 580.178.04 got 580.178.04-1ubuntu1
+libnvidia-gpucomp-580 want 580.178.04 got 580.178.04-1ubuntu1
+libnvidia-egl-wayland1 want 580.178.04 got 1:1.1.23-1ubuntu1
+total 164956
+drwxr-xr-x 2 root root      4096 Oct 31 12:58 .
+drwxr-xr-x 5 root root      4096 Oct 31 12:58 ..
+-rw-r--r-- 1 root root     35056 Oct  8 13:46 libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb
+-rw-r--r-- 1 root root 150378426 Jul  7 20:06 libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb
+-rw-r--r-- 1 root root  18486276 Jul  7 20:06 libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb
+unpacked libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb
+unpacked libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb
+unpacked libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb
+crw-rw-rw- 1 root root 195,   0 Oct 31 12:57 /dev/nvidia0
+crw-rw-rw- 1 root root 195,   1 Oct 31 12:57 /dev/nvidia1
+crw-rw-rw- 1 root root 195, 255 Oct 31 12:57 /dev/nvidiactl
+crw-rw-rw- 1 root root 240,   0 Oct 31 12:57 /dev/nvidia-uvm
+crw-rw-rw- 1 root root 240,   1 Oct 31 12:57 /dev/nvidia-uvm-tools
+
+/dev/nvidia-caps:
+total 0
+drwxr-xr-x 2 root root     80 Oct 31 12:57 .
+drwxr-xr-x 6 root root    460 Oct 31 12:57 ..
+cr-------- 1 root root 243, 1 Oct 31 12:57 nvidia-cap1
+cr--r--r-- 1 root root 243, 2 Oct 31 12:57 nvidia-cap2
 
 --- stderr ---
-E: Unable to correct problems, you have held broken packages.
+W: Download is performed unsandboxed as root as file '/kaggle/tmp/debs/libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+W: Download is performed unsandboxed as root as file '/kaggle/tmp/debs/libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+W: Download is performed unsandboxed as root as file '/kaggle/tmp/debs/libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero_v2.so.0 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libumf.so.1 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link
+
+/sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link
+

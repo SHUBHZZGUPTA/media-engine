@@ -1,94 +1,91 @@
-[{"stream_name":"stdout","time":5.595827586,"data":"node: rc=0 3.2s\n"}
-,{"stream_name":"stdout","time":71.567609818,"data":"chrome_libs: rc=0 66.0s\n"}
-,{"stream_name":"stdout","time":74.91630333,"data":"nvidia_gl: rc=100 3.3s\n"}
-,{"stream_name":"stdout","time":83.34879122,"data":"npm: rc=0 8.4s\n"}
-,{"stream_name":"stdout","time":92.269183007,"data":"browser: rc=0 8.9s\n"}
-,{"stream_name":"stdout","time":1913.514708478,"data":"{\"name\": \"t4_gpu_auto\", \"args\": \"--workers 4\", \"rc\": 0, \"wall_s\": 1819.0, \"video_s\": 60.0, \"fps_rendered\": 0.99, \"speedup_vs_baseline\": null, \"mb\": 92.8, \"gpu_util_max\": 0, \"gpu_util_avg\": 0.0, \"gpu_log_lines\": [\"\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_auto.mp4\", \"30fps \\u00b7 standard \\u00b7 4 workers\", \"GPU: browser GPU (auto-detect)\", \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u258\n"}
-,{"stream_name":"stdout","time":3803.58600842,"data":"{\"name\": \"cpu4_software\", \"args\": \"--workers 4 --no-browser-gpu\", \"rc\": 0, \"wall_s\": 1872.5, \"video_s\": 60.0, \"fps_rendered\": 0.96, \"speedup_vs_baseline\": null, \"mb\": 92.4, \"gpu_util_max\": 0, \"gpu_util_avg\": 0.0, \"gpu_log_lines\": [\"30fps \\u00b7 standard \\u00b7 4 workers\", \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\n"}
-,{"stream_name":"stdout","time":3822.038268845,"data":"{\n"}
-,{"stream_name":"stdout","time":3822.038315649,"data":" \"params\": {\n"}
-,{"stream_name":"stdout","time":3822.038323199,"data":"  \"composition\": \"seg01.html\",\n"}
-,{"stream_name":"stdout","time":3822.038328906,"data":"  \"hyperframes\": \"0.8.181\",\n"}
-,{"stream_name":"stdout","time":3822.03833468,"data":"  \"deps\": {\n"}
-,{"stream_name":"stdout","time":3822.038339635,"data":"   \"gsap\": \"3.15.0\",\n"}
-,{"stream_name":"stdout","time":3822.038344572,"data":"   \"three\": \"0.149.0\"\n"}
-,{"stream_name":"stdout","time":3822.038349664,"data":"  },\n"}
-,{"stream_name":"stdout","time":3822.038354408,"data":"  \"quality\": \"looks\",\n"}
-,{"stream_name":"stdout","time":3822.038361338,"data":"  \"render_timeout_s\": 3600,\n"}
-,{"stream_name":"stdout","time":3822.038369383,"data":"  \"runs\": [\n"}
-,{"stream_name":"stdout","time":3822.038372638,"data":"   {\n"}
-,{"stream_name":"stdout","time":3822.038375803,"data":"    \"name\": \"t4_gpu_auto\",\n"}
-,{"stream_name":"stdout","time":3822.038379096,"data":"    \"args\": \"--workers 4\"\n"}
-,{"stream_name":"stdout","time":3822.038382395,"data":"   },\n"}
-,{"stream_name":"stdout","time":3822.038385644,"data":"   {\n"}
-,{"stream_name":"stdout","time":3822.038388809,"data":"    \"name\": \"cpu4_software\",\n"}
-,{"stream_name":"stdout","time":3822.038392166,"data":"    \"args\": \"--workers 4 --no-browser-gpu\"\n"}
-,{"stream_name":"stdout","time":3822.0383957,"data":"   }\n"}
-,{"stream_name":"stdout","time":3822.038398847,"data":"  ]\n"}
-,{"stream_name":"stdout","time":3822.038402042,"data":" },\n"}
-,{"stream_name":"stdout","time":3822.038405139,"data":" \"steps\": {\n"}
-,{"stream_name":"stdout","time":3822.038408391,"data":"  \"node\": {\n"}
-,{"stream_name":"stdout","time":3822.038411612,"data":"   \"rc\": 0,\n"}
-,{"stream_name":"stdout","time":3822.038414859,"data":"   \"secs\": 3.2\n"}
-,{"stream_name":"stdout","time":3822.03841807,"data":"  },\n"}
-,{"stream_name":"stdout","time":3822.038421239,"data":"  \"chrome_libs\": {\n"}
-,{"stream_name":"stdout","time":3822.038424484,"data":"   \"rc\": 0,\n"}
-,{"stream_name":"stdout","time":3822.038427848,"data":"   \"secs\": 66.0\n"}
-,{"stream_name":"stdout","time":3822.038431022,"data":"  },\n"}
-,{"stream_name":"stdout","time":3822.038434982,"data":"  \"nvidia_gl\": {\n"}
-,{"stream_name":"stdout","time":3822.038450362,"data":"   \"rc\": 100,\n"}
-,{"stream_name":"stdout","time":3822.038453258,"data":"   \"secs\": 3.3,\n"}
-,{"stream_name":"stdout","time":3822.038455928,"data":"   \"tail\": \"want 580.178.04 found 580.178.04-1ubuntu1\\nE: Unable to correct problems, you have held broken packages.\\n\"\n"}
-,{"stream_name":"stdout","time":3822.038458964,"data":"  },\n"}
-,{"stream_name":"stdout","time":3822.038461422,"data":"  \"npm\": {\n"}
-,{"stream_name":"stdout","time":3822.038463984,"data":"   \"rc\": 0,\n"}
-,{"stream_name":"stdout","time":3822.038466564,"data":"   \"secs\": 8.4\n"}
-,{"stream_name":"stdout","time":3822.038469094,"data":"  },\n"}
-,{"stream_name":"stdout","time":3822.038471645,"data":"  \"browser\": {\n"}
-,{"stream_name":"stdout","time":3822.038474198,"data":"   \"rc\": 0,\n"}
-,{"stream_name":"stdout","time":3822.038476755,"data":"   \"secs\": 8.9\n"}
-,{"stream_name":"stdout","time":3822.038479283,"data":"  }\n"}
-,{"stream_name":"stdout","time":3822.038481847,"data":" },\n"}
-,{"stream_name":"stdout","time":3822.038484288,"data":" \"runs\": [\n"}
-,{"stream_name":"stdout","time":3822.038486861,"data":"  {\n"}
-,{"stream_name":"stdout","time":3822.038489324,"data":"   \"name\": \"t4_gpu_auto\",\n"}
-,{"stream_name":"stdout","time":3822.038492028,"data":"   \"args\": \"--workers 4\",\n"}
-,{"stream_name":"stdout","time":3822.038494611,"data":"   \"rc\": 0,\n"}
-,{"stream_name":"stdout","time":3822.038497144,"data":"   \"wall_s\": 1819.0,\n"}
-,{"stream_name":"stdout","time":3822.038499775,"data":"   \"video_s\": 60.0,\n"}
-,{"stream_name":"stdout","time":3822.038502459,"data":"   \"fps_rendered\": 0.99,\n"}
-,{"stream_name":"stdout","time":3822.038505055,"data":"   \"speedup_vs_baseline\": null,\n"}
-,{"stream_name":"stdout","time":3822.038507671,"data":"   \"mb\": 92.8,\n"}
-,{"stream_name":"stdout","time":3822.038510204,"data":"   \"gpu_util_max\": 0,\n"}
-,{"stream_name":"stdout","time":3822.038512874,"data":"   \"gpu_util_avg\": 0.0,\n"}
-,{"stream_name":"stdout","time":3822.038515454,"data":"   \"gpu_log_lines\": [\n"}
-,{"stream_name":"stdout","time":3822.03851809,"data":"    \"\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_auto.mp4\",\n"}
-,{"stream_name":"stdout","time":3822.038520901,"data":"    \"30fps \\u00b7 standard \\u00b7 4 workers\",\n"}
-,{"stream_name":"stdout","time":3822.038523766,"data":"    \"GPU: browser GPU (auto-detect)\",\n"}
-,{"stream_name":"stdout","time":3822.038526486,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  25%  Checking browser GPU\",\n"}
-,{"stream_name":"stdout","time":3822.038532499,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)\",\n"}
-,{"stream_name":"stdout","time":3822.038535996,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)\",\n"}
-,{"stream_name":"stdout","time":3822.038538928,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)\",\n"}
-,{"stream_name":"stdout","time":3822.038541767,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)\",\n"}
-,{"stream_name":"stdout","time":3822.038546461,"data":"    \"[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038552401,"data":"    \"[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038555419,"data":"    \"[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038558251,"data":"    \"[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038561058,"data":"    \"[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.03856386,"data":"    \"[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.03856666,"data":"    \"[Browser:WARN] [.WebGL-0x1b94001ad400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038569457,"data":"    \"[Browser:WARN] [.WebGL-0x1b94001ad400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.03857223,"data":"    \"[Browser:WARN] [.WebGL-0x1b94001ad400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038575036,"data":"    \"[Browser:WARN] [.WebGL-0x3a2c00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038577809,"data":"    \"[Browser:WARN] [.WebGL-0x3a2c00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038580632,"data":"    \"[Browser:WARN] [.WebGL-0x3a2c00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels\",\n"}
-,{"stream_name":"stdout","time":3822.038583424,"data":"    \"[Browser:WARN] [.WebGL-0x3bec00199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)\",\n"}
-,{"stream_name":"stdout","time":3822.038586316,"data":"    \"[Browser:WARN] [.WebGL-0x8c400199400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)\",\n"}
-,{"stream_name":"stdout","time":3822.038589264,"data":"    \"\\u2588\\u2\n"}
-,{"stream_name":"stderr","time":3824.123963557,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":3824.12408141,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":3824.391948805,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":3824.391967234,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":3825.650790801,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":3826.554267754,"data":"[NbConvertApp] Writing 317283 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":5.618955602,"data":"node: rc=0 3.2s\n"}
+,{"stream_name":"stdout","time":64.449266867,"data":"chrome_libs: rc=0 58.8s\n"}
+,{"stream_name":"stdout","time":89.049498453,"data":"nvidia_gl: rc=0 24.6s\n"}
+,{"stream_name":"stdout","time":97.375248479,"data":"npm: rc=0 8.3s\n"}
+,{"stream_name":"stdout","time":104.618159158,"data":"browser: rc=0 7.2s\n"}
+,{"stream_name":"stdout","time":109.729799382,"data":"probe: {\"angle_gl_egl\": \"ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\", \"angle_vulkan\": \"ANGLE (NVIDIA, Vulkan 1.4.312 (NVIDIA Tesla T4 (0x00001EB8)), NVIDIA)\", \"egl\": \"NO_WEBGL\"}\n"}
+,{"stream_name":"stdout","time":394.006979643,"data":"{\"name\": \"t4_gpu_hw\", \"args\": \"--workers 4\", \"rc\": 0, \"wall_s\": 284.1, \"video_s\": 60.0, \"fps_rendered\": 6.34, \"speedup_vs_baseline\": null, \"mb\": 95.3, \"gpu_util_max\": 59, \"gpu_util_avg\": 14.9, \"gpu_log_lines\": [\"\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_hw.mp4\", \"30fps \\u00b7 standard \\u00b7 4 workers\", \"GPU: browser GPU (forced)\", \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\\n"}
+,{"stream_name":"stdout","time":413.22017216,"data":"{\n"}
+,{"stream_name":"stdout","time":413.22020926,"data":" \"params\": {\n"}
+,{"stream_name":"stdout","time":413.220220923,"data":"  \"composition\": \"seg01.html\",\n"}
+,{"stream_name":"stdout","time":413.220224339,"data":"  \"hyperframes\": \"0.8.181\",\n"}
+,{"stream_name":"stdout","time":413.2202282,"data":"  \"deps\": {\n"}
+,{"stream_name":"stdout","time":413.220253779,"data":"   \"gsap\": \"3.15.0\",\n"}
+,{"stream_name":"stdout","time":413.220258867,"data":"   \"three\": \"0.149.0\"\n"}
+,{"stream_name":"stdout","time":413.220264108,"data":"  },\n"}
+,{"stream_name":"stdout","time":413.22026895,"data":"  \"quality\": \"looks\",\n"}
+,{"stream_name":"stdout","time":413.220273683,"data":"  \"render_timeout_s\": 3600,\n"}
+,{"stream_name":"stdout","time":413.220278138,"data":"  \"runs\": [\n"}
+,{"stream_name":"stdout","time":413.220282777,"data":"   {\n"}
+,{"stream_name":"stdout","time":413.220286873,"data":"    \"name\": \"t4_gpu_hw\",\n"}
+,{"stream_name":"stdout","time":413.220291209,"data":"    \"args\": \"--workers 4\",\n"}
+,{"stream_name":"stdout","time":413.220295617,"data":"    \"requires_gpu\": true,\n"}
+,{"stream_name":"stdout","time":413.220300273,"data":"    \"env\": {\n"}
+,{"stream_name":"stdout","time":413.220304525,"data":"     \"PRODUCER_BROWSER_GPU_MODE\": \"hardware\",\n"}
+,{"stream_name":"stdout","time":413.220308824,"data":"     \"HYPERFRAMES_DEBUG_GPU_PROBE\": \"1\"\n"}
+,{"stream_name":"stdout","time":413.220313185,"data":"    }\n"}
+,{"stream_name":"stdout","time":413.220322414,"data":"   }\n"}
+,{"stream_name":"stdout","time":413.220326355,"data":"  ],\n"}
+,{"stream_name":"stdout","time":413.220329042,"data":"  \"gl_unpack\": true\n"}
+,{"stream_name":"stdout","time":413.220331855,"data":" },\n"}
+,{"stream_name":"stdout","time":413.220334657,"data":" \"steps\": {\n"}
+,{"stream_name":"stdout","time":413.22035021,"data":"  \"node\": {\n"}
+,{"stream_name":"stdout","time":413.220354932,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":413.220359793,"data":"   \"secs\": 3.2\n"}
+,{"stream_name":"stdout","time":413.220364902,"data":"  },\n"}
+,{"stream_name":"stdout","time":413.220369598,"data":"  \"chrome_libs\": {\n"}
+,{"stream_name":"stdout","time":413.220373767,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":413.220377843,"data":"   \"secs\": 58.8\n"}
+,{"stream_name":"stdout","time":413.220381958,"data":"  },\n"}
+,{"stream_name":"stdout","time":413.220385912,"data":"  \"nvidia_gl\": {\n"}
+,{"stream_name":"stdout","time":413.220404429,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":413.220407853,"data":"   \"secs\": 24.6\n"}
+,{"stream_name":"stdout","time":413.220411004,"data":"  },\n"}
+,{"stream_name":"stdout","time":413.220414063,"data":"  \"npm\": {\n"}
+,{"stream_name":"stdout","time":413.220417267,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":413.22042054,"data":"   \"secs\": 8.3\n"}
+,{"stream_name":"stdout","time":413.220425568,"data":"  },\n"}
+,{"stream_name":"stdout","time":413.220431918,"data":"  \"browser\": {\n"}
+,{"stream_name":"stdout","time":413.220435035,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":413.220449599,"data":"   \"secs\": 7.2\n"}
+,{"stream_name":"stdout","time":413.220453498,"data":"  }\n"}
+,{"stream_name":"stdout","time":413.220457082,"data":" },\n"}
+,{"stream_name":"stdout","time":413.220460802,"data":" \"runs\": [\n"}
+,{"stream_name":"stdout","time":413.220464626,"data":"  {\n"}
+,{"stream_name":"stdout","time":413.220467888,"data":"   \"name\": \"t4_gpu_hw\",\n"}
+,{"stream_name":"stdout","time":413.220471212,"data":"   \"args\": \"--workers 4\",\n"}
+,{"stream_name":"stdout","time":413.220474475,"data":"   \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":413.220477611,"data":"   \"wall_s\": 284.1,\n"}
+,{"stream_name":"stdout","time":413.220480851,"data":"   \"video_s\": 60.0,\n"}
+,{"stream_name":"stdout","time":413.220484164,"data":"   \"fps_rendered\": 6.34,\n"}
+,{"stream_name":"stdout","time":413.220487483,"data":"   \"speedup_vs_baseline\": null,\n"}
+,{"stream_name":"stdout","time":413.220490733,"data":"   \"mb\": 95.3,\n"}
+,{"stream_name":"stdout","time":413.220493955,"data":"   \"gpu_util_max\": 59,\n"}
+,{"stream_name":"stdout","time":413.22049725,"data":"   \"gpu_util_avg\": 14.9,\n"}
+,{"stream_name":"stdout","time":413.220500485,"data":"   \"gpu_log_lines\": [\n"}
+,{"stream_name":"stdout","time":413.220504012,"data":"    \"\\u25c6  Rendering proj/seg01.html \\u2192 /kaggle/working/t4_gpu_hw.mp4\",\n"}
+,{"stream_name":"stdout","time":413.220507672,"data":"    \"30fps \\u00b7 standard \\u00b7 4 workers\",\n"}
+,{"stream_name":"stdout","time":413.220511112,"data":"    \"GPU: browser GPU (forced)\",\n"}
+,{"stream_name":"stdout","time":413.220514543,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  25%  Checking browser GPU\",\n"}
+,{"stream_name":"stdout","time":413.220522476,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)\",\n"}
+,{"stream_name":"stdout","time":413.220530856,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)\",\n"}
+,{"stream_name":"stdout","time":413.220545398,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)\",\n"}
+,{"stream_name":"stdout","time":413.220549985,"data":"    \"[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, beginframe, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)\",\n"}
+,{"stream_name":"stdout","time":413.220555662,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  25%  Streaming frame 1/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220565872,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  25%  Streaming frame 6/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220570337,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  25%  Streaming frame 11/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220574654,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  25%  Streaming frame 16/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220579058,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  26%  Streaming frame 20/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220583438,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  26%  Streaming frame 25/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220587832,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  26%  Streaming frame 29/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.22059216,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  26%  Streaming frame 34/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220596479,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  26%  Streaming frame 39/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220600801,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591  26%  Streaming frame 43/1800 (4 workers)\",\n"}
+,{"stream_name":"stdout","time":413.220605035,"data":"    \"\\u2588\\u2588\\u2588\\u2588\\u2588\\u2588\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u2591\\u259\n"}
+,{"stream_name":"stderr","time":415.332855375,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":415.332884238,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":415.618153571,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":415.61818309,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":416.962832928,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":417.929748446,"data":"[NbConvertApp] Writing 327738 bytes to __results__.html\n"}
 ]

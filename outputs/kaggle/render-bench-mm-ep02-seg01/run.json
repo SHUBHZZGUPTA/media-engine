@@ -10,6 +10,38 @@
  "pushed_at": "2026-10-31T12:57:16+00:00",
  "accelerator": "NvidiaTeslaT4",
  "version": 3,
- "status": "RUNNING",
- "checked_at": "2026-10-31T12:59:17+00:00"
+ "status": "COMPLETE",
+ "checked_at": "2026-10-31T13:05:05+00:00",
+ "gpu_quota_now": {
+  "used_h": 1.2,
+  "remaining_h": 28.8,
+  "total_h": 30.0
+ },
+ "files": [
+  "bench.json",
+  "doctor.log",
+  "me-render-bench-mm-ep02-seg01.log",
+  "nvidia_smi_end.txt",
+  "probe_angle_gl_egl.log",
+  "probe_angle_vulkan.log",
+  "probe_egl.log",
+  "render_t4_gpu_hw.log",
+  "step_browser.log",
+  "step_chrome_libs.log",
+  "step_node.log",
+  "step_npm.log",
+  "step_nvidia_gl.log",
+  "t4_gpu_hw_preview.mp4"
+ ],
+ "kept_on_kaggle": [
+  {
+   "file": "t4_gpu_hw.mp4",
+   "mb": 95.3
+  }
+ ],
+ "gpu_quota_after": {
+  "used_h": 1.2,
+  "remaining_h": 28.8,
+  "total_h": 30.0
+ }
 }
