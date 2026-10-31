@@ -5,7 +5,7 @@ output so a change can be reverted.
 
 Usage: python3 tools/yt_channel.py jobs/ytchannel/<id>.json
 Job:   {"id", "token_secret": "YT_RT_MM_EN", "expect_channel_id": "UC...", "description": "...", "banner": "path/in/repo.jpg"}
-       (description and banner are each optional; expect_channel_id is required so a wrong token can't edit another channel)
+       (description and banner are each optional; "read_only": true only reads; expect_channel_id is required so a wrong token can't edit another channel)
 Writes outputs/ytchannel/<id>.json (before, request, after).
 Profile pictures can't be set through the API (YouTube Studio only).
 """
@@ -26,7 +26,10 @@ ch = yt.channels().list(part="id,snippet,brandingSettings", mine=True).execute()
 res.update(channel_id=ch["id"], channel=ch["snippet"]["title"])
 if ch["id"] != J["expect_channel_id"]:
     res["error"] = f"token belongs to {ch['id']} ({ch['snippet']['title']}), expected {J['expect_channel_id']}: nothing changed"; done(); sys.exit(1)
-bs = ch.get("brandingSettings", {}); res["before"] = {"description": bs.get("channel", {}).get("description"), "bannerExternalUrl": bs.get("image", {}).get("bannerExternalUrl")}
+bs = ch.get("brandingSettings", {})
+if J.get("read_only"):
+    res.update(ok=True, snippet_description=ch["snippet"].get("description"), brandingSettings=bs); done(); sys.exit(0)
+res["before"] = {"description": bs.get("channel", {}).get("description"), "bannerExternalUrl": bs.get("image", {}).get("bannerExternalUrl")}
 if J.get("banner"):
     up = yt.channelBanners().insert(media_body=MediaFileUpload(J["banner"], mimetype="image/jpeg" if J["banner"].endswith(".jpg") else "image/png")).execute()
     bs.setdefault("image", {})["bannerExternalUrl"] = up["url"]; res["banner_url"] = up["url"]
