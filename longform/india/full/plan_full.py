@@ -12,7 +12,7 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..", "..")
 A1 = os.path.join(HERE, "..", "art"); A2 = os.path.join(HERE, "..", "art2"); C1 = os.path.join(HERE, "..", "pilot", "cards"); C2 = os.path.join(HERE, "cards")
 ARC = os.path.join(ROOT, "outputs", "fetch", "in-pilot-archive")
-ARC2 = os.path.join(ROOT, "outputs", "fetch", "in-full-archive"); ARC3 = os.path.join(ROOT, "outputs", "fetch", "in-full-archive2"); CLIPS = os.path.join(HERE, "clips3d")
+ARC2 = os.path.join(ROOT, "outputs", "fetch", "in-full-archive"); ARC3 = os.path.join(ROOT, "outputs", "fetch", "in-full-archive2"); ARC4 = os.path.join(ROOT, "outputs", "fetch", "in-full-archive3"); CLIPS = os.path.join(HERE, "clips3d")   # archive3 = replacements, searched first
 FONT = "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
 args = [a for a in sys.argv[1:] if not a.startswith("--")]
 L = json.load(open(args[0])); END = L[-1]["t1"] + 1.6
@@ -51,7 +51,7 @@ def a(n):
         if os.path.exists(p): return p
     return None
 def arc(key):
-    for d in (ARC3, ARC2, ARC):
+    for d in (ARC4, ARC3, ARC2, ARC):
         for ext in (".jpg", ".png"):
             p = os.path.join(d, key + ext)
             if os.path.exists(p) and os.path.getsize(p) > 2000: return p
