@@ -1,0 +1,42 @@
+{
+ "id": "ru-accent-test",
+ "key": "longform",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "accent_fixed",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary. ACCENT: the Narrator is a native speaker of General American English and keeps a neutral, standard American accent from the first word to the last. The story is about Russia, but the narrator is NOT Russian: never imitate a Russian accent, never roll the R, never change vowels. Pronounce Russian names and places (tsar, boyars, Kazan, Astrakhan, Oprichnina, Anastasia) the way an American documentary narrator would, as English words. Deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short pause before punchlines.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Ivan the Fourth became ruler of Moscow when he was three years old."
+    ],
+    [
+     "Narrator",
+     "When he was seven, his mother died suddenly. Many believed she was poisoned."
+    ],
+    [
+     "Narrator",
+     "For years, rival noble families, the boyars, fought over the boy and the palace. Ivan later wrote that they ignored him, stole from the treasury, and sometimes didn't even feed him."
+    ],
+    [
+     "Narrator",
+     "In fifteen forty-seven, at sixteen, Ivan did something new. He had himself crowned Tsar. From the Roman word Caesar."
+    ],
+    [
+     "Narrator",
+     "And at first, he was... actually good. New laws, a standing army, and big wins: he conquered the Tatar cities of Kazan and Astrakhan, opening the whole Volga to Moscow."
+    ],
+    [
+     "Narrator",
+     "To celebrate Kazan, he built the famous colourful cathedral on Red Square: Saint Basil's."
+    ]
+   ]
+  }
+ ]
+}
