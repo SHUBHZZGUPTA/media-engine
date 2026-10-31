@@ -3,48 +3,13 @@
  "kernel": "shubhzzgupta07/me-render-bench-mm-ep02-seg01",
  "url": "https://www.kaggle.com/code/shubhzzgupta07/me-render-bench-mm-ep02-seg01",
  "gpu_quota_before": {
-  "used_h": 0.02,
-  "remaining_h": 29.98,
+  "used_h": 1.08,
+  "remaining_h": 28.92,
   "total_h": 30.0
  },
- "pushed_at": "2026-10-31T11:01:32+00:00",
+ "pushed_at": "2026-10-31T12:57:16+00:00",
  "accelerator": "NvidiaTeslaT4",
- "version": 2,
- "status": "COMPLETE",
- "checked_at": "2026-10-31T12:28:45+00:00",
- "gpu_quota_now": {
-  "used_h": 1.08,
-  "remaining_h": 28.92,
-  "total_h": 30.0
- },
- "files": [
-  "bench.json",
-  "cpu4_software_preview.mp4",
-  "doctor.log",
-  "me-render-bench-mm-ep02-seg01.log",
-  "nvidia_smi_end.txt",
-  "render_cpu4_software.log",
-  "render_t4_gpu_auto.log",
-  "step_browser.log",
-  "step_chrome_libs.log",
-  "step_node.log",
-  "step_npm.log",
-  "step_nvidia_gl.log",
-  "t4_gpu_auto_preview.mp4"
- ],
- "kept_on_kaggle": [
-  {
-   "file": "cpu4_software.mp4",
-   "mb": 92.4
-  },
-  {
-   "file": "t4_gpu_auto.mp4",
-   "mb": 92.8
-  }
- ],
- "gpu_quota_after": {
-  "used_h": 1.08,
-  "remaining_h": 28.92,
-  "total_h": 30.0
- }
+ "version": 3,
+ "status": "RUNNING",
+ "checked_at": "2026-10-31T12:59:17+00:00"
 }
