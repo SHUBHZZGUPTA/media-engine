@@ -1,6 +1,6 @@
 #!/bin/bash
 # India full video (ch2-13) art: same toy-figure template as ../art/gen.sh and russia/art/gen.sh.
-# Revered religious figures (Buddha, Mahavira) and Shivaji appear only through archive art; living politicians only through real photos.
+# Shubham's rule (31 Oct 2026): every REAL person and every deity appears only through real artwork or photos. Toy figures are for fictional/unnamed characters only.
 cd "$(dirname "$0")"
 STYLE="Soft matte vinyl-toy texture, gentle studio lighting from the upper left, full body visible and centered"
 CH() { echo "Single character cut-out on a fully transparent background: a cute chibi 3D figurine of $1, rounded pawn-shaped body with no visible legs (like a board-game piece), big round head, $2. Simple face: small black dot eyes and short eyebrows, $3. $STYLE, facing three-quarters to the $4. No ground, no shadow, no text. Portrait 1024x1536, transparent background PNG."; }
@@ -9,28 +9,15 @@ declare -A J
 # ---- characters ----
 J[c_guru]="$(CH "an ancient Vedic teacher from about 1000 BCE" "long grey beard, hair tied in a top knot, simple saffron cotton cloth draped over one shoulder, a string of brown rudraksha beads in one hand" "calm, patient half-smile" "right")"
 J[c_student]="$(CH "a young Vedic student about twelve years old" "shaved head with a small tuft, plain white cotton wrap, sitting cross-legged" "sleepy, mid-yawn" "left")"
-J[c_alexander]="$(CH "Alexander the Great in 326 BCE" "bronze Greek helmet with a tall white plume, red cloak, bronze breastplate, curly golden-brown hair" "curious, confident" "right")"
-J[c_porus]="$(CH "King Porus of the Punjab in 326 BCE, very tall" "white turban with a gold band, a bandage on one arm, simple armour over a white tunic, thick black beard" "proud, calm, chin up" "left")"
-J[c_chanakya]="$(CH "Chanakya, an ancient Indian Brahmin strategist" "shaved head with one long untied lock of hair at the back, plain white dhoti and shawl, holding a palm-leaf scroll" "sly knowing smile, one eyebrow raised" "right")"
 J[c_minister]="$(CH "a junior minister of the Maurya court around 300 BCE" "neat white turban, light blue cotton robe, holding a very long rolled list that trails to the floor" "nervous, sweating" "left")"
-J[c_chandragupta]="$(CH "Emperor Chandragupta Maurya around 320 BCE" "golden crown-like turban, deep red robe with gold border, pearl necklaces, a sword at his waist" "determined, confident" "right")"
-J[c_ashoka]="$(CH "Emperor Ashoka around 260 BCE" "simple gold crown, white robe with a saffron shawl, holding a small wheel-shaped emblem with 24 spokes" "sad, thoughtful" "right")"
-J[c_aryabhata]="$(CH "the ancient Indian astronomer Aryabhata around 500 CE" "white cotton robe, short beard, holding a palm-leaf manuscript and pointing upward" "excited, wide-eyed" "right")"
 J[c_gupta_official]="$(CH "a Gupta court official around 500 CE" "orange turban, green robe, holding a small oil lamp" "confused, looking down at his own feet" "left")"
-J[c_tughlaq]="$(CH "Sultan Muhammad bin Tughlaq around 1330" "tall white turban with a jewel, green brocade robe, trimmed black beard, sitting on a small throne" "cheerful, overconfident grin" "right")"
 J[c_courtier]="$(CH "a Delhi Sultanate courtier around 1330" "small white cap, brown robe, holding a rolled map" "worried, eyebrows up" "left")"
-J[c_babur]="$(CH "Emperor Babur around 1527" "Central Asian fur-trimmed cap, long green coat, small beard and moustache, holding a quill and a small diary" "gloomy, grumpy" "right")"
 J[c_mughal_servant]="$(CH "a Mughal palace servant around 1600" "white turban, white kurta with a red waist sash, holding a silver tray" "polite, eager" "left")"
-J[c_akbar]="$(CH "Emperor Akbar around 1580" "Mughal turban with a feather plume and jewel, rich orange and gold jama robe, moustache, pearl necklaces" "wise, curious" "right")"
-J[c_shahjahan_old]="$(CH "the old Mughal emperor Shah Jahan around 1665" "white beard, simple white robe with a pale gold shawl, white turban, leaning on a cane" "sad, wistful" "right")"
 J[c_director1]="$(CH "an 18th-century London East India Company director" "white powdered wig, dark blue frock coat with brass buttons, holding a quill" "relaxed, smug" "right")"
 J[c_director2]="$(CH "a second 18th-century London East India Company director" "grey powdered wig, maroon frock coat, round spectacles, holding a large ledger" "shocked, eyebrows up" "left")"
-J[c_victoria]="$(CH "Queen Victoria around 1870" "black dress with white lace collar, small diamond crown, grey hair in a bun" "pleased, slight smile" "right")"
 J[c_br_minister]="$(CH "a Victorian British government minister" "black frock coat, tall top hat, mutton-chop whiskers, holding a red velvet cushion with a small crown" "nervous, sweating" "left")"
-J[c_gandhi]="$(CH "Mahatma Gandhi in 1930, kind and dignified" "bald head, round wire spectacles, plain white khadi dhoti and shawl, holding a wooden walking stick in one hand and a pinch of salt in the other" "gentle, calm smile" "left")"
 J[c_br_officer]="$(CH "a British police officer in India in 1930" "khaki uniform, khaki sun helmet, holding a small notebook and pencil" "stern, then nervous" "right")"
 J[c_maharaja]="$(CH "an Indian maharaja in 1947" "jewelled turban with a feather, silk sherwani in deep purple, many pearl necklaces, sitting on a cushion" "grand, suspicious" "right")"
-J[c_patel]="$(CH "Sardar Vallabhbhai Patel in 1947, respectful portrayal" "white dhoti and kurta, white shawl, bald head, holding a single sheet of paper" "calm, firm" "left")"
 J[c_pilot]="$(CH "an Indian cargo pilot in 1991" "white pilot shirt with epaulettes, pilot cap, aviator sunglasses pushed up, holding a clipboard" "confused" "right")"
 J[c_gov_official]="$(CH "an Indian government official in 1991" "white kurta, grey Nehru jacket, thick glasses, holding a file marked with a red ribbon" "worried, whispering" "left")"
 # ---- sets ----
