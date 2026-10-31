@@ -42,8 +42,8 @@ def exists(p): return p and os.path.exists(p)
 
 # ---- assets ----
 ART_FALLBACK = {"mt_floor": "challenger_deep", "mt_surface": "okeanos", "mt_twilight": "deep_discoverer", "mt_midnight": "atolla",
-                "mt_plastic": "marine_debris_deep", "mt_trieste": "trieste_1960", "mt_everest": "everest", "mt_plates": "subduction",
-                "mt_water": "subduction", "mt_champagne": "champagne_vent"}
+                "mt_plastic": "challenger_deep", "mt_trieste": "trieste_1960", "mt_everest": "everest", "mt_plates": "subduction",
+                "mt_water": "subduction", "mt_champagne": "eifuku_bubbles"}
 def a(n):
     for d in (A2, A1):
         p = os.path.join(d, n + ".png")
@@ -367,7 +367,7 @@ chapter_card(7, c + 17)
 # ======================= CHAPTER 7: WE GOT THERE FIRST =======================
 c = CHAP[7]
 plate(T(c, -.1), a("mt_plastic"), layers=[], zoom=(1.0, 1.25), c=(.5, .55))
-photo(T(c + 1, -.15), "marine_debris_deep", [tag("Candy wrappers too", K(c + 1, "candy"), y=330)])
+photo(T(c + 1, -.15), "wright_vescovo", [tag("Candy wrappers too", K(c + 1, "candy"), y=330)])
 photo(T(c + 2, -.15), "amphipod", [lab("2019", K(c + 2, "2019"), x=300, y=230, size=110), tag("Prof. Alan Jamieson's team", K(c + 2, "Jamieson"), y=430)])
 board(T(c + 3, -.15), [imgcard(arc("microplastic"), 1050, 980, 620, T(c + 3, -.1), framed=True), txt("Plastic in their guts", 1560, 380, K(c + 3, "plastic"), size=70, box="#222222"),
                        txt("Mariana: 100%", 1560, 700, K(c + 3, "every single"), size=96, box="#d6423a")])
