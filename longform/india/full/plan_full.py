@@ -179,10 +179,10 @@ def crop(key, box):
         im = Image.open(p).convert("RGB"); W_, H_ = im.size
         im.crop((int(box[0] * W_), int(box[1] * H_), int(box[2] * W_), int(box[3] * H_))).save(out, quality=92)
     return out
-def portrait(who, x, t, enter="pop", maxh=560, y=700):
+def portrait(who, x, t, enter="pop", maxh=430, y=595):
     key, box = REAL[who]; p = crop(key, box)
     if not p: return None
-    f = frame(p); im = Image.open(f); w = int(min(560, maxh * im.width / im.height))
+    f = frame(p); im = Image.open(f); w = int(min(620, maxh * im.width / im.height))
     d = {"img": f, "x": x, "y": y, "h": aspect_h(f, w), "enter": enter, "shadow": True}
     if t is not None: d["in"] = t
     return d
@@ -194,12 +194,12 @@ def skit(i0, i1, bg, pos, cast=None):
         mine = [i for i in lines if SPK[i] == who]; first = mine[0] if mine else i0
         if who in REAL:
             real = True; lay.append(portrait(who, x, None if k == 0 else T(first, -.5)))
-            lay.append(txt(who.title(), x, 1010, None if k == 0 else T(first, -.5), size=40, box="#222222"))
+            lay.append(txt(who.title(), x, 855, None if k == 0 else T(first, -.5), size=40, box="#222222"))
         else:
             lay.append(ch(cast[who], x, enter=("slideL" if x < 960 else "slideR") if k else "none", t=None if k == 0 else T(first, -.5), flip=flip, talks=mine,
                           h=640 if who == "TRAVELLER" else 560, y=1030 if who == "TRAVELLER" else 1045))
     for i in lines:
-        x = pos.get(SPK[i], (960, False))[0]; lay.append(say(i, x, y=300 if real else 380))
+        x = pos.get(SPK[i], (960, False))[0]; lay.append(say(i, x, y=120 if real else 380))
     if real: lay.append(txt("dramatised", 1780, 60, t0, size=28, box="#000000aa", scale=1.0))
     for L_ in lay:
         if L_ and L_.get("in") is None: L_.pop("in", None)
