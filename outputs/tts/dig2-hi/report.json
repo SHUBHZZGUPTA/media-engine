@@ -3,27 +3,51 @@
  "items": [
   {
    "name": "part1",
-   "ok": true,
-   "model": "gemini-2.5-flash-preview-tts",
-   "mime": "audio/L16;codec=pcm;rate=24000",
-   "seconds": 105.13,
-   "took": 40.2
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-2.5-flash-preview-tts",
+     "status": 429,
+     "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash-tts, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23h31m21.738735877s.\","
+    },
+    {
+     "model": "gemini-3.1-flash-tts-preview",
+     "status": 429,
+     "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23h31m21.604938592s.\","
+    }
+   ]
   },
   {
    "name": "part2",
-   "ok": true,
-   "model": "gemini-2.5-flash-preview-tts",
-   "mime": "audio/L16;codec=pcm;rate=24000",
-   "seconds": 106.53,
-   "took": 39.8
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-2.5-flash-preview-tts",
+     "status": 429,
+     "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash-tts, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23h31m19.466260829s.\","
+    },
+    {
+     "model": "gemini-3.1-flash-tts-preview",
+     "status": 429,
+     "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23h31m19.343015093s.\","
+    }
+   ]
   },
   {
    "name": "part3",
-   "ok": true,
-   "model": "gemini-2.5-flash-preview-tts",
-   "mime": "audio/L16;codec=pcm;rate=24000",
-   "seconds": 101.13,
-   "took": 58.0
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-2.5-flash-preview-tts",
+     "status": 429,
+     "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash-tts, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23h31m17.217664383s.\","
+    },
+    {
+     "model": "gemini-3.1-flash-tts-preview",
+     "status": 429,
+     "error": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23h31m17.088285485s.\","
+    }
+   ]
   }
  ]
 }
