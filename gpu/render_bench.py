@@ -18,6 +18,7 @@ import os
 import shutil
 import subprocess
 import tarfile
+import threading
 import time
 
 P = json.loads(JOB_PARAMS)  # noqa: F821  (written into line 1 by tools/kaggle_run.py)
@@ -82,6 +83,8 @@ if not proj:
 if not proj.startswith(WORK):
     shutil.copytree(proj, f"{WORK}/proj", dirs_exist_ok=True)
     proj = f"{WORK}/proj"
+if not os.path.exists(f"{proj}/index.html"):  # the CLI looks for an index.html even when -c names another page
+    shutil.copy(f"{proj}/{P['composition']}", f"{proj}/index.html")
 REPORT["project"] = proj
 save()
 
@@ -91,10 +94,23 @@ step("node", f"mkdir -p {NODE} && curl -fsSL https://nodejs.org/dist/v22.11.0/no
              f" | tar -xJ -C {NODE} --strip-components=1 && {NODE}/bin/node -v", timeout=600)
 env = dict(os.environ, PATH=f"{NODE}/bin:" + os.environ["PATH"], HYPERFRAMES_NO_TELEMETRY="1", DO_NOT_TRACK="1",
            HYPERFRAMES_NO_UPDATE_CHECK="1", HYPERFRAMES_SKIP_SKILLS="1")
-step("chrome_libs", "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq libnss3 libatk1.0-0 "
-                    "libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 "
-                    "libxrandr2 libgbm1 libasound2 libpango-1.0-0 libcairo2 fonts-noto-color-emoji > /dev/null",
-     timeout=900)
+LIBS = ("libnss3 libnspr4 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 libatspi2.0-0t64 "
+        "libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 "
+        "fonts-noto-color-emoji")
+# Ubuntu 24.04 renamed several libraries (...t64); fall back to the old name one package at a time
+step("chrome_libs", "apt-get update -qq > /dev/null 2>&1; export DEBIAN_FRONTEND=noninteractive; "
+                    f"for p in {LIBS}; do apt-get install -y -qq $p > /dev/null 2>&1 || "
+                    "apt-get install -y -qq ${p%t64} > /dev/null 2>&1 || echo MISSING $p; done", timeout=900)
+# Kaggle mounts the NVIDIA driver for CUDA; Chrome's WebGL also needs the driver's GL/Vulkan user-space libraries.
+# Try the package that matches the running driver exactly (a mismatched one would not load).
+REPORT["gl_diag_before"] = sh("ls /usr/lib/x86_64-linux-gnu | grep -Ei 'nvidia' | head -30; "
+                              "ls /usr/share/vulkan/icd.d /etc/vulkan/icd.d /usr/share/glvnd/egl_vendor.d 2>&1")[2]
+drv = REPORT["machine"]["gpu"].splitlines()[0].split(",")[-1].strip() if REPORT["machine"]["gpu"] else ""
+step("nvidia_gl", f"V=$(apt-cache madison libnvidia-gl-{drv.split('.')[0]} | awk '{{print $3}}' | grep '^{drv}' | head -1); "
+                  f"echo want {drv} found $V; [ -n \"$V\" ] && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq "
+                  f"libnvidia-gl-{drv.split('.')[0]}=$V", timeout=900)
+REPORT["gl_diag_after"] = sh("ls /usr/lib/x86_64-linux-gnu | grep -Ei 'nvidia' | head -30; "
+                             "ls /usr/share/vulkan/icd.d /usr/share/glvnd/egl_vendor.d 2>&1")[2]
 ENG = f"{WORK}/engine"
 os.makedirs(ENG, exist_ok=True)
 deps = {"hyperframes": P["hyperframes"], **P.get("deps", {})}
@@ -115,7 +131,19 @@ for run in P["runs"]:
     out = f"{OUT}/{run['name']}.mp4"
     cmd = (f"cd {ENG} && npx hyperframes render {proj} -c {P['composition']} -o {out} "
            f"--quality {P.get('quality', 'looks')} --no-low-memory-mode {run.get('args', '')}")
+    util = []
+    stop = threading.Event()
+
+    def sample():  # GPU utilisation while rendering: shows whether Chrome really used the T4
+        while not stop.is_set():
+            s = sh("nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits")[2].split()
+            util.append(max([int(x) for x in s if x.isdigit()] or [0]))
+            stop.wait(5)
+    th = threading.Thread(target=sample, daemon=True)
+    th.start()
     rc, secs, tail = sh(cmd, timeout=int(P.get("render_timeout_s", 3600)), env=env, log=f"render_{run['name']}.log")
+    stop.set()
+    th.join(10)
     dur = sh(f"ffprobe -v error -show_entries format=duration -of csv=p=0 {out}")[2].strip()
     try:
         dur = float(dur)
@@ -128,6 +156,8 @@ for run in P["runs"]:
            "fps_rendered": round(dur * fps / secs, 2) if dur else None,
            "speedup_vs_baseline": round(P["baseline_s"] / secs, 2) if P.get("baseline_s") and rc == 0 else None,
            "mb": round(os.path.getsize(out) / 1e6, 1) if os.path.exists(out) else None,
+           "gpu_util_max": max(util) if util else None,
+           "gpu_util_avg": round(sum(util) / len(util), 1) if util else None,
            "gpu_log_lines": gpu_lines}
     if rc:
         rec["tail"] = tail[-1500:]

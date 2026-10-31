@@ -5,21 +5,28 @@
  "internet": true,
  "timeout_minutes": 150,
  "wait_minutes": 2,
- "stage": {
-  "repo_paths": ["bench/mm-ep02-seg01/proj.tar.gz"],
-  "dataset_slug": "me-render-bench-mm-ep02",
-  "title": "me render bench mm ep02"
- },
  "params": {
   "composition": "seg01.html",
   "hyperframes": "0.8.181",
-  "deps": {"gsap": "3.15.0", "three": "0.149.0"},
+  "deps": {
+   "gsap": "3.15.0",
+   "three": "0.149.0"
+  },
   "quality": "looks",
   "render_timeout_s": 3600,
   "runs": [
-   {"name": "t4_gpu_auto", "args": "--workers 4"},
-   {"name": "cpu4_software", "args": "--workers 4 --no-browser-gpu"}
+   {
+    "name": "t4_gpu_auto",
+    "args": "--workers 4"
+   },
+   {
+    "name": "cpu4_software",
+    "args": "--workers 4 --no-browser-gpu"
+   }
   ]
  },
- "requested": "2026-10-31T16:30+05:30"
+ "requested": "2026-10-31T16:35+05:30 (retry: Ubuntu 24.04 libs, index.html, GPU GL libs)",
+ "datasets": [
+  "shubhzzgupta07/me-render-bench-mm-ep02"
+ ]
 }
