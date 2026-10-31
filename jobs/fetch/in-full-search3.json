@@ -1,0 +1,43 @@
+{
+ "id": "in-full-search3",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 10,
+ "files": [
+  {
+   "name": "s_tughlaq_coin.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Muhammad+bin+Tughluq+coin&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_tughlaq_coin2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Tughluq+forced+token+currency+coin&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_victoria_bassano.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Queen+Victoria+Bassano+1882&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_victoria_portrait.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Queen+Victoria+portrait+1887+jubilee&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_chanakya.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Chanakya&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_chanakya2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Kautilya+Arthashastra&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_porus_decadrachm.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Porus+medallion+decadrachm+elephant&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_porus2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Alexander+Porus+coin+British+Museum&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_ashoka_relief.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Ashoka+relief+Kanaganahalli&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  }
+ ]
+}
