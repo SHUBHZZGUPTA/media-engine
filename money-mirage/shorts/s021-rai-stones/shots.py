@@ -16,10 +16,12 @@ SEA, PATH, VIL, RAFT = P('ry_seafloor', 'canal_buoys'), P('ry_path', 'barter_mar
 # 1 HOOK
 shot('s00', SEA, 'film', A(0), cam0=PORT(.5, .3, 1.2), cam1=PORT(.5, .35, 1.35))
 beat('card', {'abs': 0.12}, text='SUNK… *STILL MONEY?*', y=280, size=112, blur=True, until={'abs': 2.4})
+beat('punch', A(0, 1, .3), shot='s00', level=1.18)
 beat('punch', A(0, 2, .2), shot='s00', level=1.3)
 beat('circle', A(0, 3, .1), shot='s00', c=c('sea_stone', [.5, .35]), r=[260, 260], col='#FFC23A', until=A(1, 0, -.1))
 # 2 Yap, rai
 shot('s01', PATH, 'film', A(1, 0, -.15), cut='whip', cam0=PORT(.4, .35, 1.1), cam1=PORT(.35, .35, 1.3))
+beat('punch', A(1, 2, .2), shot='s01', level=1.15)
 beat('punch', A(1, 3, .2), shot='s01', level=1.25)
 # 3 3.6 m
 shot('s02', PATH, 'film', A(2, 0, -.12), cut='zoomIn', cam0=PORT(.25, .35, 1.3), cam1=PORT(.25, .38, 1.5))
@@ -34,6 +36,7 @@ shot('s05', VIL, 'film', A(5, 0, -.15), cut='zoom', cam0=PORT(.5, .4, 1.1), cam1
 beat('punch', A(5, 1, .3), shot='s05', level=1.25)
 # 7 Palau 400 km by sea
 shot('s06', RAFT, 'film', A(6, 0, -.15), cut='whip', cam0=PORT(.45, .3, 1.15), cam1=PORT(.5, .32, 1.3))
+beat('punch', A(6, 2, .2), shot='s06', level=1.25)
 beat('count', Wd(6, 5, -.05), to=400, suffix=' km', **NUM, until=A(7, 0, -.1))
 # 8 OPEN LOOP 2
 shot('s07', RAFT, 'film', A(7, 0, -.1), cut='flash', cam0=PORT(.45, .3, 1.4), cam1=PORT(.45, .35, 1.6))
@@ -45,8 +48,10 @@ shot('s09', VIL, 'film', A(8, 2, -.1), cut='whip', cam0=PORT(.6, .3, 1.2), cam1=
 # 10 PAYOFF
 shot('MA', 'p_mirage', 'film', A(9, 0, -.15), cut='zoom', cam0={'x': .62, 'y': .35, 'z': 1.1}, cam1={'x': .62, 'y': .3, 'z': 1.3}, shim=[1.0], shimRect=[.3, 0, .75, .55])
 shot('MB', 'p_mirage_empty', 'film', A(9, 1, -.05), cut='flash', depthOf='p_mirage', cam0={'x': .58, 'y': .33, 'z': 1.3}, cam1={'x': .5, 'y': .45, 'z': 1.1}, shim=[.6], shimRect=[.3, 0, .75, .55])
+beat('punch', A(9, 2, .3), shot='MB', level=1.2)
 # 11 your money is numbers
 shot('s10', 'wire_terminal', 'film', A(10, 0, -.15), cut='zoom', cam0={'x': .55, 'y': .35, 'z': 1.25}, cam1={'x': .55, 'y': .35, 'z': 1.45})
+beat('punch', A(10, 0, 1.2), shot='s10', level=1.25)
 # 12 Goldie
 shot('s11', 'vault_full', 'soft', A(11, 0, -.35), cam0={'x': .5, 'y': .5, 'z': 1.12}, cam1={'z': 1.18})
 beat('moment', A(11, 0, -.3), what='char', shot='s11', who='c_goldie', side='M', lines=[11], grow=A(11, 1, 0), leave=A(12, 0, -.25))
