@@ -1,0 +1,13 @@
+{
+ "job": "ru-accent-test",
+ "items": [
+  {
+   "name": "accent_fixed",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 54.4,
+   "took": 19.7
+  }
+ ]
+}
