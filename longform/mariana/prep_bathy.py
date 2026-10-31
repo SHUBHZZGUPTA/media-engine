@@ -40,8 +40,8 @@ def shade(az, alt):
 hs = .5 * shade(315, 40) + .25 * shade(270, 50) + .25 * shade(0, 55); med = np.median(hs); sp = np.percentile(hs, 99) - np.percentile(hs, 1)
 Image.fromarray((np.clip(.8 + (hs - med) / sp * 1.1, .3, 1.2) / 1.2 * 255).astype(np.uint8)).save(os.path.join(A, "hs.png"))
 # depth colour ramp (metres below sea level -> RGB)
-ST = [(0, (64, 214, 214)), (200, (32, 150, 196)), (1500, (22, 92, 160)), (4000, (14, 52, 118)), (6000, (8, 28, 78)),
-      (8000, (12, 14, 46)), (11000, (30, 6, 30))]
+ST = [(0, (80, 230, 225)), (200, (40, 180, 220)), (1500, (30, 125, 205)), (4000, (26, 92, 180)), (6000, (22, 62, 150)),
+      (8000, (60, 30, 120)), (11000, (170, 20, 60))]
 d = np.clip(-el, 0, None); col = np.zeros((H, W, 3))
 for (d0, c0), (d1, c1) in zip(ST, ST[1:]):
     m = (d >= d0) & (d <= d1); u = ((d - d0) / (d1 - d0))[m][:, None]

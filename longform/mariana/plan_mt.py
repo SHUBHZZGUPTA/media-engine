@@ -195,7 +195,7 @@ def terrain(cid, t0, cam, routes=(), pins=(), layers=(), fallback=None):
     else: s = shot(t0, fallback or "#0b1a2a", list(layers) + [txt(f"[3D {cid}]", 1700, 80, t0, size=30, scale=1)]); s["clip"] = cid
     LAST[0] = os.path.join(CLIPS, cid + "_last.jpg") if os.path.exists(out) else LAST[0]
     return s
-def tpin(lon, lat, t, label=None, col=None, s=.9, size=48):
+def tpin(lon, lat, t, label=None, col=None, s=.5, size=48):
     p = {"lon": lon, "lat": lat, "at": t, "s": s}
     if label: p["label"] = label; p["size"] = size
     if col: p["col"] = col
@@ -247,7 +247,7 @@ terrain("T_length", t, [[t, 145.0, 13.0, 18.0, 62, -10], [T(c + 2, 1), 145.5, 15
         routes=[{"pts": TRENCH, "rad": .06, "col": "#FF3B30", "draw": [[t + .3, 0], [t + 2.6, 1]]}],
         layers=[lab("~2,550 km long", K(c + 2, "two and a half"), size=96, box="#222222")])
 t = T(c + 3, -.15)
-terrain("T_deep", t, [[t, 143.5, 12.0, 9.0, 50, -20], [T(c + 3, 1), CD[0], CD[1], 3.2, 32, 20]],
+terrain("T_deep", t, [[t, 143.5, 12.0, 9.0, 50, -20], [T(c + 3, 1), CD[0], CD[1] + .25, 5.5, 52, 10]],
         pins=[tpin(*CD, K(c + 3, "Challenger"), "Challenger Deep", "#FFD84A", size=56)],
         layers=[depth(K(c + 3, "eleven"), "~10,935 m")])
 plate(T(c + 4, -.15), a("mt_everest"), layers=[lab("Mount Everest  8,849 m", K(c + 4, "Everest"), size=80, box="#222222")], zoom=(1.0, 1.1))
@@ -299,7 +299,7 @@ plate(T(c + 1, -.15), a("mt_trieste"), layers=[tag("Float full of petrol", K(c +
       zoom=(1.0, 1.15))
 photo(T(c + 2, -.15), "trieste_crew", [tag("Jacques Piccard", K(c + 2, "Piccard"), x=600, y=330), tag("Don Walsh", K(c + 2, "Walsh"), x=1350, y=330)])
 t = T(c + 3, -.15)
-terrain("T_dive1960", t, [[t, CD[0], CD[1], 10.0, 70, 0], [T(c + 3, 1), CD[0], CD[1], 4.0, 40, 30]],
+terrain("T_dive1960", t, [[t, CD[0], CD[1], 10.0, 70, 0], [T(c + 3, 1), CD[0], CD[1] + .25, 5.5, 52, 25]],
         pins=[tpin(*CD, T(c + 3, .3), "Challenger Deep", "#FFD84A")], layers=[lab("23 Jan 1960", K(c + 3, "twenty-third"), x=330, y=230, size=90)])
 plate(T(c + 4, -.15), a("mt_trieste"), layers=[tag("~5 hours down", K(c + 4, "five"), y=330), depth(K(c + 4, "nine"), "~9,000 m")], zoom=(1.1, 1.3))
 b = plate(T(c + 5, -.1), a("mt_trieste"), layers=[lab("BANG", K(c + 5, "bang"), size=160, box="#d6423a")], zoom=(1.4, 1.5)); b["cut"] = "flash"
@@ -375,7 +375,7 @@ creature_talk(c + 4, "AMPHIPOD", "mt_plastic")
 skit(c + 5, c + 5, "mt_floor", {"TRAVELLER": (700, False)})
 plate(T(c + 6, -.15), a("mt_plastic"), layers=[tag("Sinks · Drifts · Breaks up", K(c + 6, "sinks"), y=330), tag("The trench: a giant funnel", K(c + 6, "funnel"), y=480)], zoom=(1.1, 1.3))
 t = T(c + 7, -.15)
-terrain("T_fingerprint", t, [[t, CD[0], CD[1], 3.0, 30, 40], [T(c + 7, 1), CD[0], CD[1], 6.0, 50, 70]],
+terrain("T_fingerprint", t, [[t, CD[0], CD[1] + .25, 5.0, 50, 40], [T(c + 7, 1), CD[0], CD[1] + .4, 8.0, 60, 70]],
         pins=[tpin(*CD, t + .2, "Our fingerprints", "#FF3B30", size=56)])
 
 # ======================= ENDING =======================
