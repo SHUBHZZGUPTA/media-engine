@@ -47,3 +47,29 @@ for ch in job["channels"]:
 json.dump(rows, open(os.path.join(out, "collected.json"), "w"), indent=1)
 json.dump(report, open(os.path.join(out, "report.json"), "w"), indent=1)
 print(json.dumps(report))
+
+# Optional search-demand study: "searches": ["query", ...]. For each query: YouTube autocomplete suggestions
+# (what people type), the top results by relevance (views = demand) and the newest uploads (competition and
+# whether fresh videos still get views). Public endpoints only. Writes outputs/viral/<id>/search.json.
+if job.get("searches"):
+    import urllib.parse
+    def flat(q, n):
+        r = subprocess.run(["yt-dlp", "--flat-playlist", "-J", q], capture_output=True, text=True, timeout=600)
+        if r.returncode:
+            return {"error": r.stderr[-300:]}
+        es = json.loads(r.stdout).get("entries") or []
+        return [{"title": e.get("title"), "views": e.get("view_count"), "channel": e.get("channel") or e.get("uploader"),
+                 "duration": e.get("duration"), "id": e.get("id")} for e in es[:n]]
+    study = []
+    for q in job["searches"]:
+        rec = {"query": q}
+        try:
+            raw = get("https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=" + urllib.parse.quote(q))
+            rec["suggest"] = json.loads(raw.decode("utf-8", "replace"))[1]
+        except Exception as e:  # noqa: BLE001
+            rec["suggest_error"] = type(e).__name__
+        rec["top"] = flat(f"ytsearch{job.get('search_n', 30)}:{q}", job.get("search_n", 30))
+        rec["newest"] = flat(f"ytsearchdate20:{q}", 20)
+        study.append(rec)
+    json.dump(study, open(os.path.join(out, "search.json"), "w"), indent=1, ensure_ascii=False)
+    print(f"search study: {len(study)} queries")
