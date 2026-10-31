@@ -1,5 +1,5 @@
 # SHORT: THE MONEY AT THE BOTTOM OF THE SEA
-N: A *4-tonne* coin sank to the bottom of the *sea,* and people kept *spending* it. Would you *accept* it?
+N: A *giant stone* coin sank to the bottom of the *sea,* and people kept *spending* it. Would you *accept* it?
 N: This is *Yap,* in the Pacific. Its money: *rai,* huge carved stone *discs.*
 N: The biggest is *3.6 meters* wide.
 BILL: [nervous, squeaky] Imagine breaking that for change.
