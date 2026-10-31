@@ -1,0 +1,71 @@
+{
+ "id": "metric-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Every American ruler is secretly metric."
+    ],
+    [
+     "Narrator",
+     "Since eighteen ninety-three, the US has defined its inch and pound using the metre and the kilogram."
+    ],
+    [
+     "Narrator",
+     "Today, one inch is exactly two point five four centimetres. By definition."
+    ],
+    [
+     "Chars",
+     "[nervous cartoon wooden ruler, whispering] Shh... don't tell anyone I'm metric."
+    ],
+    [
+     "Narrator",
+     "Yet America never switched over."
+    ],
+    [
+     "Narrator",
+     "In nineteen seventy-five, Congress passed a metric act... but made it voluntary."
+    ],
+    [
+     "Narrator",
+     "Most people simply didn't bother."
+    ],
+    [
+     "Narrator",
+     "And that got expensive. In nineteen ninety-nine, one team's software gave thrust numbers in US units, while NASA's navigation expected metric."
+    ],
+    [
+     "Narrator",
+     "The Mars Climate Orbiter flew too low... and was lost. A three hundred and twenty-seven million dollar mission."
+    ],
+    [
+     "Narrator",
+     "And until twenty twenty-two, the US even had two different feet. One for surveyors... slightly longer."
+    ],
+    [
+     "Chars",
+     "[confused cartoon wooden ruler] Wait... which foot am I?"
+    ],
+    [
+     "Narrator",
+     "So why hasn't America switched? Habit... and the cost of changing everything, from road signs to recipes."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}

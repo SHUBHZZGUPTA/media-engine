@@ -1,0 +1,79 @@
+{
+ "id": "f1mex-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "This F1 car is running its biggest wing... and it barely grips."
+    ],
+    [
+     "Narrator",
+     "This weekend, F1 races in Mexico City: two thousand two hundred and forty metres up. The highest track on the calendar."
+    ],
+    [
+     "Narrator",
+     "Up here, the air is nearly a quarter thinner."
+    ],
+    [
+     "Narrator",
+     "Less air means less push on the wing."
+    ],
+    [
+     "Narrator",
+     "So teams bolt on their biggest, Monaco-style wings..."
+    ],
+    [
+     "Narrator",
+     "and still get about as much downforce as Monza's skinny ones."
+    ],
+    [
+     "Chars",
+     "[proud cartoon race car, frustrated and fast] I'm doing everything right!"
+    ],
+    [
+     "Narrator",
+     "Thin air hits the engine too. The turbo spins up to fifteen percent faster, just to breathe."
+    ],
+    [
+     "Narrator",
+     "And with so little air, cooling the brakes and engine is hard. So, bigger vents everywhere."
+    ],
+    [
+     "Narrator",
+     "But here's the twist: thin air also means less drag."
+    ],
+    [
+     "Narrator",
+     "On the long straight here, in twenty sixteen, Valtteri Bottas hit three hundred and seventy-two point five kilometres an hour."
+    ],
+    [
+     "Narrator",
+     "The fastest speed ever recorded in an F1 race."
+    ],
+    [
+     "Narrator",
+     "Maximum wing... maximum speed. Only in Mexico."
+    ],
+    [
+     "Chars",
+     "[cartoon race car, smug and slow] Thin air? I call it a cheat code."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}

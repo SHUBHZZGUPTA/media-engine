@@ -1,0 +1,71 @@
+{
+ "id": "metric-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "हर अमेरिकी ruler असल में चुपके से metric है।"
+    ],
+    [
+     "Narrator",
+     "eighteen ninety-three से, अमेरिका अपना inch और pound, metre और kilogram से तय करता है।"
+    ],
+    [
+     "Narrator",
+     "आज एक inch ठीक दो दशमलव पाँच चार centimetre है। परिभाषा से।"
+    ],
+    [
+     "Chars",
+     "[nervous cartoon wooden ruler, whispering] श्श्श... किसी को मत बताना कि मैं metric हूँ।"
+    ],
+    [
+     "Narrator",
+     "फिर भी अमेरिका ने कभी पूरी तरह switch नहीं किया।"
+    ],
+    [
+     "Narrator",
+     "nineteen seventy-five में Congress ने metric कानून पास किया... पर उसे अपनी मर्ज़ी पर छोड़ दिया।"
+    ],
+    [
+     "Narrator",
+     "ज़्यादातर लोगों ने परवाह ही नहीं की।"
+    ],
+    [
+     "Narrator",
+     "और ये महँगा पड़ा। nineteen ninety-nine में एक team के software ने numbers US units में दिए, जबकि NASA की navigation metric मान रही थी।"
+    ],
+    [
+     "Narrator",
+     "Mars Climate Orbiter बहुत नीचे से गुज़रा... और खो गया। तीन सौ सत्ताईस million dollar का mission।"
+    ],
+    [
+     "Narrator",
+     "और twenty twenty-two तक, अमेरिका में दो अलग-अलग foot चलते थे। एक surveyors के लिए... थोड़ा लंबा।"
+    ],
+    [
+     "Chars",
+     "[confused cartoon wooden ruler] रुको... मैं कौन सा foot हूँ?"
+    ],
+    [
+     "Narrator",
+     "तो अमेरिका ने switch क्यों नहीं किया? आदत... और सब कुछ बदलने का खर्च, road signs से लेकर recipes तक।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}
