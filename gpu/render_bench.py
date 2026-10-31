@@ -106,10 +106,24 @@ step("chrome_libs", "apt-get update -qq > /dev/null 2>&1; export DEBIAN_FRONTEND
 REPORT["gl_diag_before"] = sh("ls /usr/lib/x86_64-linux-gnu | grep -Ei 'nvidia' | head -30; "
                               "ls /usr/share/vulkan/icd.d /etc/vulkan/icd.d /usr/share/glvnd/egl_vendor.d 2>&1")[2]
 drv = REPORT["machine"]["gpu"].splitlines()[0].split(",")[-1].strip() if REPORT["machine"]["gpu"] else ""
-step("nvidia_gl", f"V=$(apt-cache madison libnvidia-gl-{drv.split('.')[0]} | awk '{{print $3}}' | grep '^{drv}' | head -1); "
-                  f"echo want {drv} found $V; [ -n \"$V\" ] && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq "
-                  f"libnvidia-gl-{drv.split('.')[0]}=$V", timeout=900)
-REPORT["gl_diag_after"] = sh("ls /usr/lib/x86_64-linux-gnu | grep -Ei 'nvidia' | head -30; "
+major = drv.split(".")[0]
+if P.get("gl_unpack"):
+    # apt refuses libnvidia-gl (held packages), so download the exact-version .debs without dependency
+    # resolution and unpack them over the system: this adds only the driver's EGL/GLX/Vulkan user-space
+    # libraries and their vendor files next to the CUDA libraries Kaggle already mounts.
+    step("nvidia_gl", "export DEBIAN_FRONTEND=noninteractive; apt-get install -y -qq libegl1 libgl1 libglvnd0 "
+                      "libvulkan1 > /dev/null 2>&1; mkdir -p /kaggle/tmp/debs && cd /kaggle/tmp/debs && "
+                      f"for p in libnvidia-gl-{major} libnvidia-gpucomp-{major} libnvidia-egl-wayland1; do "
+                      f"V=$(apt-cache madison $p | awk '{{print $3}}' | grep '^{drv}' | head -1); "
+                      "[ -z \"$V\" ] && V=$(apt-cache madison $p | awk '{print $3}' | head -1); "
+                      "echo $p want " + drv + " got $V; [ -n \"$V\" ] && apt-get download -qq $p=$V; done; "
+                      "ls -la; for d in *.deb; do dpkg -x $d / && echo unpacked $d; done; ldconfig; "
+                      "ls -la /dev/nvidia*", timeout=900)
+else:
+    step("nvidia_gl", f"V=$(apt-cache madison libnvidia-gl-{major} | awk '{{print $3}}' | grep '^{drv}' | head -1); "
+                      f"echo want {drv} found $V; [ -n \"$V\" ] && DEBIAN_FRONTEND=noninteractive apt-get install -y "
+                      f"-qq libnvidia-gl-{major}=$V", timeout=900)
+REPORT["gl_diag_after"] = sh("ls /usr/lib/x86_64-linux-gnu | grep -Ei 'nvidia' | head -40; "
                              "ls /usr/share/vulkan/icd.d /usr/share/glvnd/egl_vendor.d 2>&1")[2]
 ENG = f"{WORK}/engine"
 os.makedirs(ENG, exist_ok=True)
@@ -125,10 +139,44 @@ REPORT["browser_path"] = env.get("HYPERFRAMES_BROWSER_PATH", "default")
 sh(f"cd {ENG} && npx hyperframes doctor", env=env, log="doctor.log")
 save()
 
+# 3b. quick WebGL probe: which renderer does Chrome get with each flag set? (seconds, not a 30-min render)
+PROBE_JS = ("<canvas id=c></canvas><script>var g=document.getElementById('c').getContext('webgl2')||"
+            "document.getElementById('c').getContext('webgl');var r='NO_WEBGL';if(g){var e=g.getExtension("
+            "'WEBGL_debug_renderer_info');r=e?g.getParameter(e.UNMASKED_RENDERER_WEBGL):g.getParameter(g.RENDERER);}"
+            "document.title='RENDERER='+r;document.body.setAttribute('data-r',r);</script>")
+with open(f"{WORK}/probe.html", "w") as fh:
+    fh.write(PROBE_JS)
+chrome = env.get("HYPERFRAMES_BROWSER_PATH")
+VARIANTS = {
+    "angle_gl_egl": "--use-gl=angle --use-angle=gl-egl --ignore-gpu-blocklist --enable-gpu-rasterization",
+    "angle_vulkan": "--use-gl=angle --use-angle=vulkan --enable-features=Vulkan --ignore-gpu-blocklist",
+    "egl": "--use-gl=egl --ignore-gpu-blocklist",
+}
+REPORT["probe"] = {}
+gpu_ok = False
+for name, flags in VARIANTS.items():
+    rc, secs, txt = sh(f"timeout 60 {chrome} --headless --no-sandbox {flags} --virtual-time-budget=3000 "
+                       f"--dump-dom file://{WORK}/probe.html", env=env, log=f"probe_{name}.log")
+    import re as _re
+    txt = open(f"{OUT}/probe_{name}.log").read()  # full output: the DOM comes before Chrome's stderr
+    m = _re.search(r'data-r="([^"]*)"', txt)
+    rend = m.group(1) if m else f"no result (rc {rc})"
+    REPORT["probe"][name] = rend
+    if "nvidia" in rend.lower() or "tesla" in rend.lower():
+        gpu_ok = True
+REPORT["gpu_webgl_ok"] = gpu_ok
+save()
+print("probe:", json.dumps(REPORT["probe"]), flush=True)
+
 # 4. renders
 fps = 30
 for run in P["runs"]:
+    if run.get("requires_gpu") and not gpu_ok:
+        REPORT["runs"].append({"name": run["name"], "skipped": "probe found no NVIDIA WebGL; render would be software"})
+        save()
+        continue
     out = f"{OUT}/{run['name']}.mp4"
+    renv = dict(env, **run.get("env", {}))
     cmd = (f"cd {ENG} && npx hyperframes render {proj} -c {P['composition']} -o {out} "
            f"--quality {P.get('quality', 'looks')} --no-low-memory-mode {run.get('args', '')}")
     util = []
@@ -141,7 +189,7 @@ for run in P["runs"]:
             stop.wait(5)
     th = threading.Thread(target=sample, daemon=True)
     th.start()
-    rc, secs, tail = sh(cmd, timeout=int(P.get("render_timeout_s", 3600)), env=env, log=f"render_{run['name']}.log")
+    rc, secs, tail = sh(cmd, timeout=int(P.get("render_timeout_s", 3600)), env=renv, log=f"render_{run['name']}.log")
     stop.set()
     th.join(10)
     dur = sh(f"ffprobe -v error -show_entries format=duration -of csv=p=0 {out}")[2].strip()

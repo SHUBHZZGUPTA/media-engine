@@ -3,7 +3,7 @@
  "script": "gpu/render_bench.py",
  "accelerator": "NvidiaTeslaT4",
  "internet": true,
- "timeout_minutes": 150,
+ "timeout_minutes": 90,
  "wait_minutes": 2,
  "params": {
   "composition": "seg01.html",
@@ -16,16 +16,18 @@
   "render_timeout_s": 3600,
   "runs": [
    {
-    "name": "t4_gpu_auto",
-    "args": "--workers 4"
-   },
-   {
-    "name": "cpu4_software",
-    "args": "--workers 4 --no-browser-gpu"
+    "name": "t4_gpu_hw",
+    "args": "--workers 4",
+    "requires_gpu": true,
+    "env": {
+     "PRODUCER_BROWSER_GPU_MODE": "hardware",
+     "HYPERFRAMES_DEBUG_GPU_PROBE": "1"
+    }
    }
-  ]
+  ],
+  "gl_unpack": true
  },
- "requested": "2026-10-31T16:35+05:30 (retry: Ubuntu 24.04 libs, index.html, GPU GL libs)",
+ "requested": "2026-10-31T18:30+05:30 (retry 3: unpack NVIDIA GL libs manually, probe WebGL first, GPU-only render)",
  "datasets": [
   "shubhzzgupta07/me-render-bench-mm-ep02"
  ]
