@@ -7,14 +7,14 @@
   "remaining_h": 28.8,
   "total_h": 30.0
  },
- "staged_dataset": "shubhzzgupta07/me-mt-clips-dry",
+ "staged_dataset": "shubhzzgupta07/me-mt-clips-dry2",
  "staged_files": [
-  "clips_dry.tar.gz"
+  "clips_dry.tgz.bin"
  ],
  "stage_diag": {
   "bundled": [
    {
-    "file": "clips_dry.tar.gz",
+    "file": "clips_dry.tgz.bin",
     "mb": 12.3
    }
   ],
@@ -33,18 +33,9 @@
   ],
   "version_ready": 1
  },
- "pushed_at": "2026-11-01T06:47:38+00:00",
+ "pushed_at": "2026-11-01T06:58:16+00:00",
  "accelerator": "NvidiaTeslaT4",
- "version": 1,
- "status": "ERROR",
- "checked_at": "2026-11-01T06:48:08+00:00",
- "files": [
-  "batch.json",
-  "me-mt-clips-dry-2gpu.log"
- ],
- "gpu_quota_after": {
-  "used_h": 1.2,
-  "remaining_h": 28.8,
-  "total_h": 30.0
- }
+ "version": 2,
+ "status": "RUNNING",
+ "checked_at": "2026-11-01T07:00:17+00:00"
 }
