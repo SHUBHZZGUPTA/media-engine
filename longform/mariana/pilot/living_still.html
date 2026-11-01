@@ -15,7 +15,7 @@ function frame(t){
   const u=ease(cl(t/D,0,1)); const z=lerp(C.z0,C.z1,u), cx=lerp(C.c0[0],C.c1[0],u), cy=lerp(C.c0[1],C.c1[1],u);
   const s=Math.max(W/img.width,H/img.height)*z; const dw=img.width*s, dh=img.height*s;
   const fl=1+(C.flicker||0)*Math.sin(t*7.3)*Math.sin(t*2.1);
-  g.filter=`brightness(${fl}) saturate(1.1)`; g.drawImage(img, W/2-dw*cx, H/2-dh*cy, dw, dh); g.filter='none';
+  g.filter=`brightness(${fl*(1-(C.dim||0))}) saturate(1.1)`; g.drawImage(img, W/2-dw*cx, H/2-dh*cy, dw, dh); g.filter='none';
   for(const p of P){ const y=((p.y - t*(C.rise||25)*p.z) % H + H) % H, x=p.x+Math.sin(t*.6+p.s*9)*10*p.z+t*6*p.z, r=.7+p.z*1.4;
     g.fillStyle=`rgba(215,232,255,${.18+.3*p.s})`; g.beginPath(); g.arc((x%W+W)%W,y,r,0,7); g.fill(); }
   if(C.circle){ const [ax,ay,rx,ry,t0]=C.circle; const k=cl((t-t0)/0.9,0,1); if(k>0){

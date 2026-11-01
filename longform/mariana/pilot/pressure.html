@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=1920, height=1080"/>
+<script src="./gsap.min.js"></script>
+<style>@font-face{font-family:Pop;font-weight:700;src:url(assets/pop.ttf)} body{margin:0;background:#000}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#000} #cv{position:absolute;inset:0}</style></head>
+<body><div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="22.88">
+<div id="stage" class="clip" data-start="0" data-duration="22.88"><canvas id="cv" width="1920" height="1080"></canvas></div></div>
+<script>
+// The Trieste sinking: layered motion, fully deterministic (every frame is a function of t).
+const D=22.88, W=1920, H=1080, cv=document.getElementById('cv'), g=cv.getContext('2d');
+let rs=1; const rnd=()=>{rs=(rs*16807)%2147483647;return rs/2147483647};
+const P=[...Array(260)].map(()=>({x:rnd()*W,y:rnd()*H,z:.25+rnd()*1.6,s:rnd()}));          // marine snow, z = depth layer
+const B=[...Array(40)].map((_,i)=>({o:rnd()*3,x:(rnd()-.5)*60,r:2+rnd()*5,v:110+rnd()*120}));  // bubbles from the float
+const sub=new Image(); sub.src='assets/sub.png'; let ready=new Promise(r=>sub.onload=r);
+const ease=u=>u*u*(3-2*u), cl=(v,a,b)=>Math.min(b,Math.max(a,v));
+function frame(t){
+  const u=t/D, dark=ease(cl(u,0,1));                         // 0 = sunlit blue, 1 = near-black
+  // water: gradient that darkens as we go down
+  const top=[18-14*dark,92-80*dark,150-128*dark], bot=[4-3*dark,22-19*dark,52-45*dark];
+  const gr=g.createLinearGradient(0,0,0,H); gr.addColorStop(0,`rgb(${top})`); gr.addColorStop(1,`rgb(${bot})`); g.fillStyle=gr; g.fillRect(0,0,W,H);
+  // sun rays fade out with depth
+  g.save(); g.globalCompositeOperation='lighter';
+  for(let i=0;i<7;i++){ const a=(1-dark)*.07*(0.6+0.4*Math.sin(t*0.9+i*1.7)); const x=200+i*260+Math.sin(t*.3+i)*40;
+    const rg=g.createLinearGradient(x,0,x+180,H*.9); rg.addColorStop(0,`rgba(140,200,255,${a})`); rg.addColorStop(1,'rgba(140,200,255,0)');
+    g.fillStyle=rg; g.beginPath(); g.moveTo(x-30,0); g.lineTo(x+60,0); g.lineTo(x+380,H); g.lineTo(x+160,H); g.fill(); }
+  g.restore();
+  // far particles (behind the sub): drift UP fast = we are sinking
+  const drawP=(front)=>{ for(const p of P){ if((p.z>1.1)!==front) continue;
+    const y=((p.y - t*170*p.z) % H + H) % H, x=p.x+Math.sin(t*.7+p.s*9)*12*p.z, r=.8+p.z*1.6;
+    g.fillStyle=`rgba(210,230,255,${.25+.35*p.s*(1-dark*.4)})`; g.beginPath(); g.arc(x,y,r,0,7); g.fill(); } };
+  drawP(false);
+  drawP(true);
+  // pressure gauge: depth and atmospheres climb together (1 atm at the surface + 1 per 10 m)
+  const uu=cl((t-1.2)/(D-2.5),0,1), m=Math.round(10900*uu/10)*10, atm=Math.round(1+m/10.1);
+  const big=(txt,x,y,sz,col)=>{ g.font='700 '+sz+'px Pop'; g.lineWidth=12; g.strokeStyle='rgba(2,10,20,.9)'; g.strokeText(txt,x,y); g.fillStyle=col; g.fillText(txt,x,y); };
+  g.textAlign='center'; const a0=cl((2.6-t)/0.5,0,1)*cl(t/0.4,0,1); if(a0>0){ g.globalAlpha=a0; big('PRESSURE',W/2,H/2+40,170,'#ff4d4d'); g.globalAlpha=1; }
+  const a1=cl((t-2.2)/0.5,0,1); if(a1>0){ g.globalAlpha=a1;
+    big(atm.toLocaleString('en-US'),W/2,H/2+30,230,'#ffffff'); big('ATMOSPHERES',W/2,H/2+120,64,'#ff8080');
+    g.textAlign='right'; big('↓ '+m.toLocaleString('en-US')+' m',W-70,120,64,'#9fd6ff'); g.globalAlpha=1; }
+  // vignette
+  const vg=g.createRadialGradient(W/2,H/2,H*.35,W/2,H/2,H*.95); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,`rgba(0,0,0,${.45+.3*dark})`); g.fillStyle=vg; g.fillRect(0,0,W,H);
+}
+window.__timelines=window.__timelines||{};
+Promise.all([ready,document.fonts.load('700 64px Pop')]).then(()=>{ const tl=gsap.timeline({paused:true}); const c={t:0};
+  tl.fromTo(c,{t:0},{t:D,duration:D,ease:'none',immediateRender:false,onUpdate:()=>frame(c.t)},0); frame(0); window.__timelines['main']=tl; });
+</script></body></html>
