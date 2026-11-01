@@ -4,7 +4,7 @@
  "accelerator": "NvidiaTeslaT4",
  "internet": true,
  "timeout_minutes": 120,
- "wait_minutes": 2,
+ "wait_minutes": 40,
  "stage": {
   "repo_paths": [
    "bench/mt-clips/clips_final.tgz.bin"
