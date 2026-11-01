@@ -1,0 +1,30 @@
+{
+ "note": "Free tier: 10 Gemini TTS requests/day per API key per model (Google's 429: 'limit: 10, model: gemini-3.1-flash-tts'). Assumes the two keys are in separate Google projects; if they share one, the 10 is shared. Reserve days ahead for multi-day voice jobs.",
+ "limits": {
+  "gemini-3.1-flash-tts-preview": 10,
+  "gemini-2.5-flash-preview-tts": 10
+ },
+ "reservations": [
+  {
+   "key": "longform",
+   "date": "2026-11-02",
+   "n": 10,
+   "project": "india-full",
+   "note": "India EN voice d2: p03,p05-p13"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-03",
+   "n": 10,
+   "project": "india-full",
+   "note": "India EN voice d3: p14-p23"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-04",
+   "n": 3,
+   "project": "india-full",
+   "note": "India EN voice d4: p24,p25,p04r"
+  }
+ ]
+}

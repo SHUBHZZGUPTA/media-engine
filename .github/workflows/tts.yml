@@ -29,7 +29,8 @@ jobs:
         run: |
           set -e
           CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'jobs/tts/*.json' || true)
-          [ -z "$CHANGED" ] && CHANGED=$(ls jobs/tts/*.json)
+          # (no "run every job" fallback: when a push holds several commits and the last one has no job file, that fallback
+          #  re-voiced all ~100 jobs on 1 Nov, overwrote their audio and used up both keys' quota. The catch-up below covers it.)
           # Catch-up: a run cancelled by a newer push never processes its job. Also pick up any job file changed in the
           # last 2 days whose current version hasn't been run yet (outputs/tts/<id>/.ran holds the job commit last run), so no pushed job is lost.
           for f in $(git log --since="2 days ago" --name-only --format= -- 'jobs/tts/*.json' | sort -u); do
