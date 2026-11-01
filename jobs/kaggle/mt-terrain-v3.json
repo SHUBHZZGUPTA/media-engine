@@ -1,0 +1,37 @@
+{
+ "id": "mt-terrain-v3",
+ "script": "gpu/render_batch.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 120,
+ "wait_minutes": 40,
+ "stage": {
+  "repo_paths": [
+   "bench/mt-clips/clips_terrain3.tgz.bin"
+  ],
+  "dataset_slug": "me-mt-terrain-v3-data",
+  "title": "me mt terrain v3 data"
+ },
+ "params": {
+  "hyperframes": "0.8.181",
+  "gl_unpack": true,
+  "render_args": "--crf 18 --fps 30 --workers 2",
+  "render_timeout_s": 3000,
+  "lanes": [
+   {
+    "name": "lane1",
+    "env": {
+     "PRODUCER_BROWSER_GPU_MODE": "hardware"
+    }
+   },
+   {
+    "name": "lane2",
+    "env": {
+     "PRODUCER_BROWSER_GPU_MODE": "hardware"
+    }
+   }
+  ],
+  "baseline_local_s_per_clip_s": 98
+ },
+ "requested": "2026-11-01T14:25+05:30 terrain clips v3: wider map + smoothed bathymetry + denser mesh"
+}
