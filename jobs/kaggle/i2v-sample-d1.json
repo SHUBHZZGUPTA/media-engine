@@ -1,0 +1,33 @@
+{
+ "id": "i2v-sample-d1",
+ "script": "gpu/i2v_sample.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 150,
+ "wait_minutes": 150,
+ "stage": {
+  "repo_paths": [
+   "bench/i2v/mt_trieste.jpg",
+   "bench/i2v/mt_champagne.jpg"
+  ],
+  "dataset_slug": "me-i2v-sample-imgs",
+  "title": "me i2v sample imgs"
+ },
+ "params": {
+  "models": [
+   "ltx",
+   "wan"
+  ],
+  "shots": [
+   {
+    "img": "mt_trieste",
+    "prompt": "Cinematic deep-sea documentary shot. A vintage 1960 bathyscaphe (long grey cigar-shaped float with a small steel crew sphere underneath) sinks slowly and steadily downward through dark blue ocean water, staying the same shape and size. Its single lamp casts a soft beam that gently sways; tiny white marine-snow particles drift upward past the lens; small air bubbles rise from the float. The camera slowly tilts down to follow it. Calm, smooth, slow motion, realistic underwater light rays fading into darkness. No people, no text."
+   },
+   {
+    "img": "mt_champagne",
+    "prompt": "Cinematic deep-sea documentary shot of a volcanic vent on a dark rocky seafloor. Streams of shiny silvery droplets rise continuously from cracks in the rock like champagne bubbles, wobbling as they rise; white mineral clouds billow and drift slowly; pale mussels stay still on the rocks; fine particles float in the water. The camera pushes in very slowly. Smooth, realistic, slow motion, steady camera. No people, no text."
+   }
+  ]
+ },
+ "requested": "2026-11-01T19:40+05:30 D1 sample for Shubham: free open-source image-to-video on the T4 (LTX-Video 2B vs Wan 2.2 5B)"
+}
