@@ -17,7 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
+          filter: blob:none
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -29,7 +30,22 @@ jobs:
           set -e
           CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'jobs/tts/*.json' || true)
           [ -z "$CHANGED" ] && CHANGED=$(ls jobs/tts/*.json)
-          for f in $CHANGED; do [ -f "$f" ] && python3 tools/gemini_tts.py "$f"; done
+          # Catch-up: a run cancelled by a newer push never processes its job. Also pick up any job file changed in the
+          # last 2 days whose current version hasn't been run yet (outputs/tts/<id>/.ran holds the job commit last run), so no pushed job is lost.
+          for f in $(git log --since="2 days ago" --name-only --format= -- 'jobs/tts/*.json' | sort -u); do
+            [ -f "$f" ] || continue
+            case " $CHANGED " in *" $f "*) continue;; esac
+            id=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1])).get('id') or sys.argv[1].split('/')[-1][:-5])" "$f")
+            want=$(git log -1 --format=%H -- "$f"); done_=$(cat "outputs/tts/$id/.ran" 2>/dev/null || true)
+            if [ "$want" != "$done_" ]; then echo "catch-up: $f (version $want not run yet)"; CHANGED="$CHANGED $f"; fi
+          done
+          for f in $CHANGED; do
+            [ -f "$f" ] || continue
+            python3 tools/gemini_tts.py "$f"
+            # mark this version of the job as run (success or not), so catch-up never repeats it
+            id=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1])).get('id') or sys.argv[1].split('/')[-1][:-5])" "$f")
+            mkdir -p "outputs/tts/$id"; git log -1 --format=%H -- "$f" > "outputs/tts/$id/.ran"
+          done
       - name: Commit outputs
         if: always()
         run: |
