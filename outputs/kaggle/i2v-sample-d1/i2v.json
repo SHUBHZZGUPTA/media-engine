@@ -1,0 +1,52 @@
+{
+ "params": {
+  "models": [
+   "ltx",
+   "wan"
+  ],
+  "shots": [
+   {
+    "img": "mt_trieste",
+    "prompt": "Cinematic deep-sea documentary shot. A vintage 1960 bathyscaphe (long grey cigar-shaped float with a small steel crew sphere underneath) sinks slowly and steadily downward through dark blue ocean water, staying the same shape and size. Its single lamp casts a soft beam that gently sways; tiny white marine-snow particles drift upward past the lens; small air bubbles rise from the float. The camera slowly tilts down to follow it. Calm, smooth, slow motion, realistic underwater light rays fading into darkness. No people, no text."
+   },
+   {
+    "img": "mt_champagne",
+    "prompt": "Cinematic deep-sea documentary shot of a volcanic vent on a dark rocky seafloor. Streams of shiny silvery droplets rise continuously from cracks in the rock like champagne bubbles, wobbling as they rise; white mineral clouds billow and drift slowly; pale mussels stay still on the rocks; fine particles float in the water. The camera pushes in very slowly. Smooth, realistic, slow motion, steady camera. No people, no text."
+   }
+  ]
+ },
+ "runs": [
+  {
+   "model": "ltx",
+   "shot": "mt_trieste",
+   "error": "ard\n    return self.processor(self, hidden_states, encoder_hidden_states, attention_mask, image_rotary_emb, **kwargs)\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_ltx.py\", line 97, in __call__\n    hidden_states = dispatch_attention_fn(\n        query,\n    ...<6 lines>...\n        parallel_config=self._parallel_config,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 450, in dispatch_attention_fn\n    return backend_fn(**kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 3760, in _native_attention\n    out = torch.nn.functional.scaled_dot_product_attention(\n        query=query,\n    ...<6 lines>...\n        enable_gqa=enable_gqa,\n    )\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 9.00 GiB. GPU 0 has a total capacity of 14.56 GiB of which 7.78 GiB is free. Including non-PyTorch memory, this process has 6.78 GiB memory in use. Of the allocated memory 6.09 GiB is allocated by PyTorch, and 575.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  },
+  {
+   "model": "ltx",
+   "shot": "mt_champagne",
+   "error": "ard\n    return self.processor(self, hidden_states, encoder_hidden_states, attention_mask, image_rotary_emb, **kwargs)\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_ltx.py\", line 97, in __call__\n    hidden_states = dispatch_attention_fn(\n        query,\n    ...<6 lines>...\n        parallel_config=self._parallel_config,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 450, in dispatch_attention_fn\n    return backend_fn(**kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 3760, in _native_attention\n    out = torch.nn.functional.scaled_dot_product_attention(\n        query=query,\n    ...<6 lines>...\n        enable_gqa=enable_gqa,\n    )\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 9.00 GiB. GPU 0 has a total capacity of 14.56 GiB of which 7.78 GiB is free. Including non-PyTorch memory, this process has 6.78 GiB memory in use. Of the allocated memory 6.09 GiB is allocated by PyTorch, and 575.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  },
+  {
+   "model": "wan",
+   "shot": "mt_trieste",
+   "error": "dden_states, encoder_hidden_states, attention_mask, rotary_emb, **kwargs)\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/transformer_wan.py\", line 143, in __call__\n    hidden_states = dispatch_attention_fn(\n        query,\n    ...<7 lines>...\n        parallel_config=(self._parallel_config if encoder_hidden_states is None else None),\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 450, in dispatch_attention_fn\n    return backend_fn(**kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/models/attention_dispatch.py\", line 3760, in _native_attention\n    out = torch.nn.functional.scaled_dot_product_attention(\n        query=query,\n    ...<6 lines>...\n        enable_gqa=enable_gqa,\n    )\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.00 GiB. GPU 0 has a total capacity of 14.56 GiB of which 718.81 MiB is free. Including non-PyTorch memory, this process has 13.86 GiB memory in use. Of the allocated memory 13.60 GiB is allocated by PyTorch, and 129.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  },
+  {
+   "model": "wan",
+   "shot": "mt_champagne",
+   "error": "h/nn/modules/module.py\", line 934, in _apply\n    module._apply(fn)\n    ~~~~~~~~~~~~~^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 934, in _apply\n    module._apply(fn)\n    ~~~~~~~~~~~~~^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 934, in _apply\n    module._apply(fn)\n    ~~~~~~~~~~~~~^^^^\n  [Previous line repeated 4 more times]\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 965, in _apply\n    param_applied = fn(param)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1370, in convert\n    return t.to(\n           ~~~~^\n        device,\n        ^^^^^^^\n        dtype if t.is_floating_point() or t.is_complex() else None,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        non_blocking,\n        ^^^^^^^^^^^^^\n    )\n    ^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 30.81 MiB is free. Including non-PyTorch memory, this process has 14.53 GiB memory in use. Of the allocated memory 14.36 GiB is allocated by PyTorch, and 45.87 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n"
+  }
+ ],
+ "gpu": "Tesla T4, 15360 MiB\nTesla T4, 15360 MiB",
+ "pip_s": 27.3,
+ "pip_tail": "ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\ngradio 6.26.0 requires pillow<13.0,>=8.0, but you have pillow 13.0.0 which is incompatible.\nmoviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.\n",
+ "inputs": [
+  "mt_champagne",
+  "mt_trieste"
+ ],
+ "load_s": {
+  "ltx": 238.0,
+  "wan": 244.3
+ },
+ "total_s": 645.5
+}
