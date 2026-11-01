@@ -64,9 +64,11 @@ REPORT["machine"] = {
 save()
 
 # 1. projects
-for tgz in glob.glob("/kaggle/input/**/*.tar.gz", recursive=True):
-    with tarfile.open(tgz) as t:
+# Kaggle unpacks .tar.gz datasets itself and may drop symlinks, so the bundle is uploaded as <name>.tgz.bin
+for tgz in glob.glob("/kaggle/input/**/*.tgz.bin", recursive=True) + glob.glob("/kaggle/input/**/*.tar.gz", recursive=True):
+    with tarfile.open(tgz, "r:gz") as t:
         t.extractall(WORK)
+REPORT["input_listing"] = sh("find /kaggle/input -maxdepth 4 | head -40")[2]
 projects = sorted({os.path.dirname(p) for p in glob.glob(f"{WORK}/**/index.html", recursive=True)})
 if not projects:
     REPORT["error"] = "no <name>/index.html projects found in the dataset"
