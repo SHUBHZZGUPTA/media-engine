@@ -1,0 +1,59 @@
+{
+ "job": "i2v-sample-d1d",
+ "kernel": "shubhzzgupta07/me-i2v-sample-d1d",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-i2v-sample-d1d",
+ "gpu_quota_before": {
+  "used_h": 2.27,
+  "remaining_h": 27.73,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/me-i2v-sample-imgs-d",
+ "staged_files": [
+  "mt_trieste.jpg",
+  "mt_champagne.jpg"
+ ],
+ "stage_diag": {
+  "bundled": [
+   {
+    "file": "mt_trieste.jpg",
+    "mb": 0.3
+   },
+   {
+    "file": "mt_champagne.jpg",
+    "mb": 0.8
+   }
+  ],
+  "version_before": 0,
+  "create": [
+   {
+    "license": "other",
+    "existed": false,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "lookup failed: HTTPError: 403 Client Error: Forbidden for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus",
+   "ready (version 1)"
+  ],
+  "version_ready": 1
+ },
+ "pushed_at": "2026-11-01T15:20:45+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-01T17:39:39+00:00",
+ "files": [
+  "i2v2.json",
+  "ltx2_trieste_camdown.mp4",
+  "ltx2_trieste_sink.mp4",
+  "me-i2v-sample-d1d.log",
+  "wan_split2gpu_champagne.mp4",
+  "wan_split2gpu_trieste_sink.mp4"
+ ],
+ "gpu_quota_after": {
+  "used_h": 4.58,
+  "remaining_h": 25.42,
+  "total_h": 30.0
+ }
+}
