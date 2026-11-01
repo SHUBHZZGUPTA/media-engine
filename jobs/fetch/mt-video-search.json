@@ -1,0 +1,55 @@
+{
+ "id": "mt-video-search",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 10,
+ "files": [
+  {
+   "name": "s_v_ex1605.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=Okeanos+Explorer+Mariana+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_ex1402.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=Ex1402+dive+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_noaa_dive.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=NOAA+deep+sea+dive+ROV+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_jelly.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=deep+sea+jellyfish+NOAA+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_hydro.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=hydrothermal+vent+NOAA+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_amphipod.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=amphipod+deep+sea+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_marianas.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=Marianas+Trench+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_descent.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=ROV+descent+underwater+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_snailfish.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=snailfish+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_okeanos.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=Okeanos+Explorer+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_bubbles.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=underwater+bubbles+seafloor+vent+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  },
+  {
+   "name": "s_v_seafloor.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=25&gsrsearch=deep+sea+floor+ROV+lights+filetype%3Avideo&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CImageDescription"
+  }
+ ]
+}
