@@ -1,0 +1,23 @@
+[{"stream_name":"stderr","time":1.21320308,"data":"/kaggle/src/script.py:71: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":1.213239719,"data":"  t.extractall(WORK)\n"}
+,{"stream_name":"stdout","time":4.584607878,"data":"node: rc=0 3.2s\n"}
+,{"stream_name":"stdout","time":62.54133314,"data":"chrome_libs: rc=0 58.0s\n"}
+,{"stream_name":"stdout","time":83.276139125,"data":"nvidia_gl: rc=0 20.7s\n"}
+,{"stream_name":"stdout","time":89.967563217,"data":"npm: rc=0 6.7s\n"}
+,{"stream_name":"stdout","time":94.127519206,"data":"browser: rc=0 4.2s\n"}
+,{"stream_name":"stdout","time":97.094589778,"data":"probe: {'lane1': 'ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)', 'lane2': 'ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)'}\n"}
+,{"stream_name":"stdout","time":181.342911765,"data":"{\"clip\": \"T_deep\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 83.7, \"video_s\": 10.533333, \"started_s\": 96.7}\n"}
+,{"stream_name":"stdout","time":193.998715179,"data":"{\"clip\": \"T_eifuku\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 96.7, \"video_s\": 13.1, \"started_s\": 96.4}\n"}
+,{"stream_name":"stdout","time":253.367404396,"data":"{\"clip\": \"T_fingerprint\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 71.7, \"video_s\": 9.7, \"started_s\": 180.8}\n"}
+,{"stream_name":"stdout","time":262.629843446,"data":"{\"clip\": \"T_dive1960\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 68.5, \"video_s\": 8.166667, \"started_s\": 193.2}\n"}
+,{"stream_name":"stdout","time":321.242034935,"data":"{\"clip\": \"T_slab\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 67.6, \"video_s\": 7.8, \"started_s\": 252.7}\n"}
+,{"stream_name":"stdout","time":327.778186894,"data":"{\"clip\": \"T_length\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 65.0, \"video_s\": 7.1, \"started_s\": 261.9}\n"}
+,{"stream_name":"stdout","time":345.323172254,"data":"{\"clip\": \"T_outro\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 23.9, \"video_s\": 3.6, \"started_s\": 320.5}\n"}
+,{"stream_name":"stdout","time":345.323924193,"data":"{\"setup_s\": 96.2, \"batch_wall_s\": 248.2, \"video_s_total\": 60.0, \"gpu_util\": {\"0\": {\"max\": 48, \"avg\": 13.2, \"mem_max_mb\": 3799, \"busy_share\": 0.76}, \"1\": {\"max\": 0, \"avg\": 0.0, \"mem_max_mb\": 1, \"busy_share\": 0.0}}, \"total_wall_s\": 344.4}\n"}
+,{"stream_name":"stderr","time":347.596977827,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":347.597005229,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":347.934395918,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":347.934432517,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":349.639786723,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":350.66290385,"data":"[NbConvertApp] Writing 322284 bytes to __results__.html\n"}
+]
