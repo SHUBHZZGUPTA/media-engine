@@ -4,6 +4,7 @@ Animates each input picture with two open models, one after the other, and recor
 Pictures arrive as a private dataset (bench/i2v/*.jpg); prompts come in params["shots"]. Writes <model>_<shot>.mp4 + i2v.json.
 """
 import glob, json, os, subprocess, sys, time, traceback
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 P = json.loads(JOB_PARAMS)  # noqa: F821
 OUT = "/kaggle/working"; REP = {"params": P, "runs": []}
 def save(): json.dump(REP, open(f"{OUT}/i2v.json", "w"), indent=1)
@@ -34,17 +35,26 @@ def run(model, load, call, w, h, fps):
             frames = call(pipe, img, shot["prompt"], w, h)
             out = f"{OUT}/{model}_{shot['img']}.mp4"; export_to_video(frames, out, fps=fps)
             REP["runs"].append({"model": model, "shot": shot["img"], "secs": round(time.time() - t1, 1), "frames": len(frames),
-                                "size": [w, h], "peak_gb": round(torch.cuda.max_memory_allocated() / 1e9, 1)})
+                                "size": [w, h], "mean_px": round(float(__import__("numpy").asarray(frames[len(frames)//2]).mean()), 1), "peak_gb": round(torch.cuda.max_memory_allocated() / 1e9, 1)})
         except Exception:
             REP["runs"].append({"model": model, "shot": shot["img"], "error": traceback.format_exc()[-1500:]})
         save(); print(REP["runs"][-1], flush=True)
     del pipe; torch.cuda.empty_cache()
+# The T4 (sm75) has no bf16 flash attention: bf16 falls back to the full attention matrix and runs out of memory.
+# fp16 + PyTorch's memory-efficient attention kernel + tiled VAE decoding keeps it inside 15 GB.
+DT = torch.float16
+def prep(p):
+    p.enable_model_cpu_offload()
+    try: p.transformer.set_attention_backend("_native_efficient"); REP.setdefault("attn", []).append("_native_efficient")
+    except Exception as e: REP.setdefault("attn", []).append("default: " + type(e).__name__)
+    try: p.vae.enable_tiling()
+    except Exception: pass
 # 1. LTX-Video 2B
 def ltx_load():
     from diffusers import LTXImageToVideoPipeline
-    p = LTXImageToVideoPipeline.from_pretrained("Lightricks/LTX-Video", torch_dtype=torch.bfloat16); p.enable_model_cpu_offload(); return p
+    p = LTXImageToVideoPipeline.from_pretrained("Lightricks/LTX-Video", torch_dtype=DT); prep(p); return p
 def ltx_call(p, img, prompt, w, h):
-    return p(image=img, prompt=prompt, negative_prompt=NEG, width=w, height=h, num_frames=121, num_inference_steps=40,
+    return p(image=img, prompt=prompt, negative_prompt=NEG, width=w, height=h, num_frames=97, num_inference_steps=40,
              generator=torch.Generator("cpu").manual_seed(7)).frames[0]
 if "ltx" in P.get("models", ["ltx", "wan"]): run("ltx", ltx_load, ltx_call, 768, 512, 24)
 # 2. Wan 2.2 TI2V-5B
@@ -52,9 +62,9 @@ def wan_load():
     from diffusers import WanImageToVideoPipeline, AutoencoderKLWan
     mid = "Wan-AI/Wan2.2-TI2V-5B-Diffusers"
     vae = AutoencoderKLWan.from_pretrained(mid, subfolder="vae", torch_dtype=torch.float32)
-    p = WanImageToVideoPipeline.from_pretrained(mid, vae=vae, torch_dtype=torch.bfloat16); p.enable_model_cpu_offload(); return p
+    p = WanImageToVideoPipeline.from_pretrained(mid, vae=vae, torch_dtype=DT); prep(p); return p
 def wan_call(p, img, prompt, w, h):
-    return p(image=img, prompt=prompt, negative_prompt=NEG, width=w, height=h, num_frames=81, num_inference_steps=30, guidance_scale=5.0,
+    return p(image=img, prompt=prompt, negative_prompt=NEG, width=w, height=h, num_frames=49, num_inference_steps=30, guidance_scale=5.0,
              generator=torch.Generator("cpu").manual_seed(7)).frames[0]
 if "wan" in P.get("models", ["ltx", "wan"]): run("wan", wan_load, wan_call, 832, 480, 24)
 REP["total_s"] = round(time.time() - t, 1); save()
