@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=1920, height=1080"/>
+<script src="./gsap.min.js"></script>
+<style>@font-face{font-family:Pop;font-weight:700;src:url(assets/pop.ttf)} body{margin:0;background:#000}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#000} #cv{position:absolute;inset:0}</style></head>
+<body><div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="__DUR__">
+<div id="stage" class="clip" data-start="0" data-duration="__DUR__"><canvas id="cv" width="1920" height="1080"></canvas></div></div>
+<script>
+// A still made alive: slow push-in + drift, two layers of marine snow (parallax), light flicker, optional hand-drawn circle and title.
+const C=__CFG__, D=C.dur, W=1920, H=1080, cv=document.getElementById('cv'), g=cv.getContext('2d');
+let rs=3; const rnd=()=>{rs=(rs*16807)%2147483647;return rs/2147483647};
+const P=[...Array(C.snow||180)].map(()=>({x:rnd()*W,y:rnd()*H,z:.3+rnd()*1.5,s:rnd()}));
+const img=new Image(); img.src='assets/'+C.img; const ready=new Promise(r=>img.onload=r);
+const ease=u=>u*u*(3-2*u), cl=(v,a,b)=>Math.min(b,Math.max(a,v)), lerp=(a,b,u)=>a+(b-a)*u;
+function frame(t){
+  const u=ease(cl(t/D,0,1)); const z=lerp(C.z0,C.z1,u), cx=lerp(C.c0[0],C.c1[0],u), cy=lerp(C.c0[1],C.c1[1],u);
+  const s=Math.max(W/img.width,H/img.height)*z; const dw=img.width*s, dh=img.height*s;
+  const fl=1+(C.flicker||0)*Math.sin(t*7.3)*Math.sin(t*2.1);
+  g.filter=`brightness(${fl}) saturate(1.1)`; g.drawImage(img, W/2-dw*cx, H/2-dh*cy, dw, dh); g.filter='none';
+  for(const p of P){ const y=((p.y - t*(C.rise||25)*p.z) % H + H) % H, x=p.x+Math.sin(t*.6+p.s*9)*10*p.z+t*6*p.z, r=.7+p.z*1.4;
+    g.fillStyle=`rgba(215,232,255,${.18+.3*p.s})`; g.beginPath(); g.arc((x%W+W)%W,y,r,0,7); g.fill(); }
+  if(C.circle){ const [ax,ay,rx,ry,t0]=C.circle; const k=cl((t-t0)/0.9,0,1); if(k>0){
+    // circle centre is in image coordinates (0..1); follow the camera move
+    const px=W/2-dw*cx+dw*ax, py=H/2-dh*cy+dh*ay; g.save(); g.strokeStyle='#E8202A'; g.lineWidth=11; g.lineCap='round';
+    g.shadowColor='rgba(255,40,40,.8)'; g.shadowBlur=14; g.beginPath();
+    for(let i=0;i<=80*k;i++){ const a=-2.2+i/80*2*Math.PI*1.08; const w=1+.05*Math.sin(a*3); g.lineTo(px+Math.cos(a)*rx*w*z, py+Math.sin(a)*ry*w*z); }
+    g.stroke(); g.restore(); } }
+  if(C.title){ const [txt,t0,t1]=C.title; const a=cl((t-t0)/.6,0,1)*cl((t1-t)/.6,0,1); if(a>0){ g.save(); g.globalAlpha=a;
+    g.font='700 '+(C.tsize||84)+'px Pop'; g.textAlign='center'; g.lineWidth=14; g.strokeStyle='rgba(2,10,20,.85)';
+    const y=C.ty||H/2; g.strokeText(txt,W/2,y); g.fillStyle='#fff'; g.fillText(txt,W/2,y);
+    if(C.sub){ g.font='700 44px Pop'; g.lineWidth=10; g.strokeText(C.sub,W/2,y+80); g.fillStyle='#9fd6ff'; g.fillText(C.sub,W/2,y+80); } g.restore(); } }
+  const vg=g.createRadialGradient(W/2,H/2,H*.35,W/2,H/2,H*.95); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,'rgba(0,0,0,.5)'); g.fillStyle=vg; g.fillRect(0,0,W,H);
+}
+window.__timelines=window.__timelines||{};
+Promise.all([ready,document.fonts.load('700 64px Pop')]).then(()=>{ const tl=gsap.timeline({paused:true}); const c={t:0};
+  tl.fromTo(c,{t:0},{t:D,duration:D,ease:'none',immediateRender:false,onUpdate:()=>frame(c.t)},0); frame(0); window.__timelines['main']=tl; });
+</script></body></html>
