@@ -1,0 +1,80 @@
+{
+ "id": "mt-en-r2",
+ "key": "longform",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "p06",
+   "direction": "Narrate this as a popular, witty long-form geography and science YouTube documentary about the Mariana Trench and the deep sea. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, a cheerful little snailfish, a booming giant amphipod): short, punchy, expressive, following the bracketed style tags. Pronounce place and scientific names clearly. VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy. IMPORTANT for this take: keep the Narrator in his low, relaxed baritone register throughout; show excitement through energy and pauses, never by raising the pitch.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Life."
+    ],
+    [
+     "Narrator",
+     "No sunlight. Freezing water. Crushing pressure. And still... there are animals living at the bottom of the trench."
+    ],
+    [
+     "Narrator",
+     "Like the snailfish. A small, pale, almost see-through fish with a soft, jelly-like body."
+    ],
+    [
+     "Chars",
+     "[proud, wiggling] Soft is the secret. No bones to crack, no air to squeeze."
+    ],
+    [
+     "Narrator",
+     "Its body is made for the pressure. Its bones are soft, it has no swim bladder full of air, and special molecules in its cells help stop the pressure from bending its proteins out of shape."
+    ],
+    [
+     "Narrator",
+     "In 2022, scientists filmed a snailfish swimming at eight thousand three hundred and thirty-six metres, in a trench just north of the Mariana, off Japan. The deepest fish ever caught on camera."
+    ],
+    [
+     "Narrator",
+     "Below that depth, scientists think fish can't survive. But other animals can."
+    ],
+    [
+     "Chars",
+     "[booming, comically huge] Did somebody say shrimp?"
+    ],
+    [
+     "Narrator",
+     "These are amphipods. Relatives of the tiny sand-hoppers you find on a beach. But in the deep trenches, some species grow far bigger than normal. Sometimes as long as your hand. Scientists call it deep-sea gigantism."
+    ],
+    [
+     "Chars",
+     "[backing away slowly] I liked them better small."
+    ],
+    [
+     "Narrator",
+     "They crawl across the sea floor eating anything that sinks from above. Dead fish. Old leaves. Even scraps of wood."
+    ],
+    [
+     "Narrator",
+     "And there are stranger things. Giant single-celled creatures called xenophyophores, each one just one cell, but as big as a lemon, have been found more than ten kilometres down in this trench."
+    ],
+    [
+     "Narrator",
+     "Life, it turns out, will move in anywhere. Even here."
+    ],
+    [
+     "Narrator",
+     "But the biggest secret of the Mariana Trench isn't living on the sea floor."
+    ],
+    [
+     "Narrator",
+     "It's happening underneath it."
+    ]
+   ]
+  }
+ ],
+ "requested": "retake p06 (narrator pitch +3 st vs hook)"
+}
