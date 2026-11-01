@@ -343,7 +343,8 @@
   {
    "t0": 30.457,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/G_pacific.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -358,19 +359,6 @@
      "y": 250,
      "in": 34.37365882352941,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_pacific]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 30.457,
-     "enter": "pop"
     }
    ],
    "clip": "G_pacific",
@@ -380,7 +368,7 @@
   {
    "t0": 37.404,
    "bg": {
-    "img": "/home/claude/media-engine/longform/mariana/art/mt_plastic.png",
+    "img": "/home/claude/media-engine/longform/mariana/clips3d/G_pacific_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -428,7 +416,7 @@
   {
    "t0": 40.97942777777778,
    "bg": {
-    "img": "/home/claude/media-engine/longform/mariana/art/mt_plastic.png",
+    "img": "/home/claude/media-engine/longform/mariana/clips3d/G_pacific_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -485,7 +473,7 @@
   {
    "t0": 42.57265,
    "bg": {
-    "img": "/home/claude/media-engine/longform/mariana/art/mt_plastic.png",
+    "img": "/home/claude/media-engine/longform/mariana/clips3d/G_pacific_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -742,23 +730,10 @@
   {
    "t0": 67.12100000000001,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/G_where.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D G_where]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 65.221,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "G_where",
    "t1": 80.064,
    "cut": "whip"
@@ -766,7 +741,8 @@
   {
    "t0": 80.064,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/T_length.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -781,19 +757,6 @@
      "y": 250,
      "in": 80.7585,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D T_length]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 80.064,
-     "enter": "pop"
     }
    ],
    "clip": "T_length",
@@ -803,7 +766,8 @@
   {
    "t0": 86.564,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/T_deep.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -817,19 +781,6 @@
      "x": 1628,
      "y": 170,
      "in": 93.42114814814815,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D T_deep]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 86.564,
      "enter": "pop"
     }
    ],
@@ -3182,7 +3133,8 @@
   {
    "t0": 318.70700000000005,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/T_dive1960.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -3196,19 +3148,6 @@
      "x": 384,
      "y": 230,
      "in": 319.4149512195122,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D T_dive1960]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 318.70700000000005,
      "enter": "pop"
     }
    ],
@@ -4504,7 +4443,8 @@
   {
    "t0": 447.189,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/G_japan.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -4532,19 +4472,6 @@
      "y": 230,
      "in": 457.0345677083334,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_japan]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 447.189,
-     "enter": "pop"
     }
    ],
    "clip": "G_japan",
@@ -4554,7 +4481,7 @@
   {
    "t0": 459.761,
    "bg": {
-    "img": "/home/claude/media-engine/longform/mariana/art/mt_floor.png",
+    "img": "/home/claude/media-engine/longform/mariana/clips3d/G_japan_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -5185,7 +5112,8 @@
   {
    "t0": 521.6569999999999,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/T_slab.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -5199,19 +5127,6 @@
      "x": 1250,
      "y": 330,
      "in": 521.5178,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D T_slab]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 519.757,
      "enter": "pop"
     }
    ],
@@ -5912,7 +5827,8 @@
   {
    "t0": 599.6,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/T_eifuku.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -5926,19 +5842,6 @@
      "x": 1648,
      "y": 170,
      "in": 606.6221111111112,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D T_eifuku]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 599.6,
      "enter": "pop"
     }
    ],
@@ -6883,23 +6786,10 @@
   {
    "t0": 707.549,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/T_fingerprint.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D T_fingerprint]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 707.549,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "T_fingerprint",
    "t1": 716.616,
    "cut": "whip"
@@ -6907,23 +6797,10 @@
   {
    "t0": 716.616,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/mariana/clips3d/T_outro.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D T_outro]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 716.616,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "T_outro",
    "t1": 719.5840000000001,
    "cut": "curve"

@@ -103,7 +103,7 @@ if (D.mode === 'globe') {
   const Wt = (L1 - L0) * KX, Ht = (B1 - B0);
   const FR = new T3.Vector4(...(M.frect || [0, 0, 1, 1]));
   const TU = { dem: { value: null }, ne: { value: null }, mask: { value: null }, hs: { value: null }, hl: { value: 0 }, exag: { value: M.exag || .35 }, flag: { value: null }, flagA: { value: 0 }, frect: { value: FR } };
-  const terr = new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 900, Math.round(900 * Ht / Wt)), new T3.ShaderMaterial({ uniforms: TU,
+  const terr = new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, M.seg || 900, Math.round((M.seg || 900) * Ht / Wt)), new T3.ShaderMaterial({ uniforms: TU,
     vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
     fragmentShader: `uniform sampler2D ne, mask, hs, flag; uniform float hl, flagA; uniform vec4 frect; varying vec2 vUv;
       void main(){ vec3 c = texture2D(ne, vUv).rgb;

@@ -11,14 +11,15 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
-J = json.load(open(os.path.join(ROOT, "jobs", "fetch", "mt-dem.json"))); F = os.path.join(ROOT, "outputs", "fetch", "mt-dem")
+J = json.load(open(os.path.join(ROOT, "jobs", "fetch", "mt-dem2.json")))   # wide box (mt-dem2 adds the tiles mt-dem did not have)
+FS = [os.path.join(ROOT, "outputs", "fetch", d) for d in ("mt-dem", "mt-dem2")]
 A = os.path.join(HERE, "art", "map3d"); os.makedirs(A, exist_ok=True)
 L0, L1, B0, B1 = J["bbox"]; ZM = J["zoom"]; N = 2 ** ZM
 tiles = {}
-for f in glob.glob(os.path.join(F, f"dem_{ZM}_*.png")):
+for f in [g for F in FS for g in glob.glob(os.path.join(F, f"dem_{ZM}_*.png"))]:
     _, _, x, y = os.path.basename(f)[:-4].split("_"); tiles[(int(x), int(y))] = np.array(Image.open(f).convert("RGB")).astype(np.float64)
-print("tiles", len(tiles), "of", len(J["files"]))
-W, H = 2048, int(2048 * (B1 - B0) / ((L1 - L0) * math.cos(math.radians((B0 + B1) / 2))))
+print("tiles", len(tiles))
+W, H = 4096, int(4096 * (B1 - B0) / ((L1 - L0) * math.cos(math.radians((B0 + B1) / 2))))
 LON, LAT = np.meshgrid(np.linspace(L0, L1, W), np.linspace(B1, B0, H))
 X = (LON + 180) / 360 * N; Y = (1 - np.log(np.tan(np.radians(LAT)) + 1 / np.cos(np.radians(LAT))) / np.pi) / 2 * N
 tx, ty = X.astype(int), Y.astype(int); px = ((X - tx) * 256).astype(int).clip(0, 255); py = ((Y - ty) * 256).astype(int).clip(0, 255)
@@ -26,6 +27,7 @@ el = np.full((H, W), np.nan)
 for (x, y), t in tiles.items():
     m = (tx == x) & (ty == y); el[m] = t[py[m], px[m], 0] * 256 + t[py[m], px[m], 1] + t[py[m], px[m], 2] / 256 - 32768
 el = np.where(np.isnan(el), np.nanmedian(el), el)
+import cv2; el = cv2.GaussianBlur(el.astype(np.float32), (0, 0), 1.6).astype(np.float64)   # nearest-pixel tile resampling leaves a grid pattern; smooth it out
 deep = float(el.min()); k = np.unravel_index(int(el.argmin()), el.shape)
 print("deepest", round(deep), "m at", round(float(LON[k]), 3), round(float(LAT[k]), 3), "| highest", round(float(el.max())))
 # relief: sea floor from the deepest point (0) to sea level (1); land is clamped just above sea level
@@ -51,6 +53,8 @@ land = el > 0; col[land] = np.array((196, 178, 120)) * .6 + np.array((70, 130, 6
 Image.fromarray(col.clip(0, 255).astype(np.uint8)).save(os.path.join(A, "ne.jpg"), quality=93)
 Image.new("L", (W, H), 0).save(os.path.join(A, "mask_none.png"))
 shutil.copy(os.path.join(ROOT, "longform", "india", "map3d_art", "globe.jpg"), os.path.join(A, "globe.jpg"))
-json.dump({"bbox": [L0, L1, B0, B1], "deepest_m": round(deep), "deepest_lonlat": [round(float(LON[k]), 3), round(float(LAT[k]), 3)], "size": [W, H]},
+AXIS = [[139.6, 10.86], [140.4, 10.89], [141.2, 11.03], [142.0, 11.31], [142.8, 11.42], [143.6, 11.57], [144.4, 12.01], [145.2, 12.33], [146.0, 12.84], [146.82, 13.6],
+        [147.32, 14.5], [147.61, 15.4], [148.01, 16.3], [147.87, 17.2], [147.76, 18.1], [147.67, 19.0], [147.4, 19.9], [147.05, 20.8], [146.62, 21.7]]   # traced from the DEM
+json.dump({"bbox": [L0, L1, B0, B1], "deepest_m": round(deep), "deepest_lonlat": [round(float(LON[k]), 3), round(float(LAT[k]), 3)], "size": [W, H], "axis": AXIS},
           open(os.path.join(A, "bathy.json"), "w"), indent=1)
 print("assets ->", A, W, "x", H)

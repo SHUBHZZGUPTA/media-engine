@@ -186,7 +186,7 @@ CD = tuple(BATHY["deepest_lonlat"])                       # Challenger Deep (dee
 TRENCH = BATHY.get("axis") or [[139.8, 10.9], [141.2, 11.2], [142.6, 11.37], [144.3, 11.9], [145.9, 12.9], [146.9, 14.3], [147.5, 16.2],
                                 [147.7, 18.2], [147.4, 20.2], [146.8, 21.8]]
 EIFUKU = (144.04, 21.49); GUAM = (144.79, 13.44); IZU = (142.2, 29.5)
-TER = {"bbox": BATHY["bbox"], "ne": "ne.jpg", "hs": "hs.png", "dem": "dem.png", "mask": "mask_none.png", "exag": .45}
+TER = {"bbox": BATHY["bbox"], "ne": "ne.jpg", "hs": "hs.png", "dem": "dem.png", "mask": "mask_none.png", "exag": .45, "seg": 2200}
 def terrain(cid, t0, cam, routes=(), pins=(), layers=(), fallback=None):
     """A 3D sea-floor relief clip. cam = [[t, lon, lat, dist, elev_deg, yaw_deg], ...] (absolute times)."""
     out = os.path.join(CLIPS, cid + ".mp4")
@@ -381,7 +381,7 @@ terrain("T_fingerprint", t, [[t, CD[0], CD[1] + .25, 5.0, 50, 40], [T(c + 7, 1),
 # ======================= ENDING =======================
 c = CHAP[99]
 t = T(c, -.1)
-terrain("T_outro", t, [[t, 145.0, 15.5, 16.0, 60, -30], [T(c + 2, 1), 145.0, 14.0, 24.0, 70, 20]],
+terrain("T_outro", t, [[t, 145.0, 15.5, 16.0, 60, -30], [T(c + 2, 1), 145.5, 15.0, 17.0, 66, 20]],
         routes=[{"pts": TRENCH, "rad": .05, "col": "#FF3B30", "draw": [[0, 1]]}])
 plate(T(c + 1, -.15), a("mt_everest"), layers=[tag("Swallows Everest", K(c + 1, "Everest"), y=330)], zoom=(1.0, 1.1))
 plate(K(c + 1, "light dies"), a("mt_midnight"), layers=[], zoom=(1.0, 1.15))
