@@ -10,7 +10,7 @@ DIR = ("Narrate this as a popular, witty long-form history YouTube documentary a
        "Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): "
        "short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would."
        ' VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy.')
-src, jid = sys.argv[1], sys.argv[2]; MAXW = int(sys.argv[3]) if len(sys.argv) > 3 else 330
+src, jid = sys.argv[1], sys.argv[2]; MAXW = int(sys.argv[3]) if len(sys.argv) > 3 and not sys.argv[3].startswith('--') else 330
 lines, sec = [], None
 for ln in open(src, encoding="utf-8"):
     ln = ln.strip()
@@ -38,6 +38,14 @@ for sec, ls in secs:
         k = min(cand, key=lambda k: abs(sum(wc(t) for _, t, _ in ls[:k]) - tot / 2) + (1e4 if sum(wc(t) for _, t, _ in ls[:k]) > MAXW else 0))
         return split(ls[:k]) + split(ls[k:])
     chunks += split(ls)
+# --pack: join whole neighbouring chunks (e.g. two chapters) into one take while it stays <= MAXW, so takes still only
+# change at a chapter card, but there are fewer of them (fewer voice switches, fewer requests).
+if "--pack" in sys.argv:
+    packed = []
+    for ch in chunks:
+        if packed and sum(wc(t) for _, t, _ in packed[-1]) + sum(wc(t) for _, t, _ in ch) <= MAXW: packed[-1] = packed[-1] + ch
+        else: packed.append(ch)
+    chunks = packed
 items, spk = [], {}
 for k, ch in enumerate(chunks, 1):
     name = f"p{k:02d}"

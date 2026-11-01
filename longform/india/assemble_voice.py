@@ -2,7 +2,7 @@
 """Assemble India narration from the TTS parts (pilot: hook + ch1).
 For each part: line timings (linetimes.py), character pitches (charvoices.py). Then concatenate with a short gap,
 speed up (atempo), and write voice_full.wav, lines_full.json (sped-up times) and words_full.txt (raw times; plan divides by speed).
-Usage: python3 assemble_voice.py <job_id> <out_dir> <part|job:part,...> [speed] [--chapter-after=part,part]  e.g. in-pilot-en pilot p01,p02,p03
+Usage: python3 assemble_voice.py <job_id> <out_dir> <part|job:part,...> [speed] [--chapter-after=part,part] [--gap-before=line,line]  e.g. in-pilot-en pilot p01,p02,p03
 """
 import json, os, subprocess, sys, wave
 import numpy as np
@@ -12,6 +12,7 @@ SPEED = float(sys.argv[4]) if len(sys.argv) > 4 and not sys.argv[4].startswith('
 PARTS = [tuple(n.split(":")) if ":" in n else (JOB, n) for n in PARTN]   # "job:item" picks a take from another job
 GAP = 0.9
 LONG = [a.split('=')[1].split(',') for a in sys.argv if a.startswith('--chapter-after=')]; LONG = set(LONG[0]) if LONG else set()
+GAPB = [a.split('=')[1].split(',') for a in sys.argv if a.startswith('--gap-before=')]; GAPB = {int(v) for v in GAPB[0]} if GAPB else set()
 CHAPGAP = 2.6   # raw seconds of music-only beat after a part that ends a chapter (covers the take switch at the chapter card)
 PITCH = {"TRAVELLER": 2, "INSPECTOR": -3, "BRICKMAKER": 3, "ENGINEER": -1, "FOREMAN": -2}
 W = os.path.join(OUTD, "voice_work"); os.makedirs(W, exist_ok=True)
@@ -97,6 +98,16 @@ for job, name in PARTS:
         for r_ in range(q + 1, len(PL)): PL[r_] = dict(PL[r_], t0=PL[r_]["t0"] - d, t1=PL[r_]["t1"] - d)
         PW = [w_ for w_ in PW if w_[0] < c0] + [(a_ - d, b_ - d, w_) for a_, b_, w_ in PW if a_ >= c1]
         print(f"  cut spoken tag in line {G0 + q}: {' '.join(w_[2] for w_ in ws[:n])!r} ({d:.2f}s)", flush=True)
+    # chapter starts INSIDE a take (--gap-before=<global line idx>): open the pause before that line to CHAPGAP, so the
+    # chapter card gets the same music-only beat as a chapter that starts a new take
+    for q in sorted((g - G0 for g in GAPB if G0 < g < G0 + len(PL)), reverse=True):
+        have = PL[q]["t0"] - PL[q - 1]["t1"]; pad = max(0.0, CHAPGAP - have)
+        if pad <= 0: continue
+        cut = (PL[q - 1]["t1"] + PL[q]["t0"]) / 2
+        x = np.concatenate([x[:int(cut * sr)], np.zeros(int(pad * sr), np.int16), x[int(cut * sr):]])
+        for r_ in range(q, len(PL)): PL[r_] = dict(PL[r_], t0=PL[r_]["t0"] + pad, t1=PL[r_]["t1"] + pad)
+        PW = [w_ for w_ in PW if w_[0] < cut] + [(a_ + pad, b_ + pad, w_) for a_, b_, w_ in PW if a_ >= cut]
+        print(f"  chapter gap before line {G0 + q}: +{pad:.2f}s", flush=True)
     dur = len(x) / sr; G0 += len(PL)
     for l in PL: allL.append(dict(l, t0=l["t0"] + off, t1=l["t1"] + off))
     for a_, b_, wd in PW: allW.append(f"{a_ + off:.3f} {b_ + off:.3f} {wd}")
