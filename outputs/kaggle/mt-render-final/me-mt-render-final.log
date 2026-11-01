@@ -1,0 +1,26 @@
+[{"stream_name":"stderr","time":1.179244914,"data":"/kaggle/src/script.py:71: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.\n"}
+,{"stream_name":"stderr","time":1.179284201,"data":"  t.extractall(WORK)\n"}
+,{"stream_name":"stdout","time":4.635841803,"data":"node: rc=0 3.3s\n"}
+,{"stream_name":"stdout","time":64.916823328,"data":"chrome_libs: rc=0 60.3s\n"}
+,{"stream_name":"stdout","time":97.510161698,"data":"nvidia_gl: rc=0 32.6s\n"}
+,{"stream_name":"stdout","time":104.214472777,"data":"npm: rc=0 6.7s\n"}
+,{"stream_name":"stdout","time":108.448223774,"data":"browser: rc=0 4.2s\n"}
+,{"stream_name":"stdout","time":111.399436339,"data":"probe: {'lane1': 'ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)', 'lane2': 'ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)'}\n"}
+,{"stream_name":"stdout","time":185.54228737,"data":"{\"clip\": \"G_japan\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 73.8, \"video_s\": 13.2, \"started_s\": 110.9}\n"}
+,{"stream_name":"stdout","time":187.637836524,"data":"{\"clip\": \"G_where\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 76.0, \"video_s\": 13.566667, \"started_s\": 110.8}\n"}
+,{"stream_name":"stdout","time":271.526683031,"data":"{\"clip\": \"T_deep\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 83.5, \"video_s\": 10.533333, \"started_s\": 187.2}\n"}
+,{"stream_name":"stdout","time":274.667833867,"data":"{\"clip\": \"T_eifuku\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 89.0, \"video_s\": 13.1, \"started_s\": 184.9}\n"}
+,{"stream_name":"stdout","time":341.855238401,"data":"{\"clip\": \"T_dive1960\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 66.9, \"video_s\": 8.166667, \"started_s\": 274.2}\n"}
+,{"stream_name":"stdout","time":342.487139919,"data":"{\"clip\": \"T_fingerprint\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 70.8, \"video_s\": 9.7, \"started_s\": 270.9}\n"}
+,{"stream_name":"stdout","time":389.14111701,"data":"{\"clip\": \"G_pacific\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 46.4, \"video_s\": 7.566667, \"started_s\": 341.9}\n"}
+,{"stream_name":"stdout","time":393.703577076,"data":"{\"clip\": \"T_slab\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 51.7, \"video_s\": 7.8, \"started_s\": 341.2}\n"}
+,{"stream_name":"stdout","time":427.187351826,"data":"{\"clip\": \"T_outro\", \"lane\": \"lane2\", \"rc\": 0, \"wall_s\": 33.0, \"video_s\": 3.6, \"started_s\": 393.4}\n"}
+,{"stream_name":"stdout","time":432.918634091,"data":"{\"clip\": \"T_length\", \"lane\": \"lane1\", \"rc\": 0, \"wall_s\": 43.6, \"video_s\": 7.1, \"started_s\": 388.5}\n"}
+,{"stream_name":"stdout","time":432.919516964,"data":"{\"setup_s\": 110.6, \"batch_wall_s\": 321.5, \"video_s_total\": 94.3, \"gpu_util\": {\"0\": {\"max\": 52, \"avg\": 15.2, \"mem_max_mb\": 1406, \"busy_share\": 0.75}, \"1\": {\"max\": 0, \"avg\": 0.0, \"mem_max_mb\": 1, \"busy_share\": 0.0}}, \"total_wall_s\": 432.1}\n"}
+,{"stream_name":"stderr","time":435.390693398,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":435.390726704,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":435.785422943,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":435.785454113,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":437.771862962,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":438.839260057,"data":"[NbConvertApp] Writing 322284 bytes to __results__.html\n"}
+]

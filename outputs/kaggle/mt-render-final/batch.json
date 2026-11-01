@@ -1,0 +1,167 @@
+{
+ "params": {
+  "hyperframes": "0.8.181",
+  "gl_unpack": true,
+  "render_args": "--crf 18 --fps 30 --workers 2",
+  "render_timeout_s": 3000,
+  "lanes": [
+   {
+    "name": "lane1",
+    "env": {
+     "PRODUCER_BROWSER_GPU_MODE": "hardware"
+    }
+   },
+   {
+    "name": "lane2",
+    "env": {
+     "PRODUCER_BROWSER_GPU_MODE": "hardware"
+    }
+   }
+  ],
+  "baseline_local_s_per_clip_s": 98
+ },
+ "steps": {
+  "node": {
+   "rc": 0,
+   "secs": 3.3
+  },
+  "chrome_libs": {
+   "rc": 0,
+   "secs": 60.3
+  },
+  "nvidia_gl": {
+   "rc": 0,
+   "secs": 32.6
+  },
+  "npm": {
+   "rc": 0,
+   "secs": 6.7
+  },
+  "browser": {
+   "rc": 0,
+   "secs": 4.2
+  }
+ },
+ "clips": [
+  {
+   "clip": "G_japan",
+   "lane": "lane2",
+   "rc": 0,
+   "wall_s": 73.8,
+   "video_s": 13.2,
+   "started_s": 110.9
+  },
+  {
+   "clip": "G_where",
+   "lane": "lane1",
+   "rc": 0,
+   "wall_s": 76.0,
+   "video_s": 13.566667,
+   "started_s": 110.8
+  },
+  {
+   "clip": "T_deep",
+   "lane": "lane1",
+   "rc": 0,
+   "wall_s": 83.5,
+   "video_s": 10.533333,
+   "started_s": 187.2
+  },
+  {
+   "clip": "T_eifuku",
+   "lane": "lane2",
+   "rc": 0,
+   "wall_s": 89.0,
+   "video_s": 13.1,
+   "started_s": 184.9
+  },
+  {
+   "clip": "T_dive1960",
+   "lane": "lane2",
+   "rc": 0,
+   "wall_s": 66.9,
+   "video_s": 8.166667,
+   "started_s": 274.2
+  },
+  {
+   "clip": "T_fingerprint",
+   "lane": "lane1",
+   "rc": 0,
+   "wall_s": 70.8,
+   "video_s": 9.7,
+   "started_s": 270.9
+  },
+  {
+   "clip": "G_pacific",
+   "lane": "lane1",
+   "rc": 0,
+   "wall_s": 46.4,
+   "video_s": 7.566667,
+   "started_s": 341.9
+  },
+  {
+   "clip": "T_slab",
+   "lane": "lane2",
+   "rc": 0,
+   "wall_s": 51.7,
+   "video_s": 7.8,
+   "started_s": 341.2
+  },
+  {
+   "clip": "T_outro",
+   "lane": "lane2",
+   "rc": 0,
+   "wall_s": 33.0,
+   "video_s": 3.6,
+   "started_s": 393.4
+  },
+  {
+   "clip": "T_length",
+   "lane": "lane1",
+   "rc": 0,
+   "wall_s": 43.6,
+   "video_s": 7.1,
+   "started_s": 388.5
+  }
+ ],
+ "machine": {
+  "gpu": "0, Tesla T4, 15360 MiB, 580.178.04\n1, Tesla T4, 15360 MiB, 580.178.04",
+  "cpus": 4,
+  "ram_gb": 33.7
+ },
+ "input_listing": "/kaggle/input\n/kaggle/input/datasets\n/kaggle/input/datasets/shubhzzgupta07\n/kaggle/input/datasets/shubhzzgupta07/me-mt-clips-final-data\n/kaggle/input/datasets/shubhzzgupta07/me-mt-clips-final-data/clips_final.tgz.bin\n",
+ "projects": [
+  "G_japan",
+  "G_pacific",
+  "G_where",
+  "T_deep",
+  "T_dive1960",
+  "T_eifuku",
+  "T_fingerprint",
+  "T_length",
+  "T_outro",
+  "T_slab"
+ ],
+ "probe": {
+  "lane1": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "lane2": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ },
+ "setup_s": 110.6,
+ "batch_wall_s": 321.5,
+ "video_s_total": 94.3,
+ "gpu_util": {
+  "0": {
+   "max": 52,
+   "avg": 15.2,
+   "mem_max_mb": 1406,
+   "busy_share": 0.75
+  },
+  "1": {
+   "max": 0,
+   "avg": 0.0,
+   "mem_max_mb": 1,
+   "busy_share": 0.0
+  }
+ },
+ "total_wall_s": 432.1
+}
