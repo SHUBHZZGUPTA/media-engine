@@ -202,7 +202,7 @@ def tpin(lon, lat, t, label=None, col=None, s=.5, size=48):
     return p
 def depth(t, metres, x=1700, y=170):
     """Depth gauge chip, top right."""
-    return txt(f"▼ {metres:,} m" if isinstance(metres, int) else f"▼ {metres}", x, y, t, size=58, box="#0b3a5a")
+    return txt(f"↓ {metres:,} m" if isinstance(metres, int) else f"↓ {metres}", x, y, t, size=58, box="#0b3a5a")
 def photo(t0, key, layers=(), zoom=(1.0, 1.15), c0=(.5, .5), c1=None, credit=True):
     """Archive photo full-frame with Ken Burns (falls back to a blurred board)."""
     return pic(t0, key, layers, zoom=zoom, c0=c0, c1=c1, fallback=None)
@@ -357,10 +357,10 @@ plate(T(c + 9, -.15), a("mt_water"), layers=[tag("Sea levels: steady", K(c + 9, 
 t = T(c + 10, -.15)
 terrain("T_eifuku", t, [[t, 145.0, 18.0, 14.0, 55, 0], [T(c + 11, 1), EIFUKU[0], EIFUKU[1], 4.5, 40, 25]],
         pins=[tpin(*EIFUKU, K(c + 11, "Eifuku"), "NW Eifuku", "#FFD84A", size=56)], layers=[depth(K(c + 11, "one and a half"), "~1,600 m")])
-photo(T(c + 12, -.15), "champagne_vent", [lab("Liquid CO₂", K(c + 12, "liquid"), size=110, box="#0b3a5a")])
+photo(T(c + 12, -.15), "champagne_vent", [lab("Liquid CO2", K(c + 12, "liquid"), size=110, box="#0b3a5a")])
 quip(c + 13, [imgcard(a("mt_champagne"), 1500, 800, 640, T(c + 13, -.1))])
 plate(T(c + 14, -.15), a("mt_champagne"), layers=[tag("Acidic water: thin shells", K(c + 14, "acidic"), y=330)], zoom=(1.15, 1.35))
-plate(T(c + 15, -.15), a("mt_water"), layers=[tag("Ocean goes IN", K(c + 15, "in"), x=600, y=330), tag("Planet breathes OUT", K(c + 15, "out"), x=1350, y=330)], zoom=(1.0, 1.12))
+plate(T(c + 15, -.15), a("mt_water"), layers=[tag("Ocean goes IN", K(c + 15, "in"), x=960, y=300), tag("Planet breathes OUT", K(c + 15, "out"), x=960, y=450)], zoom=(1.0, 1.12))
 plate(T(c + 16, -.15), a("mt_plastic"), layers=[lab("A bigger problem", K(c + 16, "bigger"), size=96, box="#d6423a")], zoom=(1.0, 1.15))
 chapter_card(7, c + 17)
 
