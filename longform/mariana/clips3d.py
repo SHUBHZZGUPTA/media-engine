@@ -16,9 +16,14 @@ def build(cid, data):
     P = os.path.join(WORK, "clips_mt", cid); shutil.rmtree(P, ignore_errors=True); os.makedirs(os.path.join(P, "assets"))
     m = data["mode"]; G = data[m]
     need = {G["tex"]} | {o["img"] for o in G.get("over", [])} if m == "globe" else {G[k] for k in ("ne", "hs", "dem", "mask")}
-    for n in need: shutil.copy(os.path.join(ART, n), os.path.join(P, "assets", n))
-    shutil.copy("/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf", os.path.join(P, "assets", "poppins700.ttf"))
-    for js in ("gsap/dist/gsap.min.js", "three/build/three.min.js"): shutil.copy(os.path.join(WORK, "node_modules", js), P)
+    # shared files live once in clips_mt/_shared (relative symlinks, so a tar of clips_mt keeps one copy of each)
+    SH = os.path.join(WORK, "clips_mt", "_shared"); os.makedirs(SH, exist_ok=True)
+    def share(src, name, dst):
+        if not os.path.exists(os.path.join(SH, name)): shutil.copy(src, os.path.join(SH, name))
+        os.symlink(os.path.relpath(os.path.join(SH, name), os.path.dirname(dst)), dst)
+    for n in need: share(os.path.join(ART, n), n, os.path.join(P, "assets", n))
+    share("/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf", "poppins700.ttf", os.path.join(P, "assets", "poppins700.ttf"))
+    for js in ("gsap/dist/gsap.min.js", "three/build/three.min.js"): share(os.path.join(WORK, "node_modules", js), os.path.basename(js), os.path.join(P, os.path.basename(js)))
     html = open(os.path.join(ENG, "map3d", "clip.html")).read().replace("__DATA__", json.dumps(data)).replace("__DUR__", "%.3f" % data["dur"])
     open(os.path.join(P, "index.html"), "w").write(html); return P
 def last_frame(mp4, jpg):
@@ -43,6 +48,7 @@ for cid, data in CL.items():
         print(cid, "FAILED", (r.stdout + r.stderr)[-500:], flush=True)
 if TAR:
     with tarfile.open(TAR, "w:gz") as tf:
+        tf.add(os.path.join(WORK, "clips_mt", "_shared"), arcname="_shared")
         for cid, P in built: tf.add(P, arcname=cid)
     json.dump({cid: json.dumps(CL[cid], sort_keys=True) for cid, _ in built}, open(TAR + ".keys.json", "w"))
     print("packed", len(built), "->", TAR, round(os.path.getsize(TAR) / 1e6, 1), "MB")
