@@ -1,0 +1,33 @@
+{
+ "params": {
+  "hyperframes": "0.8.181",
+  "gl_unpack": true,
+  "render_args": "--crf 18 --fps 30 --workers 2",
+  "render_timeout_s": 3000,
+  "lanes": [
+   {
+    "name": "gpu0",
+    "env": {
+     "CUDA_VISIBLE_DEVICES": "0",
+     "PRODUCER_BROWSER_GPU_MODE": "hardware"
+    }
+   },
+   {
+    "name": "gpu1",
+    "env": {
+     "CUDA_VISIBLE_DEVICES": "1",
+     "PRODUCER_BROWSER_GPU_MODE": "hardware"
+    }
+   }
+  ],
+  "baseline_local_s_per_clip_s": 98
+ },
+ "steps": {},
+ "clips": [],
+ "machine": {
+  "gpu": "0, Tesla T4, 15360 MiB, 580.178.04\n1, Tesla T4, 15360 MiB, 580.178.04",
+  "cpus": 4,
+  "ram_gb": 33.7
+ },
+ "error": "no <name>/index.html projects found in the dataset"
+}
