@@ -22,12 +22,148 @@
   ],
   "baseline_local_s_per_clip_s": 98
  },
- "steps": {},
- "clips": [],
+ "steps": {
+  "node": {
+   "rc": 0,
+   "secs": 3.5
+  },
+  "chrome_libs": {
+   "rc": 0,
+   "secs": 66.2
+  },
+  "nvidia_gl": {
+   "rc": 0,
+   "secs": 23.4
+  },
+  "npm": {
+   "rc": 0,
+   "secs": 7.6
+  },
+  "browser": {
+   "rc": 0,
+   "secs": 4.5
+  }
+ },
+ "clips": [
+  {
+   "clip": "G_japan",
+   "lane": "gpu1",
+   "rc": 0,
+   "wall_s": 78.8,
+   "video_s": 12.633333,
+   "started_s": 109.3
+  },
+  {
+   "clip": "T_eifuku",
+   "lane": "gpu0",
+   "rc": 0,
+   "wall_s": 92.1,
+   "video_s": 13.133333,
+   "started_s": 109.2
+  },
+  {
+   "clip": "G_where",
+   "lane": "gpu1",
+   "rc": 0,
+   "wall_s": 74.1,
+   "video_s": 12.266667,
+   "started_s": 188.5
+  },
+  {
+   "clip": "T_deep",
+   "lane": "gpu0",
+   "rc": 0,
+   "wall_s": 77.6,
+   "video_s": 9.4,
+   "started_s": 201.5
+  },
+  {
+   "clip": "T_length",
+   "lane": "gpu1",
+   "rc": 0,
+   "wall_s": 71.6,
+   "video_s": 8.666667,
+   "started_s": 262.8
+  },
+  {
+   "clip": "G_pacific",
+   "lane": "gpu0",
+   "rc": 0,
+   "wall_s": 55.1,
+   "video_s": 6.866667,
+   "started_s": 279.3
+  },
+  {
+   "clip": "T_fingerprint",
+   "lane": "gpu0",
+   "rc": 0,
+   "wall_s": 51.9,
+   "video_s": 6.2,
+   "started_s": 334.6
+  },
+  {
+   "clip": "T_slab",
+   "lane": "gpu1",
+   "rc": 0,
+   "wall_s": 54.4,
+   "video_s": 6.866667,
+   "started_s": 334.6
+  },
+  {
+   "clip": "T_outro",
+   "lane": "gpu1",
+   "rc": 0,
+   "wall_s": 32.1,
+   "video_s": 2.866667,
+   "started_s": 389.4
+  },
+  {
+   "clip": "T_dive1960",
+   "lane": "gpu0",
+   "rc": 0,
+   "wall_s": 39.8,
+   "video_s": 5.8,
+   "started_s": 386.7
+  }
+ ],
  "machine": {
   "gpu": "0, Tesla T4, 15360 MiB, 580.178.04\n1, Tesla T4, 15360 MiB, 580.178.04",
   "cpus": 4,
   "ram_gb": 33.7
  },
- "error": "no <name>/index.html projects found in the dataset"
+ "input_listing": "/kaggle/input\n/kaggle/input/me-mt-clips-dry2\n/kaggle/input/me-mt-clips-dry2/clips_dry.tgz.bin\n",
+ "projects": [
+  "G_japan",
+  "G_pacific",
+  "G_where",
+  "T_deep",
+  "T_dive1960",
+  "T_eifuku",
+  "T_fingerprint",
+  "T_length",
+  "T_outro",
+  "T_slab"
+ ],
+ "probe": {
+  "gpu0": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "gpu1": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ },
+ "setup_s": 109.0,
+ "batch_wall_s": 317.6,
+ "video_s_total": 84.7,
+ "gpu_util": {
+  "0": {
+   "max": 94,
+   "avg": 15.1,
+   "mem_max_mb": 1412,
+   "busy_share": 0.69
+  },
+  "1": {
+   "max": 0,
+   "avg": 0.0,
+   "mem_max_mb": 1,
+   "busy_share": 0.0
+  }
+ },
+ "total_wall_s": 426.5
 }

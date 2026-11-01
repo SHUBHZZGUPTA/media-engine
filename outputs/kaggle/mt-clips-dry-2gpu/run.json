@@ -36,6 +36,47 @@
  "pushed_at": "2026-11-01T06:58:16+00:00",
  "accelerator": "NvidiaTeslaT4",
  "version": 2,
- "status": "RUNNING",
- "checked_at": "2026-11-01T07:00:17+00:00"
+ "status": "COMPLETE",
+ "checked_at": "2026-11-01T07:09:42+00:00",
+ "gpu_quota_now": {
+  "used_h": 1.32,
+  "remaining_h": 28.68,
+  "total_h": 30.0
+ },
+ "files": [
+  "batch.json",
+  "clips/G_japan.mp4",
+  "clips/G_pacific.mp4",
+  "clips/G_where.mp4",
+  "clips/T_deep.mp4",
+  "clips/T_dive1960.mp4",
+  "clips/T_eifuku.mp4",
+  "clips/T_fingerprint.mp4",
+  "clips/T_length.mp4",
+  "clips/T_outro.mp4",
+  "clips/T_slab.mp4",
+  "me-mt-clips-dry-2gpu.log",
+  "probe_gpu0.log",
+  "probe_gpu1.log",
+  "render_G_japan.log",
+  "render_G_pacific.log",
+  "render_G_where.log",
+  "render_T_deep.log",
+  "render_T_dive1960.log",
+  "render_T_eifuku.log",
+  "render_T_fingerprint.log",
+  "render_T_length.log",
+  "render_T_outro.log",
+  "render_T_slab.log",
+  "step_browser.log",
+  "step_chrome_libs.log",
+  "step_node.log",
+  "step_npm.log",
+  "step_nvidia_gl.log"
+ ],
+ "gpu_quota_after": {
+  "used_h": 1.32,
+  "remaining_h": 28.68,
+  "total_h": 30.0
+ }
 }
