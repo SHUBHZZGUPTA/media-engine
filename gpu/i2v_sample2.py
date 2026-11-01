@@ -20,7 +20,16 @@ NEG = ("worst quality, blurry, jittery, distorted, morphing, melting, flicker, t
 def fit(img, w, h):
     s = max(w / img.width, h / img.height); im = img.resize((round(img.width * s), round(img.height * s)), Image.LANCZOS)
     l, t_ = (im.width - w) // 2, (im.height - h) // 2; return im.crop((l, t_, l + w, t_ + h))
-def peaks(): return [round(torch.cuda.max_memory_allocated(i) / 1e9, 1) for i in range(torch.cuda.device_count())]
+def peaks():
+    out = []
+    for i in range(torch.cuda.device_count()):
+        try: out.append(round(torch.cuda.max_memory_allocated(i) / 1e9, 1))
+        except Exception: out.append(None)
+    return out
+def reset_peaks():
+    for i in range(torch.cuda.device_count()):
+        try: torch.cuda.reset_peak_memory_stats(i)
+        except Exception: pass   # a GPU this process never touched has no stats yet (round 2 crashed here)
 def record(tag, shot, frames, secs, extra=None):
     out = f"{OUT}/{tag}_{shot}.mp4"; export_to_video(frames, out, fps=24)
     a = [np.asarray(f, dtype=np.float32) for f in frames]
@@ -40,7 +49,7 @@ try:
     REP["ltx_load_s"] = round(time.time() - t, 1); save()
     for shot in P["ltx_shots"]:
         img = fit(Image.open(imgs[shot["img"]]).convert("RGB"), 768, 512)
-        for i in range(torch.cuda.device_count()): torch.cuda.reset_peak_memory_stats(i)
+        reset_peaks()
         t = time.time()
         try:
             fr = pipe(image=img, prompt=shot["prompt"], negative_prompt=NEG, width=768, height=512, num_frames=97, num_inference_steps=40,
@@ -53,17 +62,19 @@ except Exception: fail("ltx2", "load", traceback.format_exc())
 # ---------- 2. Wan 2.2 TI2V-5B ----------
 MID = "Wan-AI/Wan2.2-TI2V-5B-Diffusers"
 def wan_split():
-    """Transformer layers split over cuda:0 and cuda:1; text encoder + VAE handled by the pipeline's offload hooks."""
+    """Only the transformer goes on the GPUs, its layers split over cuda:0 and cuda:1 (~5 GB each, leaving room for the
+    attention memory). Text encoder (11 GB) and VAE stay on the CPU: round 2 put them on cuda:1 and that GPU ran out at load."""
     from diffusers import WanImageToVideoPipeline, AutoencoderKLWan, WanTransformer3DModel
+    from transformers import UMT5EncoderModel
     tr = WanTransformer3DModel.from_pretrained(MID, subfolder="transformer", torch_dtype=DT, device_map="auto",
-                                               max_memory={0: "6GiB", 1: "6GiB", "cpu": "24GiB"})
+                                               max_memory={0: "5GiB", 1: "6GiB", "cpu": "4GiB"})
     REP["wan_split_map"] = sorted(set(str(v) for v in getattr(tr, "hf_device_map", {}).values())); save()
-    vae = AutoencoderKLWan.from_pretrained(MID, subfolder="vae", torch_dtype=torch.float32).to("cuda:1")
-    p = WanImageToVideoPipeline.from_pretrained(MID, transformer=tr, vae=vae, torch_dtype=DT)
-    p.text_encoder.to("cuda:1")
+    te = UMT5EncoderModel.from_pretrained(MID, subfolder="text_encoder", torch_dtype=torch.bfloat16)
+    vae = AutoencoderKLWan.from_pretrained(MID, subfolder="vae", torch_dtype=torch.float32)
+    p = WanImageToVideoPipeline.from_pretrained(MID, transformer=tr, text_encoder=te, vae=vae, torch_dtype=DT)
     try: p.transformer.set_attention_backend("_native_efficient")
     except Exception: pass
-    p.vae.enable_tiling(); return p
+    p.vae.enable_tiling(); p._split = True; return p
 def wan_seq():
     from diffusers import WanImageToVideoPipeline, AutoencoderKLWan
     vae = AutoencoderKLWan.from_pretrained(MID, subfolder="vae", torch_dtype=torch.float32)
@@ -76,14 +87,21 @@ for mode, load in (("split2gpu", wan_split), ("seqoffload", wan_seq)):
     if time.time() - T0 > P.get("budget_s", 7800) - 1500: REP["skipped_" + mode] = "time budget"; save(); break
     try:
         t = time.time(); pipe = load(); REP[f"wan_{mode}_load_s"] = round(time.time() - t, 1); save()
-    except Exception: fail("wan_" + mode, "load", traceback.format_exc()); torch.cuda.empty_cache(); continue
+    except Exception:
+        fail("wan_" + mode, "load", traceback.format_exc()); import gc; gc.collect(); torch.cuda.empty_cache(); continue
     for shot in P["wan_shots"]:
         img = fit(Image.open(imgs[shot["img"]]).convert("RGB"), 832, 480)
-        for i in range(torch.cuda.device_count()): torch.cuda.reset_peak_memory_stats(i)
+        reset_peaks()
         t = time.time()
         try:
-            fr = pipe(image=img, prompt=shot["prompt"], negative_prompt=NEG, width=832, height=480, num_frames=49, num_inference_steps=30,
-                      guidance_scale=5.0, generator=torch.Generator("cpu").manual_seed(7)).frames[0]
+            if getattr(pipe, "_split", False):   # text encoder runs on the CPU; hand the transformer fp16 embeddings
+                with torch.no_grad():
+                    pe, ne = pipe.encode_prompt(prompt=shot["prompt"], negative_prompt=NEG, do_classifier_free_guidance=True, device=torch.device("cpu"))
+                fr = pipe(image=img, prompt_embeds=pe.to(DT), negative_prompt_embeds=ne.to(DT), width=832, height=480, num_frames=49,
+                          num_inference_steps=30, guidance_scale=5.0, generator=torch.Generator("cpu").manual_seed(7)).frames[0]
+            else:
+                fr = pipe(image=img, prompt=shot["prompt"], negative_prompt=NEG, width=832, height=480, num_frames=49, num_inference_steps=30,
+                          guidance_scale=5.0, generator=torch.Generator("cpu").manual_seed(7)).frames[0]
             record("wan_" + mode, shot["name"], fr, time.time() - t)
         except Exception: fail("wan_" + mode, shot["name"], traceback.format_exc())
     del pipe; torch.cuda.empty_cache()

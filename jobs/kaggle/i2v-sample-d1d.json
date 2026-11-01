@@ -1,5 +1,5 @@
 {
- "id": "i2v-sample-d1c",
+ "id": "i2v-sample-d1d",
  "script": "gpu/i2v_sample2.py",
  "accelerator": "NvidiaTeslaT4",
  "internet": true,
@@ -10,8 +10,8 @@
    "bench/i2v/mt_trieste.jpg",
    "bench/i2v/mt_champagne.jpg"
   ],
-  "dataset_slug": "me-i2v-sample-imgs-c",
-  "title": "me i2v sample imgs c"
+  "dataset_slug": "me-i2v-sample-imgs-d",
+  "title": "me i2v sample imgs d"
  },
  "params": {
   "budget_s": 8400,
