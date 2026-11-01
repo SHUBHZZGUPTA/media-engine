@@ -1,0 +1,61 @@
+{
+ "job": "mt-en-r1",
+ "items": [
+  {
+   "name": "p02",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 101.04,
+   "took": 31.7
+  },
+  {
+   "name": "p03",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 80.88,
+   "took": 25.9
+  },
+  {
+   "name": "p05",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 131.12,
+   "took": 40.4
+  },
+  {
+   "name": "p06",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 116.04,
+   "took": 36.3
+  },
+  {
+   "name": "p07",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 74.72,
+   "took": 23.7
+  },
+  {
+   "name": "p08",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 72.6,
+   "took": 24.0
+  },
+  {
+   "name": "p10",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 64.76,
+   "took": 21.1
+  }
+ ]
+}
