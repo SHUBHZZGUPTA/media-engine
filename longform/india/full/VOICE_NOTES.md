@@ -14,7 +14,7 @@ Note: timbre between the pilot's own hook and its Ch1 measures 25.8, so a timbre
 ## Plan from 1 Nov: fewer, longer takes (two chapters each, breaking only at chapter cards)
 | job | item | covers | words |
 |---|---|---|---|
-| in-full-en-d1 (done) | p01, p02 | Ch2 | 362 + 287 |
+| in-full-en-d1 (done) | p01, p02 | Ch2 | 220 + 152 |
 | in-full-en-L1 (test take, push first) | c03 | Ch3 + Ch4 | 897 |
 | in-full-en-L2 | c05 / c07 / c09 / c11 / c13 | Ch5+6 / 7+8 / 9+10 / 11+12 / 13+ending | 1015 / 938 / 853 / 929 / 591 |
 
