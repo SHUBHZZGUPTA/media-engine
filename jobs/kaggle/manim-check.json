@@ -1,0 +1,9 @@
+{
+ "id": "manim-check",
+ "script": "gpu/manim_check.py",
+ "accelerator": "none",
+ "internet": true,
+ "timeout_minutes": 40,
+ "wait_minutes": 45,
+ "requested": "2026-11-02T02:15+05:30"
+}
