@@ -1,0 +1,25 @@
+{
+ "id": "voice-qc-bc",
+ "script": "gpu/voice_qc.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 40,
+ "wait_minutes": 40,
+ "stage": {
+  "repo_paths": [
+   "outputs/kaggle/voice-test-bc/A_gemini_original.wav",
+   "outputs/kaggle/voice-test-bc/B_kokoro_am_michael.wav",
+   "outputs/kaggle/voice-test-bc/B_kokoro_am_onyx.wav",
+   "outputs/kaggle/voice-test-bc/B_kokoro_bm_george.wav",
+   "outputs/kaggle/voice-test-bc/B_kokoro_bm_lewis.wav",
+   "outputs/kaggle/voice-test-bc/C1_clone_balanced.wav",
+   "outputs/kaggle/voice-test-bc/C2_clone_expressive.wav",
+   "outputs/kaggle/voice-test-bc/C3_clone_steady.wav",
+   "bench/voice/ch5.txt"
+  ],
+  "dataset_slug": "me-voice-qc-bc-data",
+  "title": "me voice qc bc data"
+ },
+ "params": {},
+ "requested": "2026-11-03 word-accuracy QC (Whisper) of the narrator voice test outputs"
+}
