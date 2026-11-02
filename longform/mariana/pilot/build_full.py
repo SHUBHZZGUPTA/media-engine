@@ -15,25 +15,67 @@ L = json.load(open(f"{M}/lines_en.json"))
 W = [(float(a) / 1.12, float(b) / 1.12, w.strip()) for a, b, w in (r.split(None, 2) for r in open(f"{M}/words_en.txt") if r.strip())]
 
 # ---------------- cuts: the mascot / skit lines and the narrator's replies to them ----------------
-CHARS = [l["i"] for l in L if l["who"] != "Narrator"]
-cuts = []
-for i in CHARS:
-    nxt = L[i + 1]["t0"] if i + 1 < len(L) else L[i]["t1"] + 2
-    cuts.append([L[i]["t0"] - .05, max(L[i]["t1"] + .05, nxt - .5)])
-cuts += [[108.68, 109.82], [193.07, 197.36], [541.06, 545.74], [624.81, 629.77],      # "Exactly." / "Someone already has." / "In a way, yes." / "Not quite."
-         [L[100]["t0"] - .05, L[101]["t0"] - .5]]                                      # "It does, and we'll keep going after them."
-cuts.sort(); SKIP = []
-for a, b in cuts:
-    if SKIP and a <= SKIP[-1][1] + .05: SKIP[-1][1] = max(SKIP[-1][1], b)
-    else: SKIP.append([a, b])
-SKIP = [(round(a, 2), round(b, 2)) for a, b in SKIP]
+# v2 (2 Nov): cut points come from the transcriber's word timings + the actual voice energy, never from the estimated
+# line times (those were up to 2 s off on the mascot lines, so v1 left stray mascot words and clipped mid-word).
+import difflib, soundfile as _sf, numpy as _np
+_v, _sr = _sf.read(f"{M}/voice_en.wav", dtype="float32")
+_hop = int(_sr * .01); _n = len(_v) // _hop
+RMS = _np.sqrt((_v[:_n * _hop].reshape(_n, _hop) ** 2).mean(1)); THR = max(.004, float(_np.percentile(RMS, 30)) * 1.5)
+def speech_end(t):
+    """Extend t forward to where the voice actually stops (bridging gaps under 0.12 s)."""
+    k = int(t * 100); quiet = 0
+    while k < _n - 1:
+        quiet = quiet + 1 if RMS[k] < THR else 0
+        if quiet >= 12: return (k - 11) / 100
+        k += 1
+    return k / 100
+def speech_start(t):
+    k = int(t * 100); quiet = 0
+    while k > 0:
+        quiet = quiet + 1 if RMS[k] < THR else 0
+        if quiet >= 12: return (k + 12) / 100
+        k -= 1
+    return 0.0
+_norm = lambda w: re.sub(r"[^a-z0-9]", "", w.lower())
+_toks = [(l["i"], _norm(w)) for l in L for w in re.sub(r"\[[^\]]*\]", "", l["text"]).replace("*", "").split()]
+_sm = difflib.SequenceMatcher(None, [t for _, t in _toks], [_norm(w) for _, _, w in W], autojunk=False)
+SPAN = {}
+for _a, _b, _k in _sm.get_matching_blocks():
+    for q in range(_k):
+        li = _toks[_a + q][0]; t0_, t1_, _ = W[_b + q]; s_ = SPAN.setdefault(li, [t0_, t1_]); s_[0] = min(s_[0], t0_); s_[1] = max(s_[1], t1_)
+def word_t(i, word, end=False):
+    for a_, b_, w_ in W:
+        if SPAN[i][0] - .3 <= a_ <= SPAN[i][1] + .3 and _norm(w_).startswith(_norm(word)): return b_ if end else a_
+    raise SystemExit(f"{word} not in line {i}")
+CHAPTER_STARTS = {8, 20, 30, 39, 55, 70, 87, 95}
+# (keep the narration up to here, resume it here): everything in between is cut
+PAIRS = []
+CH = [i for i in range(len(L)) if L[i]["who"] != "Narrator"]
+groups = []
+for i in CH:
+    if groups and i == groups[-1][-1] + 1: groups[-1].append(i)
+    else: groups.append([i])
+SPECIAL_KEEP = {6: word_t(6, "bottom", end=True)}                 # the voice dropped "world": end the line on "...hit the bottom."
+SPECIAL_RESUME = {14: word_t(14, "Even"), 25: word_t(25, "Down"), 74: word_t(74, "And"), 84: word_t(84, "The")}
+for g in groups:
+    prev, nxt = g[0] - 1, g[-1] + 1
+    if nxt == 100: nxt = 101                                       # line 100 ("It does, and we'll keep going...") answers the mascot
+    keep = SPECIAL_KEEP.get(prev, SPAN[prev][1])
+    resume = SPECIAL_RESUME.get(nxt, SPAN[nxt][0]) if nxt < len(L) else None
+    PAIRS.append((keep, resume, nxt))
+SKIP = []
+for keep, resume, nxt in PAIRS:
+    a_ = speech_end(keep) + .25 if keep not in SPECIAL_KEEP.values() else keep + .18
+    if resume is None: SKIP.append((round(a_, 2), round(len(_v) / _sr, 2))); continue
+    b_ = speech_start(resume) - (1.6 if nxt in CHAPTER_STARTS else .2)
+    if b_ > a_ + .1: SKIP.append((round(a_, 2), round(b_, 2)))
 def nt(t):
     d = 0.0
     for a, b in SKIP:
         if t >= b: d += b - a
         elif t > a: return a - d
     return t - d
-END = round(nt(L[101]["t1"]) + 3.0, 2)                                                   # CTA + a short tail
+END = round(nt(speech_end(SPAN[101][1])) + 3.0, 2)                                                   # CTA + a short tail
 
 def K(i, word, off=-.12):
     """Pilot-time of the first spoken word in line i that starts with `word` (case-insensitive)."""
@@ -160,8 +202,8 @@ foot(T(54), "dive06_red", 2.0)
 # ======================= CHAPTER 5: SOMETHING IS ALIVE DOWN HERE =======================
 chapter(T(55, -.6), 5, "Something Is Alive Down Here", lambda t: foot(t, "dive06_red", 19.0))
 foot(T(56), "bathynomus", 40.0)
-still(T(57), R("snailfish_mariana"), {"z0": 1.0, "z1": 1.2, "c0": [.5, .45], "c1": [.5, .4]})
-still(T(59), R("snailfish"), {"z0": 1.0, "z1": 1.15})
+still(T(57), R("snail_B"), {"z0": 1.0, "z1": 1.12, "snow": 60})
+still(T(59), R("snail_A"), {"z0": 1.0, "z1": 1.12, "snow": 60})
 clip(T(60), "G_japan", [title("8,336 m · deepest fish ever filmed", K(60, "8"), K(60, "8") + 4.0, y=200, size=76, box="#0a0f18c0")])
 foot(T(61), "dive11_fish", 6.0)
 foot(T(63), "amphipod_live", 2.0)
@@ -204,8 +246,8 @@ foot(K(96, "where"), "jelly_mariana", 28.0)
 still(K(96, "window", -.2), A("mt_trieste"), {"z0": 1.2, "z1": 1.35, "dim": .3})
 foot(K(96, "fish", -.2), "medusa", 46.0)
 foot(K(96, "shrimp", -.2), "bathynomus", 44.0)
-foot(T(97), "nasa_drain", 34.0)
-foot(T(98), "okeanos_guyot", 60.0)
+foot(T(97), "nasa_drain", 20.0)
+foot(T(98), "okeanos_guyot", 40.0)
 still(T(101), A("mt_surface"), {"z0": 1.0, "z1": 1.15, "rise": 6, "snow": 40},
       [title("SUBSCRIBE · BHUGOL", K(101, "subscribe"), END, y=470, size=96, box="#8a1a20d0"),
        title("Would YOU go down?", K(101, "would"), END, y=620, size=80, box="#0a0f18c0")])
@@ -241,7 +283,7 @@ for k, s in enumerate(shots):
     if s["kind"].startswith("foot:"):
         _, key, st = s["kind"].split(":"); src = V[key]; sp = SPEED.get(key, 1.0); st = float(st)
         st = max(0.0, min(st, vdur(src) - d * sp - .3))
-        out = f"{S}/f{k:03d}_{key}.mp4"
+        out = f"{S}/f_{key}_{st:.2f}_{d:.2f}.mp4"                      # named by content, so a re-plan never reuses a wrong cut
         vf = (CROP[key] + "," if key in CROP else "") + (f"setpts=PTS/{sp}," if sp != 1 else "") + \
              "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30,format=yuv420p"
         if not os.path.exists(out):
@@ -249,9 +291,12 @@ for k, s in enumerate(shots):
                             "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", out], check=True)
         s["bg"]["video"] = out; s["src"] = [key, round(st, 2)]
     elif s["kind"] == "still":
-        img, cfg = s.pop("still"); name = f"st{k:03d}"
+        img, cfg = s.pop("still")
         c = {"dur": round(d, 2), "img": os.path.basename(img), "z0": 1.0, "z1": 1.15, "c0": [.5, .5], "c1": [.5, .5], "snow": 160, "rise": 20, "flicker": .03}
-        c.update(cfg); stills[name] = {"src": img, "cfg": c}
+        c.update(cfg)
+        import hashlib   # named by picture + camera move + length (to 0.1 s): unchanged shots are reused after a re-plan
+        name = "s_" + hashlib.md5(json.dumps([img, {k_: v_ for k_, v_ in c.items() if k_ != "dur"}, round(d, 1)], sort_keys=True).encode()).hexdigest()[:12]
+        stills[name] = {"src": img, "cfg": c}
         s["bg"]["video"] = f"{S}/{name}.mp4"
     elif s["kind"] in ("clip", "premade"):
         pass
