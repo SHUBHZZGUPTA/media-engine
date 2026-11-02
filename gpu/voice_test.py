@@ -16,10 +16,12 @@ SENTS = [s.strip() for s in re.split(r"(?<=[.!?])\s+", TEXT.replace("\n", " ")) 
 REP["sentences"] = len(SENTS); save()
 t = time.time(); REP["steps"]["apt"] = sh("apt-get install -y -qq espeak-ng > /dev/null 2>&1; echo ok")[0]
 REP["steps"]["uv"] = sh("pip install -q uv && uv python install 3.12", 600)[0]; save()
-DEPS = {"C": "chatterbox-tts soundfile librosa", "B": "'kokoro>=0.9.4' 'misaki[en]' soundfile librosa"}
+SPACY = "en_core_web_sm@https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl"
+DEPS = {"C": "chatterbox-tts soundfile librosa 'setuptools<81'", "B": f"'kokoro>=0.9.4' 'misaki[en]' soundfile librosa '{SPACY}'"}
+CHECK = {"C": "import perth; assert perth.PerthImplicitWatermarker", "B": "import spacy; spacy.load('en_core_web_sm')"}
 env = dict(os.environ, JOB_PARAMS=JOB_PARAMS, CH5=inp["ch5.txt"], REF=REF)  # noqa: F821
 for eng in ("C", "B"):
-    t = time.time(); rc, tail = sh(f"uv venv -q -p 3.12 /tmp/v{eng} && uv pip install -q --python /tmp/v{eng}/bin/python {DEPS[eng]} && /tmp/v{eng}/bin/python -c \"import numpy, torch, librosa; print(torch.__version__, torch.cuda.is_available())\"", 1500)
+    t = time.time(); rc, tail = sh(f"uv venv -q -p 3.12 /tmp/v{eng} && uv pip install -q --python /tmp/v{eng}/bin/python {DEPS[eng]} && /tmp/v{eng}/bin/python -c \"import numpy, torch, librosa; print(torch.__version__, torch.cuda.is_available())\" && /tmp/v{eng}/bin/python -c \"{CHECK[eng]}\"", 1500)
     REP["steps"][f"pip_{eng}"] = {"rc": rc, "s": round(time.time() - t), "tail": tail[-500:]}; save()
     t = time.time(); r = subprocess.run([f"/tmp/v{eng}/bin/python", inp["voice_worker.py"], eng], env=env, capture_output=True, text=True, timeout=3600)
     REP["steps"][f"run_{eng}"] = {"rc": r.returncode, "s": round(time.time() - t), "tail": (r.stdout + r.stderr)[-1200:]}
