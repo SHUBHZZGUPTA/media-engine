@@ -1,0 +1,76 @@
+{
+ "id": "a81-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "London जितना बड़ा एक iceberg, पेंगुइन वाले एक द्वीप के पास आकर रुक गया है।"
+    ],
+    [
+     "Narrator",
+     "ये है A-81। ये two thousand twenty-three में Antarctica से टूटा, एक British research station के पास।"
+    ],
+    [
+     "Narrator",
+     "ये लगभग पूरे Greater London जितना है।"
+    ],
+    [
+     "Narrator",
+     "तीन साल ये बहता रहा: Weddell Sea से, Antarctic Peninsula के पास से, Scotia Sea तक।"
+    ],
+    [
+     "Narrator",
+     "करीब दो हज़ार तीन सौ किलोमीटर। एक iceberg के लिए, ये तेज़ है।"
+    ],
+    [
+     "Narrator",
+     "और अब ये South Georgia के पास अटक गया है।"
+    ],
+    [
+     "Chars",
+     "[annoyed cartoon king penguin, huffy] माफ़ कीजिए। ये मेरी खाने की जगह है।"
+    ],
+    [
+     "Narrator",
+     "यहीं क्यों? समुद्री धाराएँ ज़्यादातर Antarctic icebergs को उत्तर की ओर, iceberg alley से होकर, सीधे इस द्वीप तक धकेलती हैं।"
+    ],
+    [
+     "Narrator",
+     "यहाँ अटका एक विशाल iceberg, पेंगुइन और सील का खाने तक का रास्ता रोक सकता है।"
+    ],
+    [
+     "Narrator",
+     "और दुनिया के करीब आधे southern elephant seals इसी द्वीप पर बच्चे देते हैं।"
+    ],
+    [
+     "Narrator",
+     "पर पिघलते हुए ये पोषक तत्व भी छोड़ता है, जो समुद्र को खाना देते हैं।"
+    ],
+    [
+     "Narrator",
+     "twenty twenty में A-68, twenty twenty-five में A-23a, और अब A-81। छह साल में तीसरा दानव।"
+    ],
+    [
+     "Chars",
+     "[cartoon king penguin, resigned and stubborn] ठीक है। पर मैं हिलूँगा नहीं।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611021351"
+}
