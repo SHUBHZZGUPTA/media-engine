@@ -1,0 +1,70 @@
+{
+ "id": "mms-s023-ftc-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Your phone rings: \"This is the F T C. Your number is linked to a crime.\" Would you stay on the line?"
+    ],
+    [
+     "Narrator",
+     "The F T C warned about this exact call on October twenty-second."
+    ],
+    [
+     "Narrator",
+     "The caller says a phone in your name is running scams overseas. Cooperate, or your number gets deactivated."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky banknote, trembling] My number? I don't even have a phone."
+    ],
+    [
+     "Narrator",
+     "So why does a government call end with a payment?"
+    ],
+    [
+     "Narrator",
+     "First, they pass you to a fake police officer. Then you're told you're under arrest."
+    ],
+    [
+     "Narrator",
+     "And then comes the part that costs you."
+    ],
+    [
+     "Narrator",
+     "To clear your name, you pay a \"security deposit.\""
+    ],
+    [
+     "Narrator",
+     "That's the mirage: each step hands you to someone more official, so it feels more real."
+    ],
+    [
+     "Narrator",
+     "The F T C says real staff never ask for money, never threaten your phone, and never ask for secrecy."
+    ],
+    [
+     "Narrator",
+     "So the only thing to deactivate... is the call."
+    ],
+    [
+     "Narrator",
+     "Comment: has a fake agency ever called you?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
