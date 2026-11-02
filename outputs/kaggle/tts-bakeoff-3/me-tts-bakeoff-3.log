@@ -1,0 +1,68 @@
+[{"stream_name":"stdout","time":0.724418759,"data":"$ pip install -q soundfile edge-tts\n"}
+,{"stream_name":"stdout","time":5.000447337,"data":" \n"}
+,{"stream_name":"stdout","time":5.000476979,"data":"$ apt-get -qq install -y espeak-ng \u003e /dev/null 2\u003e\u00261 || true\n"}
+,{"stream_name":"stdout","time":14.097627623,"data":" \n"}
+,{"stream_name":"stdout","time":14.097654537,"data":"$ pip install -q uv\n"}
+,{"stream_name":"stdout","time":15.650583805,"data":" \n"}
+,{"stream_name":"stdout","time":15.650615,"data":"$ uv venv -q -p 3.12 /tmp/py312\n"}
+,{"stream_name":"stdout","time":16.069823697,"data":" \n"}
+,{"stream_name":"stdout","time":16.069847205,"data":"$ uv pip install -q --python /tmp/py312/bin/python soundfile numpy 'kokoro\u003e=0.9.4' 'misaki[en]' chatterbox-tts 'setuptools\u003c81' https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":62.698660489,"data":" \n"}
+,{"stream_name":"stdout","time":62.698691286,"data":"OK py3.12 venv (49s)\n"}
+,{"stream_name":"stdout","time":62.698924911,"data":"$ /tmp/py312/bin/python /tmp/sub.py\n"}
+,{"stream_name":"stdout","time":106.285376719,"data":"WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.\n"}
+,{"stream_name":"stdout","time":106.285411117,"data":"WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.\n"}
+,{"stream_name":"stdout","time":106.285418133,"data":"wrote kokoro_am_michael\n"}
+,{"stream_name":"stdout","time":106.285422917,"data":"wrote kokoro_am_fenrir\n"}
+,{"stream_name":"stdout","time":106.285427106,"data":"wrote kokoro_am_puck\n"}
+,{"stream_name":"stdout","time":106.285431145,"data":"wrote kokoro_bm_george\n"}
+,{"stream_name":"stdout","time":106.285435205,"data":"wrote kokoro_bm_fable\n"}
+,{"stream_name":"stdout","time":106.285439269,"data":"WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.\n"}
+,{"stream_name":"stdout","time":106.285443522,"data":"wrote hindi_kokoro_hm_omega\n"}
+,{"stream_name":"stdout","time":106.285447512,"data":" Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":106.285451815,"data":"/tmp/py312/lib/python3.12/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\n"}
+,{"stream_name":"stdout","time":106.285457749,"data":"  warnings.warn(\n"}
+,{"stream_name":"stdout","time":106.285461872,"data":"/tmp/py312/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.\n"}
+,{"stream_name":"stdout","time":106.285472001,"data":"  WeightNorm.apply(module, name, dim)\n"}
+,{"stream_name":"stdout","time":106.285475395,"data":"\n"}
+,{"stream_name":"stdout","time":106.285479382,"data":"OK kokoro (44s)\n"}
+,{"stream_name":"stdout","time":106.285822014,"data":"$ /tmp/py312/bin/python /tmp/sub.py\n"}
+,{"stream_name":"stdout","time":273.204226387,"data":"loaded PerthNet (Implicit) at step 250,000\n"}
+,{"stream_name":"stdout","time":273.204287541,"data":"wrote chatterbox_calm\n"}
+,{"stream_name":"stdout","time":273.204293859,"data":"wrote chatterbox_expressive\n"}
+,{"stream_name":"stdout","time":273.204304631,"data":"wrote chatterbox_documentary\n"}
+,{"stream_name":"stdout","time":273.20430829,"data":"loaded PerthNet (Implicit) at step 250,000\n"}
+,{"stream_name":"stdout","time":273.204321559,"data":"wrote hindi_chatterbox\n"}
+,{"stream_name":"stdout","time":273.204324169,"data":" ling:   8%|▊         | 82/1000 [00:02\u003c00:28, 32.52it/s]\n"}
+,{"stream_name":"stdout","time":273.20432772,"data":"Sampling:   9%|▊         | 86/1000 [00:02\u003c00:28, 31.78it/s]\n"}
+,{"stream_name":"stdout","time":273.204330181,"data":"Sampling:   9%|▉         | 90/1000 [00:02\u003c00:28, 31.44it/s]\n"}
+,{"stream_name":"stdout","time":273.204332548,"data":"Sampling:   9%|▉         | 94/1000 [00:02\u003c00:28, 31.53it/s]\n"}
+,{"stream_name":"stdout","time":273.204334969,"data":"Sampling:  10%|▉         | 98/1000 [00:03\u003c00:28, 31.90it/s]\n"}
+,{"stream_name":"stdout","time":273.204338525,"data":"Sampling:  10%|█         | 102/1000 [00:03\u003c00:28, 31.68it/s]\n"}
+,{"stream_name":"stdout","time":273.204355672,"data":"Sampling:  11%|█         | 106/1000 [00:03\u003c00:28, 31.88it/s]\n"}
+,{"stream_name":"stdout","time":273.204360111,"data":"Sampling:  11%|█         | 110/1000 [00:03\u003c00:27, 32.03it/s]\n"}
+,{"stream_name":"stdout","time":273.204364375,"data":"Sampling:  11%|█▏        | 114/1000 [00:03\u003c00:27, 32.07it/s]\n"}
+,{"stream_name":"stdout","time":273.204368217,"data":"Sampling:  12%|█▏        | 118/1000 [00:03\u003c00:27, 32.04it/s]\n"}
+,{"stream_name":"stdout","time":273.204372785,"data":"Sampling:  12%|█▏        | 122/1000 [00:03\u003c00:27, 32.00it/s]\n"}
+,{"stream_name":"stdout","time":273.204376445,"data":"Sampling:  13%|█▎        | 126/1000 [00:03\u003c00:27, 32.23it/s]\n"}
+,{"stream_name":"stdout","time":273.204379977,"data":"Sampling:  13%|█▎        | 130/1000 [00:04\u003c00:26, 32.31it/s]\n"}
+,{"stream_name":"stdout","time":273.204383565,"data":"Sampling:  13%|█▎        | 134/1000 [00:04\u003c00:27, 32.07it/s]\n"}
+,{"stream_name":"stdout","time":273.204387109,"data":"Sampling:  14%|█▍        | 138/1000 [00:04\u003c00:26, 32.10it/s]\n"}
+,{"stream_name":"stdout","time":273.204390658,"data":"Sampling:  14%|█▍        | 142/1000 [00:04\u003c00:26, 32.08it/s]\n"}
+,{"stream_name":"stdout","time":273.204394247,"data":"Sampling:  15%|█▍        | 146/1000 [00:04\u003c00:26, 31.94it/s]\n"}
+,{"stream_name":"stdout","time":273.204397867,"data":"Sampling:  15%|█▌        | 150/1000 [00:04\u003c00:26, 31.79it/s]\n"}
+,{"stream_name":"stdout","time":273.204401325,"data":"Sampling:  15%|█▌        | 154/1000 [00:04\u003c00:26, 31.75it/s]\n"}
+,{"stream_name":"stdout","time":273.204404945,"data":"Sampling:  16%|█▌        | 158/1000 [00:04\u003c00:26, 31.41it/s]\n"}
+,{"stream_name":"stdout","time":273.204408586,"data":"Sampling:  16%|█▌        | 162/1000 [00:05\u003c00:26, 31.37it/s]WARNING:chatterbox.models.t3.inference.alignment_stream_analyzer:forcing EOS token, long_tail=tensor(True), alignment_repetition=tensor(False), token_repetition=False\n"}
+,{"stream_name":"stdout","time":273.204414216,"data":"\n"}
+,{"stream_name":"stdout","time":273.204417601,"data":"Sampling:  16%|█▋        | 163/1000 [00:05\u003c00:26, 31.63it/s]\n"}
+,{"stream_name":"stdout","time":273.204427511,"data":"\n"}
+,{"stream_name":"stdout","time":273.207543779,"data":"OK chatterbox (167s)\n"}
+,{"stream_name":"stdout","time":273.207564545,"data":"DONE\n"}
+,{"stream_name":"stderr","time":275.259555631,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":275.259584558,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":275.545403273,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":275.545438859,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":276.432965507,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":277.401494097,"data":"[NbConvertApp] Writing 303294 bytes to __results__.html\n"}
+]

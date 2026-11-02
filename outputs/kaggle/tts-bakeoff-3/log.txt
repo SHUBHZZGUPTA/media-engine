@@ -1,0 +1,61 @@
+$ pip install -q soundfile edge-tts
+ 
+$ apt-get -qq install -y espeak-ng > /dev/null 2>&1 || true
+ 
+$ pip install -q uv
+ 
+$ uv venv -q -p 3.12 /tmp/py312
+ 
+$ uv pip install -q --python /tmp/py312/bin/python soundfile numpy 'kokoro>=0.9.4' 'misaki[en]' chatterbox-tts 'setuptools<81' https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+ 
+OK py3.12 venv (49s)
+$ /tmp/py312/bin/python /tmp/sub.py
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+wrote kokoro_am_michael
+wrote kokoro_am_fenrir
+wrote kokoro_am_puck
+wrote kokoro_bm_george
+wrote kokoro_bm_fable
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+wrote hindi_kokoro_hm_omega
+ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/tmp/py312/lib/python3.12/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+/tmp/py312/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+
+OK kokoro (44s)
+$ /tmp/py312/bin/python /tmp/sub.py
+loaded PerthNet (Implicit) at step 250,000
+wrote chatterbox_calm
+wrote chatterbox_expressive
+wrote chatterbox_documentary
+loaded PerthNet (Implicit) at step 250,000
+wrote hindi_chatterbox
+ ling:   8%|▊         | 82/1000 [00:02<00:28, 32.52it/s]
+Sampling:   9%|▊         | 86/1000 [00:02<00:28, 31.78it/s]
+Sampling:   9%|▉         | 90/1000 [00:02<00:28, 31.44it/s]
+Sampling:   9%|▉         | 94/1000 [00:02<00:28, 31.53it/s]
+Sampling:  10%|▉         | 98/1000 [00:03<00:28, 31.90it/s]
+Sampling:  10%|█         | 102/1000 [00:03<00:28, 31.68it/s]
+Sampling:  11%|█         | 106/1000 [00:03<00:28, 31.88it/s]
+Sampling:  11%|█         | 110/1000 [00:03<00:27, 32.03it/s]
+Sampling:  11%|█▏        | 114/1000 [00:03<00:27, 32.07it/s]
+Sampling:  12%|█▏        | 118/1000 [00:03<00:27, 32.04it/s]
+Sampling:  12%|█▏        | 122/1000 [00:03<00:27, 32.00it/s]
+Sampling:  13%|█▎        | 126/1000 [00:03<00:27, 32.23it/s]
+Sampling:  13%|█▎        | 130/1000 [00:04<00:26, 32.31it/s]
+Sampling:  13%|█▎        | 134/1000 [00:04<00:27, 32.07it/s]
+Sampling:  14%|█▍        | 138/1000 [00:04<00:26, 32.10it/s]
+Sampling:  14%|█▍        | 142/1000 [00:04<00:26, 32.08it/s]
+Sampling:  15%|█▍        | 146/1000 [00:04<00:26, 31.94it/s]
+Sampling:  15%|█▌        | 150/1000 [00:04<00:26, 31.79it/s]
+Sampling:  15%|█▌        | 154/1000 [00:04<00:26, 31.75it/s]
+Sampling:  16%|█▌        | 158/1000 [00:04<00:26, 31.41it/s]
+Sampling:  16%|█▌        | 162/1000 [00:05<00:26, 31.37it/s]WARNING:chatterbox.models.t3.inference.alignment_stream_analyzer:forcing EOS token, long_tail=tensor(True), alignment_repetition=tensor(False), token_repetition=False
+
+Sampling:  16%|█▋        | 163/1000 [00:05<00:26, 31.63it/s]
+
+OK chatterbox (167s)
+DONE

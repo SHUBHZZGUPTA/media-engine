@@ -1,0 +1,34 @@
+{
+ "job": "tts-bakeoff-3",
+ "kernel": "shubhzzgupta07/me-tts-bakeoff-3",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tts-bakeoff-3",
+ "gpu_quota_before": {
+  "used_h": 4.78,
+  "remaining_h": 25.22,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-02T14:11:09+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-02T14:16:11+00:00",
+ "files": [
+  "chatterbox_calm.mp3",
+  "chatterbox_documentary.mp3",
+  "chatterbox_expressive.mp3",
+  "hindi_chatterbox.mp3",
+  "hindi_kokoro_hm_omega.mp3",
+  "kokoro_am_fenrir.mp3",
+  "kokoro_am_michael.mp3",
+  "kokoro_am_puck.mp3",
+  "kokoro_bm_fable.mp3",
+  "kokoro_bm_george.mp3",
+  "log.txt",
+  "me-tts-bakeoff-3.log"
+ ],
+ "gpu_quota_after": {
+  "used_h": 4.85,
+  "remaining_h": 25.15,
+  "total_h": 30.0
+ }
+}
