@@ -22,13 +22,13 @@ creds = Credentials(None, refresh_token=os.environ[J["token_secret"]], token_uri
                     client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"])
 creds.refresh(Request())
 yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
-ch = yt.channels().list(part="id,snippet,brandingSettings", mine=True).execute()["items"][0]
+ch = yt.channels().list(part="id,snippet,brandingSettings,status", mine=True).execute()["items"][0]
 res.update(channel_id=ch["id"], channel=ch["snippet"]["title"])
 if ch["id"] != J["expect_channel_id"]:
     res["error"] = f"token belongs to {ch['id']} ({ch['snippet']['title']}), expected {J['expect_channel_id']}: nothing changed"; done(); sys.exit(1)
 bs = ch.get("brandingSettings", {})
 if J.get("read_only"):
-    res.update(ok=True, snippet_description=ch["snippet"].get("description"), brandingSettings=bs); done(); sys.exit(0)
+    res.update(ok=True, snippet_description=ch["snippet"].get("description"), brandingSettings=bs, status=ch.get("status")); done(); sys.exit(0)
 res["before"] = {"description": bs.get("channel", {}).get("description"), "bannerExternalUrl": bs.get("image", {}).get("bannerExternalUrl")}
 if J.get("banner"):
     up = yt.channelBanners().insert(media_body=MediaFileUpload(J["banner"], mimetype="image/jpeg" if J["banner"].endswith(".jpg") else "image/png")).execute()
