@@ -1,0 +1,92 @@
+{
+ "A_gemini_original.wav": {
+  "wer": 0.072,
+  "diffs": [
+   "replace: 'trench' -> 'trent'",
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "replace: 'sea floor' -> 'seafloor'",
+   "replace: 'xenophyophores' -> 'xenophiafors'",
+   "replace: 'ten kilometres' -> '10 kilometers'",
+   "delete: 'floor' -> ''"
+  ]
+ },
+ "B_kokoro_am_michael.wav": {
+  "wer": 0.055,
+  "diffs": [
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "replace: 'xenophyophores' -> 'xenopheophores'",
+   "replace: 'ten kilometres' -> '10 kilometers'"
+  ]
+ },
+ "B_kokoro_am_onyx.wav": {
+  "wer": 0.06,
+  "diffs": [
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "replace: 'leaves' -> 'laves'",
+   "replace: 'xenophyophores' -> 'xenofiafors'",
+   "replace: 'ten kilometres' -> '10 kilometers'"
+  ]
+ },
+ "B_kokoro_bm_george.wav": {
+  "wer": 0.06,
+  "diffs": [
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "replace: 'fish' -> 'fishy'",
+   "replace: 'xenophyophores' -> 'xenophophores'",
+   "replace: 'ten kilometres' -> '10 kilometers'"
+  ]
+ },
+ "B_kokoro_bm_lewis.wav": {
+  "wer": 0.051,
+  "diffs": [
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "replace: 'xenophyophores' -> 'xenophophores'",
+   "replace: 'even' -> 'avon'"
+  ]
+ },
+ "C1_clone_balanced.wav": {
+  "wer": 0.102,
+  "diffs": [
+   "replace: 'life no sunlight freezing water' -> 'like'",
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "replace: 'sea floor' -> 'seafloor'",
+   "replace: 'dead fish old' -> 'headfish oiled'",
+   "replace: 'xenophyophores' -> 'xenophophores'",
+   "replace: 'ten kilometres' -> '10 kilometers'",
+   "replace: 'even' -> 'on'"
+  ]
+ },
+ "C2_clone_expressive.wav": {
+  "wer": 0.085,
+  "diffs": [
+   "replace: 'life no' -> 'let go'",
+   "delete: 'freezing water' -> ''",
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "replace: 'sea floor' -> 'seafloor'",
+   "delete: 'old' -> ''",
+   "replace: 'xenophyophores' -> 'xenophiafors'",
+   "replace: 'ten kilometres' -> '10 kilometers'"
+  ]
+ },
+ "C3_clone_steady.wav": {
+  "wer": 0.085,
+  "diffs": [
+   "delete: 'life' -> ''",
+   "insert: '' -> 'it's'",
+   "replace: 'crushing' -> 'really open'",
+   "replace: 'eight thousand three hundred and thirty six metres' -> '8 336 meters'",
+   "replace: 'sand hoppers' -> 'sandhoppers'",
+   "delete: 'dead fish' -> ''",
+   "replace: 'xenophyophores' -> 'xenophophores'",
+   "replace: 'ten kilometres' -> '10 kilometers'",
+   "replace: 'even' -> 'you're'"
+  ]
+ }
+}
