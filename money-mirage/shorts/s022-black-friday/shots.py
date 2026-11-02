@@ -14,7 +14,7 @@ C = json.load(open(os.path.join(HERE, "coords.json"))) if os.path.exists(os.path
 c = lambda k, d: C.get(k, d)
 TV, CLK, RCP, CRD = P('bf_tv', 'trading_room'), P('bf_clock', 'trading_room'), P('bf_receipt', 'wallet_desk'), P('bf_crowd', 'uk_high_street_1991')
 # 1 HOOK
-shot('s00', TV, 'film', A(0), cam0=PORT(.6, .3, 1.15), cam1=PORT(.62, .28, 1.3))
+shot('s00', TV, 'film', A(0), cam0=PORT(.72, .28, 1.15), cam1=PORT(.74, .26, 1.3))
 beat('card', {'abs': 0.12}, text='SALE *?*', y=280, size=150, blur=True, until={'abs': 2.2})
 beat('punch', A(0, 0, .9), shot='s00', level=1.2)
 beat('count', Wd(0, 14, -.05), to=134, suffix=' days', **dict(NUM, y=560), until=A(0, 2, -.1))
