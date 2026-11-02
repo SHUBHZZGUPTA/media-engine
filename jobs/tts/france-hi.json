@@ -1,0 +1,68 @@
+{
+ "id": "france-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Amazon के बीचोंबीच European Union की एक सीमा है।"
+    ],
+    [
+     "Narrator",
+     "क्योंकि France की सबसे लंबी ज़मीनी सीमा Spain से नहीं... Brazil से है।"
+    ],
+    [
+     "Narrator",
+     "South America में France का एक टुकड़ा है: French Guiana।"
+    ],
+    [
+     "Narrator",
+     "ये कोई colony नहीं। ये France का पूरा हिस्सा है, और European Union का भी।"
+    ],
+    [
+     "Narrator",
+     "Euro और EU के नियम... Amazon के किनारे पर।"
+    ],
+    [
+     "Narrator",
+     "Brazil से इसकी सीमा करीब साढ़े छह सौ से सात सौ तीस किलोमीटर है, नापने वाले पर निर्भर। France–Spain से भी लंबी।"
+    ],
+    [
+     "Chars",
+     "[confused cartoon croissant with a French accent] रुको... मैं South American हूँ?"
+    ],
+    [
+     "Narrator",
+     "Europe यहाँ से rockets भी छोड़ता है। Kourou भूमध्य रेखा से सिर्फ़ पाँच सौ किलोमीटर दूर है, जहाँ धरती का घूमना rockets को मुफ़्त धक्का देता है।"
+    ],
+    [
+     "Narrator",
+     "और इस सीमा पर इकलौता पुल twenty eleven में बनकर तैयार हुआ... और twenty seventeen में खुला।"
+    ],
+    [
+     "Narrator",
+     "छह साल, और कोई पार नहीं गया।"
+    ],
+    [
+     "Chars",
+     "[cartoon croissant, cheerful] Bonjour... और Ola!"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611021355"
+}
