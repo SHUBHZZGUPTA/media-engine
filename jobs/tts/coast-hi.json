@@ -1,0 +1,68 @@
+{
+ "id": "coast-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Croatia ने चार सौ बीस million euro खर्च किए... बस Bosnia के बीस किलोमीटर से बचने के लिए।"
+    ],
+    [
+     "Narrator",
+     "कुछ देशों के हिस्से समुद्र का बचा-खुचा ही आया।"
+    ],
+    [
+     "Narrator",
+     "DR Congo Africa का दूसरा सबसे बड़ा देश है... और समुद्र तट सिर्फ़ सैंतीस किलोमीटर।"
+    ],
+    [
+     "Narrator",
+     "Iraq के पास चार लाख तीस हज़ार वर्ग किलोमीटर से ज़्यादा ज़मीन है... और अट्ठावन किलोमीटर तट।"
+    ],
+    [
+     "Narrator",
+     "Jordan के पास छब्बीस किलोमीटर, Aqaba में Red Sea पर ठुँसा हुआ।"
+    ],
+    [
+     "Narrator",
+     "Bosnia and Herzegovina के पास करीब बीस किलोमीटर, और समुद्र किनारे एक ही शहर: Neum।"
+    ],
+    [
+     "Narrator",
+     "वो छोटी सी पट्टी Croatia को दो हिस्सों में काट देती है।"
+    ],
+    [
+     "Narrator",
+     "तो Croatia ने दो दशमलव चार किलोमीटर का पुल बना दिया... बस उसके बगल से निकलने के लिए।"
+    ],
+    [
+     "Chars",
+     "[grumpy cartoon crab, unimpressed] बीस किलोमीटर? मैंने इससे बड़े beach देखे हैं।"
+    ],
+    [
+     "Narrator",
+     "और सबसे छोटा तट? Monaco: करीब चार किलोमीटर।"
+    ],
+    [
+     "Chars",
+     "[cartoon crab, smug] फिर भी मुझसे ज़्यादा beach।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611021356"
+}
