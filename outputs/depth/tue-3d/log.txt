@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 3791.71it/s]
+depth library/scenes/fr_guiana.jpg
+depth library/scenes/fr_kourou.jpg
+depth library/scenes/fr_border.jpg
+depth library/scenes/co_neum.jpg
+depth library/scenes/co_aqaba.jpg
+depth library/scenes/co_congo.jpg
+depth library/scenes/co_monaco.jpg
+depth library/scenes/dw_lamps.jpg
+depth library/scenes/dw_sat.jpg
+depth library/scenes/dw_phone.jpg
+depth library/scenes/dw_desk.jpg
+upscale library/scenes/fr_guiana.jpg
+upscale library/scenes/fr_kourou.jpg
+upscale library/scenes/fr_border.jpg
+upscale library/scenes/co_neum.jpg
+upscale library/scenes/co_aqaba.jpg
+upscale library/scenes/co_congo.jpg
+upscale library/scenes/co_monaco.jpg
+upscale library/scenes/dw_lamps.jpg
+upscale library/scenes/dw_sat.jpg
+upscale library/scenes/dw_phone.jpg
+upscale library/scenes/dw_desk.jpg
+upscale library/characters/c_croissant.png
+upscale library/characters/c_crab.png
+upscale library/characters/c_diya.png
+{'depth': [{'src': 'library/scenes/fr_guiana.jpg', 'secs': 2.0}, {'src': 'library/scenes/fr_kourou.jpg', 'secs': 1.9}, {'src': 'library/scenes/fr_border.jpg', 'secs': 2.0}, {'src': 'library/scenes/co_neum.jpg', 'secs': 1.9}, {'src': 'library/scenes/co_aqaba.jpg', 'secs': 2.0}, {'src': 'library/scenes/co_congo.jpg', 'secs': 1.9}, {'src': 'library/scenes/co_monaco.jpg', 'secs': 2.0}, {'src': 'library/scenes/dw_lamps.jpg', 'secs': 2.0}, {'src': 'library/scenes/dw_sat.jpg', 'secs': 1.9}, {'src': 'library/scenes/dw_phone.jpg', 'secs': 2.0}, {'src': 'library/scenes/dw_desk.jpg', 'secs': 2.0}], 'upscale': [{'src': 'library/scenes/fr_guiana.jpg', 'secs': 108.1}, {'src': 'library/scenes/fr_kourou.jpg', 'secs': 106.4}, {'src': 'library/scenes/fr_border.jpg', 'secs': 106.6}, {'src': 'library/scenes/co_neum.jpg', 'secs': 105.4}, {'src': 'library/scenes/co_aqaba.jpg', 'secs': 104.1}, {'src': 'library/scenes/co_congo.jpg', 'secs': 106.4}, {'src': 'library/scenes/co_monaco.jpg', 'secs': 105.5}, {'src': 'library/scenes/dw_lamps.jpg', 'secs': 107.0}, {'src': 'library/scenes/dw_sat.jpg', 'secs': 104.0}, {'src': 'library/scenes/dw_phone.jpg', 'secs': 103.7}, {'src': 'library/scenes/dw_desk.jpg', 'secs': 105.6}, {'src': 'library/characters/c_croissant.png', 'secs': 126.1}, {'src': 'library/characters/c_crab.png', 'secs': 132.2}, {'src': 'library/characters/c_diya.png', 'secs': 130.7}]}
