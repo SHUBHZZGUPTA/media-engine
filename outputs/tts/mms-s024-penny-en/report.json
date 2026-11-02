@@ -3,13 +3,11 @@
  "items": [
   {
    "name": "narration_en",
-   "ok": false,
-   "attempts": [
-    {
-     "model": "gemini-3.1-flash-tts-preview",
-     "error": "TimeoutError('The read operation timed out')"
-    }
-   ]
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 68.0,
+   "took": 22.4
   }
  ]
 }
