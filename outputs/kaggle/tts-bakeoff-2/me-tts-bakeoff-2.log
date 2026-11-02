@@ -1,0 +1,93 @@
+[{"stream_name":"stdout","time":1.286157751,"data":"$ pip install -q soundfile edge-tts\n"}
+,{"stream_name":"stdout","time":6.505606474,"data":" \n"}
+,{"stream_name":"stdout","time":11.253965524,"data":"OK edge-tts (5s)\n"}
+,{"stream_name":"stdout","time":11.253996577,"data":"$ apt-get -qq install -y espeak-ng \u003e /dev/null 2\u003e\u00261 || true\n"}
+,{"stream_name":"stdout","time":24.250671525,"data":" \n"}
+,{"stream_name":"stdout","time":24.250700184,"data":"$ pip install -q uv\n"}
+,{"stream_name":"stdout","time":26.049947668,"data":" \n"}
+,{"stream_name":"stdout","time":26.049975791,"data":"$ uv venv -q -p 3.12 /tmp/py312\n"}
+,{"stream_name":"stdout","time":26.62846663,"data":" \n"}
+,{"stream_name":"stdout","time":26.628491551,"data":"$ uv pip install -q --python /tmp/py312/bin/python soundfile numpy 'kokoro\u003e=0.9.4' 'misaki[en]' chatterbox-tts\n"}
+,{"stream_name":"stdout","time":152.796781951,"data":" \n"}
+,{"stream_name":"stdout","time":152.796833967,"data":"OK py3.12 venv (129s)\n"}
+,{"stream_name":"stdout","time":152.797190757,"data":"$ /tmp/py312/bin/python /tmp/sub.py\n"}
+,{"stream_name":"stdout","time":181.63252665,"data":"WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.\n"}
+,{"stream_name":"stdout","time":181.632558437,"data":"\u001b[38;5;2m✔ Download and installation successful\u001b[0m\n"}
+,{"stream_name":"stdout","time":181.632565837,"data":"You can now load the package via spacy.load('en_core_web_sm')\n"}
+,{"stream_name":"stdout","time":181.632571295,"data":" opout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\n"}
+,{"stream_name":"stdout","time":181.632576308,"data":"  warnings.warn(\n"}
+,{"stream_name":"stdout","time":181.632581124,"data":"/tmp/py312/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.\n"}
+,{"stream_name":"stdout","time":181.632588566,"data":"  WeightNorm.apply(module, name, dim)\n"}
+,{"stream_name":"stdout","time":181.632593208,"data":"Using Python 3.13.15 environment at: /usr\n"}
+,{"stream_name":"stdout","time":181.632598036,"data":"Resolved 1 package in 448ms\n"}
+,{"stream_name":"stdout","time":181.632602864,"data":"Checked 1 package in 1ms\n"}
+,{"stream_name":"stdout","time":181.632607886,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":181.632613205,"data":"  File \"/tmp/sub.py\", line 11, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":181.632618913,"data":"    pa = KPipeline(lang_code='a'); pb = KPipeline(lang_code='b')\n"}
+,{"stream_name":"stdout","time":181.632624113,"data":"         ^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":181.632629588,"data":"  File \"/tmp/py312/lib/python3.12/site-packages/kokoro/pipeline.py\", line 113, in __init__\n"}
+,{"stream_name":"stdout","time":181.632634752,"data":"    self.g2p = en.G2P(trf=trf, british=lang_code=='b', fallback=fallback, unk='')\n"}
+,{"stream_name":"stdout","time":181.632640936,"data":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":181.632661729,"data":"  File \"/tmp/py312/lib/python3.12/site-packages/misaki/en.py\", line 503, in __init__\n"}
+,{"stream_name":"stdout","time":181.632668536,"data":"    self.nlp = spacy.load(name, enable=components)\n"}
+,{"stream_name":"stdout","time":181.632674556,"data":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":181.632679776,"data":"  File \"/tmp/py312/lib/python3.12/site-packages/spacy/__init__.py\", line 74, in load\n"}
+,{"stream_name":"stdout","time":181.632700849,"data":"    return util.load_model(\n"}
+,{"stream_name":"stdout","time":181.632705524,"data":"           ^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":181.63271004,"data":"  File \"/tmp/py312/lib/python3.12/site-packages/spacy/util.py\", line 531, in load_model\n"}
+,{"stream_name":"stdout","time":181.632714111,"data":"    raise IOError(Errors.E050.format(name=name))\n"}
+,{"stream_name":"stdout","time":181.632718602,"data":"OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.\n"}
+,{"stream_name":"stdout","time":181.632722864,"data":"\n"}
+,{"stream_name":"stdout","time":181.634632825,"data":"FAIL kokoro\n"}
+,{"stream_name":"stdout","time":181.634675312,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":181.634680171,"data":"  File \"/kaggle/src/script.py\", line 25, in engine\n"}
+,{"stream_name":"stdout","time":181.63468453,"data":"    try: fn(); say(f\"OK {name} ({time.time() - t:.0f}s)\")\n"}
+,{"stream_name":"stdout","time":181.634688635,"data":"         ~~^^\n"}
+,{"stream_name":"stdout","time":181.634692259,"data":"  File \"/kaggle/src/script.py\", line 82, in \u003clambda\u003e\n"}
+,{"stream_name":"stdout","time":181.634696681,"data":"    engine(\"kokoro\", lambda: sub(KOKORO))\n"}
+,{"stream_name":"stdout","time":181.634700934,"data":"                             ~~~^^^^^^^^\n"}
+,{"stream_name":"stdout","time":181.634705167,"data":"  File \"/kaggle/src/script.py\", line 57, in sub\n"}
+,{"stream_name":"stdout","time":181.634709117,"data":"    if sh(f\"{VENV}/bin/python {path}\") != 0: raise RuntimeError(\"sub-process failed (see log)\")\n"}
+,{"stream_name":"stdout","time":181.634713536,"data":"                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":181.634717793,"data":"RuntimeError: sub-process failed (see log)\n"}
+,{"stream_name":"stdout","time":181.634721481,"data":"\n"}
+,{"stream_name":"stdout","time":181.634954229,"data":"$ /tmp/py312/bin/python /tmp/sub.py\n"}
+,{"stream_name":"stdout","time":234.820478163,"data":" Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":234.820516702,"data":"/tmp/py312/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.\n"}
+,{"stream_name":"stdout","time":234.820524566,"data":"  deprecate(\"LoRACompatibleLinear\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stdout","time":234.820530099,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":234.820535087,"data":"  File \"/tmp/sub.py\", line 13, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":234.820540693,"data":"    m = ChatterboxTTS.from_pretrained(device=dev)\n"}
+,{"stream_name":"stdout","time":234.820545838,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":234.820551073,"data":"  File \"/tmp/py312/lib/python3.12/site-packages/chatterbox/tts.py\", line 180, in from_pretrained\n"}
+,{"stream_name":"stdout","time":234.820556271,"data":"    return cls.from_local(Path(local_path).parent, device)\n"}
+,{"stream_name":"stdout","time":234.820561091,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":234.820566115,"data":"  File \"/tmp/py312/lib/python3.12/site-packages/chatterbox/tts.py\", line 165, in from_local\n"}
+,{"stream_name":"stdout","time":234.820585503,"data":"    return cls(t3, s3gen, ve, tokenizer, device, conds=conds)\n"}
+,{"stream_name":"stdout","time":234.820589828,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":234.820593632,"data":"  File \"/tmp/py312/lib/python3.12/site-packages/chatterbox/tts.py\", line 126, in __init__\n"}
+,{"stream_name":"stdout","time":234.820597741,"data":"    self.watermarker = perth.PerthImplicitWatermarker()\n"}
+,{"stream_name":"stdout","time":234.82060163,"data":"                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":234.820605494,"data":"TypeError: 'NoneType' object is not callable\n"}
+,{"stream_name":"stdout","time":234.820609139,"data":"\n"}
+,{"stream_name":"stdout","time":234.821540869,"data":"FAIL chatterbox\n"}
+,{"stream_name":"stdout","time":234.821559226,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":234.821563896,"data":"  File \"/kaggle/src/script.py\", line 25, in engine\n"}
+,{"stream_name":"stdout","time":234.821568378,"data":"    try: fn(); say(f\"OK {name} ({time.time() - t:.0f}s)\")\n"}
+,{"stream_name":"stdout","time":234.821585779,"data":"         ~~^^\n"}
+,{"stream_name":"stdout","time":234.821589811,"data":"  File \"/kaggle/src/script.py\", line 83, in \u003clambda\u003e\n"}
+,{"stream_name":"stdout","time":234.821594049,"data":"    engine(\"chatterbox\", lambda: sub(CHATTER))\n"}
+,{"stream_name":"stdout","time":234.821598635,"data":"                                 ~~~^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":234.82160275,"data":"  File \"/kaggle/src/script.py\", line 57, in sub\n"}
+,{"stream_name":"stdout","time":234.821607179,"data":"    if sh(f\"{VENV}/bin/python {path}\") != 0: raise RuntimeError(\"sub-process failed (see log)\")\n"}
+,{"stream_name":"stdout","time":234.821611768,"data":"                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":234.821615724,"data":"RuntimeError: sub-process failed (see log)\n"}
+,{"stream_name":"stdout","time":234.821619369,"data":"\n"}
+,{"stream_name":"stdout","time":234.821622932,"data":"DONE\n"}
+,{"stream_name":"stderr","time":237.328551713,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":237.328607426,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":237.657656531,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":237.657685644,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":238.760046073,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":239.984435308,"data":"[NbConvertApp] Writing 302752 bytes to __results__.html\n"}
+]

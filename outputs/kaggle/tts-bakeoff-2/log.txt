@@ -1,0 +1,86 @@
+$ pip install -q soundfile edge-tts
+ 
+OK edge-tts (5s)
+$ apt-get -qq install -y espeak-ng > /dev/null 2>&1 || true
+ 
+$ pip install -q uv
+ 
+$ uv venv -q -p 3.12 /tmp/py312
+ 
+$ uv pip install -q --python /tmp/py312/bin/python soundfile numpy 'kokoro>=0.9.4' 'misaki[en]' chatterbox-tts
+ 
+OK py3.12 venv (129s)
+$ /tmp/py312/bin/python /tmp/sub.py
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+ opout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+/tmp/py312/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Using Python 3.13.15 environment at: /usr
+Resolved 1 package in 448ms
+Checked 1 package in 1ms
+Traceback (most recent call last):
+  File "/tmp/sub.py", line 11, in <module>
+    pa = KPipeline(lang_code='a'); pb = KPipeline(lang_code='b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/py312/lib/python3.12/site-packages/kokoro/pipeline.py", line 113, in __init__
+    self.g2p = en.G2P(trf=trf, british=lang_code=='b', fallback=fallback, unk='')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/py312/lib/python3.12/site-packages/misaki/en.py", line 503, in __init__
+    self.nlp = spacy.load(name, enable=components)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/py312/lib/python3.12/site-packages/spacy/__init__.py", line 74, in load
+    return util.load_model(
+           ^^^^^^^^^^^^^^^^
+  File "/tmp/py312/lib/python3.12/site-packages/spacy/util.py", line 531, in load_model
+    raise IOError(Errors.E050.format(name=name))
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+
+FAIL kokoro
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 25, in engine
+    try: fn(); say(f"OK {name} ({time.time() - t:.0f}s)")
+         ~~^^
+  File "/kaggle/src/script.py", line 82, in <lambda>
+    engine("kokoro", lambda: sub(KOKORO))
+                             ~~~^^^^^^^^
+  File "/kaggle/src/script.py", line 57, in sub
+    if sh(f"{VENV}/bin/python {path}") != 0: raise RuntimeError("sub-process failed (see log)")
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: sub-process failed (see log)
+
+$ /tmp/py312/bin/python /tmp/sub.py
+ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/tmp/py312/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Traceback (most recent call last):
+  File "/tmp/sub.py", line 13, in <module>
+    m = ChatterboxTTS.from_pretrained(device=dev)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/py312/lib/python3.12/site-packages/chatterbox/tts.py", line 180, in from_pretrained
+    return cls.from_local(Path(local_path).parent, device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/py312/lib/python3.12/site-packages/chatterbox/tts.py", line 165, in from_local
+    return cls(t3, s3gen, ve, tokenizer, device, conds=conds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/py312/lib/python3.12/site-packages/chatterbox/tts.py", line 126, in __init__
+    self.watermarker = perth.PerthImplicitWatermarker()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not callable
+
+FAIL chatterbox
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 25, in engine
+    try: fn(); say(f"OK {name} ({time.time() - t:.0f}s)")
+         ~~^^
+  File "/kaggle/src/script.py", line 83, in <lambda>
+    engine("chatterbox", lambda: sub(CHATTER))
+                                 ~~~^^^^^^^^^
+  File "/kaggle/src/script.py", line 57, in sub
+    if sh(f"{VENV}/bin/python {path}") != 0: raise RuntimeError("sub-process failed (see log)")
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: sub-process failed (see log)
+
+DONE

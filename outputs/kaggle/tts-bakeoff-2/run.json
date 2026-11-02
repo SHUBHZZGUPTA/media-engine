@@ -1,0 +1,29 @@
+{
+ "job": "tts-bakeoff-2",
+ "kernel": "shubhzzgupta07/me-tts-bakeoff-2",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-tts-bakeoff-2",
+ "gpu_quota_before": {
+  "used_h": 4.71,
+  "remaining_h": 25.29,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-02T13:38:56+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-02T13:43:28+00:00",
+ "files": [
+  "edge_AndrewMultilingualNeural.mp3",
+  "edge_BrianMultilingualNeural.mp3",
+  "edge_ChristopherNeural.mp3",
+  "edge_RyanNeural.mp3",
+  "hindi_edge_Madhur.mp3",
+  "log.txt",
+  "me-tts-bakeoff-2.log"
+ ],
+ "gpu_quota_after": {
+  "used_h": 4.78,
+  "remaining_h": 25.22,
+  "total_h": 30.0
+ }
+}
