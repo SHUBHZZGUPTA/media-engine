@@ -1,0 +1,66 @@
+{
+ "id": "mms-s026-trial-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Free for thirty days. Just enter your card. But why would they need your card for something free?"
+    ],
+    [
+     "Narrator",
+     "Because the business isn't the trial. It's the day you forget."
+    ],
+    [
+     "Narrator",
+     "The trial ends, the card is charged, and it renews automatically, every month."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Cancel anytime, darling. If you can find the button."
+    ],
+    [
+     "Narrator",
+     "The F T C accused Amazon of signing people up for Prime without clear consent, and making it hard to cancel."
+    ],
+    [
+     "Narrator",
+     "Inside Amazon, the cancel process had a nickname: \"Iliad\" — after the famously long Greek epic."
+    ],
+    [
+     "Narrator",
+     "Amazon denied wrongdoing, but in twenty twenty-five it paid two point five billion dollars to settle, one point five billion of it in refunds."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the trial is free. Forgetting is what you pay for."
+    ],
+    [
+     "Narrator",
+     "The fix: set a reminder the day you sign up, and check your statement for charges you don't recognise."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky, high-pitched] Wait, what am I still paying for?"
+    ],
+    [
+     "Narrator",
+     "Comment: which subscription did you forget to cancel?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
