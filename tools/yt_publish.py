@@ -3,7 +3,7 @@
 Usage: python3 tools/yt_publish.py <queue dir containing publish.json> <out json>
 publish.json: {"id", "file", "token_secret": "YT_RT_BHUGOL_EN", "title", "description", "tags": [...], "categoryId": "27",
                "privacy": "public"|"unlisted"|"private", "publishAt": "2026-10-25T12:30:00Z" | null,
-               "containsSyntheticMedia": false, "madeForKids": false, "language": "en", "thumbnail": "thumbnail.jpg" (optional)}
+               "containsSyntheticMedia": false, "madeForKids": false (or null = don't set the audience), "language": "en", "thumbnail": "thumbnail.jpg" (optional)}
 With publishAt the video is uploaded private and YouTube publishes it at that time.
 Upload pattern adapted from darkzOGx/youtube-automation-agent (MIT).
 """
@@ -20,7 +20,8 @@ creds = Credentials(None, refresh_token=os.environ[P["token_secret"]], token_uri
 creds.refresh(Request())
 yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
 me = yt.channels().list(part="snippet", mine=True).execute()["items"][0]
-status = {"selfDeclaredMadeForKids": bool(P.get("madeForKids", False)), "containsSyntheticMedia": bool(P.get("containsSyntheticMedia", False))}
+status = {"containsSyntheticMedia": bool(P.get("containsSyntheticMedia", False))}
+if P.get("madeForKids", False) is not None: status["selfDeclaredMadeForKids"] = bool(P.get("madeForKids", False))   # "madeForKids": null = leave the audience untouched (Money Mirage, Shubham 2 Nov 2026)
 if P.get("publishAt"): status.update(privacyStatus="private", publishAt=P["publishAt"])
 else: status["privacyStatus"] = P.get("privacy", "public")
 body = {"snippet": {"title": P["title"], "description": P["description"], "tags": P.get("tags", []), "categoryId": str(P.get("categoryId", "27")),
