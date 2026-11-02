@@ -8,7 +8,8 @@
  "stage": {
   "repo_paths": [
    "bench/voice/ref_sadaltager.wav",
-   "bench/voice/ch5.txt"
+   "bench/voice/ch5.txt",
+   "gpu/voice_worker.py"
   ],
   "dataset_slug": "me-voice-test-bc-data",
   "title": "me voice test bc data"
@@ -22,5 +23,5 @@
   ],
   "kokoro_speed": 0.95
  },
- "requested": "2026-11-03T03:25+05:30 narrator test: Chatterbox clone of our Sadaltager (C) vs Kokoro licensed presets (B), chapter 5 text"
+ "requested": "2026-11-03T03:25+05:30 narrator test: Chatterbox clone of our Sadaltager (C) vs Kokoro licensed presets (B), chapter 5 text | retry: py3.12 venvs via uv (Kaggle image is py3.13)"
 }
