@@ -3,7 +3,33 @@
   "ref_pitch_st": 5.91
  },
  {
-  "name": "chatterbox",
-  "error": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 25, in <module>\n    t = time.time(); cb = ChatterboxTTS.from_pretrained(device=\"cuda\"); RES.append({\"chatterbox_load_s\": round(time.time() - t)}); save()\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 180, in from_pretrained\n    return cls.from_local(Path(local_path).parent, device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 165, in from_local\n    return cls(t3, s3gen, ve, tokenizer, device, conds=conds)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 126, in __init__\n    self.watermarker = perth.PerthImplicitWatermarker()\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not callable\n"
+  "chatterbox_load_s": 36
+ },
+ {
+  "name": "C1_clone_balanced",
+  "note": "exaggeration 0.5, cfg 0.5",
+  "secs": 116.9,
+  "audio_s": 120.4,
+  "rtf": 0.97,
+  "pitch_st_median": 7.22,
+  "pitch_spread_st": 11.91
+ },
+ {
+  "name": "C2_clone_expressive",
+  "note": "exaggeration 0.65, cfg 0.35",
+  "secs": 120.0,
+  "audio_s": 124.4,
+  "rtf": 0.96,
+  "pitch_st_median": 10.01,
+  "pitch_spread_st": 10.92
+ },
+ {
+  "name": "C3_clone_steady",
+  "note": "exaggeration 0.35, cfg 0.6",
+  "secs": 119.8,
+  "audio_s": 121.1,
+  "rtf": 0.99,
+  "pitch_st_median": 2.48,
+  "pitch_spread_st": 15.03
  }
 ]

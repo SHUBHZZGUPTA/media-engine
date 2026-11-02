@@ -13,23 +13,23 @@
   "uv": 0,
   "pip_C": {
    "rc": 0,
-   "s": 148,
-   "tail": "2.6.0+cu124 True\n"
+   "s": 62,
+   "tail": "2.6.0+cu124 True\n/tmp/vC/lib/python3.12/site-packages/perth/perth_net/__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\n  from pkg_resources import resource_filename\n"
   },
   "run_C": {
    "rc": 0,
-   "s": 79,
-   "tail": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n/tmp/vC/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.\n  deprecate(\"LoRACompatibleLinear\", \"1.0.0\", deprecation_message)\n"
+   "s": 456,
+   "tail": "8it/s]\nSampling:  14%|\u2588\u258d        | 145/1000 [00:03<00:22, 38.81it/s]\nSampling:  15%|\u2588\u258d        | 149/1000 [00:03<00:21, 38.81it/s]\nSampling:  15%|\u2588\u258c        | 150/1000 [00:03<00:21, 38.82it/s]\n\nSampling:   0%|          | 0/1000 [00:00<?, ?it/s]\nSampling:   0%|          | 3/1000 [00:00<00:36, 27.43it/s]\nSampling:   1%|          | 7/1000 [00:00<00:29, 33.86it/s]\nSampling:   1%|          | 11/1000 [00:00<00:27, 36.50it/s]\nSampling:   2%|\u258f         | 15/1000 [00:00<00:26, 37.66it/s]\nSampling:   2%|\u258f         | 19/1000 [00:00<00:25, 38.26it/s]\nSampling:   2%|\u258f         | 23/1000 [00:00<00:25, 38.59it/s]\nSampling:   3%|\u258e         | 27/1000 [00:00<00:25, 38.78it/s]\nSampling:   3%|\u258e         | 31/1000 [00:00<00:25, 38.74it/s]\nSampling:   4%|\u258e         | 35/1000 [00:00<00:24, 38.61it/s]\nSampling:   4%|\u258d         | 39/1000 [00:01<00:24, 38.78it/s]\nSampling:   4%|\u258d         | 43/1000 [00:01<00:24, 38.93it/s]\nSampling:   5%|\u258d         | 47/1000 [00:01<00:24, 39.07it/s]\nSampling:   5%|\u258c         | 51/1000 [00:01<00:24, 38.51it/s]\nSampling:   6%|\u258c         | 55/1000 [00:01<00:24, 38.77it/s]\nSampling:   6%|\u258c         | 59/1000 [00:01<00:25, 36.36it/s]\nSampling:   6%|\u258c         | 59/1000 [00:01<00:25, 37.58it/s]\n"
   },
   "pip_B": {
    "rc": 0,
-   "s": 368,
-   "tail": "2.15.0+cu132 True\n"
+   "s": 58,
+   "tail": "2.15.0+cu132 True\n/tmp/vB/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.\n  warnings.warn(\n"
   },
   "run_B": {
    "rc": 0,
-   "s": 38,
-   "tail": "WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.\n\u001b[38;5;2m\u2714 Download and installation successful\u001b[0m\nYou can now load the package via spacy.load('en_core_web_sm')\n/tmp/vB/lib/python3.12/site-packages/torch/nn/modules/rnn.py:1012: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\n  super().__init__(\"LSTM\", *args, **kwargs)\n/tmp/vB/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.\n  WeightNorm.apply(module, name, dim)\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\nUsing Python 3.13.16 environment at: /usr\nResolved 1 package in 467ms\nChecked 1 package in 1ms\n"
+   "s": 70,
+   "tail": ", 'rtf': 0.04, 'pitch_st_median': 1.21, 'pitch_spread_st': 2.77}\n{'name': 'B_kokoro_bm_george', 'note': 'Kokoro-82M preset', 'secs': 4.6, 'audio_s': 122.2, 'rtf': 0.04, 'pitch_st_median': 4.81, 'pitch_spread_st': 2.42}\n{'name': 'B_kokoro_bm_lewis', 'note': 'Kokoro-82M preset', 'secs': 4.6, 'audio_s': 121.8, 'rtf': 0.04, 'pitch_st_median': -4.59, 'pitch_spread_st': 7.81}\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n/tmp/vB/lib/python3.12/site-packages/torch/nn/modules/rnn.py:1012: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\n  super().__init__(\"LSTM\", *args, **kwargs)\n/tmp/vB/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.\n  WeightNorm.apply(module, name, dim)\n/tmp/vB/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.\n  warnings.warn(\n"
   }
  },
  "variants": [
@@ -37,15 +37,73 @@
    "ref_pitch_st": 5.91
   },
   {
-   "name": "chatterbox",
-   "error": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 25, in <module>\n    t = time.time(); cb = ChatterboxTTS.from_pretrained(device=\"cuda\"); RES.append({\"chatterbox_load_s\": round(time.time() - t)}); save()\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 180, in from_pretrained\n    return cls.from_local(Path(local_path).parent, device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 165, in from_local\n    return cls(t3, s3gen, ve, tokenizer, device, conds=conds)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 126, in __init__\n    self.watermarker = perth.PerthImplicitWatermarker()\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not callable\n"
+   "chatterbox_load_s": 36
+  },
+  {
+   "name": "C1_clone_balanced",
+   "note": "exaggeration 0.5, cfg 0.5",
+   "secs": 116.9,
+   "audio_s": 120.4,
+   "rtf": 0.97,
+   "pitch_st_median": 7.22,
+   "pitch_spread_st": 11.91
+  },
+  {
+   "name": "C2_clone_expressive",
+   "note": "exaggeration 0.65, cfg 0.35",
+   "secs": 120.0,
+   "audio_s": 124.4,
+   "rtf": 0.96,
+   "pitch_st_median": 10.01,
+   "pitch_spread_st": 10.92
+  },
+  {
+   "name": "C3_clone_steady",
+   "note": "exaggeration 0.35, cfg 0.6",
+   "secs": 119.8,
+   "audio_s": 121.1,
+   "rtf": 0.99,
+   "pitch_st_median": 2.48,
+   "pitch_spread_st": 15.03
   },
   {
    "ref_pitch_st": 5.91
   },
   {
-   "name": "kokoro",
-   "error": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 40, in <module>\n    pipes = {\"a\": KPipeline(lang_code=\"a\"), \"b\": KPipeline(lang_code=\"b\")}\n                  ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/kokoro/pipeline.py\", line 113, in __init__\n    self.g2p = en.G2P(trf=trf, british=lang_code=='b', fallback=fallback, unk='')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/misaki/en.py\", line 503, in __init__\n    self.nlp = spacy.load(name, enable=components)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/spacy/__init__.py\", line 74, in load\n    return util.load_model(\n           ^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/spacy/util.py\", line 531, in load_model\n    raise IOError(Errors.E050.format(name=name))\nOSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.\n"
+   "name": "B_kokoro_am_onyx",
+   "note": "Kokoro-82M preset",
+   "secs": 5.8,
+   "audio_s": 109.1,
+   "rtf": 0.05,
+   "pitch_st_median": -4.29,
+   "pitch_spread_st": 2.3
+  },
+  {
+   "name": "B_kokoro_am_michael",
+   "note": "Kokoro-82M preset",
+   "secs": 4.5,
+   "audio_s": 120.6,
+   "rtf": 0.04,
+   "pitch_st_median": 1.21,
+   "pitch_spread_st": 2.77
+  },
+  {
+   "name": "B_kokoro_bm_george",
+   "note": "Kokoro-82M preset",
+   "secs": 4.6,
+   "audio_s": 122.2,
+   "rtf": 0.04,
+   "pitch_st_median": 4.81,
+   "pitch_spread_st": 2.42
+  },
+  {
+   "name": "B_kokoro_bm_lewis",
+   "note": "Kokoro-82M preset",
+   "secs": 4.6,
+   "audio_s": 121.8,
+   "rtf": 0.04,
+   "pitch_st_median": -4.59,
+   "pitch_spread_st": 7.81
   }
  ],
  "inputs": [
@@ -54,5 +112,5 @@
   "voice_worker.py"
  ],
  "sentences": 29,
- "total_s": 652
+ "total_s": 670
 }
