@@ -1,0 +1,89 @@
+{
+ "job": "voice-qc-bc",
+ "kernel": "shubhzzgupta07/me-voice-qc-bc",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-voice-qc-bc",
+ "gpu_quota_before": {
+  "used_h": 5.27,
+  "remaining_h": 24.73,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/me-voice-qc-bc-data",
+ "staged_files": [
+  "A_gemini_original.wav",
+  "B_kokoro_am_michael.wav",
+  "B_kokoro_am_onyx.wav",
+  "B_kokoro_bm_george.wav",
+  "B_kokoro_bm_lewis.wav",
+  "C1_clone_balanced.wav",
+  "C2_clone_expressive.wav",
+  "C3_clone_steady.wav",
+  "ch5.txt"
+ ],
+ "stage_diag": {
+  "bundled": [
+   {
+    "file": "A_gemini_original.wav",
+    "mb": 4.2
+   },
+   {
+    "file": "B_kokoro_am_michael.wav",
+    "mb": 5.8
+   },
+   {
+    "file": "B_kokoro_am_onyx.wav",
+    "mb": 5.2
+   },
+   {
+    "file": "B_kokoro_bm_george.wav",
+    "mb": 5.9
+   },
+   {
+    "file": "B_kokoro_bm_lewis.wav",
+    "mb": 5.8
+   },
+   {
+    "file": "C1_clone_balanced.wav",
+    "mb": 5.8
+   },
+   {
+    "file": "C2_clone_expressive.wav",
+    "mb": 6.0
+   },
+   {
+    "file": "C3_clone_steady.wav",
+    "mb": 5.8
+   },
+   {
+    "file": "ch5.txt",
+    "mb": 0.0
+   }
+  ],
+  "version_before": 0,
+  "create": [
+   {
+    "license": "other",
+    "existed": false,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "lookup failed: HTTPError: 403 Client Error: Forbidden for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus",
+   "ready (version 1)"
+  ],
+  "version_ready": 1
+ },
+ "pushed_at": "2026-11-02T22:44:27+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "ERROR",
+ "checked_at": "2026-11-02T22:45:28+00:00",
+ "files": [
+  "me-voice-qc-bc.log"
+ ],
+ "gpu_quota_after": {
+  "used_h": 5.28,
+  "remaining_h": 24.72,
+  "total_h": 30.0
+ }
+}
