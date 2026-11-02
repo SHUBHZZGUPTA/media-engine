@@ -1,0 +1,74 @@
+{
+ "id": "mms-s025-task-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "A stranger texts you: get paid just for liking videos. And the first payment is real."
+    ],
+    [
+     "Narrator",
+     "The US regulator, the F T C, calls this a task scam."
+    ],
+    [
+     "Narrator",
+     "You like videos or rate products, in sets of forty, and an app shows your earnings climbing."
+    ],
+    [
+     "Narrator",
+     "You withdraw a few dollars. It works."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] See? Easy money. Now, just a tiny deposit."
+    ],
+    [
+     "Narrator",
+     "Then a \"double task\" appears. To unlock it, you must deposit your own money, usually in crypto."
+    ],
+    [
+     "Narrator",
+     "Each level asks for more. The balance on screen keeps growing, but it was never real."
+    ],
+    [
+     "Narrator",
+     "Reports jumped from about five thousand in all of twenty twenty-three to about twenty thousand in just the first half of twenty twenty-four."
+    ],
+    [
+     "Narrator",
+     "The Better Business Bureau says the typical task-scam victim lost about two thousand three hundred dollars in twenty twenty-five."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the first few dollars are bait for your deposit."
+    ],
+    [
+     "Narrator",
+     "The F T C's rule is simple: never pay to get paid."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky, high-pitched] So the job was paying me with my own money?"
+    ],
+    [
+     "Narrator",
+     "Comment: have you ever got a text like this?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
