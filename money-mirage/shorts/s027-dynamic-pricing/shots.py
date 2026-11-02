@@ -24,6 +24,7 @@ beat('circle', A(0, 2, .1), shot='s00', c=c('tags', [.5, .6]), r=[300, 140], unt
 shot('s01', SHP, 'film', A(1, 0, -.15), cut='whip', cam0=PORT(.5, .45, 1.1), cam1=PORT(.55, .45, 1.3))
 shot('s02', EGG, 'film', A(1, 2, -.1), cut='zoom', cam0=PORT(.5, .55, 1.25), cam1=PORT(.5, .6, 1.5))
 beat('count', Wd(1, 13, -.05), to=3.99, dec=2, prefix='$', **NUM, until=Wd(1, 18, -.1))
+beat('punch', A(1, 3, .1), shot='s02', level=1.3)
 beat('slam', Wd(1, 18, -.03), to=4.79, dec=2, prefix='$', **NUM, until=A(2, 0, -.2))
 # 3 3 in 4 items
 shot('s03', SHP, 'film', A(2, 0, -.15), cut='zoomIn', cam0=PORT(.55, .45, 1.25), cam1=PORT(.55, .45, 1.5))
@@ -33,6 +34,7 @@ shot('s04', EGG, 'soft', A(3, 0, -.35), cam0=PORT(.5, .5, 1.12), cam1={'z': 1.18
 beat('moment', A(3, 0, -.3), what='char', shot='s04', who='c_goldie', side='M', lines=[3], shrink=A(3, 1, .2), leave=A(4, 0, -.25))
 # 5 dynamic pricing (OPEN LOOP 1: who's looking)
 shot('s05', TAG, 'film', A(4, 0, -.15), cut='whip', cam0=PORT(.5, .4, 1.1), cam1=PORT(.5, .4, 1.35))
+beat('punch', A(4, 1, .2), shot='s05', level=1.2)
 beat('punch', A(4, 3, .1), shot='s05', level=1.35)
 beat('shake', A(4, 3, .3), k=.4)
 # 6 airlines: Delta 3% -> 20%
