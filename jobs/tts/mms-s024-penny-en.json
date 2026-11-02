@@ -1,0 +1,74 @@
+{
+ "id": "mms-s024-penny-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Every penny in your change cost America almost four cents to make. So why keep making it?"
+    ],
+    [
+     "Narrator",
+     "In twenty twenty-four, the Mint spent about three point seven cents on each one-cent coin. A loss on every single one."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Losing money to make money. Bold."
+    ],
+    [
+     "Narrator",
+     "So why didn't they stop sooner?"
+    ],
+    [
+     "Narrator",
+     "Pennies go back to seventeen ninety-three. Habit, tradition, and partly a fear that shops would round prices up."
+    ],
+    [
+     "Narrator",
+     "Then the Treasury placed its final order for penny blanks."
+    ],
+    [
+     "Narrator",
+     "The last one was struck in Philadelphia in November twenty twenty-five."
+    ],
+    [
+     "Narrator",
+     "And here's the coin that's even worse."
+    ],
+    [
+     "Narrator",
+     "The nickel also costs more than five cents to make. And it's still being made."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: a coin's value is printed on it, not built into it."
+    ],
+    [
+     "Narrator",
+     "Over a hundred and fourteen billion pennies are still out there, still legal tender."
+    ],
+    [
+     "Chars",
+     "[delighted, squeaky banknote, surprised to be winning] Finally, a coin with a worse job than me!"
+    ],
+    [
+     "Narrator",
+     "Comment: do you still use pennies?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
