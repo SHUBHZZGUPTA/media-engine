@@ -1,0 +1,9 @@
+[
+ {
+  "ref_pitch_st": 5.91
+ },
+ {
+  "name": "chatterbox",
+  "error": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 25, in <module>\n    t = time.time(); cb = ChatterboxTTS.from_pretrained(device=\"cuda\"); RES.append({\"chatterbox_load_s\": round(time.time() - t)}); save()\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 180, in from_pretrained\n    return cls.from_local(Path(local_path).parent, device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 165, in from_local\n    return cls(t3, s3gen, ve, tokenizer, device, conds=conds)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 126, in __init__\n    self.watermarker = perth.PerthImplicitWatermarker()\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not callable\n"
+ }
+]

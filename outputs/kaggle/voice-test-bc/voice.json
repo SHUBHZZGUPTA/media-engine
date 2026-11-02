@@ -13,33 +13,39 @@
   "uv": 0,
   "pip_C": {
    "rc": 0,
-   "s": 89,
-   "tail": ""
+   "s": 148,
+   "tail": "2.6.0+cu124 True\n"
   },
   "run_C": {
-   "rc": 1,
-   "s": 0,
-   "tail": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 3, in <module>\n    import numpy as np, soundfile as sf, librosa, torch\nModuleNotFoundError: No module named 'numpy'\n"
+   "rc": 0,
+   "s": 79,
+   "tail": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n/tmp/vC/lib/python3.12/site-packages/diffusers/models/lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.\n  deprecate(\"LoRACompatibleLinear\", \"1.0.0\", deprecation_message)\n"
   },
   "pip_B": {
    "rc": 0,
-   "s": 2,
-   "tail": ""
+   "s": 368,
+   "tail": "2.15.0+cu132 True\n"
   },
   "run_B": {
-   "rc": 1,
-   "s": 0,
-   "tail": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 3, in <module>\n    import numpy as np, soundfile as sf, librosa, torch\nModuleNotFoundError: No module named 'numpy'\n"
+   "rc": 0,
+   "s": 38,
+   "tail": "WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.\n\u001b[38;5;2m\u2714 Download and installation successful\u001b[0m\nYou can now load the package via spacy.load('en_core_web_sm')\n/tmp/vB/lib/python3.12/site-packages/torch/nn/modules/rnn.py:1012: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1\n  super().__init__(\"LSTM\", *args, **kwargs)\n/tmp/vB/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.\n  WeightNorm.apply(module, name, dim)\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\nUsing Python 3.13.16 environment at: /usr\nResolved 1 package in 467ms\nChecked 1 package in 1ms\n"
   }
  },
  "variants": [
   {
-   "engine": "C",
-   "error": "[Errno 2] No such file or directory: '/kaggle/working/variants_C.json'"
+   "ref_pitch_st": 5.91
   },
   {
-   "engine": "B",
-   "error": "[Errno 2] No such file or directory: '/kaggle/working/variants_B.json'"
+   "name": "chatterbox",
+   "error": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 25, in <module>\n    t = time.time(); cb = ChatterboxTTS.from_pretrained(device=\"cuda\"); RES.append({\"chatterbox_load_s\": round(time.time() - t)}); save()\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 180, in from_pretrained\n    return cls.from_local(Path(local_path).parent, device)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 165, in from_local\n    return cls(t3, s3gen, ve, tokenizer, device, conds=conds)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vC/lib/python3.12/site-packages/chatterbox/tts.py\", line 126, in __init__\n    self.watermarker = perth.PerthImplicitWatermarker()\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not callable\n"
+  },
+  {
+   "ref_pitch_st": 5.91
+  },
+  {
+   "name": "kokoro",
+   "error": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 40, in <module>\n    pipes = {\"a\": KPipeline(lang_code=\"a\"), \"b\": KPipeline(lang_code=\"b\")}\n                  ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/kokoro/pipeline.py\", line 113, in __init__\n    self.g2p = en.G2P(trf=trf, british=lang_code=='b', fallback=fallback, unk='')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/misaki/en.py\", line 503, in __init__\n    self.nlp = spacy.load(name, enable=components)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/spacy/__init__.py\", line 74, in load\n    return util.load_model(\n           ^^^^^^^^^^^^^^^^\n  File \"/tmp/vB/lib/python3.12/site-packages/spacy/util.py\", line 531, in load_model\n    raise IOError(Errors.E050.format(name=name))\nOSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.\n"
   }
  ],
  "inputs": [
@@ -48,5 +54,5 @@
   "voice_worker.py"
  ],
  "sentences": 29,
- "total_s": 110
+ "total_s": 652
 }
