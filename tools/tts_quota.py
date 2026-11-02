@@ -9,8 +9,7 @@ Usage (from the repo root, after `git pull`):
   python3 tools/tts_quota.py release <key> <YYYY-MM-DD> <project>
 
 Quota is per API key AND per model (10/day each on the free tier; a job's fallback models have their own 10).
-Days are Gemini quota days: they reset at midnight Pacific time (12:30 IST in winter, 13:30 IST in summer... check the 429
-message if unsure). Used = requests found in the outputs/tts/*/report.json versions committed that day (one per finished
+Days are Gemini quota days: they reset at midnight Pacific time (13:30 IST from Nov to mid-Mar, 12:30 IST in US summer time). Used = requests found in the outputs/tts/*/report.json versions committed that day (one per finished
 item, plus failed attempts that weren't 429s; 429 = rejected, not counted). Pending = job files pushed today whose current
 version has no outputs/tts/<id>/.ran marker yet. Limits and reservations live in ops/tts_quota.json.
 """
