@@ -1,0 +1,158 @@
+{
+ "slug": "mms-s023-ftc",
+ "lines": [
+  {
+   "o": 0,
+   "text": "Your phone rings: \"This is the FTC. Your number is linked to a crime.\" Would you stay on the line?",
+   "chunks": [
+    "Your phone rings:",
+    "*\"This is the FTC.*",
+    "Your number is linked to a *crime.\"*",
+    "Would you stay on the line?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "The FTC warned about this exact call on October 22.",
+   "chunks": [
+    "The FTC warned about this exact",
+    "call on *October 22.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "The caller says a phone in your name is running scams overseas. Cooperate, or your number gets deactivated.",
+   "chunks": [
+    "The caller says a phone in",
+    "*your* name is running *scams* overseas.",
+    "Cooperate, or your number gets *deactivated.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "My number? I don't even have a phone.",
+   "chunks": [
+    "My number?",
+    "I don't even have a phone."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER",
+   "speaker": "bill"
+  },
+  {
+   "o": 0,
+   "text": "So why does a government call end with a payment?",
+   "chunks": [
+    "So why does a *government* call",
+    "end with a *payment?*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "First, they pass you to a fake police officer. Then you're told you're under arrest.",
+   "chunks": [
+    "First, they pass you to a fake *police officer.*",
+    "Then you're told you're under *arrest.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "And then comes the part that costs you.",
+   "chunks": [
+    "And then comes the part that costs you."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "To clear your name, you pay a \"security deposit.\"",
+   "chunks": [
+    "To clear your name,",
+    "you pay a *\"security deposit.\"*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "That's the mirage: each step hands you to someone more official, so it feels more real.",
+   "chunks": [
+    "That's the *mirage:*",
+    "each step hands you to someone more *official,*",
+    "so it feels more *real.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "The FTC says real staff never ask for money, never threaten your phone, and never ask for secrecy.",
+   "chunks": [
+    "The FTC says real staff never ask for *money,*",
+    "never threaten your *phone,*",
+    "and never ask for *secrecy.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "So the only thing to deactivate... is the call.",
+   "chunks": [
+    "So the only thing to *deactivate...*",
+    "is the *call.*"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "Comment: has a fake agency ever called you?",
+   "chunks": [
+    "Comment: has a fake agency ever called you?"
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  },
+  {
+   "o": 0,
+   "text": "This is Money Mirage. Follow for more.",
+   "chunks": [
+    "This is *Money Mirage.*",
+    "*Follow* for more."
+   ],
+   "ch": 0,
+   "chapter": "SHORT: THE CALL THAT DEACTIVATES YOUR NUMBER"
+  }
+ ],
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.42,
+  "tempo": 1.05,
+  "long_before": {
+   "3": 0.55
+  }
+ },
+ "tail": 3.0
+}
