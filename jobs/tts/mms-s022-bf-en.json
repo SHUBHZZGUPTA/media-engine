@@ -1,0 +1,74 @@
+{
+ "id": "mms-s022-bf-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Your Black Friday deal could be cheaper in January. One TV was cheaper on a hundred and thirty-four days after the sale. So is the deal real?"
+    ],
+    [
+     "Narrator",
+     "Consumer group Which tracked a hundred and seventy-five products at eight big retailers for a whole year."
+    ],
+    [
+     "Narrator",
+     "eighty-three percent were the same price or cheaper at some other time."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Shocking. Truly. I'm shocked."
+    ],
+    [
+     "Narrator",
+     "So how does an ordinary price look like a deal?"
+    ],
+    [
+     "Narrator",
+     "The \"was\" price. Discounts are often measured from a price the item rarely sold at."
+    ],
+    [
+     "Narrator",
+     "Add a countdown clock, and you stop checking."
+    ],
+    [
+     "Narrator",
+     "And the trick doesn't stop on Friday."
+    ],
+    [
+     "Narrator",
+     "Prices often drop again after the sale. That TV later sold for twenty-seven percent less."
+    ],
+    [
+     "Narrator",
+     "That's the mirage: the discount is measured from a price nobody paid."
+    ],
+    [
+     "Narrator",
+     "The real test is the price history, not the percent off."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky banknote, trembling] So the sale price was just the price?"
+    ],
+    [
+     "Narrator",
+     "Comment: what did you buy last Black Friday?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
