@@ -19,7 +19,7 @@ REP["steps"]["uv"] = sh("pip install -q uv && uv python install 3.12", 600)[0]; 
 DEPS = {"C": "chatterbox-tts soundfile librosa", "B": "'kokoro>=0.9.4' 'misaki[en]' soundfile librosa"}
 env = dict(os.environ, JOB_PARAMS=JOB_PARAMS, CH5=inp["ch5.txt"], REF=REF)  # noqa: F821
 for eng in ("C", "B"):
-    t = time.time(); rc, tail = sh(f"uv venv -q -p 3.12 /tmp/v{eng} && VIRTUAL_ENV=/tmp/v{eng} uv pip install -q {DEPS[eng]}", 1500)
+    t = time.time(); rc, tail = sh(f"uv venv -q -p 3.12 /tmp/v{eng} && uv pip install -q --python /tmp/v{eng}/bin/python {DEPS[eng]} && /tmp/v{eng}/bin/python -c \"import numpy, torch, librosa; print(torch.__version__, torch.cuda.is_available())\"", 1500)
     REP["steps"][f"pip_{eng}"] = {"rc": rc, "s": round(time.time() - t), "tail": tail[-500:]}; save()
     t = time.time(); r = subprocess.run([f"/tmp/v{eng}/bin/python", inp["voice_worker.py"], eng], env=env, capture_output=True, text=True, timeout=3600)
     REP["steps"][f"run_{eng}"] = {"rc": r.returncode, "s": round(time.time() - t), "tail": (r.stdout + r.stderr)[-1200:]}
