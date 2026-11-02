@@ -2,7 +2,7 @@
 """Assemble India narration from the TTS parts (pilot: hook + ch1).
 For each part: line timings (linetimes.py), character pitches (charvoices.py). Then concatenate with a short gap,
 speed up (atempo), and write voice_full.wav, lines_full.json (sped-up times) and words_full.txt (raw times; plan divides by speed).
-Usage: python3 assemble_voice.py <job_id> <out_dir> <part|job:part,...> [speed] [--chapter-after=part,part] [--gap-before=line,line]  e.g. in-pilot-en pilot p01,p02,p03
+Usage: python3 assemble_voice.py <job_id> <out_dir> <part|job:part,...> [speed] [--chapter-after=part,part] [--gap-before=line,line] [--gain=line:dB,...]  e.g. in-pilot-en pilot p01,p02,p03
 """
 import json, os, subprocess, sys, wave
 import numpy as np
@@ -13,6 +13,7 @@ PARTS = [tuple(n.split(":")) if ":" in n else (JOB, n) for n in PARTN]   # "job:
 GAP = 0.9
 LONG = [a.split('=')[1].split(',') for a in sys.argv if a.startswith('--chapter-after=')]; LONG = set(LONG[0]) if LONG else set()
 GAPB = [a.split('=')[1].split(',') for a in sys.argv if a.startswith('--gap-before=')]; GAPB = {int(v) for v in GAPB[0]} if GAPB else set()
+GAIN = {int(k): float(v) for a in sys.argv if a.startswith('--gain=') for k, v in (x.split(':') for x in a.split('=')[1].split(','))}   # line:dB, e.g. a whispered line too quiet to hear
 CHAPGAP = 2.6   # raw seconds of music-only beat after a part that ends a chapter (covers the take switch at the chapter card)
 PITCH = {"TRAVELLER": 2, "INSPECTOR": -3, "BRICKMAKER": 3, "ENGINEER": -1, "FOREMAN": -2}
 W = os.path.join(OUTD, "voice_work"); os.makedirs(W, exist_ok=True)
@@ -108,6 +109,12 @@ for job, name in PARTS:
         for r_ in range(q, len(PL)): PL[r_] = dict(PL[r_], t0=PL[r_]["t0"] + pad, t1=PL[r_]["t1"] + pad)
         PW = [w_ for w_ in PW if w_[0] < cut] + [(a_ + pad, b_ + pad, w_) for a_, b_, w_ in PW if a_ >= cut]
         print(f"  chapter gap before line {G0 + q}: +{pad:.2f}s", flush=True)
+    for q in range(len(PL)):
+        if G0 + q in GAIN:
+            i0, i1 = int(max(0.0, PL[q]["t0"] - .05) * sr), int((PL[q]["t1"] + .1) * sr)
+            seg = x[i0:i1].astype(np.float32) * 10 ** (GAIN[G0 + q] / 20)
+            x = x.copy(); x[i0:i1] = np.clip(seg, -32768, 32767).astype(np.int16)
+            print(f"  gain {GAIN[G0 + q]:+.0f} dB on line {G0 + q}", flush=True)
     dur = len(x) / sr; G0 += len(PL)
     for l in PL: allL.append(dict(l, t0=l["t0"] + off, t1=l["t1"] + off))
     for a_, b_, wd in PW: allW.append(f"{a_ + off:.3f} {b_ + off:.3f} {wd}")

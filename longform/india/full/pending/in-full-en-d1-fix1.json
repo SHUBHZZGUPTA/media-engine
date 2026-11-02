@@ -1,0 +1,51 @@
+{
+ "id": "in-full-en-d1-fix1",
+ "key": "longform",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "fix_a",
+   "direction": "Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would. VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "And into the north, through the mountain passes, came new arrivals once again."
+    ],
+    [
+     "Narrator",
+     "In twelve oh six, Ghori's general Qutb ud-Din Aibak became the first ruler of the Delhi Sultanate. He began the tallest brick minaret in the world: the Qutb Minar."
+    ],
+    [
+     "Narrator",
+     "Around the same time, according to later chronicles, raiders led by Bakhtiyar Khalji attacked Nalanda, and the great university was ruined."
+    ],
+    [
+     "Narrator",
+     "For the next three hundred years, five different dynasties would rule from Delhi."
+    ],
+    [
+     "Narrator",
+     "One sultan, Alauddin Khalji, beat back several Mongol invasions. Unlike China, Persia and Russia, India was never conquered by the Mongols."
+    ],
+    [
+     "Narrator",
+     "He also tried something very modern: price controls. He fixed the price of grain, horses, cloth, even slaves in the markets of Delhi, and punished cheating shopkeepers harshly."
+    ],
+    [
+     "Narrator",
+     "In fifteen twenty-six, a young prince from Central Asia rode down from Kabul. He had lost his homeland more than once. He was looking for a new one."
+    ],
+    [
+     "Narrator",
+     "His great-great-great-grandfather was Timur. And on his mother's side, he was descended from Genghis Khan."
+    ]
+   ]
+  }
+ ]
+}

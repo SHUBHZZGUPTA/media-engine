@@ -31,3 +31,34 @@ Every take is checked by transcript, line by line, not only by length.
 | in-full-en-d2 | p03, p05, p06, p07-p13 | Ch3 part 1 to Ch8 part 1 |
 | in-full-en-d3 | p14-p23 | Ch8 part 2 to Ch13 part 1 |
 | in-full-en-d4 | p24, p25, p04r | Ch13 part 2 + ending, Ch3 part 2 retake |
+
+## Day 2 (2 Nov): 10/10 takes back full length
+Line check (`takecheck.py`): 7 stage tags read aloud (cut automatically by assemble_voice.py); real problems:
+
+| global line | take | problem | fix |
+|---|---|---|---|
+| 73 | d2 p06, last line (Ch4 end) | "came new arrivals" heard as "can be a virus" (late-take garble) | re-voice in in-full-en-d1-fix1 |
+| 106-110 | d2 p09 | "according to later chronicles, raiders led by Bakhtiyar" skipped | re-voice 106-110 (from the traveller line before to the one after) |
+| 119 | d2 p10 | whispered traveller line ~22 dB too quiet | `--gain=119:18` in assembly, no retake |
+| 130-131 | d2 p10, last 2 lines (Ch6 end) | "lost his homeland more than once. He was" skipped (late-take) | re-voice in fix1 |
+
+Narrator pitch per take (robust median of narrator lines vs pilot Ch1 = 119.1 Hz):
+
+| take | lines | Hz | st | |
+|---|---|---|---|---|
+| d1 p01 | 0-13 | 115.0 | -0.6 | ok |
+| d1 p02 | 14-20 | 121.9 | +0.4 | ok |
+| d2 p03 | 21-30 | 129.1 | +1.4 | ok |
+| d1 p04 | 31-44 | 136.8 | +2.4 | out (retake p04r in d4) |
+| d2 p05 | 45-58 | 128.4 | +1.3 | ok |
+| d2 p06 | 59-73 | 135.2 | +2.2 | out |
+| d2 p07 | 74-90 | 142.4 | +3.1 | out |
+| d2 p08 | 91-99 | 153.6 | +4.4 | out |
+| d2 p09 | 100-111 | 116.4 | -0.4 | ok |
+| d2 p10 | 112-131 | 136.0 | +2.3 | out |
+| d2 p11 | 132-144 | 109.8 | -1.4 | ok |
+| d2 p12 | 145-157 | 125.4 | +0.9 | ok |
+| d2 p13 | 158-174 | 132.1 | +1.8 | out |
+
+Biggest jumps at take switches: p08 -> p09 (Ch6 card) -4.7 st, p09 -> p10 (mid Ch6, after a character line) +2.8 st, p10 -> p11 (Ch7 card) -3.7 st.
+3D clips rendered from the provisional voice (timings final): G_vedic, G_ganga, G_magadha, G_maurya, G_chakra, G_road, G_mughal1605.
