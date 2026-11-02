@@ -1,0 +1,13 @@
+{
+ "job": "mms-s022-bf-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 73.4,
+   "took": 23.6
+  }
+ ]
+}
