@@ -1,0 +1,10 @@
+{
+ "id": "tts-bakeoff-2",
+ "script": "gpu/tts_bakeoff.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 50,
+ "wait_minutes": 55,
+ "params": {"skip_edge": true},
+ "requested": "2026-11-02T19:10+05:30"
+}
