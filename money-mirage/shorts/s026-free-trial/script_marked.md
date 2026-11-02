@@ -9,5 +9,5 @@ N: Amazon denied wrongdoing, but in 2025 it paid *$2.5 billion* to settle, *$1.5
 N: That's the *mirage:* the trial is free. *Forgetting* is what you pay for.
 N: The fix: set a *reminder* the day you sign up, and check your statement for charges you don't recognise.
 BILL: [nervous, squeaky] Wait, what am I still paying for?
-N: Comment: which subscription did you forget to cancel?
+N: Comment: which subscription do you forget to cancel?
 N: This is *Money Mirage.* *Follow* for more.
