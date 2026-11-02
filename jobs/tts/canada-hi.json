@@ -1,0 +1,72 @@
+{
+ "id": "canada-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Canada का करीब चालीस प्रतिशत हिस्सा... एक cricket stadium से भी कम लोगों वाला है।"
+    ],
+    [
+     "Narrator",
+     "Canada में दस provinces हैं... और तीन territories: Yukon, Northwest Territories, और Nunavut।"
+    ],
+    [
+     "Narrator",
+     "तीनों मिलकर Canada का उनतालीस प्रतिशत हैं। पूरे भारत से भी बड़े।"
+    ],
+    [
+     "Narrator",
+     "पर वहाँ सिर्फ़ करीब एक लाख छत्तीस हज़ार लोग रहते हैं। Canada के लोगों का शून्य दशमलव तीन प्रतिशत।"
+    ],
+    [
+     "Narrator",
+     "यानी लगभग एक Narendra Modi Stadium भर।"
+    ],
+    [
+     "Chars",
+     "[cheerful cartoon polar bear, delighted] मेरे लिए और जगह!"
+    ],
+    [
+     "Narrator",
+     "अकेला Nunavut करीब बीस लाख वर्ग किलोमीटर है। लगभग Mexico जितना।"
+    ],
+    [
+     "Narrator",
+     "इसकी राजधानी Iqaluit तक किसी और शहर से कोई सड़क नहीं जाती। वहाँ उड़कर जाते हैं, या बर्फ़ हटे तो समुद्र से।"
+    ],
+    [
+     "Narrator",
+     "तो ये provinces क्यों नहीं? Provinces को ताक़त Canada के संविधान से मिलती है। Territories को Ottawa से, आम federal क़ानूनों के ज़रिए।"
+    ],
+    [
+     "Narrator",
+     "इनमें से दो में तो political parties ही नहीं हैं: वहाँ सहमति से सरकार चलती है।"
+    ],
+    [
+     "Narrator",
+     "और twenty twenty-seven में Nunavut अपनी ज़मीन और संसाधनों का नियंत्रण खुद लेगा।"
+    ],
+    [
+     "Chars",
+     "[cartoon polar bear, smug and slow] अब भी province नहीं। फिर भी विशाल।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611021353"
+}
