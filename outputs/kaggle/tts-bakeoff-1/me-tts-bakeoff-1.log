@@ -1,0 +1,77 @@
+[{"stream_name":"stdout","time":1.60818943,"data":"$ pip install -q soundfile edge-tts\n"}
+,{"stream_name":"stdout","time":8.740592141,"data":" \n"}
+,{"stream_name":"stdout","time":71.235271331,"data":"OK edge-tts (62s)\n"}
+,{"stream_name":"stdout","time":71.235325026,"data":"$ apt-get -qq install -y espeak-ng \u003e /dev/null 2\u003e\u00261 || true\n"}
+,{"stream_name":"stdout","time":86.541545765,"data":" \n"}
+,{"stream_name":"stdout","time":86.541572636,"data":"$ pip install -q 'kokoro\u003e=0.9.4' misaki[en]\n"}
+,{"stream_name":"stdout","time":87.166372156,"data":" ERROR: Ignored the following versions that require a different python version: 0.8.1 Requires-Python \u003e=3.10,\u003c3.13; 0.8.2 Requires-Python \u003e=3.10,\u003c3.13; 0.8.3 Requires-Python \u003e=3.10,\u003c3.13; 0.8.4 Requires-Python \u003e=3.10,\u003c3.13; 0.9.2 Requires-Python \u003e=3.10,\u003c3.13; 0.9.4 Requires-Python \u003e=3.10,\u003c3.13\n"}
+,{"stream_name":"stdout","time":87.166410607,"data":"ERROR: Could not find a version that satisfies the requirement kokoro\u003e=0.9.4 (from versions: 0.2.1, 0.2.2, 0.2.3, 0.3.0, 0.3.1, 0.3.2, 0.3.3, 0.3.4, 0.3.5, 0.7.0, 0.7.1, 0.7.2, 0.7.3, 0.7.4, 0.7.6, 0.7.8, 0.7.9, 0.7.11, 0.7.12, 0.7.13, 0.7.14, 0.7.15, 0.7.16)\n"}
+,{"stream_name":"stdout","time":87.166414995,"data":"ERROR: No matching distribution found for kokoro\u003e=0.9.4\n"}
+,{"stream_name":"stdout","time":87.166418228,"data":"\n"}
+,{"stream_name":"stdout","time":87.167549165,"data":"FAIL kokoro\n"}
+,{"stream_name":"stdout","time":87.16756278,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":87.167567518,"data":"  File \"/kaggle/src/script.py\", line 24, in engine\n"}
+,{"stream_name":"stdout","time":87.167571956,"data":"    try: fn(); say(f\"OK {name} ({time.time() - t:.0f}s)\")\n"}
+,{"stream_name":"stdout","time":87.16757649,"data":"         ~~^^\n"}
+,{"stream_name":"stdout","time":87.167586087,"data":"  File \"/kaggle/src/script.py\", line 40, in kokoro\n"}
+,{"stream_name":"stdout","time":87.167589251,"data":"    from kokoro import KPipeline\n"}
+,{"stream_name":"stdout","time":87.167592652,"data":"ModuleNotFoundError: No module named 'kokoro'\n"}
+,{"stream_name":"stdout","time":87.167608133,"data":"\n"}
+,{"stream_name":"stdout","time":87.167613112,"data":"$ pip install -q chatterbox-tts\n"}
+,{"stream_name":"stdout","time":448.011428305,"data":" ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stdout","time":448.011478729,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":448.01148467,"data":"torchvision 0.26.0+cu128 requires torch==2.11.0, but you have torch 2.6.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":448.011489281,"data":"python-fasthtml 0.14.12 requires starlette\u003e=1.0.1, but you have starlette 0.52.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":448.011499537,"data":"google-adk 2.7.1 requires starlette\u003c2,\u003e=1.3.1, but you have starlette 0.52.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":448.011502881,"data":"\n"}
+,{"stream_name":"stderr","time":452.657023648,"data":"/usr/local/lib/python3.13/dist-packages/perth/perth_net/__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":452.65707375,"data":"  from pkg_resources import resource_filename\n"}
+,{"stream_name":"stdout","time":473.883628513,"data":"FAIL chatterbox\n"}
+,{"stream_name":"stdout","time":473.883667435,"data":"\u003e\n"}
+,{"stream_name":"stdout","time":473.883672817,"data":"    from torchvision.transforms import InterpolationMode\n"}
+,{"stream_name":"stdout","time":473.883677387,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torchvision/__init__.py\", line 8, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":473.883682024,"data":"    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip\n"}
+,{"stream_name":"stdout","time":473.883686095,"data":"    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":473.883689702,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torchvision/_meta_registrations.py\", line 163, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":473.883694198,"data":"    @torch.library.register_fake(\"torchvision::nms\")\n"}
+,{"stream_name":"stdout","time":473.883698307,"data":"     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":473.883702338,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/library.py\", line 828, in register\n"}
+,{"stream_name":"stdout","time":473.883705811,"data":"    use_lib._register_fake(op_name, func, _stacklevel=stacklevel + 1)\n"}
+,{"stream_name":"stdout","time":473.883709508,"data":"    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":473.883713875,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/library.py\", line 198, in _register_fake\n"}
+,{"stream_name":"stdout","time":473.883717466,"data":"    handle = entry.fake_impl.register(func_to_register, source)\n"}
+,{"stream_name":"stdout","time":473.883721234,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/_library/fake_impl.py\", line 31, in register\n"}
+,{"stream_name":"stdout","time":473.883725689,"data":"    if torch._C._dispatch_has_kernel_for_dispatch_key(self.qualname, \"Meta\"):\n"}
+,{"stream_name":"stdout","time":473.883729458,"data":"       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":473.883733185,"data":"RuntimeError: operator torchvision::nms does not exist\n"}
+,{"stream_name":"stdout","time":473.883737152,"data":"\n"}
+,{"stream_name":"stdout","time":473.883740518,"data":"The above exception was the direct cause of the following exception:\n"}
+,{"stream_name":"stdout","time":473.88374392,"data":"\n"}
+,{"stream_name":"stdout","time":473.88374754,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":473.883751119,"data":"  File \"/kaggle/src/script.py\", line 24, in engine\n"}
+,{"stream_name":"stdout","time":473.883754809,"data":"    try: fn(); say(f\"OK {name} ({time.time() - t:.0f}s)\")\n"}
+,{"stream_name":"stdout","time":473.883758639,"data":"         ~~^^\n"}
+,{"stream_name":"stdout","time":473.883762802,"data":"  File \"/kaggle/src/script.py\", line 54, in chatterbox\n"}
+,{"stream_name":"stdout","time":473.883766758,"data":"    from chatterbox.tts import ChatterboxTTS\n"}
+,{"stream_name":"stdout","time":473.883770842,"data":"  File \"/usr/local/lib/python3.13/dist-packages/chatterbox/__init__.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":473.883775215,"data":"    from .tts import ChatterboxTTS\n"}
+,{"stream_name":"stdout","time":473.883778534,"data":"  File \"/usr/local/lib/python3.13/dist-packages/chatterbox/tts.py\", line 11, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":473.883782129,"data":"    from .models.t3 import T3\n"}
+,{"stream_name":"stdout","time":473.883802168,"data":"  File \"/usr/local/lib/python3.13/dist-packages/chatterbox/models/t3/__init__.py\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":473.883805064,"data":"    from .t3 import T3\n"}
+,{"stream_name":"stdout","time":473.883808495,"data":"  File \"/usr/local/lib/python3.13/dist-packages/chatterbox/models/t3/t3.py\", line 12, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":473.883810877,"data":"    from transformers import LlamaModel, LlamaConfig, GPT2Config, GPT2Model\n"}
+,{"stream_name":"stdout","time":473.883813241,"data":"  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py\", line 2132, in __getattr__\n"}
+,{"stream_name":"stdout","time":473.883815611,"data":"    raise ModuleNotFoundError(\n"}
+,{"stream_name":"stdout","time":473.883817789,"data":"        f\"Could not import module '{name}'. Are this object's requirements defined correctly?\"\n"}
+,{"stream_name":"stdout","time":473.883820149,"data":"    ) from e\n"}
+,{"stream_name":"stdout","time":473.883822444,"data":"ModuleNotFoundError: Could not import module 'LlamaModel'. Are this object's requirements defined correctly?\n"}
+,{"stream_name":"stdout","time":473.883824802,"data":"\n"}
+,{"stream_name":"stdout","time":473.88382691,"data":"DONE\n"}
+,{"stream_name":"stderr","time":477.715307376,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":477.715333632,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":478.091629928,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":478.091656011,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":478.968550211,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":480.147813931,"data":"[NbConvertApp] Writing 296430 bytes to __results__.html\n"}
+]
