@@ -32,7 +32,7 @@ def edge():
     for v in ("en-US-AndrewMultilingualNeural", "en-US-BrianMultilingualNeural", "en-GB-RyanNeural", "en-US-ChristopherNeural"):
         asyncio.run(go(v, "  ".join(LINES), f"{OUT}/edge_{v.split('-')[2]}.mp3"))
     asyncio.run(go("hi-IN-MadhurNeural", HINDI, f"{OUT}/hindi_edge_Madhur.mp3"))
-engine("edge-tts", edge)
+if not P.get("skip_edge"): engine("edge-tts", edge)
 
 # 2) Kokoro-82M (Apache 2.0, best small open model on the leaderboards)
 def kokoro():
@@ -45,7 +45,41 @@ def kokoro():
     try:
         ph = KPipeline(lang_code="h"); join([a for _, _, a in ph(HINDI, voice="hm_omega")], 24000, "hindi_kokoro_hm_omega")
     except Exception: say("kokoro hindi failed", traceback.format_exc()[-800:])
-engine("kokoro", kokoro)
+VENV = "/tmp/py312"
+def venv():
+    sh("pip install -q uv"); sh(f"uv venv -q -p 3.12 {VENV}")
+    sh(f"uv pip install -q --python {VENV}/bin/python soundfile numpy 'kokoro>=0.9.4' 'misaki[en]' chatterbox-tts")
+def sub(code):
+    path = "/tmp/sub.py"; open(path, "w").write("import json, os, sys, numpy as np, soundfile as sf\nOUT = %r\nLINES = %r\nHINDI = %r\n" % (OUT, LINES, HINDI) +
+        "def join(chunks, sr, name, gap=0.45):\n    parts = []\n    for c in chunks: parts += [np.asarray(c, dtype=np.float32).reshape(-1), np.zeros(int(sr * gap), np.float32)]\n"
+        "    w = f'/tmp/{name}.wav'; sf.write(w, np.concatenate(parts), sr); os.system(f'ffmpeg -v error -y -i {w} -ac 1 -b:a 160k {OUT}/{name}.mp3 && rm -f {w}'); print('wrote', name, flush=True)\n" + code)
+    if sh(f"{VENV}/bin/python {path}") != 0: raise RuntimeError("sub-process failed (see log)")
+KOKORO = """
+from kokoro import KPipeline
+pa = KPipeline(lang_code='a'); pb = KPipeline(lang_code='b')
+for pipe, v in ((pa, 'am_michael'), (pa, 'am_fenrir'), (pa, 'am_puck'), (pb, 'bm_george'), (pb, 'bm_fable')):
+    join([a for line in LINES for _, _, a in pipe(line, voice=v, speed=1.0)], 24000, f'kokoro_{v}')
+try:
+    ph = KPipeline(lang_code='h'); join([a for _, _, a in ph(HINDI, voice='hm_omega')], 24000, 'hindi_kokoro_hm_omega')
+except Exception as e: print('kokoro hindi failed', e)
+"""
+CHATTER = """
+import torch
+from chatterbox.tts import ChatterboxTTS
+dev = 'cuda' if torch.cuda.is_available() else 'cpu'
+m = ChatterboxTTS.from_pretrained(device=dev)
+for tag, ex, cfg in (('calm', 0.5, 0.5), ('expressive', 0.7, 0.3), ('documentary', 0.4, 0.6)):
+    join([m.generate(line, exaggeration=ex, cfg_weight=cfg).squeeze(0).cpu().numpy() for line in LINES], m.sr, f'chatterbox_{tag}')
+try:
+    from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+    mm = ChatterboxMultilingualTTS.from_pretrained(device=dev)
+    join([mm.generate(HINDI, language_id='hi').squeeze(0).cpu().numpy()], mm.sr, 'hindi_chatterbox')
+except Exception as e: print('chatterbox hindi failed', e)
+"""
+sh("apt-get -qq install -y espeak-ng > /dev/null 2>&1 || true")
+engine("py3.12 venv", venv)
+engine("kokoro", lambda: sub(KOKORO))
+engine("chatterbox", lambda: sub(CHATTER))
 
 # 3) Chatterbox (Resemble AI, MIT; won a blind test vs ElevenLabs; emotion 'exaggeration' control; Hindi in the multilingual model)
 def chatterbox():
@@ -61,5 +95,4 @@ def chatterbox():
         mm = ChatterboxMultilingualTTS.from_pretrained(device="cuda" if torch.cuda.is_available() else "cpu")
         join([mm.generate(HINDI, language_id="hi").squeeze(0).cpu().numpy()], mm.sr, "hindi_chatterbox")
     except Exception: say("chatterbox hindi failed", traceback.format_exc()[-800:])
-engine("chatterbox", chatterbox)
 say("DONE"); log.close()
