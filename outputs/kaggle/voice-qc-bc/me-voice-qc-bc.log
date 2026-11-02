@@ -1,20 +1,21 @@
-[{"stream_name":"stderr","time":12.523935983,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
-,{"stream_name":"stderr","time":35.499111508,"data":"Traceback (most recent call last):\n"}
-,{"stream_name":"stderr","time":35.500049019,"data":"  File \"/kaggle/src/script.py\", line 11, in \u003cmodule\u003e\n"}
-,{"stream_name":"stderr","time":35.500087852,"data":"    segs, _ = m.transcribe(inp[f], language=\"en\", beam_size=5); hyp = norm(\" \".join(s.text for s in segs))\n"}
-,{"stream_name":"stderr","time":35.500094456,"data":"              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stderr","time":35.500098907,"data":"  File \"/usr/local/lib/python3.13/dist-packages/faster_whisper/transcribe.py\", line 876, in transcribe\n"}
-,{"stream_name":"stderr","time":35.500103203,"data":"    audio = decode_audio(audio, sampling_rate=sampling_rate)\n"}
-,{"stream_name":"stderr","time":35.500107595,"data":"  File \"/usr/local/lib/python3.13/dist-packages/faster_whisper/audio.py\", line 46, in decode_audio\n"}
-,{"stream_name":"stderr","time":35.500113479,"data":"    with av.open(input_file, mode=\"r\", metadata_errors=\"ignore\") as container:\n"}
-,{"stream_name":"stderr","time":35.500121065,"data":"         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
-,{"stream_name":"stderr","time":35.500123767,"data":"  File \"av/container/core.py\", line 479, in av.container.core.open\n"}
-,{"stream_name":"stderr","time":35.500126412,"data":"    def open(\n"}
-,{"stream_name":"stderr","time":35.500128907,"data":"TypeError: open() got an unexpected keyword argument 'metadata_errors'\n"}
-,{"stream_name":"stderr","time":38.510162442,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":38.510192191,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":38.830466606,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":38.830492131,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":39.883339415,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":40.962565965,"data":"[NbConvertApp] Writing 281416 bytes to __results__.html\n"}
+[{"stream_name":"stderr","time":13.686455083,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":55.177824751,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":55.178464846,"data":"  File \"/kaggle/src/script.py\", line 12, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":55.178484453,"data":"    segs, _ = m.transcribe(librosa.load(inp[f], sr=16000)[0], language=\"en\", beam_size=5); hyp = norm(\" \".join(s.text for s in segs))\n"}
+,{"stream_name":"stderr","time":55.178489849,"data":"                                                                                                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":55.178503989,"data":"  File \"/kaggle/src/script.py\", line 12, in \u003cgenexpr\u003e\n"}
+,{"stream_name":"stderr","time":55.17850917,"data":"    segs, _ = m.transcribe(librosa.load(inp[f], sr=16000)[0], language=\"en\", beam_size=5); hyp = norm(\" \".join(s.text for s in segs))\n"}
+,{"stream_name":"stderr","time":55.178515799,"data":"                                                                                                                               ^^^^\n"}
+,{"stream_name":"stderr","time":55.178521171,"data":"  File \"/usr/local/lib/python3.13/dist-packages/faster_whisper/transcribe.py\", line 1190, in generate_segments\n"}
+,{"stream_name":"stderr","time":55.178526727,"data":"    encoder_output = self.encode(segment)\n"}
+,{"stream_name":"stderr","time":55.178574607,"data":"  File \"/usr/local/lib/python3.13/dist-packages/faster_whisper/transcribe.py\", line 1400, in encode\n"}
+,{"stream_name":"stderr","time":55.178581144,"data":"    return self.model.encode(features, to_cpu=to_cpu)\n"}
+,{"stream_name":"stderr","time":55.178585392,"data":"           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":55.178596757,"data":"RuntimeError: Library libcublas.so.12 is not found or cannot be loaded\n"}
+,{"stream_name":"stderr","time":58.598640537,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":58.598668746,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":58.97329378,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":58.973314652,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":59.838562475,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":61.142163493,"data":"[NbConvertApp] Writing 281874 bytes to __results__.html\n"}
 ]
