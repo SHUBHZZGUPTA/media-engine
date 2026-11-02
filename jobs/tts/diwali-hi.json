@@ -1,0 +1,68 @@
+{
+ "id": "diwali-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "ये है वो Diwali photo जिसने पूरे भारत को बेवकूफ़ बनाया।"
+    ],
+    [
+     "Narrator",
+     "हर Diwali ये viral होती है: Diwali की रात space से भारत।"
+    ],
+    [
+     "Narrator",
+     "ऐसा नहीं है।"
+    ],
+    [
+     "Narrator",
+     "ये असली satellite data है... पर न Diwali का, न एक रात का।"
+    ],
+    [
+     "Narrator",
+     "NOAA के एक वैज्ञानिक ने इसे two thousand three में बनाया था, ये दिखाने के लिए कि भारत के शहर कैसे बढ़े।"
+    ],
+    [
+     "Narrator",
+     "हर रंग एक साल है: सफ़ेद रोशनी nineteen ninety-two से पहले की, नीली ninety-two की, हरी ninety-eight की, लाल two thousand three की।"
+    ],
+    [
+     "Chars",
+     "[offended cartoon clay diya lamp, dramatic] तो... मैं इसमें हूँ ही नहीं?"
+    ],
+    [
+     "Narrator",
+     "असली Diwali space से कैसी दिखती है? NASA ने twenty twelve में देखा।"
+    ],
+    [
+     "Narrator",
+     "अतिरिक्त रोशनी इतनी हल्की थी कि ऊपर से शायद दिखती ही नहीं।"
+    ],
+    [
+     "Narrator",
+     "इस साल Diwali आठ November को है। जब ये photo फिर आए... आपको पता होगा।"
+    ],
+    [
+     "Chars",
+     "[cartoon diya, cheeky] ये share करो... fake वाले से पहले।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611021359"
+}
