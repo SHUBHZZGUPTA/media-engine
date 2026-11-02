@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 4068.63it/s]
+depth library/scenes/bf_phila.jpg
+depth library/scenes/bf_gold.jpg
+depth library/scenes/bf_mall.jpg
+depth library/scenes/al_nazca.jpg
+depth library/scenes/al_puma.jpg
+depth library/scenes/al_baalbek.jpg
+depth library/scenes/al_pyramid.jpg
+depth library/scenes/gf_cellar.jpg
+depth library/scenes/gf_bonfire.jpg
+depth library/scenes/gf_lewes.jpg
+depth library/scenes/gf_parliament.jpg
+upscale library/scenes/bf_phila.jpg
+upscale library/scenes/bf_gold.jpg
+upscale library/scenes/bf_mall.jpg
+upscale library/scenes/al_nazca.jpg
+upscale library/scenes/al_puma.jpg
+upscale library/scenes/al_baalbek.jpg
+upscale library/scenes/al_pyramid.jpg
+upscale library/scenes/gf_cellar.jpg
+upscale library/scenes/gf_bonfire.jpg
+upscale library/scenes/gf_lewes.jpg
+upscale library/scenes/gf_parliament.jpg
+upscale library/characters/c_tag.png
+upscale library/characters/c_alien.png
+upscale library/characters/c_rocket.png
+{'depth': [{'src': 'library/scenes/bf_phila.jpg', 'secs': 2.3}, {'src': 'library/scenes/bf_gold.jpg', 'secs': 2.0}, {'src': 'library/scenes/bf_mall.jpg', 'secs': 2.0}, {'src': 'library/scenes/al_nazca.jpg', 'secs': 1.9}, {'src': 'library/scenes/al_puma.jpg', 'secs': 1.9}, {'src': 'library/scenes/al_baalbek.jpg', 'secs': 1.9}, {'src': 'library/scenes/al_pyramid.jpg', 'secs': 1.8}, {'src': 'library/scenes/gf_cellar.jpg', 'secs': 2.0}, {'src': 'library/scenes/gf_bonfire.jpg', 'secs': 1.9}, {'src': 'library/scenes/gf_lewes.jpg', 'secs': 2.0}, {'src': 'library/scenes/gf_parliament.jpg', 'secs': 1.8}], 'upscale': [{'src': 'library/scenes/bf_phila.jpg', 'secs': 103.8}, {'src': 'library/scenes/bf_gold.jpg', 'secs': 103.9}, {'src': 'library/scenes/bf_mall.jpg', 'secs': 103.1}, {'src': 'library/scenes/al_nazca.jpg', 'secs': 103.4}, {'src': 'library/scenes/al_puma.jpg', 'secs': 103.3}, {'src': 'library/scenes/al_baalbek.jpg', 'secs': 103.2}, {'src': 'library/scenes/al_pyramid.jpg', 'secs': 103.9}, {'src': 'library/scenes/gf_cellar.jpg', 'secs': 104.5}, {'src': 'library/scenes/gf_bonfire.jpg', 'secs': 105.2}, {'src': 'library/scenes/gf_lewes.jpg', 'secs': 104.2}, {'src': 'library/scenes/gf_parliament.jpg', 'secs': 103.1}, {'src': 'library/characters/c_tag.png', 'secs': 129.9}, {'src': 'library/characters/c_alien.png', 'secs': 125.9}, {'src': 'library/characters/c_rocket.png', 'secs': 125.0}]}
