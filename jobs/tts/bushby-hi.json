@@ -1,0 +1,76 @@
+{
+ "id": "bushby-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "ये आदमी 1998 में घर से निकला... और अब जाकर पैदल लौट रहा है।"
+    ],
+    [
+     "Narrator",
+     "nineteen ninety-eight में Karl Bushby, Chile के आख़िरी छोर से, सिर्फ़ पाँच सौ dollar लेकर निकले।"
+    ],
+    [
+     "Narrator",
+     "उनका नियम: आगे बढ़ने के लिए न car, न plane, न boat। और घर तभी, जब पैदल पहुँचें।"
+    ],
+    [
+     "Narrator",
+     "प्लान था दस से बारह साल। लगे अट्ठाईस।"
+    ],
+    [
+     "Narrator",
+     "उन्होंने Darien Gap का जंगल पार किया, और Panama की जेल में अठारह दिन बिताए।"
+    ],
+    [
+     "Narrator",
+     "two thousand six में वो जमे हुए Bering Strait पर चलकर, Alaska से Russia पहुँचे।"
+    ],
+    [
+     "Chars",
+     "[exhausted cartoon walking boot, tired and dramatic] अट्ठाईस साल। मुझे नए तलवे चाहिए।"
+    ],
+    [
+     "Narrator",
+     "फिर Russia ने उन पर पाँच साल का ban लगा दिया। पहाड़ों से ज़्यादा उन्हें visa ने रोका।"
+    ],
+    [
+     "Narrator",
+     "जहाँ चल नहीं सकते थे, वहाँ तैरे: Caspian Sea में दो सौ अट्ठासी किलोमीटर..."
+    ],
+    [
+     "Narrator",
+     "और पिछले महीने English Channel। nineteen ninety-eight के बाद ब्रिटेन की ज़मीन पर पहला कदम।"
+    ],
+    [
+     "Narrator",
+     "करीब पचास हज़ार किलोमीटर। उनतीस देश।"
+    ],
+    [
+     "Narrator",
+     "और आज, वो अपने शहर Hull में पैदल पहुँचने वाले हैं।"
+    ],
+    [
+     "Chars",
+     "[cartoon walking boot, cheeky and slow] अगली बार... बस से चलेंगे।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611021348"
+}
