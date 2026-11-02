@@ -2,7 +2,7 @@
 # pick by ear. Every engine runs in try/except; failures are logged and skipped. Outputs: /kaggle/working/*.mp3 + log.
 import json, os, subprocess, sys, time, traceback, asyncio
 OUT = "/kaggle/working"; os.makedirs(OUT, exist_ok=True)
-P = json.loads(os.environ.get("JOB_PARAMS", "{}"))
+P = json.loads(globals().get("JOB_PARAMS") or os.environ.get("JOB_PARAMS", "{}"))
 LINES = P.get("lines") or [
     "His name was Mahmud of Ghazni, from today's Afghanistan. Starting around the year one thousand, he raided north India again and again. Around seventeen times.",
     "He came for gold. His raiders looted cities and temples, including the famous temple of Somnath in Gujarat, in ten twenty-six. Then he went home.",
@@ -48,7 +48,8 @@ def kokoro():
 VENV = "/tmp/py312"
 def venv():
     sh("pip install -q uv"); sh(f"uv venv -q -p 3.12 {VENV}")
-    sh(f"uv pip install -q --python {VENV}/bin/python soundfile numpy 'kokoro>=0.9.4' 'misaki[en]' chatterbox-tts")
+    sh(f"uv pip install -q --python {VENV}/bin/python soundfile numpy 'kokoro>=0.9.4' 'misaki[en]' chatterbox-tts 'setuptools<81' "   # perth (chatterbox watermark) needs pkg_resources
+       "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl")   # else misaki installs it into the system python
 def sub(code):
     path = "/tmp/sub.py"; open(path, "w").write("import json, os, sys, numpy as np, soundfile as sf\nOUT = %r\nLINES = %r\nHINDI = %r\n" % (OUT, LINES, HINDI) +
         "def join(chunks, sr, name, gap=0.45):\n    parts = []\n    for c in chunks: parts += [np.asarray(c, dtype=np.float32).reshape(-1), np.zeros(int(sr * gap), np.float32)]\n"
