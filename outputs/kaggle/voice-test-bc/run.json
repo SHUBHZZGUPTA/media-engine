@@ -1,0 +1,55 @@
+{
+ "job": "voice-test-bc",
+ "kernel": "shubhzzgupta07/me-voice-test-bc",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-voice-test-bc",
+ "gpu_quota_before": {
+  "used_h": 4.85,
+  "remaining_h": 25.15,
+  "total_h": 30.0
+ },
+ "staged_dataset": "shubhzzgupta07/me-voice-test-bc-data",
+ "staged_files": [
+  "ref_sadaltager.wav",
+  "ch5.txt"
+ ],
+ "stage_diag": {
+  "bundled": [
+   {
+    "file": "ref_sadaltager.wav",
+    "mb": 0.8
+   },
+   {
+    "file": "ch5.txt",
+    "mb": 0.0
+   }
+  ],
+  "version_before": 0,
+  "create": [
+   {
+    "license": "other",
+    "existed": false,
+    "error": "",
+    "status": "Ok"
+   }
+  ],
+  "statuses": [
+   "lookup failed: HTTPError: 403 Client Error: Forbidden for url: https://api.kaggle.com/v1/datasets.DatasetApiService/GetDatasetStatus",
+   "ready (version 1)"
+  ],
+  "version_ready": 1
+ },
+ "pushed_at": "2026-11-02T21:55:33+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-02T21:56:33+00:00",
+ "files": [
+  "me-voice-test-bc.log",
+  "voice.json"
+ ],
+ "gpu_quota_after": {
+  "used_h": 4.87,
+  "remaining_h": 25.13,
+  "total_h": 30.0
+ }
+}
