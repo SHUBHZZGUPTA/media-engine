@@ -1,0 +1,26 @@
+{
+ "id": "voice-test-bc",
+ "script": "gpu/voice_test.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 90,
+ "wait_minutes": 90,
+ "stage": {
+  "repo_paths": [
+   "bench/voice/ref_sadaltager.wav",
+   "bench/voice/ch5.txt"
+  ],
+  "dataset_slug": "me-voice-test-bc-data",
+  "title": "me voice test bc data"
+ },
+ "params": {
+  "kokoro_voices": [
+   "am_onyx",
+   "am_michael",
+   "bm_george",
+   "bm_lewis"
+  ],
+  "kokoro_speed": 0.95
+ },
+ "requested": "2026-11-03T03:25+05:30 narrator test: Chatterbox clone of our Sadaltager (C) vs Kokoro licensed presets (B), chapter 5 text"
+}
