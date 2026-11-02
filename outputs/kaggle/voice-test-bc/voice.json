@@ -10,27 +10,43 @@
  },
  "steps": {
   "apt": 0,
-  "pip": {
+  "uv": 0,
+  "pip_C": {
+   "rc": 0,
+   "s": 89,
+   "tail": ""
+  },
+  "run_C": {
    "rc": 1,
-   "s": 13,
-   "tail": "ored the following versions that require a different python version: 0.8.1 Requires-Python >=3.10,<3.13; 0.8.2 Requires-Python >=3.10,<3.13; 0.8.3 Requires-Python >=3.10,<3.13; 0.8.4 Requires-Python >=3.10,<3.13; 0.9.2 Requires-Python >=3.10,<3.13; 0.9.4 Requires-Python >=3.10,<3.13\nERROR: Could not find a version that satisfies the requirement kokoro>=0.9.4 (from versions: 0.2.1, 0.2.2, 0.2.3, 0.3.0, 0.3.1, 0.3.2, 0.3.3, 0.3.4, 0.3.5, 0.7.0, 0.7.1, 0.7.2, 0.7.3, 0.7.4, 0.7.6, 0.7.8, 0.7.9, 0.7.11, 0.7.12, 0.7.13, 0.7.14, 0.7.15, 0.7.16)\nERROR: No matching distribution found for kokoro>=0.9.4\n"
+   "s": 0,
+   "tail": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 3, in <module>\n    import numpy as np, soundfile as sf, librosa, torch\nModuleNotFoundError: No module named 'numpy'\n"
+  },
+  "pip_B": {
+   "rc": 0,
+   "s": 2,
+   "tail": ""
+  },
+  "run_B": {
+   "rc": 1,
+   "s": 0,
+   "tail": "Traceback (most recent call last):\n  File \"/kaggle/input/datasets/shubhzzgupta07/me-voice-test-bc-data/voice_worker.py\", line 3, in <module>\n    import numpy as np, soundfile as sf, librosa, torch\nModuleNotFoundError: No module named 'numpy'\n"
   }
  },
  "variants": [
   {
-   "name": "chatterbox",
-   "error": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 35, in <module>\n    from chatterbox.tts import ChatterboxTTS\nModuleNotFoundError: No module named 'chatterbox'\n"
+   "engine": "C",
+   "error": "[Errno 2] No such file or directory: '/kaggle/working/variants_C.json'"
   },
   {
-   "name": "kokoro",
-   "error": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 49, in <module>\n    from kokoro import KPipeline\nModuleNotFoundError: No module named 'kokoro'\n"
+   "engine": "B",
+   "error": "[Errno 2] No such file or directory: '/kaggle/working/variants_B.json'"
   }
  ],
  "inputs": [
   "ch5.txt",
-  "ref_sadaltager.wav"
+  "ref_sadaltager.wav",
+  "voice_worker.py"
  ],
  "sentences": 29,
- "ref_pitch_st": 5.91,
- "total_s": 44
+ "total_s": 110
 }
