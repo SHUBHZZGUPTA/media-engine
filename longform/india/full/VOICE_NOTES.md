@@ -62,3 +62,8 @@ Narrator pitch per take (robust median of narrator lines vs pilot Ch1 = 119.1 Hz
 
 Biggest jumps at take switches: p08 -> p09 (Ch6 card) -4.7 st, p09 -> p10 (mid Ch6, after a character line) +2.8 st, p10 -> p11 (Ch7 card) -3.7 st.
 3D clips rendered from the provisional voice (timings final): G_vedic, G_ganga, G_magadha, G_maurya, G_chakra, G_road, G_mughal1605.
+
+## Decision 3 Nov: Gemini stays; drifted takes are re-recorded, never pitch-shifted
+Shubham found the pitch-levelled (B) switch clips robotic and the clean p09 take natural. Rule: a take whose narrator median is
+more than ~1.5 st from the pilot Ch1 narrator gets re-recorded. Wed (d4): p07r, p08r, p10r with p24, p25, p04r + fix1 = 7 requests.
+p06 (+2.2) and p13 (+1.8) next if the Wed re-takes leave quota or time.
