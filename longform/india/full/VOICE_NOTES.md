@@ -67,3 +67,14 @@ Biggest jumps at take switches: p08 -> p09 (Ch6 card) -4.7 st, p09 -> p10 (mid C
 Shubham found the pitch-levelled (B) switch clips robotic and the clean p09 take natural. Rule: a take whose narrator median is
 more than ~1.5 st from the pilot Ch1 narrator gets re-recorded. Wed (d4): p07r, p08r, p10r with p24, p25, p04r + fix1 = 7 requests.
 p06 (+2.2) and p13 (+1.8) next if the Wed re-takes leave quota or time.
+
+## Day 3 (3 Nov): 10/10 takes full length
+Line check: 4 stage tags read aloud (auto-cut). Real problems, added to fix1 (Wed):
+| global | take | problem |
+|---|---|---|
+| 251 | d3 p19 | Gandhi's line replaced by its stage tag ("Holding up a pinch of salt?"); fix line uses [calmly] |
+| 291 | d3 p22, last line (Ch12 end) | "The Golden Bird was free." skipped (late-take) |
+
+Narrator pitch (vs 119.1 Hz): p14 +2.9 OUT, p15 +0.9, p16 +0.7, p17 +0.3, p18 +2.8 OUT, p19 +3.1 OUT, p20 -0.2, p21 -0.3, p22 +0.5, p23 +0.6.
+Wed d4 (10 requests, full day): p24, p25, p04r, p07r, p08r, p10r, p14r, p18r, p19r + fix1 job (1 request).
+Thu if needed: p06 (+2.2), p13 (+1.8), and any re-take that drifts again.
