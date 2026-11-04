@@ -57,7 +57,7 @@ def run_item(job, item, key):
             except Exception as e:  # timeouts etc.
                 errors.append(f"{model} {type(e).__name__}: {e}")
                 break
-    return {"ok": False, "model": None, "text": "", "errors": errors}
+    return {"ok": False, "model": None, "text": "", "usage": {}, "errors": errors}
 
 
 def main(path):
@@ -74,6 +74,7 @@ def main(path):
             f.write(res["text"] or "(no answer)\n\n" + "\n".join(res["errors"]))
         report["items"][item["name"]] = {k: res[k] for k in ("ok", "model", "usage", "errors")}
         print(item["name"], "ok" if res["ok"] else "FAILED", res["model"])
+        for e in res["errors"]: print("  ", e[:400])
         time.sleep(20)  # stay under per-minute limits
     json.dump(report, open(os.path.join(out, "report.json"), "w"), indent=1)
 
