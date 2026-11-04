@@ -1,0 +1,77 @@
+{
+ "job": "in-full-en-d4",
+ "items": [
+  {
+   "name": "p24",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 85.52,
+   "took": 27.4
+  },
+  {
+   "name": "p25",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 85.68,
+   "took": 27.7
+  },
+  {
+   "name": "p04r",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 110.28,
+   "took": 34.8
+  },
+  {
+   "name": "p07r",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 141.56,
+   "took": 44.2
+  },
+  {
+   "name": "p08r",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 92.56,
+   "took": 39.3
+  },
+  {
+   "name": "p10r",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 148.36,
+   "took": 45.9
+  },
+  {
+   "name": "p14r",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 108.04,
+   "took": 34.3
+  },
+  {
+   "name": "p18r",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 112.76,
+   "took": 36.1
+  },
+  {
+   "name": "p19r",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 116.56,
+   "took": 36.6
+  }
+ ]
+}
