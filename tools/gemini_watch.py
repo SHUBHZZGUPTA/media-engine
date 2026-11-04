@@ -51,8 +51,12 @@ def run_item(job, item, key):
             except urllib.error.HTTPError as e:
                 msg = e.read().decode(errors="replace")[:600]
                 errors.append(f"{model} HTTP {e.code}: {msg}")
-                if e.code in (429, 500, 503) and attempt < 2:
-                    time.sleep(40 * (attempt + 1)); continue
+                # Free tier counts failed calls too, so retry sparingly: one slow retry on overload/per-minute limits,
+                # and stop the whole job on a daily-quota 429 (it won't clear for hours).
+                if e.code == 429 and "per day" in msg:
+                    raise SystemExit(f"daily quota exhausted on {model}; stopping job")
+                if e.code in (429, 500, 503) and attempt < 1:
+                    time.sleep(120); continue
                 break
             except Exception as e:  # timeouts etc.
                 errors.append(f"{model} {type(e).__name__}: {e}")
