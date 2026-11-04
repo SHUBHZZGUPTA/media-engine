@@ -1,0 +1,19 @@
+{
+ "id": "in-thumb-search",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 10,
+ "files": [
+  {
+   "name": "s_akbar_portrait.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Portrait+of+Akbar+Mughal+emperor+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist"
+  },
+  {
+   "name": "s_shivaji_portrait.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Shivaji+Maharaj+portrait+painting+17th+century&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist"
+  },
+  {
+   "name": "s_shah_jahan_portrait.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Shah+Jahan+on+a+globe+portrait+Mughal+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist"
+  }
+ ]
+}
