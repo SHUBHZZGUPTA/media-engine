@@ -1,0 +1,51 @@
+{
+ "id": "mms-s026",
+ "video_id": "M4bIMSv4TFk",
+ "url": "https://youtube.com/shorts/M4bIMSv4TFk",
+ "channel": "MoneyMirageYT",
+ "channel_id": "UCiSFGdbq0TksbPPPm3oaIYQ",
+ "requested": {
+  "containsSyntheticMedia": false,
+  "privacyStatus": "private",
+  "publishAt": "2026-11-05T11:30:00Z"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-05T11:30:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-05T11:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-05T11:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "locked_private": false,
+ "ok": true
+}
