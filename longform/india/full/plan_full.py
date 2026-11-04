@@ -65,7 +65,7 @@ def card(n):
 # ---- layers ----
 def txt(s, x, y, t, size=72, box=None, color="#ffffff", out=None, enter="pop", scale=1.25):
     size = int(size * scale)
-    font = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if any(c in s for c in "→✓↓↑✗") else FONT
+    font = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if any(c in s for c in "→✓↓↑✗⅓π≈") else FONT
     wmax = max(len(r) for r in s.split("\n")) * size * .56 + (60 if box else 0)
     x = int(min(max(x, 40 + wmax / 2), 1880 - wmax / 2)) if wmax < 1800 else 960
     d = {"img": {"text": s, "size": size, "color": color, "box": box, "font": font}, "x": x, "y": y, "in": t, "enter": enter}
@@ -214,7 +214,7 @@ def seq(i, items, x=1250, y=600, size=86, box="#222222", extra=()):
     for k, (w, s) in enumerate(items):
         t0 = T(i, -.15) if k == 0 else K(i, w)
         b = board(t0, [txt(s, x, y, t0 + .05, size=size, box=box)] + list(extra)); b["cut"] = "hard" if k else "curve"
-def years(s, t, x=330, y=230): return lab(s, t, x=x, y=y, size=100)
+def years(s, t, x=330, y=105): return lab(s, t, x=x, y=y, size=92)   # own row above the titles (y~250)
 
 # coordinates (lon, lat)
 P = dict(PATAL=(85.14, 25.6), KALINGA=(85.84, 20.19), TAXILA=(72.83, 33.75), JHELUM=(73.73, 32.93), BEAS=(75.4, 31.5), BABYLON=(44.42, 32.54),
@@ -422,7 +422,7 @@ t = T(c + 8, -.15)
 globe("G_sultanate", t, [[t, 79, 25, 2.8], [T(c + 9, 1), 75, 30, 3.4]],
       over=[ov("ov_sultanate", fadein(t + .2, .8, 1.0)), ove("ov_sultanate_edge", fadein(t + .2, 1, 1.0)), ove("ov_in_edge", [[0, .45]])],
       arcs=[arcp([[100, 47], [85, 44], [72, 40], [68, 36], [70, 33]], K(c + 9, "Mongol"), 2.6, col="#FF5A3A")],
-      layers=[tag("5 dynasties · 300 years", T(c + 8, .2), x=1400, y=300), lab("Alauddin Khalji", K(c + 9, "Alauddin"), size=84), tag("Mongols: stopped", K(c + 9, "Mongol"), x=1400, y=440)])
+      layers=[tag("5 dynasties · 300 years", T(c + 8, .2), x=1400, y=300), lab("Alauddin Khalji", K(c + 9, "Alauddin"), y=560, size=84), tag("Mongols: stopped", K(c + 9, "Mongol"), x=1400, y=440)])
 plate(T(c + 10, -.15), a("in_delhi_court"), layers=[lab("Price controls", K(c + 10, "price"), size=100, box="#c99400"), tag("Grain · Horses · Cloth", K(c + 10, "grain"), y=420)],
       zoom=(1.0, 1.15))
 quip(c + 11)
