@@ -85,11 +85,12 @@ for job, name in PARTS:
     for q in range(len(PL) - 1, -1, -1):
         m = _re.match(r"\s*\[([^\]]*)\]", PL[q]["text"])
         if not m: continue
-        tagw = {nz(w) for w in m.group(1).split()} - {""}
+        allw = {nz(w) for w in m.group(1).split()} - {""}
+        tagw = {w for w in allw if len(w) > 3}; short = allw - tagw      # short tag words ("the", "at") may continue a cut, never start one
         lo = PL[q - 1]["t1"] - .05 if q else max(0.0, PL[q]["t0"] - 2.5)
         ws = [w_ for w_ in PW if max(lo, PL[q]["t0"] - 2.5) <= w_[0] < PL[q]["t1"]]
         n = 0
-        while n < len(ws) and any(_dl.SequenceMatcher(None, nz(ws[n][2]), t_).ratio() > .75 for t_ in tagw): n += 1
+        while n < len(ws) and (any(_dl.SequenceMatcher(None, nz(ws[n][2]), t_).ratio() > .75 for t_ in tagw) or (n > 0 and nz(ws[n][2]) in short)): n += 1
         if n == 0 or n >= len(ws) or not any(len(nz(w_[2])) >= 4 for w_ in ws[:n]): continue
         c0, c1 = max(0.0, ws[0][0] - .04), ws[n][0] - .06
         if c1 <= c0: continue

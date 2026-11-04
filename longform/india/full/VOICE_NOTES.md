@@ -78,3 +78,11 @@ Line check: 4 stage tags read aloud (auto-cut). Real problems, added to fix1 (We
 Narrator pitch (vs 119.1 Hz): p14 +2.9 OUT, p15 +0.9, p16 +0.7, p17 +0.3, p18 +2.8 OUT, p19 +3.1 OUT, p20 -0.2, p21 -0.3, p22 +0.5, p23 +0.6.
 Wed d4 (10 requests, full day): p24, p25, p04r, p07r, p08r, p10r, p14r, p18r, p19r + fix1 job (1 request).
 Thu if needed: p06 (+2.2), p13 (+1.8), and any re-take that drifts again.
+
+## Day 4 (4 Nov): 9 takes + fix1, all lines clean
+Narrator pitch: p24 +1.8, p25 +3.1, p04r +1.9, p07r +3.9 (worse than p07 +3.1), p08r +3.1 (better than +4.4), p10r +0.2, p14r +0.8, p18r -0.6, p19r +2.0.
+Golden Age material (Ch5) comes out high on every take (energetic delivery).
+Final pick (voice_parts.txt): best take per part: p04r, p07 (orig), p08r, p10r, p14r, p18r, p19r, rest original.
+fix1 spliced at 73, 106-110, 291 only (p10r/p19r already say 130, 131, 251 right; those map entries set negative = unused).
+Line 119 (whisper) +7 dB. Bug fixed: tag cutting removed the real word "Then" (tag word "the"); short tag words now only continue a cut.
+Still above 1.5 st: p04r, p06, p07, p08r, p13, p19r, p24, p25 -> Thu re-takes if Shubham hears a change in the review copy.
