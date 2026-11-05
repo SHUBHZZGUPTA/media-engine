@@ -64,6 +64,18 @@ def run_item(job, item, key):
     return {"ok": False, "model": None, "text": "", "usage": {}, "errors": errors}
 
 
+def list_models(key, out):
+    """Free metadata call (uses no generation quota): which models this key can call."""
+    url = "https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000"
+    req = urllib.request.Request(url, headers={"x-goog-api-key": key})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        models = json.load(r).get("models", [])
+    rows = [f'{m["name"]} | {",".join(m.get("supportedGenerationMethods", []))} | in {m.get("inputTokenLimit")}'
+            for m in models]
+    open(os.path.join(out, "models.txt"), "w").write("\n".join(rows) + "\n")
+    print(len(rows), "models listed")
+
+
 def main(path):
     job = json.load(open(path))
     key = os.environ.get("GEMINI_API_KEY")
@@ -71,6 +83,8 @@ def main(path):
         sys.exit("GEMINI_API_KEY missing")
     out = os.path.join("outputs", "watch", job["id"])
     os.makedirs(out, exist_ok=True)
+    if job.get("list_models_only"):
+        return list_models(key, out)
     report = {"id": job["id"], "url": job["url"], "items": {}}
     for item in job["items"]:
         res = run_item(job, item, key)
