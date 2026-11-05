@@ -1,0 +1,68 @@
+{
+ "id": "aliens-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "क्या ये aliens ने बनाया? चार जगहें, जिन पर लोग आज भी बहस करते हैं।"
+    ],
+    [
+     "Narrator",
+     "Peru की Nazca Lines: रेगिस्तान में thirteen hundred kilometres से ज़्यादा लकीरें और विशाल आकृतियाँ। एक hummingbird। एक बंदर। एक condor, a hundred and thirty-four metres लंबा।"
+    ],
+    [
+     "Narrator",
+     "करीब two thousand साल पहले बनीं... और कुछ तो सिर्फ़ आसमान से ही ठीक से दिखती हैं।"
+    ],
+    [
+     "Narrator",
+     "Bolivia का Puma Punku: पत्थर इतनी सटीकता से कटे कि आपस में बदले जा सकें, करीब four thousand metres की ऊँचाई पर।"
+    ],
+    [
+     "Narrator",
+     "Archaeologists आज तक पता नहीं लगा पाए कि वो perfect कोने किन औज़ारों से बने।"
+    ],
+    [
+     "Narrator",
+     "Lebanon का Baalbek: मंदिर के पत्थर eight hundred tonnes के... और खदान में, sixteen hundred and fifty tonnes का एक block। अब तक का सबसे बड़ा कटा पत्थर।"
+    ],
+    [
+     "Chars",
+     "[cartoon alien, nervous] मुझे मत देखो... मैं तो छुट्टी पर था।"
+    ],
+    [
+     "Narrator",
+     "और Egypt का Great Pyramid: two point three million blocks, लगभग एकदम true north की सीध में।"
+    ],
+    [
+     "Narrator",
+     "करीब four thousand साल तक, ये धरती की सबसे ऊँची इमारत रहा।"
+    ],
+    [
+     "Narrator",
+     "Aliens... या प्राचीन लोग, जो हमारी सोच से कहीं ज़्यादा smart थे? आप तय करिए।"
+    ],
+    [
+     "Chars",
+     "[cartoon alien, cheerful] मैं तो बस pyramid selfie के लिए आया हूँ।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611051336"
+}
