@@ -1,0 +1,64 @@
+{
+ "id": "fawkes-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "आज रात Britain एक ऐसे आदमी को जलाता है, जो sixteen-oh-six में मर चुका था।"
+    ],
+    [
+     "Narrator",
+     "Sixteen-oh-five में, thirteen साज़िशकर्ताओं ने Parliament के नीचे gunpowder के thirty-six barrels छिपाए... King को उड़ाने के लिए।"
+    ],
+    [
+     "Narrator",
+     "एक गुमनाम चिट्ठी ने उनका राज़ खोल दिया। चार November की रात, guards ने Guy Fawkes को cellar में पकड़ा... माचिस के साथ।"
+    ],
+    [
+     "Narrator",
+     "Parliament ने पाँच November को शुक्राना मनाने का दिन बना दिया... कानूनन, अगले two hundred and fifty साल तक।"
+    ],
+    [
+     "Narrator",
+     "Bonfires, fireworks, और सबसे ऊपर जलता एक 'guy'। पर Fawkes खुद कभी नहीं जला: वो फाँसी के तख्ते से कूदा, और उसकी गर्दन टूट गई।"
+    ],
+    [
+     "Narrator",
+     "Four hundred साल की आतिशबाज़ी... सिर्फ़ इसलिए कि एक आदमी पकड़ा गया?"
+    ],
+    [
+     "Narrator",
+     "Lewes, seventeen thousand लोगों का एक छोटा सा कस्बा, जहाँ eighty thousand तक लोग पहुँचते हैं, और seventeen जलते हुए crosses। दुनिया की bonfire capital।"
+    ],
+    [
+     "Narrator",
+     "और आज भी, Parliament के हर State Opening से पहले, Yeomen of the Guard cellars की तलाशी लेते हैं।"
+    ],
+    [
+     "Narrator",
+     "Remember, remember, the fifth of November."
+    ],
+    [
+     "Chars",
+     "[cartoon firework rocket, cheeky] आज रात फटने वाला... सिर्फ़ मैं हूँ!"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ],
+ "retry": "202611051333"
+}
