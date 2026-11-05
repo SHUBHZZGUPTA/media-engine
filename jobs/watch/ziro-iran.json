@@ -2,7 +2,6 @@
  "id": "ziro-iran",
  "url": "https://www.youtube.com/watch?v=FZ7EKujN-pY",
  "models": [
-  "gemini-3.1-pro-preview",
   "gemini-3.8-flash"
  ],
  "media_resolution": "MEDIA_RESOLUTION_LOW",
@@ -22,20 +21,6 @@
    "prompt": "Act as an audio forensics and voice-production expert. Listen ONLY to the narration (ignore visuals). Describe in detail: accent and dialect; gender/age impression; timbre; pitch range and how much it varies; speaking rate and how it changes; pauses (length, placement, are they natural breath pauses or uniform); audible breaths, mouth clicks, lip smacks, room tone, reverb; emphasis and emotional colouring across sentences; consistency of the voice over the whole clip (does tone reset between sentences?); any artefacts typical of synthetic speech (metallic/robotic edges, odd stress on names, identical intonation patterns repeating, unnatural sentence-final pitch, glitches, sudden timbre shifts, perfectly clean silence between lines). Then give your judgement: (a) human voice actor vs AI text-to-speech, with confidence % and the specific evidence (cite timestamps); (b) if AI, which family it most resembles and why: Google Gemini TTS prebuilt voices (e.g. Charon, Sadaltager, Puck, Orus, Algenib), ElevenLabs (e.g. stock narrator voices), OpenAI TTS, Higgsfield/Seed audio, Microsoft Azure neural voices, or a cloned voice. State clearly that you cannot be certain and list which audible traits support or contradict each candidate. (c) Post-processing you can hear: EQ, compression, speed-up, loudness, background music level under the voice."
   },
   {
-   "name": "voice_late",
-   "start": "2280s",
-   "end": "2460s",
-   "fps": 1,
-   "prompt": "Act as an audio forensics and voice-production expert. Listen ONLY to the narration (ignore visuals). Describe in detail: accent and dialect; gender/age impression; timbre; pitch range and how much it varies; speaking rate and how it changes; pauses (length, placement, are they natural breath pauses or uniform); audible breaths, mouth clicks, lip smacks, room tone, reverb; emphasis and emotional colouring across sentences; consistency of the voice over the whole clip (does tone reset between sentences?); any artefacts typical of synthetic speech (metallic/robotic edges, odd stress on names, identical intonation patterns repeating, unnatural sentence-final pitch, glitches, sudden timbre shifts, perfectly clean silence between lines). Then give your judgement: (a) human voice actor vs AI text-to-speech, with confidence % and the specific evidence (cite timestamps); (b) if AI, which family it most resembles and why: Google Gemini TTS prebuilt voices (e.g. Charon, Sadaltager, Puck, Orus, Algenib), ElevenLabs (e.g. stock narrator voices), OpenAI TTS, Higgsfield/Seed audio, Microsoft Azure neural voices, or a cloned voice. State clearly that you cannot be certain and list which audible traits support or contradict each candidate. (c) Post-processing you can hear: EQ, compression, speed-up, loudness, background music level under the voice."
-  },
-  {
-   "name": "skits_a",
-   "start": "270s",
-   "end": "330s",
-   "fps": 1,
-   "prompt": "Listen to the comedic dialogue skits in this segment. How many distinct character voices are there? For each: describe it (pitch, accent, age, character) and whether it sounds like a separately generated voice or the narrator's voice pitch-shifted/processed. How are the skits timed (gaps between lines, comic pauses, overlap)? Are there sound effects or music stings around them? How does the visual side work during skits (which characters move, lip sync, speech bubbles or subtitles, camera)? How does the narration hand into and out of the skit? Give timestamps."
-  },
-  {
    "name": "skits_b",
    "start": "1400s",
    "end": "1480s",
@@ -43,36 +28,22 @@
    "prompt": "Listen to the comedic dialogue skits in this segment. How many distinct character voices are there? For each: describe it (pitch, accent, age, character) and whether it sounds like a separately generated voice or the narrator's voice pitch-shifted/processed. How are the skits timed (gaps between lines, comic pauses, overlap)? Are there sound effects or music stings around them? How does the visual side work during skits (which characters move, lip sync, speech bubbles or subtitles, camera)? How does the narration hand into and out of the skit? Give timestamps."
   },
   {
-   "name": "seg_01-10",
+   "name": "seg_a",
    "start": "110s",
-   "end": "600s",
+   "end": "900s",
    "fps": 1,
    "prompt": "You are a senior YouTube editor reverse-engineering why this long-form history video holds viewers. For THIS segment, write a timestamped edit log (mm:ss) covering EVERY visual change. For each: what is on screen (map / cartoon set / character / real photo / text card / mascot), what moves and how (camera push/pan/zoom, character limb or mouth animation, map arrows drawing, territories filling, objects popping in, eye blinks, transitions), on-screen text exactly as shown, sound effects, music changes. Then answer: 1) average seconds between visual changes, and longest static hold; 2) how visuals are tied to the words (literal illustration? visual jokes? 'look at this map' moments?); 3) pattern interrupts and their spacing; 4) how characters are animated (puppet/cut-out rig, lip sync or not, expressions, how many poses); 5) the recurring mascot/host figure: when he appears and what he does; 6) music: genre, energy, where it changes or drops out, volume relative to voice; 7) sound-effect density per minute and types; 8) anything else that keeps a viewer watching. Be concrete and precise; do not generalise."
   },
   {
-   "name": "seg_10-18",
-   "start": "600s",
-   "end": "1100s",
+   "name": "seg_b",
+   "start": "900s",
+   "end": "1700s",
    "fps": 1,
    "prompt": "You are a senior YouTube editor reverse-engineering why this long-form history video holds viewers. For THIS segment, write a timestamped edit log (mm:ss) covering EVERY visual change. For each: what is on screen (map / cartoon set / character / real photo / text card / mascot), what moves and how (camera push/pan/zoom, character limb or mouth animation, map arrows drawing, territories filling, objects popping in, eye blinks, transitions), on-screen text exactly as shown, sound effects, music changes. Then answer: 1) average seconds between visual changes, and longest static hold; 2) how visuals are tied to the words (literal illustration? visual jokes? 'look at this map' moments?); 3) pattern interrupts and their spacing; 4) how characters are animated (puppet/cut-out rig, lip sync or not, expressions, how many poses); 5) the recurring mascot/host figure: when he appears and what he does; 6) music: genre, energy, where it changes or drops out, volume relative to voice; 7) sound-effect density per minute and types; 8) anything else that keeps a viewer watching. Be concrete and precise; do not generalise."
   },
   {
-   "name": "seg_18-26",
-   "start": "1100s",
-   "end": "1600s",
-   "fps": 1,
-   "prompt": "You are a senior YouTube editor reverse-engineering why this long-form history video holds viewers. For THIS segment, write a timestamped edit log (mm:ss) covering EVERY visual change. For each: what is on screen (map / cartoon set / character / real photo / text card / mascot), what moves and how (camera push/pan/zoom, character limb or mouth animation, map arrows drawing, territories filling, objects popping in, eye blinks, transitions), on-screen text exactly as shown, sound effects, music changes. Then answer: 1) average seconds between visual changes, and longest static hold; 2) how visuals are tied to the words (literal illustration? visual jokes? 'look at this map' moments?); 3) pattern interrupts and their spacing; 4) how characters are animated (puppet/cut-out rig, lip sync or not, expressions, how many poses); 5) the recurring mascot/host figure: when he appears and what he does; 6) music: genre, energy, where it changes or drops out, volume relative to voice; 7) sound-effect density per minute and types; 8) anything else that keeps a viewer watching. Be concrete and precise; do not generalise."
-  },
-  {
-   "name": "seg_26-35",
-   "start": "1600s",
-   "end": "2100s",
-   "fps": 1,
-   "prompt": "You are a senior YouTube editor reverse-engineering why this long-form history video holds viewers. For THIS segment, write a timestamped edit log (mm:ss) covering EVERY visual change. For each: what is on screen (map / cartoon set / character / real photo / text card / mascot), what moves and how (camera push/pan/zoom, character limb or mouth animation, map arrows drawing, territories filling, objects popping in, eye blinks, transitions), on-screen text exactly as shown, sound effects, music changes. Then answer: 1) average seconds between visual changes, and longest static hold; 2) how visuals are tied to the words (literal illustration? visual jokes? 'look at this map' moments?); 3) pattern interrupts and their spacing; 4) how characters are animated (puppet/cut-out rig, lip sync or not, expressions, how many poses); 5) the recurring mascot/host figure: when he appears and what he does; 6) music: genre, energy, where it changes or drops out, volume relative to voice; 7) sound-effect density per minute and types; 8) anything else that keeps a viewer watching. Be concrete and precise; do not generalise."
-  },
-  {
-   "name": "seg_35-42",
-   "start": "2100s",
+   "name": "seg_c",
+   "start": "1700s",
    "end": "2551s",
    "fps": 1,
    "prompt": "You are a senior YouTube editor reverse-engineering why this long-form history video holds viewers. For THIS segment, write a timestamped edit log (mm:ss) covering EVERY visual change. For each: what is on screen (map / cartoon set / character / real photo / text card / mascot), what moves and how (camera push/pan/zoom, character limb or mouth animation, map arrows drawing, territories filling, objects popping in, eye blinks, transitions), on-screen text exactly as shown, sound effects, music changes. Then answer: 1) average seconds between visual changes, and longest static hold; 2) how visuals are tied to the words (literal illustration? visual jokes? 'look at this map' moments?); 3) pattern interrupts and their spacing; 4) how characters are animated (puppet/cut-out rig, lip sync or not, expressions, how many poses); 5) the recurring mascot/host figure: when he appears and what he does; 6) music: genre, energy, where it changes or drops out, volume relative to voice; 7) sound-effect density per minute and types; 8) anything else that keeps a viewer watching. Be concrete and precise; do not generalise."
