@@ -3,23 +3,24 @@
  "kernel": "shubhzzgupta07/me-remotion-check",
  "url": "https://www.kaggle.com/code/shubhzzgupta07/me-remotion-check",
  "gpu_quota_before": {
-  "used_h": 5.39,
-  "remaining_h": 24.61,
+  "used_h": 5.44,
+  "remaining_h": 24.56,
   "total_h": 30.0
  },
- "pushed_at": "2026-11-06T07:10:29+00:00",
+ "pushed_at": "2026-11-06T07:20:15+00:00",
  "accelerator": "NvidiaTeslaT4",
- "version": 2,
+ "version": 3,
  "status": "COMPLETE",
- "checked_at": "2026-11-06T07:14:00+00:00",
+ "checked_at": "2026-11-06T07:24:46+00:00",
  "files": [
   "me-remotion-check.log",
   "remotion_check.json",
+  "sample_1080p_16frames.mp4",
   "still_angle-egl.jpg"
  ],
  "gpu_quota_after": {
-  "used_h": 5.44,
-  "remaining_h": 24.56,
+  "used_h": 5.51,
+  "remaining_h": 24.49,
   "total_h": 30.0
  }
 }

@@ -1,8 +1,77 @@
-[{"stream_name":"stdout","time":174.967959079,"data":"GPU NOT USABLE: Chrome could not render WebGL on the T4 with any GPU backend, even after installing the matching NVIDIA user-space libraries. No CPU render was run. See steps.stills for the renderer string each backend reported.\n"}
-,{"stream_name":"stderr","time":177.886322561,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":177.886352193,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":178.410696537,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":178.410717885,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":181.178473077,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":182.78763148,"data":"[NbConvertApp] Writing 352134 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":239.303133894,"data":"GPU RENDERING CONFIRMED\n"}
+,{"stream_name":"stdout","time":239.303185376,"data":"{\n"}
+,{"stream_name":"stdout","time":239.303190458,"data":" \"chrome_renderer_is_nvidia\": true,\n"}
+,{"stream_name":"stdout","time":239.303194242,"data":" \"nvidia_smi_load_seen\": true,\n"}
+,{"stream_name":"stdout","time":239.303197575,"data":" \"load\": {\n"}
+,{"stream_name":"stdout","time":239.303200997,"data":"  \"samples\": 14,\n"}
+,{"stream_name":"stdout","time":239.30320593,"data":"  \"max_util_pct\": 58,\n"}
+,{"stream_name":"stdout","time":239.303213199,"data":"  \"mean_util_pct\": 13.7,\n"}
+,{"stream_name":"stdout","time":239.303215671,"data":"  \"max_mem_mib\": 3171,\n"}
+,{"stream_name":"stdout","time":239.303217958,"data":"  \"min_mem_mib\": 0\n"}
+,{"stream_name":"stdout","time":239.303220208,"data":" }\n"}
+,{"stream_name":"stdout","time":239.303222318,"data":"}\n"}
+,{"stream_name":"stdout","time":239.303359517,"data":"{\n"}
+,{"stream_name":"stdout","time":239.303370763,"data":" \"1080p\": {\n"}
+,{"stream_name":"stdout","time":239.303374699,"data":"  \"t8\": 17.0,\n"}
+,{"stream_name":"stdout","time":239.303377963,"data":"  \"t16\": 20.4,\n"}
+,{"stream_name":"stdout","time":239.303381156,"data":"  \"ok\": true,\n"}
+,{"stream_name":"stdout","time":239.303384411,"data":"  \"gpu_load_16_frames\": {\n"}
+,{"stream_name":"stdout","time":239.303387735,"data":"   \"samples\": 14,\n"}
+,{"stream_name":"stdout","time":239.303391061,"data":"   \"max_util_pct\": 58,\n"}
+,{"stream_name":"stdout","time":239.303394271,"data":"   \"mean_util_pct\": 13.7,\n"}
+,{"stream_name":"stdout","time":239.303397578,"data":"   \"max_mem_mib\": 3171,\n"}
+,{"stream_name":"stdout","time":239.303400868,"data":"   \"min_mem_mib\": 0\n"}
+,{"stream_name":"stdout","time":239.303404678,"data":"  },\n"}
+,{"stream_name":"stdout","time":239.303408498,"data":"  \"sec_per_frame\": 0.42,\n"}
+,{"stream_name":"stdout","time":239.303411818,"data":"  \"overhead_s\": 13.6,\n"}
+,{"stream_name":"stdout","time":239.303415696,"data":"  \"est_total_min_for_2025_frames\": 14.3\n"}
+,{"stream_name":"stdout","time":239.303419415,"data":" },\n"}
+,{"stream_name":"stdout","time":239.303422568,"data":" \"2k\": {\n"}
+,{"stream_name":"stdout","time":239.303425858,"data":"  \"t8\": 17.5,\n"}
+,{"stream_name":"stdout","time":239.303428994,"data":"  \"t16\": 21.6,\n"}
+,{"stream_name":"stdout","time":239.303432213,"data":"  \"ok\": true,\n"}
+,{"stream_name":"stdout","time":239.303435367,"data":"  \"gpu_load_16_frames\": {\n"}
+,{"stream_name":"stdout","time":239.303438792,"data":"   \"samples\": 14,\n"}
+,{"stream_name":"stdout","time":239.303442028,"data":"   \"max_util_pct\": 38,\n"}
+,{"stream_name":"stdout","time":239.303445295,"data":"   \"mean_util_pct\": 11.4,\n"}
+,{"stream_name":"stdout","time":239.303448494,"data":"   \"max_mem_mib\": 3671,\n"}
+,{"stream_name":"stdout","time":239.303451731,"data":"   \"min_mem_mib\": 0\n"}
+,{"stream_name":"stdout","time":239.303454977,"data":"  },\n"}
+,{"stream_name":"stdout","time":239.303458056,"data":"  \"sec_per_frame\": 0.51,\n"}
+,{"stream_name":"stdout","time":239.303461325,"data":"  \"overhead_s\": 13.4,\n"}
+,{"stream_name":"stdout","time":239.303469841,"data":"  \"est_total_min_for_2025_frames\": 17.3\n"}
+,{"stream_name":"stdout","time":239.303472776,"data":" },\n"}
+,{"stream_name":"stdout","time":239.303474946,"data":" \"1080p_concurrency2_16frames\": {\n"}
+,{"stream_name":"stdout","time":239.303477215,"data":"  \"exit\": 0,\n"}
+,{"stream_name":"stdout","time":239.303479389,"data":"  \"secs\": 19.9,\n"}
+,{"stream_name":"stdout","time":239.303501899,"data":"  \"ok\": true,\n"}
+,{"stream_name":"stdout","time":239.303506289,"data":"  \"gpu_load\": {\n"}
+,{"stream_name":"stdout","time":239.303510444,"data":"   \"samples\": 13,\n"}
+,{"stream_name":"stdout","time":239.30351462,"data":"   \"max_util_pct\": 66,\n"}
+,{"stream_name":"stdout","time":239.303518288,"data":"   \"mean_util_pct\": 13.4,\n"}
+,{"stream_name":"stdout","time":239.303521564,"data":"   \"max_mem_mib\": 3061,\n"}
+,{"stream_name":"stdout","time":239.303524773,"data":"   \"min_mem_mib\": 0\n"}
+,{"stream_name":"stdout","time":239.303528026,"data":"  },\n"}
+,{"stream_name":"stdout","time":239.303531141,"data":"  \"tail\": \"\"\n"}
+,{"stream_name":"stdout","time":239.303534458,"data":" },\n"}
+,{"stream_name":"stdout","time":239.303537569,"data":" \"1080p_concurrency4_16frames\": {\n"}
+,{"stream_name":"stdout","time":239.303540938,"data":"  \"exit\": 0,\n"}
+,{"stream_name":"stdout","time":239.303544151,"data":"  \"secs\": 26.2,\n"}
+,{"stream_name":"stdout","time":239.303547353,"data":"  \"ok\": true,\n"}
+,{"stream_name":"stdout","time":239.303550509,"data":"  \"gpu_load\": {\n"}
+,{"stream_name":"stdout","time":239.303553761,"data":"   \"samples\": 17,\n"}
+,{"stream_name":"stdout","time":239.303557018,"data":"   \"max_util_pct\": 47,\n"}
+,{"stream_name":"stdout","time":239.303560253,"data":"   \"mean_util_pct\": 15.4,\n"}
+,{"stream_name":"stdout","time":239.303563483,"data":"   \"max_mem_mib\": 6003,\n"}
+,{"stream_name":"stdout","time":239.303566724,"data":"   \"min_mem_mib\": 0\n"}
+,{"stream_name":"stdout","time":239.303570099,"data":"  },\n"}
+,{"stream_name":"stdout","time":239.303578799,"data":"  \"tail\": \"\"\n"}
+,{"stream_name":"stdout","time":239.303581624,"data":" }\n"}
+,{"stream_name":"stdout","time":239.303595974,"data":"}\n"}
+,{"stream_name":"stderr","time":241.501865558,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":241.501897016,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":241.787326546,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":241.787351126,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":243.247744473,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":244.209510075,"data":"[NbConvertApp] Writing 354577 bytes to __results__.html\n"}
 ]
