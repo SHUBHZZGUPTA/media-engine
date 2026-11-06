@@ -304,6 +304,55 @@
   },
   "xsec_atomic_clock": {
    "desc": "3D diorama: satellite atomic clock module cut open, violet glowing cell ~(482,722), cracked sparking corner ~(873,421). (NavIC)"
+  },
+  "dv_aerial": {
+   "id": "dv_aerial",
+   "file": "scenes/dv_aerial.jpg",
+   "desc": "Photoreal aerial of an Antarctic dry valley: brown gravel floor, frozen blue lake mid-frame (~540,520), glacier snouts on valley walls, snowy peaks on horizon; valley floor ~520,780",
+   "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
+   "src": "Codex image gen"
+  },
+  "dv_dio_wall": {
+   "id": "dv_dio_wall",
+   "file": "scenes/dv_dio_wall.jpg",
+   "desc": "3D isometric diorama on navy: ice sheet left/back pressing against brown mountain ridge (~570,600), small glacier tongues (~440,860), bare brown valley right with tiny frozen lake",
+   "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
+   "src": "Codex image gen"
+  },
+  "dv_wind": {
+   "id": "dv_wind",
+   "file": "scenes/dv_wind.jpg",
+   "desc": "Katabatic windstorm: snow streamers pouring down a glacier slope (top ~507,270) across a bare brown valley floor (~507,990), low backlit sun",
+   "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
+   "src": "Codex image gen"
+  },
+  "dv_snow": {
+   "id": "dv_snow",
+   "file": "scenes/dv_snow.jpg",
+   "desc": "Ground-level Antarctic dry valley: brown gravel, ventifact rocks, thin snow patches turning to vapour wisps (~416,1032), brown mountains, blue sky",
+   "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
+   "src": "Codex image gen"
+  },
+  "dv_seal": {
+   "id": "dv_seal",
+   "file": "scenes/dv_seal.jpg",
+   "desc": "Antarctic dry valley floor with a single freeze-dried seal carcass lying on gravel (~480,910), not gory; mountains + glaciers behind",
+   "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
+   "src": "Codex image gen"
+  },
+  "dv_mars": {
+   "id": "dv_mars",
+   "file": "scenes/dv_mars.jpg",
+   "desc": "Mars rust-red rocky plain, pink sky; generic 1970s three-legged lander, dish antenna, no logos (~250,520)",
+   "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
+   "src": "Codex image gen"
+  },
+  "dv_rock_dio": {
+   "id": "dv_rock_dio",
+   "file": "scenes/dv_rock_dio.jpg",
+   "desc": "3D diorama on navy: sandstone boulder sliced open, thin green+black microbe band just under its surface (~560,472), on a gravel slab",
+   "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
+   "src": "Codex image gen"
   }
  }
 }
