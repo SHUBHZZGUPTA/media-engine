@@ -176,12 +176,30 @@ def is_gpu(renderer):
     return bool(renderer and NVIDIA.search(renderer) and not SOFTWARE.search(renderer))
 
 
+# The Remotion CLI does not print console messages from the page, but the Node API's onBrowserLog does, so the test
+# frame is rendered through this small helper (it prints the "GLRENDERER ..." line the probe in Root.tsx emits).
+PROBE_STILL = r'''import path from "node:path";
+import { bundle } from "@remotion/bundler";
+import { renderStill, selectComposition } from "@remotion/renderer";
+const [gl, out, exe] = process.argv.slice(2);
+const browserExecutable = exe || undefined;
+const chromiumOptions = { gl };
+const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts") });
+const onBrowserLog = (l) => { if (/GLRENDERER/.test(l.text)) console.log(l.text); };
+const composition = await selectComposition({ serveUrl, id: "BridgeShort", browserExecutable, chromiumOptions, onBrowserLog });
+await renderStill({ composition, serveUrl, frame: 900, output: out, imageFormat: "jpeg", scale: 0.5, browserExecutable, chromiumOptions, onBrowserLog, timeoutInMilliseconds: 300000 });
+console.log("STILL_DONE");
+'''
+os.makedirs(f"{W}/scripts", exist_ok=True)
+with open(f"{W}/scripts/probe_still.mjs", "w") as f:
+    f.write(PROBE_STILL)
+
+
 def still(gl):
     path = f"{OUT}/still_{gl}.jpg"
     if os.path.exists(path):
         os.remove(path)
-    c, s, log = sh(f"npx remotion still src/index.ts BridgeShort {path} --frame=900 --scale=0.5 --gl={gl} "
-                   f"--image-format=jpeg --log=verbose{BROWSER}", cwd=W, env=ENV, timeout=600)
+    c, s, log = sh(f"node scripts/probe_still.mjs {gl} {path} {WRAP if CHROME else ''}", cwd=W, env=ENV, timeout=600)
     std = None
     if os.path.exists(path):
         from PIL import Image
