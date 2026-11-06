@@ -1,0 +1,9 @@
+{
+ "id": "remotion-check",
+ "script": "gpu/remotion_check.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 90,
+ "wait_minutes": 60,
+ "requested": "2026-11-06T12:40+05:30"
+}
