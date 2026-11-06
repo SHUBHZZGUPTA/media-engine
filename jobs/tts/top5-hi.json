@@ -1,0 +1,83 @@
+{
+ "id": "top5-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline (the lines after '...'). Build excitement through the countdown, peak on Russia, then a playful, knowing tone for the China-versus-USA twist. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "ये पाँच देश मिलकर धरती की करीब एक तिहाई ज़मीन घेरते हैं। क्या आप इनके नाम बता सकते हैं?"
+    ],
+    [
+     "Narrator",
+     "उल्टी गिनती शुरू। नंबर five अमेरिका के पूरे lower 48 states से भी बड़ा है।"
+    ],
+    [
+     "Narrator",
+     "Brazil। करीब 8.5 million square kilometres। ... और फिर भी सिर्फ़ पाँचवाँ।"
+    ],
+    [
+     "Narrator",
+     "नंबर four और three? उन पर बाद में आएँगे। ... वो एक पंगा हैं।"
+    ],
+    [
+     "Narrator",
+     "नंबर two: Canada। 10 million से थोड़ा कम, और दुनिया की सबसे लंबी coastline।"
+    ],
+    [
+     "Narrator",
+     "करीब 243,000 kilometres। बिना रुके चलें, तो पाँच साल से ज़्यादा लगेंगे। ... स्नैक्स साथ रखना।"
+    ],
+    [
+     "Narrator",
+     "नंबर one: Russia। करीब 17 million, 11 time zones में फैला।"
+    ],
+    [
+     "Narrator",
+     "जब पश्चिम में मंगलवार की रात होती है, पूरब में बुधवार की सुबह हो चुकी होती है।"
+    ],
+    [
+     "Narrator",
+     "तो, नंबर three और four। China, और United States।"
+    ],
+    [
+     "Narrator",
+     "सिर्फ़ ज़मीन गिनें, तो China बड़ा है। करीब 9.3 million बनाम 9.1।"
+    ],
+    [
+     "Narrator",
+     "झीलें और समुद्री तट का पानी जोड़ें, तो US आगे निकल जाता है। करीब 9.8 बनाम 9.6।"
+    ],
+    [
+     "Narrator",
+     "वही देश। दो रैंकिंग। ... Atlas असल में पानी के गड्ढों पर लड़ रहे हैं।"
+    ],
+    [
+     "Narrator",
+     "तो तीसरा कौन? ... दोनों। फ़र्क़ 3 percent से भी कम है।"
+    ],
+    [
+     "Narrator",
+     "Size सिर्फ़ ज़मीन नहीं। ये इस पर है कि पानी कहाँ तक गिना जाए।"
+    ],
+    [
+     "Narrator",
+     "अब आप पाँचों के नाम जानते हैं। ... और दो पर बहस भी कर सकते हैं।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}
