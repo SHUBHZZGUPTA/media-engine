@@ -1,0 +1,48 @@
+{
+ "job": "hyperframes-webgpu-3",
+ "kernel": "shubhzzgupta07/me-hyperframes-webgpu-3",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-hyperframes-webgpu-3",
+ "gpu_quota_before": {
+  "used_h": 5.56,
+  "remaining_h": 24.44,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-06T08:26:44+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-06T08:31:15+00:00",
+ "files": [
+  "00_node.log",
+  "01_install.log",
+  "02_probe.log",
+  "03_init.log",
+  "me-hyperframes-webgpu-3.log",
+  "render_vfx-magnetic.log",
+  "report.json",
+  "snap_aurora_auto.log",
+  "snap_aurora_hardware.log",
+  "snap_chrome-orb_auto.log",
+  "snap_chrome-orb_hardware.log",
+  "snap_godrays_auto.log",
+  "snap_godrays_hardware.log",
+  "snap_hologram_auto.log",
+  "snap_hologram_hardware.log",
+  "snap_liquid-metal_auto.log",
+  "snap_liquid-metal_hardware.log",
+  "snap_mesh-gradient_auto.log",
+  "snap_mesh-gradient_hardware.log",
+  "snap_nebula_auto.log",
+  "snap_nebula_hardware.log",
+  "snap_vfx-magnetic_hardware.log",
+  "snap_water_auto.log",
+  "snap_water_hardware.log",
+  "vfx-magnetic.mp4",
+  "vfx-magnetic.png"
+ ],
+ "gpu_quota_after": {
+  "used_h": 5.63,
+  "remaining_h": 24.37,
+  "total_h": 30.0
+ }
+}

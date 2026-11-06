@@ -1,0 +1,222 @@
+$ npx hyperframes render /kaggle/tmp/hf/p_vfx-magnetic -q draft --browser-gpu -o /kaggle/working/vfx-magnetic.mp4
+rc=0 30s
+
+◆  Rendering p_vfx-magnetic → /kaggle/working/vfx-magnetic.mp4
+   30fps · draft · auto workers (4 cores detected)
+   GPU: browser GPU (forced)
+
+
+  Lint: 0 error(s), 1 warning(s) — run `hyperframes lint` for full output.
+  Continuing render despite lint issues. Use --strict to block errors.
+
+  █░░░░░░░░░░░░░░░░░░░░░░░░  5%  Compiling composition
+@hf-progress {"code":"compile","pct":5}
+  ██░░░░░░░░░░░░░░░░░░░░░░░  10%  Extracting video frames
+@hf-progress {"code":"extract_video","pct":10}
+  █████░░░░░░░░░░░░░░░░░░░░  20%  Processing audio tracks
+@hf-progress {"code":"process_audio","pct":20}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Checking browser GPU
+@hf-progress {"code":"start_browsers","pct":25}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Streaming frame 1/180
+@hf-progress {"code":"capture","done":1,"total":180,"pct":25}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 4/180
+@hf-progress {"code":"capture","done":4,"total":180,"pct":26}
+  ██████░░░░░░░░░░░░░░░░░░░  27%  Streaming frame 7/180
+@hf-progress {"code":"capture","done":7,"total":180,"pct":27}
+  ███████░░░░░░░░░░░░░░░░░░  28%  Streaming frame 10/180
+@hf-progress {"code":"capture","done":10,"total":180,"pct":28}
+  ███████░░░░░░░░░░░░░░░░░░  29%  Streaming frame 13/180
+@hf-progress {"code":"capture","done":13,"total":180,"pct":29}
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 16/180
+@hf-progress {"code":"capture","done":16,"total":180,"pct":30}
+  ███████░░░░░░░░░░░░░░░░░░  30%  Streaming frame 17/180
+@hf-progress {"code":"capture","done":17,"total":180,"pct":30}
+  ███████░░░░░░░░░░░░░░░░░░  31%  Streaming frame 20/180
+@hf-progress {"code":"capture","done":20,"total":180,"pct":31}
+  ████████░░░░░░░░░░░░░░░░░  32%  Streaming frame 23/180
+@hf-progress {"code":"capture","done":23,"total":180,"pct":32}
+  ████████░░░░░░░░░░░░░░░░░  33%  Streaming frame 26/180
+@hf-progress {"code":"capture","done":26,"total":180,"pct":33}
+  ████████░░░░░░░░░░░░░░░░░  34%  Streaming frame 29/180
+@hf-progress {"code":"capture","done":29,"total":180,"pct":34}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 32/180
+@hf-progress {"code":"capture","done":32,"total":180,"pct":35}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 34/180
+@hf-progress {"code":"capture","done":34,"total":180,"pct":35}
+  █████████░░░░░░░░░░░░░░░░  36%  Streaming frame 36/180
+@hf-progress {"code":"capture","done":36,"total":180,"pct":36}
+  █████████░░░░░░░░░░░░░░░░  37%  Streaming frame 38/180
+@hf-progress {"code":"capture","done":38,"total":180,"pct":37}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 41/180
+@hf-progress {"code":"capture","done":41,"total":180,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  38%  Streaming frame 44/180
+@hf-progress {"code":"capture","done":44,"total":180,"pct":38}
+  █████████░░░░░░░░░░░░░░░░  39%  Streaming frame 47/180
+@hf-progress {"code":"capture","done":47,"total":180,"pct":39}
+  ██████████░░░░░░░░░░░░░░░  40%  Streaming frame 50/180
+@hf-progress {"code":"capture","done":50,"total":180,"pct":40}
+  ██████████░░░░░░░░░░░░░░░  41%  Streaming frame 53/180
+@hf-progress {"code":"capture","done":53,"total":180,"pct":41}
+  ██████████░░░░░░░░░░░░░░░  42%  Streaming frame 56/180
+@hf-progress {"code":"capture","done":56,"total":180,"pct":42}
+  ██████████░░░░░░░░░░░░░░░  43%  Streaming frame 59/180
+@hf-progress {"code":"capture","done":59,"total":180,"pct":43}
+  ███████████░░░░░░░░░░░░░░  44%  Streaming frame 62/180
+@hf-progress {"code":"capture","done":62,"total":180,"pct":44}
+  ███████████░░░░░░░░░░░░░░  45%  Streaming frame 65/180
+@hf-progress {"code":"capture","done":65,"total":180,"pct":45}
+  ███████████░░░░░░░░░░░░░░  46%  Streaming frame 68/180
+@hf-progress {"code":"capture","done":68,"total":180,"pct":46}
+  ███████████░░░░░░░░░░░░░░  47%  Streaming frame 71/180
+@hf-progress {"code":"capture","done":71,"total":180,"pct":47}
+  ████████████░░░░░░░░░░░░░  48%  Streaming frame 74/180
+@hf-progress {"code":"capture","done":74,"total":180,"pct":48}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 77/180
+@hf-progress {"code":"capture","done":77,"total":180,"pct":49}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 80/180
+@hf-progress {"code":"capture","done":80,"total":180,"pct":49}
+  ████████████░░░░░░░░░░░░░  50%  Streaming frame 83/180
+@hf-progress {"code":"capture","done":83,"total":180,"pct":50}
+  ████████████░░░░░░░░░░░░░  51%  Streaming frame 86/180
+@hf-progress {"code":"capture","done":86,"total":180,"pct":51}
+  █████████████░░░░░░░░░░░░  52%  Streaming frame 89/180
+@hf-progress {"code":"capture","done":89,"total":180,"pct":52}
+  █████████████░░░░░░░░░░░░  53%  Streaming frame 92/180
+@hf-progress {"code":"capture","done":92,"total":180,"pct":53}
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 95/180
+@hf-progress {"code":"capture","done":95,"total":180,"pct":54}
+  █████████████░░░░░░░░░░░░  55%  Streaming frame 98/180
+@hf-progress {"code":"capture","done":98,"total":180,"pct":55}
+  ██████████████░░░░░░░░░░░  56%  Streaming frame 101/180
+@hf-progress {"code":"capture","done":101,"total":180,"pct":56}
+  ██████████████░░░░░░░░░░░  57%  Streaming frame 104/180
+@hf-progress {"code":"capture","done":104,"total":180,"pct":57}
+  ██████████████░░░░░░░░░░░  58%  Streaming frame 107/180
+@hf-progress {"code":"capture","done":107,"total":180,"pct":58}
+  ██████████████░░░░░░░░░░░  59%  Streaming frame 110/180
+@hf-progress {"code":"capture","done":110,"total":180,"pct":59}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 113/180
+@hf-progress {"code":"capture","done":113,"total":180,"pct":60}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 116/180
+@hf-progress {"code":"capture","done":116,"total":180,"pct":60}
+  ███████████████░░░░░░░░░░  61%  Streaming frame 119/180
+@hf-progress {"code":"capture","done":119,"total":180,"pct":61}
+  ███████████████░░░░░░░░░░  62%  Streaming frame 122/180
+@hf-progress {"code":"capture","done":122,"total":180,"pct":62}
+  ███████████████░░░░░░░░░░  63%  Streaming frame 125/180
+@hf-progress {"code":"capture","done":125,"total":180,"pct":63}
+  ████████████████░░░░░░░░░  64%  Streaming frame 128/180
+@hf-progress {"code":"capture","done":128,"total":180,"pct":64}
+  ████████████████░░░░░░░░░  65%  Streaming frame 131/180
+@hf-progress {"code":"capture","done":131,"total":180,"pct":65}
+  ████████████████░░░░░░░░░  66%  Streaming frame 134/180
+@hf-progress {"code":"capture","done":134,"total":180,"pct":66}
+  ████████████████░░░░░░░░░  67%  Streaming frame 137/180
+@hf-progress {"code":"capture","done":137,"total":180,"pct":67}
+  █████████████████░░░░░░░░  68%  Streaming frame 140/180
+@hf-progress {"code":"capture","done":140,"total":180,"pct":68}
+  █████████████████░░░░░░░░  69%  Streaming frame 143/180
+@hf-progress {"code":"capture","done":143,"total":180,"pct":69}
+  █████████████████░░░░░░░░  70%  Streaming frame 146/180
+@hf-progress {"code":"capture","done":146,"total":180,"pct":70}
+  █████████████████░░░░░░░░  71%  Streaming frame 149/180
+@hf-progress {"code":"capture","done":149,"total":180,"pct":71}
+  █████████████████░░░░░░░░  71%  Streaming frame 152/180
+@hf-progress {"code":"capture","done":152,"total":180,"pct":71}
+  ██████████████████░░░░░░░  72%  Streaming frame 154/180
+@hf-progress {"code":"capture","done":154,"total":180,"pct":72}
+  ██████████████████░░░░░░░  73%  Streaming frame 156/180
+@hf-progress {"code":"capture","done":156,"total":180,"pct":73}
+  ██████████████████░░░░░░░  73%  Streaming frame 158/180
+@hf-progress {"code":"capture","done":158,"total":180,"pct":73}
+  ██████████████████░░░░░░░  74%  Streaming frame 160/180
+@hf-progress {"code":"capture","done":160,"total":180,"pct":74}
+  ██████████████████░░░░░░░  75%  Streaming frame 162/180
+@hf-progress {"code":"capture","done":162,"total":180,"pct":75}
+  ██████████████████░░░░░░░  75%  Streaming frame 164/180
+@hf-progress {"code":"capture","done":164,"total":180,"pct":75}
+  ███████████████████░░░░░░  76%  Streaming frame 166/180
+@hf-progress {"code":"capture","done":166,"total":180,"pct":76}
+  ███████████████████░░░░░░  76%  Streaming frame 168/180
+@hf-progress {"code":"capture","done":168,"total":180,"pct":76}
+  ███████████████████░░░░░░  77%  Streaming frame 171/180
+@hf-progress {"code":"capture","done":171,"total":180,"pct":77}
+  ███████████████████░░░░░░  78%  Streaming frame 173/180
+@hf-progress {"code":"capture","done":173,"total":180,"pct":78}
+  ███████████████████░░░░░░  78%  Streaming frame 175/180
+@hf-progress {"code":"capture","done":175,"total":180,"pct":78}
+  ███████████████████░░░░░░  79%  Streaming frame 178/180
+@hf-progress {"code":"capture","done":178,"total":180,"pct":79}
+  ████████████████████░░░░░  80%  Streaming frame 180/180
+@hf-progress {"code":"capture","done":180,"total":180,"pct":80}
+  ██████████████████████░░░  90%  Encoding frame 171/180
+@hf-progress {"code":"encode","done":171,"total":180,"pct":90}
+  ██████████████████████░░░  90%  Encoding frame 180/180
+@hf-progress {"code":"encode","done":180,"total":180,"pct":90}
+  ██████████████████████░░░  90%  Assembling final video
+@hf-progress {"code":"assemble","done":0,"total":6,"pct":90}
+  ██████████████████████░░░  90%  Assembling final video
+@hf-progress {"code":"assemble","done":0,"total":6,"pct":90}
+  ████████████████████████░  99%  Assembling final video
+@hf-progress {"code":"assemble","done":6,"total":6,"pct":99}
+  █████████████████████████  100%  Render complete
+
+◇  /kaggle/working/vfx-magnetic.mp4
+   110.1 KB · 6.0s video · rendered in 26.9s
+   screenshot capture · hardware gpu · compile 0.7s · extract 0.0s · audio 0.0s · probe 0.1s · setup 0.7s · capture 25.2s · encode (during capture) 25.1s · assemble 0.1s
+   Screenshot capture (slower): BeginFrame did not run. Needs chrome-headless-shell and no --resolution upscale. A BeginFrame probe timeout can occur when browsers start together on one GPU; fewer --workers may help.
+@hf-result {"version":1,"operation":"render","reference_background":{"kind":"solid","rgb":[0,0,0]}}
+Checking browser...
+Browser: env
+[SystemMemory] cgroup memory limit detected: 30720 MiB. It governs memory-adaptive render behaviour instead of host RAM.
+[INFO] [Render] Pipeline started {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","platform":"linux","arch":"x64","nodeVersion":"v22.12.0","fps":{"num":30,"den":1},"format":"mp4","quality":"draft","browserGpuMode":"hardware","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"pipeline","status":"checkpoint","elapsedMs":5,"message":"started","format":"mp4","quality":"draft","browserGpuMode":"hardware","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"compile","status":"start","elapsedMs":9,"needsAlpha":false}
+[INFO] [Compiler] Fetched 11 font face(s) for "Inter" from Google Fonts (cached to /root/.cache/hyperframes/fonts/inter)
+[INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /root/.cache/hyperframes/fonts/jetbrains-mono)
+[INFO] [Compiler] Injected deterministic @font-face rules for 2 requested font families
+[INFO] [Compiler] Inlined CDN script: https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js
+[WARN] Auto-selected screenshot capture mode for render compatibility {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","reasonCodes":["htmlInCanvas"],"reasons":["Detected html-in-canvas API (layoutsubtree canvas). Chrome does not support concurrent drawElementImage across multiple workers; render is pinned to a single worker."]}
+[INFO] Compiled composition metadata {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","entryFile":"index.html","staticDuration":6,"width":1920,"height":1080,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":true,"reasons":[{"code":"htmlInCanvas","message":"Detected html-in-canvas API (layoutsubtree canvas). Chrome does not support concurrent drawElementImage across multiple workers; render is pinned to a single worker."}]}}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"compile","status":"end","elapsedMs":558,"durationMs":549,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"compile","status":"checkpoint","elapsedMs":560,"message":"composition metadata resolved","width":1920,"height":1080,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":true,"compositionHash":"6701b5002b8ee5a1"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"browser_probe","status":"start","elapsedMs":561,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"browser_probe","status":"end","elapsedMs":704,"durationMs":143,"forceScreenshot":true,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"browser_probe","status":"checkpoint","elapsedMs":707,"message":"duration resolved","durationSeconds":6,"totalFrames":180,"compositionHash":"6701b5002b8ee5a1","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"video_extract","status":"start","elapsedMs":707,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"video_extract","status":"end","elapsedMs":708,"durationMs":1,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"video_extract","status":"checkpoint","elapsedMs":711,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":4}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"hdr_detection","status":"checkpoint","elapsedMs":712,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"audio_process","status":"start","elapsedMs":712,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"file_server","status":"start","elapsedMs":713,"reused":false}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"audio_process","status":"end","elapsedMs":719,"durationMs":7,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"file_server","status":"end","elapsedMs":720,"durationMs":7}
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[hyperframes] browserGpuMode=hardware was requested, but the WebGL probe found no hardware GPU, so Chrome will silently fall back to software WebGL and the capture will run at CPU speed. Honouring the explicit request anyway.
+  Inside Docker, the container needs GPU passthrough: `--gpus all` with the NVIDIA Container Toolkit installed, or `--device /dev/dri` for Mesa/AMD/Intel. The image also needs the matching userspace driver + libEGL. Verify with `hyperframes render --browser-gpu` and watch for this warning disappearing.
+  Pass --no-browser-gpu to select deterministic SwiftShader instead of waiting on a hardware path that is not there.
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"capture_calibration","status":"checkpoint","elapsedMs":1444,"message":"skipped","requestedWorkers":"auto","totalFrames":180,"htmlInCanvasDetected":true,"lowMemoryMode":false,"deInversionEligible":false,"deParallelRouterEligible":false}
+[WARN] [Render] html-in-canvas (drawElementImage) detected, pinning to 1 worker (Chrome concurrency limitation). {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"worker_resolution","status":"checkpoint","elapsedMs":1445,"message":"resolved","workerCount":1}
+[INFO] streaming-encode gate {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","enabled":true,"reason":"single_worker","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":1,"durationSeconds":6,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"capture_strategy","status":"checkpoint","elapsedMs":1446,"message":"resolved","workerCount":1,"forceScreenshot":true,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"capture_streaming","status":"start","elapsedMs":1446,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":0,"captureMode":"screenshot","captureOperation":"captureScreenshot"}
+[BrowserManager] Browser launched (HeadlessChrome/152.0.7977.30, screenshot, gl=--use-gl=angle --use-angle=gl-egl, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (354ms)
+[initSession:screenshot] GSAP proxy flush complete (372ms)
+[HyperFrames] render runtime fps {"canonicalFps":30,"source":"render-options","rawFpsSource":"render-options","rawFps":30}
+[Browser:PAGEERROR] Failed to execute 'texElementImage2D' on 'WebGL2RenderingContext': The provided value is not of type '(Element or ElementImage)'.
+[Browser:PAGEERROR] Failed to execute 'texElementImage2D' on 'WebGL2RenderingContext': The provided value is not of type '(Element or ElementImage)'.
+[initSession:screenshot] pollHfReady complete (659ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (664ms)
+[initSession:screenshot] applyVideoMetadataHints complete (665ms)
+[initSession:screenshot] media + fonts + tailwind ready (668ms)
+[initSession:screenshot] static-frame dedup: disabled (canvas/webgl) (716ms)
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"capture_streaming","status":"end","elapsedMs":26598,"durationMs":25152,"stagePhase":"capturing","workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"assemble","status":"start","elapsedMs":26599,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"assemble","status":"end","elapsedMs":26748,"durationMs":149,"stagePhase":"capturing","hasAudio":false,"workerCount":1,"forceScreenshot":true,"totalFrames":180,"framesCompleted":180,"captureMode":"screenshot","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"61b823b7-1f85-459c-a538-6295f1c986ae","phase":"pipeline","status":"checkpoint","elapsedMs":26867,"message":"artifact validated","totalElapsedMs":26866}

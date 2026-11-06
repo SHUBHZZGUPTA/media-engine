@@ -1,0 +1,10 @@
+$ npx hyperframes snapshot /kaggle/tmp/hf/p_nebula --no-end --describe false --at 1.00 -o /kaggle/tmp/hf/snap_nebula_hardware --timeout 30000 --browser-gpu
+rc=1 5s
+◆  Capturing 1 frames at [1s] from p_nebula
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[hyperframes] browserGpuMode=hardware was requested, but the WebGL probe found no hardware GPU, so Chrome will silently fall back to software WebGL and the capture will run at CPU speed. Honouring the explicit request anyway.
+  Inside Docker, the container needs GPU passthrough: `--gpus all` with the NVIDIA Container Toolkit installed, or `--device /dev/dri` for Mesa/AMD/Intel. The image also needs the matching userspace driver + libEGL. Verify with `hyperframes render --browser-gpu` and watch for this warning disappearing.
+  Pass --no-browser-gpu to select deterministic SwiftShader instead of waiting on a hardware path that is not there.
+[SystemMemory] cgroup memory limit detected: 30720 MiB. It governs memory-adaptive render behaviour instead of host RAM.
+
+✗ Snapshot failed: This composition declares data-requires-webgpu, but a usable WebGPU device could not be created on this browser launch. Run on a host with a GPU, set PRODUCER_ALLOW_SOFTWARE_WEBGPU=true to render it on SwiftShader (slow), or remove data-requires-webgpu.

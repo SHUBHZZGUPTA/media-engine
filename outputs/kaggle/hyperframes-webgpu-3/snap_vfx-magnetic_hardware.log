@@ -1,0 +1,19 @@
+$ npx hyperframes snapshot /kaggle/tmp/hf/p_vfx-magnetic --no-end --describe false --at 3.00 -o /kaggle/tmp/hf/snap_vfx-magnetic_hardware --timeout 30000 --browser-gpu
+rc=0 7s
+◆  Capturing 1 frames at [3s] from p_vfx-magnetic
+
+   Fonts: 4 loaded
+   Revision: none (unversioned)
+   State: /kaggle/tmp/hf/p_vfx-magnetic/.hyperframes/video-state.json
+
+◇  1 snapshots saved to /kaggle/tmp/hf/snap_vfx-magnetic_hardware
+   /kaggle/tmp/hf/snap_vfx-magnetic_hardware/frame-00-at-3s.png
+   /kaggle/tmp/hf/snap_vfx-magnetic_hardware/contact-sheet.jpg (grid view for AI review)
+[INFO] [Compiler] Fetched 10 font face(s) for "JetBrains Mono" from Google Fonts (cached to /root/.cache/hyperframes/fonts/jetbrains-mono)
+[INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[hyperframes] browserGpuMode=hardware was requested, but the WebGL probe found no hardware GPU, so Chrome will silently fall back to software WebGL and the capture will run at CPU speed. Honouring the explicit request anyway.
+  Inside Docker, the container needs GPU passthrough: `--gpus all` with the NVIDIA Container Toolkit installed, or `--device /dev/dri` for Mesa/AMD/Intel. The image also needs the matching userspace driver + libEGL. Verify with `hyperframes render --browser-gpu` and watch for this warning disappearing.
+  Pass --no-browser-gpu to select deterministic SwiftShader instead of waiting on a hardware path that is not there.
+[SystemMemory] cgroup memory limit detected: 30720 MiB. It governs memory-adaptive render behaviour instead of host RAM.
+[hyperframes] snapshot: frame 1/1 at 3s

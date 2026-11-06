@@ -1,0 +1,3 @@
+$ node probe.js
+rc=0 1s
+{"vulkan_gpu_page":"gpu page: net::ERR_FAILED at chrome://gpu","vulkan":"no navigator.gpu","egl_gpu_page":"gpu page: net::ERR_FAILED at chrome://gpu","egl":"no navigator.gpu","default_gpu_page":"gpu page: net::ERR_FAILED at chrome://gpu","default":"no navigator.gpu"}
