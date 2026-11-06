@@ -1,0 +1,14 @@
+{
+ "id": "ai-influencer-test-1",
+ "script": "gpu/ai_influencer_test.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 75,
+ "wait_minutes": 80,
+ "requested": "2026-11-06T15:55+05:30",
+ "params": {
+  "characteristics": "male European, wearing glasses and leather jacket with a smile on face",
+  "script": "Our planet is a masterpiece of life, a delicate balance of ecosystems. But this harmony is under threat. Every year, 8 million tons of plastic enter our oceans, choking marine life.",
+  "seed": 7
+ }
+}
