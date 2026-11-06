@@ -1,0 +1,48 @@
+$ npm init -y >/dev/null && npm i hyperframes@0.8.181 puppeteer-core@23 >/dev/null 2>&1 && npx hyperframes browser ensure
+rc=0 19s
+┌  hyperframes browser ensure
+[?25l│
+◒  Looking for an existing browser[1G[J◐  Looking for an existing browser[1G[J◓  Looking for an existing browser[1G[J◑  Looking for an existing browser[1G[J◒  Looking for an existing browser[1G[J◐  Looking for an existing browser[1G[J◓  Looking for an existing browser[1G[J◑  Looking for an existing browser[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 0% (516 B / 113.9 MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 0% (516 B / 113.9 MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 0% (516 B / 113.9 MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 0% (516 B / 113.9 MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 0% (516 B / 113.9 MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 0% (516 B / 113.9 MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 0% (516 B / 113.9 MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 1% (1.1 MB / 113.9 MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 3% (3.4 MB / 113.9 MB)..[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 5% (5.7 MB / 113.9 MB)..[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 8% (9.1 MB / 113.9 MB)..[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 11% (12.5 MB / 113.9 MB)..[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 14% (15.9 MB / 113.9 MB)..[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 17% (19.4 MB / 113.9 MB)..[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 20% (22.8 MB / 113.9 MB)..[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 23% (26.2 MB / 113.9 MB)..[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 26% (29.6 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 29% (33.0 MB / 113.9 
+MB)...[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 32% (36.4 MB / 113.9 
+MB)...[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 35% (39.9 MB / 113.9 
+MB)...[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 37% (42.1 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 40% (45.6 MB / 113.9 
+MB)...[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 43% (49.0 MB / 113.9 
+MB)...[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 46% (52.4 MB / 113.9 
+MB)...[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 49% (55.8 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 52% (59.2 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 55% (62.6 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 58% (66.0 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 61% (69.5 MB / 113.9 MB)[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 64% (72.9 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 67% (76.3 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 70% (79.7 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 72% (82.0 MB / 113.9 MB)[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 75% (85.4 MB / 113.9 MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 78% (88.8 MB / 113.9 MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 81% (92.2 MB / 113.9 MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 84% (95.6 MB / 113.9 MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 87% (99.1 MB / 113.9 MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 90% (102.5 MB / 113.9 MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 93% (105.9 MB / 113.9 MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 96% (109.3 MB / 113.9 MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 99% (112.7 MB / 113.9 
+MB)..[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◇  Download complete
+[?25h
+   Source:  download
+   Path:    /root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell
+
+│
+└  Ready to render.
+

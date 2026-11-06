@@ -1,0 +1,13 @@
+$ npx hyperframes snapshot /kaggle/tmp/hf/p_chrome-orb --no-end --describe false --at 1.00 -o /kaggle/tmp/hf/snap_chrome-orb_auto --timeout 30000 --browser-gpu
+rc=1 4s
+◆  Capturing 1 frames at [1s] from p_chrome-orb
+[hyperframes] browserGpuMode probe → software (probe failed (Protocol error (Target.setDiscoverTargets): Target closed))
+[hyperframes] browserGpuMode=hardware was requested, but the GPU probe could not run, so hardware acceleration is UNVERIFIED. If Chrome falls back to software WebGL the capture will run at CPU speed. Honouring the explicit request anyway.
+  This is a probe failure, not evidence of a missing GPU: see the `browserGpuMode probe → software (probe failed ...)` line above for the underlying error, which usually means Chrome could not launch (bad HYPERFRAMES_BROWSER_PATH, missing shared libraries, or a denied sandbox) rather than a GPU problem.
+  Run `hyperframes doctor` to check the Chrome install.
+[SystemMemory] cgroup memory limit detected: 30720 MiB. It governs memory-adaptive render behaviour instead of host RAM.
+
+✗ Snapshot failed: Protocol error (Target.setDiscoverTargets): Target closed
+Chrome exited with code 127 when launched on its own.
+stderr:
+/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory

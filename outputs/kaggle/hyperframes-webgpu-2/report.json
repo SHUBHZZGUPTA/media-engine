@@ -1,0 +1,140 @@
+{
+ "started": "2026-11-06 08:20:20",
+ "blocks": {
+  "aurora": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 9,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   }
+  },
+  "nebula": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   }
+  },
+  "liquid-metal": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   }
+  },
+  "water": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 5,
+    "frames": 0
+   }
+  },
+  "hologram": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   }
+  },
+  "godrays": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   }
+  },
+  "mesh-gradient": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   }
+  },
+  "chrome-orb": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 4,
+    "frames": 0
+   }
+  },
+  "vfx-magnetic": {
+   "add_rc": 0,
+   "snap_hardware": {
+    "rc": 1,
+    "sec": 2,
+    "frames": 0
+   },
+   "snap_auto": {
+    "rc": 1,
+    "sec": 2,
+    "frames": 0
+   }
+  }
+ },
+ "nvidia_smi": "Tesla T4, 580.178.04, 15360 MiB\nTesla T4, 580.178.04, 15360 MiB",
+ "vulkan_icd_files": "ls: cannot access '/usr/share/vulkan/icd.d': No such file or directory\n/etc/vulkan/icd.d:",
+ "nvidia_libs": "libEGL_nvidia.so.0\nlibEGL_nvidia.so.580.178.04\nlibEGL.so\nlibEGL.so.1\nlibEGL.so.1.1.0\nlibGLX_indirect.so.0\nlibGLX_nvidia.so.0\nlibGLX_nvidia.so.580.178.04\nlibGLX.so\nlibGLX.so.0\nlibnvidia-eglcore.so.580.178.04\nlibnvidia-egl-gbm.so.1\nlibnvidia-egl-gbm.so.1.1.3\nlibnvidia-egl-wayland.so.1\nlibnvidia-egl-wayland.so.1.1.20\nlibnvidia-egl-xcb.so.1\nlibnvidia-egl-xcb.so.1.0.5\nlibnvidia-egl-xlib.so.1\nlibnvidia-egl-xlib.so.1.0.5\nlibnvidia-glvkspirv.so.580.178.04",
+ "driver_caps": "compute,utility",
+ "icd_written": "libGLX_nvidia.so.0",
+ "vulkaninfo": "",
+ "vulkan_loader_errors": "",
+ "install": {
+  "rc": 0,
+  "sec": 19
+ },
+ "headless_shell": "/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell",
+ "webgpu_probe": {
+  "vulkan": "error: Failed to launch the browser process!\n/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n",
+  "egl": "error: Failed to launch the browser process!\n/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n",
+  "default": "error: Failed to launch the browser process!\n/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+ },
+ "finished": "2026-11-06 08:22:13"
+}
