@@ -1,0 +1,83 @@
+{
+ "id": "top5-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline (the lines after '...'). Build excitement through the countdown, peak on Russia, then a playful, knowing tone for the China-versus-USA twist. Chars voices funny cartoon characters, short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Five countries cover about a third of all land on Earth. Can you name them?"
+    ],
+    [
+     "Narrator",
+     "Let's count down. Number five is bigger than the entire lower forty-eight states."
+    ],
+    [
+     "Narrator",
+     "Brazil. About eight and a half million square kilometres. ... And it's only fifth."
+    ],
+    [
+     "Narrator",
+     "Numbers four and three? We'll come back to those. ... They're a problem."
+    ],
+    [
+     "Narrator",
+     "Number two: Canada. Just under ten million, with the longest coastline on Earth."
+    ],
+    [
+     "Narrator",
+     "About two hundred and forty-three thousand kilometres. Walk it non-stop, and you'd need over five years. ... Bring snacks."
+    ],
+    [
+     "Narrator",
+     "Number one: Russia. About seventeen million, across eleven time zones."
+    ],
+    [
+     "Narrator",
+     "When it's Tuesday night in the west, it's already Wednesday morning in the east."
+    ],
+    [
+     "Narrator",
+     "So, numbers three and four. China, and the United States."
+    ],
+    [
+     "Narrator",
+     "Count only land, and China is bigger. About nine point three million, to nine point one."
+    ],
+    [
+     "Narrator",
+     "Add lakes and coastal waters, and the US jumps ahead. About nine point eight, to nine point six."
+    ],
+    [
+     "Narrator",
+     "Same countries. Two rankings. ... Atlases are basically arguing over puddles."
+    ],
+    [
+     "Narrator",
+     "So who's third? ... Both. The gap is under three percent."
+    ],
+    [
+     "Narrator",
+     "Size isn't just land. It's where you decide the water counts."
+    ],
+    [
+     "Narrator",
+     "Now you can name all five. ... And argue about two."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
