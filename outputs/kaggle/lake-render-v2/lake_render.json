@@ -1,0 +1,126 @@
+{
+ "python": "3.13.16",
+ "cpus": 4,
+ "params": {
+  "src_sha256": "9e34231867bcc04b45bf7a2719cdd08910e108a2f057332a0775d66d853ea991",
+  "frames": 2076,
+  "segments": 4,
+  "scale": "1.3333333333333333",
+  "crf": 18,
+  "concurrency": 2,
+  "src_file": "lake_src_v2.tar.gz"
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4\n10.8.2",
+  "apt_chrome_libs": {
+   "exit": 0,
+   "secs": 13.2
+  },
+  "source": {
+   "sha256": "9e34231867bcc04b45bf7a2719cdd08910e108a2f057332a0775d66d853ea991",
+   "expected": "9e34231867bcc04b45bf7a2719cdd08910e108a2f057332a0775d66d853ea991",
+   "bytes": 95643
+  },
+  "npm_install": {
+   "exit": 0,
+   "secs": 21.4,
+   "tail": "npm notice\nnpm notice New major version of npm available! 10.8.2 -> 12.2.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n"
+  },
+  "browser_ensure": {
+   "exit": 0,
+   "secs": 4.2,
+   "tail": "Getting Headless Shell - 95.5 Mb/102.5 Mb\nGot Headless Shell\nHas browser at /tmp/lake/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "nvidia_gl_debs": {
+   "driver": "580.178.04",
+   "exit": 0,
+   "secs": 19.1,
+   "unpacked": [
+    "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+    "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+    "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+   ]
+  },
+  "chrome": "/tmp/lake/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell",
+  "probe": {
+   "exit": 0,
+   "secs": 21.8,
+   "renderers": {
+    "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)": 1
+   },
+   "bad": [],
+   "pixel_std": 30.5,
+   "tail": ""
+  },
+  "render": {
+   "exit": 0,
+   "secs": 272.3,
+   "tail": "seg1 99/519\nseg1 199/519\nseg1 299/519\nseg1 399/519\nseg1 499/519\nSEG_DONE 1 0-518 73.6s\nseg2 99/519\nseg2 199/519\nseg2 299/519\nseg2 399/519\nseg2 499/519\nSEG_DONE 2 519-1037 68.7s\nseg3 99/519\nseg3 199/519\nseg3 299/519\nseg3 399/519\nseg3 499/519\nSEG_DONE 3 1038-1556 61.9s\nseg4 99/519\nseg4 199/519\nseg4 299/519\nseg4 399/519\nseg4 499/519\nSEG_DONE 4 1557-2075 64.5s\nALL_DONE\n[Tab 0, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 0, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 0, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 0, src/Root.tsx:10] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n",
+   "gpu_load": {
+    "samples": 131,
+    "max_util_pct": 54,
+    "mean_util_pct": 20.0,
+    "max_mem_mib": 3606,
+    "min_mem_mib": 0
+   }
+  }
+ },
+ "segments": [
+  [
+   0,
+   518
+  ],
+  [
+   519,
+   1037
+  ],
+  [
+   1038,
+   1556
+  ],
+  [
+   1557,
+   2075
+  ]
+ ],
+ "renderers_seen_in_render": {
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)": 8
+ },
+ "renderer_bad": [],
+ "segment_files": [
+  {
+   "file": "lake_seg1.mp4",
+   "mb": 17.5,
+   "frames": 519
+  },
+  {
+   "file": "lake_seg2.mp4",
+   "mb": 19.6,
+   "frames": 519
+  },
+  {
+   "file": "lake_seg3.mp4",
+   "mb": 9.7,
+   "frames": 519
+  },
+  {
+   "file": "lake_seg4.mp4",
+   "mb": 7.9,
+   "frames": 519
+  }
+ ],
+ "gpu_proof": {
+  "every_tab_reported_nvidia": true,
+  "tabs_logged": 8,
+  "nvidia_smi_load_seen": true,
+  "load": {
+   "samples": 131,
+   "max_util_pct": 54,
+   "mean_util_pct": 20.0,
+   "max_mem_mib": 3606,
+   "min_mem_mib": 0
+  }
+ },
+ "verdict": "GPU RENDER COMPLETE"
+}

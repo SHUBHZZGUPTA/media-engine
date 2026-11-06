@@ -1,0 +1,30 @@
+{
+ "job": "lake-render-v2",
+ "kernel": "shubhzzgupta07/me-lake-render-v2",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-lake-render-v2",
+ "gpu_quota_before": {
+  "used_h": 5.94,
+  "remaining_h": 24.06,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-06T11:08:10+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-06T11:14:43+00:00",
+ "files": [
+  "lake_render.json",
+  "lake_seg1.mp4",
+  "lake_seg2.mp4",
+  "lake_seg3.mp4",
+  "lake_seg4.mp4",
+  "me-lake-render-v2.log",
+  "probe_still.jpg",
+  "renderer_seen.json"
+ ],
+ "gpu_quota_after": {
+  "used_h": 6.04,
+  "remaining_h": 23.96,
+  "total_h": 30.0
+ }
+}
