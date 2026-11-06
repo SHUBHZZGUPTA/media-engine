@@ -1,0 +1,25 @@
+{
+ "job": "remotion-check",
+ "kernel": "shubhzzgupta07/me-remotion-check",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-remotion-check",
+ "gpu_quota_before": {
+  "used_h": 5.34,
+  "remaining_h": 24.66,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-06T07:03:39+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-06T07:06:41+00:00",
+ "files": [
+  "me-remotion-check.log",
+  "remotion_check.json",
+  "still_angle-egl.jpg"
+ ],
+ "gpu_quota_after": {
+  "used_h": 5.39,
+  "remaining_h": 24.61,
+  "total_h": 30.0
+ }
+}
