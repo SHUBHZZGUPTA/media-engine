@@ -1,0 +1,10 @@
+{
+ "id": "lake-render",
+ "script": "gpu/lake_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 90,
+ "wait_minutes": 75,
+ "params": {"src_sha256": "0f9f0e6715b066e427a3cee5e149cc49d83aa5ce2a93a304ec22c5ea83fbf72e", "frames": 2076, "segments": 4, "scale": "1.3333333333333333", "crf": 18, "concurrency": 2},
+ "requested": "2026-11-06T14:55+05:30"
+}
