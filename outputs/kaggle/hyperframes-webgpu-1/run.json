@@ -1,0 +1,28 @@
+{
+ "job": "hyperframes-webgpu-1",
+ "kernel": "shubhzzgupta07/me-hyperframes-webgpu-1",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-hyperframes-webgpu-1",
+ "gpu_quota_before": {
+  "used_h": 5.51,
+  "remaining_h": 24.49,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-06T08:12:52+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "ERROR",
+ "checked_at": "2026-11-06T08:14:23+00:00",
+ "files": [
+  "00_node.log",
+  "01_install.log",
+  "02_probe.log",
+  "03_init.log",
+  "me-hyperframes-webgpu-1.log",
+  "report.json"
+ ],
+ "gpu_quota_after": {
+  "used_h": 5.52,
+  "remaining_h": 24.48,
+  "total_h": 30.0
+ }
+}

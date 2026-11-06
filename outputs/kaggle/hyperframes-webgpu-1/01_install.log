@@ -1,0 +1,38 @@
+$ npm init -y >/dev/null && npm i hyperframes@0.8.181 puppeteer-core@23 >/dev/null 2>&1 && npx hyperframes browser ensure
+rc=0 15s
+┌  hyperframes browser ensure
+[?25l│
+◒  Looking for an existing browser[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 2% (2.3 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 12% (13.7 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 25% (28.5 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 42% (47.8 MB / 113.9 MB)[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 60% (68.3 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 74% (84.3 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 90% (102.5 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)..[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB)...[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◓  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◑  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◒  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 MB)[1G[J◐  Downloading Chrome Headless Shell v152.0.7977.30 — 100% (113.9 MB / 113.9 
+MB).[1G[J◇  Download complete
+[?25h
+   Source:  download
+   Path:    /root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell
+
+│
+└  Ready to render.
+

@@ -1,0 +1,32 @@
+$ npx hyperframes init proj --example blank --non-interactive
+rc=0 1s
+Created proj/
+  AGENTS.md
+  CLAUDE.md
+  hyperframes.json
+  index.html
+  meta.json
+  package.json
+
+Get started:
+
+  1. Use your HyperFrames plugin, or install standalone skills:
+     npx hyperframes skills update
+
+  2. Open this project with your AI coding agent:
+     cd proj then start Claude Code, Cursor, or your preferred agent
+
+  3. Try a starter prompt:
+     "Using /hyperframes, create a 15-second intro about [your topic]"
+     More patterns: hyperframes.heygen.com/prompting/overview
+
+  4. Preview in the browser:
+     cd proj && npm run dev
+
+  5. Check the composition:
+     cd proj && npm run check
+
+  6. Render to MP4 when ready:
+     cd proj && npm run render
+
+  Full docs: hyperframes.heygen.com

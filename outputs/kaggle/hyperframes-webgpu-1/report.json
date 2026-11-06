@@ -1,0 +1,18 @@
+{
+ "started": "2026-11-06 08:12:56",
+ "blocks": {},
+ "nvidia_smi": "Tesla T4, 580.178.04, 15360 MiB\nTesla T4, 580.178.04, 15360 MiB",
+ "vulkan_icd_files": "ls: cannot access '/usr/share/vulkan/icd.d': No such file or directory\n/etc/vulkan/icd.d:",
+ "icd_written": "/usr/local/nvidia/lib64/libGLX_nvidia.so.0",
+ "vulkaninfo": "apiVersion         = 1.4.318\n\tdeviceName         = llvmpipe (LLVM 20.1.2, 256 bits)\n\tdriverName         = llvmpipe",
+ "install": {
+  "rc": 0,
+  "sec": 15
+ },
+ "headless_shell": "/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell",
+ "webgpu_probe": {
+  "vulkan": "error: Failed to launch the browser process!\n/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n",
+  "egl": "error: Failed to launch the browser process!\n/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n",
+  "default": "error: Failed to launch the browser process!\n/root/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell: error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+ }
+}
