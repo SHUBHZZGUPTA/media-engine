@@ -25,7 +25,7 @@ import urllib.request
 OUT = "/kaggle/working"
 W = "/tmp/lake"
 P = json.loads(JOB_PARAMS)  # noqa: F821  (prepended by tools/kaggle_run.py)
-SRC_URL = "https://raw.githubusercontent.com/SHUBHZZGUPTA/media-engine/main/gpu/lake_short/lake_src.tar.gz"
+SRC_URL = "https://raw.githubusercontent.com/SHUBHZZGUPTA/media-engine/main/gpu/lake_short/" + P.get("src_file", "lake_src.tar.gz")
 MAX_MB = 38  # the repo keeps files up to 40 MB
 os.makedirs(OUT, exist_ok=True)
 RES = {"python": platform.python_version(), "cpus": os.cpu_count(), "params": P, "steps": {}}
