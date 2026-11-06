@@ -1,0 +1,23 @@
+{
+ "id": "top5-en-l1",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "line1_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline (the lines after '...'). Build excitement through the countdown, peak on Russia, then a playful, knowing tone for the China-versus-USA twist. Chars voices funny cartoon characters, short and punchy. Say every word exactly as written, including 'about'.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Five countries cover about a third of all land on Earth. Can you name them?"
+    ]
+   ]
+  }
+ ]
+}
