@@ -45,9 +45,11 @@ if not Path(f"/kaggle/tmp/{NODE}").exists():
     sh(f"cd /kaggle/tmp && curl -sSL https://nodejs.org/dist/v22.12.0/{NODE}.tar.xz | tar xJ", log="00_node.log")
 ENV["PATH"] = f"/kaggle/tmp/{NODE}/bin:" + ENV["PATH"]
 # Vulkan loader + tools so Chrome can reach the NVIDIA driver; harmless if already present.
-sh("apt-get -qq update && apt-get -qq install -y libvulkan1 vulkan-tools mesa-vulkan-drivers libatk1.0-0 libatk-bridge2.0-0 libcups2 "
-   "libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2 libnss3 libxss1 libxshmfence1 "
-   "libdrm2 libegl1 libgl1 > /dev/null 2>&1", log="00_apt.log", timeout=900)
+PKGS = ("libvulkan1 vulkan-tools mesa-vulkan-drivers libatk1.0-0t64 libatk1.0-0 libatk-bridge2.0-0t64 libatk-bridge2.0-0 libcups2t64 libcups2 "
+        "libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 libasound2 libnss3 libxss1 "
+        "libxshmfence1 libdrm2 libegl1 libgl1 libatspi2.0-0t64 libatspi2.0-0 libxfixes3 libxext6 libx11-6 libxcb1").split()
+sh("apt-get -qq update > /dev/null 2>&1", timeout=600)
+report["apt"] = {p: sh(f"apt-get -qq install -y --no-install-recommends {p} > /dev/null 2>&1", timeout=600)[0] for p in PKGS}
 report["nvidia_libs"] = sh("ls /usr/local/nvidia/lib64 2>&1 | grep -iE 'vulkan|glx|egl|gpucomp|glvk' | head -20")[1].strip()
 report["driver_caps"] = os.environ.get("NVIDIA_DRIVER_CAPABILITIES", "unset")
 icd = Path("/usr/share/vulkan/icd.d/nvidia_icd.json")
@@ -82,6 +84,7 @@ const i=a.info||{};return {vendor:i.vendor,architecture:i.architecture,device:i.
 await b.close();}catch(e){out[k]='error: '+e.message}}console.log(JSON.stringify(out));})();
 """
 (WORK / "probe.js").write_text(probe)
+report["chrome_missing_libs"] = sh(f"ldd {shell} | grep 'not found'")[1].strip() if shell else "no shell"
 rc, txt, s = sh("node probe.js", cwd=WORK, log="02_probe.log", timeout=300)
 try:
     report["webgpu_probe"] = json.loads(txt.strip().splitlines()[-1])
