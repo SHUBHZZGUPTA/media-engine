@@ -1,8 +1,8 @@
-[{"stream_name":"stdout","time":160.931463867,"data":"GPU NOT USABLE: Chrome could not render WebGL on the T4 with any GPU backend, even after installing the matching NVIDIA user-space libraries. No CPU render was run. See steps.stills for the renderer string each backend reported.\n"}
-,{"stream_name":"stderr","time":163.213101949,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":163.213174035,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":163.50647461,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":163.50650306,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":164.790640655,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":165.791044288,"data":"[NbConvertApp] Writing 344281 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":174.967959079,"data":"GPU NOT USABLE: Chrome could not render WebGL on the T4 with any GPU backend, even after installing the matching NVIDIA user-space libraries. No CPU render was run. See steps.stills for the renderer string each backend reported.\n"}
+,{"stream_name":"stderr","time":177.886322561,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":177.886352193,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":178.410696537,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":178.410717885,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":181.178473077,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":182.78763148,"data":"[NbConvertApp] Writing 352134 bytes to __results__.html\n"}
 ]

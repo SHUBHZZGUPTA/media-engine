@@ -6,58 +6,69 @@
    "nvidia_smi": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
    "graphics_libs": "libvulkan.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libvulkan.so.1\n\tlibGLX_mesa.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX_mesa.so.0\n\tlibGLX.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX.so.0\n\tlibEGL_mesa.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL_mesa.so.0\n\tlibEGL.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL.so.1",
    "icd_files": "ls: cannot access '/usr/share/vulkan/icd.d': No such file or directory\n/etc/vulkan/icd.d:\n\n/usr/share/glvnd/egl_vendor.d:\n50_mesa.json",
-   "dev_nodes": "ls: cannot access '/dev/dri': No such file or directory\ncrw-rw-rw- 1 root root 195,   0 Nov  6 07:03 /dev/nvidia0\ncrw-rw-rw- 1 root root 195,   1 Nov  6 07:03 /dev/nvidia1\ncrw-rw-rw- 1 root root 195, 255 Nov  6 07:03 /dev/nvidiactl\ncrw-rw-rw- 1 root root 240,   0 Nov  6 07:03 /dev/nvidia-uvm\ncrw-rw-rw- 1 root root 240,   1 Nov  6 07:03 /dev/nvidia-uvm-tools\n\n/dev/nvidia-caps:\ntotal 0\ncr-------- 1 root root 243, 1 Nov  6 07:03 nvidia-cap1\ncr--r--r-- 1 root root 243, 2 Nov  6 07:03 nvidia-cap2"
+   "dev_nodes": "ls: cannot access '/dev/dri': No such file or directory\ncrw-rw-rw- 1 root root 195,   0 Nov  6 07:10 /dev/nvidia0\ncrw-rw-rw- 1 root root 195,   1 Nov  6 07:10 /dev/nvidia1\ncrw-rw-rw- 1 root root 195, 255 Nov  6 07:10 /dev/nvidiactl\ncrw-rw-rw- 1 root root 240,   0 Nov  6 07:10 /dev/nvidia-uvm\ncrw-rw-rw- 1 root root 240,   1 Nov  6 07:10 /dev/nvidia-uvm-tools\n\n/dev/nvidia-caps:\ntotal 0\ncr-------- 1 root root 243, 1 Nov  6 07:10 nvidia-cap1\ncr--r--r-- 1 root root 243, 2 Nov  6 07:10 nvidia-cap2"
   },
   "node": "v22.23.4\n10.8.2",
   "apt_chrome_libs": {
    "exit": 0,
-   "secs": 11.8,
+   "secs": 16.8,
    "tail": ""
   },
   "clone_skill": {
    "exit": 0,
-   "secs": 1.1,
+   "secs": 1.5,
    "tail": ""
   },
   "npm_install": {
    "exit": 0,
-   "secs": 21.4,
+   "secs": 21.6,
    "tail": "npm notice\nnpm notice New major version of npm available! 10.8.2 -> 12.2.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n"
   },
   "browser_ensure": {
    "exit": 0,
-   "secs": 4.5,
+   "secs": 4.6,
    "tail": "Getting Headless Shell - 76.4 Mb/102.5 Mb\nGetting Headless Shell - 85.9 Mb/102.5 Mb\nGetting Headless Shell - 95.5 Mb/102.5 Mb\nGot Headless Shell\nHas browser at /tmp/studio/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell\n"
   },
+  "chrome": {
+   "path": "/tmp/studio/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell",
+   "wrapper": "/tmp/chrome_gpu.sh"
+  },
+  "nvidia_gl_debs": {
+   "driver": "580.178.04",
+   "exit": 0,
+   "secs": 22.2,
+   "log_tail": ".1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero_v2.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libumf.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link\n\n",
+   "graphics_libs_after": "libvulkan.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libvulkan.so.1\n\tlibnvidia-glvkspirv.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-glvkspirv.so.580.178.04\n\tlibnvidia-glvkspirv.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glvkspirv.so.580.178.04\n\tlibnvidia-glsi.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-glsi.so.580.178.04\n\tlibnvidia-glsi.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glsi.so.580.178.04\n\tlibnvidia-glcore.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-glcore.so.580.178.04\n\tlibnvidia-glcore.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glcore.so.580.178.04\n\tlibnvidia-eglcore.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-eglcore.so.580.178.04\n\tlibnvidia-eglcore.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-eglcore.so.580.178.04\n\tlibnvidia-egl-xlib.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-xlib.so.1\n\tlibnvidia-egl-xcb.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-xcb.so.1\n\tlibnvidia-egl-wayland.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-wayland.so.1\n\tlibnvidia-egl-wayland.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-wayland.so.1\n\tlibnvidia-egl-gbm.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-gbm.so.1\n\tlibGLX_nvidia.so.0 (libc6,x86-64) => /usr/local/nvidia/lib64/libGLX_nvidia.so.0\n\tlibGLX_nvidia.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX_nvidia.so.0\n\tlibGLX_mesa.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX_mesa.so.0\n\tlibGLX.so.0 (libc6,x86-64) => /usr/local/nvidia/lib64/libGLX.so.0\n\tlibGLX.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX.so.0\n\tlibGLX.so (libc6,x86-64) => /usr/local/nvidia/lib64/libGLX.so\n\tlibEGL_nvidia.so.0 (libc6,x86-64) => /usr/local/nvidia/lib64/libEGL_nvidia.so.0\n\tlibEGL_nvidia.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL_nvidia.so.0\n\tlibEGL_mesa.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL_mesa.so.0\n\tlibEGL.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libEGL.so.1\n\tlibEGL.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL.so.1\n\tlibEGL.so (libc6,x86-64) => /usr/local/nvidia/lib64/libEGL.so"
+  },
   "stills": {
-   "as_found:angle-egl": {
+   "after_deb_unpack:angle-egl": {
     "exit": 0,
-    "secs": 51.0,
+    "secs": 28.5,
     "renderer": null,
     "pixel_std": 63.1,
     "draws": true,
     "on_gpu": false,
     "tail": ""
    },
-   "as_found:egl": {
+   "after_deb_unpack:egl": {
     "exit": 1,
-    "secs": 6.2,
+    "secs": 6.1,
     "renderer": null,
     "pixel_std": null,
     "draws": false,
     "on_gpu": false,
     "tail": "b] Failed to load resource: the server responded with a status of 404 (Not Found)\n\ud83d\udca1 You might need to set the OpenGL renderer to \"angle\". Learn why at https://www.remotion.dev/docs/three\n\ud83d\udca1 Check how it's done at https://www.remotion.dev/docs/chromium-flags#--gl\n Error  Error creating WebGL context.\n"
    },
-   "as_found:vulkan": {
+   "after_deb_unpack:vulkan": {
     "exit": 1,
-    "secs": 5.9,
+    "secs": 5.8,
     "renderer": null,
     "pixel_std": null,
     "draws": false,
     "on_gpu": false,
     "tail": "b] Failed to load resource: the server responded with a status of 404 (Not Found)\n\ud83d\udca1 You might need to set the OpenGL renderer to \"angle\". Learn why at https://www.remotion.dev/docs/three\n\ud83d\udca1 Check how it's done at https://www.remotion.dev/docs/chromium-flags#--gl\n Error  Error creating WebGL context.\n"
    },
-   "as_found:angle": {
+   "after_deb_unpack:angle": {
     "exit": 1,
     "secs": 6.0,
     "renderer": null,
@@ -66,36 +77,36 @@
     "on_gpu": false,
     "tail": "b] Failed to load resource: the server responded with a status of 404 (Not Found)\n\ud83d\udca1 You might need to set the OpenGL renderer to \"angle\". Learn why at https://www.remotion.dev/docs/three\n\ud83d\udca1 Check how it's done at https://www.remotion.dev/docs/chromium-flags#--gl\n Error  Error creating WebGL context.\n"
    },
-   "after_nvidia_libs:angle-egl": {
+   "after_run_installer:angle-egl": {
     "exit": 0,
-    "secs": 13.2,
+    "secs": 11.3,
     "renderer": null,
     "pixel_std": 63.1,
     "draws": true,
     "on_gpu": false,
     "tail": ""
    },
-   "after_nvidia_libs:egl": {
+   "after_run_installer:egl": {
     "exit": 1,
-    "secs": 5.8,
+    "secs": 5.9,
     "renderer": null,
     "pixel_std": null,
     "draws": false,
     "on_gpu": false,
     "tail": "b] Failed to load resource: the server responded with a status of 404 (Not Found)\n\ud83d\udca1 You might need to set the OpenGL renderer to \"angle\". Learn why at https://www.remotion.dev/docs/three\n\ud83d\udca1 Check how it's done at https://www.remotion.dev/docs/chromium-flags#--gl\n Error  Error creating WebGL context.\n"
    },
-   "after_nvidia_libs:vulkan": {
+   "after_run_installer:vulkan": {
     "exit": 1,
-    "secs": 6.2,
+    "secs": 5.6,
     "renderer": null,
     "pixel_std": null,
     "draws": false,
     "on_gpu": false,
     "tail": "b] Failed to load resource: the server responded with a status of 404 (Not Found)\n\ud83d\udca1 You might need to set the OpenGL renderer to \"angle\". Learn why at https://www.remotion.dev/docs/three\n\ud83d\udca1 Check how it's done at https://www.remotion.dev/docs/chromium-flags#--gl\n Error  Error creating WebGL context.\n"
    },
-   "after_nvidia_libs:angle": {
+   "after_run_installer:angle": {
     "exit": 1,
-    "secs": 5.8,
+    "secs": 5.9,
     "renderer": null,
     "pixel_std": null,
     "draws": false,
@@ -108,11 +119,11 @@
    "downloaded_from": "https://us.download.nvidia.com/tesla/580.178.04/NVIDIA-Linux-x86_64-580.178.04.run",
    "installer": {
     "exit": 0,
-    "secs": 12.3,
+    "secs": 20.7,
     "tail": "iver.\n\n\nWARNING: Unable to find a suitable destination to install 32-bit compatibility libraries. Your system may not be set up for 32-bit compatibility. 32-bit compatibility files will not be installed; if you wish to install them, re-run the installation and set a valid directory with the --compat32-libdir option.\n\n\nERROR: Failed to execute `/usr/bin/systemctl daemon-reload`: System has not been booted with systemd as init system (PID 1). Can't operate.\nFailed to connect to bus: Host is down\n\n"
    },
    "graphics_libs_after": "libvulkan.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libvulkan.so.1\n\tlibnvidia-glvkspirv.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-glvkspirv.so.580.178.04\n\tlibnvidia-glvkspirv.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glvkspirv.so.580.178.04\n\tlibnvidia-glsi.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-glsi.so.580.178.04\n\tlibnvidia-glsi.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glsi.so.580.178.04\n\tlibnvidia-glcore.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-glcore.so.580.178.04\n\tlibnvidia-glcore.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glcore.so.580.178.04\n\tlibnvidia-eglcore.so.580.178.04 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-eglcore.so.580.178.04\n\tlibnvidia-eglcore.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-eglcore.so.580.178.04\n\tlibnvidia-egl-xlib.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-xlib.so.1\n\tlibnvidia-egl-xlib.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-xlib.so.1\n\tlibnvidia-egl-xcb.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-xcb.so.1\n\tlibnvidia-egl-xcb.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-xcb.so.1\n\tlibnvidia-egl-wayland.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-wayland.so.1\n\tlibnvidia-egl-wayland.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-wayland.so.1\n\tlibnvidia-egl-gbm.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libnvidia-egl-gbm.so.1\n\tlibnvidia-egl-gbm.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-gbm.so.1\n\tlibGLX_nvidia.so.0 (libc6,x86-64) => /usr/local/nvidia/lib64/libGLX_nvidia.so.0\n\tlibGLX_nvidia.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX_nvidia.so.0\n\tlibGLX_mesa.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX_mesa.so.0\n\tlibGLX.so.0 (libc6,x86-64) => /usr/local/nvidia/lib64/libGLX.so.0\n\tlibGLX.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX.so.0\n\tlibGLX.so (libc6,x86-64) => /usr/local/nvidia/lib64/libGLX.so\n\tlibGLX.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX.so\n\tlibEGL_nvidia.so.0 (libc6,x86-64) => /usr/local/nvidia/lib64/libEGL_nvidia.so.0\n\tlibEGL_nvidia.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL_nvidia.so.0\n\tlibEGL_mesa.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL_mesa.so.0\n\tlibEGL.so.1 (libc6,x86-64) => /usr/local/nvidia/lib64/libEGL.so.1\n\tlibEGL.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL.so.1\n\tlibEGL.so (libc6,x86-64) => /usr/local/nvidia/lib64/libEGL.so",
-   "icd_files_after": "ls: cannot access '/usr/share/vulkan/icd.d': No such file or directory\n/etc/vulkan/icd.d:\nnvidia_icd.json\n\n/usr/share/glvnd/egl_vendor.d:\n10_nvidia.json\n50_mesa.json"
+   "icd_files_after": "/etc/vulkan/icd.d:\nnvidia_icd.json\n\n/usr/share/glvnd/egl_vendor.d:\n10_nvidia.json\n50_mesa.json\n\n/usr/share/vulkan/icd.d:\nnvidia_icd.json"
   }
  },
  "gpu_gl_that_draws_on_t4": [],
