@@ -1,0 +1,82 @@
+{
+ "id": "lake-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a dry, deadpan storyteller for a short animated history-and-science story. One steady voice and one steady energy from start to finish: warm, brisk, quietly amused, never shouting. Short pauses where the line breaks or an ellipsis appears, and a small comic beat before 'Unluckily' and before the final line. Do not change character or tone between lines.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "One drill hole drained an entire lake... in a single morning."
+    ],
+    [
+     "Narrator",
+     "November twentieth, nineteen eighty. Lake Peigneur, Louisiana."
+    ],
+    [
+     "Narrator",
+     "A calm freshwater lake. Ten feet deep. A fisherman out in his little boat."
+    ],
+    [
+     "Narrator",
+     "On the water, an oil rig was drilling for Texaco. Right underneath the lake, fifty-five miners were digging salt."
+    ],
+    [
+     "Narrator",
+     "Then the drill got stuck, twelve hundred feet down."
+    ],
+    [
+     "Narrator",
+     "Two and a half hours later, the rig started to tilt."
+    ],
+    [
+     "Narrator",
+     "The drill had punched through the roof of the mine. And the lake poured in."
+    ],
+    [
+     "Narrator",
+     "A whirlpool opened up. It swallowed the rig. A tugboat. Eleven barges. Sixty-five acres of land."
+    ],
+    [
+     "Narrator",
+     "The canal even flowed backwards, making a hundred-and-sixty-four-foot waterfall."
+    ],
+    [
+     "Narrator",
+     "Luckily, every person got out. Unluckily... the lake did not."
+    ],
+    [
+     "Narrator",
+     "Think of a bathtub. Pull the plug, and everything goes down the drain. The lake was the tub. The mine was the drain. And the drill... pulled the plug."
+    ],
+    [
+     "Narrator",
+     "Worse, fresh water dissolves salt, so the hole kept getting wider."
+    ],
+    [
+     "Narrator",
+     "The official report blamed nobody. Nobody could say if the drill was in the wrong place... or the map was."
+    ],
+    [
+     "Narrator",
+     "The settlement, three years later: thirty-two million dollars."
+    ],
+    [
+     "Narrator",
+     "Days later, nine of the eleven barges floated back up. Like nothing happened."
+    ],
+    [
+     "Narrator",
+     "The lake is still there. It's just twenty times deeper."
+    ]
+   ]
+  }
+ ]
+}
