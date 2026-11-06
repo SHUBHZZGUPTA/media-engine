@@ -1,0 +1,27 @@
+{
+ "id": "samurai-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a confident, energetic documentary narrator for a fast-paced animated martial-arts breakdown Short: part sports commentator, part history buff. PACE IS IMPORTANT: brisk, about 3.3 words per second; no slow drawn-out words and no long pauses (keep every pause under half a second). One steady voice and one steady energy from start to finish: crisp, punchy, a little amused, never shouting. A tiny beat before 'Time to cheat' and before the final question only. Do not change character or tone between lines.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    ["Narrator", "Two samurai. One duel. And we're about to freeze it."],
+    ["Narrator", "Standoff. This is iaijutsu: drawing and cutting in one motion. It's mostly a counterattack, but it can also be a surprise strike."],
+    ["Narrator", "The word is first tied to Iizasa Choisai, a master of the fourteen hundreds."],
+    ["Narrator", "Steel meets steel, and the defender draws a second blade. This is Musashi's Niten Ichi-ryu: katana and wakizashi together."],
+    ["Narrator", "Two heavens as one, to control distance and tempo."],
+    ["Narrator", "Now he throws the sword. Yagyu Shinkage-ryu calls it Empi: swallow takes flight. Spearing an opponent with a thrown sword."],
+    ["Narrator", "Time to cheat. A flying kick into a spinning jump cut. Pure cinema. We couldn't find it in any documented school."],
+    ["Narrator", "Disarmed? Yagyu Shinkage-ryu has an answer: Muto. Bare hands against a sword."],
+    ["Narrator", "Five moves. Four are real. Which one would you pick?"]
+   ]
+  }
+ ]
+}
