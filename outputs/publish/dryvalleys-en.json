@@ -1,0 +1,51 @@
+{
+ "id": "dryvalleys-en",
+ "video_id": "1FZgLEu7iuo",
+ "url": "https://youtube.com/shorts/1FZgLEu7iuo",
+ "channel": "BhuGol",
+ "channel_id": "UC6Uc7hcy5EWXpNW6aTaWOlg",
+ "requested": {
+  "containsSyntheticMedia": false,
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "public"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "public",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "locked_private": false,
+ "ok": true
+}
