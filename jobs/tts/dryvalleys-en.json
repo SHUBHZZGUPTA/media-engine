@@ -1,0 +1,87 @@
+{
+ "id": "dryvalleys-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, natural emphasis on numbers, a short comic pause before each punchline (especially 'Snow doesn't stand a chance', 'NASA thought so' and the last line before the sign-off). Keep the same voice, pace and energy from start to finish.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You could stand here, in Antarctica, and see no ice at all."
+    ],
+    [
+     "Narrator",
+     "The story goes, it hasn't rained here in two million years."
+    ],
+    [
+     "Narrator",
+     "So how? This valley sits beside the biggest ice sheet on Earth."
+    ],
+    [
+     "Narrator",
+     "First, the mountains. They wall off the glaciers trying to flow in."
+    ],
+    [
+     "Narrator",
+     "Then the wind finishes the job."
+    ],
+    [
+     "Narrator",
+     "Freezing air pours off the ice sheet, warms as it drops, and scours the valleys, with gusts measured near one hundred and forty kilometres an hour."
+    ],
+    [
+     "Narrator",
+     "Snow doesn't stand a chance."
+    ],
+    [
+     "Narrator",
+     "Some snow does fall, about ten centimetres a year."
+    ],
+    [
+     "Narrator",
+     "But this air is so dry, the snow turns straight into vapour. In summer, it can vanish in hours."
+    ],
+    [
+     "Narrator",
+     "So nothing here gets wet. Nothing rots either."
+    ],
+    [
+     "Narrator",
+     "Seals that wandered inland lie freeze-dried, some maybe two thousand years old."
+    ],
+    [
+     "Narrator",
+     "Cold, dry, dead-looking... sound familiar? NASA thought so."
+    ],
+    [
+     "Narrator",
+     "Scientists have tested Mars ideas here since the Viking missions of the nineteen seventies."
+    ],
+    [
+     "Narrator",
+     "Because the closest thing to Mars isn't in space. It's at the bottom of our own planet."
+    ],
+    [
+     "Narrator",
+     "Here's the twist. Life still made it here, hiding inside the rocks."
+    ],
+    [
+     "Narrator",
+     "No rain. No rent. Great view."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
