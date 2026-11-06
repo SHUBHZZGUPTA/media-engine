@@ -131,8 +131,8 @@ const Probe: React.FC = () => {
       const c = document.createElement("canvas");
       const g: any = c.getContext("webgl2") || c.getContext("webgl");
       const e = g && g.getExtension("WEBGL_debug_renderer_info");
-      console.log("GLRENDERER " + (e ? g.getParameter(e.UNMASKED_RENDERER_WEBGL) : "none"));
-    } catch (err) { console.log("GLRENDERER error " + err); }
+      console.error("GLRENDERER " + (e ? g.getParameter(e.UNMASKED_RENDERER_WEBGL) : "none"));
+    } catch (err) { console.error("GLRENDERER error " + err); }
   }, []);
   return null;
 };
@@ -147,6 +147,18 @@ c, s, log = sh("npm install --no-audit --no-fund 2>&1 | tail -5", cwd=W, env=ENV
 RES["steps"]["npm_install"] = {"exit": c, "secs": s, "tail": log[-400:]}
 c, s, log = sh("npx remotion browser ensure 2>&1 | tail -5", cwd=W, env=ENV, timeout=600)
 RES["steps"]["browser_ensure"] = {"exit": c, "secs": s, "tail": log[-400:]}
+
+# Chrome wrapper: always adds the flags that let headless Chrome use a GPU (proven on this account's Kaggle T4 in the
+# render-bench / mt-clips jobs: "--use-gl=angle --use-angle=gl-egl --ignore-gpu-blocklist" reported ANGLE (NVIDIA Tesla T4)).
+_, _, found = sh(f"find {W}/node_modules/.remotion -type f \\( -name chrome-headless-shell -o -name chrome \\) | head -1")
+CHROME = found.strip().splitlines()[0] if found.strip() else None
+WRAP = "/tmp/chrome_gpu.sh"
+if CHROME:
+    with open(WRAP, "w") as f:
+        f.write(f'#!/bin/bash\nexec {CHROME} "$@" --no-sandbox --ignore-gpu-blocklist --enable-gpu-rasterization\n')
+    os.chmod(WRAP, 0o755)
+BROWSER = f" --browser-executable={WRAP}" if CHROME else ""
+RES["steps"]["chrome"] = {"path": CHROME, "wrapper": WRAP if CHROME else None}
 save()
 
 
@@ -169,7 +181,7 @@ def still(gl):
     if os.path.exists(path):
         os.remove(path)
     c, s, log = sh(f"npx remotion still src/index.ts BridgeShort {path} --frame=900 --scale=0.5 --gl={gl} "
-                   f"--image-format=jpeg --log=verbose", cwd=W, env=ENV, timeout=600)
+                   f"--image-format=jpeg --log=verbose{BROWSER}", cwd=W, env=ENV, timeout=600)
     std = None
     if os.path.exists(path):
         from PIL import Image
@@ -192,7 +204,25 @@ def try_backends(round_name):
     return [k.split(":")[1] for k, v in stills.items() if k.startswith(round_name) and v["on_gpu"]]
 
 
-gpu_ok = try_backends("as_found")
+def unpack_nvidia_debs():
+    """The method that worked in this account's earlier Kaggle jobs: apt refuses libnvidia-gl (held packages), so download
+    the exact-version .debs without dependency resolution and unpack them over the system. This adds only the driver's
+    EGL / GLX / Vulkan user-space libraries next to the CUDA libraries Kaggle already mounts."""
+    major_v = DRIVER.split(".")[0]
+    cmd = ("export DEBIAN_FRONTEND=noninteractive; mkdir -p /tmp/debs && cd /tmp/debs && "
+           f"for p in libnvidia-gl-{major_v} libnvidia-gpucomp-{major_v} libnvidia-egl-wayland1; do "
+           f"V=$(apt-cache madison $p | awk '{{print $3}}' | grep '^{DRIVER}' | head -1); "
+           "[ -z \"$V\" ] && V=$(apt-cache madison $p | awk '{print $3}' | head -1); "
+           "echo $p want " + DRIVER + " got $V; [ -n \"$V\" ] && apt-get download -qq $p=$V; done; "
+           "ls -la; for d in *.deb; do dpkg -x $d / && echo unpacked $d; done; ldconfig; ls -la /dev/nvidia*")
+    c, s, log = sh(cmd, timeout=900)
+    _, _, libs_after = sh(GRAPHICS_LIBS)
+    return {"driver": DRIVER, "exit": c, "secs": s, "log_tail": log[-900:], "graphics_libs_after": libs_after.strip()}
+
+
+RES["steps"]["nvidia_gl_debs"] = unpack_nvidia_debs()
+save()
+gpu_ok = try_backends("after_deb_unpack")
 
 
 def install_nvidia_userspace():
@@ -227,7 +257,7 @@ def install_nvidia_userspace():
 if not gpu_ok:
     RES["steps"]["install_nvidia_userspace_libs"] = install_nvidia_userspace()
     save()
-    gpu_ok = try_backends("after_nvidia_libs")
+    gpu_ok = try_backends("after_run_installer")
 
 RES["gpu_gl_that_draws_on_t4"] = gpu_ok
 if not gpu_ok:
@@ -244,7 +274,7 @@ save()
 def render(gl, frames, scale, label, conc=None):
     out = f"{W}/out/{label}.mp4"
     cmd = (f"npx remotion render src/index.ts BridgeShort {out} --frames={frames} --scale={scale} --gl={gl} "
-           f"--crf=16 --codec=h264 --log=error" + (f" --concurrency={conc}" if conc else ""))
+           f"--crf=16 --codec=h264 --log=error{BROWSER}" + (f" --concurrency={conc}" if conc else ""))
     with GpuMon() as mon:
         c, s, log = sh(cmd, cwd=W, env=ENV, timeout=1500)
     return {"exit": c, "secs": s, "ok": c == 0 and os.path.exists(out), "gpu_load": mon.summary(),
@@ -284,7 +314,7 @@ RES["steps"]["bench"] = bench
 
 # ---- verdict: the GPU must be proven, not assumed ---------------------------------------------------------
 load = bench.get("1080p", {}).get("gpu_load_16_frames", {})
-renderer_ok = is_gpu(stills.get(f"as_found:{gl}", stills.get(f"after_nvidia_libs:{gl}", {})).get("renderer"))
+renderer_ok = any(is_gpu(v.get("renderer")) for k, v in stills.items() if k.endswith(f":{gl}") and v.get("on_gpu"))
 load_ok = load.get("max_util_pct", 0) >= 5 and (load.get("max_mem_mib", 0) - load.get("min_mem_mib", 0)) >= 50
 RES["gpu_proof"] = {"chrome_renderer_is_nvidia": renderer_ok, "nvidia_smi_load_seen": load_ok, "load": load}
 RES["verdict"] = ("GPU RENDERING CONFIRMED" if renderer_ok and load_ok and bench["1080p"].get("ok")
