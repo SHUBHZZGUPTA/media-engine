@@ -45,7 +45,11 @@ if not Path(f"/kaggle/tmp/{NODE}").exists():
     sh(f"cd /kaggle/tmp && curl -sSL https://nodejs.org/dist/v22.12.0/{NODE}.tar.xz | tar xJ", log="00_node.log")
 ENV["PATH"] = f"/kaggle/tmp/{NODE}/bin:" + ENV["PATH"]
 # Vulkan loader + tools so Chrome can reach the NVIDIA driver; harmless if already present.
-sh("apt-get -qq update && apt-get -qq install -y libvulkan1 vulkan-tools mesa-vulkan-drivers > /dev/null 2>&1", timeout=900)
+sh("apt-get -qq update && apt-get -qq install -y libvulkan1 vulkan-tools mesa-vulkan-drivers libatk1.0-0 libatk-bridge2.0-0 libcups2 "
+   "libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2 libnss3 libxss1 libxshmfence1 "
+   "libdrm2 libegl1 libgl1 > /dev/null 2>&1", log="00_apt.log", timeout=900)
+report["nvidia_libs"] = sh("ls /usr/local/nvidia/lib64 2>&1 | grep -iE 'vulkan|glx|egl|gpucomp|glvk' | head -20")[1].strip()
+report["driver_caps"] = os.environ.get("NVIDIA_DRIVER_CAPABILITIES", "unset")
 icd = Path("/usr/share/vulkan/icd.d/nvidia_icd.json")
 if not icd.exists():
     lib = sh("ldconfig -p | grep -o '/[^ ]*libGLX_nvidia.so.0' | head -1")[1].strip() or "libGLX_nvidia.so.0"
@@ -54,6 +58,7 @@ if not icd.exists():
                                "ICD": {"library_path": lib, "api_version": "1.3"}}))
     report["icd_written"] = lib
 report["vulkaninfo"] = sh("vulkaninfo --summary 2>&1 | grep -E 'deviceName|driverName|apiVersion' | head -8")[1].strip()
+report["vulkan_loader_errors"] = sh("VK_LOADER_DEBUG=error,warn vulkaninfo --summary 2>&1 | grep -iE 'nvidia|error|warn' | head -15")[1].strip()[-2500:]
 
 rc, txt, s = sh("npm init -y >/dev/null && npm i hyperframes@0.8.181 puppeteer-core@23 >/dev/null 2>&1 && "
                 "npx hyperframes browser ensure", cwd=WORK, log="01_install.log", timeout=1800)
@@ -71,7 +76,7 @@ const sets={vulkan:['--enable-unsafe-webgpu','--enable-features=Vulkan,CanvasDra
  egl:['--enable-unsafe-webgpu','--use-gl=angle','--use-angle=gl-egl','--ignore-gpu-blocklist'],
  default:['--enable-unsafe-webgpu','--ignore-gpu-blocklist']};
 for(const [k,args] of Object.entries(sets)){try{const b=await p.launch({executablePath:process.env.HYPERFRAMES_BROWSER_PATH,headless:'shell',args:['--no-sandbox',...args]});
-const pg=await b.newPage();out[k]=await pg.evaluate(async()=>{if(!navigator.gpu)return 'no navigator.gpu';
+const pg=await b.newPage();out[k+'_gpu_page']=await (async()=>{try{await pg.goto('chrome://gpu');return (await pg.evaluate(()=>document.body.innerText)).slice(0,1500)}catch(e){return 'gpu page: '+e.message}})();out[k]=await pg.evaluate(async()=>{if(!navigator.gpu)return 'no navigator.gpu';
 const a=await navigator.gpu.requestAdapter({powerPreference:'high-performance'});if(!a)return 'no adapter';
 const i=a.info||{};return {vendor:i.vendor,architecture:i.architecture,device:i.device,description:i.description,fallback:a.isFallbackAdapter||false};});
 await b.close();}catch(e){out[k]='error: '+e.message}}console.log(JSON.stringify(out));})();
@@ -88,7 +93,8 @@ save()
 sh("npx hyperframes init proj --example blank --non-interactive", cwd=WORK, log="03_init.log")
 proj = WORK / "proj"
 cat = json.loads(sh("npx hyperframes catalog --json", cwd=WORK)[1] or "[]")
-dims = {i["name"]: (i["dimensions"]["width"], i["dimensions"]["height"], i["duration"]) for i in cat}
+dims = {i["name"]: ((i.get("dimensions") or {}).get("width") or 1280, (i.get("dimensions") or {}).get("height") or 720,
+                    min(float(i.get("duration") or 5), 6)) for i in cat}
 
 for n in BLOCKS:
     r = {}
