@@ -1,0 +1,126 @@
+{
+ "python": "3.13.16",
+ "cpus": 4,
+ "params": {
+  "src_sha256": "bde7b8bea5cab00b1081306349b5d647a3dd3b78c4414d513b7934025492ea28",
+  "frames": 1689,
+  "segments": 4,
+  "scale": "1.3333333333333333",
+  "crf": 18,
+  "concurrency": 2,
+  "src_file": "samurai_src.tar.gz"
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4\n10.8.2",
+  "apt_chrome_libs": {
+   "exit": 0,
+   "secs": 13.2
+  },
+  "source": {
+   "sha256": "bde7b8bea5cab00b1081306349b5d647a3dd3b78c4414d513b7934025492ea28",
+   "expected": "bde7b8bea5cab00b1081306349b5d647a3dd3b78c4414d513b7934025492ea28",
+   "bytes": 263476
+  },
+  "npm_install": {
+   "exit": 0,
+   "secs": 19.8,
+   "tail": "npm notice\nnpm notice New major version of npm available! 10.8.2 -> 12.2.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n"
+  },
+  "browser_ensure": {
+   "exit": 0,
+   "secs": 4.9,
+   "tail": "Getting Headless Shell - 95.5 Mb/102.5 Mb\nGot Headless Shell\nHas browser at /tmp/samurai/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "nvidia_gl_debs": {
+   "driver": "580.178.04",
+   "exit": 0,
+   "secs": 20.1,
+   "unpacked": [
+    "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+    "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+    "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+   ]
+  },
+  "chrome": "/tmp/samurai/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell",
+  "probe": {
+   "exit": 0,
+   "secs": 22.4,
+   "renderers": {
+    "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)": 1
+   },
+   "bad": [],
+   "pixel_std": 55.2,
+   "tail": ""
+  },
+  "render": {
+   "exit": 0,
+   "secs": 289.4,
+   "tail": "seg1 99/423\nseg1 199/423\nseg1 299/423\nseg1 399/423\nSEG_DONE 1 0-422 71.0s\nseg2 99/423\nseg2 199/423\nseg2 299/423\nseg2 399/423\nSEG_DONE 2 423-845 68.8s\nseg3 99/423\nseg3 199/423\nseg3 299/423\nseg3 399/423\nSEG_DONE 3 846-1268 70.7s\nseg4 99/420\nseg4 199/420\nseg4 299/420\nseg4 399/420\nSEG_DONE 4 1269-1688 75.1s\nALL_DONE\n[Tab 0, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 0, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 0, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 0, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n[Tab 1, src/Root.tsx:9] GLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\n",
+   "gpu_load": {
+    "samples": 138,
+    "max_util_pct": 40,
+    "mean_util_pct": 18.8,
+    "max_mem_mib": 2201,
+    "min_mem_mib": 0
+   }
+  }
+ },
+ "segments": [
+  [
+   0,
+   422
+  ],
+  [
+   423,
+   845
+  ],
+  [
+   846,
+   1268
+  ],
+  [
+   1269,
+   1688
+  ]
+ ],
+ "renderers_seen_in_render": {
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)": 8
+ },
+ "renderer_bad": [],
+ "segment_files": [
+  {
+   "file": "samurai_seg1.mp4",
+   "mb": 12.9,
+   "frames": 423
+  },
+  {
+   "file": "samurai_seg2.mp4",
+   "mb": 12.8,
+   "frames": 423
+  },
+  {
+   "file": "samurai_seg3.mp4",
+   "mb": 14.5,
+   "frames": 423
+  },
+  {
+   "file": "samurai_seg4.mp4",
+   "mb": 17.3,
+   "frames": 420
+  }
+ ],
+ "gpu_proof": {
+  "every_tab_reported_nvidia": true,
+  "tabs_logged": 8,
+  "nvidia_smi_load_seen": true,
+  "load": {
+   "samples": 138,
+   "max_util_pct": 40,
+   "mean_util_pct": 18.8,
+   "max_mem_mib": 2201,
+   "min_mem_mib": 0
+  }
+ },
+ "verdict": "GPU RENDER COMPLETE"
+}

@@ -1,0 +1,30 @@
+{
+ "job": "samurai-render",
+ "kernel": "shubhzzgupta07/me-samurai-render",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-samurai-render",
+ "gpu_quota_before": {
+  "used_h": 6.04,
+  "remaining_h": 23.96,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-06T12:25:59+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-06T12:33:03+00:00",
+ "files": [
+  "me-samurai-render.log",
+  "probe_still.jpg",
+  "renderer_seen.json",
+  "samurai_render.json",
+  "samurai_seg1.mp4",
+  "samurai_seg2.mp4",
+  "samurai_seg3.mp4",
+  "samurai_seg4.mp4"
+ ],
+ "gpu_quota_after": {
+  "used_h": 6.15,
+  "remaining_h": 23.85,
+  "total_h": 30.0
+ }
+}
