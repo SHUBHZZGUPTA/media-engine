@@ -1,0 +1,45 @@
+{
+ "job": "ai-influencer-test-1",
+ "kernel": "shubhzzgupta07/me-ai-influencer-test-1",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-ai-influencer-test-1",
+ "gpu_quota_before": {
+  "used_h": 5.73,
+  "remaining_h": 24.27,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-06T10:30:35+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-06T10:43:41+00:00",
+ "files": [
+  "avatar.png",
+  "logs/apt_libs.txt",
+  "logs/ffmpeg_voice.txt",
+  "logs/ffprobe.txt",
+  "logs/nvidia_smi.txt",
+  "logs/pip_gtts.txt",
+  "logs/pip_uv.txt",
+  "logs/sad_clone.txt",
+  "logs/sad_commit.txt",
+  "logs/sad_import_check.txt",
+  "logs/sad_models.txt",
+  "logs/sad_run_gfpgan.txt",
+  "logs/sad_run_plain.txt",
+  "logs/uv_build_deps.txt",
+  "logs/uv_reqs.txt",
+  "logs/uv_torch.txt",
+  "logs/uv_venv.txt",
+  "me-ai-influencer-test-1.log",
+  "run_log.json",
+  "sadtalker_gfpgan.mp4",
+  "sadtalker_plain.mp4",
+  "voice.mp3",
+  "voice.wav"
+ ],
+ "gpu_quota_after": {
+  "used_h": 5.94,
+  "remaining_h": 24.06,
+  "total_h": 30.0
+ }
+}

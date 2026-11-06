@@ -1,0 +1,15 @@
+Using Python 3.10.22 environment at: /tmp/ai_influencer/sadenv
+Resolved 5 packages in 225ms
+Downloading numpy (16.3MiB)
+Downloading cython (3.3MiB)
+ Downloaded cython
+ Downloaded numpy
+Prepared 5 packages in 340ms
+Uninstalled 1 package in 20ms
+Installed 5 packages in 27ms
+ + cython==3.3.1
+ - numpy==2.2.6
+ + numpy==1.23.4
+ + packaging==26.3
+ + setuptools==69.5.1
+ + wheel==0.48.0

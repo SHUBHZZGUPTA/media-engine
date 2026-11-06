@@ -1,0 +1,72 @@
+[{"stream_name":"stdout","time":0.957078689,"data":"=== env_info\n"}
+,{"stream_name":"stdout","time":1.000212207,"data":"$ nvidia-smi --query-gpu=name,memory.total --format=csv,noheader -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":8.3354812,"data":"=== make_image\n"}
+,{"stream_name":"stderr","time":37.182318085,"data":"/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.\n"}
+,{"stream_name":"stderr","time":37.182350327,"data":"  deprecate(\"torch_dtype\", \"1.0.0\", _TORCH_DTYPE_DEPRECATION_MESSAGE)\n"}
+,{"stream_name":"stderr","time":37.494371316,"data":"Couldn't connect to the Hub: 401 Client Error. (Request ID: Root=1-6aedac73-4259d1fd0f68e2a049865785;798a0a2c-176e-4483-9cc9-16c7029be178)\n"}
+,{"stream_name":"stderr","time":37.494406376,"data":"\n"}
+,{"stream_name":"stderr","time":37.494411729,"data":"Repository Not Found for url: https://huggingface.co/api/models/stabilityai/stable-diffusion-2-1.\n"}
+,{"stream_name":"stderr","time":37.494416021,"data":"Please make sure you specified the correct `repo_id` and `repo_type`.\n"}
+,{"stream_name":"stderr","time":37.494420571,"data":"If you are trying to access a private or gated repo, make sure you are authenticated and your token has the required permissions.\n"}
+,{"stream_name":"stderr","time":37.494425176,"data":"For more details, see https://huggingface.co/docs/huggingface_hub/authentication\n"}
+,{"stream_name":"stderr","time":37.494429494,"data":"Invalid username or password..\n"}
+,{"stream_name":"stderr","time":37.494433859,"data":"Will try to load from local cache.\n"}
+,{"stream_name":"stdout","time":37.495018007,"data":"could not load stabilityai/stable-diffusion-2-1 {'variant': 'fp16'}: Cannot load model stabilityai/stable-diffusion-2-1: the model is not fully cached locally (Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing t\n"}
+,{"stream_name":"stderr","time":37.609007598,"data":"Couldn't connect to the Hub: 401 Client Error. (Request ID: Root=1-6aedac73-114dbd194049369108d4db7e;7459a288-7610-4ae0-8619-0b726692cb59)\n"}
+,{"stream_name":"stderr","time":37.609030857,"data":"\n"}
+,{"stream_name":"stderr","time":37.609036521,"data":"Repository Not Found for url: https://huggingface.co/api/models/stabilityai/stable-diffusion-2-1.\n"}
+,{"stream_name":"stderr","time":37.609041602,"data":"Please make sure you specified the correct `repo_id` and `repo_type`.\n"}
+,{"stream_name":"stderr","time":37.609046438,"data":"If you are trying to access a private or gated repo, make sure you are authenticated and your token has the required permissions.\n"}
+,{"stream_name":"stderr","time":37.609062574,"data":"For more details, see https://huggingface.co/docs/huggingface_hub/authentication\n"}
+,{"stream_name":"stderr","time":37.609066909,"data":"Invalid username or password..\n"}
+,{"stream_name":"stderr","time":37.609071194,"data":"Will try to load from local cache.\n"}
+,{"stream_name":"stdout","time":37.609482458,"data":"could not load stabilityai/stable-diffusion-2-1 {}: Cannot load model stabilityai/stable-diffusion-2-1: the model is not fully cached locally (Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing t\n"}
+,{"stream_name":"stderr","time":37.796205119,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":66.471490719,"data":"\rFetching 13 files:   0%|          | 0/13 [00:00\u003c?, ?it/s]\rFetching 13 files:  15%|█▌        | 2/13 [00:00\u003c00:00, 11.23it/s]\rFetching 13 files:  77%|███████▋  | 10/13 [00:00\u003c00:00, 39.80it/s]\rFetching 13 files:  85%|████████▍ | 11/13 [00:19\u003c00:00, 39.80it/s]\rFetching 13 files:  92%|█████████▏| 12/13 [00:28\u003c00:03,  3.29s/it]\rFetching 13 files: 100%|██████████| 13/13 [00:28\u003c00:00,  2.18s/it]\n"}
+,{"stream_name":"stderr","time":70.082600553,"data":"\rLoading pipeline components...:   0%|          | 0/6 [00:00\u003c?, ?it/s]\rLoading pipeline components...:  17%|█▋        | 1/6 [00:03\u003c00:15,  3.07s/it]\rLoading pipeline components...:  33%|███▎      | 2/6 [00:03\u003c00:05,  1.33s/it]\rLoading pipeline components...:  50%|█████     | 3/6 [00:03\u003c00:02,  1.27it/s]\n"}
+,{"stream_name":"stderr","time":70.188259289,"data":"\rLoading weights:   0%|          | 0/372 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":70.288308153,"data":"\rLoading weights:  28%|██▊       | 104/372 [00:00\u003c00:00, 990.66it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":70.391719413,"data":"\rLoading weights:  65%|██████▌   | 242/372 [00:00\u003c00:00, 1214.96it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":70.392555627,"data":"\rLoading weights:  98%|█████████▊| 364/372 [00:00\u003c00:00, 1198.69it/s]\u001b[A\rLoading weights: 100%|██████████| 372/372 [00:00\u003c00:00, 1203.21it/s]\n"}
+,{"stream_name":"stderr","time":70.412747945,"data":"\rLoading pipeline components...: 100%|██████████| 6/6 [00:03\u003c00:00,  2.49it/s]\rLoading pipeline components...: 100%|██████████| 6/6 [00:03\u003c00:00,  1.52it/s]\n"}
+,{"stream_name":"stderr","time":85.250653976,"data":"\r  0%|          | 0/30 [00:00\u003c?, ?it/s]\r  3%|▎         | 1/30 [00:03\u003c01:53,  3.90s/it]\r  7%|▋         | 2/30 [00:04\u003c00:49,  1.77s/it]\r 10%|█         | 3/30 [00:04\u003c00:29,  1.10s/it]\r 13%|█▎        | 4/30 [00:04\u003c00:20,  1.28it/s]\r 17%|█▋        | 5/30 [00:05\u003c00:15,  1.65it/s]\r 20%|██        | 6/30 [00:05\u003c00:11,  2.01it/s]\r 23%|██▎       | 7/30 [00:05\u003c00:09,  2.32it/s]\r 27%|██▋       | 8/30 [00:05\u003c00:08,  2.58it/s]\r 30%|███       | 9/30 [00:06\u003c00:07,  2.79it/s]\r 33%|███▎      | 10/30 [00:06\u003c00:06,  2.96it/s]\r 37%|███▋      | 11/30 [00:06\u003c00:06,  3.08it/s]\r 40%|████      | 12/30 [00:07\u003c00:05,  3.17it/s]\r 43%|████▎     | 13/30 [00:07\u003c00:05,  3.23it/s]\r 47%|████▋     | 14/30 [00:07\u003c00:04,  3.28it/s]\r 50%|█████     | 15/30 [00:08\u003c00:04,  3.31it/s]\r 53%|█████▎    | 16/30 [00:08\u003c00:04,  3.34it/s]\r 57%|█████▋    | 17/30 [00:08\u003c00:03,  3.36it/s]\r 60%|██████    | 18/30 [00:08\u003c00:03,  3.37it/s]\r 63%|██████▎   | 19/30 [00:09\u003c00:03,  3.38it/s]\r 67%|██████▋   | 20/30 [00:09\u003c00:02,  3.38it/s]\r 70%|███████   | 21/30 [00:09\u003c00:02,  3.38it/s]\r 73%|███████▎  | 22/30 [00:10\u003c00:02,  3.38it/s]\r 77%|███████▋  | 23/30 [00:10\u003c00:02,  3.39it/s]\r 80%|████████  | 24/30 [00:10\u003c00:01,  3.38it/s]\r 83%|████████▎ | 25/30 [00:10\u003c00:01,  3.38it/s]\r 87%|████████▋ | 26/30 [00:11\u003c00:01,  3.38it/s]\r 90%|█████████ | 27/30 [00:11\u003c00:00,  3.38it/s]\r 93%|█████████▎| 28/30 [00:11\u003c00:00,  3.39it/s]\r 97%|█████████▋| 29/30 [00:12\u003c00:00,  3.38it/s]\r100%|██████████| 30/30 [00:12\u003c00:00,  3.37it/s]\r100%|██████████| 30/30 [00:12\u003c00:00,  2.41it/s]\n"}
+,{"stream_name":"stdout","time":86.193852548,"data":"=== make_voice\n"}
+,{"stream_name":"stdout","time":88.889442319,"data":"$ /usr/bin/python3 -m pip install -q gtts -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":90.609050488,"data":"$ ffmpeg -y -i /kaggle/working/voice.mp3 -ar 16000 -ac 1 /kaggle/working/voice.wav -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":90.751290325,"data":"$ ffprobe -v error -show_entries format=duration -of csv=p=0 '/kaggle/working/voice.wav' -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":90.751645358,"data":"=== sad_clone\n"}
+,{"stream_name":"stdout","time":94.010411871,"data":"$ git clone --depth 1 https://github.com/OpenTalker/SadTalker /tmp/ai_influencer/SadTalker -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":94.017000211,"data":"$ git -C /tmp/ai_influencer/SadTalker rev-parse HEAD -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":94.017364224,"data":"=== sad_env\n"}
+,{"stream_name":"stdout","time":100.419066522,"data":"$ apt-get update -qq \u0026\u0026 apt-get install -y -qq libgl1 libglib2.0-0 -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":103.951571337,"data":"$ /usr/bin/python3 -m pip install -q uv -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":105.592090105,"data":"$ /usr/bin/python3 -m uv venv --python 3.10 /tmp/ai_influencer/sadenv -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":136.739384495,"data":"$ /usr/bin/python3 -m uv pip install --python /tmp/ai_influencer/sadenv/bin/python torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --extra- -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":137.43399885,"data":"$ /usr/bin/python3 -m uv pip install --python /tmp/ai_influencer/sadenv/bin/python 'setuptools\u003c70' wheel cython numpy==1.23.4 -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":146.363591445,"data":"$ /usr/bin/python3 -m uv pip install --python /tmp/ai_influencer/sadenv/bin/python --no-build-isolation -r /tmp/ai_influencer/req_filtered.txt -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":174.812404634,"data":"$ /tmp/ai_influencer/sadenv/bin/python -c \"import torch,cv2,librosa,face_alignment,basicsr,gfpgan;print(torch.__version__, torch.cuda.is_avail -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":174.812790976,"data":"=== sad_models\n"}
+,{"stream_name":"stdout","time":212.344649684,"data":"$ bash scripts/download_models.sh -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":212.345097922,"data":"=== sad_run_plain\n"}
+,{"stream_name":"stdout","time":383.489543681,"data":"$ /tmp/ai_influencer/sadenv/bin/python inference.py --driven_audio /kaggle/working/voice.wav --source_image /kaggle/working/avatar.png --resul -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":383.606764534,"data":"$ ffprobe -v error -show_entries format=duration -of csv=p=0 '/kaggle/working/sadtalker_plain.mp4' -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":383.607202257,"data":"=== sad_run_gfpgan\n"}
+,{"stream_name":"stdout","time":742.848803426,"data":"$ /tmp/ai_influencer/sadenv/bin/python inference.py --driven_audio /kaggle/working/voice.wav --source_image /kaggle/working/avatar.png --resul -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":742.987853977,"data":"$ ffprobe -v error -show_entries format=duration -of csv=p=0 '/kaggle/working/sadtalker_gfpgan.mp4' -\u003e rc=0\n"}
+,{"stream_name":"stdout","time":742.990461715,"data":"{\n"}
+,{"stream_name":"stdout","time":742.990480875,"data":" \"env_info\": true,\n"}
+,{"stream_name":"stdout","time":742.990501993,"data":" \"make_image\": true,\n"}
+,{"stream_name":"stdout","time":742.990506625,"data":" \"make_voice\": true,\n"}
+,{"stream_name":"stdout","time":742.990510928,"data":" \"sad_clone\": true,\n"}
+,{"stream_name":"stdout","time":742.990515834,"data":" \"sad_env\": true,\n"}
+,{"stream_name":"stdout","time":742.990520542,"data":" \"sad_models\": true,\n"}
+,{"stream_name":"stdout","time":742.990524628,"data":" \"sad_run_plain\": true,\n"}
+,{"stream_name":"stdout","time":742.990529437,"data":" \"sad_run_gfpgan\": true\n"}
+,{"stream_name":"stdout","time":742.990547237,"data":"}\n"}
+,{"stream_name":"stderr","time":751.893031861,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":751.893063911,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":752.207543352,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":752.207581887,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":753.030561972,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":754.140860361,"data":"[NbConvertApp] Writing 325296 bytes to __results__.html\n"}
+]

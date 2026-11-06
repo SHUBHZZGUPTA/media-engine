@@ -1,0 +1,5 @@
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+kaggle-environments 1.33.3 requires click>=8.3.0, but you have click 8.1.8 which is incompatible.
+wandb 0.28.1 requires click>=8.2.0, but you have click 8.1.8 which is incompatible.
+huggingface-hub 1.33.0 requires click<9.0.0,>=8.4.2, but you have click 8.1.8 which is incompatible.
+spacy 3.8.16 requires click<9.0.0,>=8.2.1, but you have click 8.1.8 which is incompatible.
