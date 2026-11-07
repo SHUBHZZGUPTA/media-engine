@@ -1,0 +1,283 @@
+{
+ "id": "antskull-map",
+ "delay": 0.3,
+ "bbox": [
+  -62.0,
+  -52.0,
+  -66.5,
+  -62.5
+ ],
+ "close": [
+  -58.4,
+  -56.4,
+  -64.2,
+  -63.5
+ ],
+ "zoom": 8,
+ "files": [
+  {
+   "name": "globe_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_NextGeneration&BBOX=-90,-180,90,180&WIDTH=8192&HEIGHT=4096"
+  },
+  {
+   "name": "ne_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_NextGeneration&BBOX=-66.5,-62.0,-62.5,-52.0&WIDTH=4096&HEIGHT=1638"
+  },
+  {
+   "name": "pa_weld.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&BBOX=-64.2,-58.4,-63.5,-56.4&WIDTH=4096&HEIGHT=1433"
+  },
+  {
+   "name": "dem_8_83_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/83/185.png"
+  },
+  {
+   "name": "dem_8_83_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/83/186.png"
+  },
+  {
+   "name": "dem_8_83_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/83/187.png"
+  },
+  {
+   "name": "dem_8_83_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/83/188.png"
+  },
+  {
+   "name": "dem_8_83_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/83/189.png"
+  },
+  {
+   "name": "dem_8_83_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/83/190.png"
+  },
+  {
+   "name": "dem_8_83_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/83/191.png"
+  },
+  {
+   "name": "dem_8_84_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/84/185.png"
+  },
+  {
+   "name": "dem_8_84_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/84/186.png"
+  },
+  {
+   "name": "dem_8_84_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/84/187.png"
+  },
+  {
+   "name": "dem_8_84_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/84/188.png"
+  },
+  {
+   "name": "dem_8_84_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/84/189.png"
+  },
+  {
+   "name": "dem_8_84_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/84/190.png"
+  },
+  {
+   "name": "dem_8_84_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/84/191.png"
+  },
+  {
+   "name": "dem_8_85_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/85/185.png"
+  },
+  {
+   "name": "dem_8_85_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/85/186.png"
+  },
+  {
+   "name": "dem_8_85_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/85/187.png"
+  },
+  {
+   "name": "dem_8_85_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/85/188.png"
+  },
+  {
+   "name": "dem_8_85_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/85/189.png"
+  },
+  {
+   "name": "dem_8_85_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/85/190.png"
+  },
+  {
+   "name": "dem_8_85_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/85/191.png"
+  },
+  {
+   "name": "dem_8_86_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/86/185.png"
+  },
+  {
+   "name": "dem_8_86_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/86/186.png"
+  },
+  {
+   "name": "dem_8_86_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/86/187.png"
+  },
+  {
+   "name": "dem_8_86_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/86/188.png"
+  },
+  {
+   "name": "dem_8_86_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/86/189.png"
+  },
+  {
+   "name": "dem_8_86_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/86/190.png"
+  },
+  {
+   "name": "dem_8_86_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/86/191.png"
+  },
+  {
+   "name": "dem_8_87_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/87/185.png"
+  },
+  {
+   "name": "dem_8_87_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/87/186.png"
+  },
+  {
+   "name": "dem_8_87_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/87/187.png"
+  },
+  {
+   "name": "dem_8_87_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/87/188.png"
+  },
+  {
+   "name": "dem_8_87_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/87/189.png"
+  },
+  {
+   "name": "dem_8_87_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/87/190.png"
+  },
+  {
+   "name": "dem_8_87_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/87/191.png"
+  },
+  {
+   "name": "dem_8_88_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/88/185.png"
+  },
+  {
+   "name": "dem_8_88_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/88/186.png"
+  },
+  {
+   "name": "dem_8_88_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/88/187.png"
+  },
+  {
+   "name": "dem_8_88_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/88/188.png"
+  },
+  {
+   "name": "dem_8_88_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/88/189.png"
+  },
+  {
+   "name": "dem_8_88_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/88/190.png"
+  },
+  {
+   "name": "dem_8_88_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/88/191.png"
+  },
+  {
+   "name": "dem_8_89_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/89/185.png"
+  },
+  {
+   "name": "dem_8_89_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/89/186.png"
+  },
+  {
+   "name": "dem_8_89_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/89/187.png"
+  },
+  {
+   "name": "dem_8_89_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/89/188.png"
+  },
+  {
+   "name": "dem_8_89_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/89/189.png"
+  },
+  {
+   "name": "dem_8_89_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/89/190.png"
+  },
+  {
+   "name": "dem_8_89_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/89/191.png"
+  },
+  {
+   "name": "dem_8_90_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/90/185.png"
+  },
+  {
+   "name": "dem_8_90_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/90/186.png"
+  },
+  {
+   "name": "dem_8_90_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/90/187.png"
+  },
+  {
+   "name": "dem_8_90_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/90/188.png"
+  },
+  {
+   "name": "dem_8_90_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/90/189.png"
+  },
+  {
+   "name": "dem_8_90_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/90/190.png"
+  },
+  {
+   "name": "dem_8_90_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/90/191.png"
+  },
+  {
+   "name": "dem_8_91_185.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/91/185.png"
+  },
+  {
+   "name": "dem_8_91_186.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/91/186.png"
+  },
+  {
+   "name": "dem_8_91_187.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/91/187.png"
+  },
+  {
+   "name": "dem_8_91_188.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/91/188.png"
+  },
+  {
+   "name": "dem_8_91_189.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/91/189.png"
+  },
+  {
+   "name": "dem_8_91_190.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/91/190.png"
+  },
+  {
+   "name": "dem_8_91_191.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/91/191.png"
+  }
+ ]
+}
