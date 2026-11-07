@@ -1,4 +1,20 @@
-{"id": "antskull-3d",
- "images": ["library/scenes/ant_vega_wide.jpg", "library/scenes/ant_vega_20261010.jpg", "library/scenes/ant_vega_20250322.jpg", "library/scenes/ant_fossil.jpg"],
- "depth": ["library/scenes/ant_vega_wide.jpg", "library/scenes/ant_vega_20261010.jpg"],
- "upscale": ["library/scenes/ant_vega_wide.jpg", "library/scenes/ant_vega_20261010.jpg", "library/scenes/ant_vega_20250322.jpg", "library/scenes/ant_fossil.jpg"]}
+{
+ "id": "antskull-3d",
+ "images": [
+  "library/scenes/ant_vega_wide.jpg",
+  "library/scenes/ant_vega_20261010.jpg",
+  "library/scenes/ant_vega_20250322.jpg",
+  "library/scenes/ant_fossil.jpg"
+ ],
+ "depth": [
+  "library/scenes/ant_vega_wide.jpg",
+  "library/scenes/ant_vega_20261010.jpg"
+ ],
+ "upscale": [
+  "library/scenes/ant_vega_wide.jpg",
+  "library/scenes/ant_vega_20261010.jpg",
+  "library/scenes/ant_vega_20250322.jpg",
+  "library/scenes/ant_fossil.jpg"
+ ],
+ "try": 2
+}
