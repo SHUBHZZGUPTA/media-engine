@@ -1,9 +1,9 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 5797.17it/s]
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 3858.06it/s]
 depth library/scenes/ant_vega_wide.jpg
 depth library/scenes/ant_vega_20261010.jpg
 upscale library/scenes/ant_vega_wide.jpg
 upscale library/scenes/ant_vega_20261010.jpg
 upscale library/scenes/ant_vega_20250322.jpg
 upscale library/scenes/ant_fossil.jpg
-{'depth': [{'src': 'library/scenes/ant_vega_wide.jpg', 'secs': 1.7}, {'src': 'library/scenes/ant_vega_20261010.jpg', 'secs': 1.8}], 'upscale': [{'src': 'library/scenes/ant_vega_wide.jpg', 'secs': 90.7}, {'src': 'library/scenes/ant_vega_20261010.jpg', 'secs': 89.7}, {'src': 'library/scenes/ant_vega_20250322.jpg', 'secs': 90.8}, {'src': 'library/scenes/ant_fossil.jpg', 'secs': 90.7}]}
+{'depth': [{'src': 'library/scenes/ant_vega_wide.jpg', 'secs': 2.1}, {'src': 'library/scenes/ant_vega_20261010.jpg', 'secs': 2.0}], 'upscale': [{'src': 'library/scenes/ant_vega_wide.jpg', 'secs': 106.6}, {'src': 'library/scenes/ant_vega_20261010.jpg', 'secs': 107.4}, {'src': 'library/scenes/ant_vega_20250322.jpg', 'secs': 106.5}, {'src': 'library/scenes/ant_fossil.jpg', 'secs': 106.1}]}
