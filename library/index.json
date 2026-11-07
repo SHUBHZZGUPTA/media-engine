@@ -353,6 +353,34 @@
    "desc": "3D diorama on navy: sandstone boulder sliced open, thin green+black microbe band just under its surface (~560,472), on a gravel slab",
    "video": "BHUGOL McMurdo Dry Valleys (Nov 2026)",
    "src": "Codex image gen"
+  },
+  "ant_vega_wide": {
+   "id": "ant_vega_wide",
+   "file": "scenes/ant_vega_wide.jpg",
+   "desc": "NASA Landsat 9 image of Vega Island, 10 Oct 2026 (crop 1024x1536): skull lobe with nunatak eye ~(456,662), Devil Island ~(542,384); NASA labels baked in",
+   "video": "BHUGOL Antarctica skull (Nov 2026)",
+   "src": "NASA Earth Observatory / Lauren Dauphin, Landsat data USGS (public domain)"
+  },
+  "ant_vega_20261010": {
+   "id": "ant_vega_20261010",
+   "file": "scenes/ant_vega_20261010.jpg",
+   "desc": "NASA Landsat close-up of Vega Island 10 Oct 2026 (portrait crop): nunatak eye ~(520,420), Devil's Bay Glacier label ~(640,700); sea ice",
+   "video": "BHUGOL Antarctica skull (Nov 2026)",
+   "src": "NASA Earth Observatory / Lauren Dauphin, Landsat data USGS (public domain)"
+  },
+  "ant_vega_20250322": {
+   "id": "ant_vega_20250322",
+   "file": "scenes/ant_vega_20250322.jpg",
+   "desc": "Same close-up 22 Mar 2025, pixel-aligned with ant_vega_20261010 (open dark ocean, more snow)",
+   "video": "BHUGOL Antarctica skull (Nov 2026)",
+   "src": "NASA Earth Observatory / Lauren Dauphin, Landsat data USGS (public domain)"
+  },
+  "ant_fossil": {
+   "id": "ant_fossil",
+   "file": "scenes/ant_fossil.jpg",
+   "desc": "Vegavis iaai skull CT reconstruction (colour-coded bones) on navy plate, skull centred ~(512,720); depth in ant_fossil_depth.png",
+   "video": "BHUGOL Antarctica skull (Nov 2026)",
+   "src": "Press image: Joseph Groenke (Ohio Univ.) & Christopher Torres (Univ. of the Pacific), 2025; credit required"
   }
  }
 }
