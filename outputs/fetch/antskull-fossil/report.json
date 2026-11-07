@@ -1,0 +1,22 @@
+[
+ {
+  "name": "skull_lo.jpg",
+  "ok": true,
+  "bytes": 101569
+ },
+ {
+  "name": "skull_hi.jpg",
+  "ok": false,
+  "error": "<HTTPError 400: 'Bad Request'>"
+ },
+ {
+  "name": "skel_lo.jpg",
+  "ok": true,
+  "bytes": 34882
+ },
+ {
+  "name": "skel_hi.jpg",
+  "ok": false,
+  "error": "<HTTPError 400: 'Bad Request'>"
+ }
+]
