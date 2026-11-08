@@ -7,14 +7,13 @@ Numbers marked ‡ are historians' estimates (Maddison) and are framed as estima
 
 # HOOK
 
-N: May, fourteen ninety-eight. A Portuguese ship drops anchor off *Calicut*, on India's southwest coast. The captain sends one man ashore first: a convict, in case things go wrong.
-N: In the market, two merchants from North Africa spot him.
+N: May, fourteen ninety-eight. A Portuguese ship drops anchor off *Calicut*, on India's southwest coast. The captain sends one man ashore first: a convict, in case things go wrong. Two North African merchants spot him.
 [SKIT: Calicut market 1498, a sunburnt Portuguese convict in a torn shirt, two North African merchants in turbans beside sacks of pepper]
 MERCHANT: [shocked] May the Devil take you! What brought you here?
 CONVICT: [out of breath] We came looking for Christians... and spices.
 N: That's in the ship's own journal. All around him: sacks of *black pepper*, and painted *cotton cloth* so fine that Europe would name it after this very port. *Calico*.
 N: Back then, India made about *a quarter* of everything the whole world produced.‡
-N: That wealth pulled everyone in. An emperor would apologise for a war, *in stone*. A sultan would march an entire city south... then march it back. A diamond would travel from a *peacock throne* to the *Tower of London*. And a trading company would raise an army *bigger than Britain's*.
+N: That wealth pulled everyone in. An emperor would apologise for a war, *in stone*. A diamond would travel from a *peacock throne* to the *Tower of London*. And a trading company would raise an army *bigger than Britain's*.
 N: The numbers on your phone were first written here. Even the English word *loot* is Hindi.
 N: By nineteen fifty, India's share of the world was about *four percent*.‡ So how did the richest shop on Earth get robbed again and again... and why did almost every robber *end up staying*?
 N: The answer starts in a city with *better drains* than many cities today... and a writing system *nobody on Earth can read*.
@@ -58,7 +57,7 @@ STUDENT: Guruji, we've done this hymn forty times.
 GURU: And tomorrow we do it forty more.
 STUDENT: Can't we just write it down?
 GURU: [offended] Write it down? And trust a *leaf*?
-N: Over the centuries, these communities moved east into the great plain of the *Ganga*. They cleared forests, farmed rice and learned iron. Villages became towns, and towns became kingdoms. By about six hundred BCE, north India had *sixteen* big states.
+N: Over the centuries, these communities moved east into the great plain of the *Ganga*. They cleared forests, farmed rice, learned iron, and built kingdoms. By about six hundred BCE, north India had *sixteen* big states.
 N: Society was hardening too, into ranked groups of priests, warriors, traders and workers. Over many centuries, that system, *varna*, would set into the rigid rules of caste.
 N: And then, around two and a half thousand years ago, a king in the foothills of today's *Nepal* had a son. A seer warned him: this boy will become either a great king... or a great holy man.
 N: The king wanted a king. So he gave his son, *Siddhartha*, a perfect palace. No sickness. No old age. No death. Nothing sad, ever.
@@ -95,7 +94,7 @@ SERVANT: [looking at the hair] And... how long might that be?
 CHANAKYA: [nodding at Chandragupta] That depends on him.
 N: Around three twenty-one BCE, they did it. Chandragupta and Chanakya overthrew the Nandas and took their capital, *Pataliputra*, today's Patna.
 N: Then Chandragupta did what nobody had done before. He joined most of the subcontinent into one state: the *Maurya Empire*.
-N: When one of Alexander's generals, *Seleucus*, marched in to take back the Indian lands, Chandragupta pushed him out, and then made a very Indian deal. Seleucus got *five hundred war elephants*. Chandragupta got the land.
+N: When one of Alexander's generals marched in to take back the Indian lands, Chandragupta pushed him out, and then made a very Indian deal. The Greek general got *five hundred war elephants*. Chandragupta got the land.
 N: A Greek ambassador who lived at Pataliputra described a giant city with wooden walls, hundreds of towers and a moat. And Chanakya is credited with the *Arthashastra*, a handbook for running a state: taxes, trade, war... and a lot of spies.
 N: Remember our question? The first great conqueror to reach India from the west didn't stay. His army went home. The one who stayed was the young man who'd been watching him.
 N: Chandragupta's empire was huge. But his grandson would make it even bigger... and then do something almost no conqueror in history has ever done. He would say sorry.
@@ -133,7 +132,7 @@ ARYABHATA: No. The Earth turns. The sky stays still.
 ASTRONOMER: Then why am I not dizzy?
 ARYABHATA: [patiently] I'll explain tomorrow. If the Earth is still here.
 N: Aryabhata also worked out pi to four decimal places: three point one four one six.
-N: And Indian mathematicians were building the number system you use every single day: nine digits, plus a sign for *nothing*. A little later, *Brahmagupta* wrote down the rules for *zero* as a number in its own right.
+N: And Indian mathematicians were building the number system you use every single day: nine digits, plus a sign for *nothing*. A little later, another mathematician wrote down the rules for *zero* as a number in its own right.
 N: Those numerals travelled to the Arab world, and then to Europe. Which is why Europeans called them... *Arabic numerals*. The numbers on your phone are Indian.
 N: This age gave the world something else too: a war game on an eight-by-eight board, with elephants, chariots, horses and foot soldiers. *Chaturanga*. Carried west through Persia, it became the game we call *chess*.
 N: Students crossed Asia to study at *Nalanda*, one of the world's first great universities. And in Delhi stands an iron pillar from this age that has stood in the rain for about *sixteen hundred years*... and has barely rusted.
@@ -155,7 +154,7 @@ GENERAL: [unsure] And if he does?
 PRITHVIRAJ: Then we'll beat him again.
 N: Whatever he really said, he didn't finish the job.
 N: A year later, Ghori came back. Same battlefield. A bigger, better-trained army. This time, *Prithviraj lost*. Rule one of history: if you beat someone, make sure they don't come back next year.
-N: In twelve oh six, Ghori's general, *Qutb ud-Din Aibak*, became the first sultan of *Delhi*, and began the tallest brick minaret in the world: the *Qutb Minar*. You can still climb its hill today.
+N: In twelve oh six, one of Ghori's generals became the first sultan of *Delhi*, and began the tallest brick minaret in the world: the *Qutb Minar*. You can still see it in Delhi today.
 N: In these same years, *Nalanda* was sacked, and its great libraries were lost.
 N: And here's where our question really begins. Mahmud came for the gold and went home. These newcomers came for the gold... and *stayed*.
 N: For the next three hundred years, five different families would rule from Delhi. And they were about to discover that ruling India was very different from robbing it. Especially the strangest sultan of them all.
@@ -163,7 +162,7 @@ N: For the next three hundred years, five different families would rule from Del
 # CHAPTER 7: BRILLIANT IDEAS, TERRIBLE TIMING
 
 N: The Delhi sultans faced the enemy the rest of Asia feared most: the *Mongols*. China, Persia and Russia all fell to them.
-N: Delhi didn't. Sultan *Alauddin Khalji* threw back invasion after invasion. He also fixed the prices of grain, horses and cloth in the markets of Delhi, and punished cheating shopkeepers harshly. One of history's first price regulators. A very, very strict one.
+N: Delhi didn't. One sultan threw back invasion after invasion. He also fixed the prices of grain, horses and cloth in the markets of Delhi, and punished cheating shopkeepers harshly. One of history's first price regulators. A very, very strict one.
 N: But the sultan everyone remembers came a little later. *Muhammad bin Tughlaq*. Clever. Well-read. Full of big ideas. And with possibly the worst timing of any ruler in Indian history.
 N: In thirteen twenty-seven, he decided his capital was in the wrong place. So he moved it from Delhi to *Daulatabad*, about a thousand kilometres south. And he didn't just move the court. He ordered much of Delhi's population to move with him.
 [SKIT: Delhi street, Tughlaq on a palace balcony, a crowd of citizens holding bundles, a court official with a scroll]
@@ -186,7 +185,7 @@ N: Then, in fifteen twenty-six, a young prince rode down from Kabul. He had lost
 
 # CHAPTER 8: THE EMPEROR WHO COULDN'T READ
 
-N: His name was *Babur*. At *Panipat*, north of Delhi, he faced Sultan *Ibrahim Lodi*, who had a far bigger army... and around a hundred *war elephants*.
+N: His name was *Babur*. At *Panipat*, north of Delhi, he faced the sultan of Delhi, who had a far bigger army... and around a hundred *war elephants*.
 N: Remember those elephants? For two thousand years, they had decided India's battles. Porus had them. The Nandas had thousands. Chandragupta traded land for five hundred.
 N: Babur brought something new: *cannons and muskets*. The guns roared, the elephants panicked, and in a single day, the Sultanate was gone. So was the age of the war elephant.
 N: Babur founded the *Mughal Empire*. He also wrote a brutally honest memoir. And honestly? He was not impressed with India.
@@ -250,7 +249,7 @@ CLERK: [confused] We're a trading company. Why do we have an army?
 DIRECTOR: [shrugging] Why don't the others?
 N: By the early eighteen hundreds, the Company's private army in India was about *two hundred thousand* strong. Bigger than the British Army itself.
 N: Its rise began with a bored young clerk in Madras who found out he was much better at war than at paperwork: *Robert Clive*.
-N: In seventeen fifty-seven, at *Plassey* in Bengal, Clive's small army faced the Nawab of Bengal, *Siraj ud-Daulah*. But Clive had already made a secret deal with the Nawab's own commander, *Mir Jafar*. When the battle began, much of the Nawab's army simply... *stood still*.
+N: In seventeen fifty-seven, at *Plassey* in Bengal, Clive's small army faced the *Nawab of Bengal*. But Clive had already made a secret deal with the Nawab's own commander. When the battle began, much of the Nawab's army simply... *stood still*.
 N: One of the most important battles in Indian history was won by a *deal*.
 N: Within a few years, the Company won the right to collect the taxes of Bengal, one of the richest provinces on Earth. A company now ruled millions of people. And its first priority was *profit*.
 N: In seventeen seventy, a terrible famine struck Bengal. Some estimates say up to a *third* of the population died. Tax collection barely slowed.
@@ -290,7 +289,7 @@ N: June, eighteen ninety-three. A young Indian lawyer is sitting in a *first-cla
 N: He spent that night shivering in the station waiting room, deciding whether to go home or to fight. He stayed, and fought, for more than twenty years.
 N: His name was *Mohandas Karamchand Gandhi*. When he came home to India in nineteen fifteen, people would come to call him *Mahatma*, "great soul".
 N: His weapon was *satyagraha*: holding on to the truth, and resisting without violence.
-N: In nineteen nineteen, in *Amritsar*, thousands of people gathered peacefully in a walled garden called *Jallianwala Bagh*. A British general, *Reginald Dyer*, blocked the exit and ordered his troops to fire into the crowd. They fired until they ran out of bullets. The official count was three hundred and seventy-nine dead. Indian estimates were over a thousand.
+N: In nineteen nineteen, in *Amritsar*, thousands of people gathered peacefully in a walled garden called *Jallianwala Bagh*. A British general blocked the exit and ordered his troops to fire into the crowd. They fired until they ran out of bullets. The official count was three hundred and seventy-nine dead. Indian estimates were over a thousand.
 N: After Amritsar, millions of Indians who had trusted the British stopped trusting them.
 N: And Gandhi chose the most unlikely weapon in history. Remember that Indian cloth? Remember Manchester? Gandhi told Indians to *burn* foreign cloth, and spin their own.
 N: He sat at a *spinning wheel*, the *charkha*, every day, and wore rough homespun cotton called *khadi*. The spinning wheel went onto the freedom movement's flag. The cloth that had once made India rich would now help set it free.

@@ -7,7 +7,7 @@ Writes jobs/tts/<job_id>.json and <script dir>/<job_id>_speakers.json (line inde
 import json, re, sys, os
 DIR = ("Narrate this as a popular, witty long-form history YouTube documentary about India. The Narrator is a deep, warm, confident storyteller: "
        "relaxed and conversational, curious, lightly funny, with a short comic pause before each punchline and before chapter turns. "
-       "Chars voices funny cartoon characters (a cheeky time-traveller, city inspectors, brick-makers, engineers, kings, emperors, sultans, merchants, soldiers): "
+       "Chars voices the people in short dramatised scenes (merchants, engineers, scholars, servants, kings, emperors, sultans, officials, soldiers): "
        "short, punchy, expressive, following the bracketed style tags. Pronounce Indian names and places naturally, the way an Indian speaker would."
        ' VOICE IDENTITY (most important): the Narrator is always the same person: a low, warm baritone documentary host. Keep his voice identity and natural speaking pitch the same from the first line to the last, so it never sounds like a different or younger narrator. Emotion is welcome: show it freely through emphasis, energy, pace, louder and softer moments and dramatic pauses, as a real storyteller would. Never whisper or go breathy.')
 src, jid = sys.argv[1], sys.argv[2]; MAXW = int(sys.argv[3]) if len(sys.argv) > 3 and not sys.argv[3].startswith('--') else 330
