@@ -62,4 +62,6 @@ S.save(os.path.join(H, 'options', 'options_sheet.jpg'), quality=88)
 F2 = Image.new('RGB', (len(ims) * 150, 250), '#222')
 for i, (k, im) in enumerate(ims): F2.paste(im.resize((140, 249)), (i * 150, 0))
 F2.save(os.path.join(H, 'options', 'feed_test.jpg'))
+for f in os.listdir(os.path.join(H, 'options')):
+    if f.endswith(('.html', '.png')): os.remove(os.path.join(H, 'options', f))   # generated; jpgs are kept
 print('ok')
