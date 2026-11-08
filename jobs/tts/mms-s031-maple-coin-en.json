@@ -1,0 +1,74 @@
+{
+ "id": "mms-s031-maple-coin-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Would you risk prison for a one-million-dollar coin? Three men did, in twenty seventeen. But the million was never the point. Why?"
+    ],
+    [
+     "Narrator",
+     "Berlin, three thirty a.m. Thieves climb in from the train tracks and roll Canada's hundred-kilo gold coin out on a wheelbarrow."
+    ],
+    [
+     "Narrator",
+     "Not exactly pickpockets."
+    ],
+    [
+     "Narrator",
+     "So why call it a million-dollar coin?"
+    ],
+    [
+     "Narrator",
+     "Because one million is just its face value, in Canadian dollars."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky, high-pitched banknote, sudden worried realisation] Wait. Mine's just printed on, too."
+    ],
+    [
+     "Narrator",
+     "The gold inside? Police put it at over four million dollars."
+    ],
+    [
+     "Narrator",
+     "And that's not even the strangest part."
+    ],
+    [
+     "Narrator",
+     "Police believe it was melted and sold. Three men were jailed. The coin was never found."
+    ],
+    [
+     "Narrator",
+     "Since then, gold has more than tripled. Today, those hundred kilos would be worth about thirteen million dollars."
+    ],
+    [
+     "Narrator",
+     "The coin said one million. The gold says thirteen."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich gold bar, very pleased with himself] Finally. Someone who knows my worth."
+    ],
+    [
+     "Narrator",
+     "Comment: is your money worth what it says?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
