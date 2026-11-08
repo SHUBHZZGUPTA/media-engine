@@ -1,0 +1,19 @@
+{
+ "id": "oceanpair-nYKf_rJWDBc",
+ "url": "https://www.youtube.com/watch?v=nYKf_rJWDBc",
+ "models": [
+  "gemini-3.7-flash",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest",
+  "gemini-3-flash-preview"
+ ],
+ "media_resolution": "MEDIA_RESOLUTION_LOW",
+ "items": [
+  {
+   "name": "full",
+   "fps": 1,
+   "prompt": "You are a YouTube retention analyst. Watch this ENTIRE video with sound, start to finish. Write in English (translate Hindi/Urdu speech).\n\nReturn exactly these sections:\n\n1. FIRST 40 SECONDS: the narration verbatim (translated), with [mm:ss] stamps, plus what is on screen.\n2. TIME OF FIRST CONCRETE NUMBER spoken (mm:ss) and what it was.\n3. BEAT CHECKLIST - answer each with YES/NO/PARTLY and the [mm:ss] where it happens:\n a) hook built on a hard number gap in the first 15 s\n b) ladder of human dive limits (swimmer / scuba / freediving record / scuba record)\n c) penguin or other animal out-dives the blue whale\n d) Burj Khalifa used as a depth\n e) pressure shown as a physical object that grows with depth (elephants, cars, etc.) - list each object\n f) sperm whale vs giant/colossal squid\n g) Titanic depth\n h) death or disaster beat (Titan sub, shipwreck deaths, etc.)\n i) Trieste 1960 cracked window\n j) reaches about 11 km / Challenger Deep / Mariana Trench (state the deepest depth reached and when)\n k) Everest upside down still doesn't reach the bottom\n l) airliner cruising height compared to the deepest point\n m) ends on how little of the ocean is explored\n n) persistent on-screen depth meter / ruler\n o) talking characters, humour or jokes\n p) India-specific landmark or story\n4. COUNTS: number of distinct \"wow\" payoffs (new surprising fact or reveal); average seconds between payoffs; number of familiar-scale comparisons (landmarks, buildings, vehicles); number of human records/limits; number of danger/death beats.\n5. PRODUCTION: real footage vs stock vs 2D/3D animation vs AI images (estimate % of runtime each); voice (human or synthetic, male/female, energy); approximate visual changes per minute; music; on-screen text style; audio quality.\n6. PACING: words per minute of narration; any dead air, repetition, slow stretches or filler (give timestamps); where in the video you would expect viewers to leave and why.\n7. ENDING: last 30 s summary and any call to action.\n8. Overall: in 4 bullets, the strongest and weakest aspects of this video for holding a viewer to the end.\nBe precise and do not guess facts you cannot see or hear."
+  }
+ ]
+}
