@@ -1,0 +1,85 @@
+{
+ "job": "in-rm-en-d1",
+ "items": [
+  {
+   "name": "p01",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 135.32,
+   "took": 41.6
+  },
+  {
+   "name": "p02",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 127.76,
+   "took": 39.5
+  },
+  {
+   "name": "p03",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 137.96,
+   "took": 42.5
+  },
+  {
+   "name": "p04",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 169.12,
+   "took": 52.1
+  },
+  {
+   "name": "p05",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 115.2,
+   "took": 35.6
+  },
+  {
+   "name": "p06",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 95.76,
+   "took": 29.6
+  },
+  {
+   "name": "p07",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 149.4,
+   "took": 45.9
+  },
+  {
+   "name": "p08",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 112.44,
+   "took": 34.6
+  },
+  {
+   "name": "p09",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 106.24,
+   "took": 32.7
+  },
+  {
+   "name": "p10",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 137.52,
+   "took": 42.1
+  }
+ ]
+}
