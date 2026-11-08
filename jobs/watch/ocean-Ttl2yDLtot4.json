@@ -1,0 +1,19 @@
+{
+ "id": "ocean-Ttl2yDLtot4",
+ "url": "https://www.youtube.com/watch?v=Ttl2yDLtot4",
+ "models": [
+  "gemini-3.7-flash",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest",
+  "gemini-3-flash-preview"
+ ],
+ "media_resolution": "MEDIA_RESOLUTION_LOW",
+ "items": [
+  {
+   "name": "full",
+   "fps": 1,
+   "prompt": "You are a YouTube retention analyst. Watch this ENTIRE video with sound, start to finish. Context: The Independent Bro (6:28, 2.1M views, 97K subs). Write in English unless told otherwise.\n\nPART A - VERBATIM SCRIPT. Transcribe every spoken word of the narration, in order, as timestamped lines \"[mm:ss] text\". Keep each line to 1-2 sentences. If the narration is Hindi, write the Hindi line in Devanagari and then \" || \" and an English translation on the same line. After each line add a short bracket with what is on screen at that moment: visual type (3D render / 2D animation / stock footage / photo / map / chart), any on-screen text word for word, and what moves. Note music changes and sound effects as their own lines like \"[mm:ss] (SFX: ...)\". Do not summarise or skip any narration.\n\nPART B - STRUCTURE. A table: start, end, segment purpose, the open question or promise that is active, the payoff delivered (if any).\n\nPART C - WHY IT HOLDS VIEWERS. Be specific and quote exact lines:\n1. The hook: the exact words of the first 30 seconds, what promise or question it plants, and when (timestamp) the viewer is first rewarded.\n2. Payoff rhythm: list every \"wow\" fact or reveal with its timestamp; give the average seconds between them.\n3. Pattern interrupts: how often the visual changes (cuts or new graphics per minute), and the main tricks used.\n4. Scale comparisons: every comparison to a familiar thing (buildings, mountains, people), with timestamps.\n5. Characters, humour, questions to the viewer, cliffhangers: list them with timestamps.\n6. Narration: approximate words per minute, tone, and voice style.\n7. The ending: last 30 seconds word for word, how they ask for subscribe/like, and whether they tease another video.\n8. Title and thumbnail promise: what the title and thumbnail promise and the timestamp where the video delivers it.\n\nBe exhaustive in PART A. Accuracy matters more than brevity."
+  }
+ ]
+}
