@@ -10,6 +10,8 @@ img = lambda n, w, l, t: f'<img class="bg" src="file://{os.path.realpath(os.path
 OPTS = {
  'R1': (img('coin_case', 2190, -533, -285), '<div class="w" style="top:1130px">WORTH</div><div class="n" style="top:1270px">$13M</div>'),
  'R1q': (img('coin_case', 2190, -533, -285), '<div class="w" style="top:1130px">WORTH</div><div class="n" style="top:1270px">$13M<b>?</b></div>'),
+ 'R4': (img('coin_case', 2190, -533, -285), '<div class="w" style="top:1010px;font-size:170px">$1M COIN</div><div class="w" style="top:1210px;font-size:130px">WORTH</div><div class="n" style="top:1360px;font-size:270px">$13M<b>?</b></div>'),
+ 'R5': (img('coin_case', 2190, -533, -285), '<div class="n" style="top:1190px;font-size:148px"><span style="color:#F7F1E3">$1M</span> → $13M<b>?</b></div>'),
  'R2': (img('coin_case', 2190, -533, -285), '<div class="n" style="top:1110px;font-size:230px;color:#F7F1E3">$1M<b>?</b></div><div class="n" style="top:1330px;font-size:200px">NO. $13M</div>'),
  'R3': (img('wheelbarrow', 1700, -560, -230), '<div class="n" style="top:1120px">100 KG</div><div class="w" style="top:1420px">OF GOLD</div>'),
 }
