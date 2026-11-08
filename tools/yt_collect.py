@@ -73,3 +73,38 @@ if job.get("searches"):
         study.append(rec)
     json.dump(study, open(os.path.join(out, "search.json"), "w"), indent=1, ensure_ascii=False)
     print(f"search study: {len(study)} queries")
+
+# Optional upload-date lookup: "date_ids": ["videoId", ...]. Public flat listings only (no per-video page fetch).
+# For each id: a flat search for the id finds its channel, then the channel's flat /videos listing with yt-dlp's
+# approximate_date option gives an approximate upload date ("3 years ago" -> timestamp). Writes outputs/viral/<id>/dates.json.
+if job.get("date_ids"):
+    import datetime
+    def fj(args):
+        r = subprocess.run(["yt-dlp", "--flat-playlist", "-J"] + args, capture_output=True, text=True, timeout=900)
+        return (json.loads(r.stdout), None) if not r.returncode else (None, r.stderr[-300:])
+    dates, chans = [], {}
+    for vid in job["date_ids"]:
+        rec = {"id": vid}
+        d, err = fj([f"ytsearch10:{vid}"])
+        hit = next((e for e in (d or {}).get("entries") or [] if e.get("id") == vid), None)
+        cid = (hit or {}).get("channel_id")
+        rec.update({"title": (hit or {}).get("title"), "channel": (hit or {}).get("channel"), "channel_id": cid, "views": (hit or {}).get("view_count")})
+        if not cid:
+            rec["error"] = err or "not found in search"; dates.append(rec); continue
+        if cid not in chans:
+            chans[cid] = fj(["--extractor-args", "youtubetab:approximate_date", "--playlist-end", str(job.get("date_depth", 1500)),
+                             f"https://www.youtube.com/channel/{cid}/videos"])
+        cd, cerr = chans[cid]
+        ents = (cd or {}).get("entries") or []
+        e = next((x for x in ents if x.get("id") == vid), None)
+        rec["listed"] = len(ents); rec["subs"] = (cd or {}).get("channel_follower_count")
+        ts = (e or {}).get("timestamp") or (e or {}).get("release_timestamp")
+        if ts:
+            rec["approx_upload"] = datetime.datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d")
+            rec["days"] = max(1, (datetime.datetime.utcnow() - datetime.datetime.utcfromtimestamp(ts)).days)
+            if rec.get("views"): rec["views_per_day"] = round(rec["views"] / rec["days"])
+        else:
+            rec["error"] = cerr or ("not in first %d uploads" % len(ents) if not e else "no date")
+        dates.append(rec)
+    json.dump(dates, open(os.path.join(out, "dates.json"), "w"), indent=1, ensure_ascii=False)
+    print(f"dates: {sum(1 for r in dates if r.get('approx_upload'))}/{len(dates)}")
