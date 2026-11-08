@@ -1,0 +1,9623 @@
+{
+ "w": 1920,
+ "h": 1080,
+ "fps": 30,
+ "shots": [
+  {
+   "t0": 0.0,
+   "bg": {
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_world.mp4",
+    "img": "#02070d"
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "1700",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 1.45892,
+     "enter": "slam"
+    },
+    {
+     "img": {
+      "text": "\u00bc of the world's\neconomy",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1402,
+     "y": 300,
+     "in": 4.911384615384615,
+     "enter": "pop"
+    }
+   ],
+   "clip": "G_world",
+   "t1": 8.57,
+   "cut": "curve"
+  },
+  {
+   "t0": 8.57,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_world_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      8.57,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      14.57,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Britain  \u2717",
+      "size": 107,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 380,
+     "in": 9.04188888888889,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "China  \u2717",
+      "size": 107,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 580,
+     "in": 10.088027777777778,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "America  \u2717",
+      "size": 107,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 780,
+     "in": 10.973222222222223,
+     "enter": "pop"
+    }
+   ],
+   "t1": 12.5,
+   "cut": "curve"
+  },
+  {
+   "t0": 12.5,
+   "bg": {
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_india.mp4",
+    "img": "#02070d"
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "INDIA",
+      "size": 162,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 12.7366,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Spices",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1560,
+     "y": 330,
+     "in": 13.84,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Cotton",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1560,
+     "y": 470,
+     "in": 14.440528301886792,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Steel",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1560,
+     "y": 610,
+     "in": 15.041056603773585,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Diamonds",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1560,
+     "y": 750,
+     "in": 15.566518867924529,
+     "enter": "pop"
+    }
+   ],
+   "clip": "G_india",
+   "t1": 16.317179245283018,
+   "cut": "flash"
+  },
+  {
+   "t0": 16.317179245283018,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "cam": [
+     [
+      16.317179245283018,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      19.58358962264151,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Ships from across the world",
+      "size": 90,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 16.41717924528302,
+     "enter": "pop"
+    }
+   ],
+   "t1": 19.58358962264151,
+   "cut": "curve"
+  },
+  {
+   "t0": 19.58358962264151,
+   "t1": 22.85,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "cam": [
+     [
+      19.58358962264151,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      22.85,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Ships from across the world",
+      "size": 90,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 19.58358962264151,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 22.85,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "cam": [
+     [
+      22.85,
+      0.5454545454545454,
+      0.5,
+      1.1
+     ],
+     [
+      28.85,
+      0.5833333333333333,
+      0.5,
+      1.2
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 420,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       23.0,
+       27.639
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Richest shop on the\nplanet. And it was\nalways open.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 900,
+     "y": 330,
+     "in": 23.0,
+     "enter": "pop",
+     "out": 27.889
+    }
+   ],
+   "t1": 27.489,
+   "cut": "curve"
+  },
+  {
+   "t0": 27.489,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      27.489,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      34.57,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Sone ki Chidiya",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 450,
+     "in": 31.0965,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "THE GOLDEN BIRD",
+      "size": 120,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 700,
+     "in": 32.71,
+     "enter": "pop"
+    }
+   ],
+   "t1": 34.57,
+   "cut": "curve"
+  },
+  {
+   "t0": 34.57,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      34.57,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      40.57,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       34.72,
+       37.81
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "And when you're a golden\nbird... everyone wants\nto catch you.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 34.72,
+     "enter": "pop",
+     "out": 38.06
+    }
+   ],
+   "t1": 38.65,
+   "cut": "curve"
+  },
+  {
+   "t0": 38.65,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      38.65,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      45.453,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/bars_panel.png",
+     "x": 1200,
+     "y": 900,
+     "h": 733,
+     "in": 38.699999999999996,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
+     "img": {
+      "text": "~4%",
+      "size": 162,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1500,
+     "y": 300,
+     "in": 43.608695652173914,
+     "enter": "pop"
+    }
+   ],
+   "t1": 45.453,
+   "cut": "curve"
+  },
+  {
+   "t0": 45.453,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      45.453,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      51.453,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       45.603,
+       48.94
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Ah. Someone forgot to\nlock the shop.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 45.603,
+     "enter": "pop",
+     "out": 49.19
+    }
+   ],
+   "t1": 49.451,
+   "cut": "curve"
+  },
+  {
+   "t0": 49.451,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      49.451,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      55.451,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Not the first time",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1159,
+     "y": 600,
+     "in": 49.501,
+     "enter": "pop"
+    }
+   ],
+   "cut": "curve",
+   "t1": 54.16388
+  },
+  {
+   "t0": 54.16388,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      54.16388,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      60.16388,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Rich",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 54.213879999999996,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 54.92436
+  },
+  {
+   "t0": 54.92436,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      54.92436,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      60.92436,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Robbed",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 54.97436,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 55.81158666666666
+  },
+  {
+   "t0": 55.81158666666666,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      55.81158666666666,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      61.81158666666666,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Rebuilt",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 55.86158666666666,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 57.839533333333335
+  },
+  {
+   "t0": 57.839533333333335,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      57.839533333333335,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      63.839533333333335,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "5,000 years",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 57.88953333333333,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 59.81
+  },
+  {
+   "t0": 59.81,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      59.81,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      65.81,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "City-builders\nnobody can name",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 59.86,
+     "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/_framed_priest_king.png",
+     "x": 1250,
+     "y": 760,
+     "h": 283,
+     "in": 59.86,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "cut": "curve",
+   "t1": 64.49814207650273
+  },
+  {
+   "t0": 64.49814207650273,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      64.49814207650273,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      70.49814207650273,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "An emperor who\ngave up war",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 64.54814207650273,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 67.99899453551913
+  },
+  {
+   "t0": 67.99899453551913,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      67.99899453551913,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      73.99899453551913,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Sultans",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 68.04899453551913,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 68.58246994535519
+  },
+  {
+   "t0": 68.58246994535519,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      68.58246994535519,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      74.58246994535519,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Mughals",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 68.63246994535518,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 69.29560655737704
+  },
+  {
+   "t0": 69.29560655737704,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      69.29560655737704,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      75.29560655737704,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "A company?!",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 69.34560655737704,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 70.85154098360655
+  },
+  {
+   "t0": 70.85154098360655,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      70.85154098360655,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      76.85154098360655,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Its own people",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 70.90154098360655,
+     "enter": "pop"
+    }
+   ],
+   "cut": "hard",
+   "t1": 72.42999999999999
+  },
+  {
+   "t0": 72.42999999999999,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      72.42999999999999,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      78.42999999999999,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       72.58,
+       77.04
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "A company. I'll explain\nlater. You will not\nbelieve it.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 72.58,
+     "enter": "pop",
+     "out": 77.29
+    }
+   ],
+   "t1": 76.89,
+   "cut": "curve"
+  },
+  {
+   "t0": 76.89,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      76.89,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      82.89,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "The same story",
+      "size": 137,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 80.59828571428571,
+     "enter": "pop"
+    }
+   ],
+   "t1": 81.55,
+   "cut": "curve"
+  },
+  {
+   "t0": 81.55,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      81.55,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      87.55,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/cycle1_panel.png",
+     "x": 1210,
+     "y": 1010,
+     "h": 858,
+     "in": 81.55,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 84.68812080536914,
+   "cut": "curve"
+  },
+  {
+   "t0": 84.68812080536914,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      84.68812080536914,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      90.68812080536914,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/cycle2_panel.png",
+     "x": 1210,
+     "y": 1010,
+     "h": 858,
+     "in": 84.68812080536914,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 87.26610738255035,
+   "cut": "curve"
+  },
+  {
+   "t0": 87.26610738255035,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      87.26610738255035,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      93.40826530612246,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/cycle3_panel.png",
+     "x": 1210,
+     "y": 1010,
+     "h": 858,
+     "in": 87.26610738255035,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 93.40826530612246,
+   "cut": "curve"
+  },
+  {
+   "t0": 93.40826530612246,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      93.40826530612246,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      100.42999999999999,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/cycle4_panel.png",
+     "x": 1210,
+     "y": 1010,
+     "h": 858,
+     "in": 93.40826530612246,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
+     "img": {
+      "text": "Invaders \u2192 Indians",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 230,
+     "in": 95.4091768707483,
+     "enter": "pop"
+    }
+   ],
+   "t1": 100.42999999999999,
+   "cut": "curve"
+  },
+  {
+   "t0": 100.42999999999999,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      100.42999999999999,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      106.42999999999999,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/cycle4_panel.png",
+     "x": 1210,
+     "y": 1010,
+     "h": 858,
+     "in": 100.42999999999999,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 105.97,
+   "cut": "curve"
+  },
+  {
+   "t0": 105.97,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      105.97,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      111.97,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Richest  \u2192  Lost it all  \u2192  Climbing back",
+      "size": 80,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 960,
+     "y": 600,
+     "in": 106.37355000000001,
+     "enter": "pop"
+    }
+   ],
+   "t1": 111.92999999999999,
+   "cut": "curve"
+  },
+  {
+   "t0": 111.92999999999999,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      111.92999999999999,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      117.92999999999999,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       112.08,
+       112.788
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Hold on to something.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 112.08,
+     "enter": "pop",
+     "out": 113.038
+    }
+   ],
+   "t1": 112.96000000000001,
+   "cut": "curve"
+  },
+  {
+   "t0": 112.96000000000001,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bazaar.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      112.96000000000001,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      118.21,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/chapter1.png",
+     "x": 960,
+     "y": 1000,
+     "h": 820,
+     "in": 113.01,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 118.21,
+   "cut": "zoom"
+  },
+  {
+   "t0": 118.21,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_indus.png",
+    "cam": [
+     [
+      118.21,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      121.94726900584794,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "~2500 BCE",
+      "size": 125,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 355,
+     "y": 230,
+     "in": 118.69549,
+     "enter": "slam"
+    },
+    {
+     "img": {
+      "text": "Egypt: building pyramids",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 121.10670175438597,
+     "enter": "pop"
+    }
+   ],
+   "t1": 121.94726900584794,
+   "cut": "curve"
+  },
+  {
+   "t0": 121.94726900584794,
+   "t1": 125.6845380116959,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_indus.png",
+    "cam": [
+     [
+      121.94726900584794,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      125.6845380116959,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "~2500 BCE",
+      "size": 125,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 355,
+     "y": 230,
+     "in": 121.94726900584794,
+     "enter": "slam"
+    },
+    {
+     "img": {
+      "text": "Egypt: building pyramids",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 121.94726900584794,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 125.6845380116959,
+   "bg": {
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_indus.mp4",
+    "img": "#02070d"
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Today: Pakistan + NW India",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1216,
+     "y": 430,
+     "in": 127.64646783625732,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Indus Valley Civilisation",
+      "size": 100,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 200,
+     "in": 131.4,
+     "enter": "pop"
+    }
+   ],
+   "clip": "G_indus",
+   "t1": 134.49066666666667,
+   "cut": "whip"
+  },
+  {
+   "t0": 134.49066666666667,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_indus_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      134.49066666666667,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      140.49066666666667,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "HUGE",
+      "size": 150,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 330,
+     "in": 134.49066666666667,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Bigger than\nEgypt + Mesopotamia\ncombined",
+      "size": 90,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 680,
+     "in": 135.87333333333333,
+     "enter": "pop"
+    }
+   ],
+   "t1": 139.79,
+   "cut": "flash"
+  },
+  {
+   "t0": 139.79,
+   "bg": {
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_cities.mp4",
+    "img": "#02070d"
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Tens of thousands of people",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1192,
+     "y": 760,
+     "in": 143.93233333333333,
+     "enter": "pop"
+    }
+   ],
+   "clip": "G_cities",
+   "t1": 146.63,
+   "cut": "whip"
+  },
+  {
+   "t0": 146.63,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/mohenjo_ruins.jpg",
+    "cam": [
+     [
+      146.63,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      152.63,
+      0.5,
+      0.5,
+      1.15
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Weirdly modern",
+      "size": 125,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 149.61552500000002,
+     "enter": "pop"
+    }
+   ],
+   "t1": 151.37099999999998,
+   "cut": "curve"
+  },
+  {
+   "t0": 151.37099999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      151.37099999999998,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      154.9705,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Straight streets",
+      "size": 112,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 151.521,
+     "enter": "pop"
+    }
+   ],
+   "t1": 154.9705,
+   "cut": "curve"
+  },
+  {
+   "t0": 154.9705,
+   "t1": 158.57,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      154.9705,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      158.57,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Straight streets",
+      "size": 112,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 154.9705,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "Same-size bricks",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 155.4859075630252,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 158.57,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      158.57,
+      0.4347826086956522,
+      0.5652173913043478,
+      1.15
+     ],
+     [
+      164.57,
+      0.3448275862068966,
+      0.62,
+      1.45
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Private bathrooms",
+      "size": 105,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 160.14600000000002,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Covered drains",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 600,
+     "y": 420,
+     "in": 161.95592307692309,
+     "enter": "pop"
+    }
+   ],
+   "t1": 164.42,
+   "cut": "curve"
+  },
+  {
+   "t0": 164.42,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      164.42,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      168.59499999999997,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 760,
+     "y": 1030,
+     "h": 640,
+     "enter": "none",
+     "talk": [
+      [
+       164.72,
+       168.982
+      ],
+      [
+       169.92,
+       172.226
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Four and a half thousand\nyears ago. Underground\ndrainage.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 380,
+     "in": 164.72,
+     "enter": "pop",
+     "out": 169.232
+    }
+   ],
+   "t1": 168.59499999999997,
+   "cut": "curve"
+  },
+  {
+   "t0": 168.59499999999997,
+   "t1": 172.76999999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      168.59499999999997,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      172.76999999999998,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 760,
+     "y": 1030,
+     "h": 640,
+     "enter": "none",
+     "talk": [
+      [
+       164.72,
+       168.982
+      ],
+      [
+       169.92,
+       172.226
+      ]
+     ],
+     "flip": false,
+     "in": 168.59499999999997
+    },
+    {
+     "img": {
+      "text": "Four and a half thousand\nyears ago. Underground\ndrainage.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 380,
+     "in": 168.59499999999997,
+     "enter": "none",
+     "out": 169.232
+    },
+    {
+     "img": {
+      "text": "Some cities today are\nstill working on this.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 380,
+     "in": 169.92,
+     "enter": "pop",
+     "out": 172.476
+    }
+   ]
+  },
+  {
+   "t0": 172.76999999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/great_bath.jpg",
+    "cam": [
+     [
+      172.76999999999998,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      177.15999999999997,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "The Great Bath",
+      "size": 120,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 177.03295384615384,
+     "enter": "pop"
+    }
+   ],
+   "t1": 177.15999999999997,
+   "cut": "curve"
+  },
+  {
+   "t0": 177.15999999999997,
+   "t1": 181.54999999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/great_bath.jpg",
+    "cam": [
+     [
+      177.15999999999997,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      181.54999999999998,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "The Great Bath",
+      "size": 120,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 177.15999999999997,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "Sealed with tar",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 179.3313692307692,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 181.54999999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bath.png",
+    "cam": [
+     [
+      181.54999999999998,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      184.89499999999998,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Ceremonies?",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 600,
+     "y": 300,
+     "in": 184.6114157303371,
+     "enter": "pop"
+    }
+   ],
+   "t1": 184.89499999999998,
+   "cut": "curve"
+  },
+  {
+   "t0": 184.89499999999998,
+   "t1": 188.23999999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_bath.png",
+    "cam": [
+     [
+      184.89499999999998,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      188.23999999999998,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Ceremonies?",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 600,
+     "y": 300,
+     "in": 184.89499999999998,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "Fancy pool?",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1350,
+     "y": 300,
+     "in": 186.6626404494382,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 188.23999999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      188.23999999999998,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      192.8775,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_inspector.png",
+     "x": 600,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       188.54,
+       189.059
+      ],
+      [
+       193.06,
+       200.196
+      ],
+      [
+       204.82,
+       206.068
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_brickmaker.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       189.86,
+       192.142
+      ],
+      [
+       201.14,
+       202.56
+      ]
+     ],
+     "flip": true,
+     "in": 189.36
+    },
+    {
+     "img": {
+      "text": "What is this?",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 600,
+     "y": 380,
+     "in": 188.54,
+     "enter": "pop",
+     "out": 189.309
+    },
+    {
+     "img": {
+      "text": "A brick, sir. A nice\nbrick.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1340,
+     "y": 380,
+     "in": 189.86,
+     "enter": "pop",
+     "out": 192.392
+    }
+   ],
+   "t1": 192.8775,
+   "cut": "curve"
+  },
+  {
+   "t0": 192.8775,
+   "t1": 197.515,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      192.8775,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      197.515,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_inspector.png",
+     "x": 600,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       188.54,
+       189.059
+      ],
+      [
+       193.06,
+       200.196
+      ],
+      [
+       204.82,
+       206.068
+      ]
+     ],
+     "flip": false,
+     "in": 192.8775
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_brickmaker.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       189.86,
+       192.142
+      ],
+      [
+       201.14,
+       202.56
+      ]
+     ],
+     "flip": true,
+     "in": 192.8775
+    },
+    {
+     "img": {
+      "text": "It's bigger. One to two\nto four. Every brick.\nEvery city. Every time.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 600,
+     "y": 380,
+     "in": 193.06,
+     "enter": "pop",
+     "out": 200.446
+    }
+   ]
+  },
+  {
+   "t0": 197.515,
+   "t1": 202.15249999999997,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      197.515,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      202.15249999999997,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_inspector.png",
+     "x": 600,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       188.54,
+       189.059
+      ],
+      [
+       193.06,
+       200.196
+      ],
+      [
+       204.82,
+       206.068
+      ]
+     ],
+     "flip": false,
+     "in": 197.515
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_brickmaker.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       189.86,
+       192.142
+      ],
+      [
+       201.14,
+       202.56
+      ]
+     ],
+     "flip": true,
+     "in": 197.515
+    },
+    {
+     "img": {
+      "text": "It's bigger. One to two\nto four. Every brick.\nEvery city. Every time.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 600,
+     "y": 380,
+     "in": 197.515,
+     "enter": "none",
+     "out": 200.446
+    },
+    {
+     "img": {
+      "text": "I was trying to be\ncreative.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1340,
+     "y": 380,
+     "in": 201.14,
+     "enter": "pop",
+     "out": 202.81
+    }
+   ]
+  },
+  {
+   "t0": 202.15249999999997,
+   "t1": 206.79,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_street.png",
+    "cam": [
+     [
+      202.15249999999997,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      206.79,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_inspector.png",
+     "x": 600,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       188.54,
+       189.059
+      ],
+      [
+       193.06,
+       200.196
+      ],
+      [
+       204.82,
+       206.068
+      ]
+     ],
+     "flip": false,
+     "in": 202.15249999999997
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_brickmaker.png",
+     "x": 1340,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       189.86,
+       192.142
+      ],
+      [
+       201.14,
+       202.56
+      ]
+     ],
+     "flip": true,
+     "in": 202.15249999999997
+    },
+    {
+     "img": {
+      "text": "I was trying to be\ncreative.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1340,
+     "y": 380,
+     "in": 202.15249999999997,
+     "enter": "none",
+     "out": 202.81
+    },
+    {
+     "img": {
+      "text": "Be creative with pots.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 600,
+     "y": 380,
+     "in": 204.82,
+     "enter": "pop",
+     "out": 206.318
+    }
+   ]
+  },
+  {
+   "t0": 206.79,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_weights.jpg",
+    "cam": [
+     [
+      206.79,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      212.79,
+      0.5,
+      0.5,
+      1.15
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Standard weights",
+      "size": 112,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 207.7174074074074,
+     "enter": "pop"
+    }
+   ],
+   "t1": 211.671,
+   "cut": "curve"
+  },
+  {
+   "t0": 211.671,
+   "bg": {
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_trade.mp4",
+    "img": "#02070d"
+   },
+   "layers": [],
+   "clip": "G_trade",
+   "t1": 218.49099999999999,
+   "cut": "whip"
+  },
+  {
+   "t0": 218.49099999999999,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_trade_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      218.49099999999999,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      224.49099999999999,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "The mystery",
+      "size": 150,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 218.72215,
+     "enter": "pop"
+    }
+   ],
+   "t1": 220.97,
+   "cut": "curve"
+  },
+  {
+   "t0": 220.97,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_script.jpg",
+    "cam": [
+     [
+      220.97,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      224.35,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [],
+   "t1": 224.35,
+   "cut": "curve"
+  },
+  {
+   "t0": 224.35,
+   "t1": 227.73,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_script.jpg",
+    "cam": [
+     [
+      224.35,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      227.73,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Hundreds of signs",
+      "size": 112,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 224.99094736842105,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 227.73,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_script.jpg",
+    "cam": [
+     [
+      227.73,
+      0.5,
+      0.5,
+      1.3
+     ],
+     [
+      231.04,
+      0.5,
+      0.5,
+      1.3780000000000001
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Nobody can read them",
+      "size": 120,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 228.30069230769232,
+     "enter": "pop"
+    }
+   ],
+   "t1": 231.04,
+   "cut": "flash"
+  },
+  {
+   "t0": 231.04,
+   "t1": 234.35,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_script.jpg",
+    "cam": [
+     [
+      231.04,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      234.35,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "flash",
+   "layers": [
+    {
+     "img": {
+      "text": "Nobody can read them",
+      "size": 120,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 231.04,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 234.35,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_script.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      234.35,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      240.76999999999998,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       234.5,
+       239.957
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Fish. Jar. Unicorn.\nEither a king's name or\na grocery list.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 234.5,
+     "enter": "pop",
+     "out": 240.207
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/_framed_unicorn_seal.png",
+     "x": 1500,
+     "y": 760,
+     "h": 394,
+     "in": 234.4,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 240.76999999999998,
+   "cut": "curve"
+  },
+  {
+   "t0": 240.76999999999998,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/indus_script.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      240.76999999999998,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      248.37,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/_framed_priest_king.png",
+     "x": 1000,
+     "y": 1000,
+     "h": 553,
+     "in": 240.82,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
+     "img": {
+      "text": "Their name?\nKings?\nGods?",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1580,
+     "y": 420,
+     "in": 241.10832352941176,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "UNKNOWN",
+      "size": 112,
+      "color": "#ffffff",
+      "box": "#d6423a",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1580,
+     "y": 760,
+     "in": 246.82080392156863,
+     "enter": "pop"
+    }
+   ],
+   "t1": 248.37,
+   "cut": "curve"
+  },
+  {
+   "t0": 248.37,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/harappa_ruins.jpg",
+    "cam": [
+     [
+      248.37,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      253.07000000000002,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "No palaces. No royal tombs.",
+      "size": 95,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 251.2304427480916,
+     "enter": "pop"
+    }
+   ],
+   "t1": 253.07000000000002,
+   "cut": "curve"
+  },
+  {
+   "t0": 253.07000000000002,
+   "t1": 257.77000000000004,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/harappa_ruins.jpg",
+    "cam": [
+     [
+      253.07000000000002,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      257.77000000000004,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "No palaces. No royal tombs.",
+      "size": 95,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 253.07000000000002,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 257.77000000000004,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/dholavira.jpg",
+    "cam": [
+     [
+      257.77000000000004,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      263.77000000000004,
+      0.5,
+      0.5,
+      1.15
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "~1900 BCE",
+      "size": 125,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 355,
+     "y": 230,
+     "in": 258.87462686567164,
+     "enter": "slam"
+    },
+    {
+     "img": {
+      "text": "The cities emptied",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 262.2525373134328,
+     "enter": "pop"
+    }
+   ],
+   "t1": 263.67,
+   "cut": "curve"
+  },
+  {
+   "t0": 263.67,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_indus.png",
+    "cam": [
+     [
+      263.67,
+      0.5,
+      0.5,
+      1.15
+     ],
+     [
+      267.31,
+      0.5,
+      0.5,
+      1.2189999999999999
+     ]
+    ]
+   },
+   "layers": [],
+   "t1": 267.31,
+   "cut": "curve"
+  },
+  {
+   "t0": 267.31,
+   "t1": 270.95000000000005,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_indus.png",
+    "cam": [
+     [
+      267.31,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      270.95000000000005,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Rivers moved",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 267.73891304347825,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "A river dried up",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 450,
+     "in": 270.061231884058,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 270.95000000000005,
+   "t1": 274.59000000000003,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_indus.png",
+    "cam": [
+     [
+      270.95000000000005,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      274.59000000000003,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Rivers moved",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 270.95000000000005,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "A river dried up",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 450,
+     "in": 270.95000000000005,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "Weaker monsoon",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 271.44010869565216,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 274.59000000000003,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/mohenjo_ruins.jpg",
+    "cam": [
+     [
+      274.59000000000003,
+      0.5,
+      0.5,
+      1.3
+     ],
+     [
+      278.39,
+      0.5,
+      0.5,
+      1.3780000000000001
+     ]
+    ]
+   },
+   "layers": [],
+   "t1": 278.39,
+   "cut": "curve"
+  },
+  {
+   "t0": 278.39,
+   "t1": 282.19,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/mohenjo_ruins.jpg",
+    "cam": [
+     [
+      278.39,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      282.19,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Forgotten",
+      "size": 150,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 281.6297196261682,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 282.19,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../../../outputs/fetch/in-pilot-archive/mohenjo_ruins.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      282.19,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      288.19,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "~4,000 years",
+      "size": 150,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 600,
+     "in": 282.52245,
+     "enter": "pop"
+    }
+   ],
+   "t1": 287.05,
+   "cut": "curve"
+  },
+  {
+   "t0": 287.05,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      287.05,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      293.05,
+      0.5,
+      0.5,
+      1.12
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "A railway?!",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 290.9472105263158,
+     "enter": "pop"
+    }
+   ],
+   "t1": 291.40900000000005,
+   "cut": "curve"
+  },
+  {
+   "t0": 291.40900000000005,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      291.40900000000005,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      295.08950000000004,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "1850s",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 291.96194545454546,
+     "enter": "slam"
+    }
+   ],
+   "t1": 295.08950000000004,
+   "cut": "curve"
+  },
+  {
+   "t0": 295.08950000000004,
+   "t1": 298.77000000000004,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      295.08950000000004,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      298.77000000000004,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "1850s",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 295.08950000000004,
+     "enter": "slam"
+    },
+    {
+     "img": {
+      "text": "Punjab",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 295.87627272727275,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 298.77000000000004,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      298.77000000000004,
+      0.5,
+      0.5,
+      1.2
+     ],
+     [
+      302.58500000000004,
+      0.5,
+      0.5,
+      1.272
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Harappa",
+      "size": 120,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 300.53960377358493,
+     "enter": "pop"
+    }
+   ],
+   "t1": 302.58500000000004,
+   "cut": "curve"
+  },
+  {
+   "t0": 302.58500000000004,
+   "t1": 306.4,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      302.58500000000004,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      306.4,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "Harappa",
+      "size": 120,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 302.58500000000004,
+     "enter": "none"
+    },
+    {
+     "img": {
+      "text": "Old, perfect bricks",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 420,
+     "in": 303.03130188679245,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "t0": 306.4,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      306.4,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      310.8036666666667,
+      0.5,
+      0.5,
+      1.06
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_foreman.png",
+     "x": 520,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       306.7,
+       309.067
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_engineer.png",
+     "x": 1380,
+     "y": 1045,
+     "h": 560,
+     "enter": "slideR",
+     "talk": [
+      [
+       310.109,
+       314.877
+      ]
+     ],
+     "flip": true,
+     "in": 309.609
+    },
+    {
+     "img": {
+      "text": "Sir, there's an old ruin\nfull of bricks over\nthere.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 520,
+     "y": 380,
+     "in": 306.7,
+     "enter": "pop",
+     "out": 309.317
+    },
+    {
+     "img": {
+      "text": "Free bricks? Splendid.\nOld ruins never matter.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1380,
+     "y": 380,
+     "in": 310.109,
+     "enter": "pop",
+     "out": 315.127
+    }
+   ],
+   "t1": 310.8036666666667,
+   "cut": "curve"
+  },
+  {
+   "t0": 310.8036666666667,
+   "t1": 315.20733333333334,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      310.8036666666667,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      315.20733333333334,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_foreman.png",
+     "x": 520,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       306.7,
+       309.067
+      ]
+     ],
+     "flip": false,
+     "in": 310.8036666666667
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_engineer.png",
+     "x": 1380,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       310.109,
+       314.877
+      ]
+     ],
+     "flip": true,
+     "in": 310.8036666666667
+    },
+    {
+     "img": {
+      "text": "Free bricks? Splendid.\nOld ruins never matter.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1380,
+     "y": 380,
+     "in": 310.8036666666667,
+     "enter": "none",
+     "out": 315.127
+    }
+   ]
+  },
+  {
+   "t0": 315.20733333333334,
+   "t1": 319.61100000000005,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      315.20733333333334,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      319.61100000000005,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_foreman.png",
+     "x": 520,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       306.7,
+       309.067
+      ]
+     ],
+     "flip": false,
+     "in": 315.20733333333334
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_engineer.png",
+     "x": 1380,
+     "y": 1045,
+     "h": 560,
+     "enter": "none",
+     "talk": [
+      [
+       310.109,
+       314.877
+      ]
+     ],
+     "flip": true,
+     "in": 315.20733333333334
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 960,
+     "y": 1030,
+     "h": 640,
+     "enter": "slideR",
+     "talk": [
+      [
+       316.74,
+       319.306
+      ]
+     ],
+     "flip": false,
+     "in": 316.24
+    },
+    {
+     "img": {
+      "text": "They matter. They\nreally, really matter.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 380,
+     "in": 316.74,
+     "enter": "pop",
+     "out": 319.556
+    }
+   ]
+  },
+  {
+   "t0": 319.61100000000005,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "cam": [
+     [
+      319.61100000000005,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      326.09000000000003,
+      0.4166666666666667,
+      0.55,
+      1.2
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Under the tracks",
+      "size": 125,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 323.66025,
+     "enter": "pop"
+    }
+   ],
+   "t1": 326.09000000000003,
+   "cut": "curve"
+  },
+  {
+   "t0": 326.09000000000003,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      326.09000000000003,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      334.408,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "1920s",
+      "size": 137,
+      "color": "#ffffff",
+      "box": null,
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 300,
+     "y": 230,
+     "in": 327.038528,
+     "enter": "slam"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/_framed_dancing_girl.png",
+     "x": 1050,
+     "y": 1000,
+     "h": 647,
+     "in": 326.14,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
+     "img": {
+      "text": "One of the oldest\ncivilisations\non Earth",
+      "size": 82,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1459,
+     "y": 620,
+     "in": 332.56168,
+     "enter": "pop"
+    }
+   ],
+   "t1": 334.408,
+   "cut": "curve"
+  },
+  {
+   "t0": 334.408,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      334.408,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      341.11,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/cycle_shine_panel.png",
+     "x": 1210,
+     "y": 1010,
+     "h": 858,
+     "in": 334.408,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 341.11,
+   "cut": "curve"
+  },
+  {
+   "t0": 341.11,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      341.11,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      347.958,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/cards/cycle_shatter_panel.png",
+     "x": 1210,
+     "y": 1010,
+     "h": 858,
+     "in": 341.11,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 347.958,
+   "cut": "curve"
+  },
+  {
+   "t0": 347.958,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/../art/in_railway.png",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      347.958,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      353.958,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       348.108,
+       349.923
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Loop step one. Check.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 348.108,
+     "enter": "pop",
+     "out": 350.173
+    },
+    {
+     "img": {
+      "text": "Step 1  \u2713",
+      "size": 100,
+      "color": "#ffffff",
+      "box": "#2f8f4f",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 1500,
+     "y": 230,
+     "in": 348.65250000000003,
+     "enter": "pop"
+    }
+   ],
+   "t1": 351.47,
+   "cut": "curve"
+  },
+  {
+   "t0": 351.47,
+   "bg": {
+    "video": "/home/claude/media-engine/longform/india/pilot/clips3d/G_nw.mp4",
+    "img": "#02070d"
+   },
+   "layers": [
+    {
+     "img": {
+      "text": "Horses  \u00b7  Chariots",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 300,
+     "in": 358.67018656716414,
+     "enter": "pop"
+    }
+   ],
+   "clip": "G_nw",
+   "t1": 360.19,
+   "cut": "whip"
+  },
+  {
+   "t0": 360.19,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_nw_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      360.19,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      370.271,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Sacred hymns",
+      "size": 125,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 380,
+     "in": 361.9896111111111,
+     "enter": "pop"
+    },
+    {
+     "img": {
+      "text": "Passed down by memory\nfor 3,000+ years",
+      "size": 90,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 1250,
+     "y": 660,
+     "in": 365.8626111111111,
+     "enter": "pop"
+    }
+   ],
+   "t1": 370.271,
+   "cut": "curve"
+  },
+  {
+   "t0": 370.271,
+   "bg": {
+    "img": "/home/claude/media-engine/longform/india/pilot/clips3d/G_nw_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
+    "cam": [
+     [
+      370.271,
+      0.5,
+      0.5,
+      1.0
+     ],
+     [
+      376.271,
+      0.5,
+      0.5,
+      1.08
+     ]
+    ]
+   },
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/pilot/../art/c_traveller.png",
+     "x": 360,
+     "y": 1030,
+     "h": 700,
+     "enter": "none",
+     "talk": [
+      [
+       370.421,
+       373.302
+      ]
+     ],
+     "flip": false
+    },
+    {
+     "img": {
+      "text": "Now this one, people\nstill argue about.",
+      "size": 54,
+      "color": "#222222",
+      "box": "#ffffffee",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 760,
+     "y": 330,
+     "in": 370.421,
+     "enter": "pop",
+     "out": 373.552
+    }
+   ],
+   "t1": 374.90200000000004,
+   "cut": "curve"
+  }
+ ],
+ "punch": [
+  [
+   2.0,
+   1.075
+  ],
+  [
+   9.0,
+   1.075
+  ],
+  [
+   16.0,
+   1.075
+  ],
+  [
+   23.7,
+   1.075
+  ],
+  [
+   30.0,
+   1.075
+  ],
+  [
+   37.0,
+   1.075
+  ],
+  [
+   44.0,
+   1.075
+  ],
+  [
+   51.0,
+   1.075
+  ],
+  [
+   58.7,
+   1.075
+  ],
+  [
+   65.0,
+   1.075
+  ],
+  [
+   72.0,
+   1.075
+  ],
+  [
+   79.0,
+   1.075
+  ],
+  [
+   86.0,
+   1.075
+  ],
+  [
+   93.0,
+   1.075
+  ],
+  [
+   100.0,
+   1.075
+  ],
+  [
+   107.0,
+   1.075
+  ],
+  [
+   114.0,
+   1.075
+  ],
+  [
+   121.0,
+   1.075
+  ],
+  [
+   128.0,
+   1.075
+  ],
+  [
+   135.0,
+   1.075
+  ],
+  [
+   142.0,
+   1.075
+  ],
+  [
+   149.0,
+   1.075
+  ],
+  [
+   156.0,
+   1.075
+  ],
+  [
+   163.0,
+   1.075
+  ],
+  [
+   170.0,
+   1.075
+  ],
+  [
+   177.7,
+   1.075
+  ],
+  [
+   184.0,
+   1.075
+  ],
+  [
+   191.0,
+   1.075
+  ],
+  [
+   198.0,
+   1.075
+  ],
+  [
+   205.0,
+   1.075
+  ],
+  [
+   212.0,
+   1.075
+  ],
+  [
+   219.0,
+   1.075
+  ],
+  [
+   226.0,
+   1.075
+  ],
+  [
+   233.0,
+   1.075
+  ],
+  [
+   240.0,
+   1.075
+  ],
+  [
+   247.0,
+   1.075
+  ],
+  [
+   254.0,
+   1.075
+  ],
+  [
+   261.0,
+   1.075
+  ],
+  [
+   268.0,
+   1.075
+  ],
+  [
+   275.0,
+   1.075
+  ],
+  [
+   282.7,
+   1.075
+  ],
+  [
+   289.0,
+   1.075
+  ],
+  [
+   296.0,
+   1.075
+  ],
+  [
+   303.0,
+   1.075
+  ],
+  [
+   310.0,
+   1.075
+  ],
+  [
+   317.0,
+   1.075
+  ],
+  [
+   324.0,
+   1.075
+  ],
+  [
+   331.0,
+   1.075
+  ],
+  [
+   338.0,
+   1.075
+  ],
+  [
+   345.0,
+   1.075
+  ],
+  [
+   352.0,
+   1.075
+  ],
+  [
+   359.0,
+   1.075
+  ],
+  [
+   366.0,
+   1.075
+  ],
+  [
+   373.0,
+   1.075
+  ]
+ ],
+ "shake": [
+  [
+   1.45892,
+   0.35,
+   8
+  ],
+  [
+   118.69549,
+   0.35,
+   8
+  ],
+  [
+   121.94726900584794,
+   0.35,
+   8
+  ],
+  [
+   258.87462686567164,
+   0.35,
+   8
+  ],
+  [
+   291.96194545454546,
+   0.35,
+   8
+  ],
+  [
+   295.08950000000004,
+   0.35,
+   8
+  ],
+  [
+   327.038528,
+   0.35,
+   8
+  ]
+ ],
+ "captions": [
+  {
+   "t0": 1.2089999999999999,
+   "t1": 2.4116071428571426,
+   "words": [
+    [
+     "300",
+     1.259,
+     1.359,
+     false
+    ],
+    [
+     "years",
+     1.359,
+     1.7598214285714284,
+     false
+    ],
+    [
+     "ago,",
+     1.7598214285714284,
+     2.1616071428571426,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 2.55,
+   "t1": 3.8600000000000003,
+   "words": [
+    [
+     "one",
+     2.5999999999999996,
+     2.840178571428571,
+     false
+    ],
+    [
+     "place",
+     2.840178571428571,
+     3.1999999999999997,
+     false
+    ],
+    [
+     "on",
+     3.1999999999999997,
+     3.440178571428571,
+     false
+    ],
+    [
+     "Earth",
+     3.440178571428571,
+     3.6401785714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 3.8600000000000003,
+   "t1": 4.959821428571428,
+   "words": [
+    [
+     "made",
+     3.91,
+     4.080357142857142,
+     false
+    ],
+    [
+     "about",
+     4.080357142857142,
+     4.340178571428571,
+     false
+    ],
+    [
+     "a",
+     4.340178571428571,
+     4.540178571428571,
+     false
+    ],
+    [
+     "quarter",
+     4.540178571428571,
+     4.959821428571428,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 4.959821428571428,
+   "t1": 6.859821428571427,
+   "words": [
+    [
+     "of",
+     4.959821428571428,
+     5.440178571428571,
+     false
+    ],
+    [
+     "everything",
+     5.440178571428571,
+     6.2401785714285705,
+     false
+    ],
+    [
+     "the",
+     6.2401785714285705,
+     6.5,
+     false
+    ],
+    [
+     "whole",
+     6.5,
+     6.859821428571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 6.859821428571427,
+   "t1": 8.173214285714286,
+   "words": [
+    [
+     "world",
+     6.859821428571427,
+     7.319642857142857,
+     false
+    ],
+    [
+     "produced.",
+     7.319642857142857,
+     7.923214285714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 8.669642857142856,
+   "t1": 9.246428571428572,
+   "words": [
+    [
+     "Not",
+     8.719642857142857,
+     8.819642857142856,
+     false
+    ],
+    [
+     "Britain.",
+     8.819642857142856,
+     8.996428571428572,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 9.709821428571427,
+   "t1": 10.382142857142856,
+   "words": [
+    [
+     "Not",
+     9.759821428571428,
+     9.859821428571427,
+     false
+    ],
+    [
+     "China.",
+     9.859821428571427,
+     10.132142857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 10.709821428571427,
+   "t1": 11.866071428571427,
+   "words": [
+    [
+     "Not",
+     10.759821428571428,
+     10.980357142857143,
+     false
+    ],
+    [
+     "America.",
+     10.980357142857143,
+     11.616071428571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 12.649999999999999,
+   "t1": 13.316071428571428,
+   "words": [
+    [
+     "India.",
+     12.7,
+     13.066071428571428,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 13.79017857142857,
+   "t1": 14.35267857142857,
+   "words": [
+    [
+     "Spices,",
+     13.84017857142857,
+     14.10267857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 14.69017857142857,
+   "t1": 15.09017857142857,
+   "words": [
+    [
+     "cotton,",
+     14.74017857142857,
+     14.84017857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 15.509821428571426,
+   "t1": 15.909821428571426,
+   "words": [
+    [
+     "steel,",
+     15.559821428571427,
+     15.659821428571426,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 16.249999999999996,
+   "t1": 17.404464285714283,
+   "words": [
+    [
+     "diamonds.",
+     16.299999999999997,
+     17.154464285714283,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 17.65,
+   "t1": 18.55,
+   "words": [
+    [
+     "Ships",
+     17.7,
+     17.8,
+     false
+    ],
+    [
+     "came",
+     17.8,
+     18.099999999999998,
+     false
+    ],
+    [
+     "from",
+     18.099999999999998,
+     18.319642857142856,
+     false
+    ],
+    [
+     "the",
+     18.319642857142856,
+     18.499999999999996,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 18.55,
+   "t1": 19.359821428571426,
+   "words": [
+    [
+     "other",
+     18.6,
+     18.819642857142856,
+     false
+    ],
+    [
+     "side",
+     18.819642857142856,
+     19.119642857142857,
+     false
+    ],
+    [
+     "of",
+     19.119642857142857,
+     19.24017857142857,
+     false
+    ],
+    [
+     "the",
+     19.24017857142857,
+     19.359821428571426,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 19.359821428571426,
+   "t1": 20.819642857142856,
+   "words": [
+    [
+     "planet",
+     19.359821428571426,
+     19.84017857142857,
+     false
+    ],
+    [
+     "just",
+     19.84017857142857,
+     20.319642857142853,
+     false
+    ],
+    [
+     "to",
+     20.319642857142853,
+     20.580357142857142,
+     false
+    ],
+    [
+     "buy",
+     20.580357142857142,
+     20.819642857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 20.819642857142856,
+   "t1": 22.047321428571426,
+   "words": [
+    [
+     "what",
+     20.819642857142856,
+     21.04017857142857,
+     false
+    ],
+    [
+     "India",
+     21.04017857142857,
+     21.359821428571426,
+     false
+    ],
+    [
+     "made.",
+     21.359821428571426,
+     21.797321428571426,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 27.59017857142857,
+   "t1": 28.959821428571427,
+   "words": [
+    [
+     "India",
+     27.64017857142857,
+     27.848214285714285,
+     false
+    ],
+    [
+     "was",
+     27.848214285714285,
+     27.948214285714286,
+     false
+    ],
+    [
+     "so",
+     27.948214285714286,
+     28.299999999999997,
+     false
+    ],
+    [
+     "rich,",
+     28.299999999999997,
+     28.709821428571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 29.069642857142853,
+   "t1": 29.719642857142855,
+   "words": [
+    [
+     "people",
+     29.119642857142853,
+     29.219642857142855,
+     false
+    ],
+    [
+     "had",
+     29.219642857142855,
+     29.419642857142858,
+     false
+    ],
+    [
+     "a",
+     29.419642857142858,
+     29.559821428571425,
+     false
+    ],
+    [
+     "name",
+     29.559821428571425,
+     29.719642857142855,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 29.719642857142855,
+   "t1": 30.708928571428565,
+   "words": [
+    [
+     "for",
+     29.719642857142855,
+     30.040178571428573,
+     false
+    ],
+    [
+     "it:",
+     30.040178571428573,
+     30.458928571428565,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 30.924107142857142,
+   "t1": 32.28422619047618,
+   "words": [
+    [
+     "Sone",
+     30.974107142857143,
+     31.183035714285708,
+     true
+    ],
+    [
+     "ki",
+     31.183035714285708,
+     31.608630952380945,
+     true
+    ],
+    [
+     "Chidiya.",
+     31.608630952380945,
+     32.03422619047618,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 32.409821428571426,
+   "t1": 33.88214285714285,
+   "words": [
+    [
+     "The",
+     32.45982142857142,
+     32.58035714285714,
+     false
+    ],
+    [
+     "Golden",
+     32.77,
+     33.159821428571426,
+     true
+    ],
+    [
+     "Bird.",
+     33.159821428571426,
+     33.63214285714285,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 38.75,
+   "t1": 39.269642857142856,
+   "words": [
+    [
+     "Then,",
+     38.8,
+     39.02589285714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 39.269642857142856,
+   "t1": 41.300000000000004,
+   "words": [
+    [
+     "in",
+     39.31964285714285,
+     39.419642857142854,
+     false
+    ],
+    [
+     "less",
+     39.419642857142854,
+     39.65982142857142,
+     false
+    ],
+    [
+     "than",
+     39.65982142857142,
+     39.95982142857143,
+     false
+    ],
+    [
+     "250",
+     40.02,
+     41.240178571428565,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 41.300000000000004,
+   "t1": 42.33482142857142,
+   "words": [
+    [
+     "years...",
+     41.35,
+     42.08482142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 42.59017857142857,
+   "t1": 44.21964285714286,
+   "words": [
+    [
+     "that",
+     42.640178571428564,
+     42.78035714285714,
+     false
+    ],
+    [
+     "quarter",
+     42.78035714285714,
+     43.199999999999996,
+     false
+    ],
+    [
+     "shrank",
+     43.199999999999996,
+     44.04017857142857,
+     false
+    ],
+    [
+     "to",
+     44.04017857142857,
+     44.21964285714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 44.21964285714286,
+   "t1": 45.85357142857143,
+   "words": [
+    [
+     "about",
+     44.21964285714286,
+     44.4,
+     false
+    ],
+    [
+     "4%.",
+     44.77,
+     45.60357142857143,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 49.6,
+   "t1": 50.54017857142856,
+   "words": [
+    [
+     "And",
+     49.65,
+     49.75,
+     false
+    ],
+    [
+     "here's",
+     49.75,
+     50.059821428571425,
+     false
+    ],
+    [
+     "the",
+     50.059821428571425,
+     50.18035714285713,
+     false
+    ],
+    [
+     "strange",
+     50.18035714285713,
+     50.54017857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 50.54017857142856,
+   "t1": 51.1125,
+   "words": [
+    [
+     "part.",
+     50.54017857142856,
+     50.8625,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 51.269642857142856,
+   "t1": 52.019642857142856,
+   "words": [
+    [
+     "This",
+     51.31964285714285,
+     51.44017857142857,
+     false
+    ],
+    [
+     "wasn't",
+     51.44017857142857,
+     51.659821428571426,
+     false
+    ],
+    [
+     "the",
+     51.659821428571426,
+     51.79999999999999,
+     false
+    ],
+    [
+     "first",
+     51.79999999999999,
+     52.019642857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 52.019642857142856,
+   "t1": 52.73035714285714,
+   "words": [
+    [
+     "time.",
+     52.019642857142856,
+     52.48035714285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 52.75,
+   "t1": 54.45982142857142,
+   "words": [
+    [
+     "India",
+     52.8,
+     53.21964285714285,
+     false
+    ],
+    [
+     "has",
+     53.21964285714285,
+     53.45982142857142,
+     false
+    ],
+    [
+     "been",
+     53.45982142857142,
+     53.68035714285714,
+     false
+    ],
+    [
+     "rich...",
+     53.68035714285714,
+     54.45982142857142,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 54.45982142857142,
+   "t1": 55.35982142857142,
+   "words": [
+    [
+     "and",
+     54.45982142857142,
+     54.559821428571425,
+     false
+    ],
+    [
+     "robbed...",
+     54.559821428571425,
+     55.35982142857142,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 55.35982142857142,
+   "t1": 55.94017857142857,
+   "words": [
+    [
+     "and",
+     55.35982142857142,
+     55.45982142857142,
+     false
+    ],
+    [
+     "rebuilt...",
+     55.45982142857142,
+     55.94017857142857,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 55.94017857142857,
+   "t1": 57.18035714285714,
+   "words": [
+    [
+     "again",
+     55.94017857142857,
+     56.599999999999994,
+     false
+    ],
+    [
+     "and",
+     56.599999999999994,
+     56.85982142857142,
+     false
+    ],
+    [
+     "again,",
+     56.85982142857142,
+     57.18035714285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 57.18035714285714,
+   "t1": 59.356249999999996,
+   "words": [
+    [
+     "for",
+     57.18035714285714,
+     57.419642857142854,
+     false
+    ],
+    [
+     "5,000",
+     57.65,
+     58.05,
+     false
+    ],
+    [
+     "years.",
+     58.68035714285713,
+     59.106249999999996,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 59.909821428571426,
+   "t1": 60.809821428571425,
+   "words": [
+    [
+     "Over",
+     59.95982142857142,
+     60.11964285714286,
+     false
+    ],
+    [
+     "that",
+     60.11964285714286,
+     60.31964285714286,
+     false
+    ],
+    [
+     "time,",
+     60.31964285714286,
+     60.65089285714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 60.809821428571425,
+   "t1": 61.61964285714285,
+   "words": [
+    [
+     "this",
+     60.85982142857142,
+     60.999999999999986,
+     false
+    ],
+    [
+     "land",
+     60.999999999999986,
+     61.19999999999999,
+     false
+    ],
+    [
+     "was",
+     61.19999999999999,
+     61.35982142857142,
+     false
+    ],
+    [
+     "ruled",
+     61.35982142857142,
+     61.61964285714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 61.61964285714285,
+   "t1": 63.280357142857135,
+   "words": [
+    [
+     "by",
+     61.61964285714285,
+     61.81964285714285,
+     false
+    ],
+    [
+     "city-builders",
+     61.81964285714285,
+     62.14999999999999,
+     false
+    ],
+    [
+     "nobody",
+     62.48035714285713,
+     62.89999999999999,
+     false
+    ],
+    [
+     "can",
+     62.89999999999999,
+     63.280357142857135,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 63.280357142857135,
+   "t1": 63.79107142857142,
+   "words": [
+    [
+     "name,",
+     63.280357142857135,
+     63.54107142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 63.809821428571425,
+   "t1": 64.88035714285714,
+   "words": [
+    [
+     "an",
+     63.85982142857142,
+     64.1,
+     false
+    ],
+    [
+     "emperor",
+     64.16,
+     64.39999999999999,
+     false
+    ],
+    [
+     "who",
+     64.39999999999999,
+     64.71964285714286,
+     false
+    ],
+    [
+     "gave",
+     64.71964285714286,
+     64.88035714285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 64.88035714285714,
+   "t1": 66.04017857142857,
+   "words": [
+    [
+     "up",
+     64.88035714285714,
+     65.04017857142857,
+     false
+    ],
+    [
+     "war",
+     65.04017857142857,
+     65.45982142857142,
+     false
+    ],
+    [
+     "after",
+     65.45982142857142,
+     65.65982142857142,
+     false
+    ],
+    [
+     "one",
+     65.65982142857142,
+     66.04017857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 66.04017857142857,
+   "t1": 67.18392857142857,
+   "words": [
+    [
+     "terrible",
+     66.04017857142857,
+     66.55982142857142,
+     false
+    ],
+    [
+     "battle,",
+     66.55982142857142,
+     66.93392857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 67.56964285714285,
+   "t1": 68.64598214285715,
+   "words": [
+    [
+     "sultans,",
+     67.61964285714285,
+     67.89196428571428,
+     false
+    ],
+    [
+     "Mughals,",
+     67.89196428571428,
+     68.39598214285715,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 68.85000000000001,
+   "t1": 69.58571428571429,
+   "words": [
+    [
+     "a",
+     68.9,
+     69.0,
+     false
+    ],
+    [
+     "company...",
+     69.0,
+     69.33571428571429,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 69.83035714285714,
+   "t1": 70.76964285714286,
+   "words": [
+    [
+     "and",
+     69.88035714285714,
+     70.04017857142856,
+     false
+    ],
+    [
+     "finally,",
+     70.13,
+     70.51964285714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 70.85,
+   "t1": 72.07410714285713,
+   "words": [
+    [
+     "its",
+     70.89999999999999,
+     70.99999999999999,
+     false
+    ],
+    [
+     "own",
+     70.99999999999999,
+     71.35982142857142,
+     false
+    ],
+    [
+     "people.",
+     71.35982142857142,
+     71.82410714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 77.28,
+   "t1": 78.04,
+   "words": [
+    [
+     "Because",
+     77.33,
+     77.45625,
+     false
+    ],
+    [
+     "if",
+     77.49999999999999,
+     77.64017857142856,
+     false
+    ],
+    [
+     "you",
+     77.64017857142856,
+     77.75982142857141,
+     false
+    ],
+    [
+     "look",
+     77.75982142857141,
+     77.98035714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 78.04,
+   "t1": 78.78124999999999,
+   "words": [
+    [
+     "closely,",
+     78.09,
+     78.53124999999999,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 79.09017857142857,
+   "t1": 80.25982142857143,
+   "words": [
+    [
+     "India",
+     79.14017857142856,
+     79.28035714285713,
+     false
+    ],
+    [
+     "keeps",
+     79.28035714285713,
+     79.68035714285713,
+     false
+    ],
+    [
+     "living",
+     79.68035714285713,
+     80.05982142857142,
+     false
+    ],
+    [
+     "the",
+     80.05982142857142,
+     80.25982142857143,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 80.25982142857143,
+   "t1": 81.60089285714285,
+   "words": [
+    [
+     "same",
+     80.25982142857143,
+     81.14017857142856,
+     true
+    ],
+    [
+     "story.",
+     81.14017857142856,
+     81.35089285714285,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 81.79,
+   "t1": 82.29017857142857,
+   "words": [
+    [
+     "First,",
+     81.84,
+     82.04910714285712,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 82.29017857142857,
+   "t1": 83.41964285714286,
+   "words": [
+    [
+     "someone",
+     82.34017857142857,
+     82.54017857142856,
+     false
+    ],
+    [
+     "stitches",
+     82.54017857142856,
+     82.94017857142856,
+     true
+    ],
+    [
+     "the",
+     82.94017857142856,
+     83.24017857142856,
+     false
+    ],
+    [
+     "land",
+     83.24017857142856,
+     83.41964285714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 83.41964285714286,
+   "t1": 84.00892857142857,
+   "words": [
+    [
+     "together.",
+     83.41964285714286,
+     83.75892857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 84.14999999999999,
+   "t1": 85.04196428571427,
+   "words": [
+    [
+     "Then",
+     84.19999999999999,
+     84.31964285714285,
+     false
+    ],
+    [
+     "it",
+     84.31964285714285,
+     84.45982142857142,
+     false
+    ],
+    [
+     "shines,",
+     84.45982142857142,
+     84.79196428571427,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 85.09017857142857,
+   "t1": 86.19999999999999,
+   "words": [
+    [
+     "the",
+     85.14017857142856,
+     85.24017857142856,
+     false
+    ],
+    [
+     "richest",
+     85.24017857142856,
+     85.64017857142856,
+     false
+    ],
+    [
+     "place",
+     85.64017857142856,
+     85.95982142857143,
+     false
+    ],
+    [
+     "on",
+     85.95982142857143,
+     86.19999999999999,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 86.19999999999999,
+   "t1": 86.58035714285714,
+   "words": [
+    [
+     "Earth.",
+     86.19999999999999,
+     86.33035714285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 86.99017857142857,
+   "t1": 87.85982142857142,
+   "words": [
+    [
+     "Then",
+     87.04017857142857,
+     87.14017857142856,
+     false
+    ],
+    [
+     "it",
+     87.14017857142856,
+     87.28035714285714,
+     false
+    ],
+    [
+     "shatters",
+     87.28035714285714,
+     87.65982142857142,
+     true
+    ],
+    [
+     "into",
+     87.65982142857142,
+     87.85982142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 87.85982142857142,
+   "t1": 88.40178571428571,
+   "words": [
+    [
+     "pieces.",
+     87.85982142857142,
+     88.15178571428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 88.66964285714285,
+   "t1": 89.84017857142855,
+   "words": [
+    [
+     "Outsiders",
+     88.71964285714284,
+     89.11964285714284,
+     false
+    ],
+    [
+     "march",
+     89.11964285714284,
+     89.49999999999999,
+     false
+    ],
+    [
+     "in",
+     89.49999999999999,
+     89.74017857142856,
+     false
+    ],
+    [
+     "to",
+     89.74017857142856,
+     89.84017857142855,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 89.84017857142855,
+   "t1": 90.67946428571429,
+   "words": [
+    [
+     "take",
+     89.84017857142855,
+     90.04017857142856,
+     false
+    ],
+    [
+     "it...",
+     90.04017857142856,
+     90.42946428571429,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 90.79,
+   "t1": 92.19999999999999,
+   "words": [
+    [
+     "...and",
+     90.84,
+     90.95982142857142,
+     false
+    ],
+    [
+     "then",
+     90.95982142857142,
+     91.15535714285713,
+     false
+    ],
+    [
+     "something",
+     91.54,
+     91.75982142857141,
+     false
+    ],
+    [
+     "strange",
+     91.75982142857141,
+     92.19999999999999,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 92.19999999999999,
+   "t1": 92.85178571428571,
+   "words": [
+    [
+     "happens.",
+     92.19999999999999,
+     92.60178571428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 93.3,
+   "t1": 94.84821428571428,
+   "words": [
+    [
+     "India",
+     93.35,
+     93.65982142857142,
+     false
+    ],
+    [
+     "absorbs",
+     93.65982142857142,
+     94.28035714285713,
+     true
+    ],
+    [
+     "them.",
+     94.28035714285713,
+     94.59821428571428,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 95.05,
+   "t1": 96.05982142857142,
+   "words": [
+    [
+     "The",
+     95.1,
+     95.24017857142856,
+     false
+    ],
+    [
+     "invaders",
+     95.24017857142856,
+     95.64017857142856,
+     false
+    ],
+    [
+     "end",
+     95.64017857142856,
+     95.91964285714286,
+     false
+    ],
+    [
+     "up",
+     95.91964285714286,
+     96.05982142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 96.05982142857142,
+   "t1": 97.15803571428572,
+   "words": [
+    [
+     "eating",
+     96.05982142857142,
+     96.35982142857142,
+     false
+    ],
+    [
+     "its",
+     96.35982142857142,
+     96.55982142857142,
+     false
+    ],
+    [
+     "food,",
+     96.55982142857142,
+     96.90803571428572,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 97.19017857142858,
+   "t1": 98.26339285714285,
+   "words": [
+    [
+     "speaking",
+     97.24017857142857,
+     97.5,
+     false
+    ],
+    [
+     "its",
+     97.5,
+     97.68035714285713,
+     false
+    ],
+    [
+     "languages,",
+     97.68035714285713,
+     98.01339285714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 98.30982142857142,
+   "t1": 99.66160714285712,
+   "words": [
+    [
+     "and",
+     98.35982142857142,
+     98.48035714285713,
+     false
+    ],
+    [
+     "building",
+     98.56,
+     98.71964285714284,
+     false
+    ],
+    [
+     "its",
+     98.71964285714284,
+     98.94017857142856,
+     false
+    ],
+    [
+     "monuments.",
+     98.94017857142856,
+     99.41160714285712,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 100.53035714285714,
+   "t1": 101.19017857142856,
+   "words": [
+    [
+     "Stitch.",
+     100.58035714285714,
+     100.94017857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 101.46964285714284,
+   "t1": 101.86964285714284,
+   "words": [
+    [
+     "Shine.",
+     101.51964285714284,
+     101.61964285714284,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 102.9,
+   "t1": 103.63571428571427,
+   "words": [
+    [
+     "Shatter.",
+     102.95,
+     103.05,
+     false
+    ],
+    [
+     "Absorb.",
+     103.14017857142856,
+     103.38571428571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 103.99017857142857,
+   "t1": 105.32321428571427,
+   "words": [
+    [
+     "Again",
+     104.04017857142857,
+     104.48035714285713,
+     true
+    ],
+    [
+     "and",
+     104.48035714285713,
+     104.81964285714284,
+     false
+    ],
+    [
+     "again.",
+     104.81964285714284,
+     105.07321428571427,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 106.06964285714285,
+   "t1": 107.01964285714284,
+   "words": [
+    [
+     "So",
+     106.11964285714285,
+     106.49999999999999,
+     false
+    ],
+    [
+     "how",
+     106.49999999999999,
+     106.59999999999998,
+     false
+    ],
+    [
+     "did",
+     106.59999999999998,
+     106.69999999999997,
+     false
+    ],
+    [
+     "one",
+     106.69999999999997,
+     107.01964285714284,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 107.01964285714284,
+   "t1": 108.14017857142856,
+   "words": [
+    [
+     "land",
+     107.01964285714284,
+     107.35982142857141,
+     false
+    ],
+    [
+     "become",
+     107.35982142857141,
+     107.61964285714285,
+     false
+    ],
+    [
+     "the",
+     107.61964285714285,
+     107.78035714285713,
+     false
+    ],
+    [
+     "richest",
+     107.78035714285713,
+     108.14017857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 108.14017857142856,
+   "t1": 109.18392857142857,
+   "words": [
+    [
+     "place",
+     108.14017857142856,
+     108.45982142857142,
+     false
+    ],
+    [
+     "in",
+     108.45982142857142,
+     108.64017857142856,
+     false
+    ],
+    [
+     "the",
+     108.64017857142856,
+     108.74017857142856,
+     false
+    ],
+    [
+     "world,",
+     108.74017857142856,
+     108.93392857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 109.24999999999999,
+   "t1": 109.99017857142857,
+   "words": [
+    [
+     "lose",
+     109.29999999999998,
+     109.48035714285713,
+     false
+    ],
+    [
+     "it",
+     109.48035714285713,
+     109.64017857142856,
+     false
+    ],
+    [
+     "all,",
+     109.64017857142856,
+     109.77321428571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 109.99017857142857,
+   "t1": 111.44017857142856,
+   "words": [
+    [
+     "and",
+     110.04017857142857,
+     110.14017857142856,
+     false
+    ],
+    [
+     "start",
+     110.14017857142856,
+     110.39999999999999,
+     false
+    ],
+    [
+     "climbing",
+     110.49,
+     110.81964285714284,
+     false
+    ],
+    [
+     "back?",
+     110.81964285714284,
+     111.19017857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 113.59,
+   "t1": 114.46,
+   "words": [
+    [
+     "Let's",
+     113.64,
+     113.81964285714284,
+     false
+    ],
+    [
+     "go",
+     113.81964285714284,
+     113.95982142857142,
+     false
+    ],
+    [
+     "back",
+     113.95982142857142,
+     114.19999999999999,
+     false
+    ],
+    [
+     "to",
+     114.36,
+     114.46,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 114.46,
+   "t1": 115.45357142857141,
+   "words": [
+    [
+     "the",
+     114.46,
+     114.58035714285714,
+     false
+    ],
+    [
+     "very",
+     114.78,
+     114.98035714285713,
+     false
+    ],
+    [
+     "beginning.",
+     114.98035714285713,
+     115.20357142857141,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 118.30982142857141,
+   "t1": 120.76874999999998,
+   "words": [
+    [
+     "About",
+     118.35982142857141,
+     118.51964285714284,
+     false
+    ],
+    [
+     "4,500",
+     118.51964285714284,
+     119.01964285714284,
+     false
+    ],
+    [
+     "years",
+     119.51964285714284,
+     120.1,
+     false
+    ],
+    [
+     "ago,",
+     120.1,
+     120.51874999999998,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 120.86964285714285,
+   "t1": 122.1598214285714,
+   "words": [
+    [
+     "while",
+     120.91964285714285,
+     121.05982142857141,
+     false
+    ],
+    [
+     "Egypt",
+     121.05982142857141,
+     121.54017857142856,
+     false
+    ],
+    [
+     "was",
+     121.6,
+     121.84017857142857,
+     false
+    ],
+    [
+     "building",
+     121.84017857142857,
+     122.1598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 122.1598214285714,
+   "t1": 123.0625,
+   "words": [
+    [
+     "its",
+     122.1598214285714,
+     122.38035714285714,
+     false
+    ],
+    [
+     "pyramids,",
+     122.38035714285714,
+     122.8125,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 123.25,
+   "t1": 124.88035714285715,
+   "words": [
+    [
+     "a",
+     123.3,
+     123.45982142857142,
+     false
+    ],
+    [
+     "civilisation",
+     123.45982142857142,
+     123.75,
+     false
+    ],
+    [
+     "was",
+     124.04017857142857,
+     124.49999999999999,
+     false
+    ],
+    [
+     "growing",
+     124.49999999999999,
+     124.88035714285715,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 124.88035714285715,
+   "t1": 126.75982142857141,
+   "words": [
+    [
+     "along",
+     124.88035714285715,
+     125.31964285714285,
+     false
+    ],
+    [
+     "the",
+     125.31964285714285,
+     125.61964285714284,
+     false
+    ],
+    [
+     "Indus",
+     125.61964285714284,
+     126.01964285714284,
+     true
+    ],
+    [
+     "River,",
+     126.01964285714284,
+     126.75982142857141,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 126.75982142857141,
+   "t1": 127.55982142857141,
+   "words": [
+    [
+     "in",
+     126.75982142857141,
+     126.91964285714285,
+     false
+    ],
+    [
+     "what",
+     126.91964285714285,
+     127.08035714285714,
+     false
+    ],
+    [
+     "is",
+     127.08035714285714,
+     127.25982142857143,
+     false
+    ],
+    [
+     "today",
+     127.25982142857143,
+     127.55982142857141,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 127.55982142857141,
+   "t1": 129.79285714285712,
+   "words": [
+    [
+     "Pakistan",
+     127.55982142857141,
+     128.25982142857143,
+     true
+    ],
+    [
+     "and",
+     128.25982142857143,
+     128.6598214285714,
+     false
+    ],
+    [
+     "northwest",
+     128.6598214285714,
+     129.0598214285714,
+     true
+    ],
+    [
+     "India.",
+     129.0598214285714,
+     129.54285714285712,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 130.13035714285712,
+   "t1": 131.13,
+   "words": [
+    [
+     "We",
+     130.18035714285713,
+     130.38035714285715,
+     false
+    ],
+    [
+     "call",
+     130.38035714285715,
+     130.58035714285714,
+     false
+    ],
+    [
+     "it",
+     130.58035714285714,
+     130.79999999999998,
+     false
+    ],
+    [
+     "the",
+     130.79999999999998,
+     131.0,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 131.13,
+   "t1": 132.75982142857143,
+   "words": [
+    [
+     "Indus",
+     131.18,
+     131.6,
+     true
+    ],
+    [
+     "Valley",
+     131.6,
+     132.0,
+     true
+    ],
+    [
+     "Civilisation.",
+     132.0,
+     132.50982142857143,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 133.16,
+   "t1": 134.93839285714284,
+   "words": [
+    [
+     "And",
+     133.21,
+     133.31964285714287,
+     false
+    ],
+    [
+     "it",
+     133.49,
+     133.65982142857143,
+     false
+    ],
+    [
+     "was",
+     133.65982142857143,
+     134.25982142857143,
+     false
+    ],
+    [
+     "huge.",
+     134.25982142857143,
+     134.68839285714284,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 134.96964285714284,
+   "t1": 136.61964285714285,
+   "words": [
+    [
+     "It",
+     135.01964285714286,
+     135.74017857142854,
+     false
+    ],
+    [
+     "covered",
+     135.74017857142854,
+     136.01964285714286,
+     false
+    ],
+    [
+     "more",
+     136.01964285714286,
+     136.31964285714284,
+     false
+    ],
+    [
+     "land",
+     136.31964285714284,
+     136.61964285714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 136.61964285714285,
+   "t1": 138.24017857142857,
+   "words": [
+    [
+     "than",
+     136.61964285714285,
+     136.8598214285714,
+     false
+    ],
+    [
+     "Egypt",
+     136.91,
+     137.21964285714284,
+     false
+    ],
+    [
+     "and",
+     137.21964285714284,
+     137.54017857142856,
+     false
+    ],
+    [
+     "Mesopotamia",
+     137.54017857142856,
+     138.24017857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 138.24017857142857,
+   "t1": 139.94017857142856,
+   "words": [
+    [
+     "put",
+     138.24017857142857,
+     138.6,
+     true
+    ],
+    [
+     "together.",
+     138.68,
+     139.94017857142856,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 139.94017857142856,
+   "t1": 141.1491071428571,
+   "words": [
+    [
+     "Its",
+     139.94017857142856,
+     140.04017857142856,
+     false
+    ],
+    [
+     "biggest",
+     140.04017857142856,
+     140.41964285714286,
+     false
+    ],
+    [
+     "cities,",
+     140.41964285714286,
+     140.8991071428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 141.3098214285714,
+   "t1": 142.8098214285714,
+   "words": [
+    [
+     "Harappa",
+     141.35982142857142,
+     141.64017857142855,
+     true
+    ],
+    [
+     "and",
+     141.64017857142855,
+     142.0598214285714,
+     false
+    ],
+    [
+     "Mohenjo-daro,",
+     142.0598214285714,
+     142.5598214285714,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 143.0098214285714,
+   "t1": 144.21964285714284,
+   "words": [
+    [
+     "were",
+     143.0598214285714,
+     143.3598214285714,
+     false
+    ],
+    [
+     "home",
+     143.3598214285714,
+     143.58035714285714,
+     false
+    ],
+    [
+     "to",
+     143.58035714285714,
+     143.88035714285712,
+     false
+    ],
+    [
+     "tens",
+     143.95,
+     144.21964285714284,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 144.21964285714284,
+   "t1": 146.07767857142855,
+   "words": [
+    [
+     "of",
+     144.21964285714284,
+     144.64017857142858,
+     false
+    ],
+    [
+     "thousands",
+     144.91,
+     145.29999999999998,
+     false
+    ],
+    [
+     "of",
+     145.29999999999998,
+     145.54017857142856,
+     false
+    ],
+    [
+     "people.",
+     145.54017857142856,
+     145.82767857142855,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 146.73035714285712,
+   "t1": 148.10982142857142,
+   "words": [
+    [
+     "And",
+     146.78035714285713,
+     146.88035714285712,
+     false
+    ],
+    [
+     "these",
+     146.88035714285712,
+     147.01964285714286,
+     false
+    ],
+    [
+     "cities",
+     147.01964285714286,
+     147.34017857142854,
+     false
+    ],
+    [
+     "were...",
+     147.34017857142854,
+     147.85982142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 148.39999999999998,
+   "t1": 150.46696428571425,
+   "words": [
+    [
+     "weirdly",
+     148.45,
+     149.24017857142857,
+     false
+    ],
+    [
+     "modern.",
+     149.84,
+     150.21696428571425,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 151.46964285714282,
+   "t1": 152.48035714285712,
+   "words": [
+    [
+     "Streets",
+     151.51964285714283,
+     151.61964285714282,
+     false
+    ],
+    [
+     "ran",
+     151.66,
+     151.95982142857142,
+     false
+    ],
+    [
+     "in",
+     151.95982142857142,
+     152.1,
+     false
+    ],
+    [
+     "neat,",
+     152.1,
+     152.48035714285712,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 152.48035714285712,
+   "t1": 153.6973214285714,
+   "words": [
+    [
+     "straight",
+     152.48035714285712,
+     152.94017857142856,
+     false
+    ],
+    [
+     "lines.",
+     152.94017857142856,
+     153.4473214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 154.14999999999998,
+   "t1": 154.81964285714284,
+   "words": [
+    [
+     "Houses",
+     154.2,
+     154.29999999999998,
+     false
+    ],
+    [
+     "were",
+     154.29999999999998,
+     154.45982142857142,
+     false
+    ],
+    [
+     "built",
+     154.45982142857142,
+     154.59999999999997,
+     false
+    ],
+    [
+     "from",
+     154.59999999999997,
+     154.81964285714284,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 154.81964285714284,
+   "t1": 155.7598214285714,
+   "words": [
+    [
+     "bricks",
+     154.81964285714284,
+     155.18035714285713,
+     false
+    ],
+    [
+     "of",
+     155.18035714285713,
+     155.3598214285714,
+     false
+    ],
+    [
+     "the",
+     155.3598214285714,
+     155.48035714285714,
+     false
+    ],
+    [
+     "same",
+     155.48035714285714,
+     155.7598214285714,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 155.7598214285714,
+   "t1": 156.36964285714282,
+   "words": [
+    [
+     "size,",
+     155.7598214285714,
+     156.16607142857143,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 156.36964285714282,
+   "t1": 156.9098214285714,
+   "words": [
+    [
+     "everywhere,",
+     156.41964285714283,
+     156.69017857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 156.9098214285714,
+   "t1": 158.14732142857142,
+   "words": [
+    [
+     "for",
+     156.95982142857142,
+     157.11964285714282,
+     false
+    ],
+    [
+     "hundreds",
+     157.11964285714282,
+     157.45982142857142,
+     false
+    ],
+    [
+     "of",
+     157.45982142857142,
+     157.64017857142855,
+     false
+    ],
+    [
+     "years.",
+     157.64017857142855,
+     157.89732142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 158.75,
+   "t1": 159.74017857142854,
+   "words": [
+    [
+     "Many",
+     158.8,
+     159.01964285714286,
+     false
+    ],
+    [
+     "houses",
+     159.01964285714286,
+     159.38035714285712,
+     false
+    ],
+    [
+     "had",
+     159.38035714285712,
+     159.64017857142855,
+     false
+    ],
+    [
+     "their",
+     159.64017857142855,
+     159.74017857142854,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 159.74017857142854,
+   "t1": 160.64999999999998,
+   "words": [
+    [
+     "own",
+     159.74017857142854,
+     159.89999999999998,
+     false
+    ],
+    [
+     "bathroom.",
+     159.89999999999998,
+     160.39999999999998,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 160.76999999999998,
+   "t1": 162.49999999999997,
+   "words": [
+    [
+     "Wastewater",
+     160.82,
+     160.9598214285714,
+     false
+    ],
+    [
+     "flowed",
+     161.51964285714283,
+     161.8598214285714,
+     false
+    ],
+    [
+     "into",
+     161.8598214285714,
+     162.11964285714285,
+     false
+    ],
+    [
+     "covered",
+     162.21,
+     162.49999999999997,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 162.49999999999997,
+   "t1": 163.96160714285713,
+   "words": [
+    [
+     "drains",
+     162.49999999999997,
+     162.9598214285714,
+     true
+    ],
+    [
+     "under",
+     162.9598214285714,
+     163.2598214285714,
+     false
+    ],
+    [
+     "the",
+     163.2598214285714,
+     163.4,
+     false
+    ],
+    [
+     "street.",
+     163.4,
+     163.71160714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 172.86964285714282,
+   "t1": 173.69642857142856,
+   "words": [
+    [
+     "In",
+     172.91964285714283,
+     173.04017857142856,
+     false
+    ],
+    [
+     "the",
+     173.04017857142856,
+     173.1598214285714,
+     false
+    ],
+    [
+     "middle",
+     173.1598214285714,
+     173.45982142857142,
+     false
+    ],
+    [
+     "of",
+     173.45982142857142,
+     173.69642857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 173.69642857142856,
+   "t1": 175.98035714285714,
+   "words": [
+    [
+     "Mohenjo-daro",
+     173.69642857142856,
+     174.08839285714285,
+     false
+    ],
+    [
+     "sat",
+     174.63,
+     174.98035714285714,
+     false
+    ],
+    [
+     "something",
+     174.98035714285714,
+     175.38035714285712,
+     false
+    ],
+    [
+     "archaeologists",
+     175.38035714285712,
+     175.98035714285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 175.98035714285714,
+   "t1": 177.81160714285713,
+   "words": [
+    [
+     "call",
+     175.98035714285714,
+     176.5,
+     false
+    ],
+    [
+     "the",
+     176.5,
+     176.75982142857143,
+     false
+    ],
+    [
+     "Great",
+     176.75982142857143,
+     177.1,
+     true
+    ],
+    [
+     "Bath.",
+     177.1,
+     177.56160714285713,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 178.04999999999998,
+   "t1": 179.11964285714285,
+   "words": [
+    [
+     "A",
+     178.1,
+     178.24017857142854,
+     false
+    ],
+    [
+     "brick",
+     178.24017857142854,
+     178.48035714285712,
+     false
+    ],
+    [
+     "pool,",
+     178.48035714285712,
+     179.11964285714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 179.11964285714285,
+   "t1": 180.28035714285713,
+   "words": [
+    [
+     "sealed",
+     179.11964285714285,
+     179.38035714285712,
+     false
+    ],
+    [
+     "with",
+     179.38035714285712,
+     179.7,
+     false
+    ],
+    [
+     "tar",
+     179.7,
+     179.98035714285712,
+     false
+    ],
+    [
+     "so",
+     179.98035714285712,
+     180.28035714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 180.28035714285713,
+   "t1": 181.03214285714284,
+   "words": [
+    [
+     "it",
+     180.28035714285713,
+     180.38035714285712,
+     false
+    ],
+    [
+     "wouldn't",
+     180.38035714285712,
+     180.54017857142856,
+     false
+    ],
+    [
+     "leak.",
+     180.54017857142856,
+     180.78214285714284,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 181.72,
+   "t1": 183.14017857142855,
+   "words": [
+    [
+     "Nobody",
+     181.77,
+     181.98035714285714,
+     false
+    ],
+    [
+     "knows",
+     181.98035714285714,
+     182.2598214285714,
+     false
+    ],
+    [
+     "exactly",
+     182.2598214285714,
+     182.7598214285714,
+     false
+    ],
+    [
+     "what",
+     182.7598214285714,
+     183.14017857142855,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 183.14017857142855,
+   "t1": 183.93125,
+   "words": [
+    [
+     "it",
+     183.14017857142855,
+     183.24017857142854,
+     false
+    ],
+    [
+     "was",
+     183.24017857142854,
+     183.34017857142857,
+     false
+    ],
+    [
+     "for.",
+     183.34017857142857,
+     183.68125,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 184.0303571428571,
+   "t1": 185.20624999999998,
+   "words": [
+    [
+     "Maybe",
+     184.0803571428571,
+     184.29999999999998,
+     false
+    ],
+    [
+     "ceremonies.",
+     184.29999999999998,
+     184.95624999999998,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 185.5098214285714,
+   "t1": 186.81964285714284,
+   "words": [
+    [
+     "Maybe",
+     185.5598214285714,
+     185.6598214285714,
+     false
+    ],
+    [
+     "a",
+     185.6598214285714,
+     185.89999999999998,
+     false
+    ],
+    [
+     "very",
+     186.1,
+     186.2803571428571,
+     false
+    ],
+    [
+     "fancy",
+     186.2803571428571,
+     186.81964285714284,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 186.81964285714284,
+   "t1": 187.8392857142857,
+   "words": [
+    [
+     "swimming",
+     186.81964285714284,
+     187.1598214285714,
+     false
+    ],
+    [
+     "pool.",
+     187.1598214285714,
+     187.5892857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 206.89017857142855,
+   "t1": 208.31964285714284,
+   "words": [
+    [
+     "They",
+     206.94017857142856,
+     207.08035714285714,
+     false
+    ],
+    [
+     "even",
+     207.08035714285714,
+     207.3598214285714,
+     false
+    ],
+    [
+     "used",
+     207.3598214285714,
+     207.68035714285713,
+     false
+    ],
+    [
+     "standard",
+     207.68035714285713,
+     208.31964285714284,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 208.31964285714284,
+   "t1": 209.60999999999999,
+   "words": [
+    [
+     "weights",
+     208.31964285714284,
+     208.68035714285713,
+     true
+    ],
+    [
+     "for",
+     208.75,
+     209.0,
+     false
+    ],
+    [
+     "trading,",
+     209.0,
+     209.5803571428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 209.60999999999999,
+   "t1": 210.61964285714285,
+   "words": [
+    [
+     "so",
+     209.66,
+     209.78035714285713,
+     false
+    ],
+    [
+     "nobody",
+     209.78035714285713,
+     210.0598214285714,
+     false
+    ],
+    [
+     "got",
+     210.0598214285714,
+     210.28035714285713,
+     false
+    ],
+    [
+     "cheated",
+     210.34,
+     210.61964285714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 210.61964285714285,
+   "t1": 211.38749999999996,
+   "words": [
+    [
+     "at",
+     210.61964285714285,
+     210.81964285714284,
+     false
+    ],
+    [
+     "the",
+     210.81964285714284,
+     210.91964285714283,
+     false
+    ],
+    [
+     "market.",
+     210.91964285714283,
+     211.13749999999996,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 211.76964285714283,
+   "t1": 213.67142857142855,
+   "words": [
+    [
+     "And",
+     211.81964285714284,
+     212.09999999999997,
+     false
+    ],
+    [
+     "they",
+     212.09999999999997,
+     212.24017857142854,
+     false
+    ],
+    [
+     "traded",
+     212.24017857142854,
+     212.69821428571427,
+     false
+    ],
+    [
+     "far.",
+     212.69821428571427,
+     213.42142857142855,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 214.13035714285712,
+   "t1": 215.0598214285714,
+   "words": [
+    [
+     "Indus",
+     214.18035714285713,
+     214.4598214285714,
+     false
+    ],
+    [
+     "seals",
+     214.4598214285714,
+     214.71964285714282,
+     false
+    ],
+    [
+     "have",
+     214.71964285714282,
+     214.94017857142856,
+     false
+    ],
+    [
+     "been",
+     214.94017857142856,
+     215.0598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 215.0598214285714,
+   "t1": 215.95982142857142,
+   "words": [
+    [
+     "found",
+     215.0598214285714,
+     215.25982142857143,
+     false
+    ],
+    [
+     "all",
+     215.25982142857143,
+     215.64017857142855,
+     false
+    ],
+    [
+     "the",
+     215.64017857142855,
+     215.81964285714284,
+     false
+    ],
+    [
+     "way",
+     215.81964285714284,
+     215.95982142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 215.95982142857142,
+   "t1": 216.94017857142856,
+   "words": [
+    [
+     "in",
+     215.95982142857142,
+     216.18035714285713,
+     false
+    ],
+    [
+     "Mesopotamia,",
+     216.18035714285713,
+     216.94017857142856,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 216.94017857142856,
+   "t1": 218.14374999999998,
+   "words": [
+    [
+     "in",
+     216.94017857142856,
+     217.34017857142854,
+     false
+    ],
+    [
+     "today's",
+     217.34017857142854,
+     217.61964285714285,
+     false
+    ],
+    [
+     "Iraq.",
+     217.61964285714285,
+     217.89374999999998,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 218.85999999999999,
+   "t1": 220.51339285714283,
+   "words": [
+    [
+     "But",
+     218.91,
+     219.01,
+     false
+    ],
+    [
+     "here's",
+     219.01,
+     219.51964285714283,
+     false
+    ],
+    [
+     "the",
+     219.51964285714283,
+     219.79999999999995,
+     false
+    ],
+    [
+     "mystery.",
+     219.79999999999995,
+     220.26339285714283,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 221.0696428571428,
+   "t1": 222.51999999999998,
+   "words": [
+    [
+     "These",
+     221.11964285714282,
+     221.48035714285712,
+     false
+    ],
+    [
+     "people",
+     221.48035714285712,
+     221.88035714285712,
+     false
+    ],
+    [
+     "wrote.",
+     221.88035714285712,
+     222.49999999999997,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 222.51999999999998,
+   "t1": 223.88571428571427,
+   "words": [
+    [
+     "On",
+     222.57,
+     223.1598214285714,
+     false
+    ],
+    [
+     "seals,",
+     223.1598214285714,
+     223.63571428571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 223.94196428571425,
+   "t1": 224.7205357142857,
+   "words": [
+    [
+     "on",
+     223.99196428571426,
+     224.09196428571425,
+     false
+    ],
+    [
+     "pots,",
+     224.16,
+     224.4705357142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 224.75624999999997,
+   "t1": 225.39017857142852,
+   "words": [
+    [
+     "on",
+     224.80624999999998,
+     224.90624999999997,
+     false
+    ],
+    [
+     "tags.",
+     224.97,
+     225.14821428571426,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 225.39017857142852,
+   "t1": 227.49821428571425,
+   "words": [
+    [
+     "Hundreds",
+     225.44017857142853,
+     226.2598214285714,
+     false
+    ],
+    [
+     "of",
+     226.2598214285714,
+     226.7,
+     false
+    ],
+    [
+     "different",
+     226.7,
+     226.94017857142856,
+     false
+    ],
+    [
+     "signs.",
+     226.94017857142856,
+     227.24821428571425,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 228.14,
+   "t1": 229.5803571428571,
+   "words": [
+    [
+     "And",
+     228.19,
+     228.34017857142857,
+     false
+    ],
+    [
+     "nobody",
+     228.34017857142857,
+     228.74017857142857,
+     true
+    ],
+    [
+     "can",
+     228.74017857142857,
+     229.2,
+     false
+    ],
+    [
+     "read",
+     229.2,
+     229.5803571428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 229.5803571428571,
+   "t1": 230.11339285714283,
+   "words": [
+    [
+     "them.",
+     229.5803571428571,
+     229.86339285714283,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 230.2303571428571,
+   "t1": 231.58035714285714,
+   "words": [
+    [
+     "Not",
+     230.2803571428571,
+     230.39999999999998,
+     false
+    ],
+    [
+     "one",
+     230.46,
+     230.95982142857142,
+     false
+    ],
+    [
+     "word.",
+     230.95982142857142,
+     231.58035714285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 231.58035714285714,
+   "t1": 233.59999999999997,
+   "words": [
+    [
+     "To",
+     231.58035714285714,
+     232.24017857142854,
+     false
+    ],
+    [
+     "this",
+     232.24017857142854,
+     232.61964285714282,
+     false
+    ],
+    [
+     "day.",
+     232.61964285714282,
+     233.34999999999997,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 241.39999999999998,
+   "t1": 242.34017857142854,
+   "words": [
+    [
+     "So",
+     241.45,
+     241.54999999999998,
+     false
+    ],
+    [
+     "we",
+     241.64017857142855,
+     241.89999999999998,
+     false
+    ],
+    [
+     "don't",
+     241.89999999999998,
+     242.14017857142855,
+     false
+    ],
+    [
+     "know",
+     242.14017857142855,
+     242.34017857142854,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 242.34017857142854,
+   "t1": 243.87678571428572,
+   "words": [
+    [
+     "what",
+     242.34017857142854,
+     242.7,
+     false
+    ],
+    [
+     "they",
+     242.7,
+     242.96785714285713,
+     false
+    ],
+    [
+     "called",
+     242.96785714285713,
+     243.2,
+     false
+    ],
+    [
+     "themselves.",
+     243.2,
+     243.62678571428572,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 244.1098214285714,
+   "t1": 244.75982142857137,
+   "words": [
+    [
+     "We",
+     244.1598214285714,
+     244.2598214285714,
+     false
+    ],
+    [
+     "don't",
+     244.2598214285714,
+     244.39999999999998,
+     false
+    ],
+    [
+     "know",
+     244.39999999999998,
+     244.55982142857138,
+     false
+    ],
+    [
+     "their",
+     244.55982142857138,
+     244.75982142857137,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 244.75982142857137,
+   "t1": 245.38928571428568,
+   "words": [
+    [
+     "kings,",
+     244.75982142857137,
+     245.13928571428568,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 245.59017857142857,
+   "t1": 246.37767857142856,
+   "words": [
+    [
+     "their",
+     245.64017857142858,
+     245.74017857142857,
+     false
+    ],
+    [
+     "gods,",
+     245.74017857142857,
+     246.12767857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 246.51,
+   "t1": 247.57232142857137,
+   "words": [
+    [
+     "or",
+     246.56,
+     246.66,
+     false
+    ],
+    [
+     "their",
+     246.66,
+     246.78035714285713,
+     false
+    ],
+    [
+     "stories.",
+     246.78035714285713,
+     247.32232142857137,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 248.46964285714282,
+   "t1": 248.96964285714282,
+   "words": [
+    [
+     "Oddly,",
+     248.51964285714283,
+     248.81428571428572,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 248.96964285714282,
+   "t1": 250.85982142857142,
+   "words": [
+    [
+     "archaeologists",
+     249.01964285714283,
+     249.5598214285714,
+     false
+    ],
+    [
+     "haven't",
+     249.5598214285714,
+     250.04017857142856,
+     false
+    ],
+    [
+     "found",
+     250.14,
+     250.35982142857142,
+     false
+    ],
+    [
+     "grand",
+     250.35982142857142,
+     250.85982142857142,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 250.85982142857142,
+   "t1": 252.5598214285714,
+   "words": [
+    [
+     "palaces",
+     250.85982142857142,
+     251.48035714285714,
+     false
+    ],
+    [
+     "or",
+     251.48035714285714,
+     251.74017857142857,
+     false
+    ],
+    [
+     "giant",
+     251.83,
+     252.2,
+     false
+    ],
+    [
+     "royal",
+     252.2,
+     252.5598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 252.5598214285714,
+   "t1": 253.71160714285713,
+   "words": [
+    [
+     "tombs",
+     252.5598214285714,
+     253.21964285714282,
+     false
+    ],
+    [
+     "either.",
+     253.21964285714282,
+     253.46160714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 253.93035714285713,
+   "t1": 255.29999999999995,
+   "words": [
+    [
+     "Just",
+     253.98035714285714,
+     254.11964285714282,
+     false
+    ],
+    [
+     "well-planned",
+     254.11964285714282,
+     254.47991071428567,
+     false
+    ],
+    [
+     "cities,",
+     254.84017857142854,
+     255.29999999999995,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 255.29999999999995,
+   "t1": 257.2241071428571,
+   "words": [
+    [
+     "built",
+     255.29999999999995,
+     255.8196428571428,
+     false
+    ],
+    [
+     "for",
+     255.8196428571428,
+     256.0803571428571,
+     false
+    ],
+    [
+     "ordinary",
+     256.0803571428571,
+     256.51964285714286,
+     false
+    ],
+    [
+     "people.",
+     256.51964285714286,
+     256.9741071428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 257.8696428571428,
+   "t1": 258.2598214285714,
+   "words": [
+    [
+     "Then,",
+     257.91964285714283,
+     258.2598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 258.2598214285714,
+   "t1": 260.7196428571428,
+   "words": [
+    [
+     "around",
+     258.2598214285714,
+     258.6196428571428,
+     false
+    ],
+    [
+     "1900",
+     258.6196428571428,
+     259.59999999999997,
+     true
+    ],
+    [
+     "BCE,",
+     259.59999999999997,
+     260.7196428571428,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 260.7196428571428,
+   "t1": 262.24017857142854,
+   "words": [
+    [
+     "the",
+     260.7196428571428,
+     260.84017857142857,
+     false
+    ],
+    [
+     "great",
+     260.9,
+     261.19999999999993,
+     false
+    ],
+    [
+     "cities",
+     261.19999999999993,
+     261.6401785714285,
+     false
+    ],
+    [
+     "slowly",
+     261.6401785714285,
+     262.24017857142854,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 262.24017857142854,
+   "t1": 263.08928571428567,
+   "words": [
+    [
+     "emptied.",
+     262.24017857142854,
+     262.83928571428567,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 263.9,
+   "t1": 264.48571428571427,
+   "words": [
+    [
+     "Why?",
+     263.95,
+     264.23571428571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 264.88,
+   "t1": 266.68035714285713,
+   "words": [
+    [
+     "Nobody",
+     264.93,
+     265.1401785714285,
+     false
+    ],
+    [
+     "knows",
+     265.1401785714285,
+     265.3803571428571,
+     false
+    ],
+    [
+     "for",
+     265.3803571428571,
+     265.6401785714285,
+     false
+    ],
+    [
+     "sure.",
+     265.6401785714285,
+     266.68035714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 266.68035714285713,
+   "t1": 268.3267857142857,
+   "words": [
+    [
+     "Historians",
+     266.68035714285713,
+     267.0,
+     false
+    ],
+    [
+     "suspect",
+     267.0,
+     267.4803571428571,
+     false
+    ],
+    [
+     "a",
+     267.4803571428571,
+     267.7,
+     false
+    ],
+    [
+     "mix:",
+     267.7,
+     268.0767857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 268.5303571428571,
+   "t1": 270.08125,
+   "words": [
+    [
+     "rivers",
+     268.5803571428571,
+     268.79999999999995,
+     false
+    ],
+    [
+     "changing",
+     268.79999999999995,
+     269.3196428571428,
+     false
+    ],
+    [
+     "course,",
+     269.3196428571428,
+     269.83125,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 270.15,
+   "t1": 271.46160714285713,
+   "words": [
+    [
+     "a",
+     270.2,
+     270.3,
+     false
+    ],
+    [
+     "river",
+     270.3,
+     270.41964285714283,
+     false
+    ],
+    [
+     "drying",
+     270.41964285714283,
+     270.7803571428571,
+     false
+    ],
+    [
+     "up,",
+     270.7803571428571,
+     271.21160714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 271.49017857142854,
+   "t1": 272.69999999999993,
+   "words": [
+    [
+     "and",
+     271.54017857142856,
+     271.65982142857143,
+     false
+    ],
+    [
+     "the",
+     271.65982142857143,
+     271.75982142857146,
+     false
+    ],
+    [
+     "monsoon",
+     271.75982142857146,
+     272.3196428571428,
+     true
+    ],
+    [
+     "growing",
+     272.3196428571428,
+     272.69999999999993,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 272.69999999999993,
+   "t1": 274.0848214285714,
+   "words": [
+    [
+     "weaker",
+     272.69999999999993,
+     273.18035714285713,
+     false
+    ],
+    [
+     "for",
+     273.18035714285713,
+     273.44017857142853,
+     false
+    ],
+    [
+     "years.",
+     273.44017857142853,
+     273.8348214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 274.8,
+   "t1": 276.3401785714285,
+   "words": [
+    [
+     "People",
+     274.85,
+     275.1,
+     false
+    ],
+    [
+     "drifted",
+     275.1,
+     275.6196428571428,
+     false
+    ],
+    [
+     "east",
+     275.6196428571428,
+     276.0,
+     false
+    ],
+    [
+     "and",
+     276.0,
+     276.3401785714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 276.3401785714285,
+   "t1": 278.2026785714286,
+   "words": [
+    [
+     "south",
+     276.3401785714285,
+     276.68035714285713,
+     false
+    ],
+    [
+     "into",
+     276.68035714285713,
+     276.98035714285714,
+     false
+    ],
+    [
+     "smaller",
+     276.98035714285714,
+     277.54017857142856,
+     false
+    ],
+    [
+     "villages.",
+     277.54017857142856,
+     277.9526785714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 278.57,
+   "t1": 279.7803571428571,
+   "words": [
+    [
+     "The",
+     278.62,
+     278.72,
+     false
+    ],
+    [
+     "drains",
+     278.72,
+     279.0,
+     false
+    ],
+    [
+     "filled",
+     279.0,
+     279.5,
+     false
+    ],
+    [
+     "with",
+     279.5,
+     279.7803571428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 279.7803571428571,
+   "t1": 280.32857142857137,
+   "words": [
+    [
+     "mud.",
+     279.7803571428571,
+     280.07857142857137,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 280.8901785714286,
+   "t1": 282.34017857142857,
+   "words": [
+    [
+     "The",
+     280.9401785714286,
+     281.0401785714286,
+     false
+    ],
+    [
+     "cities",
+     281.0401785714286,
+     281.2598214285714,
+     false
+    ],
+    [
+     "were",
+     281.2598214285714,
+     281.91964285714283,
+     false
+    ],
+    [
+     "forgotten.",
+     281.91964285714283,
+     282.34017857142857,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 282.34017857142857,
+   "t1": 286.2392857142857,
+   "words": [
+    [
+     "For",
+     282.34017857142857,
+     283.65982142857143,
+     false
+    ],
+    [
+     "almost",
+     283.73,
+     284.0598214285714,
+     false
+    ],
+    [
+     "4,000",
+     284.0598214285714,
+     284.7397321428571,
+     false
+    ],
+    [
+     "years.",
+     285.41964285714283,
+     285.9892857142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 287.22999999999996,
+   "t1": 287.8401785714285,
+   "words": [
+    [
+     "And",
+     287.28,
+     287.3803571428571,
+     false
+    ],
+    [
+     "how",
+     287.3803571428571,
+     287.5803571428571,
+     false
+    ],
+    [
+     "did",
+     287.5803571428571,
+     287.7196428571428,
+     false
+    ],
+    [
+     "the",
+     287.7196428571428,
+     287.8401785714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 287.8401785714285,
+   "t1": 289.2848214285714,
+   "words": [
+    [
+     "world",
+     287.8401785714285,
+     288.1,
+     false
+    ],
+    [
+     "rediscover",
+     288.1,
+     288.68035714285713,
+     false
+    ],
+    [
+     "them?",
+     288.68035714285713,
+     289.0348214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 289.59,
+   "t1": 291.5598214285714,
+   "words": [
+    [
+     "Through",
+     289.64,
+     289.8401785714285,
+     false
+    ],
+    [
+     "a",
+     289.8401785714285,
+     290.0803571428571,
+     false
+    ],
+    [
+     "railway.",
+     290.0803571428571,
+     291.5598214285714,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 291.5598214285714,
+   "t1": 293.19017857142853,
+   "words": [
+    [
+     "In",
+     291.5598214285714,
+     291.85982142857137,
+     false
+    ],
+    [
+     "the",
+     291.85982142857137,
+     291.9598214285714,
+     false
+    ],
+    [
+     "1850s,",
+     291.9598214285714,
+     293.00892857142856,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 293.19017857142853,
+   "t1": 294.51964285714286,
+   "words": [
+    [
+     "British",
+     293.24017857142854,
+     293.41964285714283,
+     false
+    ],
+    [
+     "engineers",
+     293.41964285714283,
+     293.9401785714286,
+     false
+    ],
+    [
+     "were",
+     293.9401785714286,
+     294.2598214285714,
+     false
+    ],
+    [
+     "building",
+     294.2598214285714,
+     294.51964285714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 294.51964285714286,
+   "t1": 295.6803571428571,
+   "words": [
+    [
+     "a",
+     294.51964285714286,
+     294.71964285714284,
+     false
+    ],
+    [
+     "railway",
+     294.71964285714284,
+     295.04017857142856,
+     false
+    ],
+    [
+     "line",
+     295.04017857142856,
+     295.4803571428571,
+     false
+    ],
+    [
+     "in",
+     295.4803571428571,
+     295.6803571428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 295.6803571428571,
+   "t1": 296.1625,
+   "words": [
+    [
+     "Punjab.",
+     295.6803571428571,
+     295.9125,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 296.59,
+   "t1": 297.69999999999993,
+   "words": [
+    [
+     "They",
+     296.64,
+     296.74,
+     false
+    ],
+    [
+     "needed",
+     296.74,
+     297.0196428571428,
+     false
+    ],
+    [
+     "lots",
+     297.0196428571428,
+     297.4803571428571,
+     false
+    ],
+    [
+     "of",
+     297.4803571428571,
+     297.69999999999993,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 297.69999999999993,
+   "t1": 298.14107142857137,
+   "words": [
+    [
+     "bricks.",
+     297.69999999999993,
+     297.89107142857137,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 298.93,
+   "t1": 299.74017857142854,
+   "words": [
+    [
+     "And",
+     298.98,
+     299.0803571428571,
+     false
+    ],
+    [
+     "near",
+     299.0803571428571,
+     299.28035714285716,
+     false
+    ],
+    [
+     "a",
+     299.28035714285716,
+     299.48035714285714,
+     false
+    ],
+    [
+     "village",
+     299.48035714285714,
+     299.74017857142854,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 299.74017857142854,
+   "t1": 300.89732142857144,
+   "words": [
+    [
+     "called",
+     299.74017857142854,
+     300.0598214285714,
+     false
+    ],
+    [
+     "Harappa,",
+     300.0598214285714,
+     300.64732142857144,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 300.95,
+   "t1": 301.91964285714283,
+   "words": [
+    [
+     "they",
+     301.0,
+     301.1,
+     false
+    ],
+    [
+     "found",
+     301.1,
+     301.3598214285714,
+     false
+    ],
+    [
+     "a",
+     301.3598214285714,
+     301.5196428571428,
+     false
+    ],
+    [
+     "huge",
+     301.5196428571428,
+     301.91964285714283,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 301.91964285714283,
+   "t1": 303.09999999999997,
+   "words": [
+    [
+     "pile",
+     301.91964285714283,
+     302.41964285714283,
+     false
+    ],
+    [
+     "of",
+     302.41964285714283,
+     302.6598214285714,
+     false
+    ],
+    [
+     "old,",
+     302.75,
+     303.09999999999997,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 303.09999999999997,
+   "t1": 304.8401785714285,
+   "words": [
+    [
+     "perfect",
+     303.09999999999997,
+     303.68035714285713,
+     false
+    ],
+    [
+     "bricks",
+     303.68035714285713,
+     304.1598214285714,
+     false
+    ],
+    [
+     "just",
+     304.1598214285714,
+     304.41964285714283,
+     false
+    ],
+    [
+     "lying",
+     304.41964285714283,
+     304.8401785714285,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 304.8401785714285,
+   "t1": 305.77321428571423,
+   "words": [
+    [
+     "in",
+     304.8401785714285,
+     305.0803571428571,
+     false
+    ],
+    [
+     "the",
+     305.0803571428571,
+     305.2,
+     false
+    ],
+    [
+     "ground.",
+     305.2,
+     305.52321428571423,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 320.8,
+   "t1": 322.6401785714286,
+   "words": [
+    [
+     "Bricks",
+     320.85,
+     321.15982142857143,
+     false
+    ],
+    [
+     "from",
+     321.15982142857143,
+     321.44017857142853,
+     false
+    ],
+    [
+     "a",
+     321.44017857142853,
+     321.6401785714286,
+     false
+    ],
+    [
+     "4,000-year-old",
+     321.75,
+     322.3901785714286,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 323.0901785714285,
+   "t1": 324.4598214285714,
+   "words": [
+    [
+     "city",
+     323.1401785714285,
+     323.4598214285714,
+     false
+    ],
+    [
+     "ended",
+     323.4598214285714,
+     323.91964285714283,
+     false
+    ],
+    [
+     "up",
+     323.91964285714283,
+     324.15982142857143,
+     false
+    ],
+    [
+     "under",
+     324.15982142857143,
+     324.4598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 324.4598214285714,
+   "t1": 325.2098214285714,
+   "words": [
+    [
+     "the",
+     324.4598214285714,
+     324.6401785714285,
+     false
+    ],
+    [
+     "tracks.",
+     324.6401785714285,
+     324.9598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 326.19017857142853,
+   "t1": 327.9598214285714,
+   "words": [
+    [
+     "Only",
+     326.24017857142854,
+     326.4598214285714,
+     false
+    ],
+    [
+     "in",
+     326.4598214285714,
+     326.7,
+     false
+    ],
+    [
+     "the",
+     326.7,
+     326.8196428571428,
+     false
+    ],
+    [
+     "1920s",
+     326.8196428571428,
+     327.9598214285714,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 327.9598214285714,
+   "t1": 329.6598214285714,
+   "words": [
+    [
+     "did",
+     327.9598214285714,
+     328.09999999999997,
+     false
+    ],
+    [
+     "archaeologists",
+     328.09999999999997,
+     328.6428571428571,
+     false
+    ],
+    [
+     "realise",
+     328.6428571428571,
+     329.44017857142853,
+     false
+    ],
+    [
+     "what",
+     329.44017857142853,
+     329.6598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 329.6598214285714,
+   "t1": 330.6446428571428,
+   "words": [
+    [
+     "they",
+     329.6598214285714,
+     329.7803571428571,
+     false
+    ],
+    [
+     "were",
+     329.7803571428571,
+     329.9,
+     false
+    ],
+    [
+     "digging",
+     329.9,
+     330.1196428571428,
+     false
+    ],
+    [
+     "up:",
+     330.1196428571428,
+     330.3946428571428,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 330.74,
+   "t1": 331.6035714285714,
+   "words": [
+    [
+     "one",
+     330.79,
+     330.89000000000004,
+     false
+    ],
+    [
+     "of",
+     330.89000000000004,
+     330.99000000000007,
+     false
+    ],
+    [
+     "the",
+     330.99000000000007,
+     331.0900000000001,
+     false
+    ],
+    [
+     "oldest",
+     331.24,
+     331.6035714285714,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 331.6035714285714,
+   "t1": 334.62,
+   "words": [
+    [
+     "civilisations",
+     331.6035714285714,
+     332.34017857142857,
+     true
+    ],
+    [
+     "on",
+     332.34017857142857,
+     332.8196428571428,
+     false
+    ],
+    [
+     "Earth.",
+     332.8196428571428,
+     334.5598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 334.62,
+   "t1": 336.0598214285714,
+   "words": [
+    [
+     "So",
+     334.67,
+     334.7803571428571,
+     false
+    ],
+    [
+     "that",
+     334.9,
+     335.09999999999997,
+     false
+    ],
+    [
+     "was",
+     335.09999999999997,
+     335.49999999999994,
+     false
+    ],
+    [
+     "India's",
+     335.49999999999994,
+     336.0598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 336.0598214285714,
+   "t1": 337.34999999999997,
+   "words": [
+    [
+     "first",
+     336.0598214285714,
+     336.41964285714283,
+     false
+    ],
+    [
+     "shine.",
+     336.41964285714283,
+     337.09999999999997,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 337.6696428571428,
+   "t1": 338.86249999999995,
+   "words": [
+    [
+     "Rich,",
+     337.7196428571428,
+     337.96517857142857,
+     false
+    ],
+    [
+     "organised,",
+     337.96517857142857,
+     338.61249999999995,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 339.2098214285714,
+   "t1": 340.4705357142857,
+   "words": [
+    [
+     "connected",
+     339.2598214285714,
+     339.48035714285714,
+     false
+    ],
+    [
+     "to",
+     339.58,
+     339.8,
+     false
+    ],
+    [
+     "the",
+     339.8,
+     339.90000000000003,
+     false
+    ],
+    [
+     "world.",
+     339.90000000000003,
+     340.2205357142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 341.28999999999996,
+   "t1": 342.1196428571428,
+   "words": [
+    [
+     "And",
+     341.34,
+     341.44017857142853,
+     false
+    ],
+    [
+     "then,",
+     341.5,
+     342.1196428571428,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 342.1196428571428,
+   "t1": 343.54821428571427,
+   "words": [
+    [
+     "its",
+     342.1196428571428,
+     342.24017857142854,
+     false
+    ],
+    [
+     "first",
+     342.24017857142854,
+     342.6598214285714,
+     false
+    ],
+    [
+     "shatter.",
+     342.6598214285714,
+     343.29821428571427,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 343.84999999999997,
+   "t1": 345.8857142857143,
+   "words": [
+    [
+     "Its",
+     343.9,
+     344.01964285714286,
+     false
+    ],
+    [
+     "cities",
+     344.01964285714286,
+     344.2053571428571,
+     false
+    ],
+    [
+     "fell",
+     344.4,
+     344.99999999999994,
+     false
+    ],
+    [
+     "silent.",
+     345.08,
+     345.6357142857143,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 351.5696428571428,
+   "t1": 352.68035714285713,
+   "words": [
+    [
+     "But",
+     351.6196428571428,
+     351.74017857142854,
+     false
+    ],
+    [
+     "the",
+     351.74017857142854,
+     351.9196428571428,
+     false
+    ],
+    [
+     "land",
+     351.9196428571428,
+     352.2,
+     false
+    ],
+    [
+     "didn't",
+     352.2,
+     352.68035714285713,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 352.68035714285713,
+   "t1": 354.6598214285714,
+   "words": [
+    [
+     "stay",
+     352.68035714285713,
+     352.94017857142853,
+     false
+    ],
+    [
+     "empty",
+     352.94017857142853,
+     353.3,
+     false
+    ],
+    [
+     "for",
+     353.3,
+     353.5401785714285,
+     false
+    ],
+    [
+     "long.",
+     353.69,
+     354.6598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 354.6598214285714,
+   "t1": 355.6196428571428,
+   "words": [
+    [
+     "Over",
+     354.6598214285714,
+     354.94017857142853,
+     false
+    ],
+    [
+     "the",
+     354.94017857142853,
+     355.1196428571428,
+     false
+    ],
+    [
+     "mountains",
+     355.1196428571428,
+     355.41964285714283,
+     false
+    ],
+    [
+     "in",
+     355.41964285714283,
+     355.6196428571428,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 355.6196428571428,
+   "t1": 356.4598214285714,
+   "words": [
+    [
+     "the",
+     355.6196428571428,
+     355.7598214285714,
+     false
+    ],
+    [
+     "northwest,",
+     355.7598214285714,
+     356.2098214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 356.60982142857137,
+   "t1": 357.9080357142857,
+   "words": [
+    [
+     "new",
+     356.6598214285714,
+     356.85982142857137,
+     false
+    ],
+    [
+     "people",
+     356.85982142857137,
+     357.2,
+     false
+    ],
+    [
+     "were",
+     357.32,
+     357.42,
+     false
+    ],
+    [
+     "coming.",
+     357.42,
+     357.6580357142857,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 358.2098214285714,
+   "t1": 359.3303571428571,
+   "words": [
+    [
+     "They",
+     358.2598214285714,
+     358.3598214285714,
+     false
+    ],
+    [
+     "brought",
+     358.3598214285714,
+     358.5598214285714,
+     false
+    ],
+    [
+     "horses,",
+     358.5598214285714,
+     359.0803571428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 359.5696428571428,
+   "t1": 360.0848214285714,
+   "words": [
+    [
+     "chariots...",
+     359.6196428571428,
+     359.8348214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 360.8,
+   "t1": 362.0,
+   "words": [
+    [
+     "...and",
+     360.85,
+     361.1196428571428,
+     false
+    ],
+    [
+     "a",
+     361.1196428571428,
+     361.21964285714284,
+     false
+    ],
+    [
+     "collection",
+     361.21964285714284,
+     361.6803571428571,
+     false
+    ],
+    [
+     "of",
+     361.6803571428571,
+     361.94017857142853,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 362.0,
+   "t1": 363.5491071428571,
+   "words": [
+    [
+     "hymns",
+     362.05,
+     362.3196428571428,
+     false
+    ],
+    [
+     "so",
+     362.3196428571428,
+     362.7803571428571,
+     false
+    ],
+    [
+     "sacred,",
+     362.7803571428571,
+     363.2991071428571,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 363.61,
+   "t1": 364.5598214285714,
+   "words": [
+    [
+     "it",
+     363.66,
+     363.76000000000005,
+     false
+    ],
+    [
+     "was",
+     363.76000000000005,
+     363.86000000000007,
+     false
+    ],
+    [
+     "passed",
+     363.86000000000007,
+     364.2,
+     false
+    ],
+    [
+     "down",
+     364.2,
+     364.5598214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 364.5598214285714,
+   "t1": 365.7,
+   "words": [
+    [
+     "word",
+     364.5598214285714,
+     364.98035714285714,
+     true
+    ],
+    [
+     "for",
+     364.98035714285714,
+     365.24017857142854,
+     true
+    ],
+    [
+     "word,",
+     365.24017857142854,
+     365.7,
+     true
+    ]
+   ]
+  },
+  {
+   "t0": 365.7,
+   "t1": 366.8696428571428,
+   "words": [
+    [
+     "by",
+     365.7,
+     366.0,
+     false
+    ],
+    [
+     "memory",
+     366.0,
+     366.4598214285714,
+     false
+    ],
+    [
+     "alone,",
+     366.4598214285714,
+     366.7098214285714,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 366.8696428571428,
+   "t1": 368.56383928571427,
+   "words": [
+    [
+     "for",
+     366.91964285714283,
+     367.4,
+     false
+    ],
+    [
+     "more",
+     367.4,
+     367.59999999999997,
+     false
+    ],
+    [
+     "than",
+     367.59999999999997,
+     367.78749999999997,
+     false
+    ],
+    [
+     "3,000",
+     367.91,
+     368.31383928571427,
+     false
+    ]
+   ]
+  },
+  {
+   "t0": 368.7901785714285,
+   "t1": 369.6267857142857,
+   "words": [
+    [
+     "years.",
+     368.8401785714285,
+     369.3767857142857,
+     false
+    ]
+   ]
+  }
+ ],
+ "fx": [
+  [
+   "thud",
+   1.45892,
+   -14
+  ],
+  [
+   "thud",
+   118.69549,
+   -14
+  ],
+  [
+   "thud",
+   121.94726900584794,
+   -14
+  ],
+  [
+   "thud",
+   258.87462686567164,
+   -14
+  ],
+  [
+   "thud",
+   291.96194545454546,
+   -14
+  ],
+  [
+   "thud",
+   295.08950000000004,
+   -14
+  ],
+  [
+   "thud",
+   327.038528,
+   -14
+  ]
+ ]
+}
