@@ -1,0 +1,28 @@
+{
+ "id": "ocean-rBv9B-wdfIk",
+ "url": "https://www.youtube.com/watch?v=rBv9B-wdfIk",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.7-flash",
+   "usage": {
+    "promptTokenCount": 35684,
+    "candidatesTokenCount": 8206,
+    "totalTokenCount": 49993,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 35217
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 467
+     }
+    ],
+    "thoughtsTokenCount": 6103,
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}
