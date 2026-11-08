@@ -50,7 +50,11 @@ items, spk = [], {}
 for k, ch in enumerate(chunks, 1):
     name = f"p{k:02d}"
     spk[name] = {str(n): who for n, (who, _, _) in enumerate(ch) if who != "N"}
-    items.append({"name": name, "direction": DIR, "speakers": {"Narrator": "Sadaltager", "Chars": "Puck"},
+    PRON = json.load(open(next(a.split("=", 1)[1] for a in sys.argv if a.startswith("--pron=")))) if any(a.startswith("--pron=") for a in sys.argv) else {}
+    said = " ".join(t for _, t, _ in ch)
+    hints = [f"{k} = {v}" for k, v in PRON.items() if k.lower() in said.lower()]
+    direc = DIR + (" PRONUNCIATION (say these names exactly like this, stress on the capital syllables): " + "; ".join(hints) + "." if hints else "")
+    items.append({"name": name, "direction": direc, "speakers": {"Narrator": "Sadaltager", "Chars": "Puck"},
                   "lines": [["Narrator" if who == "N" else "Chars", t] for who, t, _ in ch]})
     print(name, ch[0][2][:28], "->", ch[-1][2][:28], len(ch), "lines", sum(wc(t) for _, t, _ in ch), "words")
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")

@@ -252,7 +252,7 @@ N: Its rise began with a bored young clerk in Madras who found out he was much b
 N: In seventeen fifty-seven, at *Plassey* in Bengal, Clive's small army faced the *Nawab of Bengal*. But Clive had already made a secret deal with the Nawab's own commander. When the battle began, much of the Nawab's army simply... *stood still*.
 N: One of the most important battles in Indian history was won by a *deal*.
 N: Within a few years, the Company won the right to collect the taxes of Bengal, one of the richest provinces on Earth. A company now ruled millions of people. And its first priority was *profit*.
-N: In seventeen seventy, a terrible famine struck Bengal. Some estimates say up to a *third* of the population died. Tax collection barely slowed.
+N: In seventeen seventy, a terrible famine struck Bengal. Some estimates say up to a *third* of the population died. The Company didn't cut its taxes. It *raised* them.
 N: In these same years, English picked up a new word from India: *loot*. From the Hindi *lut*. Plunder.
 N: Not everyone gave in. *Tipu Sultan* of Mysore fought the Company with iron-cased rockets so good that the British copied them. In the Punjab, *Ranjit Singh* built a Sikh empire that kept the Company out for forty years. He even got the *Koh-i-Noor*.
 N: But after he died, the Company took the Punjab. And the diamond went to *Queen Victoria*.
