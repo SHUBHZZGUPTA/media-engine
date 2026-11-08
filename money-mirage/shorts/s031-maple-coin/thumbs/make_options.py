@@ -7,6 +7,8 @@ LOGO = f'file://{R}/money-mirage/logo/MoneyMirage_logo_transparent.png'
 W, Hh = 1080, 1920
 def plate(name, x):   # 16:9 plate scaled to 1920 tall, subject at plate x centred
     pw = Hh * 16 / 9; return f'<img class="bg" src="file://{os.path.realpath(os.path.join(B, name + "__film.jpg"))}" style="height:{Hh}px;width:{pw:.0f}px;left:{540 - x * pw:.0f}px;top:0">'
+def pplate(name):   # portrait Codex plate, cover-fit 1080x1920
+    return f'<img class="bg" src="file://{os.path.realpath(os.path.join(H, "../art/src", name + ".png"))}" style="width:1280px;height:1920px;left:-100px;top:0">'
 def ring(cx, cy, rx, ry, col='#FF2D2D'):
     return (f'<svg width="{W}" height="{Hh}"><defs><filter id="gl"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'
             f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="none" stroke="{col}" stroke-width="16" stroke-linecap="round" transform="rotate(-6 {cx} {cy})" filter="url(#gl)" stroke-dasharray="{int(6.1*max(rx,ry))} 60"/>'
@@ -20,6 +22,10 @@ OPTS = {
            ring=(545, 975, 235, 265), note='current design, brightened'),
  'D': dict(p=plate('vault_full', .4), body='<div class="w" style="top:260px;font-size:120px">SAYS <s>$1M</s></div><div class="w" style="top:420px;font-size:120px">WORTH</div><div class="n" style="top:560px;font-size:250px">$13M<b>?</b></div>',
            ring=None, note='gold vault; SAYS $1M / WORTH $13M?'),
+ 'F': dict(p=pplate('coin_case'), body='<div class="dk"></div><div class="w" style="top:1060px;font-size:126px;white-space:nowrap">REALLY WORTH</div><div class="n" style="top:1220px;font-size:260px">$13M<b>?</b></div>',
+           ring=(525, 572, 290, 290), note='glass-case coin; REALLY WORTH $13M?'),
+ 'G': dict(p=pplate('coin_case'), body='<div class="dk"></div><div class="w" style="top:1040px">STAMPED <s>$1M</s></div><div class="n" style="top:1220px;font-size:260px">$13M<b>?</b></div>',
+           ring=(525, 572, 290, 290), note='glass-case coin; STAMPED $1M -> $13M?'),
  'E': dict(p=plate('coin_spin', .54), body='<div class="n" style="top:250px;font-size:140px;color:#F7F1E3">$1,000,000</div><div class="w" style="top:440px;font-size:130px;color:#FF3B30">COIN?</div><div class="n" style="top:1380px;font-size:200px">LIES<b>!</b></div>',
            ring=(545, 975, 235, 265), note='$1,000,000 COIN? ... LIES!'),
 }
