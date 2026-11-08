@@ -4,7 +4,7 @@ from playwright.async_api import async_playwright
 H = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(os.path.join(H, '../../../..'))
 _P = os.path.join(H, '../art/baked/coin_case__film.jpg'); PLATE_SRC = os.path.realpath(_P if os.path.exists(_P) else os.path.join(H, '../art/baked/coin_spin__film.jpg')); PLATE = 'file://' + PLATE_SRC
 PORTRAIT = 'coin_case' in PLATE_SRC
-CIRC = (540, 1000, 300, 300) if PORTRAIT else (540, 1060, 250, 230); LOGO = f'file://{R}/money-mirage/logo/MoneyMirage_logo_transparent.png'
+CIRC = (540, 1000, 300, 300) if PORTRAIT else (676, 975, 235, 265); LOGO = f'file://{R}/money-mirage/logo/MoneyMirage_logo_transparent.png'
 F = f'file://{R}/money-mirage/mm3/library/fonts/'
 WORDS = {'en': 'REALLY WORTH'}
 def circle(cx, cy, rx, ry):   # two overlapping hand-drawn ellipses with a glow
