@@ -1,0 +1,30 @@
+{
+ "id": "oceanpair-M275oex77pg",
+ "url": "https://www.youtube.com/watch?v=M275oex77pg",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 75334,
+    "candidatesTokenCount": 2666,
+    "totalTokenCount": 80558,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 538
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 74796
+     }
+    ],
+    "thoughtsTokenCount": 2558,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}

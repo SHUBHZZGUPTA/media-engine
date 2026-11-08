@@ -1,0 +1,30 @@
+{
+ "id": "oceanpair-xeMcit_kPwo",
+ "url": "https://www.youtube.com/watch?v=xeMcit_kPwo",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 53687,
+    "candidatesTokenCount": 2475,
+    "totalTokenCount": 58551,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 53149
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 538
+     }
+    ],
+    "thoughtsTokenCount": 2389,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}

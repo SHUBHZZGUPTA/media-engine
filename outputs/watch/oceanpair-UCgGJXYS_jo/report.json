@@ -1,0 +1,28 @@
+{
+ "id": "oceanpair-UCgGJXYS_jo",
+ "url": "https://www.youtube.com/watch?v=UCgGJXYS_jo",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.7-flash",
+   "usage": {
+    "promptTokenCount": 75882,
+    "candidatesTokenCount": 2417,
+    "totalTokenCount": 79523,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 75344
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 538
+     }
+    ],
+    "thoughtsTokenCount": 1224,
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}
