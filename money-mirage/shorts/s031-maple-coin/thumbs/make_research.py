@@ -9,6 +9,7 @@ W, Hh = 1080, 1920
 img = lambda n, w, l, t: f'<img class="bg" src="file://{os.path.realpath(os.path.join(B, n + "__film.jpg"))}" style="width:{w}px;left:{l}px;top:{t}px">'
 OPTS = {
  'R1': (img('coin_case', 2190, -533, -285), '<div class="w" style="top:1130px">WORTH</div><div class="n" style="top:1270px">$13M</div>'),
+ 'R1q': (img('coin_case', 2190, -533, -285), '<div class="w" style="top:1130px">WORTH</div><div class="n" style="top:1270px">$13M<b>?</b></div>'),
  'R2': (img('coin_case', 2190, -533, -285), '<div class="n" style="top:1110px;font-size:230px;color:#F7F1E3">$1M<b>?</b></div><div class="n" style="top:1330px;font-size:200px">NO. $13M</div>'),
  'R3': (img('wheelbarrow', 1700, -560, -230), '<div class="n" style="top:1120px">100 KG</div><div class="w" style="top:1420px">OF GOLD</div>'),
 }
