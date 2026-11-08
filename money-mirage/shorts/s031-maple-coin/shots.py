@@ -12,11 +12,11 @@ def beat(kind, at, **kw): BT.append(dict(kind=kind, at=at, **kw))
 NUM = dict(align='center', y=250, size=170)
 have = lambda p: os.path.exists(os.path.join(HERE, f'art/baked/{p}__film.jpg'))
 # new plate -> (plate, cam x, cam y) with library fallback
-def P(new, fb, fx, fy=.5): return (new, .5, .5) if have(new) else (fb, fx, fy)
-COIN = P('coin_case', 'coin_spin', .54, .5)
-MUSEUM = P('museum_tracks', 'bank_vault_1700s', .25, .42)
-BARROW = P('wheelbarrow', 'gold_window', .5, .48)
-FURNACE = P('furnace', 'lydia_mint', .64, .58)
+def P(new, fb, fx, fy=.5, nx=.5, ny=.5): return (new, nx, ny) if have(new) else (fb, fx, fy)
+COIN = P('coin_case', 'coin_spin', .54, .5, .49, .33)
+MUSEUM = P('museum_tracks', 'bank_vault_1700s', .25, .42, .55, .42)
+BARROW = P('wheelbarrow', 'gold_window', .5, .48, .55, .45)
+FURNACE = P('furnace', 'lydia_mint', .64, .58, .45, .42)
 JAIL = P('jail_bars', 'gold_window', .5, .45)
 FOLLOW_W = 4
 NW = {'100kilo': 13, 'barrow': 19, '4': 8, 'jailed': 10, '100kilos': 9, '13': 15, 'thirteen': 8}
@@ -39,7 +39,7 @@ shot('s04', BARROW[0], 'film', A(1, 3, -.15), cut='whip', cam0={'x': BARROW[1], 
 beat('punch', A(2, 0, .2), shot='s04', level=1.4)
 # ---- 3 OPEN LOOP 1: so why call it a million-dollar coin?
 shot('s05', COIN[0], 'film', A(3, 0, -.15), cut='zoom', cam0={'x': COIN[1], 'y': COIN[2], 'z': 1.3}, cam1={'x': COIN[1], 'y': COIN[2], 'z': 1.45})
-beat('circle', A(3, 0, .6), shot='s05', c=[COIN[1], COIN[2]], r=[180, 220], col='#FFC23A', until=A(4, 0, -.2))
+beat('circle', A(3, 0, .6), shot='s05', c=[COIN[1], .3 if COIN[0] == 'coin_case' else COIN[2]], r=([300, 300] if COIN[0] == 'coin_case' else [180, 220]), col='#FFC23A', until=A(4, 0, -.2))
 # ---- 4 face value, in Canadian dollars
 shot('s06', 'coin_spin', 'film', A(4, 0, -.15), cut='whip', cam0={'x': .54, 'y': .5, 'z': 1.2}, cam1={'x': .54, 'y': .5, 'z': 1.5})
 beat('punch', A(4, 1, .2), shot='s06', level=1.3)
