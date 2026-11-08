@@ -13,7 +13,7 @@ NUM = dict(align='center', y=250, size=170)
 have = lambda p: os.path.exists(os.path.join(HERE, f'art/baked/{p}__film.jpg'))
 # new plate -> (plate, cam x, cam y) with library fallback
 def P(new, fb, fx, fy=.5): return (new, .5, .5) if have(new) else (fb, fx, fy)
-COIN = P('coin_case', 'coin_spin', .5, .5)
+COIN = P('coin_case', 'coin_spin', .54, .5)
 MUSEUM = P('museum_tracks', 'bank_vault_1700s', .25, .42)
 BARROW = P('wheelbarrow', 'gold_window', .5, .48)
 FURNACE = P('furnace', 'lydia_mint', .64, .58)
@@ -28,7 +28,7 @@ beat('punch', A(0, 0, .55), shot='s00', level=1.15)
 beat('punch', A(0, 0, 1.6), shot='s00', level=1.25)
 shot('s01', JAIL[0], 'film', A(0, 1, -.1), cut='whip', cam0={'x': JAIL[1], 'y': JAIL[2], 'z': 1.2}, cam1={'x': JAIL[1], 'y': JAIL[2], 'z': 1.35})
 beat('punch', A(0, 2, .1), shot='s01', level=1.32); beat('shake', A(0, 2, .2), k=.5)
-shot('s02', 'coin_spin', 'film', A(0, 3, -.1), cut='zoom', cam0={'x': .5, 'y': .5, 'z': 1.25}, cam1={'x': .5, 'y': .52, 'z': 1.4})
+shot('s02', 'coin_spin', 'film', A(0, 3, -.1), cut='zoom', cam0={'x': .54, 'y': .5, 'z': 1.25}, cam1={'x': .54, 'y': .52, 'z': 1.4})
 beat('punch', A(0, 3, 1.2), shot='s02', level=1.4)
 # ---- 1 Berlin 3:30 a.m., train tracks, 100-kilo coin, wheelbarrow
 shot('s03', MUSEUM[0], 'film', A(1, 0, -.15), cut='zoomIn', cam0={'x': MUSEUM[1], 'y': MUSEUM[2], 'z': 1.1}, cam1={'x': MUSEUM[1], 'y': MUSEUM[2] - .04, 'z': 1.35})
@@ -39,9 +39,9 @@ shot('s04', BARROW[0], 'film', A(1, 3, -.15), cut='whip', cam0={'x': BARROW[1], 
 beat('punch', A(2, 0, .2), shot='s04', level=1.4)
 # ---- 3 OPEN LOOP 1: so why call it a million-dollar coin?
 shot('s05', COIN[0], 'film', A(3, 0, -.15), cut='zoom', cam0={'x': COIN[1], 'y': COIN[2], 'z': 1.3}, cam1={'x': COIN[1], 'y': COIN[2], 'z': 1.45})
-beat('circle', A(3, 0, .6), shot='s05', c=[COIN[1], COIN[2]], r=[230, 230], col='#FFC23A', until=A(4, 0, -.2))
+beat('circle', A(3, 0, .6), shot='s05', c=[COIN[1], COIN[2]], r=[180, 220], col='#FFC23A', until=A(4, 0, -.2))
 # ---- 4 face value, in Canadian dollars
-shot('s06', 'coin_spin', 'film', A(4, 0, -.15), cut='whip', cam0={'x': .45, 'y': .5, 'z': 1.2}, cam1={'x': .52, 'y': .52, 'z': 1.5})
+shot('s06', 'coin_spin', 'film', A(4, 0, -.15), cut='whip', cam0={'x': .54, 'y': .5, 'z': 1.2}, cam1={'x': .54, 'y': .5, 'z': 1.5})
 beat('punch', A(4, 1, .2), shot='s06', level=1.3)
 # ---- 5 BILL: mine's just printed on, too
 shot('s07', 'wallet_desk', 'soft', A(5, 0, -.35), cam0={'x': .5, 'y': .5, 'z': 1.12}, cam1={'z': 1.18})
