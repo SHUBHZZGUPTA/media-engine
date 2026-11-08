@@ -1,0 +1,79 @@
+{
+ "id": "ocean-footage-search",
+ "ua": "media-engine/1.0 (BHUGOL footage research; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "delay": 1,
+ "files": [
+  {
+   "name": "commons_okeanos.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Okeanos+Explorer+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_noaadeep.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=NOAA+deep+sea+ROV+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_mariana.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Mariana+Trench+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_angler.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=anglerfish+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_whaleshark.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=whale+shark+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_biolum.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=bioluminescence+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_wreck.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=shipwreck+NOAA+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_sperm.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=sperm+whale+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_trieste.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Trieste+bathyscaphe+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_snail.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=snailfish+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_tsunami.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=tsunami+2004+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_seafloor.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=seafloor+mapping+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_blobfish.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=deep+sea+fish+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_jelly.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=deep+sea+jellyfish+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_penguin.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=emperor+penguin+underwater+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "commons_submersible.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=submersible+Alvin+filetype%3Avideo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CImageDescription%7CArtist%7CCredit&format=json"
+  },
+  {
+   "name": "nasa_ocean.json",
+   "url": "https://images-api.nasa.gov/search?q=ocean&media_type=video"
+  },
+  {
+   "name": "nasa_earth.json",
+   "url": "https://images-api.nasa.gov/search?q=earth+from+space+ocean&media_type=video"
+  }
+ ]
+}
