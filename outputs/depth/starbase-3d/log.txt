@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/287 [00:00<?, ?it/s]Loading weights: 100%|██████████| 287/287 [00:00<00:00, 3817.79it/s]
+depth library/scenes/sb_pad.jpg
+depth library/scenes/sb_blast.jpg
+depth library/scenes/sb_orbit.jpg
+depth library/scenes/sb_tower0.jpg
+upscale library/scenes/sb_pad.jpg
+upscale library/scenes/sb_blast.jpg
+upscale library/scenes/sb_orbit.jpg
+upscale library/scenes/sb_tower0.jpg
+upscale library/scenes/sb_tower1.jpg
+{'depth': [{'src': 'library/scenes/sb_pad.jpg', 'secs': 1.8}, {'src': 'library/scenes/sb_blast.jpg', 'secs': 1.8}, {'src': 'library/scenes/sb_orbit.jpg', 'secs': 1.7}, {'src': 'library/scenes/sb_tower0.jpg', 'secs': 1.8}], 'upscale': [{'src': 'library/scenes/sb_pad.jpg', 'secs': 104.8}, {'src': 'library/scenes/sb_blast.jpg', 'secs': 103.9}, {'src': 'library/scenes/sb_orbit.jpg', 'secs': 104.0}, {'src': 'library/scenes/sb_tower0.jpg', 'secs': 104.2}, {'src': 'library/scenes/sb_tower1.jpg', 'secs': 104.0}]}
