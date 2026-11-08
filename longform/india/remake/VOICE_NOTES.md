@@ -1,0 +1,24 @@
+# India remake: voice log
+
+Script: `script_en.md` (playbook v1.1). 26 takes (`ttsjob.py ... 330 --pack`), Narrator Sadaltager + Chars Puck, gemini-3.1-flash-tts-preview, longform key.
+Checks per take: `full/takecheck.py` (line by line vs script) and narrator-only pitch vs the pilot Ch1 narrator (119.1 Hz); a take more than 1.5 st off is re-recorded, never pitch-shifted.
+
+## Day 1 (9 Nov IST, PT day 2026-11-08): p01-p10, all full length
+
+| take | covers | narrator pitch | lines | decision |
+|---|---|---|---|---|
+| p01 | hook | 136.0 Hz, +2.3 st | 15/15 clean | retake |
+| p02 | ch1 part 1 | 134.5 Hz, +2.1 st | 13/13 ("4,500" = number form) | retake |
+| p03 | ch1 part 2 | +0.5 st | 12/12 | keep |
+| p04 | ch1 end + ch2 start | -1.3 st | 13/13 | keep |
+| p05 | ch2 | -0.5 st | 17/17 | keep |
+| p06 | ch2 end | -0.2 st | 6/6 | keep |
+| p07 | ch3 | -0.7 st | 15/15 (Piyadasi heard "Pia dasi"; "Keep that wheel in mind" heard "Psst, that wheel in mind" at 115.4 s, "for long" heard "for law" at 125.3 s) | keep; re-voice the two ch4 lines in a fix job |
+| p08 | ch3 end / ch4 | 132.1 Hz, +1.8 st | 10/10 | retake if quota allows |
+| p09 | ch4 end / ch5 | 137.6 Hz, +2.5 st | 8/8 (pi digits = number form) | retake |
+| p10 | ch5 | +0.6 st | 15/15 | keep |
+
+## Plan
+- PT 2026-11-09 (from 13:30 IST 9 Nov): in-rm-en-d2 = p11-p20.
+- PT 2026-11-10: in-rm-en-d3 = p21-p26 + retakes p01r, p02r, p09r + fix job (2 ch4 lines) = 10.
+- PT 2026-11-11 if needed: p08r and any day-2/3 take that drifts.
