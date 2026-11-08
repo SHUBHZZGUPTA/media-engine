@@ -67,26 +67,18 @@ Archive images: public domain unless listed below (Wikimedia Commons).
 
 Thumbnail photo: Narendra Damodardas Modi.jpg — Narendra Modi (Flickr) — CC BY 2.0. Thumbnail images: Lion capital of Ashoka, Sarnath.jpg — lisa bat — CC BY 2.0; Taj Mahal Tomb at sunrise.JPG — MarcBW — CC BY-SA 3.0.
 
-#history #india #bhugol
+#history #india #indianhistory
 ```
 
-## Title options (one per block)
+## Title (chosen 8 Nov)
 ```
-The Entire History of India
-```
-```
-India Was the Richest Place on Earth. What Happened?
-```
-```
-How India Lost a Quarter of the World
-```
-```
-India: 5,000 Years of the Same Story
+The Entire History of India in 47 Minutes
 ```
 
 ## Thumbnail
 thumbs/thumb_A.jpg (approved 4 Nov)
 
 ## Upload
-- Fri 6 Nov 2026, 13:30 UTC = 7:00 pm IST. Altered or synthetic content: No.
-- Tags: india history, history of india, indian history, mughal empire, ashoka, gandhi, partition of india, east india company, indus valley civilization, golden bird india, bhugol
+- Sun 8 Nov 2026, 14:30 UTC = 8:00 pm IST, BhuGol EN. Altered or synthetic content: No.
+- Hashtags: #history #india #indianhistory (first 3 show above the title; channel-name hashtags showed no lift).
+- Tags: history of india, entire history of india, the entire history of india, indian history, indian history documentary, ancient india, indus valley civilization, maurya empire, ashoka, gupta empire, mughal empire, east india company, british rule in india, gandhi, partition of india, golden bird india, india history in english, bhugol

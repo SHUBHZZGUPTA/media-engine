@@ -26,6 +26,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -q google-api-python-client google-auth
+      - name: Join split video parts (long-form over 100 MB)
+        run: |
+          cd q
+          if ls video.mp4.part* >/dev/null 2>&1; then cat $(ls video.mp4.part* | sort) > video.mp4; ls -l video.mp4; sha256sum video.mp4; fi
       - name: Upload
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
