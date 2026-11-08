@@ -1,0 +1,51 @@
+{
+ "id": "turkey-hi-1108",
+ "video_id": "hHGz5gN5VSA",
+ "url": "https://youtube.com/shorts/hHGz5gN5VSA",
+ "channel": "Bhugol Hindi",
+ "channel_id": "UCJMYXEUkRvGmE2N8zoWmAMg",
+ "requested": {
+  "containsSyntheticMedia": false,
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "public"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "public",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "locked_private": false,
+ "ok": true
+}
