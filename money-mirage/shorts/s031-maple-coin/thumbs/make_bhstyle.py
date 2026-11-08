@@ -18,7 +18,7 @@ emo = lambda e, x, y, s=150: f'<div class="emo" style="left:{x}px;top:{y}px;font
 OPTS = {
  # M1: hero coin + two-tier headline (white set-up line, yellow-bar payoff), circle on the coin, emoji
  'M1': (img('coin_case', 2190, -533, -35), ring(540, 950, 455, 470) +
-        '<div class="t" style="top:150px;font-size:210px">$1M COIN</div>'
+        '<div class="t" style="top:150px;font-size:210px">1 COIN</div>'
         '<div class="h" style="top:370px;font-size:170px">WORTH $13M?</div>' + emo('🤯', 830, 1330) + emo('🇨🇦', 90, 1380, 130)),
  # M2: split recipe - claim vs reality
  'M2': ('<div class="half" style="left:0">' + img('coin_case', 1250, -340, 120, 'filter:contrast(1.1) saturate(1.5) brightness(1.35)') + '</div>'
