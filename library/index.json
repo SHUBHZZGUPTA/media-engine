@@ -435,6 +435,46 @@
   "sb_blast": "Dusk over empty open ocean: orange-white explosion fireball ~(617,390) with burning debris streaks falling into the sea, smoke upper left, no land or city. (Starbase)",
   "sb_orbit": "Space: unbranded stainless spaceship in low orbit ~(512,740), nose left ~(180,660); Earth's night side with city lights below, horizon ~y 1230, black starry sky. (Starbase)",
   "sb_tower0": "Blue dusk beach launch site: dark lattice tower right (~x 760-1000), two catch arms spread OPEN (upper ~y 200-330, lower ~y 810-900); unbranded stainless ship hovering between them ~(450,330)-(450,800) with blue-white engine flame and steam clouds on the sand. (Starbase)",
-  "sb_tower1": "Codex EDIT of sb_tower0: arms CLOSED, clamping the ship below its forward flaps, engine off, steam drifting; near pixel-aligned. (Starbase)"
+  "sb_tower1": "Codex EDIT of sb_tower0: arms CLOSED, clamping the ship below its forward flaps, engine off, steam drifting; near pixel-aligned. (Starbase)",
+  "tr_wall0": {
+   "id": "tr_wall0",
+   "file": "scenes/tr_wall0.jpg",
+   "desc": "1960s Cappadocian cave-house basement carved in cream tuff: plain back wall (centre ~512,560), sledgehammer leaning right (~810,730), brass oil lamp (~957,430), clay jars left; warm lamplight. (Turkey facts, 2026-11-08)"
+  },
+  "tr_wall1": {
+   "id": "tr_wall1",
+   "file": "scenes/tr_wall1.jpg",
+   "desc": "Codex EDIT of tr_wall0, pixel-aligned: back wall smashed open, ragged hole ~(300-720 x, 260-860 y) with stone steps descending a tunnel, lamp glow deep inside ~(605,620), rubble on floor. (Turkey facts)"
+  },
+  "tr_bosphorus": {
+   "id": "tr_bosphorus",
+   "file": "scenes/tr_bosphorus.jpg",
+   "desc": "Golden-hour aerial along the Bosphorus, Istanbul: strait vertical centre, suspension bridge across ~y 560-680, European shore left (domes, red roofs ~x 0-250), Asian shore right (green hills ~x 800-1024), ferries. (Turkey facts)"
+  },
+  "tr_myra": {
+   "id": "tr_myra",
+   "file": "scenes/tr_myra.jpg",
+   "desc": "Myra/Demre Lycian rock-cut temple tombs in a limestone cliff (~x 300-780, y 240-700), Roman theatre seats lower left, orange + olive trees, warm afternoon light, empty ground lower half. (Turkey facts)"
+  },
+  "tr_derinkuyu": {
+   "id": "tr_derinkuyu",
+   "file": "scenes/tr_derinkuyu.jpg",
+   "desc": "3D clay cutaway diorama on navy: five-level underground city in tuff, cave village on top (~y 120-245), stable with goats/sheep (~260,640), kitchens, wine press, chapel, millstone doors, vertical ventilation shaft (~x 615), bottom ~y 1430. (Turkey facts)"
+  },
+  "tr_gobekli": {
+   "id": "tr_gobekli",
+   "file": "scenes/tr_gobekli.jpg",
+   "desc": "Gobekli Tepe enclosure at sunrise: big carved T-pillar right (~735,430; vultures + boar), fox pillar left (~318,520), ring of small pillars, dry-stone walls, sun ~(234,227), empty ground lower middle. (Turkey facts)"
+  },
+  "tr_timeline": {
+   "id": "tr_timeline",
+   "file": "scenes/tr_timeline.jpg",
+   "desc": "3D clay diorama on navy: long diagonal ruler slab from lower-left (T-pillar ring ~165,1200) to upper-right (Stonehenge-like ring ~847,214; tiny modern city tip ~940,82). (Turkey facts)"
+  },
+  "tr_worldclay": {
+   "id": "tr_worldclay",
+   "file": "scenes/tr_worldclay.jpg",
+   "desc": "3D clay world map on navy (centred ~512,730; spans y ~280-1180): Britain ~(500,418), Turkey ~(673,510), India ~(755,632), North America ~(184,510), Peru ~(184,795). (Turkey facts)"
+  }
  }
 }
