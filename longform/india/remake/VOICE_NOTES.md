@@ -22,3 +22,21 @@ Checks per take: `full/takecheck.py` (line by line vs script) and narrator-only 
 - PT 2026-11-09 (from 13:30 IST 9 Nov): in-rm-en-d2 = p11-p20.
 - PT 2026-11-10: in-rm-en-d3 = p21-p26 + retakes p01r, p02r, p09r + fix job (2 ch4 lines) = 10.
 - PT 2026-11-11 if needed: p08r and any day-2/3 take that drifts.
+
+## Day 2 (9 Nov IST, PT day 2026-11-09): p11-p20, all full length, all lines clean
+Pronunciation hints in the direction from this day on. Stage tags read aloud in p11 and p20 (auto-cut). "Ooh, that's the army" (p16) and "Ma 'am" (p18) are transcription spellings, fine.
+
+| take | narrator pitch | decision |
+|---|---|---|
+| p11 | +0.4 st | keep |
+| p12 | +1.9 st | retake |
+| p13 | -1.6 st | retake if quota allows (borderline) |
+| p14 | -1.9 st | retake |
+| p15 | +0.5 st | keep |
+| p16 | +0.3 st | keep |
+| p17 | +0.5 st | keep |
+| p18 | +2.6 st | retake |
+| p19 | +0.7 st | keep |
+| p20 | +0.5 st | keep |
+
+Retake queue: Tue (PT 11-10) = p21-p26 + p01r, p02r, p09r + fix_a (full). Wed (PT 11-11) = p18r, p12r, p14r, p08r, p13r + any day-3 drift (6 reserved).
