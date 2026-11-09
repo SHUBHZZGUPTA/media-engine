@@ -1,0 +1,86 @@
+{
+ "id": "danube-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration",
+   "direction": "Narrate in natural spoken Hindi like an Indian geography explainer channel; numbers and English words in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline (\"office से भी पास\", \"309 दिन नहीं\", \"ख़ुद चला गया\"), a dramatic hush on \"ग़ायब\", and a slow, deadpan \"ग़लत समुद्र।\"",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "आप Danube को जानते हैं: चार capitals, दस देश। पर आपने नहीं देखा इसका एक हिस्सा असल में कहाँ जाता है।"
+    ],
+    [
+     "Narrator",
+     "ये Germany के Black Forest से निकलती है, Black Sea की ओर।"
+    ],
+    [
+     "Narrator",
+     "रास्ते में: Vienna. फिर, बस 56 kilometres बाद... Bratislava."
+    ],
+    [
+     "Narrator",
+     "दो capitals, कई लोगों के office से भी पास।"
+    ],
+    [
+     "Narrator",
+     "फिर ये Budapest को बीच से काटती है, फिर Belgrade."
+    ],
+    [
+     "Narrator",
+     "चार capitals एक नदी पर। किसी और नदी पर इतनी नहीं।"
+    ],
+    [
+     "Narrator",
+     "तो फिर, शुरुआत के पास, ये कभी-कभी... ग़ायब क्यों होती है?"
+    ],
+    [
+     "Narrator",
+     "Rewind. Germany में Immen-dingen के पास, नदी के नीचे limestone है, दरारों से भरा।"
+    ],
+    [
+     "Narrator",
+     "पानी रिसकर सीधे ज़मीन में चला जाता है। 1921 में, वो हिस्सा सूखा रहा 309 दिन।"
+    ],
+    [
+     "Narrator",
+     "नदियों को भी छुट्टी चाहिए। बस... 309 दिन नहीं।"
+    ],
+    [
+     "Narrator",
+     "1877 में, वैज्ञानिकों ने नमक और रंग डाला दरारों में... और इंतज़ार किया।"
+    ],
+    [
+     "Narrator",
+     "60 घंटे बाद, वो 12 kilometres दक्षिण में निकला, एक झरने में, जो Lake Constance में जाता है।"
+    ],
+    [
+     "Narrator",
+     "Lake Constance से पानी Rhine में जाता है। Rhine जाती है North Sea में। ग़लत समुद्र।"
+    ],
+    [
+     "Narrator",
+     "Germany के राज्य court तक गए, 1927 में। उस पानी के लिए जो ख़ुद चला गया।"
+    ],
+    [
+     "Narrator",
+     "और twist? Geologists मानते हैं कि ऊपरी Danube एक दिन Rhine में ही बहने लगे... हमेशा के लिए।"
+    ],
+    [
+     "Narrator",
+     "चार capitals, दस देश... और एक नदी जो अपना ही पानी नहीं रख पाती।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}
