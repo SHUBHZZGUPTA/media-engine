@@ -19,6 +19,7 @@ def W(li, tok, off=0.0, n=1):
 def cam(p, z0, z1, dx=0, dy=0): return dict(cam0={'x': p[1], 'y': p[2], 'z': z0}, cam1={'x': p[1] + dx, 'y': p[2] + dy, 'z': z1})
 FOLLOW_W = 4
 FOUNT = P('ck_fountain', 'pn_jar'); LAW = P('ck_lawyers', 'pn_ledger'); VEND = P('ck_vending', 'pn_nickel'); OFF = P('ck_office', 'pn_ledger'); BOT = P('ck_bottles', 'pn_press')
+CIRC_VEND = [.75, .43] if VEND[0] == 'ck_vending' else [.5, .45]
 NICK = ('pn_nickel', .5, .5); LED = ('pn_ledger', .5, .45); PRESS = ('pn_press', .5, .45); JAR = ('pn_jar', .5, .45)
 # 0 HOOK
 shot('s00', FOUNT[0], 'film', A(0), **cam(FOUNT, 1.15, 1.3))
@@ -37,7 +38,7 @@ shot('s03', LED[0], 'film', A(2, 0, -.15), cut='zoom', **cam(LED, 1.15, 1.3))
 beat('punch', A(2, 0, .7), shot='s03', level=1.35)
 # 3 OPEN LOOP 1
 shot('s04', VEND[0], 'film', A(3, 0, -.15), cut='whip', **cam(VEND, 1.15, 1.3))
-beat('circle', A(3, 0, .5), shot='s04', c=CIRC_VEND, r=[170, 170], col='#FFC23A', until=A(4, 1, -.1))
+beat('circle', A(3, 0, .5), shot='s04', c=CIRC_VEND, r=[150, 150], col='#FFC23A', until=A(4, 1, -.1))
 # 4 five cents; single nickel; next coin a dime
 beat('punch', A(4, 1, .2), shot='s04', level=1.3)
 shot('s05', NICK[0], 'film', A(4, 2, -.1), cut='whip', **cam(NICK, 1.15, 1.35))

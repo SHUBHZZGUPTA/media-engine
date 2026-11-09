@@ -18,7 +18,8 @@ def W(li, tok, off=0.0, n=1):
 def cam(p, z0, z1, dx=0, dy=0): return dict(cam0={'x': p[1], 'y': p[2], 'z': z0}, cam1={'x': p[1] + dx, 'y': p[2] + dy, 'z': z1})
 FOLLOW_W = 4
 KIT = P('rs_kitchen', 'fc_phone'); LIST = P('rs_list', 'pn_ledger'); FAKE = P('rs_deepfake', 'da_fakeset'); BUOY = P('rs_rescue', 'fc_deposit')
-PH = ('fc_phone', .5, .55); BADGE = ('fc_badge', .45, .45); COP = ('fc_cop', .5, .45); DEP = ('fc_deposit', .5, .5); VC = ('da_videocall', .5, .45); SET = ('da_fakeset', .5, .45)
+CIRC_PH = [.62, .53]; CIRC_LIST = [.75, .27] if LIST[0] == 'rs_list' else [.5, .4]
+PH = ('fc_phone', .55, .55); BADGE = ('fc_badge', .45, .45); COP = ('fc_cop', .5, .45); DEP = ('fc_deposit', .5, .5); VC = ('da_videocall', .5, .45); SET = ('da_fakeset', .5, .45)
 # 0 HOOK
 shot('s00', KIT[0], 'film', A(0), **cam(KIT, 1.15, 1.3))
 beat('card', {'abs': 0.12}, text='Scammed *twice?*', y=280, size=132, blur=True, until={'abs': 2.4})
@@ -44,7 +45,7 @@ beat('circle', A(4, 0, .6), shot='s07', c=CIRC_PH, r=[230, 230], col='#FFC23A', 
 # 5 FTC: they buy lists
 shot('s08', LIST[0], 'film', A(5, 0, -.15), cut='zoomIn', **cam(LIST, 1.1, 1.3))
 beat('punch', A(5, 1, .2), shot='s08', level=1.25)
-beat('circle', A(5, 2, .05), shot='s08', c=CIRC_LIST, r=[260, 120], col='#FF3B30', until=A(6, 0, -.1))
+beat('circle', A(5, 2, .05), shot='s08', c=CIRC_LIST, r=[170, 120], col='#FF3B30', until=A(6, 0, -.1))
 # 6 OPEN LOOP 2
 shot('s09', FAKE[0], 'film', A(6, 0, -.1), cut='flash', **cam(FAKE, 1.15, 1.3))
 beat('punch', A(6, 0, .9), shot='s09', level=1.35); beat('shake', A(6, 0, .95), k=.4)

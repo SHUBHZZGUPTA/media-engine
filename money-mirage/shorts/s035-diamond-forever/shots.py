@@ -18,6 +18,7 @@ def W(li, tok, off=0.0, n=1):
 def cam(p, z0, z1, dx=0, dy=0): return dict(cam0={'x': p[1], 'y': p[2], 'z': z0}, cam1={'x': p[1] + dx, 'y': p[2] + dy, 'z': z1})
 FOLLOW_W = 4
 RING = P('dm_ring', 'gj_shop'); LAB = P('dm_lab', 'gj_scale'); VAULT = P('dm_vault', 'vault_full', .4, .45); AD = P('dm_ad', 'gj_shop')
+CIRC_RING = [.53, .32] if RING[0] == 'dm_ring' else [.5, .4]
 SHOPJ = ('gj_shop', .5, .45); SCALE = ('gj_scale', .5, .45); CTR = ('emi_counter', .5, .45)
 # 0 HOOK
 shot('s00', RING[0], 'film', A(0), **cam(RING, 1.15, 1.3))
