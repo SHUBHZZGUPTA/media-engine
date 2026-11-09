@@ -1,0 +1,70 @@
+{
+ "id": "mms-s032-recovery-scam-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You lost five thousand dollars to a scam. Then the F.B.I. calls. They can get it back, for a fee. Do you pay?"
+    ],
+    [
+     "Narrator",
+     "The agent sounds real. The badge on video looks real. He even knows you were scammed."
+    ],
+    [
+     "Narrator",
+     "Just a small recovery fee. Upfront."
+    ],
+    [
+     "Chars",
+     "[nervous, squeaky, high-pitched banknote, worried] Oh no. Not again."
+    ],
+    [
+     "Narrator",
+     "So how does a stranger know about your loss?"
+    ],
+    [
+     "Narrator",
+     "The F.T.C. says scammers buy lists of people who've already been scammed. You're on a list."
+    ],
+    [
+     "Narrator",
+     "And that's not even the boldest part."
+    ],
+    [
+     "Narrator",
+     "The F.B.I. warns of deepfake videos of a real F.B.I. leader, sending victims to a fake complaint site."
+    ],
+    [
+     "Narrator",
+     "The real I.C.3 never calls you first, and never charges a fee to get money back. Zero."
+    ],
+    [
+     "Narrator",
+     "The rescue is the scam."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich, self-satisfied] Same victim, twice. How efficient."
+    ],
+    [
+     "Narrator",
+     "Comment: would you have paid the fee?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
