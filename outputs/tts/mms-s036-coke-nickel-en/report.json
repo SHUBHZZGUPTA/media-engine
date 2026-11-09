@@ -1,0 +1,16 @@
+{
+ "job": "mms-s036-coke-nickel-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 503,
+     "error": "{\"error\":{\"message\":\"gemini-3.8-flash-tts is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}"
+    }
+   ]
+  }
+ ]
+}

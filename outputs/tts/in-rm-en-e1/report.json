@@ -1,0 +1,51 @@
+{
+ "job": "in-rm-en-e1",
+ "items": [
+  {
+   "name": "p02",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 115.12,
+   "took": 14.8
+  },
+  {
+   "name": "p03",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 503,
+     "error": "{\"error\":{\"message\":\"gemini-3.8-flash-tts is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}"
+    }
+   ]
+  },
+  {
+   "name": "p04",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 503,
+     "error": "{\"error\":{\"message\":\"gemini-3.8-flash-tts is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}"
+    }
+   ]
+  },
+  {
+   "name": "p06",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 76.96,
+   "took": 12.4
+  },
+  {
+   "name": "p07",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 143.92,
+   "took": 59.2
+  }
+ ]
+}

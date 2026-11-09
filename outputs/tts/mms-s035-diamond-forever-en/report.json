@@ -1,0 +1,13 @@
+{
+ "job": "mms-s035-diamond-forever-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 70.0,
+   "took": 10.1
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "job": "mms-s034-eiffel-tower-en",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 60.8,
+   "took": 9.2
+  }
+ ]
+}
