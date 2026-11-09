@@ -19,10 +19,12 @@ A job with "key": "longform" uses GEMINI_API_KEY_LONGFORM instead (BHUGOL long-f
 import base64, json, os, sys, time, urllib.error, urllib.request, wave
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+API38 = "https://generativelanguage.googleapis.com/v1beta/interactions"   # gemini-3.8-* TTS uses the Interactions API
 
 
 def call(model, body, key):
-    req = urllib.request.Request(API.format(model=model), data=json.dumps(body).encode(),
+    url = API38 if model.startswith("gemini-3.8") else API.format(model=model)
+    req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json", "x-goog-api-key": key})
     with urllib.request.urlopen(req, timeout=180) as r:
         return json.load(r)
@@ -60,6 +62,23 @@ def build(item):
             "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": speech}}
 
 
+def build38(item, model):
+    """gemini-3.8 TTS: each line is its own text block; the direction and [tags] go in speech_metadata.style
+    (3.8 speaks every text block, so nothing that must not be read aloud may sit in the text)."""
+    import re
+    sp = item["speakers"]; d = (item.get("direction") or "").strip()
+    blocks = []
+    for who, text in item["lines"]:
+        tags = " ".join(re.findall(r"\[([^\]]+)\]", text)); clean = re.sub(r"\s*\[[^\]]+\]\s*", " ", text).replace("*", "").strip()
+        meta = {"type": "speech_metadata", "style": (d + (" This line: " + tags + "." if tags else "")).strip()}
+        if len(sp) > 1: meta["speaker"] = who
+        blocks.append({"type": "text", "text": clean, "annotations": [meta]})
+    cfg = ([{"voice": list(sp.values())[0]}] if len(sp) == 1 else
+           {"speakers": [{"speaker": n, "voice": v} for n, v in sp.items()]})
+    return {"model": model, "input": [{"type": "user_input", "content": blocks}], "response_format": {"type": "audio"},
+            "generation_config": {"speech_config": cfg}}
+
+
 def main(job_path):
     job = json.load(open(job_path))
     key_var = "GEMINI_API_KEY_LONGFORM" if job.get("key") == "longform" else "GEMINI_API_KEY"
@@ -72,14 +91,27 @@ def main(job_path):
             entry["error"] = key_var + " secret is missing"; report["items"].append(entry); continue
         for model in item.get("models") or job.get("models", ["gemini-3.1-flash-tts-preview"]):
             try:
-                t0 = time.time(); res = call_with_wait(model, build(item), key)
-                part = res["candidates"][0]["content"]["parts"][0]["inlineData"]
-                pcm = base64.b64decode(part["data"])
-                path = os.path.join(out, item["name"] + ".wav")
-                with wave.open(path, "wb") as w:
-                    w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
-                entry.update(ok=True, model=model, mime=part.get("mimeType"), seconds=round(len(pcm) / 48000, 2),
-                             took=round(time.time() - t0, 1))
+                t0 = time.time(); path = os.path.join(out, item["name"] + ".wav")
+                if model.startswith("gemini-3.8"):
+                    res = call_with_wait(model, build38(item, model), key)
+                    auds = [c for st in res.get("steps", []) if st.get("type") == "model_output"
+                            for c in st.get("content", []) if c.get("type") == "audio"]
+                    raw = base64.b64decode(auds[-1]["data"])
+                    if raw[:4] == b"RIFF":
+                        open(path, "wb").write(raw)
+                    else:
+                        with wave.open(path, "wb") as w:
+                            w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(raw)
+                    with wave.open(path) as w: secs = w.getnframes() / w.getframerate()
+                    entry.update(ok=True, model=model, mime=auds[-1].get("mime_type"), seconds=round(secs, 2), took=round(time.time() - t0, 1))
+                else:
+                    res = call_with_wait(model, build(item), key)
+                    part = res["candidates"][0]["content"]["parts"][0]["inlineData"]
+                    pcm = base64.b64decode(part["data"])
+                    with wave.open(path, "wb") as w:
+                        w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
+                    entry.update(ok=True, model=model, mime=part.get("mimeType"), seconds=round(len(pcm) / 48000, 2),
+                                 took=round(time.time() - t0, 1))
                 break
             except urllib.error.HTTPError as e:
                 msg = e.read().decode(errors="replace")[:600]
