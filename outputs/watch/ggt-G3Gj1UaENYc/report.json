@@ -1,0 +1,27 @@
+{
+ "id": "ggt-G3Gj1UaENYc",
+ "url": "https://www.youtube.com/watch?v=G3Gj1UaENYc",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.5-flash-lite",
+   "usage": {
+    "promptTokenCount": 9890,
+    "candidatesTokenCount": 2761,
+    "totalTokenCount": 12651,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 9270
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 620
+     }
+    ],
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "ggt-Hv_LuZg_C84",
+ "url": "https://www.youtube.com/watch?v=Hv_LuZg_C84",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.5-flash-lite",
+   "usage": {
+    "promptTokenCount": 7214,
+    "candidatesTokenCount": 2085,
+    "totalTokenCount": 9299,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 620
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 6594
+     }
+    ],
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}

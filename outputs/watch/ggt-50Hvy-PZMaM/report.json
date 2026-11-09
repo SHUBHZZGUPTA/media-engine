@@ -1,0 +1,27 @@
+{
+ "id": "ggt-50Hvy-PZMaM",
+ "url": "https://www.youtube.com/watch?v=50Hvy-PZMaM",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.5-flash-lite",
+   "usage": {
+    "promptTokenCount": 5956,
+    "candidatesTokenCount": 1853,
+    "totalTokenCount": 7809,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 620
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 5336
+     }
+    ],
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "ggt-mudvAWAJ_zM",
+ "url": "https://www.youtube.com/watch?v=mudvAWAJ_zM",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.5-flash-lite",
+   "usage": {
+    "promptTokenCount": 10044,
+    "candidatesTokenCount": 2710,
+    "totalTokenCount": 12754,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 620
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 9424
+     }
+    ],
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}
