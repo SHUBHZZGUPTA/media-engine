@@ -62,3 +62,8 @@ p02 may have dropped "Jar" in "Fish. Jar. Unicorn."). 3.8 reference = their medi
 New takes must: narrator within ±1.0 st of 114.8 Hz; every seam (last ~30 s vs next take's first ~30 s, all takes in script order) within 1.0 st;
 speaking rate within ±8%; loudness within ±1.5 dB after normalising; timbre (voicecheck.py) inside the kept takes' range. Fail = retake (Wed), never pitch-shift.
 Shubham also gets 3 clips straddling old/new seams before the render.
+
+## 9 Nov (later): Shubham's call: re-voice the whole video in fewer, longer 3.8 takes
+14 takes of up to ~690 words (4.5-5 min, inside the stable zone of the long-take test) instead of 8 kept + 10 new (18 takes):
+13 seams instead of 17. f1 = p01-p10 (Tue 10 Nov), f2 = p11-p14 (Wed 11 Nov). The 8 short 3.8 takes (t38 + e1) stay as a fallback.
+Matching rule unchanged (narrator within ±1.0 st of 114.8 Hz, every seam within 1.0 st, rate ±8%, loudness ±1.5 dB, timbre in range).
