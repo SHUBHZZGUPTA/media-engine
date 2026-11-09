@@ -6,6 +6,30 @@ These are research notes only, so **no skill has been changed**. If the test Sho
 - Raw Gemini audio-visual analysis, one per video: `outputs/watch/ggt-<id>/full.md`
 - Research date: 2026-11-09. It covers all 169 GeoGlobeTales (@GeoGlobeTales) videos: transcripts, comment samples and Gemini watch reports.
 
+## Step 0 — before any topic is picked: check our analytics against these findings
+
+Run this before the topic stage on every BHUGOL Short (Shubham, 2026-11-09).
+
+1. **Pull fresh analytics.**
+   - Use the latest `outputs/ytdeep/mon-*/report.json` if it is under 24h old.
+   - Otherwise push a `jobs/ytdeep/<id>.json` job with tokens `YT_RT_BHUGOL_EN` and `YT_RT_BHUGOL_HI`.
+   - Analytics come from the YouTube connection, not the Gemini key.
+2. **Set the baseline** for each channel:
+   - median views and the top 5;
+   - engaged views, average % viewed and comments per 1K views;
+   - views by country, with average % viewed per country;
+   - traffic sources.
+3. **Score our own past Shorts by topic type**, using the same types as the table below. Also note which of them were GeoGlobeTales remakes and how each did against our median.
+4. **Rank candidate topics** on three things:
+   - GeoGlobeTales' result for that topic type, or for that exact video if it's a remake;
+   - BHUGOL's own result for that topic type;
+   - not already posted on BHUGOL.
+
+   Remakes and re-angles are both allowed. Use no country framing unless the audience data supports it.
+5. **Show Shubham the ranked table with the evidence**, and let him pick before scripting.
+
+For this test Short, Step 0 was run on 2026-11-09 and gave the topic below. The new chat only needs to log the baseline at upload time.
+
 ## The test Short (decided 2026-11-09)
 
 | Item | Decision |
