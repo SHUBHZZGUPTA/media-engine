@@ -1,0 +1,26 @@
+{
+ "id": "danube-hi-fix",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "fix",
+   "direction": "Narrate in natural spoken Hindi like an Indian geography explainer channel; numbers and English words in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline (\"office से भी पास\", \"309 दिन नहीं\", \"ख़ुद चला गया\"), a dramatic hush on \"ग़ायब\", and a slow, deadpan \"ग़लत समुद्र।\"",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "पानी रिसकर सीधे ज़मीन में चला जाता है। nineteen twenty-one में, वो हिस्सा सूखा रहा three hundred nine दिन।"
+    ],
+    [
+     "Narrator",
+     "Germany के राज्य court तक गए, nineteen twenty-seven में। उस पानी के लिए जो ख़ुद चला गया।"
+    ]
+   ]
+  }
+ ]
+}
