@@ -1,0 +1,34 @@
+{
+ "id": "rp-nasa",
+ "delay": 0.3,
+ "files": [
+  {
+   "name": "globe_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_NextGeneration&BBOX=-90,-180,90,180&WIDTH=8192&HEIGHT=4096"
+  },
+  {
+   "name": "PIA19952.jpg",
+   "url": "https://photojournal.jpl.nasa.gov/jpeg/PIA19952.jpg"
+  },
+  {
+   "name": "PIA19857.jpg",
+   "url": "https://photojournal.jpl.nasa.gov/jpeg/PIA19857.jpg"
+  },
+  {
+   "name": "PIA19873.jpg",
+   "url": "https://photojournal.jpl.nasa.gov/jpeg/PIA19873.jpg"
+  },
+  {
+   "name": "PIA20291.jpg",
+   "url": "https://photojournal.jpl.nasa.gov/jpeg/PIA20291.jpg"
+  },
+  {
+   "name": "sputnik_asm.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg"
+  },
+  {
+   "name": "pluto_nh_wiki.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Pluto_in_True_Color_-_High-Res.jpg"
+  }
+ ]
+}
