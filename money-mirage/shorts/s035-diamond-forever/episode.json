@@ -1,0 +1,47 @@
+{
+ "slug": "mms-s035-diamond-forever",
+ "title": "The 4 Words That Sold Diamonds 💎",
+ "lang": "en",
+ "src": "money-mirage/ep01v3/src",
+ "depth_jobs": [
+  "mm-ep02-plates-a",
+  "mm-ep02-plates-b",
+  "mm3-plates-a",
+  "mm3-plates-b",
+  "mm3-plates-c",
+  "mms-s013-15-art",
+  "mms-s019-21-art",
+  "mms-s022-24-art",
+  "mms-s025-27-art",
+  "mms-s031-art",
+  "mms-s032-36-art"
+ ],
+ "tts_parts": [
+  [
+   0,
+   0
+  ]
+ ],
+ "tts_speakers": {
+  "Narrator": "Sadaltager",
+  "Chars": "Puck"
+ },
+ "voices": {
+  "goldie": {
+   "semitones": -3,
+   "formant": "preserved"
+  },
+  "bill": {
+   "semitones": 4,
+   "formant": "shifted"
+  }
+ },
+ "music": {
+  "tracks": [
+   "3_something"
+  ],
+  "offsets": {},
+  "source": "YouTube Audio Library, chosen by Shubham"
+ },
+ "related": null
+}
