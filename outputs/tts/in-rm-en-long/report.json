@@ -1,0 +1,68 @@
+{
+ "job": "in-rm-en-long",
+ "items": [
+  {
+   "name": "p01",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 429,
+     "error": "{\"error\":{\"message\":\"Rate limit exceeded for model gemini-3.8-flash-tts (limit: 10 requests per day on Free Tier). Please retry in 21h16m24s or upgrade your tier at https://ai.dev/rate-limit.\",\"code\":\"too_many_requests\"}}"
+    }
+   ]
+  },
+  {
+   "name": "p02",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 429,
+     "error": "{\"error\":{\"message\":\"Rate limit exceeded for model gemini-3.8-flash-tts (limit: 10 requests per day on Free Tier). Please retry in 21h16m22s or upgrade your tier at https://ai.dev/rate-limit.\",\"code\":\"too_many_requests\"}}"
+    }
+   ]
+  },
+  {
+   "name": "p03",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 429,
+     "error": "{\"error\":{\"message\":\"Rate limit exceeded for model gemini-3.8-flash-tts (limit: 10 requests per day on Free Tier). Please retry in 21h16m20s or upgrade your tier at https://ai.dev/rate-limit.\",\"code\":\"too_many_requests\"}}"
+    }
+   ]
+  },
+  {
+   "name": "p04",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 567.88,
+   "took": 39.3
+  },
+  {
+   "name": "p05",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 429,
+     "error": "{\"error\":{\"message\":\"Rate limit exceeded for model gemini-3.8-flash-tts (limit: 10 requests per day on Free Tier). Please retry in 21h15m36s or upgrade your tier at https://ai.dev/rate-limit.\",\"code\":\"too_many_requests\"}}"
+    }
+   ]
+  },
+  {
+   "name": "p06",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 429,
+     "error": "{\"error\":{\"message\":\"Rate limit exceeded for model gemini-3.8-flash-tts (limit: 10 requests per day on Free Tier). Please retry in 21h15m34s or upgrade your tier at https://ai.dev/rate-limit.\",\"code\":\"too_many_requests\"}}"
+    }
+   ]
+  }
+ ]
+}
