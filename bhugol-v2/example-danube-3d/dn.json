@@ -1,0 +1,983 @@
+{
+ "slug": "danube",
+ "lines": [
+  {
+   "o": 0.443,
+   "text": "You know the Danube: four capitals, ten countries. But you've never seen where part of it really goes.",
+   "chunks": [
+    "YOU KNOW THE *DANUBE:*",
+    "*FOUR CAPITALS,*",
+    "*TEN COUNTRIES.*",
+    "BUT YOU'VE NEVER SEEN",
+    "WHERE PART OF|IT *REALLY GOES.*"
+   ]
+  },
+  {
+   "o": 7.243,
+   "text": "It starts in Germany's Black Forest, heading for the Black Sea.",
+   "chunks": [
+    "IT STARTS IN GERMANY'S",
+    "*BLACK FOREST,*",
+    "HEADING FOR THE|*BLACK SEA.*"
+   ]
+  },
+  {
+   "o": 10.976,
+   "text": "On the way: Vienna. Then, just 56 kilometres later... Bratislava.",
+   "chunks": [
+    "ON THE WAY:",
+    "*VIENNA.*",
+    "THEN, JUST|*56 KILOMETRES* LATER...",
+    "*BRATISLAVA.*"
+   ]
+  },
+  {
+   "o": 16.043,
+   "text": "Two capitals, closer than some office commutes.",
+   "chunks": [
+    "TWO CAPITALS,",
+    "CLOSER THAN|*SOME OFFICE COMMUTES.*"
+   ]
+  },
+  {
+   "o": 19.433,
+   "text": "Then it splits Budapest in half, and runs through Belgrade.",
+   "chunks": [
+    "THEN IT SPLITS *BUDAPEST*",
+    "IN HALF,",
+    "AND RUNS THROUGH *BELGRADE.*"
+   ]
+  },
+  {
+   "o": 23.205,
+   "text": "Four capitals on one river. No river on Earth has more.",
+   "chunks": [
+    "*FOUR CAPITALS*",
+    "ON ONE RIVER.",
+    "NO RIVER ON EARTH",
+    "HAS *MORE.*"
+   ]
+  },
+  {
+   "o": 27.481,
+   "text": "So why, near its start, does it sometimes... disappear?",
+   "chunks": [
+    "SO WHY,",
+    "NEAR ITS START,",
+    "DOES IT SOMETIMES...",
+    "*DISAPPEAR?*"
+   ]
+  },
+  {
+   "o": 31.738,
+   "text": "Rewind. Near Immendingen, in Germany, the riverbed is limestone, full of cracks.",
+   "chunks": [
+    "*REWIND.*",
+    "NEAR *IMMENDINGEN,* IN GERMANY,",
+    "THE RIVERBED IS *LIMESTONE,*",
+    "FULL OF *CRACKS.*"
+   ]
+  },
+  {
+   "o": 37.186,
+   "text": "The river leaks straight into the ground. In 1921, that stretch ran dry on 309 days.",
+   "chunks": [
+    "THE RIVER *LEAKS*",
+    "STRAIGHT INTO THE GROUND.",
+    "IN *1921,*",
+    "THAT STRETCH RAN DRY",
+    "ON *309 DAYS.*"
+   ]
+  },
+  {
+   "o": 44.5,
+   "text": "Rivers need days off too. Just... not 309.",
+   "chunks": [
+    "RIVERS NEED DAYS|OFF TOO.",
+    "JUST... NOT *309.*"
+   ]
+  },
+  {
+   "o": 47.814,
+   "text": "In 1877, scientists poured salt and dye into the cracks... and waited.",
+   "chunks": [
+    "IN *1877,*",
+    "SCIENTISTS POURED|*SALT AND DYE*",
+    "INTO THE CRACKS...",
+    "AND WAITED."
+   ]
+  },
+  {
+   "o": 53.024,
+   "text": "60 hours later, it popped up 12 kilometres south, in a spring that flows into Lake Constance.",
+   "chunks": [
+    "*60 HOURS* LATER,",
+    "IT POPPED UP|*12 KILOMETRES* SOUTH,",
+    "IN A SPRING",
+    "THAT FLOWS INTO|*LAKE CONSTANCE.*"
+   ]
+  },
+  {
+   "o": 58.767,
+   "text": "Lake Constance drains into the Rhine. Which flows to the North Sea. The wrong sea.",
+   "chunks": [
+    "LAKE CONSTANCE DRAINS|INTO THE *RHINE.*",
+    "WHICH FLOWS TO|THE *NORTH SEA.*",
+    "THE *WRONG SEA.*"
+   ]
+  },
+  {
+   "o": 63.7,
+   "text": "German states even took it to court, in 1927. Over water that left on its own.",
+   "chunks": [
+    "GERMAN STATES EVEN|TOOK IT",
+    "TO COURT,",
+    "IN *1927.*",
+    "OVER WATER",
+    "THAT *LEFT*|*ON ITS OWN.*"
+   ]
+  },
+  {
+   "o": 68.948,
+   "text": "And the twist? Geologists think the upper Danube may one day switch to the Rhine... for good.",
+   "chunks": [
+    "AND THE *TWIST?*",
+    "GEOLOGISTS THINK",
+    "THE UPPER DANUBE",
+    "MAY ONE DAY SWITCH|TO THE *RHINE...*",
+    "*FOR GOOD.*"
+   ]
+  },
+  {
+   "o": 74.576,
+   "text": "Four capitals, ten countries... and a river that can't keep its own water.",
+   "chunks": [
+    "FOUR CAPITALS,",
+    "TEN COUNTRIES...",
+    "AND A RIVER",
+    "THAT *CAN'T KEEP*|*ITS OWN WATER.*"
+   ]
+  },
+  {
+   "o": 78.881,
+   "text": "This is Bhoogol. Follow for more Geography Fun Facts.",
+   "chunks": [
+    "THIS IS *BHUGOL.*",
+    "FOLLOW FOR MORE|*GEOGRAPHY FUN FACTS.*"
+   ]
+  }
+ ],
+ "voices": {},
+ "align": {
+  "offset": 0.3,
+  "cap": 0.42,
+  "tempo": 1.05,
+  "long_before": {
+   "3": 0.5,
+   "6": 0.5,
+   "9": 0.6,
+   "12": 0.5,
+   "14": 0.6,
+   "15": 0.5,
+   "16": 0.7
+  }
+ },
+ "tail": 2.3,
+ "shots": [
+  {
+   "scene": "MW",
+   "at": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "scene": "MV",
+   "at": [
+    1,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MW",
+   "at": [
+    2,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MV",
+   "at": [
+    4,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MW",
+   "at": [
+    5,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MV",
+   "at": [
+    6,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MI",
+   "at": [
+    7,
+    0,
+    -0.15
+   ],
+   "cut": "whip"
+  },
+  {
+   "scene": "XS",
+   "at": [
+    8,
+    0,
+    -0.15
+   ],
+   "cut": "zoom"
+  },
+  {
+   "scene": "MI",
+   "at": [
+    11,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MW",
+   "at": [
+    12,
+    0,
+    -0.15
+   ],
+   "cut": "flash"
+  },
+  {
+   "scene": "MV",
+   "at": [
+    13,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MI",
+   "at": [
+    14,
+    0,
+    -0.15
+   ]
+  },
+  {
+   "scene": "MW",
+   "at": [
+    15,
+    0,
+    -0.15
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "kind": "charslam",
+   "at": [
+    0,
+    0,
+    -0.13
+   ]
+  },
+  {
+   "kind": "moment",
+   "at": [
+    0,
+    0,
+    0.3
+   ],
+   "what": "Danube draws across Europe"
+  },
+  {
+   "kind": "punch",
+   "scene": "MW",
+   "at": [
+    0,
+    1,
+    0.0
+   ],
+   "level": 1.15
+  },
+  {
+   "kind": "moment",
+   "at": [
+    0,
+    1,
+    0.05
+   ],
+   "what": "four capital dots pop"
+  },
+  {
+   "kind": "punch",
+   "scene": "MW",
+   "at": [
+    0,
+    2,
+    0.0
+   ],
+   "level": 1.28
+  },
+  {
+   "kind": "punch",
+   "scene": "MW",
+   "at": [
+    0,
+    4,
+    0.0
+   ],
+   "level": 1.4
+  },
+  {
+   "kind": "moment",
+   "at": [
+    1,
+    1,
+    0.0
+   ],
+   "what": "BLACK FOREST label + source dot"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    1,
+    2,
+    0.0
+   ],
+   "what": "camera flies with the river to the BLACK SEA label"
+  },
+  {
+   "kind": "card",
+   "scene": "MW",
+   "at": [
+    2,
+    1,
+    0.0
+   ],
+   "lon": 16.3738,
+   "lat": 48.2082,
+   "flag": "🇦🇹",
+   "name": "VIENNA",
+   "tag": "CAPITAL #1",
+   "dx": 90
+  },
+  {
+   "kind": "grow",
+   "at": [
+    2,
+    2,
+    0.0
+   ],
+   "to": 56,
+   "unit": "KM",
+   "y": 300
+  },
+  {
+   "kind": "card",
+   "scene": "MW",
+   "at": [
+    2,
+    3,
+    0.0
+   ],
+   "lon": 17.1077,
+   "lat": 48.1486,
+   "flag": "🇸🇰",
+   "name": "BRATISLAVA",
+   "tag": "CAPITAL #2",
+   "dx": -160
+  },
+  {
+   "kind": "moment",
+   "at": [
+    3,
+    1,
+    0.0
+   ],
+   "what": "bus emoji pops"
+  },
+  {
+   "kind": "punch",
+   "scene": "MW",
+   "at": [
+    3,
+    1,
+    0.1
+   ],
+   "level": 1.16
+  },
+  {
+   "kind": "card",
+   "scene": "MV",
+   "at": [
+    4,
+    0,
+    0.1
+   ],
+   "lon": 19.0402,
+   "lat": 47.4979,
+   "flag": "🇭🇺",
+   "name": "BUDAPEST",
+   "tag": "CAPITAL #3"
+  },
+  {
+   "kind": "circle",
+   "scene": "MV",
+   "at": [
+    4,
+    0,
+    0.5
+   ],
+   "until": [
+    4,
+    1,
+    0.45
+   ],
+   "q": {
+    "lon": 19.05,
+    "lat": 47.5
+   },
+   "r": [
+    120,
+    150
+   ],
+   "col": "#FF3B30"
+  },
+  {
+   "kind": "card",
+   "scene": "MV",
+   "at": [
+    4,
+    2,
+    0.7
+   ],
+   "lon": 20.4489,
+   "lat": 44.8125,
+   "flag": "🇷🇸",
+   "name": "BELGRADE",
+   "tag": "CAPITAL #4"
+  },
+  {
+   "kind": "grow",
+   "at": [
+    5,
+    0,
+    0.0
+   ],
+   "until": [
+    5,
+    2,
+    -0.1
+   ],
+   "to": 4,
+   "unit": "CAPITALS",
+   "y": 300
+  },
+  {
+   "kind": "moment",
+   "at": [
+    5,
+    1,
+    0.0
+   ],
+   "what": "four capital dots pulse"
+  },
+  {
+   "kind": "slam",
+   "at": [
+    5,
+    3,
+    0.05
+   ],
+   "emo": "trophy"
+  },
+  {
+   "kind": "circle",
+   "scene": "MV",
+   "at": [
+    6,
+    1,
+    0.1
+   ],
+   "q": {
+    "lon": 8.733,
+    "lat": 47.932
+   },
+   "r": [
+    130,
+    100
+   ],
+   "col": "#FF3B30"
+  },
+  {
+   "kind": "card",
+   "scene": "MV",
+   "at": [
+    6,
+    1,
+    0.0
+   ],
+   "lon": 8.733,
+   "lat": 47.932,
+   "flag": "🇩🇪",
+   "name": "GERMANY",
+   "tag": "NEAR THE SOURCE",
+   "dx": 120
+  },
+  {
+   "kind": "moment",
+   "at": [
+    6,
+    3,
+    0.0
+   ],
+   "what": "the river near the source flickers out"
+  },
+  {
+   "kind": "card",
+   "scene": "MI",
+   "at": [
+    7,
+    1,
+    0.05
+   ],
+   "lon": 8.733,
+   "lat": 47.932,
+   "flag": "🇩🇪",
+   "name": "IMMENDINGEN",
+   "tag": "DANUBE SINKHOLE"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    7,
+    2,
+    0.0
+   ],
+   "what": "camera drops toward the riverbed"
+  },
+  {
+   "kind": "card",
+   "scene": "MI",
+   "at": [
+    7,
+    2,
+    0.05
+   ],
+   "lon": 8.7,
+   "lat": 47.925,
+   "flag": "🪨",
+   "name": "LIMESTONE",
+   "tag": "FULL OF CRACKS",
+   "dx": -80
+  },
+  {
+   "kind": "arrow",
+   "scene": "MI",
+   "at": [
+    7,
+    3,
+    0.0
+   ],
+   "qf": {
+    "lon": 8.7,
+    "lat": 47.985
+   },
+   "qt": {
+    "lon": 8.733,
+    "lat": 47.932
+   },
+   "col": "#FFC23A"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    8,
+    0,
+    0.1
+   ],
+   "what": "cracks appear, water sinks into them"
+  },
+  {
+   "kind": "arrow",
+   "scene": "XS",
+   "at": [
+    8,
+    1,
+    0.0
+   ],
+   "qf": {
+    "lon": 8.733,
+    "lat": 47.932
+   },
+   "qt": {
+    "u": 0.24,
+    "y": -0.45
+   },
+   "col": "#4FB3FF"
+  },
+  {
+   "kind": "grow",
+   "at": [
+    8,
+    2,
+    0.0
+   ],
+   "to": 1921,
+   "from": 1800,
+   "unit": "",
+   "y": 300
+  },
+  {
+   "kind": "moment",
+   "at": [
+    8,
+    3,
+    0.0
+   ],
+   "what": "river downstream of the sink dries up"
+  },
+  {
+   "kind": "grow",
+   "at": [
+    8,
+    4,
+    0.0
+   ],
+   "to": 309,
+   "unit": "DAYS",
+   "y": 300
+  },
+  {
+   "kind": "punch",
+   "scene": "XS",
+   "at": [
+    9,
+    1,
+    0.0
+   ],
+   "level": 1.18
+  },
+  {
+   "kind": "grow",
+   "at": [
+    10,
+    0,
+    0.0
+   ],
+   "to": 1877,
+   "from": 1800,
+   "unit": "",
+   "y": 300
+  },
+  {
+   "kind": "slam",
+   "at": [
+    10,
+    1,
+    0.3
+   ],
+   "emo": "salt"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    10,
+    1,
+    0.0
+   ],
+   "what": "green dye at the sinkhole"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    10,
+    2,
+    0.0
+   ],
+   "what": "green water runs through the conduit"
+  },
+  {
+   "kind": "slam",
+   "at": [
+    10,
+    3,
+    0.05
+   ],
+   "emo": "timer"
+  },
+  {
+   "kind": "grow",
+   "at": [
+    11,
+    0,
+    0.0
+   ],
+   "to": 60,
+   "unit": "HOURS",
+   "y": 300
+  },
+  {
+   "kind": "card",
+   "scene": "MI",
+   "at": [
+    11,
+    1,
+    0.1
+   ],
+   "lon": 8.857,
+   "lat": 47.843,
+   "flag": "🇩🇪",
+   "name": "AACH SPRING",
+   "to": 12,
+   "unit": "KM",
+   "tag": "FROM THE SINKHOLE"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    11,
+    2,
+    0.0
+   ],
+   "what": "spring glows, Aach draws"
+  },
+  {
+   "kind": "card",
+   "scene": "MI",
+   "at": [
+    11,
+    3,
+    0.1
+   ],
+   "lon": 9.0,
+   "lat": 47.71,
+   "flag": "🌊",
+   "name": "LAKE CONSTANCE",
+   "tag": "FLOWS INTO THE RHINE",
+   "dx": 60
+  },
+  {
+   "kind": "moment",
+   "at": [
+    12,
+    0,
+    0.1
+   ],
+   "what": "Rhine draws to the North Sea"
+  },
+  {
+   "kind": "arrow",
+   "scene": "MW",
+   "at": [
+    12,
+    1,
+    0.0
+   ],
+   "qf": {
+    "lon": 6.3,
+    "lat": 51.9
+   },
+   "qt": {
+    "lon": 4.9,
+    "lat": 53.2
+   },
+   "col": "#4FB3FF"
+  },
+  {
+   "kind": "circle",
+   "scene": "MW",
+   "at": [
+    12,
+    2,
+    0.0
+   ],
+   "q": {
+    "lon": 4.6,
+    "lat": 53.8
+   },
+   "r": [
+    190,
+    130
+   ],
+   "col": "#FF3B30"
+  },
+  {
+   "kind": "punch",
+   "scene": "MW",
+   "at": [
+    12,
+    2,
+    0.05
+   ],
+   "level": 1.2
+  },
+  {
+   "kind": "moment",
+   "at": [
+    13,
+    0,
+    0.05
+   ],
+   "what": "scales emoji pops, German flag on the map"
+  },
+  {
+   "kind": "flap",
+   "at": [
+    13,
+    2,
+    0.0
+   ],
+   "text": "1927",
+   "y": 260
+  },
+  {
+   "kind": "punch",
+   "scene": "MV",
+   "at": [
+    13,
+    4,
+    0.0
+   ],
+   "level": 1.18
+  },
+  {
+   "kind": "moment",
+   "at": [
+    14,
+    1,
+    0.0
+   ],
+   "what": "underground route glows"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    14,
+    2,
+    0.0
+   ],
+   "what": "upper Danube turns blue"
+  },
+  {
+   "kind": "card",
+   "scene": "MI",
+   "at": [
+    14,
+    2,
+    0.0
+   ],
+   "lon": 8.66,
+   "lat": 47.94,
+   "flag": "🔀",
+   "name": "UPPER DANUBE",
+   "tag": "→ RHINE?",
+   "dx": -60
+  },
+  {
+   "kind": "arrow",
+   "scene": "MI",
+   "at": [
+    14,
+    3,
+    0.0
+   ],
+   "qf": {
+    "lon": 8.733,
+    "lat": 47.932
+   },
+   "qt": {
+    "lon": 8.81,
+    "lat": 47.878
+   },
+   "col": "#4FB3FF"
+  },
+  {
+   "kind": "circle",
+   "scene": "MI",
+   "at": [
+    14,
+    4,
+    0.0
+   ],
+   "q": {
+    "lon": 8.733,
+    "lat": 47.932
+   },
+   "r": [
+    120,
+    90
+   ],
+   "col": "#FF3B30"
+  },
+  {
+   "kind": "slam",
+   "at": [
+    14,
+    4,
+    0.1
+   ],
+   "emo": "swap"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    15,
+    0,
+    0.0
+   ],
+   "what": "capital dots pulse"
+  },
+  {
+   "kind": "grow",
+   "at": [
+    15,
+    1,
+    0.0
+   ],
+   "to": 10,
+   "unit": "COUNTRIES",
+   "y": 300
+  },
+  {
+   "kind": "moment",
+   "at": [
+    15,
+    2,
+    0.0
+   ],
+   "what": "both rivers glow"
+  },
+  {
+   "kind": "moment",
+   "at": [
+    15,
+    3,
+    0.0
+   ],
+   "what": "upper Danube flickers"
+  }
+ ],
+ "old_end": 83.63333333333334
+}
