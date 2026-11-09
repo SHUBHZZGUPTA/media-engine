@@ -40,3 +40,10 @@ Pronunciation hints in the direction from this day on. Stage tags read aloud in 
 | p20 | +0.5 st | keep |
 
 Retake queue: Tue (PT 11-10) = p21-p26 + p01r, p02r, p09r + fix_a (full). Wed (PT 11-11) = p18r, p12r, p14r, p08r, p13r + any day-3 drift (6 reserved).
+
+## 9 Nov: switched to gemini-3.8-flash-tts (Shubham approved after an A/B listen)
+Test (in-rm-en-t38, same prebuilt Sadaltager + Puck, same script): narrator pitch p01 -0.3, p05 -1.2, p09 +0.3, p12 -0.3, p18 -1.2 st
+(3.1 on the same takes: +2.3, -0.5, +2.5, +1.9, +2.6). Spread 1.5 st vs 3.1 st; all lines clean; [tags] go in speech_metadata.style
+and are no longer read aloud; ~5-10% faster. The whole video is re-voiced on 3.8 (no mixing models in one video).
+Takes: p01, p05, p09, p12, p18 = in-rm-en-t38. e1 (9 Nov) p02 p03 p04 p06 p07 · e2 (10 Nov) p08 p10 p11 p13-p17 p19 p20 · e3 (11 Nov) p21-p26.
+3.8 free-tier daily limit not published (AI Studio shows it per project); planned as 10/day. 3.1 reservations for 10-11 Nov released.

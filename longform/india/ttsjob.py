@@ -58,6 +58,6 @@ for k, ch in enumerate(chunks, 1):
                   "lines": [["Narrator" if who == "N" else "Chars", t] for who, t, _ in ch]})
     print(name, ch[0][2][:28], "->", ch[-1][2][:28], len(ch), "lines", sum(wc(t) for _, t, _ in ch), "words")
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
-json.dump({"id": jid, "key": "longform", "models": ["gemini-3.1-flash-tts-preview"], "items": items},
+json.dump({"id": jid, "key": "longform", "models": ["gemini-3.8-flash-tts"], "items": items},
           open(os.path.join(root, "jobs/tts", jid + ".json"), "w"), indent=1, ensure_ascii=False)
 json.dump(spk, open(os.path.join(os.path.dirname(os.path.abspath(src)), jid + "_speakers.json"), "w"), indent=1)
