@@ -1,0 +1,29 @@
+{
+ "job": "ocean-hi",
+ "items": [
+  {
+   "name": "part1",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 139.37,
+   "took": 46.6
+  },
+  {
+   "name": "part2",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 150.73,
+   "took": 43.4
+  },
+  {
+   "name": "part3",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 108.45,
+   "took": 44.0
+  }
+ ]
+}
