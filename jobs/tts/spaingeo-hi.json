@@ -1,0 +1,107 @@
+{
+ "id": "spaingeo-hi",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate in natural spoken Hindi like an Indian geography explainer channel; numbers and English words in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, with a short comic pause before each punchline (\"फुटबॉल मैदान से भी छोटा\", \"Africa से चिपका दिया\", \"सच में।\", \"कस्टडी बाँट ली\", \"अच्छा ही है\"). Chars voices funny cartoon characters, short and punchy: a pompous, triumphant French envoy; an offended little town; then an exhausted, deadpan island.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "आपको लगता है Spain के two पड़ोसी हैं। असल में five हैं।"
+    ],
+    [
+     "Narrator",
+     "और एक बॉर्डर तो फुटबॉल मैदान से भी छोटा है।"
+    ],
+    [
+     "Narrator",
+     "Portugal. France. और छोटा-सा Andorra, London के एक-तिहाई से भी छोटा।"
+    ],
+    [
+     "Narrator",
+     "Gibraltar के रास्ते Britain. और Morocco... Africa में!"
+    ],
+    [
+     "Narrator",
+     "Say-oo-ta, Meh-lee-ya, और तट के ठीक पास एक स्पेनिश चट्टान।"
+    ],
+    [
+     "Narrator",
+     "nineteen thirty-four में एक तूफ़ान ने रेत जमा करके उस चट्टान को Africa से चिपका दिया।"
+    ],
+    [
+     "Narrator",
+     "नया बॉर्डर: करीब eighty-five metres. एक मिनट में पैदल पार।"
+    ],
+    [
+     "Narrator",
+     "लेकिन Spain के सबसे अजीब बॉर्डर Africa में नहीं, France के साथ हैं। ऐसा कैसे?"
+    ],
+    [
+     "Narrator",
+     "sixteen fifty-nine में चलिए। Spain और France एक छोटे-से नदी-द्वीप पर सुलह करते हैं।"
+    ],
+    [
+     "Narrator",
+     "Spain, France को पहाड़ों के thirty-three गाँव दे देता है।"
+    ],
+    [
+     "Chars",
+     "[pompous, triumphant] thirty-three गाँव! Yee-vee-ah, अब तुम फ्रेंच हो!"
+    ],
+    [
+     "Chars",
+     "[offended, indignant] माफ़ कीजिए? मैं शहर हूँ।"
+    ],
+    [
+     "Chars",
+     "[stunned, flat] ...सच में?"
+    ],
+    [
+     "Narrator",
+     "सच में। तो Yee-vee-ah स्पेन का ही रहा, चारों तरफ़ France से घिरा।"
+    ],
+    [
+     "Narrator",
+     "Spain जाने वाली इसकी सड़क आज भी France से होकर जाती है। करीब one point six kilometres."
+    ],
+    [
+     "Narrator",
+     "और ये अभी सबसे अजीब बात नहीं है।"
+    ],
+    [
+     "Narrator",
+     "वो नदी वाला द्वीप याद है? कोई देश उसे छोड़ने को तैयार नहीं था।"
+    ],
+    [
+     "Narrator",
+     "तो दोनों ने कस्टडी बाँट ली। February से July तक, स्पेनिश।"
+    ],
+    [
+     "Narrator",
+     "August से January तक, फ्रेंच। a hundred and twenty से ज़्यादा सालों से ऐसा ही चल रहा है।"
+    ],
+    [
+     "Narrator",
+     "वहाँ कोई रहता नहीं। सच कहूँ? अच्छा ही है।"
+    ],
+    [
+     "Chars",
+     "[exhausted, deadpan] मैं स्पेनिश हूँ या फ्रेंच? कैलेंडर देख लो।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}
