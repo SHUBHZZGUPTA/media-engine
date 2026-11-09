@@ -1,0 +1,107 @@
+{
+ "id": "spaingeo-en",
+ "models": [
+  "gemini-2.5-flash-preview-tts",
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline (\"shorter than a football pitch\", \"glued that rock to Africa\", \"walk it in a minute\", \"Seriously.\", \"share custody\", \"Probably for the best\"). Chars voices funny cartoon characters, short and punchy: a pompous, triumphant French envoy; an offended little town; then an exhausted, deadpan island.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You think Spain has two neighbours. It has five."
+    ],
+    [
+     "Narrator",
+     "And one border is shorter than a football pitch."
+    ],
+    [
+     "Narrator",
+     "Portugal. France. And tiny Andorra, under a third the size of London."
+    ],
+    [
+     "Narrator",
+     "Britain, through Gibraltar. And Morocco... in Africa."
+    ],
+    [
+     "Narrator",
+     "Say-oo-ta, Meh-lee-ya, and a Spanish rock right off the coast."
+    ],
+    [
+     "Narrator",
+     "In nineteen thirty-four, a storm piled up sand and glued that rock to Africa."
+    ],
+    [
+     "Narrator",
+     "New border: about eighty-five metres. You could walk it in a minute."
+    ],
+    [
+     "Narrator",
+     "But Spain's weirdest borders aren't in Africa. They're with France. So how?"
+    ],
+    [
+     "Narrator",
+     "Rewind to sixteen fifty-nine. Spain and France sign peace on a tiny river island."
+    ],
+    [
+     "Narrator",
+     "Spain hands France thirty-three villages in the mountains."
+    ],
+    [
+     "Chars",
+     "[pompous, triumphant] Thirty-three villages! Yee-vee-ah, you're French now!"
+    ],
+    [
+     "Chars",
+     "[offended, indignant] Excuse me? I'm a town."
+    ],
+    [
+     "Chars",
+     "[stunned, flat] ...Seriously?"
+    ],
+    [
+     "Narrator",
+     "Seriously. So Yee-vee-ah stayed Spanish, surrounded by France on every side."
+    ],
+    [
+     "Narrator",
+     "Its road to Spain still runs through France. About one point six kilometres of it."
+    ],
+    [
+     "Narrator",
+     "And that's still not the strangest part."
+    ],
+    [
+     "Narrator",
+     "Remember that river island? Neither country would let it go."
+    ],
+    [
+     "Narrator",
+     "So they share custody. February to July, it's Spanish."
+    ],
+    [
+     "Narrator",
+     "August to January, French. They've swapped like this for over a hundred and twenty years."
+    ],
+    [
+     "Narrator",
+     "Nobody lives there. Honestly? Probably for the best."
+    ],
+    [
+     "Chars",
+     "[exhausted, deadpan] Am I Spanish or French? Check the calendar."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
