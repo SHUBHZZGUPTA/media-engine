@@ -18,6 +18,7 @@ emo = lambda e, x, y, s=150: f'<div class="emo" style="left:{x}px;top:{y}px;font
 SID = 's035'
 OPTS = {
  'V1': (img('dm_ring', 1280, -100, 0), ring(578, 614, 150, 150) +
+        '<div class="tt">DE BEERS&#39; $6.8B PROBLEM</div>'
         '<div class="t" style="top:1060px;font-size:200px">RARE?</div>'
         '<div class="h" style="top:1290px;font-size:190px">−90%</div>' + emo('💎', 820, 1600, 150) + emo('🤔', 80, 1620, 130)),
 }
@@ -31,6 +32,7 @@ body{{margin:0}}#r{{position:relative;width:{W}px;height:{Hh}px;overflow:hidden;
 .half{{position:absolute;top:0;width:540px;height:{Hh}px;overflow:hidden}}
 .div{{position:absolute;left:532px;top:0;width:16px;height:{Hh}px;background:#fff;box-shadow:0 0 30px rgba(0,0,0,.6)}}
 .emo{{position:absolute;font-family:Emo;line-height:1;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6))}}
+.tt{{position:absolute;left:60px;width:960px;top:205px;text-align:center;font-family:BSD;font-weight:900;color:#fff;line-height:1.02;font-size:128px;-webkit-text-stroke:16px #000;paint-order:stroke fill;text-shadow:0 8px 24px rgba(0,0,0,.7)}}
 .lg{{position:absolute;left:30px;top:34px;width:170px}} .sv{{position:absolute;left:0;top:0}}'''
 async def main():
     async with async_playwright() as p:
