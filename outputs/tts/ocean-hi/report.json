@@ -6,24 +6,32 @@
    "ok": true,
    "model": "gemini-2.5-flash-preview-tts",
    "mime": "audio/L16;codec=pcm;rate=24000",
-   "seconds": 139.37,
-   "took": 46.6
+   "seconds": 138.49,
+   "took": 40.5
   },
   {
    "name": "part2",
    "ok": true,
    "model": "gemini-2.5-flash-preview-tts",
    "mime": "audio/L16;codec=pcm;rate=24000",
-   "seconds": 150.73,
-   "took": 43.4
+   "seconds": 141.17,
+   "took": 40.7
   },
   {
    "name": "part3",
    "ok": true,
    "model": "gemini-2.5-flash-preview-tts",
    "mime": "audio/L16;codec=pcm;rate=24000",
-   "seconds": 108.45,
-   "took": 44.0
+   "seconds": 111.85,
+   "took": 33.3
+  },
+  {
+   "name": "hook2",
+   "ok": true,
+   "model": "gemini-2.5-flash-preview-tts",
+   "mime": "audio/L16;codec=pcm;rate=24000",
+   "seconds": 20.17,
+   "took": 9.6
   }
  ]
 }
