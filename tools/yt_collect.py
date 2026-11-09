@@ -98,6 +98,10 @@ if job.get("date_ids"):
         ents = (cd or {}).get("entries") or []
         e = next((x for x in ents if x.get("id") == vid), None)
         rec["listed"] = len(ents); rec["subs"] = (cd or {}).get("channel_follower_count")
+        vs = sorted(x.get("view_count") for x in ents[:60] if x.get("view_count") is not None)
+        if vs:
+            rec["median60"] = vs[len(vs) // 2]
+            if rec.get("views"): rec["x_median"] = round(rec["views"] / max(1, rec["median60"]), 1)
         ts = (e or {}).get("timestamp") or (e or {}).get("release_timestamp")
         if ts:
             rec["approx_upload"] = datetime.datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d")
