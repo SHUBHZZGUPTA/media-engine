@@ -1,0 +1,28 @@
+{
+ "id": "desert-u_sHeWDZJq4",
+ "url": "https://www.youtube.com/watch?v=u_sHeWDZJq4",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.7-flash",
+   "usage": {
+    "promptTokenCount": 60719,
+    "candidatesTokenCount": 12262,
+    "totalTokenCount": 73820,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 60254
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 465
+     }
+    ],
+    "thoughtsTokenCount": 839,
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}
