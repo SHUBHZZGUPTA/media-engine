@@ -1,0 +1,66 @@
+{
+ "id": "mms-s036-coke-nickel-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this for a premium documentary YouTube Shorts channel about money, history and the tricks behind them. The Narrator is a deep, warm, confident storyteller with a hint of mystery: curious, quietly amused, energetic and punchy, never slow, never announcer-like. Natural emphasis on dates and numbers, questions end with a curious lift, a short comic pause before each punchline. Keep the same voice, pace and energy from start to finish. Chars voices two funny cartoon characters (a smug gold bar and a nervous banknote), short and punchy, performed exactly as described in each bracket.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Could you hold one price for seventy years? Coca-Cola did. A Coke cost five cents through two world wars. Why couldn't it rise?"
+    ],
+    [
+     "Narrator",
+     "In eighteen ninety-nine, two lawyers got Coke's bottling rights, with the syrup price fixed permanently."
+    ],
+    [
+     "Narrator",
+     "Not exactly a great contract."
+    ],
+    [
+     "Narrator",
+     "So why not just charge more?"
+    ],
+    [
+     "Narrator",
+     "Coke tied its brand to five cents, and its vending machines took a single nickel. The next coin up was a dime, double the price."
+    ],
+    [
+     "Narrator",
+     "And that's not even the strangest part."
+    ],
+    [
+     "Narrator",
+     "Coke asked the U.S. Treasury for a seven-and-a-half-cent coin. Its boss even asked his hunting buddy, President Eisenhower. The answer was no."
+    ],
+    [
+     "Narrator",
+     "Inflation finally won. By nineteen fifty-nine, the nickel Coke was gone."
+    ],
+    [
+     "Narrator",
+     "The price never moved. Your nickel just kept getting weaker."
+    ],
+    [
+     "Chars",
+     "[smug, deep, rich, self-satisfied] Should've priced it in gold."
+    ],
+    [
+     "Narrator",
+     "Comment: what price do you wish never changed?"
+    ],
+    [
+     "Narrator",
+     "This is Money Mirage. Follow for more."
+    ]
+   ]
+  }
+ ]
+}
