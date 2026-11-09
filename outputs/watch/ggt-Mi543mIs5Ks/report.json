@@ -1,0 +1,30 @@
+{
+ "id": "ggt-Mi543mIs5Ks",
+ "url": "https://www.youtube.com/watch?v=Mi543mIs5Ks",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 13342,
+    "candidatesTokenCount": 1549,
+    "totalTokenCount": 18396,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 620
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 12722
+     }
+    ],
+    "thoughtsTokenCount": 3505,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "ggt--VWk5IDn3CA",
+ "url": "https://www.youtube.com/watch?v=-VWk5IDn3CA",
+ "items": {
+  "full": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 15931,
+    "candidatesTokenCount": 2830,
+    "totalTokenCount": 22807,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 15311
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 620
+     }
+    ],
+    "thoughtsTokenCount": 4046,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}
