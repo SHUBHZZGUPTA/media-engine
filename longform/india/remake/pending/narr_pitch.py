@@ -8,7 +8,9 @@ def toks(s):
     return [norm(w) for w in re.split(r"[\s\-—–]+",digits(s).replace(",","")) if norm(w)]
 job=sys.argv[1]; J=json.load(open(f"{ROOT}/jobs/tts/{job}.json")); REF=119.1
 for it in J["items"]:
-    n=it["name"]; W=[(float(a),float(b),norm(w)) for a,b,w in (r.split(None,2) for r in open(f"{ROOT}/outputs/align/{job}-{n}/words.txt") if r.strip())]
+    n=it["name"]
+    if not os.path.exists(f"{ROOT}/outputs/align/{job}-{n}/words.txt"): continue
+    W=[(float(a),float(b),norm(w)) for a,b,w in (r.split(None,2) for r in open(f"{ROOT}/outputs/align/{job}-{n}/words.txt") if r.strip())]
     S=[];own=[]
     for li,(who,txt) in enumerate(it["lines"]):
         for t in toks(txt): S.append(t); own.append((li,who))

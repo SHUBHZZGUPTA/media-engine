@@ -55,3 +55,10 @@ Narrator pitch by quarter: -1.8, -2.0, -1.1, +0.1 st, i.e. steady for ~4.7 min, 
 Decision: 3.8 takes up to ~650 words (~4-5 min). Hard ceiling anyway: 16,384 output tokens = ~10.9 min per request.
 Plan: keep the 8 short 3.8 takes (p01 p02 p05 p06 p07 p09 p12 p18); fill the gaps with 10 takes of 210-620 words = job in-rm-en-g (10 Nov).
 Process note: tts_quota.py check prints DON'T PUSH with exit code 0; gate pushes on `grep -q "OK to push"`, never on the exit code.
+
+## Matching rule for the final voice (agreed 9 Nov)
+Kept 3.8 takes, narrator vs old ref 119.1 Hz: p01 -0.3, p02 -0.4, p05 -1.2, p06 -1.0, p07 -1.1, p09 +0.3, p12 -0.3, p18 -1.2 st (all lines clean;
+p02 may have dropped "Jar" in "Fish. Jar. Unicorn."). 3.8 reference = their median, 114.8 Hz. Every take: same model, Sadaltager + Puck, one identical base direction.
+New takes must: narrator within ±1.0 st of 114.8 Hz; every seam (last ~30 s vs next take's first ~30 s, all takes in script order) within 1.0 st;
+speaking rate within ±8%; loudness within ±1.5 dB after normalising; timbre (voicecheck.py) inside the kept takes' range. Fail = retake (Wed), never pitch-shift.
+Shubham also gets 3 clips straddling old/new seams before the render.
