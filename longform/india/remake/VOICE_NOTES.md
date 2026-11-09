@@ -47,3 +47,11 @@ Test (in-rm-en-t38, same prebuilt Sadaltager + Puck, same script): narrator pitc
 and are no longer read aloud; ~5-10% faster. The whole video is re-voiced on 3.8 (no mixing models in one video).
 Takes: p01, p05, p09, p12, p18 = in-rm-en-t38. e1 (9 Nov) p02 p03 p04 p06 p07 · e2 (10 Nov) p08 p10 p11 p13-p17 p19 p20 · e3 (11 Nov) p21-p26.
 3.8 free-tier daily limit not published (AI Studio shows it per project); planned as 10/day. 3.1 reservations for 10-11 Nov released.
+
+## 9 Nov: how long can a 3.8 take be? (long-take test)
+3.8 free tier confirmed at 10 requests/day (429 says so). One long take got through: in-rm-en-long p04, 1,337 words, 9 min 28 s:
+57/59 lines clean (2 known spelling quirks), no tail breakdown (3.1 broke at 350-520 words).
+Narrator pitch by quarter: -1.8, -2.0, -1.1, +0.1 st, i.e. steady for ~4.7 min, then a slow ~2 st rise. A long take would jump ~2 st at the next seam.
+Decision: 3.8 takes up to ~650 words (~4-5 min). Hard ceiling anyway: 16,384 output tokens = ~10.9 min per request.
+Plan: keep the 8 short 3.8 takes (p01 p02 p05 p06 p07 p09 p12 p18); fill the gaps with 10 takes of 210-620 words = job in-rm-en-g (10 Nov).
+Process note: tts_quota.py check prints DON'T PUSH with exit code 0; gate pushes on `grep -q "OK to push"`, never on the exit code.
