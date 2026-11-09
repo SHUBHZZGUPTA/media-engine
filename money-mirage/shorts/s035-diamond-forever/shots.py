@@ -45,7 +45,7 @@ beat('punch', A(4, 2, .2), shot='s06', level=1.3)
 shot('s07', AD[0], 'film', A(5, 0, -.15), cut='zoom', **cam(AD, 1.2, 1.35))
 beat('punch', W(5, 'business', .05), shot='s07', level=1.38)
 # 6 OPEN LOOP 2
-shot('s08', CTR[0], 'film', A(6, 0, -.1), cut='flash', **cam(CTR, 1.15, 1.3))
+shot('s08', VAULT[0], 'film', A(6, 0, -.1), cut='flash', **cam(VAULT, 1.25, 1.4))
 beat('punch', A(6, 0, .9), shot='s08', level=1.35); beat('shake', A(6, 0, .95), k=.4)
 # 7 two months' salary; 10% -> 80%
 shot('s09', SCALE[0], 'film', A(7, 0, -.15), cut='zoomIn', **cam(SCALE, 1.1, 1.3))

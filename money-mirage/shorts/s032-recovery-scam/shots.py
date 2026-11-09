@@ -24,7 +24,7 @@ PH = ('fc_phone', .55, .55); BADGE = ('fc_badge', .45, .45); COP = ('fc_cop', .5
 shot('s00', KIT[0], 'film', A(0), **cam(KIT, 1.15, 1.3))
 beat('card', {'abs': 0.12}, text='Scammed *twice?*', y=280, size=132, blur=True, until={'abs': 2.4})
 beat('punch', A(0, 0, .55), shot='s00', level=1.15)
-beat('count', W(0, '$5,000', -.05), to=5000, prefix='$', **NUM, until=A(0, 1, -.1))
+beat('count', W(0, '$5,000', -.05), to=5000, prefix='$', **dict(NUM, y=640, size=150), until=A(0, 1, -.1))
 shot('s01', PH[0], 'film', A(0, 1, -.1), cut='whip', **cam(PH, 1.2, 1.35))
 beat('punch', A(0, 2, .1), shot='s01', level=1.3); beat('shake', A(0, 2, .2), k=.4)
 beat('punch', A(0, 3, .1), shot='s01', level=1.4)
@@ -43,8 +43,8 @@ beat('moment', A(3, 0, -.3), what='char', shot='s06', who='c_bill', side='M', li
 shot('s07', PH[0], 'film', A(4, 0, -.15), cut='zoom', **cam(PH, 1.3, 1.45))
 beat('circle', A(4, 0, .6), shot='s07', c=CIRC_PH, r=[230, 230], col='#FFC23A', until=A(5, 0, -.2))
 # 5 FTC: they buy lists
-shot('s08', LIST[0], 'film', A(5, 0, -.15), cut='zoomIn', **cam(LIST, 1.1, 1.3))
-beat('punch', A(5, 1, .2), shot='s08', level=1.25)
+shot('s08', LIST[0], 'film', A(5, 0, -.15), cut='zoomIn', cam0={'x': .6, 'y': .37, 'z': 1.12}, cam1={'x': .68, 'y': .33, 'z': 1.25})
+beat('punch', A(5, 1, .2), shot='s08', level=1.15)
 beat('circle', A(5, 2, .05), shot='s08', c=CIRC_LIST, r=[170, 120], col='#FF3B30', until=A(6, 0, -.1))
 # 6 OPEN LOOP 2
 shot('s09', FAKE[0], 'film', A(6, 0, -.1), cut='flash', **cam(FAKE, 1.15, 1.3))

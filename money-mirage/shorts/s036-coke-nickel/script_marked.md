@@ -9,5 +9,5 @@ N: Coke asked the US Treasury for a *7½-cent* coin. Its boss even asked his hun
 N: Inflation finally won. By *1959,* the nickel Coke was *gone.*
 N: The price never moved. Your *nickel* just kept getting *weaker.*
 GOLDIE: [smug, deep, rich] Should've priced it in *gold.*
-N: *Comment:* what price do you wish never *changed?*
+N: *Comment:* what price you wish never *changed?*
 N: This is *Money Mirage.* *Follow* for more.

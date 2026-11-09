@@ -17,7 +17,7 @@ def W(li, tok, off=0.0, n=1):
     assert len(hits) >= n, (li, tok, LINES[li]); return Wd(li, hits[n - 1], off)
 def cam(p, z0, z1, dx=0, dy=0): return dict(cam0={'x': p[1], 'y': p[2], 'z': z0}, cam1={'x': p[1] + dx, 'y': p[2] + dy, 'z': z1})
 FOLLOW_W = 4
-SHOP = P('ram_shop', 'bf_receipt'); CHIP = P('ram_chip', 'dp_tag'); DC = P('ram_datacenter', 'ts_text'); FAB = P('ram_fab', 'dp_tag')
+SHOP = P('ram_shop', 'bf_receipt'); CHIP = P('ram_chip', 'dp_tag', ny=.4); DC = P('ram_datacenter', 'ts_text'); FAB = P('ram_fab', 'dp_tag')
 TAG = ('dp_tag', .5, .45); REC = ('bf_receipt', .5, .5); PHN = ('ts_text', .5, .5)
 # 0 HOOK
 shot('s00', SHOP[0], 'film', A(0), **cam(SHOP, 1.15, 1.3))
@@ -28,7 +28,7 @@ shot('s01', CHIP[0], 'film', A(0, 2, -.1), cut='whip', **cam(CHIP, 1.2, 1.35))
 beat('slam', W(0, 'three', -.03), to=3, suffix='×', **NUM, until=A(0, 3, -.1))
 shot('s02', TAG[0], 'film', A(0, 3, -.1), cut='zoom', **cam(TAG, 1.3, 1.4))
 # 1 RAM; TrendForce +80% / +40% / +20%
-shot('s03', CHIP[0], 'film', A(1, 0, -.15), cut='zoomIn', **cam(CHIP, 1.1, 1.3))
+shot('s03', CHIP[0], 'film', A(1, 0, -.15), cut='zoomIn', **cam(CHIP, 1.2, 1.35))
 beat('punch', A(1, 1, .2), shot='s03', level=1.25)
 beat('count', W(1, '80%', -.05), to=80, prefix='+', suffix='%', **NUM, until=A(1, 3, -.1))
 beat('punch', A(1, 3, .05), shot='s03', level=1.35)

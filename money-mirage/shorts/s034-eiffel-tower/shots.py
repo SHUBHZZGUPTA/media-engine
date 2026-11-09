@@ -24,7 +24,7 @@ COP = ('fc_cop', .5, .45); ALLEY = ('nb_alley', .5, .45); JAIL = ('jail_bars', .
 shot('s00', TOWER[0], 'film', A(0), **cam(TOWER, 1.1, 1.25, dy=-.04))
 beat('card', {'abs': 0.12}, text='*SOLD:* the Eiffel Tower', y=280, size=124, blur=True, until={'abs': 2.4})
 beat('punch', A(0, 0, .55), shot='s00', level=1.15)
-beat('slam', W(0, '1925', -.03), to=1925, **NUM, until=A(0, 2, -.1))
+beat('slam', W(0, '1925', -.03), to=1925, **dict(NUM, y=640, size=150), until=A(0, 2, -.1))
 shot('s01', CASH[0], 'film', A(0, 2, -.1), cut='whip', **cam(CASH, 1.2, 1.35))
 beat('punch', A(0, 3, .1), shot='s01', level=1.4)
 # 1 only meant to stand 20 years; rusting
@@ -49,7 +49,7 @@ shot('s07', CASH[0], 'film', A(6, 0, -.15), cut='zoom', **cam(CASH, 1.1, 1.3))
 beat('punch', A(6, 1, .1), shot='s07', level=1.3)
 beat('punch', A(6, 2, .2), shot='s07', level=1.4)
 # 7 OPEN LOOP 2
-shot('s08', ALLEY[0], 'film', A(7, 0, -.1), cut='flash', **cam(ALLEY, 1.15, 1.3))
+shot('s08', TOWER[0], 'film', A(7, 0, -.1), cut='flash', cam0={'x': .45, 'y': .66, 'z': 1.25}, cam1={'x': .45, 'y': .62, 'z': 1.4})
 beat('punch', A(7, 0, .9), shot='s08', level=1.35); beat('shake', A(7, 0, .95), k=.4)
 # 8 too embarrassed; came back; tried again
 shot('s09', LET[0], 'film', A(8, 0, -.15), cut='zoom', **cam(LET, 1.25, 1.4))
