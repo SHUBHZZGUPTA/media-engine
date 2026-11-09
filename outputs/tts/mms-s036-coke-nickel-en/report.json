@@ -3,14 +3,11 @@
  "items": [
   {
    "name": "narration_en",
-   "ok": false,
-   "attempts": [
-    {
-     "model": "gemini-3.8-flash-tts",
-     "status": 503,
-     "error": "{\"error\":{\"message\":\"gemini-3.8-flash-tts is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"service_unavailable\"}}"
-    }
-   ]
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 61.08,
+   "took": 71.5
   }
  ]
 }
