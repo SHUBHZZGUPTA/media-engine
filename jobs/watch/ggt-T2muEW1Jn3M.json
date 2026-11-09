@@ -1,0 +1,19 @@
+{
+ "id": "ggt-T2muEW1Jn3M",
+ "url": "https://www.youtube.com/watch?v=T2muEW1Jn3M",
+ "models": [
+  "gemini-3.7-flash",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest",
+  "gemini-3-flash-preview"
+ ],
+ "media_resolution": "MEDIA_RESOLUTION_LOW",
+ "items": [
+  {
+   "name": "full",
+   "fps": 2,
+   "prompt": "You are a senior YouTube Shorts editor and audio producer reverse-engineering this video for a research report. Watch the ENTIRE video WITH SOUND, start to finish. Write in English. Use [mm:ss] timestamps everywhere. Be precise and concrete; if something is not audible or not visible, say so instead of guessing.\n\nReturn exactly these sections:\n\n1. FIRST 3 SECONDS: what is on screen in the very first frame and how it moves; the first spoken words verbatim; whether music or a sound effect starts before or with the voice; anything that would stop a viewer scrolling.\n2. TIMED EDIT LOG: one line per visual change for the whole video: [mm:ss] what is on screen (satellite map / globe / 3D object / character / photo / text card), what moves and how (zoom, pan, highlight fill, glow, arrows, flags, objects popping in, transitions), on-screen text exactly as shown, sound effects, music changes, and the narration sentence playing at that moment.\n3. NARRATOR VOICE: gender and age impression; accent; timbre; pitch variation; estimated words per minute; energy and emotional changes (with timestamps); pauses (natural or uniform); audible breaths or room tone; any traits typical of synthetic speech. Give a judgement: human voice actor vs AI text-to-speech, with a confidence % and the evidence. If AI, which family it most resembles (ElevenLabs, Google Gemini TTS, OpenAI TTS, Microsoft Azure, cloned voice) and why. State that you cannot be certain.\n4. CHARACTER VOICES / SKITS: are there spoken lines by characters or countries other than the narrator? For each: timestamp, the line, how the voice differs from the narrator (separate voice, pitch-shifted narrator, processed), and the comic timing (pause before/after). Say NONE if there are none.\n5. MUSIC: genre, mood, tempo/energy, volume relative to the voice, every change, drop-out or sting with timestamps.\n6. SOUND EFFECTS: list each with timestamp and type (whoosh, pop, impact, ding, ambience, etc.); total count and count per minute.\n7. SILENCE AND PACING: any deliberate pauses or dead air; the longest stretch with no visual change; average seconds between visual changes.\n8. CAPTIONS AND TEXT: caption style (font, colour, position, words per chunk, word highlighting); other on-screen text.\n9. ENDING: last 5 seconds verbatim and what is on screen; does it loop back to the start; any call to action (spoken or on screen).\n10. COUNTS: visual changes per minute; number of map zoom/pan moves; number of jokes or skit lines; number of distinct surprising facts (payoffs) and the timestamp of the first one.\n11. RETENTION READ: in 4 bullets, the strongest and weakest moments for holding a viewer, with timestamps."
+  }
+ ]
+}
