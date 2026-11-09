@@ -30,13 +30,15 @@ def call(model, body, key):
         return json.load(r)
 
 
-def call_with_wait(model, body, key, tries=4):
+def call_with_wait(model, body, key, tries=5):
     """Per-minute 429s say 'retry in Ns' -- wait and retry. Daily-quota 429s (hours) are raised at once."""
     import re
     for n in range(tries):
         try:
             return call(model, body, key)
         except urllib.error.HTTPError as e:
+            if e.code in (500, 503) and n < tries - 1:   # "high demand, try again later": back off and retry
+                time.sleep(45 * (n + 1)); continue
             if e.code != 429 or n == tries - 1:
                 raise
             msg = e.read().decode(errors="replace")
