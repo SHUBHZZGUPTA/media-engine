@@ -1,0 +1,12 @@
+{
+ "id": "ref-ZAomPf30KFQ",
+ "url": "https://www.youtube.com/watch?v=ZAomPf30KFQ",
+ "models": ["gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-flash-latest", "gemini-3-flash-preview"],
+ "items": [
+  {
+   "name": "breakdown",
+   "fps": 2,
+   "prompt": "This is a geography YouTube Short used as a topic reference. 1) Give the full verbatim transcript of the narration with timestamps (mm:ss.s) per sentence. 2) State the topic in one sentence, every place/country/region/route/number/date it mentions, and every factual claim made. 3) Any channel name, watermark, handle or on-screen title visible. 4) A timestamped visual log: what is on screen (map type, satellite, 3D, flags, characters, text), what moves, every cut and transition, on-screen text exactly as shown, sound effects and music. 5) The hook in the first 3 seconds: words + visual. 6) The story structure (setup, question, payoff, ending/loop) and the CTA. 7) Total duration and average seconds between visual changes."
+  }
+ ]
+}
