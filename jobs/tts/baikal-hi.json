@@ -1,0 +1,103 @@
+{
+ "id": "baikal-hi",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline, a little awe on the depth reveals. Chars voices funny cartoon characters (a pompous, touchy Lake Superior; a weary deadpan Belgium), short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "ये एक झील, पाँचों Great Lakes पर भारी है।"
+    ],
+    [
+     "Narrator",
+     "बेल्जियम से बस थोड़ी-सी बड़ी होकर... ये पाँचों पर भारी कैसे?"
+    ],
+    [
+     "Narrator",
+     "ये है Lake बाइकाल, साइबेरिया में। Great Lakes को ये बात बिल्कुल पसंद नहीं।"
+    ],
+    [
+     "Chars",
+     "[indignant, pompous] हम तो लगभग आठ गुना बड़े हैं!"
+    ],
+    [
+     "Narrator",
+     "मैप पर? हाँ। तो बाइकाल इतना पानी छुपाता कहाँ है?"
+    ],
+    [
+     "Narrator",
+     "सीधा नीचे।"
+    ],
+    [
+     "Narrator",
+     "बाइकाल की गहराई है one thousand six hundred forty-two मीटर। Lake Superior से करीब चार गुना।"
+    ],
+    [
+     "Chars",
+     "[huffy, offended] नापने को किसने कहा था?"
+    ],
+    [
+     "Narrator",
+     "यानी लगभग पाँच एफिल टावर जितनी गहरी।"
+    ],
+    [
+     "Narrator",
+     "पर इतनी गहरी क्यों? बाइकाल किसी घाटी में नहीं, धरती की एक दरार में भरा है।"
+    ],
+    [
+     "Narrator",
+     "यहाँ ज़मीन धीरे-धीरे दो हिस्सों में खिंच रही है।"
+    ],
+    [
+     "Narrator",
+     "ये दरार twenty-five से thirty million साल पहले खुली थी। यानी बाइकाल धरती की सबसे पुरानी झील है।"
+    ],
+    [
+     "Narrator",
+     "और Great Lakes? वो तो करीब fourteen thousand साल पहले भरीं।"
+    ],
+    [
+     "Chars",
+     "[embarrassed, quickly] टॉपिक बदलें क्या?"
+    ],
+    [
+     "Narrator",
+     "और ये दरार अब भी खुल रही है। हर साल करीब four millimetre।"
+    ],
+    [
+     "Narrator",
+     "चौड़ाई झील को बड़ा दिखाती है... गहराई उसे बड़ा बनाती है।"
+    ],
+    [
+     "Narrator",
+     "और ट्विस्ट ये है: पानी का तल, असली तल है ही नहीं।"
+    ],
+    [
+     "Narrator",
+     "झील के तल के नीचे seven किलोमीटर तक कीचड़ जमा है। दरार लगभग उतनी गहरी है, जितना Everest ऊँचा है।"
+    ],
+    [
+     "Narrator",
+     "और ऊपर से? अब भी बेल्जियम से बस थोड़ी-सी बड़ी लगती है।"
+    ],
+    [
+     "Chars",
+     "[weary, deadpan sigh] हर बार मुझे ही क्यों घसीटते हो?"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}
