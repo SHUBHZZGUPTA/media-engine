@@ -407,7 +407,8 @@ function build() {
   on(GL.lab.a, C(0, 1, .2), .3); key(GL.lab.a, 0, C(1, 0, -.2), .2);
   // ===== MP: "if it's barely bigger than Belgium?" — Belgium drops onto the lake at true size =====
   key(MP.tk, { lon: 107.5, lat: 53.3, dist: 12.5, el: 76, yaw: 12 }, C(1, 0, -.15), C(2, 0) - C(1, 0, -.15), 'sine.inOut');
-  on(MP.bel.a, C(1, 1, -.05), .25); key(MP.bel.z, 0, C(1, 1, -.05), .55, 'bounce.out'); on(MP.belLab.a, C(1, 1, .45), .3);
+  { const bt = D.lang === 'hi' ? C(1, 0, .15) : C(1, 1, -.05);   // the drop lands on the spoken word Belgium (chunk 0 in Hindi)
+    on(MP.bel.a, bt, .25); key(MP.bel.z, 0, bt, .55, 'bounce.out'); on(MP.belLab.a, bt + .5, .3); }
   key(MP.bel.a, 0, C(2, 0, .05), .35); key(MP.belLab.a, 0, C(2, 0, .0), .25);
   // L2: Meet Lake Baikal, in Siberia (card)
   key(MP.tk, { lon: 107.6, lat: 53.5, dist: 10.5, el: 64, yaw: 22 }, C(2, 0, -.1), C(2, 2) - C(2, 0, -.1), 'sine.inOut'); on(MP.pinA, C(2, 0, .1), .3); key(MP.pinA, 0, C(2, 2, -.2), .3);
@@ -422,6 +423,7 @@ function build() {
   // ===== XS: straight down (L5-L9) =====
   key(XS.ck, { x: .1, y: 1.0, dist: 16, yaw: 4, pitch: 60 }, 0, .01);
   key(XS.ck, { x: .2, y: -.9, dist: 15, yaw: 16, pitch: 10 }, C(5, 0, -.1), 1.1, 'power3.out');
+  key(XS.ck, { x: .25, y: -1.05, dist: 13.2, yaw: 5, pitch: 6 }, C(5, 0, 1.05), C(6, 1, -.2) - C(5, 0, 1.05), 'sine.inOut');   // keep drifting: no frozen hold before the depth count
   on(XS.lBk.a, C(5, 0, .3), .3); key(XS.lBk.a, 0, C(6, 0, -.1), .2);
   key(XS.supA, 0, 0, .01);
   on(XS.gauge, C(6, 0, .05), C(6, 0, 1.4) - C(6, 0, .05), 1, 'power2.out'); on(XS.lDep.a, C(6, 0, .05), .3);
