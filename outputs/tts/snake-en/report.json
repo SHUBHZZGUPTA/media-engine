@@ -1,0 +1,39 @@
+{
+ "job": "snake-en",
+ "items": [
+  {
+   "name": "full_take",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 487.88,
+   "took": 38.2
+  },
+  {
+   "name": "part1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 171.92,
+   "took": 16.7
+  },
+  {
+   "name": "part2",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "error": "TimeoutError('The read operation timed out')"
+    }
+   ]
+  },
+  {
+   "name": "part3",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 134.72,
+   "took": 17.3
+  }
+ ]
+}
