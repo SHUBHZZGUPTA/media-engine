@@ -1,0 +1,646 @@
+{
+ "id": "snake-geo",
+ "delay": 0.4,
+ "ua": "media-engine/1.0 (https://github.com/SHUBHZZGUPTA/media-engine; research fetch)",
+ "note": "Snake Island: Commons file lists (licences in extmetadata), Terrarium DEM, EOX Sentinel-2 cloudless 2016 (CC BY 4.0)",
+ "boxes": {
+  "15": [
+   -46.7,
+   -46.65,
+   -24.505,
+   -24.47
+  ],
+  "11": [
+   -47.3,
+   -46.2,
+   -24.75,
+   -23.85
+  ]
+ },
+ "files": [
+  {
+   "name": "cat_insularis.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=categorymembers&gcmtype=file&gcmlimit=100&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1920&format=json&gcmtitle=Category:Bothrops_insularis"
+  },
+  {
+   "name": "cat_island.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=categorymembers&gcmtype=file&gcmlimit=100&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1920&format=json&gcmtitle=Category:Ilha_da_Queimada_Grande"
+  },
+  {
+   "name": "cat_jararaca.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=categorymembers&gcmtype=file&gcmlimit=100&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1920&format=json&gcmtitle=Category:Bothrops_jararaca"
+  },
+  {
+   "name": "cat_lighthouse.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=categorymembers&gcmtype=file&gcmlimit=100&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1920&format=json&gcmtitle=Category:Lighthouses_in_S\u00e3o_Paulo_(state)"
+  },
+  {
+   "name": "dem_15_12133_7513.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12133/7513.png"
+  },
+  {
+   "name": "s2_15_12133_7513.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7513/12133.jpg"
+  },
+  {
+   "name": "dem_15_12133_7514.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12133/7514.png"
+  },
+  {
+   "name": "s2_15_12133_7514.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7514/12133.jpg"
+  },
+  {
+   "name": "dem_15_12133_7515.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12133/7515.png"
+  },
+  {
+   "name": "s2_15_12133_7515.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7515/12133.jpg"
+  },
+  {
+   "name": "dem_15_12133_7516.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12133/7516.png"
+  },
+  {
+   "name": "s2_15_12133_7516.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7516/12133.jpg"
+  },
+  {
+   "name": "dem_15_12134_7513.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12134/7513.png"
+  },
+  {
+   "name": "s2_15_12134_7513.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7513/12134.jpg"
+  },
+  {
+   "name": "dem_15_12134_7514.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12134/7514.png"
+  },
+  {
+   "name": "s2_15_12134_7514.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7514/12134.jpg"
+  },
+  {
+   "name": "dem_15_12134_7515.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12134/7515.png"
+  },
+  {
+   "name": "s2_15_12134_7515.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7515/12134.jpg"
+  },
+  {
+   "name": "dem_15_12134_7516.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12134/7516.png"
+  },
+  {
+   "name": "s2_15_12134_7516.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7516/12134.jpg"
+  },
+  {
+   "name": "dem_15_12135_7513.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12135/7513.png"
+  },
+  {
+   "name": "s2_15_12135_7513.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7513/12135.jpg"
+  },
+  {
+   "name": "dem_15_12135_7514.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12135/7514.png"
+  },
+  {
+   "name": "s2_15_12135_7514.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7514/12135.jpg"
+  },
+  {
+   "name": "dem_15_12135_7515.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12135/7515.png"
+  },
+  {
+   "name": "s2_15_12135_7515.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7515/12135.jpg"
+  },
+  {
+   "name": "dem_15_12135_7516.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12135/7516.png"
+  },
+  {
+   "name": "s2_15_12135_7516.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7516/12135.jpg"
+  },
+  {
+   "name": "dem_15_12136_7513.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12136/7513.png"
+  },
+  {
+   "name": "s2_15_12136_7513.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7513/12136.jpg"
+  },
+  {
+   "name": "dem_15_12136_7514.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12136/7514.png"
+  },
+  {
+   "name": "s2_15_12136_7514.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7514/12136.jpg"
+  },
+  {
+   "name": "dem_15_12136_7515.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12136/7515.png"
+  },
+  {
+   "name": "s2_15_12136_7515.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7515/12136.jpg"
+  },
+  {
+   "name": "dem_15_12136_7516.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12136/7516.png"
+  },
+  {
+   "name": "s2_15_12136_7516.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7516/12136.jpg"
+  },
+  {
+   "name": "dem_15_12137_7513.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12137/7513.png"
+  },
+  {
+   "name": "s2_15_12137_7513.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7513/12137.jpg"
+  },
+  {
+   "name": "dem_15_12137_7514.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12137/7514.png"
+  },
+  {
+   "name": "s2_15_12137_7514.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7514/12137.jpg"
+  },
+  {
+   "name": "dem_15_12137_7515.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12137/7515.png"
+  },
+  {
+   "name": "s2_15_12137_7515.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7515/12137.jpg"
+  },
+  {
+   "name": "dem_15_12137_7516.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/12137/7516.png"
+  },
+  {
+   "name": "s2_15_12137_7516.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/15/7516/12137.jpg"
+  },
+  {
+   "name": "dem_11_754_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/754/465.png"
+  },
+  {
+   "name": "s2_11_754_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/754.jpg"
+  },
+  {
+   "name": "dem_11_754_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/754/466.png"
+  },
+  {
+   "name": "s2_11_754_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/754.jpg"
+  },
+  {
+   "name": "dem_11_754_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/754/467.png"
+  },
+  {
+   "name": "s2_11_754_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/754.jpg"
+  },
+  {
+   "name": "dem_11_754_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/754/468.png"
+  },
+  {
+   "name": "s2_11_754_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/754.jpg"
+  },
+  {
+   "name": "dem_11_754_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/754/469.png"
+  },
+  {
+   "name": "s2_11_754_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/754.jpg"
+  },
+  {
+   "name": "dem_11_754_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/754/470.png"
+  },
+  {
+   "name": "s2_11_754_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/754.jpg"
+  },
+  {
+   "name": "dem_11_754_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/754/471.png"
+  },
+  {
+   "name": "s2_11_754_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/754.jpg"
+  },
+  {
+   "name": "dem_11_755_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/755/465.png"
+  },
+  {
+   "name": "s2_11_755_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/755.jpg"
+  },
+  {
+   "name": "dem_11_755_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/755/466.png"
+  },
+  {
+   "name": "s2_11_755_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/755.jpg"
+  },
+  {
+   "name": "dem_11_755_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/755/467.png"
+  },
+  {
+   "name": "s2_11_755_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/755.jpg"
+  },
+  {
+   "name": "dem_11_755_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/755/468.png"
+  },
+  {
+   "name": "s2_11_755_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/755.jpg"
+  },
+  {
+   "name": "dem_11_755_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/755/469.png"
+  },
+  {
+   "name": "s2_11_755_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/755.jpg"
+  },
+  {
+   "name": "dem_11_755_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/755/470.png"
+  },
+  {
+   "name": "s2_11_755_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/755.jpg"
+  },
+  {
+   "name": "dem_11_755_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/755/471.png"
+  },
+  {
+   "name": "s2_11_755_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/755.jpg"
+  },
+  {
+   "name": "dem_11_756_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/756/465.png"
+  },
+  {
+   "name": "s2_11_756_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/756.jpg"
+  },
+  {
+   "name": "dem_11_756_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/756/466.png"
+  },
+  {
+   "name": "s2_11_756_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/756.jpg"
+  },
+  {
+   "name": "dem_11_756_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/756/467.png"
+  },
+  {
+   "name": "s2_11_756_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/756.jpg"
+  },
+  {
+   "name": "dem_11_756_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/756/468.png"
+  },
+  {
+   "name": "s2_11_756_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/756.jpg"
+  },
+  {
+   "name": "dem_11_756_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/756/469.png"
+  },
+  {
+   "name": "s2_11_756_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/756.jpg"
+  },
+  {
+   "name": "dem_11_756_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/756/470.png"
+  },
+  {
+   "name": "s2_11_756_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/756.jpg"
+  },
+  {
+   "name": "dem_11_756_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/756/471.png"
+  },
+  {
+   "name": "s2_11_756_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/756.jpg"
+  },
+  {
+   "name": "dem_11_757_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/757/465.png"
+  },
+  {
+   "name": "s2_11_757_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/757.jpg"
+  },
+  {
+   "name": "dem_11_757_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/757/466.png"
+  },
+  {
+   "name": "s2_11_757_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/757.jpg"
+  },
+  {
+   "name": "dem_11_757_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/757/467.png"
+  },
+  {
+   "name": "s2_11_757_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/757.jpg"
+  },
+  {
+   "name": "dem_11_757_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/757/468.png"
+  },
+  {
+   "name": "s2_11_757_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/757.jpg"
+  },
+  {
+   "name": "dem_11_757_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/757/469.png"
+  },
+  {
+   "name": "s2_11_757_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/757.jpg"
+  },
+  {
+   "name": "dem_11_757_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/757/470.png"
+  },
+  {
+   "name": "s2_11_757_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/757.jpg"
+  },
+  {
+   "name": "dem_11_757_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/757/471.png"
+  },
+  {
+   "name": "s2_11_757_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/757.jpg"
+  },
+  {
+   "name": "dem_11_758_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/758/465.png"
+  },
+  {
+   "name": "s2_11_758_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/758.jpg"
+  },
+  {
+   "name": "dem_11_758_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/758/466.png"
+  },
+  {
+   "name": "s2_11_758_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/758.jpg"
+  },
+  {
+   "name": "dem_11_758_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/758/467.png"
+  },
+  {
+   "name": "s2_11_758_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/758.jpg"
+  },
+  {
+   "name": "dem_11_758_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/758/468.png"
+  },
+  {
+   "name": "s2_11_758_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/758.jpg"
+  },
+  {
+   "name": "dem_11_758_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/758/469.png"
+  },
+  {
+   "name": "s2_11_758_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/758.jpg"
+  },
+  {
+   "name": "dem_11_758_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/758/470.png"
+  },
+  {
+   "name": "s2_11_758_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/758.jpg"
+  },
+  {
+   "name": "dem_11_758_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/758/471.png"
+  },
+  {
+   "name": "s2_11_758_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/758.jpg"
+  },
+  {
+   "name": "dem_11_759_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/759/465.png"
+  },
+  {
+   "name": "s2_11_759_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/759.jpg"
+  },
+  {
+   "name": "dem_11_759_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/759/466.png"
+  },
+  {
+   "name": "s2_11_759_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/759.jpg"
+  },
+  {
+   "name": "dem_11_759_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/759/467.png"
+  },
+  {
+   "name": "s2_11_759_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/759.jpg"
+  },
+  {
+   "name": "dem_11_759_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/759/468.png"
+  },
+  {
+   "name": "s2_11_759_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/759.jpg"
+  },
+  {
+   "name": "dem_11_759_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/759/469.png"
+  },
+  {
+   "name": "s2_11_759_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/759.jpg"
+  },
+  {
+   "name": "dem_11_759_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/759/470.png"
+  },
+  {
+   "name": "s2_11_759_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/759.jpg"
+  },
+  {
+   "name": "dem_11_759_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/759/471.png"
+  },
+  {
+   "name": "s2_11_759_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/759.jpg"
+  },
+  {
+   "name": "dem_11_760_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/760/465.png"
+  },
+  {
+   "name": "s2_11_760_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/760.jpg"
+  },
+  {
+   "name": "dem_11_760_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/760/466.png"
+  },
+  {
+   "name": "s2_11_760_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/760.jpg"
+  },
+  {
+   "name": "dem_11_760_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/760/467.png"
+  },
+  {
+   "name": "s2_11_760_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/760.jpg"
+  },
+  {
+   "name": "dem_11_760_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/760/468.png"
+  },
+  {
+   "name": "s2_11_760_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/760.jpg"
+  },
+  {
+   "name": "dem_11_760_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/760/469.png"
+  },
+  {
+   "name": "s2_11_760_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/760.jpg"
+  },
+  {
+   "name": "dem_11_760_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/760/470.png"
+  },
+  {
+   "name": "s2_11_760_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/760.jpg"
+  },
+  {
+   "name": "dem_11_760_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/760/471.png"
+  },
+  {
+   "name": "s2_11_760_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/760.jpg"
+  },
+  {
+   "name": "dem_11_761_465.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/761/465.png"
+  },
+  {
+   "name": "s2_11_761_465.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/465/761.jpg"
+  },
+  {
+   "name": "dem_11_761_466.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/761/466.png"
+  },
+  {
+   "name": "s2_11_761_466.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/466/761.jpg"
+  },
+  {
+   "name": "dem_11_761_467.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/761/467.png"
+  },
+  {
+   "name": "s2_11_761_467.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/467/761.jpg"
+  },
+  {
+   "name": "dem_11_761_468.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/761/468.png"
+  },
+  {
+   "name": "s2_11_761_468.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/468/761.jpg"
+  },
+  {
+   "name": "dem_11_761_469.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/761/469.png"
+  },
+  {
+   "name": "s2_11_761_469.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/469/761.jpg"
+  },
+  {
+   "name": "dem_11_761_470.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/761/470.png"
+  },
+  {
+   "name": "s2_11_761_470.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/470/761.jpg"
+  },
+  {
+   "name": "dem_11_761_471.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/761/471.png"
+  },
+  {
+   "name": "s2_11_761_471.jpg",
+   "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/11/471/761.jpg"
+  }
+ ]
+}
