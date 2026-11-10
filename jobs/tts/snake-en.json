@@ -1,0 +1,476 @@
+{
+ "id": "snake-en",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "items": [
+  {
+   "name": "full_take",
+   "direction": "Narrate this as a gripping long-form geography YouTube explainer about a deadly island, spoken directly to the viewer as 'you'. Voice: native General American English narrator, neutral American accent from the first word to the last. The story is set in Brazil but the narrator is NOT Brazilian: never imitate a Brazilian or Portuguese accent; say the place names the way an American documentary narrator would: Ilha da Queimada Grande = EEL-yah dah kay-MAH-dah GRAHN-jee, São Paulo = sow POW-loo, Butantan = boo-tahn-TAHN, jararaca = zha-ra-RAH-kah, captopril = KAP-toh-pril. Delivery: a deep, warm, confident storyteller; calm and intimate with quiet suspense in the opening and the lighthouse legend, a short pause before each reveal, a dry, playful beat on the jokes ('a heater with legs', 'Now do your neck', 'Don't land.'), genuine wonder on the medicine twist, and a soft, reflective ending. Conversational, never rushed, never shouting. Keep exactly the same voice, pitch, loudness, pace and energy from the first line to the last; do not speed up or get quieter towards the end. Read every word exactly as written; read numbers naturally.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Picture this. You've been at sea for an hour, heading out from the coast of São Paulo, and the island in front of you looks perfect. Green forest. Black rocks. Not a single person."
+    ],
+    [
+     "Narrator",
+     "You find a flat rock and jump off the boat. The forest is quiet. Too quiet. No monkeys. No rats. Not even a mouse."
+    ],
+    [
+     "Narrator",
+     "That's your first clue. Something on this island ate all the easy food a very long time ago. And right now, from the dark under those trees, it can already see you."
+    ],
+    [
+     "Narrator",
+     "Not your shape. Your heat."
+    ],
+    [
+     "Narrator",
+     "That's a golden lancehead. A pit viper found on this island and nowhere else on Earth. And there are thousands of them."
+    ],
+    [
+     "Narrator",
+     "When people imagine a deadly snake island, they usually picture somewhere in Australia, or a horror film."
+    ],
+    [
+     "Narrator",
+     "This one is real. It's called Ilha da Queimada Grande, it sits about 33 kilometres off the coast of Brazil, and the Brazilian Navy keeps the public off it completely."
+    ],
+    [
+     "Narrator",
+     "The last family that lived there left behind a story nobody has ever been able to prove. And the snake's closest relative may have helped save your grandparents' hearts."
+    ],
+    [
+     "Narrator",
+     "We'll get to both."
+    ],
+    [
+     "Narrator",
+     "First, let's find out why you'd never want to set foot on Snake Island."
+    ],
+    [
+     "Narrator",
+     "It's smaller than you think. The whole island is about 43 hectares. Roughly 60 football pitches. You could walk across it in half an hour... in theory."
+    ],
+    [
+     "Narrator",
+     "For decades, people repeated that there was one snake on every square metre. That would be around 430,000 snakes."
+    ],
+    [
+     "Narrator",
+     "Good news: that's a myth. When scientists actually counted, they found somewhere between 2,000 and 4,000. A newer survey puts it closer to 2,500."
+    ],
+    [
+     "Narrator",
+     "Bad news: that's still about one deadly snake for every two badminton courts. And most of them aren't on the ground. They're in the trees."
+    ],
+    [
+     "Narrator",
+     "So how did thousands of venomous snakes end up stranded on one rock in the Atlantic?"
+    ],
+    [
+     "Narrator",
+     "The answer is the most geography thing ever. The sea moved."
+    ],
+    [
+     "Narrator",
+     "About 11,000 years ago, at the end of the last ice age, this wasn't an island. It was a hill on the coast of Brazil. Then the ice melted, the ocean rose, and the water swallowed the low ground around it."
+    ],
+    [
+     "Narrator",
+     "Whatever lived on that hill was trapped. Including a population of lanceheads."
+    ],
+    [
+     "Narrator",
+     "On the mainland, lanceheads eat rats and mice. On the island, there are no mammals at all. Nothing warm and furry running around on the ground."
+    ],
+    [
+     "Narrator",
+     "So the snakes had two options. Change, or starve."
+    ],
+    [
+     "Narrator",
+     "They changed. They climbed."
+    ],
+    [
+     "Narrator",
+     "Golden lanceheads spend much of their lives up in the branches, hunting the one food that keeps arriving from the outside world: birds."
+    ],
+    [
+     "Narrator",
+     "More than 40 kinds of bird stop on the island while they migrate. Scientists found that adult lanceheads mostly survive on just one or two of them a year."
+    ],
+    [
+     "Narrator",
+     "And a bird is a hard thing to catch. If a snake bites a mouse, the mouse runs a few metres and dies, and the snake follows the trail. If it bites a bird, the bird flies away. Over the ocean. Gone."
+    ],
+    [
+     "Narrator",
+     "So the venom had to work fast. Lab tests suggest golden lancehead venom is the fastest-acting in its entire family, and possibly around five times as potent as its mainland cousin's."
+    ],
+    [
+     "Narrator",
+     "Now, remember how it could see your heat?"
+    ],
+    [
+     "Narrator",
+     "Lanceheads are pit vipers. Between each eye and nostril there's a small hole, and inside it, a sensor that reads warmth a bit like a thermal camera. In experiments, pit vipers struck accurately at targets less than a fifth of a degree warmer than their surroundings."
+    ],
+    [
+     "Narrator",
+     "Your body runs at about 37 degrees. On a shady branch in that forest, you're not a person."
+    ],
+    [
+     "Narrator",
+     "You're a heater with legs."
+    ],
+    [
+     "Narrator",
+     "Which brings us to that family."
+    ],
+    [
+     "Narrator",
+     "In 1909, Brazil built a lighthouse on the island, and a keeper moved in with his family."
+    ],
+    [
+     "Narrator",
+     "The local legend goes like this. One night, snakes slipped in through an open window. The keeper, his wife and their children ran for the boat, and more snakes dropped on them from the branches along the path. None of them made it."
+    ],
+    [
+     "Narrator",
+     "It's a chilling story. It's also only a story: there's no record that proves it happened. What we do know is that by the 1920s the lighthouse was automated, and nobody has lived on Snake Island since."
+    ],
+    [
+     "Narrator",
+     "So, let's say the boat has left, and you have to cross the island. What's your plan?"
+    ],
+    [
+     "Narrator",
+     "Option one: go fast. But the ground is steep, rocky forest that climbs over 200 metres, and the snakes aren't only at your feet. They're at face height."
+    ],
+    [
+     "Narrator",
+     "Option two: go at night, when it's cooler. Except this snake doesn't need light. And on a cool night, your warm body stands out even more."
+    ],
+    [
+     "Narrator",
+     "Option three: thick boots. Smart. Now do your neck."
+    ],
+    [
+     "Narrator",
+     "Option four: bring antivenom. Brazil makes excellent antivenom at the Butantan Institute in São Paulo. But the nearest hospital is at least an hour away by boat, and this venom evolved to work in the time it takes a bird to fly off a branch."
+    ],
+    [
+     "Narrator",
+     "Bottom line? There's exactly one plan that works on Snake Island, and the Navy already chose it. Don't land."
+    ],
+    [
+     "Narrator",
+     "But before you write these snakes off as monsters, there's a twist."
+    ],
+    [
+     "Narrator",
+     "There's no official record of anyone ever being bitten on Snake Island. Those famous stories about fishermen found dead on the rocks? Nobody has been able to confirm them."
+    ],
+    [
+     "Narrator",
+     "If anyone here should be scared, it's the snakes."
+    ],
+    [
+     "Narrator",
+     "Golden lanceheads are critically endangered. They live on one island, they can't leave, and they've been breeding with their own relatives for thousands of years. Some are now born with both male and female parts, and most of those can't have young at all."
+    ],
+    [
+     "Narrator",
+     "And then there's us. In 2008, researchers were offered up to 30,000 dollars for a single golden lancehead. That's a big part of why the island is closed. The Navy isn't only protecting you from the snakes. It's protecting the snakes from you."
+    ],
+    [
+     "Narrator",
+     "Now for the part about your grandparents' hearts."
+    ],
+    [
+     "Narrator",
+     "In the 1960s, scientists in Brazil studied the venom of the lancehead's mainland cousin, the jararaca. They found a molecule that made blood pressure drop."
+    ],
+    [
+     "Narrator",
+     "That idea led to captopril, one of the first drugs of its kind for high blood pressure, approved in the United States in 1981. Millions of people have taken medicines that trace back to it."
+    ],
+    [
+     "Narrator",
+     "So the same family of snakes that made this the most feared island in Brazil has helped protect millions of hearts. A few times a year, scientists still land on Snake Island, with permission, to study the lanceheads and their venom."
+    ],
+    [
+     "Narrator",
+     "So picture it one last time. You're back on that boat, 33 kilometres from Brazil. The island looks green, quiet, perfect."
+    ],
+    [
+     "Narrator",
+     "Somewhere in a tree up there, a golden snake is waiting for a tired bird. It isn't waiting for you. It never was."
+    ],
+    [
+     "Narrator",
+     "It just got stuck on a hill when the sea came up, and it's been surviving ever since."
+    ],
+    [
+     "Narrator",
+     "Which place on Earth should we drop you on next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "And if islands are your thing, there's one where you can literally see tomorrow. That one's next."
+    ],
+    [
+     "Narrator",
+     "This is BHUGOL."
+    ]
+   ]
+  },
+  {
+   "name": "part1",
+   "direction": "Narrate this as a gripping long-form geography YouTube explainer about a deadly island, spoken directly to the viewer as 'you'. Voice: native General American English narrator, neutral American accent from the first word to the last. The story is set in Brazil but the narrator is NOT Brazilian: never imitate a Brazilian or Portuguese accent; say the place names the way an American documentary narrator would: Ilha da Queimada Grande = EEL-yah dah kay-MAH-dah GRAHN-jee, São Paulo = sow POW-loo, Butantan = boo-tahn-TAHN, jararaca = zha-ra-RAH-kah, captopril = KAP-toh-pril. Delivery: a deep, warm, confident storyteller; calm and intimate with quiet suspense in the opening and the lighthouse legend, a short pause before each reveal, a dry, playful beat on the jokes ('a heater with legs', 'Now do your neck', 'Don't land.'), genuine wonder on the medicine twist, and a soft, reflective ending. Conversational, never rushed, never shouting. Keep exactly the same voice, pitch, loudness, pace and energy from the first line to the last; do not speed up or get quieter towards the end. Read every word exactly as written; read numbers naturally.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Picture this. You've been at sea for an hour, heading out from the coast of São Paulo, and the island in front of you looks perfect. Green forest. Black rocks. Not a single person."
+    ],
+    [
+     "Narrator",
+     "You find a flat rock and jump off the boat. The forest is quiet. Too quiet. No monkeys. No rats. Not even a mouse."
+    ],
+    [
+     "Narrator",
+     "That's your first clue. Something on this island ate all the easy food a very long time ago. And right now, from the dark under those trees, it can already see you."
+    ],
+    [
+     "Narrator",
+     "Not your shape. Your heat."
+    ],
+    [
+     "Narrator",
+     "That's a golden lancehead. A pit viper found on this island and nowhere else on Earth. And there are thousands of them."
+    ],
+    [
+     "Narrator",
+     "When people imagine a deadly snake island, they usually picture somewhere in Australia, or a horror film."
+    ],
+    [
+     "Narrator",
+     "This one is real. It's called Ilha da Queimada Grande, it sits about 33 kilometres off the coast of Brazil, and the Brazilian Navy keeps the public off it completely."
+    ],
+    [
+     "Narrator",
+     "The last family that lived there left behind a story nobody has ever been able to prove. And the snake's closest relative may have helped save your grandparents' hearts."
+    ],
+    [
+     "Narrator",
+     "We'll get to both."
+    ],
+    [
+     "Narrator",
+     "First, let's find out why you'd never want to set foot on Snake Island."
+    ],
+    [
+     "Narrator",
+     "It's smaller than you think. The whole island is about 43 hectares. Roughly 60 football pitches. You could walk across it in half an hour... in theory."
+    ],
+    [
+     "Narrator",
+     "For decades, people repeated that there was one snake on every square metre. That would be around 430,000 snakes."
+    ],
+    [
+     "Narrator",
+     "Good news: that's a myth. When scientists actually counted, they found somewhere between 2,000 and 4,000. A newer survey puts it closer to 2,500."
+    ],
+    [
+     "Narrator",
+     "Bad news: that's still about one deadly snake for every two badminton courts. And most of them aren't on the ground. They're in the trees."
+    ],
+    [
+     "Narrator",
+     "So how did thousands of venomous snakes end up stranded on one rock in the Atlantic?"
+    ],
+    [
+     "Narrator",
+     "The answer is the most geography thing ever. The sea moved."
+    ],
+    [
+     "Narrator",
+     "About 11,000 years ago, at the end of the last ice age, this wasn't an island. It was a hill on the coast of Brazil. Then the ice melted, the ocean rose, and the water swallowed the low ground around it."
+    ],
+    [
+     "Narrator",
+     "Whatever lived on that hill was trapped. Including a population of lanceheads."
+    ],
+    [
+     "Narrator",
+     "On the mainland, lanceheads eat rats and mice. On the island, there are no mammals at all. Nothing warm and furry running around on the ground."
+    ],
+    [
+     "Narrator",
+     "So the snakes had two options. Change, or starve."
+    ]
+   ]
+  },
+  {
+   "name": "part2",
+   "direction": "Narrate this as a gripping long-form geography YouTube explainer about a deadly island, spoken directly to the viewer as 'you'. Voice: native General American English narrator, neutral American accent from the first word to the last. The story is set in Brazil but the narrator is NOT Brazilian: never imitate a Brazilian or Portuguese accent; say the place names the way an American documentary narrator would: Ilha da Queimada Grande = EEL-yah dah kay-MAH-dah GRAHN-jee, São Paulo = sow POW-loo, Butantan = boo-tahn-TAHN, jararaca = zha-ra-RAH-kah, captopril = KAP-toh-pril. Delivery: a deep, warm, confident storyteller; calm and intimate with quiet suspense in the opening and the lighthouse legend, a short pause before each reveal, a dry, playful beat on the jokes ('a heater with legs', 'Now do your neck', 'Don't land.'), genuine wonder on the medicine twist, and a soft, reflective ending. Conversational, never rushed, never shouting. Keep exactly the same voice, pitch, loudness, pace and energy from the first line to the last; do not speed up or get quieter towards the end. Read every word exactly as written; read numbers naturally.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "They changed. They climbed."
+    ],
+    [
+     "Narrator",
+     "Golden lanceheads spend much of their lives up in the branches, hunting the one food that keeps arriving from the outside world: birds."
+    ],
+    [
+     "Narrator",
+     "More than 40 kinds of bird stop on the island while they migrate. Scientists found that adult lanceheads mostly survive on just one or two of them a year."
+    ],
+    [
+     "Narrator",
+     "And a bird is a hard thing to catch. If a snake bites a mouse, the mouse runs a few metres and dies, and the snake follows the trail. If it bites a bird, the bird flies away. Over the ocean. Gone."
+    ],
+    [
+     "Narrator",
+     "So the venom had to work fast. Lab tests suggest golden lancehead venom is the fastest-acting in its entire family, and possibly around five times as potent as its mainland cousin's."
+    ],
+    [
+     "Narrator",
+     "Now, remember how it could see your heat?"
+    ],
+    [
+     "Narrator",
+     "Lanceheads are pit vipers. Between each eye and nostril there's a small hole, and inside it, a sensor that reads warmth a bit like a thermal camera. In experiments, pit vipers struck accurately at targets less than a fifth of a degree warmer than their surroundings."
+    ],
+    [
+     "Narrator",
+     "Your body runs at about 37 degrees. On a shady branch in that forest, you're not a person."
+    ],
+    [
+     "Narrator",
+     "You're a heater with legs."
+    ],
+    [
+     "Narrator",
+     "Which brings us to that family."
+    ],
+    [
+     "Narrator",
+     "In 1909, Brazil built a lighthouse on the island, and a keeper moved in with his family."
+    ],
+    [
+     "Narrator",
+     "The local legend goes like this. One night, snakes slipped in through an open window. The keeper, his wife and their children ran for the boat, and more snakes dropped on them from the branches along the path. None of them made it."
+    ],
+    [
+     "Narrator",
+     "It's a chilling story. It's also only a story: there's no record that proves it happened. What we do know is that by the 1920s the lighthouse was automated, and nobody has lived on Snake Island since."
+    ],
+    [
+     "Narrator",
+     "So, let's say the boat has left, and you have to cross the island. What's your plan?"
+    ],
+    [
+     "Narrator",
+     "Option one: go fast. But the ground is steep, rocky forest that climbs over 200 metres, and the snakes aren't only at your feet. They're at face height."
+    ],
+    [
+     "Narrator",
+     "Option two: go at night, when it's cooler. Except this snake doesn't need light. And on a cool night, your warm body stands out even more."
+    ],
+    [
+     "Narrator",
+     "Option three: thick boots. Smart. Now do your neck."
+    ],
+    [
+     "Narrator",
+     "Option four: bring antivenom. Brazil makes excellent antivenom at the Butantan Institute in São Paulo. But the nearest hospital is at least an hour away by boat, and this venom evolved to work in the time it takes a bird to fly off a branch."
+    ],
+    [
+     "Narrator",
+     "Bottom line? There's exactly one plan that works on Snake Island, and the Navy already chose it. Don't land."
+    ]
+   ]
+  },
+  {
+   "name": "part3",
+   "direction": "Narrate this as a gripping long-form geography YouTube explainer about a deadly island, spoken directly to the viewer as 'you'. Voice: native General American English narrator, neutral American accent from the first word to the last. The story is set in Brazil but the narrator is NOT Brazilian: never imitate a Brazilian or Portuguese accent; say the place names the way an American documentary narrator would: Ilha da Queimada Grande = EEL-yah dah kay-MAH-dah GRAHN-jee, São Paulo = sow POW-loo, Butantan = boo-tahn-TAHN, jararaca = zha-ra-RAH-kah, captopril = KAP-toh-pril. Delivery: a deep, warm, confident storyteller; calm and intimate with quiet suspense in the opening and the lighthouse legend, a short pause before each reveal, a dry, playful beat on the jokes ('a heater with legs', 'Now do your neck', 'Don't land.'), genuine wonder on the medicine twist, and a soft, reflective ending. Conversational, never rushed, never shouting. Keep exactly the same voice, pitch, loudness, pace and energy from the first line to the last; do not speed up or get quieter towards the end. Read every word exactly as written; read numbers naturally.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "But before you write these snakes off as monsters, there's a twist."
+    ],
+    [
+     "Narrator",
+     "There's no official record of anyone ever being bitten on Snake Island. Those famous stories about fishermen found dead on the rocks? Nobody has been able to confirm them."
+    ],
+    [
+     "Narrator",
+     "If anyone here should be scared, it's the snakes."
+    ],
+    [
+     "Narrator",
+     "Golden lanceheads are critically endangered. They live on one island, they can't leave, and they've been breeding with their own relatives for thousands of years. Some are now born with both male and female parts, and most of those can't have young at all."
+    ],
+    [
+     "Narrator",
+     "And then there's us. In 2008, researchers were offered up to 30,000 dollars for a single golden lancehead. That's a big part of why the island is closed. The Navy isn't only protecting you from the snakes. It's protecting the snakes from you."
+    ],
+    [
+     "Narrator",
+     "Now for the part about your grandparents' hearts."
+    ],
+    [
+     "Narrator",
+     "In the 1960s, scientists in Brazil studied the venom of the lancehead's mainland cousin, the jararaca. They found a molecule that made blood pressure drop."
+    ],
+    [
+     "Narrator",
+     "That idea led to captopril, one of the first drugs of its kind for high blood pressure, approved in the United States in 1981. Millions of people have taken medicines that trace back to it."
+    ],
+    [
+     "Narrator",
+     "So the same family of snakes that made this the most feared island in Brazil has helped protect millions of hearts. A few times a year, scientists still land on Snake Island, with permission, to study the lanceheads and their venom."
+    ],
+    [
+     "Narrator",
+     "So picture it one last time. You're back on that boat, 33 kilometres from Brazil. The island looks green, quiet, perfect."
+    ],
+    [
+     "Narrator",
+     "Somewhere in a tree up there, a golden snake is waiting for a tired bird. It isn't waiting for you. It never was."
+    ],
+    [
+     "Narrator",
+     "It just got stuck on a hill when the sea came up, and it's been surviving ever since."
+    ],
+    [
+     "Narrator",
+     "Which place on Earth should we drop you on next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "And if islands are your thing, there's one where you can literally see tomorrow. That one's next."
+    ],
+    [
+     "Narrator",
+     "This is BHUGOL."
+    ]
+   ]
+  }
+ ]
+}
