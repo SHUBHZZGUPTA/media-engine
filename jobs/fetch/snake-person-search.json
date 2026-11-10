@@ -1,0 +1,31 @@
+{
+ "id": "snake-person-search",
+ "delay": 0.5,
+ "ua": "media-engine/1.0 (https://github.com/SHUBHZZGUPTA/media-engine; research fetch)",
+ "files": [
+  {
+   "name": "q_hiker_torch.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=hiker%20flashlight%20night"
+  },
+  {
+   "name": "q_headlamp.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=headlamp%20hiker"
+  },
+  {
+   "name": "q_man_flashlight.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=man%20holding%20flashlight"
+  },
+  {
+   "name": "q_explorer_rocks.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=hiker%20standing%20on%20rocks%20silhouette"
+  },
+  {
+   "name": "q_hiker_side.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=hiker%20backpack%20walking%20side%20view"
+  },
+  {
+   "name": "q_torch_cave.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=explorer%20torch%20cave"
+  }
+ ]
+}
