@@ -48,16 +48,16 @@ RULES = {
 }
 
 TOPIC_RULES = [
-    ("border/enclave", r"\b(border|enclave|exclave|boundary|line|neighbou?r|inside a country|invisible)\b"),
-    ("size/scale", r"\b(size|bigger|smaller|small|empty|largest|biggest|tallest|half of|40%|size of)\b"),
-    ("extreme place", r"\b(deepest|driest|coldest|hottest|loneliest|closest|farthest|remote|loneliest|never rain|rained)\b"),
-    ("name confusion", r"\b(not a country|vs\.?|difference|isn't|is not|secret(ly)?|actually)\b"),
-    ("history deal", r"\b(bought|sold|deal|treaty|history|didn't exist|until \d{4}|\b1[5-9]\d\d\b)\b"),
-    ("record journey", r"\b(walk|on foot|drive|cross|journey|longest road|fastest)\b"),
-    ("nature event", r"\b(volcano|erupt|wave|quake|earthquake|storm|hurricane|tsunami|iceberg|snowfall)\b"),
+    ("news/pop", r"\b(black friday|halloween|pumpkin|f1|nasa|aliens?|diwali|christmas|new year|cop\d+|casino|police|burns? a man)\b"),
+    ("nature event", r"\b(volcano|erupts?|waves?|quake|earthquake|storm|hurricane|tsunami|iceberg|snowfall|rain(ed)?)\b"),
+    ("record journey", r"\b(walk|on foot|drive|cross(ed|ing)?|journey|longest road|fastest)\b"),
+    ("border/enclave", r"\b(borders?|enclave|exclave|boundary|one line|neighbou?rs?|inside a country|invisible|cheated on coastline)\b"),
+    ("extreme place", r"\b(deepest|driest|coldest|hottest|loneliest|closest|farthest|remote|never rain|million years)\b"),
     ("facts list", r"\b(\d+ facts|top \d|\d+ countries|facts that)\b"),
-    ("news/pop", r"\b(black friday|halloween|pumpkin|f1|nasa|aliens?|diwali|christmas|new year|cop\d+)\b"),
-    ("space/science", r"\b(stars|twinkle|earth|moon|planet|orbit|gps|satellite|space)\b"),
+    ("size/scale", r"\b(size|bigger|smaller|small|empty|largest|biggest|tallest|half of|40%|size of|south of)\b"),
+    ("history deal", r"\b(bought|sold|deal|treaty|history|didn't exist|until \d{4}|\b1[5-9]\d\d\b)\b"),
+    ("name confusion", r"\b(not a country|vs\.?|difference|isn't|is not|secret(ly)?|actually|fake)\b"),
+    ("space/science", r"\b(stars|twinkle|another earth|moon|planet|orbit|gps|satellite|space)\b"),
 ]
 
 
@@ -319,6 +319,7 @@ def competitor(c, checked):
         "median_desc_len": median([v["desc_len"] for v in cv]),
         "desc_link_share": round(100 * sum(1 for v in cv if v["desc_links"]) / len(cv)) if cv else None,
         "median_title_len": median([v["title_len"] for v in cv]),
+        "likes_per_1k": median([1000 * (v["likes"] or 0) / v["views"] for v in cv if v["views"]]),
         "title_question_share": round(100 * sum(1 for v in cv if v["has_question"]) / len(cv)) if cv else None,
         "title_number_share": round(100 * sum(1 for v in cv if v["has_number"]) / len(cv)) if cv else None,
         "title_emoji_share": round(100 * sum(1 for v in cv if v["emoji_n"]) / len(cv)) if cv else None,
@@ -351,7 +352,8 @@ def main():
         ctry = aud.get("country") or []
         tot = sum(c.get("views", 0) for c in ctry) or 1
         chans.append({
-            "key": key, "id": ch.get("id"), "handle": ch.get("handle"), "title": ch.get("title"),
+            "key": key, "id": ch.get("id"), "handle": ch.get("handle"), "title": ch.get("title"), "created": ch.get("created"),
+            "age_days": round((checked - parse_ts(ch["created"])).total_seconds() / 86400) if ch.get("created") else None,
             "subscribers": ch.get("subscribers"), "views": ch.get("views"), "video_count": ch.get("video_count"),
             "countries": [{"c": c["country"], "share": round(100 * c["views"] / tot, 1),
                            "avg_pct": c.get("averageViewPercentage")} for c in ctry[:6]],
