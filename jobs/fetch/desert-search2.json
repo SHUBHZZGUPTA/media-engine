@@ -1,0 +1,67 @@
+{
+ "id": "desert-search2",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 6,
+ "files": [
+  {
+   "name": "s_akal2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Akal+fossil&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_akal3.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Wood+Fossil+Park+Jaisalmer&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_petrified.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=petrified+wood+log+fossil+trunk&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_hippo2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Hippopotamus+amphibius+water&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_croc.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Steneosaurus&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_croc2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=thalattosuchian&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_cracked.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=cracked+earth+drought&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_reg.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Sahara+gravel+plain+reg&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_tadrart.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Tadrart+Acacus+rock+art&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_tharmonsoon.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Thar+desert+monsoon+green&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_grasslandsahel.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Sahel+savanna+giraffe&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_lunk.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Lunkaransar&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_gibbon.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Thar+desert+village&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_harappa.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Indus+Valley+Civilisation+sites+map&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_kutch.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Rann+of+Kutch&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  }
+ ]
+}
