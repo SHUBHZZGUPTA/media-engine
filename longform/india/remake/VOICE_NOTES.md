@@ -74,3 +74,8 @@ Lines: 32/32, 21/21, 23/23, 14/15 (the 1 flag = whisper merging two sentences; a
 p01 +0.4 st, p02 -0.3, p03 -0.9, p04 +0.7 (all within ±1.0 of 114.8 Hz); rate -4% to +1%; loudness within 0.5 dB; timbre 6.8-9.9 (all PASS).
 Seams: p01->p02 -0.8 st PASS; p02->p03 +2.3 st and p03->p04 +2.2 st FAIL by the rule. All three seams sit on chapter breaks;
 the failing ones end on a quiet low cliffhanger (99 / 102 Hz) and the next take starts on the reference (113 / 116 Hz). Seam clips sent to Shubham to judge by ear.
+
+## 10-11 Nov: "white noise" in the seam clips = clip-building error, not the voice
+The first p02->p03 / p03->p04 seam clips had a constant hiss and rumble at about -47 dBFS (plus a DC offset); the takes themselves sit at -73 to -77 dBFS in pauses.
+Rebuilt straight from the takes with ffmpeg (sseof tail + 1.2 s anullsrc + head, libmp3lame 192k): -73 / -77 dBFS, no hiss. 3.8's floor is ~15 dB above 3.1's, but it can't be heard in the raw takes, so no denoise step (a gate risks clipping word endings).
+Rule from now on: measure the pause noise floor (quietest 5% of 30 ms frames) on every review clip and on the final mix; above -65 dBFS = fix before sending.
