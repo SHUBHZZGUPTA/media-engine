@@ -1,0 +1,29 @@
+{
+ "job": "desert-hi",
+ "items": [
+  {
+   "name": "part1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 192.88,
+   "took": 19.3
+  },
+  {
+   "name": "part2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 193.16,
+   "took": 16.1
+  },
+  {
+   "name": "part3",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 164.6,
+   "took": 159.1
+  }
+ ]
+}
