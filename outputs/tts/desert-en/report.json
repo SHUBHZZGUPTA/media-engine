@@ -1,0 +1,29 @@
+{
+ "job": "desert-en",
+ "items": [
+  {
+   "name": "part1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 183.08,
+   "took": 17.1
+  },
+  {
+   "name": "part2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 180.52,
+   "took": 17.3
+  },
+  {
+   "name": "part3",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 158.96,
+   "took": 22.4
+  }
+ ]
+}
