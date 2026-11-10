@@ -1,0 +1,30 @@
+{
+ "id": "doc-geoff-indian",
+ "url": "https://www.youtube.com/watch?v=-zfnH53mKn4",
+ "items": {
+  "design": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 54428,
+    "candidatesTokenCount": 2392,
+    "totalTokenCount": 62246,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 483
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 53945
+     }
+    ],
+    "thoughtsTokenCount": 5426,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}

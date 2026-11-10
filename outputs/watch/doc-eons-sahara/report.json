@@ -1,0 +1,28 @@
+{
+ "id": "doc-eons-sahara",
+ "url": "https://www.youtube.com/watch?v=ZQP-7BPvvq0",
+ "items": {
+  "design": {
+   "ok": true,
+   "model": "gemini-3.7-flash",
+   "usage": {
+    "promptTokenCount": 30308,
+    "candidatesTokenCount": 3581,
+    "totalTokenCount": 35650,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 29829
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 479
+     }
+    ],
+    "thoughtsTokenCount": 1761,
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}

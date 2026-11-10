@@ -1,0 +1,31 @@
+{
+ "id": "doc-jh-mapping",
+ "url": "https://www.youtube.com/watch?v=Hcq9_Tw2eTE",
+ "items": {
+  "design": {
+   "ok": true,
+   "model": "gemini-3.5-flash",
+   "usage": {
+    "promptTokenCount": 85652,
+    "candidatesTokenCount": 2212,
+    "totalTokenCount": 89914,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 85170
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 482
+     }
+    ],
+    "thoughtsTokenCount": 2050,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "gemini-3.6-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}
