@@ -1,0 +1,163 @@
+{
+ "id": "desert-search",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 6,
+ "files": [
+  {
+   "name": "s_fort.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Jaisalmer+Fort&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_fortwall.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Jaisalmer+fort+wall+sandstone&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_fortnight.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Jaisalmer+Fort+sunset&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_akal.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Akal+Wood+Fossil+Park&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_ammonite.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=ammonite+fossil+Jurassic&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_sharktooth.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=fossil+shark+tooth&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_plesio.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=plesiosaur&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_tharo.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Tharosaurus&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_thar.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Thar+desert+dunes&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_tharsat.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Thar+Desert+satellite+NASA&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_canal.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Indira+Gandhi+Canal&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_kalibangan.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Kalibangan&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_ghaggar.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Ghaggar+river&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_chad.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Lake+Chad+NASA&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_bodele.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Bodele+depression+dust&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_dust.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Saharan+dust+Atlantic+NASA&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_swimmers.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Cave+of+Swimmers+Gilf+Kebir&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_hitan.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Wadi+Al-Hitan+whale+skeleton&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_tassili.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Tassili+n+Ajjer+rock+art+giraffe&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_hamada.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Sahara+rocky+plateau+hamada&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_gondwana.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Gondwana+180+million+years&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_indiadrift.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=India+plate+drift+USGS&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_whaleearly.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Remingtonocetus&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_indus.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Indus+River+delta+satellite&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_himalaya.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Himalayas+from+space&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_jodhpur.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Jodhpur+blue+city&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_camel.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=camels+Thar+desert&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_phalodi.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Phalodi&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_lunkaransar.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Lunkaransar+lake&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_tethys.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=Tethys+Ocean+Jurassic+map&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_greensahara.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=African+humid+period+green+Sahara&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_hippo.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8&gsrsearch=hippopotamus+rock+art+Sahara&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_v_thar.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=filetype%3Avideo+Thar+desert&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_v_dunes.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=filetype%3Avideo+sand+dunes+wind&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_v_camel.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=filetype%3Avideo+camel+desert&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_v_jaisalmer.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=filetype%3Avideo+Jaisalmer&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_v_sahara.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=filetype%3Avideo+Sahara&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_v_dust.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=filetype%3Avideo+Saharan+dust+NASA&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  },
+  {
+   "name": "s_v_chad.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=filetype%3Avideo+Lake+Chad&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata%7Cmime&iiurlwidth=1920&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal%7CImageDescription"
+  }
+ ]
+}
