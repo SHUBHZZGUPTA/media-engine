@@ -1,0 +1,31 @@
+{
+ "id": "snake-person-search2",
+ "delay": 0.5,
+ "ua": "media-engine/1.0 (https://github.com/SHUBHZZGUPTA/media-engine; research fetch)",
+ "files": [
+  {
+   "name": "q1.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=hiker%20walking%20side%20view"
+  },
+  {
+   "name": "q2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=man%20walking%20profile%20full%20body"
+  },
+  {
+   "name": "q3.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=backpacker%20walking%20side"
+  },
+  {
+   "name": "q4.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=person%20holding%20flashlight%20side%20view"
+  },
+  {
+   "name": "q5.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=explorer%20pith%20helmet%20walking"
+  },
+  {
+   "name": "q6.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&prop=imageinfo&iiprop=url|extmetadata|size|mime&iiurlwidth=1600&format=json&gsrsearch=trekking%20man%20profile%20mountain"
+  }
+ ]
+}
