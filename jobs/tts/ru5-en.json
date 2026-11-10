@@ -1,0 +1,87 @@
+{
+ "id": "ru5-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller, brisk and curious, with natural emphasis and a short comic pause before each punchline. IMPORTANT: keep the SAME loudness, energy and distance from the microphone from the first line to the last; do not get quieter or softer towards the end.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "What if I told you... one Russian region is bigger than Argentina?"
+    ],
+    [
+     "Narrator",
+     "That's fact one... of five Russia facts that sound fake."
+    ],
+    [
+     "Narrator",
+     "Yakutia covers about three point one million square kilometres. Argentina? Two point eight million."
+    ],
+    [
+     "Narrator",
+     "And fewer than a million people... live there."
+    ],
+    [
+     "Narrator",
+     "Two: one Russian lake holds more water... than all five Great Lakes combined."
+    ],
+    [
+     "Narrator",
+     "Lake Baikal. Over one point six kilometres deep, and at least twenty-five million years old."
+    ],
+    [
+     "Narrator",
+     "Three: one train ride... crosses eight time zones."
+    ],
+    [
+     "Narrator",
+     "The Trans-Siberian. Nine thousand, two hundred and eighty-nine kilometres, Moscow to Vladivostok, about six days."
+    ],
+    [
+     "Narrator",
+     "You'd change your watch... more often than your socks."
+    ],
+    [
+     "Narrator",
+     "Four: Russian astronauts... don't launch from Russia."
+    ],
+    [
+     "Narrator",
+     "They fly from Baikonur, in Kazakhstan. Russia rents it... until twenty fifty."
+    ],
+    [
+     "Narrator",
+     "About one hundred and fifteen million dollars a year... Some rent."
+    ],
+    [
+     "Narrator",
+     "Five: people live in a village... that hit minus sixty-seven point seven degrees."
+    ],
+    [
+     "Narrator",
+     "Oy-myah-KON. Even an average January day is about minus forty-six."
+    ],
+    [
+     "Narrator",
+     "And school? It only closes... below minus fifty-five."
+    ],
+    [
+     "Narrator",
+     "So... which one sounded the most fake?"
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
