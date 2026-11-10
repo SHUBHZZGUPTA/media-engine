@@ -54,7 +54,7 @@ Takes: p01, p05, p09, p12, p18 = in-rm-en-t38. e1 (9 Nov) p02 p03 p04 p06 p07 ·
 Narrator pitch by quarter: -1.8, -2.0, -1.1, +0.1 st, i.e. steady for ~4.7 min, then a slow ~2 st rise. A long take would jump ~2 st at the next seam.
 Decision: 3.8 takes up to ~650 words (~4-5 min). Hard ceiling anyway: 16,384 output tokens = ~10.9 min per request.
 Plan: keep the 8 short 3.8 takes (p01 p02 p05 p06 p07 p09 p12 p18); fill the gaps with 10 takes of 210-620 words = job in-rm-en-g (10 Nov).
-Process note: tts_quota.py check prints DON'T PUSH with exit code 0; gate pushes on `grep -q "OK to push"`, never on the exit code.
+Process note (corrected 10 Nov): tts_quota.py check DOES exit 1 on DON'T PUSH; piping it through `tail` hid that. Run it without a pipe (or with set -o pipefail) and push only after "OK to push".
 
 ## Matching rule for the final voice (agreed 9 Nov)
 Kept 3.8 takes, narrator vs old ref 119.1 Hz: p01 -0.3, p02 -0.4, p05 -1.2, p06 -1.0, p07 -1.1, p09 +0.3, p12 -0.3, p18 -1.2 st (all lines clean;
@@ -67,3 +67,4 @@ Shubham also gets 3 clips straddling old/new seams before the render.
 14 takes of up to ~690 words (4.5-5 min, inside the stable zone of the long-take test) instead of 8 kept + 10 new (18 takes):
 13 seams instead of 17. f1 = p01-p10 (Tue 10 Nov), f2 = p11-p14 (Wed 11 Nov). The 8 short 3.8 takes (t38 + e1) stay as a fallback.
 Matching rule unchanged (narrator within ±1.0 st of 114.8 Hz, every seam within 1.0 st, rate ±8%, loudness ±1.5 dB, timbre in range).
+10 Nov: another project (bhugol-desert) reserved 6 of today's 3.8 requests, so f1 = p01-p04 today (4) and f2 = p05-p14 Wed 11 Nov (10, reserved).
