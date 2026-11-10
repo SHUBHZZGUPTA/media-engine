@@ -1,0 +1,215 @@
+{
+ "slug": "baikal",
+ "lines": [
+  {
+   "o": 0,
+   "text": "This one lake beats all five Great Lakes.",
+   "chunks": [
+    "THIS *ONE LAKE*",
+    "BEATS ALL|*FIVE* GREAT LAKES."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "How does it beat all five, if it's barely bigger than Belgium?",
+   "chunks": [
+    "HOW DOES IT|BEAT *ALL FIVE,*",
+    "IF IT'S BARELY|BIGGER THAN *BELGIUM?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Meet Lake Baikal, in Siberia. The Great Lakes are not impressed.",
+   "chunks": [
+    "MEET LAKE *BAIKAL,*",
+    "IN *SIBERIA.*",
+    "THE GREAT LAKES|ARE *NOT IMPRESSED.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "We're almost eight times bigger!",
+   "chunks": [
+    "WE'RE ALMOST|*EIGHT TIMES* BIGGER!"
+   ],
+   "speaker": "superior"
+  },
+  {
+   "o": 0,
+   "text": "On a map? Sure. So where is Baikal hiding all that water?",
+   "chunks": [
+    "ON A MAP? *SURE.*",
+    "SO WHERE IS BAIKAL|*HIDING*",
+    "ALL THAT *WATER?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Straight down.",
+   "chunks": [
+    "STRAIGHT *DOWN.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Baikal plunges 1,642 metres. About four times deeper than Lake Superior.",
+   "chunks": [
+    "BAIKAL PLUNGES|*1,642 METRES.*",
+    "ABOUT *FOUR TIMES* DEEPER",
+    "THAN LAKE *SUPERIOR.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Nobody asked you to measure.",
+   "chunks": [
+    "NOBODY ASKED YOU|TO *MEASURE.*"
+   ],
+   "speaker": "superior"
+  },
+  {
+   "o": 0,
+   "text": "That's nearly five Eiffel Towers deep.",
+   "chunks": [
+    "THAT'S NEARLY",
+    "*FIVE EIFFEL TOWERS* DEEP."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "But why so deep? Baikal isn't sitting in a valley. It's filling a crack in the Earth.",
+   "chunks": [
+    "BUT WHY|*SO DEEP?*",
+    "BAIKAL ISN'T SITTING|IN A *VALLEY.*",
+    "IT'S FILLING|A *CRACK*",
+    "IN THE *EARTH.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Right here, the ground is slowly pulling apart.",
+   "chunks": [
+    "RIGHT HERE,|THE GROUND",
+    "IS SLOWLY|*PULLING APART.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "That crack opened 25 to 30 million years ago. Which makes Baikal the oldest lake on Earth.",
+   "chunks": [
+    "THAT CRACK OPENED",
+    "*25 TO 30 MILLION*|YEARS AGO.",
+    "WHICH MAKES BAIKAL",
+    "THE *OLDEST LAKE*|ON EARTH."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "The Great Lakes? They filled up about 14,000 years ago.",
+   "chunks": [
+    "THE *GREAT LAKES?*",
+    "THEY FILLED UP|ABOUT *14,000* YEARS AGO."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Can we change the topic?",
+   "chunks": [
+    "CAN WE CHANGE|THE *TOPIC?*"
+   ],
+   "speaker": "superior"
+  },
+  {
+   "o": 0,
+   "text": "And the crack is still opening. About four millimetres, every year.",
+   "chunks": [
+    "AND THE CRACK",
+    "IS *STILL OPENING.*",
+    "ABOUT *FOUR MILLIMETRES,*|EVERY YEAR."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Width makes a lake look big. Depth makes it big.",
+   "chunks": [
+    "*WIDTH* MAKES A LAKE|LOOK BIG.",
+    "*DEPTH* MAKES|IT BIG."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Here's the twist. The water isn't even the bottom.",
+   "chunks": [
+    "HERE'S THE *TWIST.*",
+    "THE WATER ISN'T EVEN|THE *BOTTOM.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Below the lake floor lies up to seven kilometres of mud. The crack goes down about as far as Everest is tall.",
+   "chunks": [
+    "BELOW THE LAKE FLOOR",
+    "LIES UP TO|*SEVEN KILOMETRES* OF MUD.",
+    "THE CRACK GOES DOWN",
+    "ABOUT AS FAR AS|*EVEREST* IS TALL."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "And from above? It still looks barely bigger than Belgium.",
+   "chunks": [
+    "AND FROM *ABOVE?*",
+    "IT STILL LOOKS|BARELY BIGGER THAN *BELGIUM.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Why do I keep getting dragged into this?",
+   "chunks": [
+    "WHY DO I KEEP",
+    "GETTING *DRAGGED*|INTO THIS?"
+   ],
+   "speaker": "belgium"
+  },
+  {
+   "o": 0,
+   "text": "This is BHUGOL. Follow for more Geography Fun Facts.",
+   "chunks": [
+    "THIS IS *BHUGOL.*",
+    "FOLLOW FOR MORE|GEOGRAPHY FUN FACTS."
+   ]
+  }
+ ],
+ "voices": {
+  "superior": {
+   "semitones": 3,
+   "formant": "preserved"
+  },
+  "belgium": {
+   "semitones": -3,
+   "formant": "preserved"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.42,
+  "tempo": 1.05,
+  "long_before": {
+   "3": 0.5,
+   "5": 0.55,
+   "7": 0.5,
+   "13": 0.5,
+   "15": 0.6,
+   "16": 0.6,
+   "19": 0.55,
+   "20": 0.6
+  },
+  "line_tempo": {
+   "3": 1.0,
+   "7": 1.0,
+   "13": 1.0,
+   "19": 1.0
+  }
+ },
+ "tail": 2.3
+}
