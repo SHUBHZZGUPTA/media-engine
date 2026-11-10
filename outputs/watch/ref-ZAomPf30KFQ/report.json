@@ -1,0 +1,33 @@
+{
+ "id": "ref-ZAomPf30KFQ",
+ "url": "https://www.youtube.com/watch?v=ZAomPf30KFQ",
+ "items": {
+  "breakdown": {
+   "ok": true,
+   "model": "gemini-3-flash-preview",
+   "usage": {
+    "promptTokenCount": 11017,
+    "candidatesTokenCount": 1089,
+    "totalTokenCount": 15674,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 182
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 10835
+     }
+    ],
+    "thoughtsTokenCount": 3568,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "gemini-3.6-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "gemini-3.5-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "gemini-flash-latest HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}
