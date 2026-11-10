@@ -1,0 +1,19 @@
+{
+ "id": "doc-eons-india",
+ "url": "https://www.youtube.com/watch?v=vMehbbPpIL4",
+ "models": [
+  "gemini-3.7-flash",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest",
+  "gemini-3-flash-preview"
+ ],
+ "media_resolution": "MEDIA_RESOLUTION_MEDIUM",
+ "items": [
+  {
+   "name": "design",
+   "fps": 0.5,
+   "prompt": "You are a motion-graphics art director studying how a top documentary YouTube channel designs its ON-SCREEN GRAPHICS. Context: PBS Eons, 'When India Was An Island', 12:38, 3.3M views. Ignore the story; study only the visual design. Write in English, be concrete (positions as screen areas like top-left / lower third / centre, sizes as % of frame height, colours as names or hex guesses, fonts as serif / sans / condensed / handwritten, motion in plain words with rough durations). Give timestamps for every example.\n\n1. ON-SCREEN TEXT LAYOUT: every kind of text that appears (titles, stat callouts, labels, quotes, lists, sources/credits, captions/subtitles). For each kind: where it sits, how big, font style, colour, background (none / box / blur / shadow / outline), how it animates in and out, how long it stays, how many words at once. Do they ever show 2+ text boxes stacked at once? How do they show a list of points? How do they avoid clutter?\n2. TIME / ERA INDICATORS: how they show what year or how long ago a scene is (e.g. \"170 million years ago\", a timeline bar, a clock, chapter cards). Position, design, animation when the time jumps, and whether the narrator says the date at the same moment.\n3. MAPS: map style (satellite / painted / flat colour / 3D terrain / globe), colour palette for land, water, mountains, deserts; how water is animated (rivers flowing, coastlines, sea level rising, waves); how labels are placed on maps (font, curved river labels, leader lines, pins); camera moves (zoom, pan, tilt, 3D fly-through); how they keep a map interesting while it is on screen for several seconds.\n4. NUMBERS AND STATS: how a statistic (percent, distance, area, temperature) is shown and animated.\n5. CHAPTER / SECTION TRANSITIONS: what happens on screen between sections.\n6. THE 10 MOST REUSABLE DESIGN RULES you would copy from this video to make a geography documentary look premium and not like PowerPoint or a phone-app filter. Number them."
+  }
+ ]
+}
