@@ -68,3 +68,9 @@ Shubham also gets 3 clips straddling old/new seams before the render.
 13 seams instead of 17. f1 = p01-p10 (Tue 10 Nov), f2 = p11-p14 (Wed 11 Nov). The 8 short 3.8 takes (t38 + e1) stay as a fallback.
 Matching rule unchanged (narrator within ±1.0 st of 114.8 Hz, every seam within 1.0 st, rate ±8%, loudness ±1.5 dB, timbre in range).
 10 Nov: another project (bhugol-desert) reserved 6 of today's 3.8 requests, so f1 = p01-p04 today (4) and f2 = p05-p14 Wed 11 Nov (10, reserved).
+
+## 10 Nov: batch f1 (p01-p04) checked
+Lines: 32/32, 21/21, 23/23, 14/15 (the 1 flag = whisper merging two sentences; all words heard). matchcheck.py:
+p01 +0.4 st, p02 -0.3, p03 -0.9, p04 +0.7 (all within ±1.0 of 114.8 Hz); rate -4% to +1%; loudness within 0.5 dB; timbre 6.8-9.9 (all PASS).
+Seams: p01->p02 -0.8 st PASS; p02->p03 +2.3 st and p03->p04 +2.2 st FAIL by the rule. All three seams sit on chapter breaks;
+the failing ones end on a quiet low cliffhanger (99 / 102 Hz) and the next take starts on the reference (113 / 116 Hz). Seam clips sent to Shubham to judge by ear.
