@@ -1,0 +1,88 @@
+{
+ "job": "in-rm-en-f2",
+ "items": [
+  {
+   "name": "p05",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 184.24,
+   "took": 16.3
+  },
+  {
+   "name": "p06",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 132.36,
+   "took": 12.8
+  },
+  {
+   "name": "p07",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 189.8,
+   "took": 17.0
+  },
+  {
+   "name": "p08",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 187.6,
+   "took": 15.7
+  },
+  {
+   "name": "p09",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 177.72,
+   "took": 15.8
+  },
+  {
+   "name": "p10",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 197.48,
+   "took": 17.1
+  },
+  {
+   "name": "p11",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 188.16,
+   "took": 15.8
+  },
+  {
+   "name": "p12",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 184.64,
+   "took": 16.2
+  },
+  {
+   "name": "p13",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 211.2,
+   "took": 17.0
+  },
+  {
+   "name": "p14",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 429,
+     "error": "{\"error\":{\"message\":\"Rate limit exceeded for model gemini-3.8-flash-tts (limit: 10 requests per day on Free Tier). Please retry in 23h45m23s or upgrade your tier at https://ai.dev/rate-limit.\",\"code\":\"too_many_requests\"}}"
+    }
+   ]
+  }
+ ]
+}
