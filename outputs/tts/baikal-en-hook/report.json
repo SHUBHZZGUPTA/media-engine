@@ -1,0 +1,13 @@
+{
+ "job": "baikal-en-hook",
+ "items": [
+  {
+   "name": "hook_en",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 6.72,
+   "took": 3.6
+  }
+ ]
+}
