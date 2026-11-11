@@ -79,3 +79,9 @@ the failing ones end on a quiet low cliffhanger (99 / 102 Hz) and the next take 
 The first p02->p03 / p03->p04 seam clips had a constant hiss and rumble at about -47 dBFS (plus a DC offset); the takes themselves sit at -73 to -77 dBFS in pauses.
 Rebuilt straight from the takes with ffmpeg (sseof tail + 1.2 s anullsrc + head, libmp3lame 192k): -73 / -77 dBFS, no hiss. 3.8's floor is ~15 dB above 3.1's, but it can't be heard in the raw takes, so no denoise step (a gate risks clipping word endings).
 Rule from now on: measure the pause noise floor (quietest 5% of 30 ms frames) on every review clip and on the final mix; above -65 dBFS = fix before sending.
+
+## 11 Nov: batch f2 (p05-p13 recorded; p14 got a 429 after 9 requests, moved to Thu 12 Nov, 2 reserved)
+Lines: all clean (flags = whisper spellings: "Mahmoud", "ma 'am", merged sentences). Pause noise floor on review clips -72 to -76 dBFS.
+matchcheck narrator vs 114.8 Hz: p05 +2.0 FAIL, p06 -1.8 FAIL, p07 0.0, p08 +0.1, p09 -1.2 FAIL, p10 0.0, p11 +0.1, p12 -1.8 FAIL, p13 -0.2. Rate -6% to +2%, loudness within 1 dB (all pass).
+Seams (all on chapter breaks): p04->p05 +2.2, p05->p06 -2.7, p06->p07 +3.4, p07->p08 +1.2, p08->p09 +1.3, p09->p10 +2.5, p10->p11 +0.2, p11->p12 -2.3, p12->p13 0.0.
+Takes are steady inside themselves; the spread is take to take (3.8 still lands each take somewhere in about +-2 st). Clips of the 4 biggest seams sent to Shubham; retakes wait on his call.
