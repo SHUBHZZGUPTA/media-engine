@@ -1,0 +1,23 @@
+{
+ "id": "baikal-hi-hook",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "hook_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline, a little awe on the depth reveals. Chars voices funny cartoon characters (a pompous, touchy Lake Superior; a weary deadpan Belgium), short and punchy. This is the opening line of the Short: punchy and intriguing, a little stress on 'ज़्यादा पानी'.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "ये एक झील, पाँचों Great Lakes को मिलाकर भी, उनसे ज़्यादा पानी रखती है।"
+    ]
+   ]
+  }
+ ]
+}
