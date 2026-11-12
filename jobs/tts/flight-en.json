@@ -1,0 +1,59 @@
+{
+ "id": "flight-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "flight_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, natural emphasis, a short comic pause before each punchline, a hint of wonder on the route and the sunrises. Keep a lively, continuous pace (about 170 words a minute) with no long gaps; this is a 40-second Short. The first two lines are the hook: punchy and intriguing, stress 'west' and then 'east'. Stress the numbers. The last story line is a dry, quotable punchline. The final 'This is Bhoogol.' is a short, warm sign-off.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "From Australia, you fly west to reach Europe."
+    ],
+    [
+     "Narrator",
+     "This plane flew east. Twenty-four hours, non-stop, and set the airliner world record."
+    ],
+    [
+     "Narrator",
+     "The short way, past India, is about seventeen thousand kilometres."
+    ],
+    [
+     "Narrator",
+     "But this jet crossed the Pacific, America and the Atlantic. Two sunsets, two sunrises, zero landings."
+    ],
+    [
+     "Narrator",
+     "So why take the long way?"
+    ],
+    [
+     "Narrator",
+     "Because records count distance, not direction. Twenty-three thousand, one hundred and fifty-five kilometres. More than halfway round the planet."
+    ],
+    [
+     "Narrator",
+     "The record it broke? A Boeing, in two thousand and five. It went the long way too."
+    ],
+    [
+     "Narrator",
+     "Controllers even offered it shortcuts. The pilots said no."
+    ],
+    [
+     "Narrator",
+     "Because in record books, the wrong way is the right way."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol."
+    ]
+   ]
+  }
+ ]
+}
