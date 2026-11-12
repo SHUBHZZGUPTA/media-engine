@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Russia time zones 3D (v2)</title>
+<script src="./gsap.min.js"></script>
+<script src="./three.min.js"></script>
+<script src="./motion.js"></script>
+<script src="./shader_xfade.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 800; src: url(assets/muk800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 700; src: url(assets/muk700.woff2) format('woff2'); }
+:root { --mari: #FFC23A; --white: #F4F8FB; --fire: #FF7A1A; --ink: #03101A; --aqua: #38D6FF; }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #02070D; }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+.push { position: absolute; inset: 0; }
+.cv { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.chars { position: absolute; inset: 0; }
+.char { position: absolute; opacity: 0; }
+.ov { position: absolute; inset: 0; }
+.plbl { position: absolute; left: 0; top: 0; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #03101A; line-height: 1; opacity: 0; text-align: center; }
+.plbl small { display: block; font-family: 'Arch', sans-serif; font-weight: 800; letter-spacing: .1em; margin-top: 6px; }
+#dim { background: #02070D; opacity: 0; }
+#flash { background: #ffffff; opacity: 0; }
+.ttl, .cap { position: absolute; inset: 0; opacity: 0; }
+.tl { position: absolute; left: 60px; width: 960px; text-align: center; white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; color: var(--white); line-height: 1; }
+.tl.big { font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; letter-spacing: .01em; }
+.tl.small { font-family: 'Arch', 'Muk', sans-serif; font-weight: 800; letter-spacing: .12em; }
+.k { color: var(--mari); }
+.cl { position: absolute; left: 195px; width: 740px; text-align: center; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #02070D; line-height: 1; }
+.hi .cl, .hi .tl.big, .hi .plbl { letter-spacing: 0; }
+.cl span { opacity: 0; display: inline-block; white-space: pre; }
+.cl .k { color: #FFFFFF; }
+#badgeWrap { position: absolute; left: 230px; top: 450px; width: 620px; height: 620px; opacity: 0; transform-origin: 0 0; }
+#badgeShadow { position: absolute; inset: 4% 3% -4% 3%; border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(8px); }
+#badge { position: absolute; inset: 0; width: 100%; height: 100%; }
+#follow { position: absolute; left: 220px; top: 1125px; width: 640px; height: 130px; opacity: 0; }
+#folBtn { position: absolute; inset: 0; border-radius: 65px; background: var(--fire); box-sizing: border-box; }
+#folTxt, #folTxt2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; font-size: 66px; letter-spacing: .05em; color: var(--ink); }
+#folTxt2 { color: var(--fire); opacity: 0; }
+#tapDot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.85); border: 3px solid var(--ink); opacity: 0; }
+#ripple { position: absolute; left: 20px; top: -235px; width: 600px; height: 600px; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(255,255,255,.6); opacity: 0; }
+.kbox { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; line-height: 1; opacity: 0; }
+.knum, .ksuf { display: inline-block; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; }
+.knum { font-size: 230px; -webkit-text-stroke-width: 30px; color: var(--mari); text-shadow: 0 0 40px rgba(255,194,58,.5); }
+.ksuf { font-size: 110px; -webkit-text-stroke-width: 18px; color: var(--white); margin-left: 26px; }
+.card { position: absolute; left: 0; top: 0; width: 560px; opacity: 0; }
+.cin { background: rgba(6,12,22,.88); border: 4px solid var(--aqua); border-radius: 26px; padding: 22px 30px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.6); }
+.crow { display: flex; align-items: center; gap: 14px; font-family: 'Arch', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: .08em; color: var(--white); }
+.cflag { font-family: 'Emo', sans-serif; font-size: 50px; }
+.cbig { margin-top: 6px; font-family: 'BSD', sans-serif; font-weight: 900; color: var(--mari); line-height: 1; }
+.cnum { display: inline-block; font-size: 128px; } .csuf { display: inline-block; font-size: 64px; color: var(--white); margin-left: 14px; }
+.ctag { margin-top: 10px; display: inline-block; padding: 6px 16px; border-radius: 40px; background: rgba(56,214,255,.18); color: var(--aqua); font-family: 'Arch', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: .1em; }
+.tag { position: absolute; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 54px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 10px #03101A; white-space: nowrap; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="cshake" class="scr"><div id="scenes" class="scr"></div></div></div>
+    <div id="dim" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="hook" class="scr"></div>
+    <div id="badgeWrap"><div id="badgeShadow"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
+    <div id="follow"><div id="folBtn"></div><div id="folTxt"></div><div id="folTxt2"></div><div id="ripple"></div><div id="tapDot"></div></div>
+  </div>
+</div>
+__MBLUR__
+<script>
+const D = __DATA__;
+if (D.lang === 'hi') document.getElementById('root').classList.add('hi');
+const NS = 'http://www.w3.org/2000/svg', T3 = THREE;
+const $ = id => document.getElementById(id);
+const tr = s => (D.i18n && D.i18n[s]) || s;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const LN = D.LN;
+
+/* ---------- keyframe tracks (evaluated from time only) ---------- */
+const EZ = {}; const ease = n => EZ[n || 'power2.inOut'] || (EZ[n || 'power2.inOut'] = gsap.parseEase(n || 'power2.inOut'));
+function Track(base) { return { base, last: base, keys: [] }; }
+function key(T, to, at, dur, e) { const from = (typeof T.last === 'object') ? Object.assign({}, T.last) : T.last;
+  const tgt = (typeof to === 'object') ? Object.assign({}, from, to) : to; T.keys.push({ a: at, d: Math.max(.04, dur), from, to: tgt, e: ease(e) }); T.last = tgt; }
+function valAt(T, t) { let v = T.base;
+  for (const k of T.keys) { if (t < k.a) break; const p = k.e(Math.min(1, (t - k.a) / k.d));
+    if (typeof k.to === 'object') { v = {}; for (const q in k.to) v[q] = k.from[q] + (k.to[q] - k.from[q]) * p; } else v = k.from + (k.to - k.from) * p; }
+  return v; }
+const ALLT = [];   // every track, sorted once at the end of build()
+const TK = b => { const T = Track(b); ALLT.push(T); return T; };
+
+/* ---------- assets ---------- */
+const loader = new T3.TextureLoader(); const TX = {};
+function tex(n, opt) { if (!TX[n]) TX[n] = new Promise(r => loader.load('assets/' + n, t => { t.anisotropy = 4; if (opt && opt.nearest) { t.minFilter = t.magFilter = T3.NearestFilter; t.generateMipmaps = false; } r(t); })); return TX[n]; }
+const CPU = {};
+function cpuImg(n) { if (!CPU[n]) CPU[n] = new Promise(r => { const im = new Image(); im.onload = () => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); r({ w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }); }; im.src = 'assets/' + n; }); return CPU[n]; }
+const sampleCPU = (I, u, v) => { const x = clamp(Math.round(u * (I.w - 1)), 0, I.w - 1), y = clamp(Math.round((1 - v) * (I.h - 1)), 0, I.h - 1); return I.d[(y * I.w + x) * 4] / 255; };
+function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.25, 'rgba(255,255,255,.55)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new T3.CanvasTexture(c); }
+function noiseTex() { const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); const im = g.createImageData(256, 256);
+  const H = (x, y) => { const s = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return s - Math.floor(s); };
+  const V = (x, y) => { const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+    const a = H(xi % 16, yi % 16), b = H((xi + 1) % 16, yi % 16), c2 = H(xi % 16, (yi + 1) % 16), d = H((xi + 1) % 16, (yi + 1) % 16); return a + (b - a) * u + (c2 - a) * v + (a - b - c2 + d) * u * v; };
+  for (let y = 0; y < 256; y++) for (let x = 0; x < 256; x++) { const n = .55 * V(x / 16, y / 16) + .3 * V(x / 8 % 16, y / 8 % 16) + .15 * V(x / 4 % 16, y / 4 % 16); const k = (y * 256 + x) * 4; im.data[k] = im.data[k + 1] = im.data[k + 2] = n * 255; im.data[k + 3] = 255; }
+  g.putImageData(im, 0, 0); const t = new T3.CanvasTexture(c); t.wrapS = t.wrapT = T3.RepeatWrapping; return t; }
+function flagTex(stripes, vertical) { const c = document.createElement('canvas'); c.width = 300; c.height = 200; const g = c.getContext('2d');
+  stripes.forEach((col, i) => { g.fillStyle = col; if (vertical) g.fillRect(i * 300 / stripes.length, 0, 300 / stripes.length + 1, 200); else g.fillRect(0, i * 200 / stripes.length, 300, 200 / stripes.length + 1); }); return new T3.CanvasTexture(c); }
+const GLOW = glowTex(), NOISE = noiseTex();
+const READY = [];
+const FOV = 30, ASP = 1080 / 1920;
+const toScreen = (cam, p) => { const v = p.clone().project(cam); return { x: (v.x + 1) / 2 * 1080, y: (1 - v.y) / 2 * 1920, z: v.z }; };
+function newScene() { const el = mk('div', { class: 'scene' }, $('scenes')); const push = mk('div', { class: 'push' }, el); return { el, push }; }
+function renderer(push) { const cv = mk('canvas', { width: 1080, height: 1920, class: 'cv' }, push);
+  const R = new T3.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true }); R.setPixelRatio(1); R.setSize(1080, 1920, false); return { cv, R }; }
+
+/* ---------- 3D map: globe + terrain flyover (one per region; prefix = asset folder) ---------- */
+function map3(P, M3, o) {
+  const [L0, L1, B0, B1] = M3.bbox; const LC = (L0 + L1) / 2, BC = (B0 + B1) / 2, KX = Math.cos(BC * Math.PI / 180);
+  const { el, push } = newScene(); const G = renderer(push), Tn = renderer(push); const ov = mk('div', { class: 'ov' }, push); const chars = mk('div', { class: 'chars' }, push);
+  // globe
+  const sg = new T3.Scene(); sg.background = new T3.Color(0x01040A); const cg = new T3.PerspectiveCamera(30, ASP, .01, 100);
+  const globe = new T3.Mesh(new T3.SphereGeometry(1, 160, 120), new T3.MeshBasicMaterial({ color: 0xffffff })); sg.add(globe);
+  sg.add(new T3.Mesh(new T3.SphereGeometry(1.06, 96, 72), new T3.ShaderMaterial({ side: T3.BackSide, transparent: true, blending: T3.AdditiveBlending, depthWrite: false,
+    vertexShader: `varying vec3 vN; varying vec3 vP; void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vP; void main(){ float f = pow(clamp(1.0 - abs(dot(normalize(-vP), vN)), 0.0, 1.0), 2.2); gl_FragColor = vec4(0.35, 0.65, 1.0, f * 0.9); }` })));
+  { const n = 1400, p = new Float32Array(n * 3); for (let i = 0; i < n; i++) { const a = (i * 2.399963) % (Math.PI * 2), z = 1 - 2 * ((i + .5) / n), r = Math.sqrt(1 - z * z); p.set([Math.cos(a) * r * 30, z * 30, Math.sin(a) * r * 30], i * 3); }
+    const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(p, 3)); sg.add(new T3.Points(g, new T3.PointsMaterial({ color: 0xffffff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: .7 }))); }
+  const ll = (lon, lat, r) => { const ph = (lon + 180) * Math.PI / 180, th = (90 - lat) * Math.PI / 180; return new T3.Vector3(-Math.cos(ph) * Math.sin(th) * r, Math.cos(th) * r, Math.sin(ph) * Math.sin(th) * r); };
+  // terrain
+  const st = new T3.Scene(); st.background = new T3.Color(0x0A1424); st.fog = new T3.Fog(0x0A1424, o.fog ? o.fog[0] : 30, o.fog ? o.fog[1] : 70);
+  const ct = new T3.PerspectiveCamera(32, ASP, .005, 200); ct.up.set(0, 0, 1);
+  const Wt = (L1 - L0) * KX, Ht = (B1 - B0), EX = .0105;
+  const TU = { dem: { value: null }, ne: { value: null }, cls: { value: null }, mask: { value: null }, hs: { value: null }, noiseT: { value: NOISE }, hl: { value: 0 }, lit: { value: 0 }, ice: { value: 1 }, iceA: { value: 0 }, exag: { value: 0 },
+    crect: { value: new T3.Vector4((M3.pa_close_bbox[0] - L0) / (L1 - L0), (M3.pa_close_bbox[2] - B0) / (B1 - B0), (M3.pa_close_bbox[1] - L0) / (L1 - L0), (M3.pa_close_bbox[3] - B0) / (B1 - B0)) }, time: { value: 0 } };
+  st.add(new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 640, 320), new T3.ShaderMaterial({ uniforms: TU,
+    vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform sampler2D ne, cls, mask, hs, noiseT; uniform float hl, lit, ice, iceA, time; uniform vec4 crect; varying vec2 vUv;
+      void main(){ vec3 c = texture2D(ne, vUv).rgb;
+        vec2 q = (vUv - crect.xy) / (crect.zw - crect.xy); float f = smoothstep(0.0, 0.08, q.x) * smoothstep(1.0, 0.92, q.x) * smoothstep(0.0, 0.08, q.y) * smoothstep(1.0, 0.92, q.y);
+        if (f > 0.0) c = mix(c, texture2D(cls, clamp(q, 0.0, 1.0)).rgb, f);
+        float h = texture2D(hs, vUv).r; c *= 0.42 + 0.78 * h; float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, 0.82);
+        float mv = texture2D(mask, vUv).r * 255.0; float idx = floor(mv / 40.0 + 0.5); float m = (mv > 20.0 && idx <= lit) ? 1.0 : 0.0;
+        float wave = texture2D(noiseT, vUv * 14.0 + vec2(time * 0.01, 0.0)).r;
+        c = mix(c, vec3(0.10, 0.60, 1.0) * (0.8 + 0.3 * wave) + c * 0.2, m * hl * 0.8); c *= mix(1.0, 0.7, hl * (1.0 - m));
+        if (iceA > 0.0) { float n = texture2D(noiseT, vUv * vec2(3.0, 2.0)).r; float front = ice + (n - 0.5) * 0.25; float covered = smoothstep(front - 0.03, front + 0.03, vUv.y);
+          vec3 icec = mix(vec3(0.86, 0.93, 1.0), vec3(0.66, 0.80, 0.95), texture2D(noiseT, vUv * 9.0).r) * (0.75 + 0.35 * h); c = mix(c, icec, covered * iceA); }
+        gl_FragColor = vec4(c, 1.0); }` })));
+  const demI = { I: null }; const hAt = (lon, lat) => demI.I ? sampleCPU(demI.I, (lon - L0) / (L1 - L0), (lat - B0) / (B1 - B0)) * EX : 0;
+  const wpos = (lon, lat, up) => new T3.Vector3((lon - LC) * KX, lat - BC, hAt(lon, lat) * TU.exag.value / EX + (up || 0));
+  const WU = { rise: { value: 0 }, wh: { value: .22 } };
+  const wallMat = new T3.ShaderMaterial({ uniforms: WU, transparent: true, depthWrite: false, side: T3.DoubleSide, blending: T3.AdditiveBlending,
+    vertexShader: `uniform float rise, wh; attribute float k; varying float vK; void main(){ vK = k; vec3 p = position; p.z += k * wh * rise; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform float rise; varying float vK; void main(){ float a = (1.0 - vK) * (1.0 - vK) * rise; gl_FragColor = vec4(0.25, 0.85, 1.0, a * 0.95); }` });
+  const pin = new T3.Group(); st.add(pin);
+  const beam = new T3.Mesh(new T3.CylinderGeometry(.008, .008, .24, 12, 1, true), new T3.MeshBasicMaterial({ color: 0x38D6FF, transparent: true, opacity: 0, blending: T3.AdditiveBlending, depthWrite: false }));
+  beam.rotation.x = Math.PI / 2; beam.position.z = .12; pin.add(beam);
+  const head = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0x38D6FF, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 })); head.position.z = .24; head.scale.set(.16, .16, 1); pin.add(head);
+  // flat overlay shapes (true-size outlines laid on the terrain): {ring, fill: texture, col, z}
+  const ovs = [];
+  function overlay(ring, fillTex, col) { const pts = ring.map(([lo, la]) => new T3.Vector2((lo - LC) * KX, la - BC)); const shp = new T3.Shape(pts);
+    const g = new T3.ShapeGeometry(shp); const bb = new T3.Box2().setFromPoints(pts); const uv = g.attributes.position; const uvs = [];
+    for (let i = 0; i < uv.count; i++) uvs.push((uv.getX(i) - bb.min.x) / (bb.max.x - bb.min.x), (uv.getY(i) - bb.min.y) / (bb.max.y - bb.min.y)); g.setAttribute('uv', new T3.Float32BufferAttribute(uvs, 2));
+    const grp = new T3.Group(); st.add(grp);
+    const edge = new T3.Mesh(new T3.ShapeGeometry(shp), new T3.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); edge.renderOrder = 5; grp.add(edge);
+    const cx = (bb.min.x + bb.max.x) / 2, cy = (bb.min.y + bb.max.y) / 2; edge.geometry.translate(-cx, -cy, 0); edge.scale.set(1.035, 1.035, 1); edge.position.set(cx, cy, -.002);
+    const fill = new T3.Mesh(g, new T3.MeshBasicMaterial(fillTex ? { map: fillTex, transparent: true, opacity: 0, depthWrite: false, depthTest: false } : { color: col, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); fill.renderOrder = 6; grp.add(fill);
+    const sh = new T3.Mesh(new T3.ShapeGeometry(shp), new T3.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); sh.renderOrder = 4; sh.geometry.translate(.06, -.08, 0); st.add(sh);
+    const rec = { grp, fill, edge, sh, a: TK(0), z: TK(1.6), ring }; ovs.push(rec); return rec; }
+  const S = { el, push, ov, chars, G, Tn, sg, cg, st, ct, globe, TU, WU, pin, beam, head, labels: [], cards: [], lls: [], ovs, overlay, wpos, ll, KX, LC, BC,
+    gk: TK({ lon: 20, lat: 20, dist: 3.4 }), tk: TK(Object.assign({ lon: LC, lat: BC, dist: 11, el: 80, yaw: 0 }, o.tk0 || {})), x: TK(o.globe ? 0 : 1), hl: TK(0), lit: TK(0), ice: TK(1), iceA: TK(0), rise: TK(0), pinA: TK(0), wins: [] };
+  READY.push(tex(P + 'globe.jpg').then(t => { globe.material.map = t; globe.material.needsUpdate = true; }), tex(P + 'ne.jpg').then(t => TU.ne.value = t), tex(P + 'pa_close.jpg').then(t => TU.cls.value = t),
+    tex(P + 'pa_mask.png', { nearest: 1 }).then(t => TU.mask.value = t), tex(P + 'hillshade.png').then(t => TU.hs.value = t), tex(P + 'dem8.png').then(t => TU.dem.value = t),
+    cpuImg(P + 'dem8.png').then(I => { demI.I = I; TU.exag.value = EX * 26;
+      const pts = M3.pa.map(([lo, la]) => wpos(lo, la, .002)); const pos = [], kk = [];
+      for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; pos.push(a.x, a.y, a.z, b.x, b.y, b.z, b.x, b.y, b.z, a.x, a.y, a.z, b.x, b.y, b.z, a.x, a.y, a.z); kk.push(0, 0, 1, 0, 1, 1); }
+      const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.Float32BufferAttribute(pos, 3)); g.setAttribute('k', new T3.Float32BufferAttribute(kk, 1)); st.add(new T3.Mesh(g, wallMat));
+      pin.position.copy(wpos(M3.pin[0], M3.pin[1])); }));
+  S.cam = t => { const k = valAt(S.tk, t); const tg = new T3.Vector3((k.lon - LC) * KX, k.lat - BC, 0); const e = k.el * Math.PI / 180, y = k.yaw * Math.PI / 180;
+    ct.position.set(tg.x + Math.sin(y) * Math.cos(e) * k.dist, tg.y - Math.cos(y) * Math.cos(e) * k.dist, Math.sin(e) * k.dist); ct.lookAt(tg); ct.updateMatrixWorld(); };
+  S.proj = (t, lon, lat, up) => { S.cam(t); return toScreen(ct, wpos(lon, lat, up || .01)); };
+  S.render = t => {
+    const x = valAt(S.x, t); G.cv.style.opacity = 1 - x; Tn.cv.style.opacity = x;
+    if (x < 1) { const g = valAt(S.gk, t); cg.position.copy(ll(g.lon, g.lat, g.dist)); cg.lookAt(0, 0, 0); G.R.render(sg, cg); }
+    if (x > 0) { S.cam(t); TU.time.value = t; TU.hl.value = valAt(S.hl, t); TU.lit.value = valAt(S.lit, t); TU.ice.value = valAt(S.ice, t); TU.iceA.value = valAt(S.iceA, t); WU.rise.value = valAt(S.rise, t);
+      const pa = valAt(S.pinA, t); beam.material.opacity = pa * .8; head.material.opacity = pa;
+      for (const v of ovs) { const a = valAt(v.a, t), z = valAt(v.z, t); v.fill.material.opacity = a * .92; v.edge.material.opacity = a; v.sh.material.opacity = a * .35 * (1 - Math.min(1, z / 1.6));
+        const gz = (v.zBase || 0) + z * .9 + .02; v.grp.position.z = gz; v.sh.position.z = (v.zBase || 0) + .01; }
+      Tn.R.render(st, ct);
+      for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const q = toScreen(ct, wpos(L.lon, L.lat, .03));
+        L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2).toFixed(1)}px) scale(${((.6 + .4 * Math.min(1, a * 1.5)) * (1 + valAt(L.pop, t))).toFixed(3)})`; }
+      for (const cd of S.cards) { const a = valAt(cd.a, t); cd.el.style.opacity = a * x; cd.ln.style.opacity = a * x; if (a > 0) { const q = toScreen(ct, pin.position.clone().add(new T3.Vector3(0, 0, .26)));
+        const w = cd.el.offsetWidth, h = cd.el.offsetHeight, cx = clamp(q.x - w / 2, 40, 1040 - w), cy = clamp(q.y - h - 190, 300, 1150 - h);
+        cd.el.style.transform = `translate(${cx.toFixed(1)}px,${(cy + (1 - a) * 40).toFixed(1)}px)`; cd.path.setAttribute('d', `M${(cx + w / 2).toFixed(1)} ${(cy + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); } } }
+  };
+  return S;
+}
+function mapLabel(S, txt, lon, lat, fs, col) { const e = mk('div', { class: 'plbl' }, S.ov); e.innerHTML = tr(txt); Object.assign(e.style, { fontSize: fs + 'px', webkitTextStrokeWidth: (fs * .18) + 'px', color: col || '' });
+  const rec = { e, lon, lat, a: TK(0), pop: TK(0) }; S.lls.push(rec); return rec; }
+// cards: pinned to a lon/lat (connector line), placed at a fixed screen anchor (b.pos) or above the pin
+function mkCard(S, b) { const el = mk('div', { class: 'card' }, S.ov); if (b.w) el.style.width = b.w + 'px';
+  el.innerHTML = `<div class="cin"><div class="crow"><span class="cflag">${b.flag || ''}</span><span>${b.name || ''}</span></div><div class="cbig"><span class="cnum">0</span><span class="csuf">${b.unit || ''}</span></div>${b.tag ? `<div class="ctag">${b.tag}</div>` : ''}</div>`;
+  const svg = mk('svg', { width: 1080, height: 1920, style: 'position:absolute;left:0;top:0;overflow:visible;opacity:0' }, S.ov, true); S.ov.insertBefore(svg, el);
+  const path = mk('path', { stroke: '#38D6FF', 'stroke-width': 6, 'stroke-dasharray': '14 10', fill: 'none' }, svg, true);
+  const c = { el, ln: svg, path, a: TK(0), num: el.querySelector('.cnum'), suf: el.querySelector('.csuf'), lon: b.lon, lat: b.lat, pos: b.pos }; S.cards.push(c); return c; }
+
+/* ---------- globe scene: day/night Earth, Russia's zones (mask), flag fill, train line, pins, labels, cards ---------- */
+const PAL = ['#000000', '#FF6B4A', '#FF9F1C', '#FFD23F', '#B5E61D', '#3DDC84', '#20C9C9', '#38A9FF', '#5B6CFF', '#9B5CFF', '#E056FD', '#FF4FA3'].map(h => new T3.Color(h));
+function globe3(o) {
+  o = o || {};
+  const { el, push } = newScene(); const G = renderer(push); const ov = mk('div', { class: 'ov' }, push); const chars = mk('div', { class: 'chars' }, push);
+  const sg = new T3.Scene(); sg.background = new T3.Color(0x01040A); const cam = new T3.PerspectiveCamera(30, ASP, .01, 100);
+  const ll = (lon, lat, r) => { const ph = (lon + 180) * Math.PI / 180, th = (90 - lat) * Math.PI / 180; return new T3.Vector3(-Math.cos(ph) * Math.sin(th) * r, Math.cos(th) * r, Math.sin(ph) * Math.sin(th) * r); };
+  const ZC = []; for (let i = 0; i < 12; i++) ZC.push(new T3.Vector3(1, 1, 1));
+  const U = { day: { value: null }, night: { value: null }, zones: { value: null }, sun: { value: new T3.Vector3(1, 0, 0) }, zA: { value: new Array(12).fill(0) }, zC: { value: ZC },
+    flagA: { value: 0 }, ruA: { value: 0 }, dim: { value: 0 } };
+  const globe = new T3.Mesh(new T3.SphereGeometry(1, 192, 144), new T3.ShaderMaterial({ uniforms: U,
+    vertexShader: `varying vec2 vUv; varying vec3 vN; void main(){ vUv = uv; vN = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+    fragmentShader: `uniform sampler2D day, night, zones; uniform vec3 sun; uniform float zA[12]; uniform vec3 zC[12]; uniform float flagA, ruA, dim; varying vec2 vUv; varying vec3 vN;
+      float zi(vec2 u){ return floor(texture2D(zones, u).r * 255.0 / 20.0 + 0.5); }
+      void main(){ vec3 d = texture2D(day, vUv).rgb; vec3 n = texture2D(night, vUv).rgb;
+        float l = dot(normalize(vN), normalize(sun)); float dk = smoothstep(-0.10, 0.14, l);
+        vec3 nc = d * 0.08 + pow(n, vec3(1.3)) * vec3(1.7, 1.4, 0.95);
+        vec3 c = mix(nc, d * (0.82 + 0.38 * max(l, 0.0)), dk);
+        float idx = zi(vUv);
+        if (idx > 0.5) {
+          float a = 0.0; vec3 zc = vec3(0.0);
+          for (int k = 1; k < 12; k++) { if (abs(float(k) - idx) < 0.5) { a = zA[k]; zc = zC[k]; } }
+          float lat = (vUv.y - 0.5) * 180.0;
+          vec3 fl = lat > 65.0 ? vec3(0.97) : (lat > 53.0 ? vec3(0.0, 0.24, 0.68) : vec3(0.86, 0.15, 0.13));
+          c = mix(c, fl * (0.55 + 0.45 * dk), flagA * 0.85);
+          c = mix(c, c * 0.3 + vec3(1.0, 0.3, 0.22) * 0.65, ruA);
+          c = mix(c, zc * (0.62 + 0.38 * dk), a * 0.78);
+          float e1 = zi(vUv + vec2(0.0007, 0.0)), e2 = zi(vUv + vec2(0.0, 0.0014)), e3 = zi(vUv - vec2(0.0007, 0.0));
+          if (a > 0.01 && (abs(e1 - idx) > 0.5 || abs(e2 - idx) > 0.5 || abs(e3 - idx) > 0.5)) c = mix(c, vec3(1.0), 0.75 * a);
+        }
+        gl_FragColor = vec4(c * (1.0 - dim), 1.0); }` }));
+  sg.add(globe);
+  sg.add(new T3.Mesh(new T3.SphereGeometry(1.06, 96, 72), new T3.ShaderMaterial({ side: T3.BackSide, transparent: true, blending: T3.AdditiveBlending, depthWrite: false,
+    vertexShader: `varying vec3 vN; varying vec3 vP; void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vP; void main(){ float f = pow(clamp(1.0 - abs(dot(normalize(-vP), vN)), 0.0, 1.0), 2.2); gl_FragColor = vec4(0.35, 0.65, 1.0, f * 0.9); }` })));
+  { const n = 1400, p = new Float32Array(n * 3); for (let i = 0; i < n; i++) { const a = (i * 2.399963) % (Math.PI * 2), z = 1 - 2 * ((i + .5) / n), r = Math.sqrt(1 - z * z); p.set([Math.cos(a) * r * 30, z * 30, Math.sin(a) * r * 30], i * 3); }
+    const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(p, 3)); sg.add(new T3.Points(g, new T3.PointsMaterial({ color: 0xffffff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: .7 }))); }
+  // train route (Trans-Siberian), revealed by prog
+  const rp = []; const RT = D.geo.train;
+  for (let i = 0; i < RT.length - 1; i++) { const a = ll(RT[i][0], RT[i][1], 1), b = ll(RT[i + 1][0], RT[i + 1][1], 1); for (let s = 0; s < 10; s++) rp.push(a.clone().lerp(b, s / 10).normalize().multiplyScalar(1.006)); }
+  rp.push(ll(RT[RT.length - 1][0], RT[RT.length - 1][1], 1.006));
+  const curve = new T3.CatmullRomCurve3(rp); const RU = { prog: { value: 0 }, a: { value: 0 } };
+  const route = new T3.Mesh(new T3.TubeGeometry(curve, 500, .0075, 8, false), new T3.ShaderMaterial({ uniforms: RU, transparent: true, depthWrite: false, blending: T3.AdditiveBlending,
+    vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+    fragmentShader: `uniform float prog, a; varying vec2 vUv; void main(){ if (vUv.x > prog) discard; float h = smoothstep(prog - 0.03, prog, vUv.x); gl_FragColor = vec4(mix(vec3(1.0, 0.78, 0.25), vec3(1.0), h), a); }` }));
+  route.renderOrder = 3; sg.add(route);
+  // glowing pins
+  const pins = {};
+  for (const k of ['kam', 'kal', 'msk', 'vla']) { const sp = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0xFFC23A, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 }));
+    sp.position.copy(ll(D.geo[k][0], D.geo[k][1], 1.012)); sp.scale.set(.09, .09, 1); sg.add(sp); pins[k] = { sp, a: TK(0) }; }
+  const S = { el, push, ov, chars, G, sg, cam, U, RU, curve, pins, ll, labels: [], lls: [], cards: [], wins: [],
+    ck: TK({ lon: 100, lat: 58, dist: 4.6, tlon: 100, tlat: 58, tr: .3 }), sunLon: TK(95), flagA: TK(0), ruA: TK(0), mg: TK(0), prog: TK(0), routeA: TK(0), zA: [] };
+  for (let i = 0; i < 12; i++) S.zA.push(TK(0));
+  READY.push(tex('day.jpg').then(t => U.day.value = t), tex('night.jpg').then(t => U.night.value = t), tex('zones.png', { nearest: 1 }).then(t => U.zones.value = t));
+  S.cam = t => { const k = valAt(S.ck, t); cam.position.copy(ll(k.lon, k.lat, 1 + (k.dist - 1) * 1.48)); cam.lookAt(ll(k.tlon, k.tlat + 4, k.tr)); cam.updateMatrixWorld(); };
+  const facing = p => p.clone().normalize().dot(cam.position.clone().sub(p).normalize()) > .05;
+  S.proj = (t, lon, lat) => { S.cam(t); return toScreen(cam, ll(lon, lat, 1.005)); };
+  S.render = t => {
+    S.cam(t); const sl = valAt(S.sunLon, t); U.sun.value.copy(ll(sl, -23, 1));
+    const mg = valAt(S.mg, t);
+    for (let i = 1; i < 12; i++) { U.zA.value[i] = valAt(S.zA[i], t); const c = PAL[i].clone(); if (i === 3) c.lerp(PAL[2], mg); if (i === 11) c.lerp(PAL[10], mg); ZC[i].set(c.r, c.g, c.b); }
+    U.flagA.value = valAt(S.flagA, t); U.ruA.value = valAt(S.ruA, t); RU.prog.value = valAt(S.prog, t); RU.a.value = valAt(S.routeA, t);
+    for (const k in pins) { const a = valAt(pins[k].a, t); pins[k].sp.material.opacity = a; const s = .07 + .03 * Math.sin(t * 6); pins[k].sp.scale.set(s, s, 1); }
+    G.R.render(sg, cam);
+    for (const L of S.lls) { const a = valAt(L.a, t); let p;
+      if (L.route !== undefined) p = curve.getPointAt(clamp(valAt(S.prog, t), 0, 1)).clone().multiplyScalar(1.02); else p = ll(L.lon, L.lat, 1.01);
+      const vis = facing(p) ? 1 : 0; L.e.style.opacity = a * vis; if (a <= 0 || !vis) continue; const q = toScreen(cam, p);
+      L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2).toFixed(1)}px) scale(${((.6 + .4 * Math.min(1, a * 1.5)) * (1 + valAt(L.pop, t))).toFixed(3)})`; }
+    for (const cd of S.cards) { const a = valAt(cd.a, t); cd.el.style.opacity = a; cd.ln.style.opacity = a; if (a <= 0) continue;
+      const q = toScreen(cam, ll(cd.lon, cd.lat, 1.01)); const w = cd.el.offsetWidth, h = cd.el.offsetHeight;
+      const cx = cd.pos ? cd.pos[0] : clamp(q.x - w / 2, 40, 1040 - w), cy = cd.pos ? cd.pos[1] : clamp(q.y - h - 190, 300, 1150 - h);
+      cd.el.style.transform = `translate(${cx.toFixed(1)}px,${(cy + (1 - a) * 40).toFixed(1)}px)`;
+      const ax = clamp(q.x, cx + 30, cx + w - 30), ay = q.y > cy + h ? cy + h : cy;
+      cd.path.setAttribute('d', `M${ax.toFixed(1)} ${ay.toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); }
+  };
+  return S;
+}
+function gLabel(S, txt, lon, lat, fs, col) { const e = mk('div', { class: 'plbl' }, S.ov); e.innerHTML = tr(txt); Object.assign(e.style, { fontSize: fs + 'px', webkitTextStrokeWidth: (fs * .18) + 'px', color: col || '' });
+  const rec = { e, lon, lat, a: TK(0), pop: TK(0) }; S.lls.push(rec); return rec; }
+
+/* ---------- world scene: flat satellite map, France + territories, Russia tint, island pins ---------- */
+function world3() {
+  const { el, push } = newScene(); const G = renderer(push); const ov = mk('div', { class: 'ov' }, push); const chars = mk('div', { class: 'chars' }, push);
+  const sc = new T3.Scene(); sc.background = new T3.Color(0x040A14); const cam = new T3.PerspectiveCamera(32, ASP, .01, 200); cam.up.set(0, 0, 1);
+  const U = { day: { value: null }, fr: { value: null }, zones: { value: null }, frA: { value: 0 }, ruA: { value: 0 } };
+  sc.add(new T3.Mesh(new T3.PlaneGeometry(4, 2, 1, 1), new T3.ShaderMaterial({ uniforms: U,
+    vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+    fragmentShader: `uniform sampler2D day, fr, zones; uniform float frA, ruA; varying vec2 vUv;
+      void main(){ vec3 c = texture2D(day, vUv).rgb * 0.9; float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, 0.85);
+        float lon = vUv.x * 360.0 - 180.0, lat = vUv.y * 180.0 - 90.0;
+        float f = texture2D(fr, vUv).r; float rz = texture2D(zones, vUv).r;
+        c = mix(c, c * 0.35 + vec3(1.0, 0.3, 0.22) * 0.6, ruA * step(0.02, rz));
+        vec3 fc = vec3(1.0, 0.76, 0.23);
+        if (lon > -5.5 && lon < 10.0 && lat > 41.0 && lat < 51.6) fc = lon < -0.4 ? vec3(0.0, 0.2, 0.62) : (lon < 4.4 ? vec3(0.97) : vec3(0.88, 0.14, 0.16));
+        c = mix(c, fc, frA * step(0.5, f) * 0.9);
+        c *= 1.0 - 0.8 * smoothstep(0.3, 0.42, abs(vUv.y - 0.5));
+        gl_FragColor = vec4(c, 1.0); }` })));
+  const wpos = (lon, lat, up) => new T3.Vector3(lon / 90, lat / 90, up || .01);
+  const pins = D.geo.fr_pins.map(p => { const sp = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0xFFC23A, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 }));
+    sp.material.depthTest = false; sp.renderOrder = 5; sp.position.copy(wpos(p[1], p[2], .02)); sp.scale.set(.12, .12, 1); sc.add(sp); return { sp, a: TK(0), s: TK(0) }; });
+  const S = { el, push, ov, chars, G, sc, cam, U, pins, labels: [], lls: [], cards: [], wins: [], ck: TK({ x: 0, y: .05, dist: 13.5, el: 74, yaw: 0 }), frA: TK(0), ruA: TK(0) };
+  READY.push(tex('day.jpg').then(t => U.day.value = t), tex('france_mask.png').then(t => U.fr.value = t), tex('zones.png', { nearest: 1 }).then(t => U.zones.value = t));
+  S.cam = t => { const k = valAt(S.ck, t); const tg = new T3.Vector3(k.x, k.y, 0); const e = k.el * Math.PI / 180, y = k.yaw * Math.PI / 180;
+    cam.position.set(tg.x + Math.sin(y) * Math.cos(e) * k.dist, tg.y - Math.cos(y) * Math.cos(e) * k.dist, Math.sin(e) * k.dist); cam.lookAt(tg); cam.updateMatrixWorld(); };
+  S.proj = (t, lon, lat) => { S.cam(t); return toScreen(cam, wpos(lon, lat)); };
+  S.render = t => { S.cam(t); U.frA.value = valAt(S.frA, t); U.ruA.value = valAt(S.ruA, t);
+    for (const p of pins) { const a = valAt(p.a, t), s = valAt(p.s, t); p.sp.material.opacity = a; const z = .11 * (1 + s) + .015 * Math.sin(t * 7); p.sp.scale.set(z, z, 1); }
+    G.R.render(sc, cam);
+    for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a; if (a <= 0) continue; const q = toScreen(cam, wpos(L.lon, L.lat));
+      L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2).toFixed(1)}px) scale(${((.6 + .4 * Math.min(1, a * 1.5)) * (1 + valAt(L.pop, t))).toFixed(3)})`; } };
+  return S;
+}
+
+/* ---------- characters drawn in code ---------- */
+function charBox(S, cx, cy) { const box = mk('div', { class: 'char' }, S.chars); Object.assign(box.style, { left: (cx - 390) + 'px', top: (cy - 390) + 'px', width: '780px', height: '780px' });
+  const svg = mk('svg', { width: 780, height: 780, viewBox: '0 0 780 780', style: 'overflow:visible' }, box, true); return { box, svg }; }
+function franceChar(S, cx, cy, sc) {
+  const { box, svg } = charBox(S, cx, cy); const d = D.shapes.france; const id = 'cpfr';
+  const defs = mk('defs', {}, svg, true);
+  defs.innerHTML = `<clipPath id="${id}"><path d="${d}"/></clipPath><linearGradient id="h${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <filter id="s${id}" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="22" stdDeviation="14" flood-color="#000" flood-opacity=".5"/></filter>`;
+  const body = mk('g', { transform: `translate(${390 - 300 * sc},${390 - 300 * sc}) scale(${sc})`, filter: `url(#s${id})` }, svg, true);
+  body.innerHTML = `<path d="${d}" fill="none" stroke="#0b0b0b" stroke-width="34" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+    <g clip-path="url(#${id})"><rect x="-50" y="-50" width="250" height="700" fill="#0A3BA8"/><rect x="200" y="-50" width="200" height="700" fill="#F4F4F4"/><rect x="400" y="-50" width="300" height="700" fill="#E1222E"/><rect x="-50" y="-50" width="700" height="330" fill="url(#h${id})"/></g>`;
+  const face = mk('g', { transform: 'translate(300,300) scale(1)' }, body, true);
+  const eyes = mk('g', {}, face, true), brows = mk('g', {}, face, true);
+  eyes.innerHTML = `<ellipse cx="-58" cy="0" rx="38" ry="44" fill="#fff" stroke="#111" stroke-width="7"/><ellipse cx="58" cy="0" rx="38" ry="44" fill="#fff" stroke="#111" stroke-width="7"/>
+    <circle cx="-48" cy="12" r="16" fill="#111"/><circle cx="68" cy="12" r="16" fill="#111"/>
+    <path d="M-98,-4 Q-58,-26 -18,-4 L-18,-46 L-98,-46Z" fill="#E8C9A0" stroke="#111" stroke-width="7"/><path d="M18,-4 Q58,-26 98,-4 L98,-46 L18,-46Z" fill="#E8C9A0" stroke="#111" stroke-width="7"/>`;
+  brows.innerHTML = `<path d="M20,-80 Q60,-104 100,-82" stroke="#111" stroke-width="13" fill="none" stroke-linecap="round"/><path d="M-100,-82 Q-60,-104 -20,-80" stroke="#111" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M-62,62 Q-30,44 0,58 Q30,44 62,62 Q30,54 0,66 Q-30,54 -62,62Z" fill="#2a1a10"/>`;
+  const mouthO = mk('g', {}, face, true); mouthO.innerHTML = `<path d="M-30,82 Q0,74 30,82 Q24,112 0,114 Q-24,112 -30,82Z" fill="#3a0a10" stroke="#111" stroke-width="7"/>`;
+  const mouthC = mk('g', {}, face, true); mouthC.innerHTML = `<path d="M-36,90 Q0,104 36,86" stroke="#111" stroke-width="12" fill="none" stroke-linecap="round"/>`;
+  return { box, eyes, brows, mouthO, mouthC, cx, cy };
+}
+function clockChar(S, cx, cy, sc) {
+  const { box, svg } = charBox(S, cx, cy);
+  const body = mk('g', { transform: `translate(390,390) scale(${sc})` }, svg, true);
+  body.innerHTML = `<g filter="drop-shadow(0 22px 14px rgba(0,0,0,.5))">
+    <path d="M-150,170 L-195,250" stroke="#111" stroke-width="30" stroke-linecap="round"/><path d="M150,170 L195,250" stroke="#111" stroke-width="30" stroke-linecap="round"/>
+    <path d="M-235,-120 A105,105 0 0 1 -95,-255 Z" fill="#FFC23A" stroke="#111" stroke-width="12"/><path d="M235,-120 A105,105 0 0 0 95,-255 Z" fill="#FFC23A" stroke="#111" stroke-width="12"/>
+    <rect x="-18" y="-290" width="36" height="50" rx="10" fill="#111"/>
+    <circle r="250" fill="#E8322E" stroke="#111" stroke-width="16"/><circle r="200" fill="#FFF6E8" stroke="#111" stroke-width="10"/>
+    <rect x="-150" y="10" width="300" height="104" rx="18" fill="#0B1A24" stroke="#111" stroke-width="8"/>
+    <text x="0" y="96" text-anchor="middle" font-family="BSD" font-weight="900" font-size="104" fill="#5CFF7A" letter-spacing="4">02:00</text></g>`;
+  const face = mk('g', { transform: `translate(390,390) scale(${sc})` }, svg, true);
+  const eyes = mk('g', {}, face, true), brows = mk('g', {}, face, true);
+  eyes.innerHTML = `<ellipse cx="-62" cy="-82" rx="40" ry="48" fill="#fff" stroke="#111" stroke-width="8"/><ellipse cx="62" cy="-82" rx="40" ry="48" fill="#fff" stroke="#111" stroke-width="8"/>
+    <circle cx="-54" cy="-74" r="18" fill="#111"/><circle cx="70" cy="-74" r="18" fill="#111"/><circle cx="-48" cy="-80" r="6" fill="#fff"/><circle cx="76" cy="-80" r="6" fill="#fff"/>`;
+  brows.innerHTML = `<path d="M-110,-150 L-30,-138" stroke="#111" stroke-width="14" stroke-linecap="round"/><path d="M110,-150 L30,-138" stroke="#111" stroke-width="14" stroke-linecap="round"/>`;
+  const mouthO = mk('g', {}, face, true); mouthO.innerHTML = `<path d="M-40,-18 Q0,-34 40,-18 Q34,10 0,12 Q-34,10 -40,-18Z" fill="#5a0f1e" stroke="#111" stroke-width="7"/>`;
+  const mouthC = mk('g', {}, face, true); mouthC.innerHTML = `<path d="M-40,-14 Q0,6 40,-14" stroke="#111" stroke-width="11" fill="none" stroke-linecap="round"/>`;
+  return { box, eyes, brows, mouthO, mouthC, cx, cy };
+}
+
+/* ---------- build scenes ---------- */
+const GA = globe3(), GB = globe3(), KM = map3('km/', D.maps.km, { globe: false, fog: [30, 70] }), WM = world3();
+const REG = { GA, GB, KM, WM }; const SCENES = [GA, GB, KM, WM];
+const XF = BhugolXfade(T3, $('cshake'));
+const ZL = D.geo.zone_lbl;
+GA.fw = []; for (let o = 12; o >= 2; o--) GA.fw.push({ o, L: gLabel(GA, '🎆', ZL[o][0], ZL[o][1], 92) });
+GB.lMsk = gLabel(GB, 'MOSCOW', 37.6, 61.2, 54, '#FFFFFF'); GB.lVla = gLabel(GB, 'VLADIVOSTOK', 128.5, 46.0, 54, '#FFFFFF');
+GB.train = gLabel(GB, '🚂', 0, 0, 96); GB.train.route = 1;
+KM.lab = mapLabel(KM, 'KAMCHATKA', 159.2, 56.6, 76, '#FFFFFF');
+KM.pro = [[158.2, 53.6], [159.4, 53.3], [158.9, 54.2]].map(p => mapLabel(KM, '📢', p[0], p[1], 110));
+GB.cClk = clockChar(GB, 760, 1000, .9); WM.cFr = franceChar(WM, 540, 1150, .66);
+
+/* ---------- titles + captions ---------- */
+const TT = {};
+for (const t of D.titles) { const g = mk('div', { class: 'ttl', id: t.id }, $('titles')); const lines = [];
+  t.lines.forEach((ln0, i) => { const small = ln0.startsWith('~'); const ln = small ? ln0.slice(1) : ln0; const size = small ? 58 : 132;
+    const d = mk('div', { class: 'tl ' + (small ? 'small' : 'big') }, g); const base = 300 + (i === 0 ? 0 : (small ? 74 : 124));
+    Object.assign(d.style, { fontSize: size + 'px', top: (base - size * .8) + 'px', webkitTextStrokeWidth: (size * .14) + 'px' }); markup(ln, d); lines.push(d); });
+  TT[t.id] = { g, t, lines }; }
+const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps'));
+  const lines = c.txt.split('|').map(ln => { const d = mk('div', { class: 'cl' }, g); markup(ln, d); return d; });
+  return { c, g, lines, words: [...g.querySelectorAll('span')] }; });
+$('folTxt').textContent = D.end.button; $('folTxt2').textContent = '✓ ' + D.end.following;
+function layout() {
+  for (const K of CAPS) { let fs = 92; K.g.style.opacity = 1;
+    for (const d of K.lines) { d.style.fontSize = '92px'; const w = d.scrollWidth; if (w > 740) fs = Math.min(fs, 92 * 740 / w); }
+    K.g.style.opacity = 0; const n = K.lines.length;
+    K.lines.forEach((d, i) => Object.assign(d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .17).toFixed(1) + 'px', top: (1385 + (i - (n - 1) / 2) * fs - fs * .5).toFixed(1) + 'px' })); }
+  for (const id in TT) { const { g, lines } = TT[id]; g.style.opacity = 1;
+    for (const d of lines) { const w = d.scrollWidth, fs = parseFloat(d.style.fontSize); if (w > 960) d.style.fontSize = (fs * 960 / w).toFixed(1) + 'px'; }
+    g.style.opacity = 0; }
+}
+
+/* ---------- timeline ---------- */
+function build() {
+  layout();
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false };
+  const MO = BhugolMotion(tl, { xfade: true });
+  const PL = D.shots.map(s => ({ S: REG[s.scene], el: REG[s.scene].el, at: s.t, cut: s.cut }));
+  PL.forEach((p, i) => { p.S.wins.push([i ? p.at - .45 : 0, i < PL.length - 1 ? PL[i + 1].at + .1 : D.dur + 1]); });
+  MO.shots(PL); tl.set(PL[0].el, { opacity: 1 }, 0);
+  for (const b of D.beats || []) if (b.kind === 'punch') MO.punch(REG[b.scene].push, b.t, b.level, b.back);
+  const on = (T, at, d, v, e) => key(T, v === undefined ? 1 : v, at, d || .4, e || 'power1.inOut');
+  const chIn = (ch, at) => { tl.fromTo(ch.box, { opacity: 0, y: 420, scale: .6, rotation: -8 }, { opacity: 1, y: 0, scale: 1, rotation: 0, duration: .55, ease: 'back.out(1.8)', ...IR }, at); };
+  const chOut = (ch, at) => tl.to(ch.box, { y: 460, opacity: 0, scale: .7, duration: .35, ease: 'power3.in' }, at);
+  const talk = (ch, li) => { const ws = D.chunks.filter(c => c.li === li).flatMap(c => c.wt); const a = LN[li].a, b = LN[li].b;
+    tl.set(ch.mouthO, { opacity: 0 }, 0); tl.set(ch.mouthC, { opacity: 1 }, 0);
+    ws.forEach((w, i) => { const nx = i < ws.length - 1 ? ws[i + 1] : b; tl.set(ch.mouthO, { opacity: 1 }, w); tl.set(ch.mouthC, { opacity: 0 }, w);
+      tl.set(ch.mouthO, { opacity: 0 }, Math.min(nx - .03, w + .16)); tl.set(ch.mouthC, { opacity: 1 }, Math.min(nx - .03, w + .16)); });
+    const n = Math.max(2, Math.floor((b - a) / .32));
+    tl.fromTo(ch.box, { scaleY: 1, rotation: 0, transformOrigin: '50% 80%' }, { keyframes: Array.from({ length: n }, (_, i) => [{ scaleY: 1.04, rotation: i % 2 ? 2 : -2, duration: .16 }, { scaleY: 1, rotation: 0, duration: .16 }]).flat(), ...IR }, a);
+    tl.to(ch.eyes, { keyframes: [{ scaleY: .1, duration: .06 }, { scaleY: 1, duration: .08 }], transformOrigin: '50% 40%' }, a + (b - a) * .55); };
+  const shake = (at, k) => MO.shake(at, .6, 'rig-6d-wobble', k || .75);
+  const allZ = (S, v, at, d) => { for (let i = 1; i < 12; i++) key(S.zA[i], v, at, d || .01); };
+  const RUS = { lon: 98, lat: 57, dist: 4.7, tlon: 98, tlat: 57, tr: .3 };
+  const bOf = (k, what) => (D.beats || []).find(b => b.kind === k && (!what || b.what === what));
+
+  // ===== GA: hook — globe dive onto Russia, then midnight sweeps west: 11 New Years =====
+  key(GA.ck, { lon: 70, lat: 30, dist: 4.9, tlon: 70, tlat: 30, tr: 0 }, 0, .01);
+  key(GA.ck, Object.assign({}, RUS, { lon: 102, lat: 60, tlon: 102, tlat: 60 }), .05, C(0, 1, -.1), 'power2.inOut');
+  key(GA.ck, Object.assign({}, RUS, { lon: 96, lat: 59, dist: 4.4, tlon: 96, tlat: 59 }), C(0, 1, -.05), C(1, 0) - C(0, 1, -.05) + .2, 'sine.inOut');
+  key(GA.sunLon, 22, 0, .01); on(GA.flagA, .25, .5, .8); key(GA.flagA, .38, C(0, 1, -.1), .4);
+  { const a = C(0, 1, -.05), b = Math.min(Math.max(a + 1.2, LN[0].b), C(1, 0, -.35));
+    key(GA.sunLon, -165, a, b - a, 'none');
+    for (const f of GA.fw) { const tt = a + (b - a) * ((22 - (f.o - 12) * 15) / 187); key(f.L.a, 1, tt, .12, 'power3.out'); key(f.L.pop, .5, tt, .08); key(f.L.pop, 0, tt + .08, .3); key(f.L.a, 0, C(1, 0, -.2), .2); } }
+  // ===== GB: Kamchatka midnight vs Kaliningrad 2 PM (12:00 UTC) =====
+  key(GB.sunLon, 0, 0, .01); key(GB.ck, Object.assign({}, RUS, { lon: 92, lat: 56, dist: 4.9, tlon: 92, tlat: 56 }), 0, .01);
+  key(GB.ck, Object.assign({}, RUS, { lon: 98, lat: 57, dist: 4.6, tlon: 98, tlat: 57 }), C(1, 0, -.15), C(2, 0) - C(1, 0, -.15) + .2, 'sine.inOut');
+  on(GB.pins.kam.a, C(1, 0, -.05), .25); on(GB.pins.kal.a, C(1, 1, -.1), .25); key(GB.pins.kam.a, 0, C(2, 0, -.15), .2); key(GB.pins.kal.a, 0, C(2, 0, -.15), .2);
+  // ===== GA: eleven clocks — zones light up west to east =====
+  key(GA.sunLon, 95, C(2, 0, -.6), .01); key(GA.flagA, 0, C(2, 0, -.6), .01);
+  key(GA.ck, Object.assign({}, RUS, { lon: 90, lat: 55, dist: 5.0, tlon: 90, tlat: 55 }), C(2, 0, -.6), .01);
+  key(GA.ck, Object.assign({}, RUS, { lon: 99, lat: 58, dist: 4.65, tlon: 99, tlat: 58 }), C(2, 0, -.15), C(3, 0) - C(2, 0, -.15) + .2, 'sine.inOut');
+  { const a = C(2, 0, .2), b = LN[2].b + .1; for (let i = 1; i < 12; i++) key(GA.zA[i], 1, a + (b - a) * (i - 1) / 10, .18, 'power2.out'); }
+  // ===== GB: 2010 — two zones merge into their neighbours =====
+  key(GB.sunLon, 95, C(3, 0, -.6), .01); allZ(GB, 1, C(3, 0, -.6));
+  key(GB.ck, Object.assign({}, RUS, { lon: 104, lat: 60, dist: 4.9, tlon: 104, tlat: 60 }), C(3, 0, -.6), .01);
+  key(GB.ck, Object.assign({}, RUS, { lon: 98, lat: 58, dist: 4.6, tlon: 98, tlat: 58 }), C(3, 0, -.15), C(4, 0) - C(3, 0, -.15) + .2, 'sine.inOut');
+  { const m = bOf('slam', 'merge'); key(GB.mg, 1, m.t, .35, 'power3.out'); }
+  // ===== KM: Kamchatka terrain, protests =====
+  key(KM.tk, { lon: 158.9, lat: 54.6, dist: 13, el: 76, yaw: -6 }, 0, .01);
+  key(KM.tk, { lon: 158.7, lat: 53.6, dist: 9.5, el: 60, yaw: 14 }, C(4, 0, -.15), C(5, 0) - C(4, 0, -.15) + .2, 'sine.inOut');
+  on(KM.rise, C(4, 0, .0), .7); on(KM.pinA, C(4, 0, .1), .3); on(KM.lab.a, C(4, 0, .05), .3);
+  { const p = bOf('slam', 'protest'); KM.pro.forEach((L, i) => { const tt = p.t + i * .18; key(L.a, 1, tt, .12, 'power3.out'); key(L.pop, .45, tt, .08); key(L.pop, 0, tt + .08, .3); }); }
+  // ===== GA: 2014 — both zones come back =====
+  key(GA.ck, Object.assign({}, RUS, { lon: 108, lat: 61, dist: 4.9, tlon: 108, tlat: 61 }), C(5, 0, -.6), .01); key(GA.mg, 1, C(5, 0, -.6), .01);
+  key(GA.ck, Object.assign({}, RUS, { lon: 100, lat: 59, dist: 4.6, tlon: 100, tlat: 59 }), C(5, 0, -.15), C(6, 0) - C(5, 0, -.15) + .2, 'sine.inOut');
+  { const r = bOf('slam', 'restore'); key(GA.mg, 0, r.t, .35, 'power3.out'); }
+  // ===== GB: trains on Moscow time; the alarm clock =====
+  key(GB.mg, 0, C(6, 0, -.6), .01); allZ(GB, .3, C(6, 0, -.6)); key(GB.routeA, 1, C(6, 0, -.6), .01);
+  key(GB.ck, { lon: 52, lat: 52, dist: 3.5, tlon: 52, tlat: 52, tr: .45 }, C(6, 0, -.6), .01);
+  key(GB.ck, { lon: 126, lat: 47, dist: 3.6, tlon: 126, tlat: 47, tr: .45 }, C(6, 0, -.15), C(7, 0) - C(6, 0, -.15), 'power1.inOut');
+  key(GB.ck, { lon: 129, lat: 46, dist: 3.4, tlon: 129, tlat: 46, tr: .45 }, C(7, 0), LN[7].b - C(7, 0) + .3, 'sine.inOut');
+  on(GB.pins.msk.a, C(6, 0, -.05), .25); on(GB.lMsk.a, C(6, 0, .0), .3); key(GB.lMsk.a, 0, C(6, 2, -.2), .25);
+  key(GB.prog, 1, C(6, 0, .1), C(7, 0, -.2) - C(6, 0, .1), 'power1.inOut'); on(GB.train.a, C(6, 0, .1), .2);
+  on(GB.pins.vla.a, C(6, 2, -.1), .25); on(GB.lVla.a, C(6, 2, -.1), .3); key(GB.lVla.a, 0, C(7, 0, -.3), .25);
+  chIn(GB.cClk, C(7, 0, -.35)); talk(GB.cClk, 7); chOut(GB.cClk, C(8, 0, -.25));
+  // ===== GA: world record, right? — pull back to the whole planet =====
+  allZ(GA, 1, C(8, 0, -.6)); key(GA.mg, 0, C(8, 0, -.6), .01); key(GA.sunLon, 80, C(8, 0, -.6), .01);
+  key(GA.ck, Object.assign({}, RUS, { lon: 96, lat: 50, dist: 5.2, tlon: 96, tlat: 50 }), C(8, 0, -.6), .01);
+  key(GA.ck, { lon: 80, lat: 38, dist: 7.6, tlon: 80, tlat: 38, tr: 0 }, C(8, 0, -.15), C(9, 0) - C(8, 0, -.15) + .2, 'power2.inOut');
+  // ===== WM: France has twelve =====
+  key(WM.ck, { x: .25, y: .55, dist: 4.6, el: 72, yaw: 0 }, 0, .01);
+  key(WM.ck, { x: .1, y: .55, dist: 4.3, el: 70, yaw: 0 }, C(9, 0, -.15), C(9, 2, -.1) - C(9, 0, -.15), 'sine.inOut');
+  on(WM.ruA, C(9, 0, -.1), .3, .55); key(WM.ruA, .25, C(9, 1, 0), .4);
+  { const g = D.beats.filter(b => b.kind === 'grow').slice(-1)[0]; const a = bOf('slam', 'pins').t, b = Math.max(a + 1.3, LN[9].b);
+    on(WM.frA, g.t - .05, .3);
+    // pan west to east across the planet; each island pin pops as the camera reaches it
+    const x0 = -1.25, x1 = 1.3; key(WM.ck, { x: x0, y: .05, dist: 4.4, el: 72, yaw: 0 }, C(9, 2, -.1), .45, 'power3.inOut');
+    key(WM.ck, { x: x1, y: -.05, dist: 4.4, el: 72, yaw: 0 }, a + .7, b - a - .45, 'sine.inOut');
+    const xs = D.geo.fr_pins.map(p => p[1] / 90);
+    WM.pins.forEach((p, i) => { const tt = xs[i] < x0 + .45 ? a + .05 + .12 * Math.max(0, (xs[i] + 2) * 4) : (a + .7) + (b - a - .45) * clamp((xs[i] - x0 - .45) / (x1 - x0), 0, 1); key(p.a, 1, tt, .1, 'power3.out'); key(p.s, .8, tt, .08); key(p.s, 0, tt + .08, .3); });
+    key(WM.ck, { x: 0, y: -.35, dist: 11.5, el: 72, yaw: 0 }, C(10, 0, -.45), .6, 'power3.inOut');
+    key(WM.ck, { x: 0, y: -.32, dist: 11.0, el: 70, yaw: -2 }, C(10, 0, .15), D.end.start - C(10, 0, .15) + .3, 'sine.inOut'); }
+  chIn(WM.cFr, C(10, 0, -.35)); talk(WM.cFr, 10); chOut(WM.cFr, D.end.start - .05);
+  // ===== GA: end card — slow spin =====
+  key(GA.ck, Object.assign({}, RUS, { lon: 84, lat: 52, dist: 5.4, tlon: 84, tlat: 52 }), C(11, 0, -.6), .01);
+  key(GA.ck, Object.assign({}, RUS, { lon: 118, lat: 58, dist: 4.9, tlon: 118, tlat: 58 }), C(11, 0, -.15), D.dur - C(11, 0, -.15), 'sine.inOut');
+
+  // ===== beats from the spec (same list drives the sound) =====
+  const beat = k => (D.beats || []).filter(b => b.kind === k);
+  const nextChunk = t => { const c = D.chunks.find(c => c.sn > t + .5); return c ? c.sn - .12 : t + 2; };
+  const wordTime = (b, needle) => { const ch = D.chunks.find(c => Math.abs(c.sn - b.t) < .02); const wi = ch ? ch.txt.replace(/\|/g, ' ').split(' ').findIndex(w => w.includes(needle)) : -1; return wi >= 0 ? ch.wt[wi] : null; };
+  const posFn = (S, b, pt) => b.screen ? (t => ({ x: b.screen[0], y: b.screen[1] })) : (t => S.proj(t, pt[0], pt[1]));
+  for (const b of beat('circle')) { const S = REG[b.scene]; const r = b.r || [200, 110];
+    MO.hwCircle(b.screen ? S.chars : S.ov, posFn(S, b, b.c), r[0], r[1], b.t, b.u || nextChunk(b.t), { seed: 3 + b.t, col: b.col }); }
+  for (const b of beat('arrow')) { const S = REG[b.scene]; const f0 = posFn(S, b, b.from), f1 = posFn(S, b, b.to);
+    MO.hwArrow(S.ov, t => { const p0 = f0(t), p1 = f1(t); return { x0: p0.x, y0: p0.y, x1: p1.x, y1: p1.y }; }, b.t, b.u || nextChunk(b.t), { seed: 7 + b.t, col: b.col }); }
+  for (const b of beat('grow')) { const el = mk('div', { class: 'kbox', style: `top:${b.y || 160}px` }, $('hook'));
+    el.innerHTML = `<span class="knum">0</span><span class="ksuf">${tr(b.unit || '')}</span>`; const wt = b.word ? wordTime(b, b.word) : null;
+    const dur = b.dur || (wt ? Math.max(.6, wt - b.t + .15) : 1.1); tl.set(el, { opacity: 1 }, b.t);
+    MO.countGrow(el.querySelector('.knum'), b.to, b.t, { dur, from: b.from || 0, prefix: b.prefix, startScale: .35, suffixEl: el.querySelector('.ksuf') }); MO.textOut(el, b.u || nextChunk(b.t)); }
+  for (const b of beat('card')) { const S = REG[b.scene]; const P0 = D.geo[b.pin] || [0, 0]; const pos = (D.cardpos || {})[b.pin];
+    const Cd = mkCard(S, Object.assign({}, b, { lon: P0[0], lat: P0[1], pos, w: 470 })); key(Cd.a, 1, b.t, .35, 'power3.out'); key(Cd.a, 0, b.u || nextChunk(b.t), .25);
+    if (b.to) MO.countGrow(Cd.num, b.to, b.t + .1, { dur: .9, startScale: .5, suffixEl: Cd.suf }); else Cd.num.textContent = b.pad ? '00' : ''; }
+  for (const b of beat('slam')) {
+    if (b.what === 'merge' || b.what === 'restore') shake(b.t + .05, .55);
+    else if (b.what === 'jolt') tl.to(({ clock: GB.cClk, france: WM.cFr })[b.char].box, { keyframes: [{ rotation: -9, y: 18, duration: .1 }, { rotation: 0, y: 0, duration: .3, ease: 'power2.out' }] }, b.t);
+    else if (b.what === 'protest') tl.to($('flash'), { keyframes: [{ opacity: .14, duration: .06 }, { opacity: 0, duration: .3 }] }, b.t); }
+  for (const s of D.hand || []) MO.shake(s[0], s[1] - s[0], 'handheld-normal-mild', .1, { decay: false });
+  for (const s of D.impacts || []) shake(s, .7);
+  const cs = beat('charslam')[0];
+  for (const id in TT) { const { g, t } = TT[id];
+    if (id === 'tHook' && cs && D.lang !== 'hi') { tl.set(g, { opacity: 1 }, cs.t); MO.charSlam(TT.tHook.lines[0], cs.t, { blur: true }); }
+    else if (t.slam) { MO.slam(g, t.a, { shake: !!t.shake }); g.setAttribute('data-hf-motion-blur', '{"samplesPerFrame": 8}'); } else MO.textIn(g, t.a);
+    MO.textOut(g, t.b); }
+  // captions
+  for (const K of CAPS) { const c = K.c;
+    tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { scale: .9, transformOrigin: '565px 1385px' }, { scale: 1, duration: .2, ease: 'power3.out', ...IR }, c.sn);
+    MO.karaoke(K.words, c.wt, w => w.classList.contains('k'));
+    K.words.forEach((w, i) => { if (w.classList.contains('k')) MO.sweep(w, c.wt[Math.min(i, c.wt.length - 1)]); }); }
+  // badge + end card
+  const BW = $('badgeWrap'); const E = D.end; const bs = 108 / 620;
+  tl.fromTo(BW, { opacity: 0, x: 44 - 230, y: 1332 - 450, scale: bs }, { opacity: 1, x: 44 - 230, y: 1332 - 450, scale: bs, duration: .5 }, .2);
+  tl.fromTo(BW, { x: 44 - 230, y: 1332 - 450, scale: bs }, { x: 0, y: 0, scale: 1, duration: .9, ease: 'power2.inOut', ...IR }, E.start);
+  tl.to($('dim'), { opacity: .55, duration: .5 }, E.start);
+  const F = $('follow');
+  tl.fromTo(F, { opacity: 0, scale: .2 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2)', ...IR }, E.btn);
+  const TD = $('tapDot');
+  tl.fromTo(TD, { opacity: 0, x: 470, y: 120 }, { opacity: 1, x: 430, y: 50, duration: .6, ease: 'power2.out', ...IR }, E.tap - .6);
+  tl.to(F, { keyframes: [{ scale: .94, duration: .1 }, { scale: 1, duration: .1 }] }, E.tap);
+  tl.fromTo($('ripple'), { opacity: .5, scale: .05 }, { opacity: 0, scale: 1, duration: .8, ease: 'power2.out', ...IR }, E.tap + .1);
+  tl.set($('folBtn'), { backgroundColor: '#2A1206', border: '5px solid #FF7A1A' }, E.tap + .2);
+  tl.set($('folTxt'), { opacity: 0 }, E.tap + .2); tl.set($('folTxt2'), { opacity: 1 }, E.tap + .2);
+  tl.to(TD, { opacity: 0, duration: .3 }, E.tap + .5);
+  layout();
+  MO.shakeOn($('cshake'), D.dur);
+  for (const T of ALLT) T.keys.sort((a, b) => a.a - b.a);
+  const clk = { t: 0 };
+  tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => { const t = clk.t;
+    const live = S => S.wins.some(w => t >= w[0] - .05 && t <= w[1] + .45);
+    for (const S of SCENES) if (live(S)) S.render(t);
+    XF.render(t); } }, 0);
+  window.__C = {};
+  return tl;
+}
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => Promise.all(READY)).then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>

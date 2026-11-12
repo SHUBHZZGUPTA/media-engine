@@ -1,0 +1,964 @@
+{
+ "slug": "rutz",
+ "lang": "hi",
+ "lines": [
+  {
+   "o": 0,
+   "text": "New Year की आधी रात आपके लिए एक बार। रूस में eleven बार।",
+   "chunks": [
+    "NEW YEAR की आधी रात|आपके लिए *एक* बार।",
+    "रूस में|*ELEVEN* बार।"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Kamchatka में midnight... तब Kaliningrad में अभी 2 PM।",
+   "chunks": [
+    "*KAMCHATKA* में|MIDNIGHT...",
+    "तब KALININGRAD में|अभी *2 PM।*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "तो एक देश eleven घड़ियों पर कैसे चले?",
+   "chunks": [
+    "तो एक देश|ELEVEN घड़ियों",
+    "पर *कैसे चले?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "2010 में रूस ने दो zones हटा दिए।",
+   "chunks": [
+    "*2010* में",
+    "रूस ने दो ZONES|*हटा दिए।*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Kamchatka के लोग... विरोध में उतर आए।",
+   "chunks": [
+    "KAMCHATKA के लोग...",
+    "*विरोध में उतर आए।*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "2014 तक, दोनों वापस।",
+   "chunks": [
+    "*2014* तक,",
+    "दोनों *वापस।*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "और ट्रेनें? 2018 तक, सारी timetables Moscow time पर चलती थीं।",
+   "chunks": [
+    "और *ट्रेनें?*",
+    "*2018* तक, सारी|TIMETABLES",
+    "*MOSCOW TIME* पर|चलती थीं।"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "आपकी 7 PM की ट्रेन? यहाँ तो 2 AM हैं।",
+   "chunks": [
+    "आपकी *7 PM*|की ट्रेन?",
+    "यहाँ तो *2 AM* हैं।"
+   ],
+   "speaker": "clock"
+  },
+  {
+   "o": 0,
+   "text": "World record, है ना?",
+   "chunks": [
+    "WORLD RECORD,|*है ना?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "नहीं। France के twelve zones हैं... दुनिया भर में फैले द्वीपों की वजह से।",
+   "chunks": [
+    "*नहीं।*",
+    "*FRANCE* के *TWELVE*|ZONES हैं...",
+    "दुनिया भर में फैले|द्वीपों की वजह से।"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "रूस चौड़ा है। मैं हर जगह हूँ।",
+   "chunks": [
+    "रूस *चौड़ा* है।",
+    "मैं *हर जगह* हूँ।"
+   ],
+   "speaker": "france"
+  },
+  {
+   "o": 0,
+   "text": "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।",
+   "chunks": [
+    "ये है *भूगोल।*",
+    "ऐसे ही मज़ेदार जियोग्राफी|फैक्ट्स के लिए फॉलो करें।"
+   ]
+  }
+ ],
+ "voices": {
+  "clock": {
+   "semitones": 3,
+   "formant": "preserved"
+  },
+  "france": {
+   "semitones": -2,
+   "formant": "preserved"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.3,
+  "tempo": 1.06,
+  "long_before": {
+   "4": 0.42,
+   "7": 0.38,
+   "9": 0.42,
+   "10": 0.4,
+   "11": 0.4
+  },
+  "line_tempo": {
+   "7": 1.03,
+   "10": 1.03
+  }
+ },
+ "tail": 2.1,
+ "shots": [
+  {
+   "scene": "GA",
+   "at": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "scene": "GB",
+   "at": [
+    1,
+    0,
+    -0.15
+   ],
+   "cut": "curve"
+  },
+  {
+   "scene": "GA",
+   "at": [
+    2,
+    0,
+    -0.15
+   ],
+   "cut": "curve"
+  },
+  {
+   "scene": "GB",
+   "at": [
+    3,
+    0,
+    -0.15
+   ],
+   "cut": "whip"
+  },
+  {
+   "scene": "KM",
+   "at": [
+    4,
+    0,
+    -0.15
+   ],
+   "cut": "zoomIn"
+  },
+  {
+   "scene": "GA",
+   "at": [
+    5,
+    0,
+    -0.15
+   ],
+   "cut": "whip"
+  },
+  {
+   "scene": "GB",
+   "at": [
+    6,
+    0,
+    -0.15
+   ],
+   "cut": "curve"
+  },
+  {
+   "scene": "GA",
+   "at": [
+    8,
+    0,
+    -0.15
+   ],
+   "cut": "curve"
+  },
+  {
+   "scene": "WM",
+   "at": [
+    9,
+    0,
+    -0.15
+   ],
+   "cut": "flash"
+  },
+  {
+   "scene": "GA",
+   "at": [
+    11,
+    0,
+    -0.15
+   ],
+   "cut": "zoomIn"
+  }
+ ],
+ "beats": [
+  {
+   "kind": "charslam",
+   "at": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "kind": "punch",
+   "scene": "GA",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "word": "ONE",
+   "level": 1.15,
+   "back": [
+    0,
+    1,
+    -0.1
+   ]
+  },
+  {
+   "kind": "moment",
+   "what": "midnight sweeps west, fireworks pop zone by zone",
+   "at": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "punch",
+   "scene": "GA",
+   "at": [
+    0,
+    1,
+    0
+   ],
+   "word": "ELEVEN",
+   "level": 1.3,
+   "back": [
+    1,
+    0,
+    -0.25
+   ]
+  },
+  {
+   "kind": "card",
+   "scene": "GB",
+   "at": [
+    1,
+    0,
+    0.1
+   ],
+   "pin": "kam",
+   "flag": "🌙",
+   "name": "KAMCHATKA",
+   "to": 0,
+   "unit": ":00",
+   "pad": 2,
+   "tag": "MIDNIGHT",
+   "until": [
+    2,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "card",
+   "scene": "GB",
+   "at": [
+    1,
+    1,
+    0
+   ],
+   "pin": "kal",
+   "flag": "☀️",
+   "name": "KALININGRAD",
+   "to": 14,
+   "unit": ":00",
+   "tag": "2 PM",
+   "until": [
+    2,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "punch",
+   "scene": "GB",
+   "at": [
+    1,
+    1,
+    0
+   ],
+   "word": "2",
+   "level": 1.2,
+   "back": [
+    2,
+    0,
+    -0.25
+   ]
+  },
+  {
+   "kind": "moment",
+   "what": "zones light up west to east",
+   "at": [
+    2,
+    0,
+    0.2
+   ]
+  },
+  {
+   "kind": "grow",
+   "at": [
+    2,
+    1,
+    0
+   ],
+   "from": 1,
+   "to": 11,
+   "unit": "ZONES",
+   "dur": 1.0,
+   "until": [
+    3,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "circle",
+   "scene": "GB",
+   "at": [
+    3,
+    1,
+    0
+   ],
+   "c": [
+    50.5,
+    53.2
+   ],
+   "r": [
+    120,
+    90
+   ],
+   "col": "#FF3B30",
+   "until": [
+    4,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "circle",
+   "scene": "GB",
+   "at": [
+    3,
+    1,
+    0.3
+   ],
+   "c": [
+    162,
+    61
+   ],
+   "r": [
+    150,
+    130
+   ],
+   "col": "#FF3B30",
+   "until": [
+    4,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "grow",
+   "at": [
+    3,
+    1,
+    0
+   ],
+   "from": 11,
+   "to": 9,
+   "unit": "ZONES",
+   "word": "TWO",
+   "dur": 0.6,
+   "until": [
+    4,
+    0,
+    -0.2
+   ],
+   "lang": "en"
+  },
+  {
+   "kind": "grow",
+   "at": [
+    3,
+    1,
+    0
+   ],
+   "from": 11,
+   "to": 9,
+   "unit": "ZONES",
+   "word": "हटा",
+   "dur": 0.6,
+   "until": [
+    4,
+    0,
+    -0.2
+   ],
+   "lang": "hi"
+  },
+  {
+   "kind": "slam",
+   "what": "merge",
+   "at": [
+    3,
+    1,
+    0
+   ],
+   "word": "TWO",
+   "lang": "en"
+  },
+  {
+   "kind": "slam",
+   "what": "merge",
+   "at": [
+    3,
+    1,
+    0
+   ],
+   "word": "हटा",
+   "lang": "hi"
+  },
+  {
+   "kind": "punch",
+   "scene": "KM",
+   "at": [
+    4,
+    1,
+    0
+   ],
+   "level": 1.2,
+   "back": [
+    5,
+    0,
+    -0.25
+   ]
+  },
+  {
+   "kind": "slam",
+   "what": "protest",
+   "at": [
+    4,
+    1,
+    0.05
+   ]
+  },
+  {
+   "kind": "grow",
+   "at": [
+    5,
+    1,
+    0
+   ],
+   "from": 9,
+   "to": 11,
+   "unit": "ZONES",
+   "word": "BACK",
+   "dur": 0.6,
+   "until": [
+    6,
+    0,
+    -0.2
+   ],
+   "lang": "en"
+  },
+  {
+   "kind": "grow",
+   "at": [
+    5,
+    1,
+    0
+   ],
+   "from": 9,
+   "to": 11,
+   "unit": "ZONES",
+   "word": "वापस",
+   "dur": 0.6,
+   "until": [
+    6,
+    0,
+    -0.2
+   ],
+   "lang": "hi"
+  },
+  {
+   "kind": "slam",
+   "what": "restore",
+   "at": [
+    5,
+    1,
+    0
+   ],
+   "word": "BACK",
+   "lang": "en"
+  },
+  {
+   "kind": "slam",
+   "what": "restore",
+   "at": [
+    5,
+    1,
+    0
+   ],
+   "word": "वापस",
+   "lang": "hi"
+  },
+  {
+   "kind": "punch",
+   "scene": "GB",
+   "at": [
+    6,
+    1,
+    0
+   ],
+   "level": 1.15,
+   "back": [
+    6,
+    2,
+    -0.1
+   ],
+   "lang": "hi"
+  },
+  {
+   "kind": "punch",
+   "scene": "GB",
+   "at": [
+    7,
+    0,
+    0.15
+   ],
+   "level": 1.14,
+   "back": [
+    7,
+    1,
+    0.3
+   ],
+   "lang": "hi"
+  },
+  {
+   "kind": "moment",
+   "what": "Trans-Siberian line draws Moscow to Vladivostok, train rides it",
+   "at": [
+    6,
+    0,
+    0.1
+   ]
+  },
+  {
+   "kind": "card",
+   "scene": "GB",
+   "at": [
+    6,
+    2,
+    0
+   ],
+   "pin": "vla",
+   "flag": "🎫",
+   "name": "TICKET",
+   "to": 19,
+   "unit": ":00",
+   "tag": "MSK",
+   "until": [
+    7,
+    1,
+    -0.1
+   ]
+  },
+  {
+   "kind": "moment",
+   "what": "alarm clock character pops in",
+   "at": [
+    7,
+    0,
+    -0.3
+   ]
+  },
+  {
+   "kind": "circle",
+   "scene": "GB",
+   "screen": [
+    760,
+    1010
+   ],
+   "at": [
+    7,
+    1,
+    0
+   ],
+   "word": "2",
+   "r": [
+    170,
+    90
+   ],
+   "col": "#FF3B30",
+   "until": [
+    8,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "slam",
+   "what": "jolt",
+   "char": "clock",
+   "at": [
+    7,
+    0,
+    0.45
+   ]
+  },
+  {
+   "kind": "slam",
+   "what": "jolt",
+   "char": "clock",
+   "at": [
+    7,
+    1,
+    0
+   ],
+   "word": "2"
+  },
+  {
+   "kind": "punch",
+   "scene": "GA",
+   "at": [
+    8,
+    0,
+    0.1
+   ],
+   "level": 1.2,
+   "back": [
+    9,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "moment",
+   "what": "France fills with its flag, island pins pop worldwide",
+   "at": [
+    9,
+    1,
+    0
+   ]
+  },
+  {
+   "kind": "grow",
+   "at": [
+    9,
+    1,
+    0
+   ],
+   "from": 11,
+   "to": 12,
+   "unit": "ZONES",
+   "word": "TWELVE",
+   "dur": 0.45,
+   "until": [
+    10,
+    0,
+    -0.2
+   ]
+  },
+  {
+   "kind": "impact",
+   "at": [
+    9,
+    1,
+    0.25
+   ]
+  },
+  {
+   "kind": "slam",
+   "what": "pins",
+   "at": [
+    9,
+    2,
+    0
+   ],
+   "word": "ISLANDS",
+   "lang": "en"
+  },
+  {
+   "kind": "slam",
+   "what": "pins",
+   "at": [
+    9,
+    2,
+    0
+   ],
+   "word": "द्वीपों",
+   "lang": "hi"
+  },
+  {
+   "kind": "moment",
+   "what": "France character enters",
+   "at": [
+    10,
+    0,
+    -0.3
+   ]
+  },
+  {
+   "kind": "arrow",
+   "scene": "WM",
+   "at": [
+    10,
+    1,
+    0
+   ],
+   "from": [
+    2.35,
+    46.8
+   ],
+   "to": [
+    -149.4,
+    -17.6
+   ],
+   "col": "#FFC23A"
+  },
+  {
+   "kind": "arrow",
+   "scene": "WM",
+   "at": [
+    10,
+    1,
+    0.15
+   ],
+   "from": [
+    2.35,
+    46.8
+   ],
+   "to": [
+    165.6,
+    -21.3
+   ],
+   "col": "#FFC23A"
+  },
+  {
+   "kind": "slam",
+   "what": "jolt",
+   "char": "france",
+   "at": [
+    10,
+    1,
+    0
+   ]
+  }
+ ],
+ "music_sections": {
+  "pad": [
+   [
+    [
+     0,
+     0,
+     -0.5
+    ],
+    "end",
+    0.85
+   ]
+  ],
+  "arp": [
+   [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     0,
+     -0.2
+    ],
+    0.8
+   ],
+   [
+    [
+     6,
+     0,
+     0
+    ],
+    [
+     8,
+     0,
+     0
+    ],
+    0.7
+   ],
+   [
+    [
+     9,
+     0,
+     0
+    ],
+    "end",
+    0.9
+   ]
+  ],
+  "drums": [
+   [
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     3,
+     0,
+     -0.3
+    ],
+    0.6
+   ],
+   [
+    [
+     6,
+     0,
+     0
+    ],
+    [
+     8,
+     0,
+     -0.2
+    ],
+    0.6
+   ],
+   [
+    [
+     9,
+     1,
+     0
+    ],
+    "end",
+    0.55
+   ]
+  ],
+  "bass": [
+   [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     4,
+     0,
+     -0.2
+    ],
+    0.8
+   ],
+   [
+    [
+     5,
+     0,
+     0
+    ],
+    "end",
+    0.75
+   ]
+  ]
+ },
+ "hand": [
+  [
+   [
+    4,
+    0,
+    0
+   ],
+   [
+    5,
+    0,
+    -0.2
+   ]
+  ]
+ ],
+ "impacts": [
+  [
+   3,
+   1,
+   0.1
+  ],
+  [
+   9,
+   1,
+   0.25
+  ]
+ ],
+ "story": [
+  [
+   "sparkle.mp3",
+   [
+    0,
+    1,
+    0
+   ],
+   0.55
+  ],
+  [
+   "crowd.mp3",
+   [
+    4,
+    1,
+    -0.1
+   ],
+   0.45
+  ],
+  [
+   "clock.mp3",
+   [
+    7,
+    0,
+    -0.3
+   ],
+   0.45
+  ],
+  [
+   "chime.mp3",
+   [
+    9,
+    1,
+    0
+   ],
+   0.4
+  ]
+ ]
+}

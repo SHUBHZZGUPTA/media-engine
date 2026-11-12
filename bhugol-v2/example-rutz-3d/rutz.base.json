@@ -1,0 +1,132 @@
+{
+ "slug": "rutz",
+ "lang": "en",
+ "lines": [
+  {
+   "o": 0,
+   "text": "You get one New Year's midnight. Russia gets eleven.",
+   "chunks": [
+    "YOU GET *ONE*|NEW YEAR'S MIDNIGHT.",
+    "RUSSIA GETS|*ELEVEN.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "When Kamchatka hits midnight, Kaliningrad's still at 2 PM.",
+   "chunks": [
+    "WHEN *KAMCHATKA*|HITS MIDNIGHT,",
+    "KALININGRAD'S STILL|AT *2 PM.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "So how do you run one country on eleven clocks?",
+   "chunks": [
+    "SO HOW DO YOU|RUN ONE COUNTRY",
+    "ON *ELEVEN CLOCKS?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "In 2010, Russia tried deleting two.",
+   "chunks": [
+    "IN *2010,*",
+    "RUSSIA TRIED|DELETING *TWO.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "People in Kamchatka protested.",
+   "chunks": [
+    "PEOPLE IN KAMCHATKA",
+    "*PROTESTED.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "By 2014, both were back.",
+   "chunks": [
+    "BY *2014,*",
+    "BOTH WERE *BACK.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Trains? Until 2018, timetables ran on Moscow time.",
+   "chunks": [
+    "*TRAINS?*",
+    "UNTIL *2018,*|TIMETABLES RAN",
+    "ON *MOSCOW TIME.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Your 7 PM train? It's 2 AM here.",
+   "chunks": [
+    "YOUR *7 PM* TRAIN?",
+    "IT'S *2 AM* HERE."
+   ],
+   "speaker": "clock"
+  },
+  {
+   "o": 0,
+   "text": "World record, right?",
+   "chunks": [
+    "WORLD RECORD,|*RIGHT?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Nope. France has twelve, thanks to islands all over the planet.",
+   "chunks": [
+    "*NOPE.*",
+    "*FRANCE* HAS|*TWELVE,*",
+    "THANKS TO ISLANDS|ALL OVER THE PLANET."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Russia is wide. I'm everywhere.",
+   "chunks": [
+    "RUSSIA IS *WIDE.*",
+    "I'M *EVERYWHERE.*"
+   ],
+   "speaker": "france"
+  },
+  {
+   "o": 0,
+   "text": "This is BHUGOL. Follow for more Geography Fun Facts.",
+   "chunks": [
+    "THIS IS *BHUGOL.*",
+    "FOLLOW FOR MORE|GEOGRAPHY FUN FACTS."
+   ]
+  }
+ ],
+ "voices": {
+  "clock": {
+   "semitones": 3,
+   "formant": "preserved"
+  },
+  "france": {
+   "semitones": -2,
+   "formant": "preserved"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.3,
+  "tempo": 1.1,
+  "long_before": {
+   "4": 0.42,
+   "7": 0.38,
+   "9": 0.42,
+   "10": 0.4,
+   "11": 0.4
+  },
+  "line_tempo": {
+   "7": 1.04,
+   "10": 1.04
+  }
+ },
+ "tail": 2.3
+}
