@@ -4,10 +4,11 @@
   "gemini-3.1-flash-tts-preview",
   "gemini-2.5-flash-preview-tts"
  ],
+ "try": 2,
  "items": [
   {
    "name": "flight_hi",
-   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline, a hint of wonder on the route and the sunrises. Keep a lively, continuous pace with no long gaps; this is a 45-second Short. The first two lines are the hook: punchy, stress 'west' and then 'east'. The last story line is a dry, quotable punchline. The final line is a short, warm sign-off.",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: curious, a hint of wonder on the route and the sunrises. Pace: fast, energetic YouTube Shorts delivery, about 190 words a minute, sentences flowing straight into each other with only tiny breaths between them; the whole Short must fit in about 45 seconds. Only ONE short comic pause, right before the final punchline line. The first two lines are the hook: punchy, stress 'west' and then 'east'. The punchline is dry and quotable. The final line is a quick warm sign-off.",
    "speakers": {
     "Narrator": "Sadaltager",
     "Chars": "Puck"
@@ -27,7 +28,7 @@
     ],
     [
      "Narrator",
-     "पर ये jet Pacific, America और Atlantic पार कर गया। दो sunset, दो sunrise, zero landing।"
+     "पर ये jet Pacific, America और Atlantic पार कर गया। दो sunset, दो sunrise।"
     ],
     [
      "Narrator",
@@ -35,7 +36,7 @@
     ],
     [
      "Narrator",
-     "क्योंकि record distance गिनता है, direction नहीं। twenty-three thousand one hundred fifty-five kilometre। आधी दुनिया से भी ज़्यादा।"
+     "क्योंकि record distance गिनता है। twenty-three thousand kilometre से ज़्यादा, आधी धरती से भी लंबा।"
     ],
     [
      "Narrator",
@@ -47,7 +48,7 @@
     ],
     [
      "Narrator",
-     "क्योंकि record की दुनिया में, गलत रास्ता ही सही रास्ता है।"
+     "Record की दुनिया में, गलत रास्ता ही सही रास्ता है।"
     ],
     [
      "Narrator",
