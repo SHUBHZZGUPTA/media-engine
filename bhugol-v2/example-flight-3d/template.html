@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Flight 3D (v2)</title>
+<script src="./gsap.min.js"></script>
+<script src="./three.min.js"></script>
+<script src="./motion.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 800; src: url(assets/muk800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 700; src: url(assets/muk700.woff2) format('woff2'); }
+:root { --mari: #FFC23A; --white: #F4F8FB; --fire: #FF7A1A; --ink: #03101A; --aqua: #38D6FF; --red: #FF3B30; }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #02070D; }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+.push { position: absolute; inset: 0; }
+.cv { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.ov { position: absolute; inset: 0; }
+.plbl { position: absolute; left: 0; top: 0; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #03101A; line-height: 1; opacity: 0; text-align: center; }
+.icon { position: absolute; left: 0; top: 0; font-family: 'Emo', sans-serif; line-height: 1; opacity: 0; white-space: nowrap; filter: drop-shadow(0 6px 6px rgba(0,0,0,.55)); }
+#dim { background: #02070D; opacity: 0; }
+.ttl, .cap { position: absolute; inset: 0; opacity: 0; }
+.tl { position: absolute; left: 60px; width: 960px; text-align: center; white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; color: var(--white); line-height: 1; }
+.tl.big { font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; letter-spacing: .01em; }
+.tl.small { font-family: 'Arch', 'Muk', sans-serif; font-weight: 800; letter-spacing: .12em; }
+.k { color: var(--mari); }
+.cl { position: absolute; left: 170px; width: 740px; text-align: center; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #02070D; line-height: 1; }
+.hi .cl, .hi .tl.big, .hi .plbl { letter-spacing: 0; }
+.cl span { opacity: 0; display: inline-block; white-space: pre; }
+.cl .k { color: #FFFFFF; }
+#badgeWrap { position: absolute; left: 230px; top: 450px; width: 620px; height: 620px; opacity: 0; transform-origin: 0 0; }
+#badgeShadow { position: absolute; inset: 4% 3% -4% 3%; border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(8px); }
+#badge { position: absolute; inset: 0; width: 100%; height: 100%; }
+#follow { position: absolute; left: 220px; top: 1125px; width: 640px; height: 130px; opacity: 0; }
+#folBtn { position: absolute; inset: 0; border-radius: 65px; background: var(--fire); box-sizing: border-box; }
+#folTxt, #folTxt2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; font-size: 66px; letter-spacing: .05em; color: var(--ink); }
+#folTxt2 { color: var(--fire); opacity: 0; }
+#folSub { position: absolute; left: 0; top: 1290px; width: 1080px; text-align: center; font-family: 'Arch', 'Muk', sans-serif; font-weight: 800; font-size: 44px; letter-spacing: .06em; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 9px #03101A; opacity: 0; }
+#tapDot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.85); border: 3px solid var(--ink); opacity: 0; }
+#ripple { position: absolute; left: 20px; top: -235px; width: 600px; height: 600px; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(255,255,255,.6); opacity: 0; }
+.kbox { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; line-height: 1; opacity: 0; }
+.knum, .ksuf { display: inline-block; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; }
+.knum { font-size: 230px; -webkit-text-stroke-width: 30px; color: var(--mari); text-shadow: 0 0 40px rgba(255,194,58,.5); }
+.ksuf { font-size: 110px; -webkit-text-stroke-width: 18px; color: var(--white); margin-left: 26px; }
+.card { position: absolute; left: 0; top: 0; opacity: 0; }
+.cin { background: rgba(6,12,22,.88); border: 5px solid var(--fire); border-radius: 30px; padding: 22px 36px 26px; box-shadow: 0 18px 40px rgba(0,0,0,.6); text-align: center; }
+.crow { font-family: 'Arch', 'Muk', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: .1em; color: var(--white); }
+.cbig { margin-top: 4px; font-family: 'BSD', sans-serif; font-weight: 900; color: var(--mari); line-height: 1; white-space: nowrap; }
+.cnum { display: inline-block; font-size: 150px; } .csuf { display: inline-block; font-size: 76px; color: var(--white); margin-left: 16px; }
+.bars { width: 820px; }
+.brow { display: flex; align-items: center; gap: 18px; margin: 14px 0; }
+.bname { width: 250px; text-align: right; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 54px; color: #fff; white-space: nowrap; }
+.btrack { flex: 1; height: 58px; border-radius: 29px; background: rgba(255,255,255,.12); overflow: hidden; }
+.bfill { height: 100%; border-radius: 29px; transform-origin: 0 50%; transform: scaleX(0); }
+.bval { font-family: 'BSD', sans-serif; font-weight: 900; font-size: 50px; color: #fff; width: 230px; white-space: nowrap; }
+.flaps { position: absolute; left: 0; width: 1080px; text-align: center; opacity: 0; }
+.flap { display: inline-block; width: 120px; height: 168px; margin: 0 6px; border-radius: 14px; background: #10161f; border: 4px solid #2a3442; color: var(--mari); font-family: 'BSD', sans-serif; font-weight: 900; font-size: 150px; line-height: 168px; text-align: center; box-shadow: 0 10px 22px rgba(0,0,0,.55); }
+.ring { position: absolute; left: 0; top: 0; overflow: visible; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="cshake" class="scr"><div id="scenes" class="scr"></div></div></div>
+    <div id="dim" class="scr"></div>
+    <div id="fx" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="hook" class="scr"></div>
+    <div id="badgeWrap"><div id="badgeShadow"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
+    <div id="follow"><div id="folBtn"></div><div id="folTxt"></div><div id="folTxt2"></div><div id="ripple"></div><div id="tapDot"></div></div>
+    <div id="folSub"></div>
+  </div>
+</div>
+__MBLUR__
+<script>
+const D = __DATA__;
+if (D.lang === 'hi') document.getElementById('root').classList.add('hi');
+const NS = 'http://www.w3.org/2000/svg', T3 = THREE;
+const $ = id => document.getElementById(id);
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const B = id => D.T[id];            // named beat times computed in build.py
+const LN = D.LN;
+
+/* ---------- keyframe tracks (evaluated from time only) ---------- */
+const EZ = {}; const ease = n => EZ[n || 'power2.inOut'] || (EZ[n || 'power2.inOut'] = gsap.parseEase(n || 'power2.inOut'));
+function Track(base) { return { base, last: base, keys: [] }; }
+function key(T, to, at, dur, e) { const from = (typeof T.last === 'object') ? Object.assign({}, T.last) : T.last;
+  const tgt = (typeof to === 'object') ? Object.assign({}, from, to) : to; T.keys.push({ a: at, d: Math.max(.04, dur), from, to: tgt, e: ease(e) }); T.last = tgt; }
+function valAt(T, t) { let v = T.base;
+  for (const k of T.keys) { if (t < k.a) break; const p = k.e(Math.min(1, (t - k.a) / k.d));
+    if (typeof k.to === 'object') { v = {}; for (const q in k.to) v[q] = k.from[q] + (k.to[q] - k.from[q]) * p; } else v = k.from + (k.to - k.from) * p; }
+  return v; }
+const ALLT = []; const TK = b => { const T = Track(b); ALLT.push(T); return T; };
+const on = (T, at, d, v, e) => key(T, v === undefined ? 1 : v, at, d || .3, e || 'power2.out');
+const off = (T, at, d) => key(T, 0, at, d || .25, 'power2.in');
+
+/* ---------- one shared WebGL globe, drawn into each scene's own 2D canvas ---------- */
+const GLC = document.createElement('canvas'); GLC.width = 1080; GLC.height = 1920;
+const R = new T3.WebGLRenderer({ canvas: GLC, antialias: true, preserveDrawingBuffer: true }); R.setPixelRatio(1); R.setSize(1080, 1920, false);
+const SC = new T3.Scene(); SC.background = new T3.Color(0x030914);
+const CAM = new T3.PerspectiveCamera(30, 1080 / 1920, .01, 100);
+const ll = (lon, lat, r) => { const ph = (lon + 180) * Math.PI / 180, th = (90 - lat) * Math.PI / 180; return new T3.Vector3(-Math.cos(ph) * Math.sin(th) * r, Math.cos(th) * r, Math.sin(ph) * Math.sin(th) * r); };
+const GU = { day: { value: null }, night: { value: null }, sun: { value: new T3.Vector3(1, 0, 0) }, nightOn: { value: 0 }, sat: { value: 1 }, bright: { value: 1 }, oc: { value: 0 } };
+const globe = new T3.Mesh(new T3.SphereGeometry(1, 192, 128), new T3.ShaderMaterial({ uniforms: GU,
+  vertexShader: `varying vec2 vUv; varying vec3 vN; void main(){ vUv = uv; vN = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+  fragmentShader: `uniform sampler2D day, night; uniform vec3 sun; uniform float nightOn, sat, bright, oc; varying vec2 vUv; varying vec3 vN;
+    void main(){ vec3 d = texture2D(day, vUv).rgb; d -= max(dot(d, vec3(0.333)) - 0.78, 0.0) * 0.55; vec3 n = texture2D(night, vUv).rgb; float s = dot(normalize(vN), normalize(sun));
+      float dl = smoothstep(-0.10, 0.10, s); vec3 lit = d * (0.80 + 0.30 * clamp(s, 0.0, 1.0));
+      vec3 nt = n * 1.25 + d * 0.06; vec3 c = mix(nt, lit, dl);
+      float tw = exp(-pow(s / 0.035, 2.0)) * 0.30; c += vec3(1.0, 0.45, 0.12) * tw * nightOn;   // sunset glow along the terminator
+      c = mix(d, c, nightOn); float lo = dot(c, vec3(0.299,0.587,0.114)); float om = smoothstep(0.16, 0.06, lo) * step(c.r, c.b); c = mix(c, vec3(0.05, 0.36, 0.80) * (0.75 + 2.5 * lo), om * oc); float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, sat) * bright;
+      gl_FragColor = vec4(c, 1.0); }` }));
+SC.add(globe);
+SC.add(new T3.Mesh(new T3.SphereGeometry(1.07, 96, 72), new T3.ShaderMaterial({ side: T3.BackSide, transparent: true, blending: T3.AdditiveBlending, depthWrite: false,
+  vertexShader: `varying vec3 vN; varying vec3 vP; void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`,
+  fragmentShader: `varying vec3 vN; varying vec3 vP; void main(){ float f = pow(clamp(1.0 - abs(dot(normalize(-vP), vN)), 0.0, 1.0), 3.0); gl_FragColor = vec4(0.35, 0.7, 1.0, f * 0.95); }` })));
+{ const n = 1600, p = new Float32Array(n * 3); for (let i = 0; i < n; i++) { const a = (i * 2.399963) % (Math.PI * 2), z = 1 - 2 * ((i + .5) / n), r = Math.sqrt(1 - z * z); p.set([Math.cos(a) * r * 30, z * 30, Math.sin(a) * r * 30], i * 3); }
+  const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(p, 3)); SC.add(new T3.Points(g, new T3.PointsMaterial({ color: 0xffffff, size: 1.7, sizeAttenuation: false, transparent: true, opacity: .75 }))); }
+const loader = new T3.TextureLoader(); const READY = [];
+const tex = n => new Promise(r => loader.load('assets/' + n, t => { t.anisotropy = 8; r(t); }));
+READY.push(tex('day.jpg').then(t => GU.day.value = t), tex('night.jpg').then(t => GU.night.value = t));
+function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.25, 'rgba(255,255,255,.55)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new T3.CanvasTexture(c); }
+const GLOW = glowTex();
+
+/* ---------- routes: tubes on the sphere, drawn by progress (uv.x), optional dashes ---------- */
+const ROUTES = {};
+function route(name, pts, o) {
+  const v = pts.map(([lo, la]) => ll(lo, la, 1.0 + (o.h || .007)));
+  const curve = new T3.CatmullRomCurve3(v, false, 'centripetal'); const segs = Math.max(200, pts.length * 4);
+  const U = { prog: { value: 0 }, a: { value: 0 }, col: { value: new T3.Color(o.col) }, dash: { value: o.dash || 0 }, glow: { value: 0 }, time: { value: 0 } };
+  const mat = (glow) => new T3.ShaderMaterial({ uniforms: U, transparent: true, depthWrite: false, blending: glow ? T3.AdditiveBlending : T3.NormalBlending,
+    vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+    fragmentShader: `uniform float prog, a, dash, glow, time; uniform vec3 col; varying vec2 vUv;
+      void main(){ if (vUv.x > prog) discard; if (dash > 0.5 && fract(vUv.x * ${o.ndash || 60}.0 - time * 0.6) > 0.55) discard;
+        float tip = smoothstep(prog - 0.02, prog, vUv.x);
+        ${glow ? 'gl_FragColor = vec4(col * (1.0 + tip), (0.35 + 0.5 * tip) * a * glow);' : 'gl_FragColor = vec4(mix(col, vec3(1.0), tip * 0.6), a);'} }` });
+  const core = new T3.Mesh(new T3.TubeGeometry(curve, segs, o.r || .0065, 8, false), mat(false)); core.renderOrder = 3; SC.add(core);
+  const glw = new T3.Mesh(new T3.TubeGeometry(curve, segs, (o.r || .0065) * 3.2, 8, false), mat(true)); glw.renderOrder = 2; SC.add(glw);
+  const head = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: new T3.Color(o.col), transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 })); head.scale.set(.09, .09, 1); SC.add(head);
+  const Rt = { name, pts, curve, U, head, prog: TK(0), a: TK(0), glow: TK(0), headA: TK(0), o };
+  // arc-length table on the lon/lat polyline, to place markers at a progress value
+  Rt.at = p => curve.getPointAt(clamp(p, 0, 1));
+  Rt.tan = p => curve.getTangentAt(clamp(p, 0, 1));
+  ROUTES[name] = Rt; return Rt;
+}
+const RA = route('A350', D.routes.A350, { col: '#FF8A1A', r: .0075 });
+const RS = route('SHORT', D.routes.SHORT, { col: '#FFFFFF', dash: 1, ndash: 70, r: .0055 });
+const RB = route('B777', D.routes.B777, { col: '#38D6FF', r: .0068 });
+const RBS = route('B777S', D.routes.B777S, { col: '#FFFFFF', dash: 1, ndash: 45, r: .005 });
+// pins
+const PINS = {}; function pin(id, lon, lat, col) { const s = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: new T3.Color(col || '#FFFFFF'), transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 }));
+  s.position.copy(ll(lon, lat, 1.012)); s.scale.set(.11, .11, 1); SC.add(s); PINS[id] = { s, a: TK(0) }; return PINS[id]; }
+for (const [id, p] of Object.entries(D.places)) pin(id, p[0], p[1], p[2]);
+// world state
+const WS = { sunH: TK(D.sun.dep), nightOn: TK(0), sat: TK(1), bright: TK(1), oc: TK(0) };
+const sunDir = h => ll(-15 * (h - 12 - .108), D.sun.dec, 1).normalize();
+
+/* ---------- scenes: each a 2D canvas + DOM overlay, sharing the globe ---------- */
+const SCENES = [], REG = {};
+function scene(id, cam0) { const el = mk('div', { class: 'scene', id: 'sc_' + id }, $('scenes')); const push = mk('div', { class: 'push' }, el);
+  const cv = mk('canvas', { width: 1080, height: 1920, class: 'cv' }, push); const ctx = cv.getContext('2d'); const ov = mk('div', { class: 'ov' }, push);
+  const S = { id, el, push, cv, ctx, ov, cam: TK(cam0), lbls: [], icons: [], planes: [], wins: [] }; SCENES.push(S); REG[id] = S; return S; }
+const GA = scene('GA', { lon: 125, lat: -24, dist: 5.2, oy: 150, roll: 0 });
+const GB = scene('GB', { lon: 165, lat: -25, dist: 4.4, oy: 150, roll: 0 });
+const camTo = (S, t) => { const k = valAt(S.cam, t); CAM.position.copy(ll(k.lon, k.lat, k.dist)); CAM.up.set(0, 1, 0); CAM.lookAt(0, 0, 0);
+  if (k.roll) CAM.rotateZ(k.roll * Math.PI / 180); CAM.setViewOffset(1080, 1920, 0, k.oy || 0, 1080, 1920); CAM.updateMatrixWorld(); CAM.updateProjectionMatrix(); return k; };
+const proj = (p) => { const v = p.clone().project(CAM); return { x: (v.x + 1) / 2 * 1080, y: (1 - v.y) / 2 * 1920, z: v.z }; };
+const facing = p => p.clone().normalize().dot(CAM.position.clone().normalize()) - 1 / CAM.position.length();   // > 0 when the point is on the visible side
+// DOM items on the globe (one copy per scene)
+function label(txt, lon, lat, fs, col, dy) { const rec = { lon, lat, dy: dy || 0, a: TK(0), pop: TK(0), els: [] };
+  for (const S of SCENES) { const e = mk('div', { class: 'plbl' }, S.ov); e.innerHTML = txt; Object.assign(e.style, { fontSize: fs + 'px', webkitTextStrokeWidth: (fs * .18) + 'px', color: col || '' }); rec.els.push(e); S.lbls.push([rec, e]); }
+  return rec; }
+function icon(txt, lon, lat, fs, dy) { const rec = { lon, lat, dy: dy || 0, a: TK(0), pop: TK(0), els: [] };
+  for (const S of SCENES) { const e = mk('div', { class: 'icon' }, S.ov); e.textContent = txt; e.style.fontSize = fs + 'px'; rec.els.push(e); S.icons.push([rec, e]); }
+  return rec; }
+function plane(Rt, fs) { const rec = { Rt, a: TK(0), p: TK(0) };
+  for (const S of SCENES) { const e = mk('div', { class: 'icon' }, S.ov); e.textContent = '✈️'; e.style.fontSize = fs + 'px'; S.planes.push([rec, e]); }
+  return rec; }
+function placeOn(e, q, a, pop, dy, vis) { e.style.opacity = (a * vis).toFixed(3); if (a <= 0 || vis <= 0) return;
+  e.style.transform = `translate(${(q.x - e.offsetWidth / 2).toFixed(1)}px,${(q.y - e.offsetHeight / 2 + dy).toFixed(1)}px) scale(${((.6 + .4 * Math.min(1, a * 1.5)) * (1 + pop)).toFixed(3)})`; }
+function renderScene(S, t) {
+  camTo(S, t);
+  GU.sun.value.copy(sunDir(valAt(WS.sunH, t))); GU.nightOn.value = valAt(WS.nightOn, t); GU.sat.value = valAt(WS.sat, t); GU.bright.value = valAt(WS.bright, t); GU.oc.value = valAt(WS.oc, t);
+  for (const n in ROUTES) { const Rt = ROUTES[n]; const p = valAt(Rt.prog, t), a = valAt(Rt.a, t); Rt.U.prog.value = p; Rt.U.a.value = a; Rt.U.glow.value = valAt(Rt.glow, t); Rt.U.time.value = t;
+    Rt.head.material.opacity = a * valAt(Rt.headA, t) * (p > .002 && p < .998 ? 1 : 0); Rt.head.position.copy(Rt.at(p)).multiplyScalar(1.004); }
+  for (const id in PINS) PINS[id].s.material.opacity = valAt(PINS[id].a, t);
+  R.render(SC, CAM); S.ctx.drawImage(GLC, 0, 0);
+  const vis = p => clamp(facing(p) * 6, 0, 1);
+  for (const [rec, e] of S.lbls.concat(S.icons)) { const a = valAt(rec.a, t); if (a <= 0) { e.style.opacity = 0; continue; } const P = ll(rec.lon, rec.lat, 1.02); placeOn(e, proj(P), a, valAt(rec.pop, t), rec.dy, vis(P)); }
+  for (const [rec, e] of S.planes) { const a = valAt(rec.a, t); if (a <= 0) { e.style.opacity = 0; continue; } const p = valAt(rec.p, t);
+    const P = rec.Rt.at(p).multiplyScalar(1.03), q = proj(P), q2 = proj(rec.Rt.at(Math.min(1, p + .004)).multiplyScalar(1.03)), q0 = proj(rec.Rt.at(Math.max(0, p - .004)).multiplyScalar(1.03));
+    const ang = Math.atan2(q2.y - q0.y, q2.x - q0.x) * 180 / Math.PI + D.planeRot; e.style.opacity = (a * vis(P)).toFixed(3);
+    e.style.transform = `translate(${(q.x - e.offsetWidth / 2).toFixed(1)}px,${(q.y - e.offsetHeight / 2).toFixed(1)}px) rotate(${ang.toFixed(1)}deg)`; }
+  if (S.after) S.after(t);
+}
+const projAt = (S, t, lon, lat, r) => { camTo(S, t); return proj(ll(lon, lat, r || 1.01)); };
+const projRoute = (S, t, Rt, p) => { camTo(S, t); return proj(Rt.at(p).multiplyScalar(1.01)); };
+
+/* ---------- titles + captions ---------- */
+const TT = {};
+for (const t of D.titles) { const g = mk('div', { class: 'ttl', id: t.id }, $('titles')); const lines = [];
+  t.lines.forEach((ln0, i) => { const small = ln0.startsWith('~'); const ln = small ? ln0.slice(1) : ln0; const size = small ? 58 : (t.size || 150);
+    const d = mk('div', { class: 'tl ' + (small ? 'small' : 'big') }, g); const base = (t.y || 300) + (i === 0 ? 0 : (small ? 74 : 124));
+    Object.assign(d.style, { fontSize: size + 'px', top: (base - size * .8) + 'px', webkitTextStrokeWidth: (size * .14) + 'px' }); markup(ln, d); lines.push(d); });
+  TT[t.id] = { g, t, lines }; }
+const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps'));
+  const lines = c.txt.split('|').map(ln => { const d = mk('div', { class: 'cl' }, g); markup(ln, d); return d; });
+  return { c, g, lines, words: [...g.querySelectorAll('span')] }; });
+$('folTxt').textContent = D.end.button; $('folTxt2').textContent = '✓ ' + D.end.following; $('folSub').textContent = D.end.sub;
+function layout() {
+  for (const K of CAPS) { let fs = 96; K.g.style.opacity = 1;
+    for (const d of K.lines) { d.style.fontSize = '96px'; const w = d.scrollWidth; if (w > 740) fs = Math.min(fs, 96 * 740 / w); }
+    K.g.style.opacity = 0; const n = K.lines.length;
+    K.lines.forEach((d, i) => Object.assign(d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .17).toFixed(1) + 'px', top: (1395 + (i - (n - 1) / 2) * fs - fs * .5).toFixed(1) + 'px' })); }
+  for (const id in TT) { const { g, lines } = TT[id]; g.style.opacity = 1;
+    for (const d of lines) { const w = d.scrollWidth, fs = parseFloat(d.style.fontSize); if (w > 960) d.style.fontSize = (fs * 960 / w).toFixed(1) + 'px'; }
+    g.style.opacity = 0; }
+}
+
+/* ---------- build the world's DOM items ---------- */
+const PL = plane(RA, 92), PB = plane(RB, 80);
+const L = {};
+for (const l of D.labels) L[l.id] = label(l.txt, l.lon, l.lat, l.fs, l.col, l.dy);
+const SUNI = D.sunEvents.map((ev, i) => ({ ev, I: icon(ev[0] === 'sunset' ? '🌇' : '🌅', ev[2][0], ev[2][1], 96, -95) }));
+// screen-space overlays
+const FX = $('fx');
+const trophy = mk('div', { class: 'icon', style: 'font-size:190px;' }, FX); trophy.textContent = '🏆';
+const xmark = mk('div', { class: 'icon', style: 'font-size:170px;' }, FX); xmark.textContent = '❌';
+const card = mk('div', { class: 'card' }, FX); card.innerHTML = `<div class="cin"><div class="crow">${D.txt.cardTag}</div><div class="cbig"><span class="cnum">0</span><span class="csuf">KM</span></div></div>`;
+const bars = mk('div', { class: 'card' }, FX); bars.innerHTML = `<div class="cin bars">` + D.bars.map(b => `<div class="brow"><div class="bname">${b.name}</div><div class="btrack"><div class="bfill" style="background:${b.col}"></div></div><div class="bval">${b.val}</div></div>`).join('') + `</div>`;
+const flaps = mk('div', { class: 'flaps' }, FX);
+const ring = mk('svg', { class: 'ring', width: 1080, height: 1920 }, FX, true);
+const ringBg = mk('circle', { fill: 'none', stroke: 'rgba(255,255,255,.18)', 'stroke-width': 26 }, ring, true);
+const ringFg = mk('circle', { fill: 'none', stroke: '#FF8A1A', 'stroke-width': 26, 'stroke-linecap': 'round' }, ring, true);
+const ringTxt = mk('div', { class: 'plbl', style: 'font-size:84px;-webkit-text-stroke-width:15px;color:#FFC23A' }, FX); ringTxt.innerHTML = D.txt.ring;
+
+/* ---------- timeline ---------- */
+function build() {
+  layout();
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false };
+  const MO = BhugolMotion(tl);
+  const SH = D.shots.map(s => ({ S: REG[s.scene], el: REG[s.scene].el, at: s.t, cut: s.cut }));
+  SH.forEach((p, i) => { p.S.wins.push([i ? p.at - .45 : 0, i < SH.length - 1 ? SH[i + 1].at + .1 : D.dur + 1]); });
+  MO.shots(SH); tl.set(SH[0].el, { opacity: 1 }, 0);
+  const shotAt = i => D.shots[i].t; const shotEnd = i => i < D.shots.length - 1 ? D.shots[i + 1].t : D.end.start + 2;
+  for (const b of D.beats) if (b.kind === 'punch') MO.punch(REG[b.scene].push, b.t, b.level, b.back);
+  const shake = (at, k) => MO.shake(at, .6, 'rig-6d-wobble', k || .75);
+  const popL = (rec, at, show, until) => { if (show) { on(rec.a, at - .05, .2); if (until) off(rec.a, until); } key(rec.pop, .32, at, .09, 'power2.out'); key(rec.pop, 0, at + .09, .32, 'power2.inOut'); };
+  const cam = (S, v, at, dur, e) => key(S.cam, v, at, dur, e || 'sine.inOut');
+  const T = D.T;
+
+  // ===== shot 0 (GA): hook — Australia, "you fly west" =====
+  cam(GA, { lon: 128, lat: -22, dist: 5.6, oy: 150 }, 0, .01); cam(GA, { lon: 122, lat: -20, dist: 4.6, oy: 150 }, .05, shotAt(1) + .2);
+  on(PINS.MEL.a, .1, .3); on(L.MEL.a, .35, .3); off(L.MEL.a, shotAt(1) - .1);
+  // ===== shot 1 (GB): "this plane flew east" — the route leaves Melbourne eastwards over the Pacific =====
+  cam(GB, { lon: 160, lat: -30, dist: 4.6, oy: 150 }, 0, .01); cam(GB, { lon: 190, lat: -8, dist: 4.4, oy: 150 }, shotAt(1) - .4, shotEnd(1) - shotAt(1) + .4);
+  on(RA.a, T.east - .1, .2); key(RA.prog, .14, T.east, shotEnd(1) - T.east, 'power1.inOut'); on(RA.headA, T.east, .2); on(RA.glow, T.east, .3);
+  on(PL.a, T.east, .2); key(PL.p, .14, T.east, shotEnd(1) - T.east, 'power1.inOut');
+  // ===== shot 2 (GA): the short way past India =====
+  cam(GA, { lon: 112, lat: -12, dist: 6.5, oy: 150 }, shotAt(2) - .5, .01); cam(GA, { lon: 82, lat: 4, dist: 9.6, oy: 150 }, shotAt(2), shotEnd(2) - shotAt(2), 'power1.inOut');
+  key(RA.a, 0, shotAt(2) - .45, .01); key(PL.a, 0, shotAt(2) - .45, .01); on(PINS.TLS.a, shotAt(2) + .1, .3); on(L.FRA.a, shotAt(2) + .2, .3);
+  on(RS.a, shotAt(2), .2); key(RS.prog, 1, shotAt(2) + .05, T.km17 - shotAt(2) + .3, 'power1.inOut'); on(RS.headA, shotAt(2), .2);
+  popL(L.INDIA, T.india, 1, shotEnd(2) - .1); off(L.FRA.a, shotEnd(2) - .1);
+  // ===== shot 3 (GB): the long way — real day/night over 24 h; the plane crosses the terminator four times =====
+  key(RS.a, 0, shotAt(3) - .45, .01); key(RA.a, 1, shotAt(3) - .45, .01); key(RA.prog, .14, shotAt(3) - .45, .01); key(PL.a, 1, shotAt(3) - .45, .01); key(PL.p, .14, shotAt(3) - .45, .01);
+  key(WS.nightOn, 1, shotAt(3) - .45, .5, 'power2.inOut');
+  { const a = shotAt(3), b = T.sunsets - .15, ph = D.sun.hours; const Pk = [[a, .14], [T.pacific, .30], [T.america, .62], [T.atlantic, .86], [b, 1]];
+    // camera follows the plane: interpolate route points at the keyed progress values
+    const cp = D.camPath; key(GB.cam, { lon: cp[0][0], lat: cp[0][1], dist: 3.9, oy: 170 }, a - .45, .01);
+    for (let i = 1; i < Pk.length; i++) { const [t0] = Pk[i - 1], [t1, p1] = Pk[i]; key(RA.prog, p1, t0, t1 - t0, 'none'); key(PL.p, p1, t0, t1 - t0, 'none');
+      key(WS.sunH, D.sun.dep + ph * p1, t0, t1 - t0, 'none'); const c = cp[i]; cam(GB, { lon: c[0], lat: c[1], dist: 3.9, oy: 170 }, t0, t1 - t0, 'sine.inOut'); }
+    key(WS.sunH, D.sun.dep + ph * .14, a - .45, .01);
+    SUNI.forEach(({ ev, I }) => { const f = ev[1]; const k = Pk.findIndex(x => x[1] >= f); const tt = k <= 0 ? a : Pk[k - 1][0] + (Pk[k][0] - Pk[k - 1][0]) * (f - Pk[k - 1][1]) / (Pk[k][1] - Pk[k - 1][1]);
+      on(I.a, Math.max(a, tt) - .05, .25, 1, 'back.out(2)'); off(I.a, shotEnd(3) - .1); }); }
+  popL(L.PACIFIC, T.pacific, 1, T.pacific + 1.6); popL(L.AMERICA, T.america, 1, T.america + 1.4); popL(L.ATLANTIC, T.atlantic, 1, T.atlantic + 1.6);
+  // sunsets / sunrises counted: pulse the icons on the words
+  SUNI.forEach(({ ev, I }) => { const tt = ev[0] === 'sunset' ? T.sunsets : T.sunrises; key(I.pop, .45, tt, .1, 'power2.out'); key(I.pop, 0, tt + .1, .35); });
+  key(PL.a, 0, shotEnd(3) + .05, .01);
+  // ===== shot 4 (GA): "so why the long way?" — wide view, both routes =====
+  key(WS.nightOn, 0, shotAt(4) - .45, .01); key(RA.prog, 1, shotAt(4) - .45, .01); key(RS.a, .9, shotAt(4) - .45, .01); key(RS.prog, 1, shotAt(4) - .45, .01); key(RS.headA, 0, shotAt(4) - .45, .01); key(RA.headA, 0, shotAt(4) - .45, .01);
+  cam(GA, { lon: 112, lat: -22, dist: 7.6, oy: 150 }, shotAt(4) - .45, .01); cam(GA, { lon: 140, lat: -24, dist: 6.6, oy: 150 }, shotAt(4), shotEnd(4) - shotAt(4) + .3);
+  // ===== shot 5 (GB): payoff — records count distance =====
+  key(RS.a, 0, shotAt(5) - .45, .01); cam(GB, { lon: -110, lat: 12, dist: 9.0, oy: 150 }, shotAt(5) - .45, .01); cam(GB, { lon: -75, lat: 18, dist: 9.0, oy: 150 }, shotAt(5), shotEnd(5) - shotAt(5), 'sine.inOut');
+  key(RA.glow, 2.2, shotAt(5), .3, 'power2.out'); key(RA.glow, 1, shotAt(5) + .6, .6);
+  // ===== shot 6 (GA): 2005 — the Boeing went the long way too =====
+  key(RA.a, 0, shotAt(6) - .45, .01); key(PINS.MEL.a, 0, shotAt(6) - .45, .01); key(PINS.TLS.a, 0, shotAt(6) - .45, .01); on(PINS.HKG.a, shotAt(6), .3); on(PINS.LHR.a, shotAt(6), .3);
+  key(WS.sat, .55, shotAt(6) - .45, .01); key(WS.sat, 1, T.boeing, .6);   // a faded "archive" look that colours back in
+  cam(GA, { lon: 175, lat: 52, dist: 7.6, oy: 110 }, shotAt(6) - .45, .01); cam(GA, { lon: 210, lat: 55, dist: 7.2, oy: 110 }, shotAt(6), shotEnd(6) - shotAt(6), 'sine.inOut');
+  on(RB.a, T.boeing, .2); key(RB.prog, 1, T.boeing, T.too - T.boeing + .2, 'power1.inOut'); on(RB.headA, T.boeing, .2); on(RB.glow, T.boeing, .3);
+  on(PB.a, T.boeing, .2); key(PB.p, 1, T.boeing, T.too - T.boeing + .2, 'power1.inOut'); key(PB.a, 0, T.too + .3, .2);
+  popL(L.HKG, T.boeing - .1, 1, shotEnd(6) - .1); popL(L.LHR, T.too - .3, 1, shotEnd(6) - .1);
+  // ===== shot 7 (GB): from above the North Pole — the shortcut, refused =====
+  cam(GB, { lon: 60, lat: 80, dist: 7.4, oy: 130, roll: 0 }, shotAt(7) - .45, .01); cam(GB, { lon: 30, lat: 78, dist: 7.0, oy: 130, roll: 0 }, shotAt(7), shotEnd(7) - shotAt(7), 'sine.inOut');
+  on(RBS.a, T.shortcut - .05, .2); key(RBS.prog, 1, T.shortcut, .9, 'power2.inOut'); on(RBS.headA, T.shortcut, .2);
+  // ===== shot 8 (GA): the punchline — the long way glows, the plane lands in France =====
+  key(RB.a, 0, shotAt(8) - .45, .01); key(RBS.a, 0, shotAt(8) - .45, .01); key(PINS.HKG.a, 0, shotAt(8) - .45, .01); key(PINS.LHR.a, 0, shotAt(8) - .45, .01);
+  key(RA.a, 1, shotAt(8) - .45, .01); key(RA.prog, 1, shotAt(8) - .45, .01); key(RA.glow, 1.4, shotAt(8) - .45, .01); key(PINS.MEL.a, 1, shotAt(8) - .45, .01); key(PINS.TLS.a, 1, shotAt(8) - .45, .01);
+  cam(GA, { lon: -45, lat: 30, dist: 7.5, oy: 140 }, shotAt(8) - .45, .01); cam(GA, { lon: -5, lat: 40, dist: 5.0, oy: 150 }, shotAt(8), T.right - shotAt(8), 'power2.inOut');
+  on(PL.a, shotAt(8), .2); key(PL.p, .9, shotAt(8) - .45, .01); key(PL.p, 1, shotAt(8), T.right - shotAt(8), 'power2.out'); key(PL.a, 0, T.right + .1, .3);
+  popL(L.FRA, T.right, 1, D.end.start + .2);
+  cam(GA, { lon: 70, lat: -5, dist: 6.0, oy: 150 }, T.right + .1, D.end.start + 2 - T.right, 'power2.inOut');   // the loop: the globe turns back toward Australia
+
+  // ===== beats from the spec =====
+  const beat = k => D.beats.filter(b => b.kind === k);
+  const nextChunk = t => { const c = D.chunks.find(c => c.sn > t + .5); return c ? c.sn - .12 : t + 2; };
+  const posFn = (S, b) => b.route ? (t => projRoute(S, t, ROUTES[b.route], b.p)) : (t => projAt(S, t, b.c[0], b.c[1]));
+  for (const b of beat('circle')) { const S = REG[b.scene]; const r = b.r || [150, 110]; MO.hwCircle(S.ov, posFn(S, b), r[0], r[1], b.t, b.u || nextChunk(b.t), { seed: 3 + b.t, col: b.col }); }
+  for (const b of beat('arrow')) { const S = REG[b.scene]; const f0 = t => projAt(S, t, b.from[0], b.from[1]), f1 = t => projAt(S, t, b.to[0], b.to[1]);
+    MO.hwArrow(S.ov, t => { const p0 = f0(t), p1 = f1(t); return { x0: p0.x, y0: p0.y, x1: p1.x, y1: p1.y }; }, b.t, b.u || nextChunk(b.t), { seed: 7 + b.t, col: b.col, bend: b.bend }); }
+  for (const b of beat('grow')) { const el = mk('div', { class: 'kbox', style: `top:${b.y || 160}px` }, $('hook'));
+    el.innerHTML = `<span class="knum">0</span><span class="ksuf">${b.unit || ''}</span>`; tl.set(el, { opacity: 1 }, b.t);
+    MO.countGrow(el.querySelector('.knum'), b.to, b.t, { dur: b.dur || .9, from: b.from || 0, prefix: b.prefix, startScale: .35, suffixEl: el.querySelector('.ksuf') }); MO.textOut(el, b.u || nextChunk(b.t)); }
+  for (const b of beat('flap')) { tl.set(flaps, { opacity: 1, top: (b.y || 170) + 'px' }, b.t - .02); MO.flap(flaps, b.text, b.t, { charset: '0123456789' }); MO.textOut(flaps, b.u || nextChunk(b.t)); }
+  for (const b of beat('card')) { tl.set(card, { x: 540 - 300, y: b.y || 210 }, 0); const cin = card.firstChild;
+    tl.fromTo(card, { opacity: 0, scale: .6, transformOrigin: '50% 50%' }, { opacity: 1, scale: 1, duration: .35, ease: 'power3.out', ...IR }, b.t);
+    MO.countGrow(card.querySelector('.cnum'), b.to, b.t + .05, { dur: b.dur || 1.0, startScale: .5, suffixEl: card.querySelector('.csuf') }); MO.textOut(card, b.u || nextChunk(b.t)); }
+  for (const b of beat('slam')) {
+    if (b.what === 'trophy') { tl.set(trophy, { x: 540 - 95, y: 470 }, 0); MO.slam(trophy, b.t); MO.textOut(trophy, b.u || nextChunk(b.t)); }
+    else if (b.what === 'pop') popL(L[b.lab], b.t, 0);
+    else if (b.what === 'card') { const n = card.querySelector('.cnum'); tl.fromTo(n, { scale: 1 }, { keyframes: [{ scale: 1.3, duration: .08 }, { scale: 1, duration: .25 }], ...IR }, b.t); shake(b.t + .06, .55); }
+    else if (b.what === 'xmark') { tl.set(xmark, { opacity: 0 }, 0); const S = REG[b.scene]; const P = t => projRoute(S, t, RBS, .5);
+      MO.driver(b.t - .02, b.u + .3, t => { const q = P(t); xmark.style.left = (q.x - 85) + 'px'; xmark.style.top = (q.y - 95) + 'px'; });
+      MO.slam(xmark, b.t); MO.textOut(xmark, b.u); key(RBS.a, .35, b.t + .1, .3); }
+    else if (b.what === 'bars') { tl.set(bars, { x: 540 - 433, y: b.y || 220 }, 0); MO.textIn(bars, b.t - .2); const f = bars.querySelectorAll('.bfill');
+      D.bars.forEach((x, i) => tl.fromTo(f[i], { scaleX: 0 }, { scaleX: x.frac, duration: .7, ease: 'power3.out', ...IR }, b.t + i * .25)); MO.textOut(bars, b.u || nextChunk(b.t)); }
+    else if (b.what === 'ring') { const S = REG[b.scene];
+      MO.driver(b.t - .02, b.u + .3, t => { camTo(S, t); const c = proj(new T3.Vector3(0, 0, 0)); const d = CAM.position.length(); const rr = Math.tan(Math.asin(1 / d)) / Math.tan(15 * Math.PI / 180) * 960 + 40;
+        for (const el of [ringBg, ringFg]) { el.setAttribute('cx', c.x.toFixed(1)); el.setAttribute('cy', c.y.toFixed(1)); el.setAttribute('r', rr.toFixed(1)); el.setAttribute('transform', `rotate(-90 ${c.x.toFixed(1)} ${c.y.toFixed(1)})`); }
+        const Lc = 2 * Math.PI * rr, pr = clamp((t - b.t) / .9, 0, 1), e2 = 1 - Math.pow(1 - pr, 3); ringFg.setAttribute('stroke-dasharray', `${(Lc * .578 * e2).toFixed(1)} ${Lc.toFixed(1)}`);
+        ringTxt.style.transform = `translate(${(c.x - ringTxt.offsetWidth / 2).toFixed(1)}px,${(c.y - rr - 150).toFixed(1)}px)`; });
+      MO.textIn(ring, b.t - .1); MO.textIn(ringTxt, b.t + .5); MO.textOut(ring, b.u); MO.textOut(ringTxt, b.u); }
+  }
+  for (const b of beat('flashfx')) tl.to(MO && $('mFlash'), { keyframes: [{ opacity: .4, duration: .06 }, { opacity: 0, duration: .35 }] }, b.t);
+  for (const s of D.impacts || []) shake(s, .7);
+  const cs = D.beats.find(b => b.kind === 'charslam');
+  for (const id in TT) { const { g, t } = TT[id];
+    if (id === 'tHook' && cs && D.lang !== 'hi') { tl.set(g, { opacity: 1 }, cs.t); MO.charSlam(TT.tHook.lines[0], cs.t, { blur: true }); }
+    else if (t.slam) { MO.slam(g, t.a, { shake: !!t.shake }); } else MO.textIn(g, t.a);
+    MO.textOut(g, t.b); }
+  // captions
+  for (const K of CAPS) { const c = K.c;
+    tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { scale: .9, transformOrigin: '540px 1395px' }, { scale: 1, duration: .2, ease: 'power3.out', ...IR }, c.sn);
+    MO.karaoke(K.words, c.wt, w => w.classList.contains('k'));
+    K.words.forEach((w, i) => { if (w.classList.contains('k')) MO.sweep(w, c.wt[Math.min(i, c.wt.length - 1)]); }); }
+  // badge + end card
+  const BW = $('badgeWrap'); const E = D.end; const bs = 108 / 620;
+  tl.fromTo(BW, { opacity: 0, x: 44 - 230, y: 1332 - 450, scale: bs }, { opacity: 1, x: 44 - 230, y: 1332 - 450, scale: bs, duration: .5 }, .2);
+  tl.fromTo(BW, { x: 44 - 230, y: 1332 - 450, scale: bs }, { x: 0, y: 0, scale: 1, duration: .9, ease: 'power2.inOut', ...IR }, E.start);
+  tl.to($('dim'), { opacity: .35, duration: .5 }, E.start);
+  const F = $('follow');
+  tl.fromTo(F, { opacity: 0, scale: .2 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2)', ...IR }, E.btn);
+  MO.textIn($('folSub'), E.sub);
+  const TD = $('tapDot');
+  tl.fromTo(TD, { opacity: 0, x: 470, y: 120 }, { opacity: 1, x: 430, y: 50, duration: .6, ease: 'power2.out', ...IR }, E.tap - .6);
+  tl.to(F, { keyframes: [{ scale: .94, duration: .1 }, { scale: 1, duration: .1 }] }, E.tap);
+  tl.fromTo($('ripple'), { opacity: .5, scale: .05 }, { opacity: 0, scale: 1, duration: .8, ease: 'power2.out', ...IR }, E.tap + .1);
+  tl.set($('folBtn'), { backgroundColor: '#2A1206', border: '5px solid #FF7A1A' }, E.tap + .2);
+  tl.set($('folTxt'), { opacity: 0 }, E.tap + .2); tl.set($('folTxt2'), { opacity: 1 }, E.tap + .2);
+  tl.to(TD, { opacity: 0, duration: .3 }, E.tap + .5);
+  layout();
+  MO.shakeOn($('cshake'), D.dur);
+  if (D.thumb) { const H = D.thumb, t0 = H.t;
+    for (const id of ['caps', 'titles', 'hook', 'fx', 'badgeWrap', 'dim']) $(id).style.display = 'none';
+    key(GA.cam, H.cam, t0 - .05, .01); key(RA.a, 1, t0 - .05, .01); key(RA.prog, H.ra, t0 - .05, .01); key(RA.glow, 1.8, t0 - .05, .01); key(RA.headA, 1, t0 - .05, .01);
+    key(RS.a, 1, t0 - .05, .01); key(RS.prog, H.rs, t0 - .05, .01); key(RS.headA, 0, t0 - .05, .01); key(PL.a, 1, t0 - .05, .01); key(PL.p, H.ra - .01, t0 - .05, .01);
+    key(L.MEL.a, 1, t0 - .05, .01); key(PINS.MEL.a, 1, t0 - .05, .01); key(WS.nightOn, 0, t0 - .05, .01); key(WS.oc, 1, t0 - .05, .01); key(WS.bright, 1.08, t0 - .05, .01);
+    const ov = mk('div', { class: 'scr', style: 'z-index:60' }, $('stage')); ov.innerHTML = H.html;
+    const xm = ov.querySelector('.tx'); MO.driver(t0 - .1, t0 + 1, t => { const q = projRoute(GA, t, RS, H.xat); xm.style.left = (q.x - 110) + 'px'; xm.style.top = (q.y - 120) + 'px'; }); }
+  for (const Tr of ALLT) Tr.keys.sort((a, b) => a.a - b.a);
+  const clk = { t: 0 };
+  tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => { const t = clk.t;
+    for (const S of SCENES) if (S.wins.some(w => t >= w[0] - .05 && t <= w[1] + .45)) renderScene(S, t); } }, 0);
+  return tl;
+}
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => Promise.all(READY)).then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>

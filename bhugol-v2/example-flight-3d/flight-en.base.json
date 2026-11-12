@@ -1,0 +1,176 @@
+{
+ "slug": "flight",
+ "lang": "en",
+ "lines": [
+  {
+   "text": "From Australia, you fly west to reach Europe.",
+   "chunks": [
+    [
+     "FROM *AUSTRALIA,*",
+     2
+    ],
+    [
+     "YOU FLY *WEST*",
+     3
+    ],
+    [
+     "TO REACH EUROPE.",
+     3
+    ]
+   ]
+  },
+  {
+   "text": "This plane flew east. Twenty-four hours, non-stop, and set the airliner world record.",
+   "chunks": [
+    [
+     "THIS PLANE|FLEW *EAST.*",
+     4
+    ],
+    [
+     "*24 HOURS,* NON-STOP,",
+     3
+    ],
+    [
+     "AND SET THE AIRLINER|*WORLD RECORD.*",
+     6
+    ]
+   ]
+  },
+  {
+   "text": "The short way, past India, is about seventeen thousand kilometres.",
+   "chunks": [
+    [
+     "THE SHORT WAY,",
+     3
+    ],
+    [
+     "PAST *INDIA,*",
+     2
+    ],
+    [
+     "IS ABOUT *17,000 KM.*",
+     5
+    ]
+   ]
+  },
+  {
+   "text": "But this jet crossed the Pacific, America and the Atlantic. Two sunsets, two sunrises.",
+   "chunks": [
+    [
+     "BUT THIS JET CROSSED",
+     4
+    ],
+    [
+     "THE *PACIFIC,*",
+     2
+    ],
+    [
+     "*AMERICA*",
+     1
+    ],
+    [
+     "AND THE *ATLANTIC.*",
+     3
+    ],
+    [
+     "*TWO SUNSETS,*",
+     2
+    ],
+    [
+     "*TWO SUNRISES.*",
+     2
+    ]
+   ]
+  },
+  {
+   "text": "So why the long way?",
+   "chunks": [
+    [
+     "SO WHY THE|*LONG WAY?*",
+     5
+    ]
+   ]
+  },
+  {
+   "text": "Because records count distance. Over twenty-three thousand kilometres, more than halfway round Earth.",
+   "chunks": [
+    [
+     "BECAUSE RECORDS|COUNT *DISTANCE.*",
+     4
+    ],
+    [
+     "OVER *23,000 KM,*",
+     4
+    ],
+    [
+     "MORE THAN *HALFWAY*|ROUND EARTH.",
+     5
+    ]
+   ]
+  },
+  {
+   "text": "The record it broke? A Boeing, in two thousand and five. It went the long way too.",
+   "chunks": [
+    [
+     "THE RECORD|IT BROKE?",
+     4
+    ],
+    [
+     "A BOEING,|IN *2005.*",
+     7
+    ],
+    [
+     "IT WENT THE|LONG WAY *TOO.*",
+     6
+    ]
+   ]
+  },
+  {
+   "text": "Controllers even offered it shortcuts. The pilots said no.",
+   "chunks": [
+    [
+     "CONTROLLERS EVEN|OFFERED IT *SHORTCUTS.*",
+     5
+    ],
+    [
+     "THE PILOTS|SAID *NO.*",
+     4
+    ]
+   ]
+  },
+  {
+   "text": "In record books, the wrong way is the right way.",
+   "chunks": [
+    [
+     "IN RECORD BOOKS,",
+     3
+    ],
+    [
+     "THE *WRONG WAY*",
+     3
+    ],
+    [
+     "IS THE *RIGHT WAY.*",
+     4
+    ]
+   ]
+  },
+  {
+   "text": "This is Bhoogol.",
+   "chunks": [
+    [
+     "THIS IS *BHUGOL.*",
+     3
+    ]
+   ]
+  }
+ ],
+ "align": {
+  "cap": 0.38,
+  "tempo": 1.05,
+  "offset": 0.3,
+  "long_before": {
+   "8": 0.55
+  }
+ }
+}

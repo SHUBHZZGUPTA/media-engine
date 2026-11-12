@@ -1,0 +1,164 @@
+{
+ "slug": "flight",
+ "lang": "hi",
+ "lines": [
+  {
+   "text": "Australia से Europe जाना हो, तो आप west जाते हैं।",
+   "chunks": [
+    [
+     "*AUSTRALIA* से EUROPE|जाना हो,",
+     5
+    ],
+    [
+     "तो आप *WEST*|जाते हैं।",
+     5
+    ]
+   ]
+  },
+  {
+   "text": "ये plane east गया। twenty-four hours non-stop, और airliner world record बना दिया।",
+   "chunks": [
+    [
+     "ये PLANE *EAST* गया।",
+     4
+    ],
+    [
+     "*24 HOURS* NON-STOP,",
+     3
+    ],
+    [
+     "और AIRLINER *WORLD RECORD*|बना दिया।",
+     6
+    ]
+   ]
+  },
+  {
+   "text": "India के पास से short रास्ता, करीब seventeen thousand kilometre है।",
+   "chunks": [
+    [
+     "*INDIA* के पास से",
+     4
+    ],
+    [
+     "SHORT रास्ता,",
+     2
+    ],
+    [
+     "करीब *17,000 KM* है।",
+     5
+    ]
+   ]
+  },
+  {
+   "text": "पर ये jet Pacific, America और Atlantic पार कर गया। दो sunset, दो sunrise।",
+   "chunks": [
+    [
+     "पर ये JET *PACIFIC,*",
+     4
+    ],
+    [
+     "*AMERICA* और *ATLANTIC*|पार कर गया।",
+     6
+    ],
+    [
+     "दो *SUNSET,*",
+     2
+    ],
+    [
+     "दो *SUNRISE।*",
+     2
+    ]
+   ]
+  },
+  {
+   "text": "तो लंबा रास्ता क्यों?",
+   "chunks": [
+    [
+     "तो लंबा रास्ता|*क्यों?*",
+     4
+    ]
+   ]
+  },
+  {
+   "text": "क्योंकि record distance गिनता है। twenty-three thousand kilometre से ज़्यादा, आधी धरती से भी लंबा।",
+   "chunks": [
+    [
+     "क्योंकि RECORD|*DISTANCE* गिनता है।",
+     5
+    ],
+    [
+     "*23,000 KM* से ज़्यादा,",
+     5
+    ],
+    [
+     "आधी धरती से|भी *लंबा।*",
+     5
+    ]
+   ]
+  },
+  {
+   "text": "और जो record टूटा? two thousand five का एक Boeing। वो भी लंबे रास्ते गया था।",
+   "chunks": [
+    [
+     "और जो RECORD टूटा?",
+     4
+    ],
+    [
+     "*2005* का एक BOEING।",
+     6
+    ],
+    [
+     "वो भी लंबे रास्ते|गया *था।*",
+     6
+    ]
+   ]
+  },
+  {
+   "text": "Controllers ने तो shortcut तक offer किए। Pilots ने मना कर दिया।",
+   "chunks": [
+    [
+     "CONTROLLERS ने तो|*SHORTCUT* तक OFFER किए।",
+     7
+    ],
+    [
+     "PILOTS ने|*मना* कर दिया।",
+     5
+    ]
+   ]
+  },
+  {
+   "text": "Record की दुनिया में, गलत रास्ता ही सही रास्ता है।",
+   "chunks": [
+    [
+     "RECORD की दुनिया में,",
+     4
+    ],
+    [
+     "*गलत* रास्ता ही",
+     3
+    ],
+    [
+     "*सही* रास्ता है।",
+     3
+    ]
+   ]
+  },
+  {
+   "text": "ये है भूगोल।",
+   "chunks": [
+    [
+     "ये है *भूगोल।*",
+     3
+    ]
+   ]
+  }
+ ],
+ "align": {
+  "cap": 0.38,
+  "tempo": 1.08,
+  "offset": 0.3,
+  "long_before": {
+   "8": 0.55
+  }
+ }
+}
