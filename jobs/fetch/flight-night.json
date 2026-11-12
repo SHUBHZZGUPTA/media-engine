@@ -1,0 +1,14 @@
+{
+ "id": "flight-night",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "night_viirs2012.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&BBOX=-90,-180,90,180&WIDTH=8192&HEIGHT=4096&LAYERS=VIIRS_CityLights_2012"
+  },
+  {
+   "name": "night_bm2016.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&BBOX=-90,-180,90,180&WIDTH=8192&HEIGHT=4096&LAYERS=VIIRS_Black_Marble"
+  }
+ ]
+}
