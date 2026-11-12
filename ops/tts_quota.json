@@ -74,9 +74,17 @@
     {
       "key": "longform",
       "date": "2026-11-12",
-      "n": 2,
+      "n": 4,
       "project": "india-remake",
-      "note": "India remake p14 (hit 429 on 11 Nov) + 1 spare retake",
+      "note": "India remake p14 + retakes p05 p06 p12",
+      "model": "gemini-3.8-flash-tts"
+    },
+    {
+      "key": "longform",
+      "date": "2026-11-13",
+      "n": 4,
+      "project": "india-remake",
+      "note": "India remake retake p09 + rerolls of any retake that misses",
       "model": "gemini-3.8-flash-tts"
     }
   ]
