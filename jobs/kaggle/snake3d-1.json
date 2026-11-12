@@ -1,0 +1,45 @@
+{
+ "id": "snake3d-1",
+ "script": "gpu/snake3d_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 80,
+ "wait_minutes": 85,
+ "params": {
+  "src_sha256": "3dd36535e5be0f4a3af235cf1cd71356c430a8b80154491b5a26c7470f7dd6d4",
+  "src_file": "snake_web.tar.gz",
+  "runs": [
+   [
+    0,
+    405
+   ],
+   [
+    1734,
+    2021
+   ],
+   [
+    2565,
+    2720
+   ],
+   [
+    4150,
+    4695
+   ],
+   [
+    9051,
+    9293
+   ],
+   [
+    13414,
+    13746
+   ],
+   [
+    14026,
+    14223
+   ]
+  ],
+  "ss": 2,
+  "jpeg_q": 95
+ },
+ "requested": "2026-11-12T17:45+05:30"
+}
