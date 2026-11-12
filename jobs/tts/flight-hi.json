@@ -1,0 +1,59 @@
+{
+ "id": "flight-hi",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "flight_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, a short comic pause before each punchline, a hint of wonder on the route and the sunrises. Keep a lively, continuous pace with no long gaps; this is a 45-second Short. The first two lines are the hook: punchy, stress 'west' and then 'east'. The last story line is a dry, quotable punchline. The final line is a short, warm sign-off.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Australia से Europe जाना हो, तो आप west जाते हैं।"
+    ],
+    [
+     "Narrator",
+     "ये plane east गया। twenty-four hours non-stop, और airliner world record बना दिया।"
+    ],
+    [
+     "Narrator",
+     "India के पास से short रास्ता, करीब seventeen thousand kilometre है।"
+    ],
+    [
+     "Narrator",
+     "पर ये jet Pacific, America और Atlantic पार कर गया। दो sunset, दो sunrise, zero landing।"
+    ],
+    [
+     "Narrator",
+     "तो लंबा रास्ता क्यों?"
+    ],
+    [
+     "Narrator",
+     "क्योंकि record distance गिनता है, direction नहीं। twenty-three thousand one hundred fifty-five kilometre। आधी दुनिया से भी ज़्यादा।"
+    ],
+    [
+     "Narrator",
+     "और जो record टूटा? two thousand five का एक Boeing। वो भी लंबे रास्ते गया था।"
+    ],
+    [
+     "Narrator",
+     "Controllers ने तो shortcut तक offer किए। Pilots ने मना कर दिया।"
+    ],
+    [
+     "Narrator",
+     "क्योंकि record की दुनिया में, गलत रास्ता ही सही रास्ता है।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल।"
+    ]
+   ]
+  }
+ ]
+}
