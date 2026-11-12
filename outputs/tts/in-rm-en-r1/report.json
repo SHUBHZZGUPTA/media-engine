@@ -1,0 +1,37 @@
+{
+ "job": "in-rm-en-r1",
+ "items": [
+  {
+   "name": "p05",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 183.36,
+   "took": 16.4
+  },
+  {
+   "name": "p06",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 129.6,
+   "took": 12.7
+  },
+  {
+   "name": "p12",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 186.24,
+   "took": 34.4
+  },
+  {
+   "name": "p14",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 309.96,
+   "took": 32.2
+  }
+ ]
+}
