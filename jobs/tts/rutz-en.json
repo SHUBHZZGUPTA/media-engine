@@ -1,0 +1,67 @@
+{
+ "id": "rutz-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline ('protested', 'Nope'). Keep a lively, quick pace; this is a 40-second Short. Chars voices funny cartoon characters: a cheerful, smug talking alarm clock, then a smug, charming France with a light French accent. Short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You get one New Year's midnight. Russia gets eleven."
+    ],
+    [
+     "Narrator",
+     "When Kamchatka hits midnight... Kaliningrad's still at two PM."
+    ],
+    [
+     "Narrator",
+     "So how do you run one country on eleven clocks?"
+    ],
+    [
+     "Narrator",
+     "In twenty ten, Russia tried deleting two."
+    ],
+    [
+     "Narrator",
+     "People in Kamchatka... protested."
+    ],
+    [
+     "Narrator",
+     "By twenty fourteen, both were back."
+    ],
+    [
+     "Narrator",
+     "Trains? Until twenty eighteen, timetables ran on Moscow time."
+    ],
+    [
+     "Chars",
+     "[cheerful, smug, ticking] Your seven PM train? It's two AM here."
+    ],
+    [
+     "Narrator",
+     "World record, right?"
+    ],
+    [
+     "Narrator",
+     "Nope. France has twelve... thanks to islands all over the planet."
+    ],
+    [
+     "Chars",
+     "[smug, charming French accent, deadpan] Russia is wide. I'm everywhere."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
