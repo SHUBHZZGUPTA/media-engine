@@ -85,3 +85,9 @@ Lines: all clean (flags = whisper spellings: "Mahmoud", "ma 'am", merged sentenc
 matchcheck narrator vs 114.8 Hz: p05 +2.0 FAIL, p06 -1.8 FAIL, p07 0.0, p08 +0.1, p09 -1.2 FAIL, p10 0.0, p11 +0.1, p12 -1.8 FAIL, p13 -0.2. Rate -6% to +2%, loudness within 1 dB (all pass).
 Seams (all on chapter breaks): p04->p05 +2.2, p05->p06 -2.7, p06->p07 +3.4, p07->p08 +1.2, p08->p09 +1.3, p09->p10 +2.5, p10->p11 +0.2, p11->p12 -2.3, p12->p13 0.0.
 Takes are steady inside themselves; the spread is take to take (3.8 still lands each take somewhere in about +-2 st). Clips of the 4 biggest seams sent to Shubham; retakes wait on his call.
+
+## 12 Nov: retakes r1 (p05, p06, p12 retakes + p14 first take), all lines clean
+Narrator vs 114.8 Hz: p05 +1.7 FAIL (was +2.0), p06 +0.3 PASS (was -1.8), p12 -0.9 PASS (was -1.8), p14 +1.3 FAIL.
+Seams: p04->p05 +0.2, p05->p06 -1.2, p06->p07 -0.5, p12->p13 -0.1, p13->p14 0.0. p11->p12 -2.9: p12 opens on the hushed 1893 train scene;
+both p12 takes start low (100 / 97 Hz) on that same text, so it is the line, not chance. Kept r1 p06 + r1 p12.
+13 Nov (4 reserved): r2 = p05, p09, p14 (pending/in-rm-en-r2.json) + 1 spare.
