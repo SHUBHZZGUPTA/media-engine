@@ -1,0 +1,13 @@
+{
+ "job": "flight-hi",
+ "items": [
+  {
+   "name": "flight_hi",
+   "ok": true,
+   "model": "gemini-3.1-flash-tts-preview",
+   "mime": "audio/l16; rate=24000; channels=1",
+   "seconds": 48.24,
+   "took": 15.9
+  }
+ ]
+}
