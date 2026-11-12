@@ -1,0 +1,67 @@
+{
+ "id": "rutz-hi",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline. Keep a lively, quick pace; this is a 40-second Short. Chars voices funny cartoon characters: a cheerful, smug talking alarm clock, then a smug, charming France with a light French accent.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "New Year की आधी रात आपके लिए एक बार। रूस में eleven बार।"
+    ],
+    [
+     "Narrator",
+     "Kamchatka में midnight... तब Kaliningrad में अभी two PM।"
+    ],
+    [
+     "Narrator",
+     "तो एक देश eleven घड़ियों पर कैसे चले?"
+    ],
+    [
+     "Narrator",
+     "twenty ten में रूस ने दो zones हटा दिए।"
+    ],
+    [
+     "Narrator",
+     "Kamchatka के लोग... विरोध में उतर आए।"
+    ],
+    [
+     "Narrator",
+     "twenty fourteen तक, दोनों वापस।"
+    ],
+    [
+     "Narrator",
+     "और ट्रेनें? twenty eighteen तक, सारी timetables Moscow time पर चलती थीं।"
+    ],
+    [
+     "Chars",
+     "[cheerful, smug, ticking] आपकी seven PM की ट्रेन? यहाँ तो two AM हैं।"
+    ],
+    [
+     "Narrator",
+     "World record, है ना?"
+    ],
+    [
+     "Narrator",
+     "नहीं। France के twelve zones हैं... दुनिया भर में फैले द्वीपों की वजह से।"
+    ],
+    [
+     "Chars",
+     "[smug, charming French accent, deadpan] रूस चौड़ा है। मैं हर जगह हूँ।"
+    ],
+    [
+     "Narrator",
+     "ये है भूगोल। ऐसे ही मज़ेदार जियोग्राफी फैक्ट्स के लिए फॉलो करें।"
+    ]
+   ]
+  }
+ ]
+}
