@@ -1,0 +1,43 @@
+{
+ "params": {
+  "src_file": "myths_0cc06888.tar.gz",
+  "src_sha256": "0cc068882b7476b2ae60bb9434e6ee4a66b6ea21e67b80e863db6bae99c2fec5",
+  "jpeg_q": 95,
+  "render_timeout_s": 8000
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "source": {
+   "sha256": "0cc068882b7476b2ae60bb9434e6ee4a66b6ea21e67b80e863db6bae99c2fec5",
+   "ok": true
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "exit": 0,
+   "secs": 1012.9,
+   "tail": "WAIT s0 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s0 1676 ms\nGLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\nCLIP_DONE s0 368 58.3s\nWAIT s8 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s8 1005 ms\nCLIP_DONE s8 1007 157.9s\nWAIT s7 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s7 1129 ms\nCLIP_DONE s7 648 114.6s\nWAIT s6 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s6 1291 ms\nCLIP_DONE s6 626 118.5s\nWAIT s5 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s5 1002 ms\nCLIP_DONE s5 697 118.2s\nWAIT s4 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s4 1135 ms\nCLIP_DONE s4 564 100.6s\nWAIT s3 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s3 1026 ms\nCLIP_DONE s3 706 105.0s\nWAIT s2 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s2 1185 ms\nCLIP_DONE s2 606 101.4s\nWAIT s1 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s1 1571 ms\nCLIP_DONE s1 613 93.7s\nWAIT s9 {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s9 1014 ms\nCLIP_DONE s9 151 24.9s\nALL_DONE\n"
+  }
+ },
+ "renderer": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+ "files": [
+  "s0",
+  "s1",
+  "s2",
+  "s3",
+  "s4",
+  "s5",
+  "s6",
+  "s7",
+  "s8",
+  "s9"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
