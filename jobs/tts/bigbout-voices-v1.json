@@ -1,0 +1,322 @@
+{
+ "id": "bigbout-voices-v1",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "items": [
+  {
+   "name": "general",
+   "direction": "A 48-year-old Ghanaian army general in a fighting game: deep, gravelly, commanding baritone with a natural Ghanaian English accent; gruff, confident, a little amused, every word an order. Performance: natural, real and human, like a top fighting-game voice actor recorded in a studio, never robotic or flat. Each line is a separate short take: say it with full energy and emotion fitting the moment, then leave a clear one-second silence before the next line. Do not add any words, names or sounds that are not written.",
+   "speakers": {
+    "Fighter": "Algenib"
+   },
+   "lines": [
+    [
+     "Fighter",
+     "Fall in line, recruit."
+    ],
+    [
+     "Fighter",
+     "[shouting] Fall in!"
+    ],
+    [
+     "Fighter",
+     "[roaring] Tank charge!"
+    ],
+    [
+     "Fighter",
+     "[firm] Hold the line!"
+    ],
+    [
+     "Fighter",
+     "[growling] Court martial!"
+    ],
+    [
+     "Fighter",
+     "[booming] Full battalion. Attack!"
+    ],
+    [
+     "Fighter",
+     "[dry, unimpressed] Is that an order, or a request?"
+    ],
+    [
+     "Fighter",
+     "[proud] Dismissed!"
+    ],
+    [
+     "Fighter",
+     "[breathless] Regroup. We regroup."
+    ],
+    [
+     "Fighter",
+     "[grunting in pain] Argh!"
+    ],
+    [
+     "Fighter",
+     "[falling, defeated] No! Not like this!"
+    ]
+   ]
+  },
+  {
+   "name": "kiran",
+   "direction": "A 21-year-old Punjabi Indian woman, a kabaddi champion, in a fighting game: bright, quick, cocky young voice with a natural Punjabi Indian English accent; fearless and playful. Performance: natural, real and human, like a top fighting-game voice actor recorded in a studio, never robotic or flat. Each line is a separate short take: say it with full energy and emotion fitting the moment, then leave a clear one-second silence before the next line. Do not add any words, names or sounds that are not written.",
+   "speakers": {
+    "Fighter": "Leda"
+   },
+   "lines": [
+    [
+     "Fighter",
+     "One breath. That's all I need."
+    ],
+    [
+     "Fighter",
+     "[sharp] Raid!"
+    ],
+    [
+     "Fighter",
+     "[excited] Bonus!"
+    ],
+    [
+     "Fighter",
+     "[teasing] Too slow!"
+    ],
+    [
+     "Fighter",
+     "[quick] Slide in!"
+    ],
+    [
+     "Fighter",
+     "[chanting fast, rhythmic] Kabaddi, kabaddi, kabaddi!"
+    ],
+    [
+     "Fighter",
+     "[taunting] Catch me if you can!"
+    ],
+    [
+     "Fighter",
+     "[smug] Seven points. Easy."
+    ],
+    [
+     "Fighter",
+     "[indignant] Recount! I want a recount!"
+    ],
+    [
+     "Fighter",
+     "[sharp gasp of pain] Ah!"
+    ],
+    [
+     "Fighter",
+     "[falling, defeated] Nooo!"
+    ]
+   ]
+  },
+  {
+   "name": "daichi",
+   "direction": "A 28-year-old Japanese karate master in a fighting game: calm, deep, disciplined male voice with a natural Japanese accent in English; controlled, then explosive on attacks. Performance: natural, real and human, like a top fighting-game voice actor recorded in a studio, never robotic or flat. Each line is a separate short take: say it with full energy and emotion fitting the moment, then leave a clear one-second silence before the next line. Do not add any words, names or sounds that are not written.",
+   "speakers": {
+    "Fighter": "Orus"
+   },
+   "lines": [
+    [
+     "Fighter",
+     "Show me your resolve."
+    ],
+    [
+     "Fighter",
+     "[focused shout] Spirit palm!"
+    ],
+    [
+     "Fighter",
+     "[sharp] Tornado step!"
+    ],
+    [
+     "Fighter",
+     "[calm, low] Stone guard."
+    ],
+    [
+     "Fighter",
+     "[explosive] Rising crane!"
+    ],
+    [
+     "Fighter",
+     "[slow build, then a mighty shout] Mountain... breaker!"
+    ],
+    [
+     "Fighter",
+     "[quiet, centred] Breathe. Then strike."
+    ],
+    [
+     "Fighter",
+     "[serene] The road continues."
+    ],
+    [
+     "Fighter",
+     "[disappointed, quiet] I must train harder."
+    ],
+    [
+     "Fighter",
+     "[grunting in pain] Ugh!"
+    ],
+    [
+     "Fighter",
+     "[falling, defeated] Too... strong..."
+    ]
+   ]
+  },
+  {
+   "name": "lin",
+   "direction": "A 26-year-old Chinese wushu champion in a fighting game: bright, confident, graceful female voice with a light natural Mandarin accent in English; playful but fierce. Performance: natural, real and human, like a top fighting-game voice actor recorded in a studio, never robotic or flat. Each line is a separate short take: say it with full energy and emotion fitting the moment, then leave a clear one-second silence before the next line. Do not add any words, names or sounds that are not written.",
+   "speakers": {
+    "Fighter": "Zephyr"
+   },
+   "lines": [
+    [
+     "Fighter",
+     "Try to keep up."
+    ],
+    [
+     "Fighter",
+     "[sharp] Jade wind!"
+    ],
+    [
+     "Fighter",
+     "[rapid, energetic] Thousand petals!"
+    ],
+    [
+     "Fighter",
+     "[light, airy] Swallow flip!"
+    ],
+    [
+     "Fighter",
+     "[fierce] Cloud splitter!"
+    ],
+    [
+     "Fighter",
+     "[soaring, triumphant] Heavenly crane dance!"
+    ],
+    [
+     "Fighter",
+     "[teasing] Too slow!"
+    ],
+    [
+     "Fighter",
+     "[cheerful] Graceful, right?"
+    ],
+    [
+     "Fighter",
+     "[annoyed] You got lucky."
+    ],
+    [
+     "Fighter",
+     "[sharp cry of pain] Hah!"
+    ],
+    [
+     "Fighter",
+     "[falling, defeated] No way!"
+    ]
+   ]
+  },
+  {
+   "name": "hex",
+   "direction": "A 30-year-old British special-forces operative in a fighting game: firm, cool, precise female voice with a natural London British accent; clipped and focused, dry humour. Performance: natural, real and human, like a top fighting-game voice actor recorded in a studio, never robotic or flat. Each line is a separate short take: say it with full energy and emotion fitting the moment, then leave a clear one-second silence before the next line. Do not add any words, names or sounds that are not written.",
+   "speakers": {
+    "Fighter": "Kore"
+   },
+   "lines": [
+    [
+     "Fighter",
+     "Target acquired."
+    ],
+    [
+     "Fighter",
+     "[sharp] Breaching!"
+    ],
+    [
+     "Fighter",
+     "[short] Vault!"
+    ],
+    [
+     "Fighter",
+     "[cool, quiet] Smoke step."
+    ],
+    [
+     "Fighter",
+     "[aggressive] Takedown!"
+    ],
+    [
+     "Fighter",
+     "[calm, then fierce] Operation Blackout. Go!"
+    ],
+    [
+     "Fighter",
+     "[dry] Sloppy."
+    ],
+    [
+     "Fighter",
+     "[satisfied] Mission complete."
+    ],
+    [
+     "Fighter",
+     "[strained, into an earpiece] Abort. Abort."
+    ],
+    [
+     "Fighter",
+     "[short grunt of pain] Hngh!"
+    ],
+    [
+     "Fighter",
+     "[falling, defeated] Man down!"
+    ]
+   ]
+  },
+  {
+   "name": "announcer",
+   "direction": "A fighting-game arena announcer: huge, hyped, booming male voice, dramatic and clear, like a big tournament stadium announcer. Performance: natural, real and human, like a top fighting-game voice actor recorded in a studio, never robotic or flat. Each line is a separate short take: say it with full energy and emotion fitting the moment, then leave a clear one-second silence before the next line. Do not add any words, names or sounds that are not written.",
+   "speakers": {
+    "Announcer": "Fenrir"
+   },
+   "lines": [
+    [
+     "Announcer",
+     "Round one!"
+    ],
+    [
+     "Announcer",
+     "Round two!"
+    ],
+    [
+     "Announcer",
+     "Final round!"
+    ],
+    [
+     "Announcer",
+     "Fight!"
+    ],
+    [
+     "Announcer",
+     "K.O.!"
+    ],
+    [
+     "Announcer",
+     "Perfect!"
+    ],
+    [
+     "Announcer",
+     "Time!"
+    ],
+    [
+     "Announcer",
+     "You win!"
+    ],
+    [
+     "Announcer",
+     "You lose!"
+    ],
+    [
+     "Announcer",
+     "Draw!"
+    ]
+   ]
+  }
+ ]
+}
