@@ -1,0 +1,79 @@
+{
+ "id": "twins-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk, playful and curious, with natural emphasis on the country names and a short comic pause before each punchline. Chars voices a funny cartoon United Kingdom, crying dramatically. The countdown builds: number one is the biggest, most excited reveal. The last line trails off so it can loop back into the first line.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "I bet a hundred dollars you didn't know there are some countries that look completely different, but are almost exactly the same size!"
+    ],
+    [
+     "Narrator",
+     "Let's start with number five: Nepal and Bangladesh."
+    ],
+    [
+     "Narrator",
+     "They are only twenty-two kilometres apart, but one touches the sky with Mount Everest, while the other touches the ocean with its rivers!"
+    ],
+    [
+     "Narrator",
+     "Number four is Guinea and the United Kingdom."
+    ],
+    [
+     "Narrator",
+     "You won't believe it. Once the biggest empire in the world, it now has an area as small as Guinea."
+    ],
+    [
+     "Chars",
+     "[sobbing, over-dramatic, posh British] So sad."
+    ],
+    [
+     "Narrator",
+     "Number three is Chile and Zambia."
+    ],
+    [
+     "Narrator",
+     "If you pull Zambia like chewing gum, then you would get another Chile of the same size."
+    ],
+    [
+     "Narrator",
+     "Number two is Italy and the Philippines."
+    ],
+    [
+     "Narrator",
+     "One looks like a boot, while the other looks like a sitting man."
+    ],
+    [
+     "Narrator",
+     "But put them together, and they form a complete human body."
+    ],
+    [
+     "Narrator",
+     "[building excitement, big reveal] And number one... is Malaysia and Vietnam!"
+    ],
+    [
+     "Narrator",
+     "Both are in Southeast Asia, have long coastlines, and are almost the same size."
+    ],
+    [
+     "Narrator",
+     "[warm, a little teasing] I think they were made for each other."
+    ],
+    [
+     "Narrator",
+     "[cheeky, quick, trailing off] Want to go double or nothing? Because..."
+    ]
+   ]
+  }
+ ]
+}
