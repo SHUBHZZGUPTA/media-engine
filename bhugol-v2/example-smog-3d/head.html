@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Delhi smog 3D (v2)</title>
+<script src="./gsap.min.js"></script>
+<script src="./three.min.js"></script>
+<script src="./motion.js"></script>
+<script src="./shader_xfade.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 800; src: url(assets/muk800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 700; src: url(assets/muk700.woff2) format('woff2'); }
+:root { --mari: #FFC23A; --white: #F4F8FB; --fire: #FF7A1A; --ink: #03101A; --aqua: #38D6FF; }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #02070D; }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+.push { position: absolute; inset: 0; }
+.cv { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.chars { position: absolute; inset: 0; }
+.char { position: absolute; opacity: 0; }
+.ov { position: absolute; inset: 0; }
+.plbl { position: absolute; left: 0; top: 0; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #03101A; line-height: 1; opacity: 0; text-align: center; }
+.plbl small { display: block; font-family: 'Arch', sans-serif; font-weight: 800; letter-spacing: .1em; margin-top: 6px; }
+#dim { background: #02070D; opacity: 0; }
+#flash { background: #ffffff; opacity: 0; }
+.ttl, .cap { position: absolute; inset: 0; opacity: 0; }
+.tl { position: absolute; left: 60px; width: 960px; text-align: center; white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; color: var(--white); line-height: 1; }
+.tl.big { font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; letter-spacing: .01em; }
+.tl.small { font-family: 'Arch', 'Muk', sans-serif; font-weight: 800; letter-spacing: .12em; }
+.k { color: var(--mari); }
+.cl { position: absolute; left: 195px; width: 740px; text-align: center; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #02070D; line-height: 1; }
+.hi .cl, .hi .tl.big, .hi .plbl { letter-spacing: 0; }
+.cl span { opacity: 0; display: inline-block; white-space: pre; }
+.cl .k { color: #FFFFFF; }
+#badgeWrap { position: absolute; left: 230px; top: 450px; width: 620px; height: 620px; opacity: 0; transform-origin: 0 0; }
+#badgeShadow { position: absolute; inset: 4% 3% -4% 3%; border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(8px); }
+#badge { position: absolute; inset: 0; width: 100%; height: 100%; }
+#follow { position: absolute; left: 220px; top: 1125px; width: 640px; height: 130px; opacity: 0; }
+#folBtn { position: absolute; inset: 0; border-radius: 65px; background: var(--fire); box-sizing: border-box; }
+#folTxt, #folTxt2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; font-size: 66px; letter-spacing: .05em; color: var(--ink); }
+#folTxt2 { color: var(--fire); opacity: 0; }
+#tapDot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.85); border: 3px solid var(--ink); opacity: 0; }
+#ripple { position: absolute; left: 20px; top: -235px; width: 600px; height: 600px; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(255,255,255,.6); opacity: 0; }
+.kbox { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; line-height: 1; opacity: 0; }
+.knum, .ksuf { display: inline-block; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; }
+.knum { font-size: 230px; -webkit-text-stroke-width: 30px; color: var(--mari); text-shadow: 0 0 40px rgba(255,194,58,.5); }
+.ksuf { font-size: 110px; -webkit-text-stroke-width: 18px; color: var(--white); margin-left: 26px; }
+.card { position: absolute; left: 0; top: 0; width: 560px; opacity: 0; }
+.cin { background: rgba(6,12,22,.88); border: 4px solid var(--aqua); border-radius: 26px; padding: 22px 30px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.6); }
+.crow { display: flex; align-items: center; gap: 14px; font-family: 'Arch', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: .08em; color: var(--white); }
+.cflag { font-family: 'Emo', sans-serif; font-size: 50px; }
+.cbig { margin-top: 6px; font-family: 'BSD', sans-serif; font-weight: 900; color: var(--mari); line-height: 1; }
+.cnum { display: inline-block; font-size: 128px; } .csuf { display: inline-block; font-size: 64px; color: var(--white); margin-left: 14px; }
+.ctag { margin-top: 10px; display: inline-block; padding: 6px 16px; border-radius: 40px; background: rgba(56,214,255,.18); color: var(--aqua); font-family: 'Arch', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: .1em; }
+.tag { position: absolute; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 54px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 10px #03101A; white-space: nowrap; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="cshake" class="scr"><div id="scenes" class="scr"></div></div></div>
+    <div id="dim" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="hook" class="scr"></div>
+    <div id="badgeWrap"><div id="badgeShadow"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
+    <div id="follow"><div id="folBtn"></div><div id="folTxt"></div><div id="folTxt2"></div><div id="ripple"></div><div id="tapDot"></div></div>
+  </div>
+</div>
+__MBLUR__
+<script>
+const D = __DATA__;
+if (D.lang === 'hi') document.getElementById('root').classList.add('hi');
+const NS = 'http://www.w3.org/2000/svg', T3 = THREE;
+const $ = id => document.getElementById(id);
+const tr = s => (D.i18n && D.i18n[s]) || s;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const LN = D.LN;
+
+/* ---------- keyframe tracks (evaluated from time only) ---------- */
+const EZ = {}; const ease = n => EZ[n || 'power2.inOut'] || (EZ[n || 'power2.inOut'] = gsap.parseEase(n || 'power2.inOut'));
+function Track(base) { return { base, last: base, keys: [] }; }
+function key(T, to, at, dur, e) { const from = (typeof T.last === 'object') ? Object.assign({}, T.last) : T.last;
+  const tgt = (typeof to === 'object') ? Object.assign({}, from, to) : to; T.keys.push({ a: at, d: Math.max(.04, dur), from, to: tgt, e: ease(e) }); T.last = tgt; }
+function valAt(T, t) { let v = T.base;
+  for (const k of T.keys) { if (t < k.a) break; const p = k.e(Math.min(1, (t - k.a) / k.d));
+    if (typeof k.to === 'object') { v = {}; for (const q in k.to) v[q] = k.from[q] + (k.to[q] - k.from[q]) * p; } else v = k.from + (k.to - k.from) * p; }
+  return v; }
+const ALLT = [];   // every track, sorted once at the end of build()
+const TK = b => { const T = Track(b); ALLT.push(T); return T; };
+
+/* ---------- assets ---------- */
+const loader = new T3.TextureLoader(); const TX = {};
+function tex(n, opt) { if (!TX[n]) TX[n] = new Promise(r => loader.load('assets/' + n, t => { t.anisotropy = 4; if (opt && opt.nearest) { t.minFilter = t.magFilter = T3.NearestFilter; t.generateMipmaps = false; } r(t); })); return TX[n]; }
+const CPU = {};
+function cpuImg(n) { if (!CPU[n]) CPU[n] = new Promise(r => { const im = new Image(); im.onload = () => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); r({ w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }); }; im.src = 'assets/' + n; }); return CPU[n]; }
+const sampleCPU = (I, u, v) => { const x = clamp(Math.round(u * (I.w - 1)), 0, I.w - 1), y = clamp(Math.round((1 - v) * (I.h - 1)), 0, I.h - 1); return I.d[(y * I.w + x) * 4] / 255; };
+function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.25, 'rgba(255,255,255,.55)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new T3.CanvasTexture(c); }
+function noiseTex() { const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); const im = g.createImageData(256, 256);
+  const H = (x, y) => { const s = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return s - Math.floor(s); };
+  const V = (x, y) => { const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+    const a = H(xi % 16, yi % 16), b = H((xi + 1) % 16, yi % 16), c2 = H(xi % 16, (yi + 1) % 16), d = H((xi + 1) % 16, (yi + 1) % 16); return a + (b - a) * u + (c2 - a) * v + (a - b - c2 + d) * u * v; };
+  for (let y = 0; y < 256; y++) for (let x = 0; x < 256; x++) { const n = .55 * V(x / 16, y / 16) + .3 * V(x / 8 % 16, y / 8 % 16) + .15 * V(x / 4 % 16, y / 4 % 16); const k = (y * 256 + x) * 4; im.data[k] = im.data[k + 1] = im.data[k + 2] = n * 255; im.data[k + 3] = 255; }
+  g.putImageData(im, 0, 0); const t = new T3.CanvasTexture(c); t.wrapS = t.wrapT = T3.RepeatWrapping; return t; }
+function flagTex(stripes, vertical) { const c = document.createElement('canvas'); c.width = 300; c.height = 200; const g = c.getContext('2d');
+  stripes.forEach((col, i) => { g.fillStyle = col; if (vertical) g.fillRect(i * 300 / stripes.length, 0, 300 / stripes.length + 1, 200); else g.fillRect(0, i * 200 / stripes.length, 300, 200 / stripes.length + 1); }); return new T3.CanvasTexture(c); }
+const GLOW = glowTex(), NOISE = noiseTex();
+const READY = [];
+const FOV = 30, ASP = 1080 / 1920;
+const toScreen = (cam, p) => { const v = p.clone().project(cam); return { x: (v.x + 1) / 2 * 1080, y: (1 - v.y) / 2 * 1920, z: v.z }; };
+function newScene() { const el = mk('div', { class: 'scene' }, $('scenes')); const push = mk('div', { class: 'push' }, el); return { el, push }; }
+function renderer(push) { const cv = mk('canvas', { width: 1080, height: 1920, class: 'cv' }, push);
+  const R = new T3.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true }); R.setPixelRatio(1); R.setSize(1080, 1920, false); return { cv, R }; }
+
+/* ---------- 3D map: globe + terrain flyover (one per region; prefix = asset folder) ---------- */
+function map3(P, M3, o) {
+  const [L0, L1, B0, B1] = M3.bbox; const LC = (L0 + L1) / 2, BC = (B0 + B1) / 2, KX = Math.cos(BC * Math.PI / 180);
+  const { el, push } = newScene(); const G = renderer(push), Tn = renderer(push); const ov = mk('div', { class: 'ov' }, push); const chars = mk('div', { class: 'chars' }, push);
+  // globe
+  const sg = new T3.Scene(); sg.background = new T3.Color(0x01040A); const cg = new T3.PerspectiveCamera(30, ASP, .01, 100);
+  const globe = new T3.Mesh(new T3.SphereGeometry(1, 160, 120), new T3.MeshBasicMaterial({ color: 0xffffff })); sg.add(globe);
+  sg.add(new T3.Mesh(new T3.SphereGeometry(1.06, 96, 72), new T3.ShaderMaterial({ side: T3.BackSide, transparent: true, blending: T3.AdditiveBlending, depthWrite: false,
+    vertexShader: `varying vec3 vN; varying vec3 vP; void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vP; void main(){ float f = pow(clamp(1.0 - abs(dot(normalize(-vP), vN)), 0.0, 1.0), 2.2); gl_FragColor = vec4(0.35, 0.65, 1.0, f * 0.9); }` })));
+  { const n = 1400, p = new Float32Array(n * 3); for (let i = 0; i < n; i++) { const a = (i * 2.399963) % (Math.PI * 2), z = 1 - 2 * ((i + .5) / n), r = Math.sqrt(1 - z * z); p.set([Math.cos(a) * r * 30, z * 30, Math.sin(a) * r * 30], i * 3); }
+    const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(p, 3)); sg.add(new T3.Points(g, new T3.PointsMaterial({ color: 0xffffff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: .7 }))); }
+  const ll = (lon, lat, r) => { const ph = (lon + 180) * Math.PI / 180, th = (90 - lat) * Math.PI / 180; return new T3.Vector3(-Math.cos(ph) * Math.sin(th) * r, Math.cos(th) * r, Math.sin(ph) * Math.sin(th) * r); };
+  const flagMat = new T3.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false }); const flagSph = new T3.Mesh(new T3.SphereGeometry(1.003, 160, 120), flagMat); sg.add(flagSph);
+  if (o.flagCanvas) { flagMat.map = new T3.CanvasTexture(o.flagCanvas); flagMat.needsUpdate = true; }
+  // terrain
+  const st = new T3.Scene(); st.background = new T3.Color(0x0A1424); st.fog = new T3.Fog(0x0A1424, o.fog ? o.fog[0] : 30, o.fog ? o.fog[1] : 70);
+  const ct = new T3.PerspectiveCamera(32, ASP, .005, 200); ct.up.set(0, 0, 1);
+  const Wt = (L1 - L0) * KX, Ht = (B1 - B0), EX = .0105;
+  const TU = { dem: { value: null }, ne: { value: null }, cls: { value: null }, mask: { value: null }, hs: { value: null }, noiseT: { value: NOISE }, hl: { value: 0 }, lit: { value: 0 }, ice: { value: 1 }, iceA: { value: 0 }, exag: { value: 0 }, haze: { value: null }, hazeA: { value: 0 }, dim: { value: 0 }, dl: { value: 0 },
+    hrect: { value: new T3.Vector4((M3.haze_bbox[0] - L0) / (L1 - L0), (M3.haze_bbox[2] - B0) / (B1 - B0), (M3.haze_bbox[1] - L0) / (L1 - L0), (M3.haze_bbox[3] - B0) / (B1 - B0)) },
+    crect: { value: new T3.Vector4((M3.pa_close_bbox[0] - L0) / (L1 - L0), (M3.pa_close_bbox[2] - B0) / (B1 - B0), (M3.pa_close_bbox[1] - L0) / (L1 - L0), (M3.pa_close_bbox[3] - B0) / (B1 - B0)) }, time: { value: 0 } };
+  st.add(new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 640, 320), new T3.ShaderMaterial({ uniforms: TU,
+    vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform sampler2D ne, cls, mask, hs, noiseT, haze; uniform float hl, lit, ice, iceA, time, hazeA, dim, dl; uniform vec4 crect, hrect; varying vec2 vUv;
+      void main(){ vec3 c = texture2D(ne, vUv).rgb;
+        vec2 q = (vUv - crect.xy) / (crect.zw - crect.xy); float f = smoothstep(0.0, 0.08, q.x) * smoothstep(1.0, 0.92, q.x) * smoothstep(0.0, 0.08, q.y) * smoothstep(1.0, 0.92, q.y);
+        if (f > 0.0) c = mix(c, texture2D(cls, clamp(q, 0.0, 1.0)).rgb, f);
+        float h = texture2D(hs, vUv).r; c *= 0.42 + 0.78 * h; float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, 0.82);
+        vec2 hq = (vUv - hrect.xy) / (hrect.zw - hrect.xy); float hf = smoothstep(0.0, 0.04, hq.x) * smoothstep(1.0, 0.96, hq.x) * smoothstep(0.0, 0.05, hq.y) * smoothstep(1.0, 0.95, hq.y);
+        if (hazeA > 0.0 && hf > 0.0) { vec3 hz = texture2D(haze, clamp(hq, 0.0, 1.0)).rgb; c = mix(c, hz, hazeA * hf); }
+        float mv = texture2D(mask, vUv).r * 255.0; float idx = floor(mv / 30.0 + 0.5); float m = (mv > 15.0 && idx <= lit && idx < 7.5) ? 1.0 : 0.0; float dm = (idx > 7.5 && mv > 15.0) ? 1.0 : 0.0;
+        float wave = texture2D(noiseT, vUv * 14.0 + vec2(time * 0.01, 0.0)).r;
+        c = mix(c, vec3(1.0, 0.52, 0.12) * (0.8 + 0.3 * wave) + c * 0.25, m * hl * 0.62); c *= mix(1.0, 0.72, hl * (1.0 - m));
+        c = mix(c, vec3(0.22, 0.85, 1.0) + c * 0.2, dm * dl * 0.75); c *= 1.0 - dim * 0.45;
+        if (iceA > 0.0) { float n = texture2D(noiseT, vUv * vec2(3.0, 2.0)).r; float front = ice + (n - 0.5) * 0.25; float covered = smoothstep(front - 0.03, front + 0.03, vUv.y);
+          vec3 icec = mix(vec3(0.86, 0.93, 1.0), vec3(0.66, 0.80, 0.95), texture2D(noiseT, vUv * 9.0).r) * (0.75 + 0.35 * h); c = mix(c, icec, covered * iceA); }
+        gl_FragColor = vec4(c, 1.0); }` })));
+  const demI = { I: null }; const hAt = (lon, lat) => demI.I ? sampleCPU(demI.I, (lon - L0) / (L1 - L0), (lat - B0) / (B1 - B0)) * EX : 0;
+  const wpos = (lon, lat, up) => new T3.Vector3((lon - LC) * KX, lat - BC, hAt(lon, lat) * TU.exag.value / EX + (up || 0));
+  const WU = { rise: { value: 0 }, wh: { value: .22 } };
+  const wallMat = new T3.ShaderMaterial({ uniforms: WU, transparent: true, depthWrite: false, side: T3.DoubleSide, blending: T3.AdditiveBlending,
+    vertexShader: `uniform float rise, wh; attribute float k; varying float vK; void main(){ vK = k; vec3 p = position; p.z += k * wh * rise; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform float rise; varying float vK; void main(){ float a = (1.0 - vK) * (1.0 - vK) * rise; gl_FragColor = vec4(0.25, 0.85, 1.0, a * 0.95); }` });
+  // translucent layers over the plain, shaped by the plain mask (lid = warm inversion, cold = air off the plateau)
+  const LB = [70, 92, 20, 33]; const lays = []; let BMT = null;
+  function blurMask() { if (BMT) return BMT; BMT = { value: null };
+    READY.push(new Promise(res => { const im = new Image(); im.onload = () => { const w = im.width, hh = im.height; const a = document.createElement('canvas'); a.width = w; a.height = hh; const x = a.getContext('2d'); x.drawImage(im, 0, 0);
+      const d = x.getImageData(0, 0, w, hh); for (let i = 0; i < d.data.length; i += 4) { const v = d.data[i] > 15 ? 255 : 0; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; } x.putImageData(d, 0, 0);
+      const b = document.createElement('canvas'); b.width = w; b.height = hh; const y = b.getContext('2d'); y.filter = `blur(${Math.round(w * .005)}px)`; y.drawImage(a, 0, 0);
+      const t = new T3.CanvasTexture(b); t.minFilter = t.magFilter = T3.LinearFilter; BMT.value = t; res(); }; im.src = 'assets/' + P + 'pa_mask.png'; }));
+    return BMT; }
+  function layer(col, edgeCol, ro, sweep) { const U = { a: { value: 0 }, sw: { value: 1 }, time: { value: 0 }, mask: blurMask(), noiseT: TU.noiseT, col: { value: new T3.Color(col) }, ec: { value: new T3.Color(edgeCol) },
+      mr: { value: new T3.Vector4((LB[0] - L0) / (L1 - L0), (LB[2] - B0) / (B1 - B0), (LB[1] - L0) / (L1 - L0), (LB[3] - B0) / (B1 - B0)) } };
+    const m = new T3.Mesh(new T3.PlaneGeometry((LB[1] - LB[0]) * KX, LB[3] - LB[2], 1, 1), new T3.ShaderMaterial({ uniforms: U, transparent: true, depthWrite: false, side: T3.DoubleSide,
+      vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+      fragmentShader: `uniform sampler2D mask, noiseT; uniform float a, sw, time; uniform vec3 col, ec; uniform vec4 mr; varying vec2 vUv;
+        void main(){ vec2 q = mix(mr.xy, mr.zw, vUv); float c = texture2D(mask, q).r; if (c <= 0.01) discard;
+          float n = texture2D(noiseT, vUv * vec2(5.0, 3.0) + vec2(time * 0.015, time * 0.006)).r;
+          float body = smoothstep(0.05, 0.6, c); float edge = smoothstep(0.08, 0.5, c) * (1.0 - smoothstep(0.5, 0.92, c));
+          float s = ${sweep ? 'smoothstep(1.0 - sw * 1.25, 1.0 - sw * 1.25 + 0.25, vUv.y)' : '1.0'};
+          vec3 cc = mix(col, ec, edge) * (0.85 + 0.3 * n);
+          float al = a * s * (body * (0.13 + 0.10 * n) + edge * 0.55);
+          gl_FragColor = vec4(cc, al); }` }));
+    m.position.set(((LB[0] + LB[1]) / 2 - LC) * KX, (LB[2] + LB[3]) / 2 - BC, .3); m.renderOrder = ro; m.frustumCulled = false; st.add(m);
+    const r = { m, U, a: TK(0), z: TK(.3), sw: TK(1) }; lays.push(r); return r; }
+  const pin = new T3.Group(); st.add(pin);
+  const beam = new T3.Mesh(new T3.CylinderGeometry(.008, .008, .24, 12, 1, true), new T3.MeshBasicMaterial({ color: 0x38D6FF, transparent: true, opacity: 0, blending: T3.AdditiveBlending, depthWrite: false }));
+  beam.rotation.x = Math.PI / 2; beam.position.z = .12; pin.add(beam);
+  const head = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0x38D6FF, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 })); head.position.z = .24; head.scale.set(.16, .16, 1); pin.add(head);
+  // flat overlay shapes (true-size outlines laid on the terrain): {ring, fill: texture, col, z}
+  const ovs = [];
+  function overlay(ring, fillTex, col) { const pts = ring.map(([lo, la]) => new T3.Vector2((lo - LC) * KX, la - BC)); const shp = new T3.Shape(pts);
+    const g = new T3.ShapeGeometry(shp); const bb = new T3.Box2().setFromPoints(pts); const uv = g.attributes.position; const uvs = [];
+    for (let i = 0; i < uv.count; i++) uvs.push((uv.getX(i) - bb.min.x) / (bb.max.x - bb.min.x), (uv.getY(i) - bb.min.y) / (bb.max.y - bb.min.y)); g.setAttribute('uv', new T3.Float32BufferAttribute(uvs, 2));
+    const grp = new T3.Group(); st.add(grp);
+    const edge = new T3.Mesh(new T3.ShapeGeometry(shp), new T3.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); edge.renderOrder = 5; grp.add(edge);
+    const cx = (bb.min.x + bb.max.x) / 2, cy = (bb.min.y + bb.max.y) / 2; edge.geometry.translate(-cx, -cy, 0); edge.scale.set(1.035, 1.035, 1); edge.position.set(cx, cy, -.002);
+    const fill = new T3.Mesh(g, new T3.MeshBasicMaterial(fillTex ? { map: fillTex, transparent: true, opacity: 0, depthWrite: false, depthTest: false } : { color: col, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); fill.renderOrder = 6; grp.add(fill);
+    const sh = new T3.Mesh(new T3.ShapeGeometry(shp), new T3.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); sh.renderOrder = 4; sh.geometry.translate(.06, -.08, 0); st.add(sh);
+    const rec = { grp, fill, edge, sh, a: TK(0), z: TK(1.6), ring }; ovs.push(rec); return rec; }
+  const S = { el, push, ov, chars, G, Tn, sg, cg, st, ct, globe, TU, WU, pin, beam, head, labels: [], cards: [], lls: [], ovs, overlay, wpos, ll, KX, LC, BC, layer, lays, exK: TK(o.exagK || 26),
+    gk: TK({ lon: 20, lat: 20, dist: 3.4 }), tk: TK(Object.assign({ lon: LC, lat: BC, dist: 11, el: 80, yaw: 0 }, o.tk0 || {})), x: TK(o.globe ? 0 : 1), hl: TK(0), hazeA: TK(0), dim: TK(0), dl: TK(0), flagA: TK(0), smogA: TK(0), smogH: TK(.35), smogF: TK(0), lit: TK(0), ice: TK(1), iceA: TK(0), rise: TK(0), pinA: TK(0), wins: [] };
+  READY.push(tex(P + 'globe.jpg').then(t => { globe.material.map = t; globe.material.needsUpdate = true; }), tex(P + 'ne.jpg').then(t => TU.ne.value = t), tex(P + 'pa_close.jpg').then(t => TU.cls.value = t),
+    tex(P + 'pa_mask.png', { nearest: 1 }).then(t => TU.mask.value = t), tex(P + 'haze.jpg').then(t => TU.haze.value = t), tex(P + 'hillshade.png').then(t => TU.hs.value = t), tex(P + 'dem8.png').then(t => TU.dem.value = t),
+    cpuImg(P + 'dem8.png').then(I => { demI.I = I; TU.exag.value = EX * (o.exagK || 26);
+      const pts = M3.pa.map(([lo, la]) => wpos(lo, la, .002)); const pos = [], kk = [];
+      for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; pos.push(a.x, a.y, a.z, b.x, b.y, b.z, b.x, b.y, b.z, a.x, a.y, a.z, b.x, b.y, b.z, a.x, a.y, a.z); kk.push(0, 0, 1, 0, 1, 1); }
+      const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.Float32BufferAttribute(pos, 3)); g.setAttribute('k', new T3.Float32BufferAttribute(kk, 1)); st.add(new T3.Mesh(g, wallMat));
+      pin.position.copy(wpos(M3.pin[0], M3.pin[1])); }), cpuImg(P + 'pa_mask.png').then(MI => { const pts = [], sd = []; let k = 0;
+      while (pts.length < 3 * 2600 && k < 400000) { k++; const u = Math.random(), v = Math.random(); const lon = L0 + u * (L1 - L0), lat = B0 + v * (B1 - B0); const mv = sampleCPU(MI, u, v) * 255; if (mv < 15) continue;
+        pts.push((lon - LC) * KX, lat - BC, 0); sd.push(Math.random(), Math.random(), Math.random()); }
+      const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.Float32BufferAttribute(pts, 3)); g.setAttribute('seed', new T3.Float32BufferAttribute(sd, 3));
+      const U = { alpha: { value: 0 }, h: { value: .35 }, time: { value: 0 }, flow: { value: 0 }, glow: { value: GLOW } }; S.smogU = U;
+      const pm = new T3.Points(g, new T3.ShaderMaterial({ uniforms: U, transparent: true, depthWrite: false,
+        vertexShader: `uniform float h, time, flow; attribute vec3 seed; varying float vA; void main(){ vec3 p = position; p.x += sin(time * 0.25 + seed.x * 30.0) * 0.08 + flow * fract(seed.y + time * 0.06) * 0.6; p.z = 0.02 + seed.z * h;
+          vec4 mv = modelViewMatrix * vec4(p, 1.0); gl_Position = projectionMatrix * mv; gl_PointSize = (90.0 + seed.y * 120.0) / -mv.z * 10.0; vA = 0.5 + 0.5 * seed.x; }`,
+        fragmentShader: `uniform float alpha; uniform sampler2D glow; varying float vA; void main(){ float a = texture2D(glow, gl_PointCoord).r; gl_FragColor = vec4(0.62, 0.58, 0.52, a * alpha * 0.16 * vA); }` }));
+      pm.frustumCulled = false; pm.renderOrder = 3; st.add(pm); }));
+  S.cam = t => { const k = valAt(S.tk, t); const tg = new T3.Vector3((k.lon - LC) * KX, k.lat - BC, 0); const e = k.el * Math.PI / 180, y = k.yaw * Math.PI / 180;
+    ct.position.set(tg.x + Math.sin(y) * Math.cos(e) * k.dist, tg.y - Math.cos(y) * Math.cos(e) * k.dist, Math.sin(e) * k.dist); ct.lookAt(tg); ct.updateMatrixWorld(); };
+  S.proj = (t, lon, lat, up) => { S.cam(t); return toScreen(ct, wpos(lon, lat, up || .01)); };
+  S.render = t => {
+    const x = valAt(S.x, t); G.cv.style.opacity = 1 - x; Tn.cv.style.opacity = x;
+    if (x < 1) { flagMat.opacity = valAt(S.flagA, t); const g = valAt(S.gk, t); cg.position.copy(ll(g.lon, g.lat, g.dist)); cg.lookAt(0, 0, 0); G.R.render(sg, cg); }
+    if (x > 0) { S.cam(t); TU.time.value = t; TU.hl.value = valAt(S.hl, t); TU.lit.value = valAt(S.lit, t); TU.ice.value = valAt(S.ice, t); TU.iceA.value = valAt(S.iceA, t); TU.hazeA.value = valAt(S.hazeA, t); TU.dim.value = valAt(S.dim, t); TU.dl.value = valAt(S.dl, t); if (S.smogU) { S.smogU.alpha.value = valAt(S.smogA, t); S.smogU.h.value = valAt(S.smogH, t); S.smogU.time.value = t; S.smogU.flow.value = valAt(S.smogF, t); } WU.rise.value = valAt(S.rise, t);
+      const pa = valAt(S.pinA, t); beam.material.opacity = pa * .8; head.material.opacity = pa;
+      for (const v of ovs) { const a = valAt(v.a, t), z = valAt(v.z, t); v.fill.material.opacity = a * .92; v.edge.material.opacity = a; v.sh.material.opacity = a * .35 * (1 - Math.min(1, z / 1.6));
+        const gz = (v.zBase || 0) + z * .9 + .02; v.grp.position.z = gz; v.sh.position.z = (v.zBase || 0) + .01; }
+      if (demI.I) TU.exag.value = EX * valAt(S.exK, t);
+      for (const ly of lays) { ly.U.a.value = valAt(ly.a, t); ly.U.sw.value = valAt(ly.sw, t); ly.U.time.value = t; ly.m.position.z = valAt(ly.z, t); ly.m.visible = ly.U.a.value > .001; }
+      Tn.R.render(st, ct);
+      for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const q = toScreen(ct, wpos(L.lon, L.lat, L.up ? L.up(t) : .03));
+        L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2).toFixed(1)}px) scale(${((.6 + .4 * Math.min(1, a * 1.5)) * (1 + valAt(L.pop, t))).toFixed(3)})`; }
+      for (const cd of S.cards) { const a = valAt(cd.a, t); cd.el.style.opacity = a * x; cd.ln.style.opacity = a * x; if (a > 0) { const q = toScreen(ct, pin.position.clone().add(new T3.Vector3(0, 0, .26)));
+        const w = cd.el.offsetWidth, h = cd.el.offsetHeight, cx = clamp(q.x - w / 2, 40, 1040 - w), cy = clamp(q.y - h - 190, 300, 1150 - h);
+        cd.el.style.transform = `translate(${cx.toFixed(1)}px,${(cy + (1 - a) * 40).toFixed(1)}px)`; cd.path.setAttribute('d', `M${(cx + w / 2).toFixed(1)} ${(cy + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); } } }
+  };
+  return S;
+}
+function mapLabel(S, txt, lon, lat, fs, col) { const e = mk('div', { class: 'plbl' }, S.ov); e.innerHTML = tr(txt); Object.assign(e.style, { fontSize: fs + 'px', webkitTextStrokeWidth: (fs * .18) + 'px', color: col || '' });
+  const rec = { e, lon, lat, a: TK(0), pop: TK(0) }; S.lls.push(rec); return rec; }
+function mkCard(S, b) { const el = mk('div', { class: 'card' }, S.ov);
+  el.innerHTML = `<div class="cin"><div class="crow"><span class="cflag">${b.flag || ''}</span><span>${b.name || ''}</span></div><div class="cbig"><span class="cnum">0</span><span class="csuf">${b.unit || ''}</span></div>${b.tag ? `<div class="ctag">${b.tag}</div>` : ''}</div>`;
+  const svg = mk('svg', { width: 1080, height: 1920, style: 'position:absolute;left:0;top:0;overflow:visible;opacity:0' }, S.ov, true); S.ov.insertBefore(svg, el);
+  const path = mk('path', { stroke: '#38D6FF', 'stroke-width': 6, 'stroke-dasharray': '14 10', fill: 'none' }, svg, true);
+  const c = { el, ln: svg, path, a: TK(0), num: el.querySelector('.cnum'), suf: el.querySelector('.csuf') }; S.cards.push(c); return c; }
+

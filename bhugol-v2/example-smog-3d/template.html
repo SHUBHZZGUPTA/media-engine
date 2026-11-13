@@ -169,6 +169,28 @@ function map3(P, M3, o) {
   const wallMat = new T3.ShaderMaterial({ uniforms: WU, transparent: true, depthWrite: false, side: T3.DoubleSide, blending: T3.AdditiveBlending,
     vertexShader: `uniform float rise, wh; attribute float k; varying float vK; void main(){ vK = k; vec3 p = position; p.z += k * wh * rise; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
     fragmentShader: `uniform float rise; varying float vK; void main(){ float a = (1.0 - vK) * (1.0 - vK) * rise; gl_FragColor = vec4(0.25, 0.85, 1.0, a * 0.95); }` });
+  // translucent layers over the plain, shaped by the plain mask (lid = warm inversion, cold = air off the plateau)
+  const LB = [70, 92, 20, 33]; const lays = []; let BMT = null;
+  function blurMask() { if (BMT) return BMT; BMT = { value: null };
+    READY.push(new Promise(res => { const im = new Image(); im.onload = () => { const w = im.width, hh = im.height; const a = document.createElement('canvas'); a.width = w; a.height = hh; const x = a.getContext('2d'); x.drawImage(im, 0, 0);
+      const d = x.getImageData(0, 0, w, hh); for (let i = 0; i < d.data.length; i += 4) { const v = d.data[i] > 15 ? 255 : 0; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; } x.putImageData(d, 0, 0);
+      const b = document.createElement('canvas'); b.width = w; b.height = hh; const y = b.getContext('2d'); y.filter = `blur(${Math.round(w * .005)}px)`; y.drawImage(a, 0, 0);
+      const t = new T3.CanvasTexture(b); t.minFilter = t.magFilter = T3.LinearFilter; BMT.value = t; res(); }; im.src = 'assets/' + P + 'pa_mask.png'; }));
+    return BMT; }
+  function layer(col, edgeCol, ro, sweep) { const U = { a: { value: 0 }, sw: { value: 1 }, time: { value: 0 }, mask: blurMask(), noiseT: TU.noiseT, col: { value: new T3.Color(col) }, ec: { value: new T3.Color(edgeCol) },
+      mr: { value: new T3.Vector4((LB[0] - L0) / (L1 - L0), (LB[2] - B0) / (B1 - B0), (LB[1] - L0) / (L1 - L0), (LB[3] - B0) / (B1 - B0)) } };
+    const m = new T3.Mesh(new T3.PlaneGeometry((LB[1] - LB[0]) * KX, LB[3] - LB[2], 1, 1), new T3.ShaderMaterial({ uniforms: U, transparent: true, depthWrite: false, side: T3.DoubleSide,
+      vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+      fragmentShader: `uniform sampler2D mask, noiseT; uniform float a, sw, time; uniform vec3 col, ec; uniform vec4 mr; varying vec2 vUv;
+        void main(){ vec2 q = mix(mr.xy, mr.zw, vUv); float c = texture2D(mask, q).r; if (c <= 0.01) discard;
+          float n = texture2D(noiseT, vUv * vec2(5.0, 3.0) + vec2(time * 0.015, time * 0.006)).r;
+          float body = smoothstep(0.05, 0.6, c); float edge = smoothstep(0.08, 0.5, c) * (1.0 - smoothstep(0.5, 0.92, c));
+          float s = ${sweep ? 'smoothstep(1.0 - sw * 1.25, 1.0 - sw * 1.25 + 0.25, vUv.y)' : '1.0'};
+          vec3 cc = mix(col, ec, edge) * (0.85 + 0.3 * n);
+          float al = a * s * (body * (0.13 + 0.10 * n) + edge * 0.55);
+          gl_FragColor = vec4(cc, al); }` }));
+    m.position.set(((LB[0] + LB[1]) / 2 - LC) * KX, (LB[2] + LB[3]) / 2 - BC, .3); m.renderOrder = ro; m.frustumCulled = false; st.add(m);
+    const r = { m, U, a: TK(0), z: TK(.3), sw: TK(1) }; lays.push(r); return r; }
   const pin = new T3.Group(); st.add(pin);
   const beam = new T3.Mesh(new T3.CylinderGeometry(.008, .008, .24, 12, 1, true), new T3.MeshBasicMaterial({ color: 0x38D6FF, transparent: true, opacity: 0, blending: T3.AdditiveBlending, depthWrite: false }));
   beam.rotation.x = Math.PI / 2; beam.position.z = .12; pin.add(beam);
@@ -184,11 +206,11 @@ function map3(P, M3, o) {
     const fill = new T3.Mesh(g, new T3.MeshBasicMaterial(fillTex ? { map: fillTex, transparent: true, opacity: 0, depthWrite: false, depthTest: false } : { color: col, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); fill.renderOrder = 6; grp.add(fill);
     const sh = new T3.Mesh(new T3.ShapeGeometry(shp), new T3.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); sh.renderOrder = 4; sh.geometry.translate(.06, -.08, 0); st.add(sh);
     const rec = { grp, fill, edge, sh, a: TK(0), z: TK(1.6), ring }; ovs.push(rec); return rec; }
-  const S = { el, push, ov, chars, G, Tn, sg, cg, st, ct, globe, TU, WU, pin, beam, head, labels: [], cards: [], lls: [], ovs, overlay, wpos, ll, KX, LC, BC,
+  const S = { el, push, ov, chars, G, Tn, sg, cg, st, ct, globe, TU, WU, pin, beam, head, labels: [], cards: [], lls: [], ovs, overlay, wpos, ll, KX, LC, BC, layer, lays, exK: TK(o.exagK || 26),
     gk: TK({ lon: 20, lat: 20, dist: 3.4 }), tk: TK(Object.assign({ lon: LC, lat: BC, dist: 11, el: 80, yaw: 0 }, o.tk0 || {})), x: TK(o.globe ? 0 : 1), hl: TK(0), hazeA: TK(0), dim: TK(0), dl: TK(0), flagA: TK(0), smogA: TK(0), smogH: TK(.35), smogF: TK(0), lit: TK(0), ice: TK(1), iceA: TK(0), rise: TK(0), pinA: TK(0), wins: [] };
   READY.push(tex(P + 'globe.jpg').then(t => { globe.material.map = t; globe.material.needsUpdate = true; }), tex(P + 'ne.jpg').then(t => TU.ne.value = t), tex(P + 'pa_close.jpg').then(t => TU.cls.value = t),
     tex(P + 'pa_mask.png', { nearest: 1 }).then(t => TU.mask.value = t), tex(P + 'haze.jpg').then(t => TU.haze.value = t), tex(P + 'hillshade.png').then(t => TU.hs.value = t), tex(P + 'dem8.png').then(t => TU.dem.value = t),
-    cpuImg(P + 'dem8.png').then(I => { demI.I = I; TU.exag.value = EX * 26;
+    cpuImg(P + 'dem8.png').then(I => { demI.I = I; TU.exag.value = EX * (o.exagK || 26);
       const pts = M3.pa.map(([lo, la]) => wpos(lo, la, .002)); const pos = [], kk = [];
       for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; pos.push(a.x, a.y, a.z, b.x, b.y, b.z, b.x, b.y, b.z, a.x, a.y, a.z, b.x, b.y, b.z, a.x, a.y, a.z); kk.push(0, 0, 1, 0, 1, 1); }
       const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.Float32BufferAttribute(pos, 3)); g.setAttribute('k', new T3.Float32BufferAttribute(kk, 1)); st.add(new T3.Mesh(g, wallMat));
@@ -212,8 +234,10 @@ function map3(P, M3, o) {
       const pa = valAt(S.pinA, t); beam.material.opacity = pa * .8; head.material.opacity = pa;
       for (const v of ovs) { const a = valAt(v.a, t), z = valAt(v.z, t); v.fill.material.opacity = a * .92; v.edge.material.opacity = a; v.sh.material.opacity = a * .35 * (1 - Math.min(1, z / 1.6));
         const gz = (v.zBase || 0) + z * .9 + .02; v.grp.position.z = gz; v.sh.position.z = (v.zBase || 0) + .01; }
+      if (demI.I) TU.exag.value = EX * valAt(S.exK, t);
+      for (const ly of lays) { ly.U.a.value = valAt(ly.a, t); ly.U.sw.value = valAt(ly.sw, t); ly.U.time.value = t; ly.m.position.z = valAt(ly.z, t); ly.m.visible = ly.U.a.value > .001; }
       Tn.R.render(st, ct);
-      for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const q = toScreen(ct, wpos(L.lon, L.lat, .03));
+      for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const q = toScreen(ct, wpos(L.lon, L.lat, L.up ? L.up(t) : .03));
         L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2).toFixed(1)}px) scale(${((.6 + .4 * Math.min(1, a * 1.5)) * (1 + valAt(L.pop, t))).toFixed(3)})`; }
       for (const cd of S.cards) { const a = valAt(cd.a, t); cd.el.style.opacity = a * x; cd.ln.style.opacity = a * x; if (a > 0) { const q = toScreen(ct, pin.position.clone().add(new T3.Vector3(0, 0, .26)));
         const w = cd.el.offsetWidth, h = cd.el.offsetHeight, cx = clamp(q.x - w / 2, 40, 1040 - w), cy = clamp(q.y - h - 190, 300, 1150 - h);
@@ -376,8 +400,9 @@ function indiaFlagCanvas() { const c = document.createElement('canvas'); c.width
 
 /* ---------- build scenes ---------- */
 const MP = map3('mp/', D.maps.mp, { globe: true, fog: [60, 140], flagCanvas: indiaFlagCanvas() });
-const XS = xsec(); const GA = plate('ga_delhi.jpg', { s: 1.08 }); const GB = plate('ga_wide.jpg', { s: 1.0 });
-const REG = { MP, XS, GA, GB }; const SCENES = [MP, XS, GA, GB];
+const MP2 = map3('mp/', D.maps.mp, { globe: false, fog: [60, 140], exagK: 40, tk0: { lon: 80.5, lat: 25.0, dist: 20, el: 52, yaw: 0 } });
+const GA = plate('ga_delhi.jpg', { s: 1.08 }); const GB = plate('ga_wide.jpg', { s: 1.0 });
+const REG = { MP, MP2, GA, GB }; const SCENES = [MP, MP2, GA, GB];
 const XF = BhugolXfade(T3, $('cshake'));
 // map labels (lon/lat)
 const L = D.lab;
@@ -386,15 +411,17 @@ MP.lDel = mapLabel(MP, tr('DELHI'), 77.1, 29.05, 64, '#38D6FF'); MP.lInd = mapLa
 MP.lHim = mapLabel(MP, tr('HIMALAYAS'), 80.6, 30.2, 58, '#FFFFFF');
 MP.iFarm = mapLabel(MP, '🌾', 75.6, 30.3, 120); MP.iRoad = mapLabel(MP, '🚗', 80.9, 26.8, 120); MP.iFac = mapLabel(MP, '🏭', 83.2, 25.4, 120);
 MP.iFarm2 = mapLabel(MP, '🌾', 83.5, 26.2, 100); MP.iRoad2 = mapLabel(MP, '🚗', 77.8, 28.0, 100); MP.iFac2 = mapLabel(MP, '🏭', 78.6, 27.3, 100);
-// cross-section labels
-XS.lHim = xLabel(XS, tr('HIMALAYAS'), -6.6, 8.6, 70, '#FFFFFF'); XS.lTib = xLabel(XS, tr('TIBETAN PLATEAU'), -9.8, 8.4, 54, '#ffffff');
-XS.lAra = xLabel(XS, tr('ARAVALLI'), 7.0, 1.9, 58, '#FFFFFF'); XS.lVin = xLabel(XS, tr('VINDHYA'), 9.4, 1.6, 58, '#FFFFFF');
-XS.lPlain = xLabel(XS, tr('THE PLAIN'), .4, -.6, 56, '#f1e7b5');
-XS.lSum = xLabel(XS, tr('SUMMER'), .4, 4.2, 92, '#FFC23A'); XS.lNov = xLabel(XS, tr('NOVEMBER'), -4.2, 9.8, 92, '#8fd8ff');
-XS.lKm = xLabel(XS, `<span class="n">0</span> ${tr('KM')}`, 3.4, t => valAt(XS.ceil, t) + .45, 80, '#FFC23A');
-XS.lFew = xLabel(XS, tr('A FEW HUNDRED M'), .6, t => valAt(XS.ceil, t) + 1.5, 66, '#FFC23A');
+// terrain-scene labels (MP2: the plain, the wall, the lid)
+MP2.lPlain = mapLabel(MP2, 'THE PLAIN', 80.6, 26.3, 62, '#f1e7b5'); MP2.lHim = mapLabel(MP2, 'HIMALAYAS', 82.6, 29.7, 70, '#FFFFFF');
+MP2.lTib = mapLabel(MP2, 'TIBETAN PLATEAU', 84.0, 32.0, 54, '#ffffff');
+MP2.lAra = mapLabel(MP2, 'ARAVALLI', 75.3, 25.6, 58, '#FFFFFF'); MP2.lVin = mapLabel(MP2, 'VINDHYA', 78.8, 23.3, 58, '#FFFFFF');
+MP2.lSum = mapLabel(MP2, 'SUMMER', 80.2, 27.6, 92, '#FFC23A'); MP2.lSum.up = () => .9;
+MP2.lNov = mapLabel(MP2, 'NOVEMBER', 83.2, 29.6, 92, '#8fd8ff'); MP2.lNov.up = () => .9;
+MP2.lid = MP2.layer(0xFF8A2A, 0xFFD27A, 7, false); MP2.cold = MP2.layer(0x4FB8FF, 0xBFE8FF, 6, true);
+MP2.lKm = mapLabel(MP2, '', 82.8, 25.6, 80, '#FFC23A'); MP2.lKm.e.innerHTML = `<span class="n">0</span> ${tr('KM')}`; MP2.lKm.up = t => valAt(MP2.smogH, t) + .08;
+MP2.lFew = mapLabel(MP2, 'A FEW HUNDRED M', 80.4, 25.2, 66, '#FFC23A'); MP2.lFew.up = t => valAt(MP2.lid.z, t) + .05;
 // characters + DOM widgets
-XS.cHim = himChar(XS, 600, 820, .95); MP.cHim = himChar(MP, 560, 800, .95);
+MP2.cHim = himChar(MP2, 600, 820, .95); MP.cHim = himChar(MP, 560, 800, .95);
 const GAU = gauge(GA); const GRID = cityGrid();
 MP.del = MP.overlay(D.geo.states['Delhi'], null, 0x38D6FF); MP.del.zBase = .03;
 
@@ -466,36 +493,41 @@ function build() {
   lbl(MP.lPun, C(2, 2, -.05), C(3, 0, -.1)); lbl(MP.lBen, C(2, 2, .35), C(3, 0, -.1));
   on(MP.hl, C(3, 0, -.1), .3); { const a = C(3, 0, .0), b = LN[3].b - .1; for (let i = 1; i <= 7; i++) key(MP.lit, i, a + (b - a) * (i - 1) / 7, .06, 'none'); }
   off(MP.hl, C(4, 0, -.1), .3);
-  // ===== L4-L7 (XS): the bowl, the wall, the hills =====
-  key(XS.ck, { x: -1.5, y: 2.6, dist: 64.6, yaw: 6, pitch: 12 }, 0, .01); key(XS.ck, { x: -1.0, y: 2.2, dist: 58.9, yaw: -4, pitch: 9 }, C(4, 0, -.15), C(5, 0) - C(4, 0, -.15), 'sine.inOut');
-  key(XS.himS, .12, 0, .01); lbl(XS.lPlain, C(4, 0, .3), C(5, 0, .3)); key(XS.ceil, .8, 0, .01); key(XS.smokeA, .55, C(4, 0, .1), .6);
-  key(XS.himS, 1, C(5, 0, .05), .9, 'power3.out'); lbl(XS.lHim, C(5, 0, .45), C(6, 0, -.2));
-  key(XS.ck, { x: -5.5, y: 3.8, dist: 45.6, yaw: 10, pitch: 8 }, C(5, 0, -.05), C(6, 0) - C(5, 0, -.05), 'power2.inOut');
-  chIn(XS.cHim, C(6, 0, -.35)); talk(XS.cHim, 6); zoomTo(XS, XS.cHim, LN[6].a, LN[6].b); chOut(XS.cHim, C(7, 0, -.25));
-  key(XS.ck, { x: 4.5, y: 1.6, dist: 41.8, yaw: -8, pitch: 10 }, C(7, 0, -.25), .7, 'power3.inOut'); key(XS.ck, { x: 3.8, y: 2.0, dist: 47.5, yaw: -2, pitch: 10 }, C(7, 0, .45), NX(7) - C(7, 0, .45), 'sine.inOut');
-  lbl(XS.lAra, C(7, 0, .25), NX(7) - .2); lbl(XS.lVin, C(7, 0, .6), NX(7) - .2);
+  // ===== L4-L7 (MP2 terrain): the bowl, the wall, the hills =====
+  key(MP2.tk, { lon: 80.5, lat: 24.8, dist: 21, el: 54, yaw: 0 }, 0, .01); key(MP2.tk, { lon: 80.8, lat: 25.6, dist: 18.5, el: 49, yaw: -4 }, C(4, 0, -.15), C(5, 0) - C(4, 0, -.15), 'sine.inOut');
+  key(MP2.x, 1, 0, .01); key(MP2.exK, 34, 0, .01); key(MP2.hazeA, .5, 0, .01); key(MP2.smogA, .55, 0, .01); key(MP2.smogH, .3, 0, .01); key(MP2.smogF, .4, 0, .01);
+  on(MP2.rise, C(4, 0, .2), .6); lbl(MP2.lPlain, C(4, 0, .3), C(5, 0, .3));
+  key(MP2.exK, 62, C(5, 0, .05), .9, 'power3.out'); lbl(MP2.lHim, C(5, 0, .45), C(6, 0, -.2)); key(MP2.rise, .45, C(5, 0, .1), .5);
+  key(MP2.tk, { lon: 81.8, lat: 27.9, dist: 13.5, el: 43, yaw: 4 }, C(5, 0, -.05), C(6, 0) - C(5, 0, -.05), 'power2.inOut');
+  key(MP2.tk, { lon: 82.2, lat: 28.1, dist: 12.5, el: 42, yaw: 8 }, C(6, 0, -.05), C(7, 0, -.25) - C(6, 0, -.05), 'sine.inOut');
+  chIn(MP2.cHim, C(6, 0, -.35)); talk(MP2.cHim, 6); zoomTo(MP2, MP2.cHim, LN[6].a, LN[6].b); chOut(MP2.cHim, C(7, 0, -.25));
+  key(MP2.tk, { lon: 77.0, lat: 24.6, dist: 15, el: 55, yaw: -8 }, C(7, 0, -.25), .7, 'power3.inOut'); key(MP2.tk, { lon: 77.3, lat: 24.9, dist: 16.5, el: 53, yaw: -3 }, C(7, 0, .45), NX(7) - C(7, 0, .45), 'sine.inOut');
+  lbl(MP2.lAra, C(7, 0, .25), NX(7) - .2); lbl(MP2.lVin, C(7, 0, .6), NX(7) - .2);
   // ===== L8 (MP oblique): millions of years — so why only in winter? =====
   key(MP.tk, { lon: 79.5, lat: 24.5, dist: 22, el: 54, yaw: 0 }, C(8, 0, -.3), .01); key(MP.tk, { lon: 80.2, lat: 26.2, dist: 18, el: 47, yaw: 6 }, C(8, 0, -.1), NX(8) - C(8, 0, -.1) + .3, 'power2.inOut');
   key(MP.hazeA, 0, C(8, 0, -.3), .01); lbl(MP.lHim, C(8, 0, .3), NX(8) - .2); key(MP.rise, 1, C(8, 0, .1), .8);
-  // ===== L9-L12 (XS): summer vs November, the lid =====
-  key(XS.ck, { x: .4, y: 2.0, dist: 45.6, yaw: 4, pitch: 8 }, C(9, 0, -.3), .01); key(XS.ck, { x: .6, y: 1.6, dist: 39.9, yaw: -6, pitch: 6 }, C(9, 0, -.1), C(10, 0) - C(9, 0, -.1), 'sine.inOut');
-  key(XS.himS, 1, C(9, 0, -.3), .01);
-  lbl(XS.lSum, C(9, 0, 0), C(10, 0, -.2)); key(XS.smokeA, 1, C(9, 0, -.2), .3); key(XS.rise, 1, C(9, 0, -.2), .01); key(XS.ceil, 1, C(9, 0, -.2), .01);
-  on(XS.lineA, C(9, 1, -.1), .3); lbl(XS.lKm, C(9, 1, -.05), C(10, 0, -.2));
-  { const n = XS.lKm.e.querySelector('.n'); MO.countUp(n, 1, C(9, 1, .0), { dur: .6, noScale: true }); }
-  on(XS.windA, C(9, 0, -.2), .3); key(XS.windV, 1, C(9, 0, -.2), .01);
-  lbl(XS.lNov, C(10, 0, 0), C(11, 0, -.2)); off(XS.lineA, C(10, 0, -.1), .2);
-  key(XS.ck, { x: -6.5, y: 3.6, dist: 47.5, yaw: 6, pitch: 8 }, C(10, 0, -.15), .8, 'power2.inOut');
-  on(XS.coldA, C(10, 0, .2), .3); key(XS.coldP, 1, C(10, 0, .2), C(10, 2) - C(10, 0, .2) + .2, 'power1.inOut'); lbl(XS.lTib, C(10, 1, -.05), C(11, 0, -.1));
-  key(XS.rise, 0, C(10, 1, .2), 1.2, 'power2.inOut');
-  key(XS.ck, { x: .6, y: 1.8, dist: 43.7, yaw: -4, pitch: 9 }, C(10, 2, -.2), .8, 'power2.inOut'); on(XS.layerA, C(10, 2, .0), .4);
-  key(XS.lidY, 6, 0, .01); on(XS.lidA, C(11, 0, -.1), .15); key(XS.lidY, 1.3, C(11, 0, -.05), .55, 'bounce.out'); off(XS.coldA, C(11, 0, .2), .4);
-  key(XS.ck, { x: .6, y: 1.3, dist: 38.0, yaw: 3, pitch: 7 }, C(11, 0, .5), C(12, 0) - C(11, 0, .5), 'sine.inOut');
-  // ceiling drops 1 km -> ~0.3 km, the lid rides down, the wind dies
-  key(XS.ceil, .32, C(12, 0, .1), C(12, 1, .3) - C(12, 0, .1), 'power2.inOut'); key(XS.lidY, .6, C(12, 0, .1), C(12, 1, .3) - C(12, 0, .1), 'power2.inOut');
-  lbl(XS.lFew, C(12, 1, -.05), NX(12) - .1);
-  key(XS.windV, 0, C(12, 2, -.05), .7, 'power2.out'); off(XS.windA, C(12, 2, .4), .4);
-  key(XS.ck, { x: .6, y: .9, dist: 30.4, yaw: -4, pitch: 5 }, C(12, 1, -.1), NX(12) - C(12, 1, -.1), 'sine.inOut');
+  // ===== L9-L12 (MP2 terrain): summer vs November, the lid =====
+  key(MP2.tk, { lon: 80.6, lat: 25.9, dist: 18, el: 46, yaw: 3 }, C(9, 0, -.3), .01); key(MP2.tk, { lon: 80.8, lat: 26.3, dist: 16.5, el: 44, yaw: -4 }, C(9, 0, -.1), C(10, 0, -.15) - C(9, 0, -.1), 'sine.inOut');
+  key(MP2.rise, 0, C(9, 0, -.3), .01); key(MP2.exK, 62, C(9, 0, -.3), .01); key(MP2.hazeA, .3, C(9, 0, -.3), .01);
+  key(MP2.smogA, 1, C(9, 0, -.3), .01); key(MP2.smogH, .3, C(9, 0, -.3), .01); key(MP2.smogF, 1, C(9, 0, -.3), .01);
+  lbl(MP2.lSum, C(9, 0, 0), C(10, 0, -.2));
+  key(MP2.smogH, 1.5, C(9, 1, -.2), C(10, 0, -.2) - C(9, 1, -.2), 'power1.in'); key(MP2.smogA, .12, C(9, 1, .3), C(10, 0, -.2) - C(9, 1, .3), 'power1.in');
+  lbl(MP2.lKm, C(9, 1, -.05), C(10, 0, -.2)); { const n = MP2.lKm.e.querySelector('.n'); MO.countUp(n, 1, C(9, 1, .0), { dur: .6, noScale: true }); }
+  // November: smoke back, cold air slides off the plateau, warm layer on top
+  key(MP2.smogH, .5, C(10, 0, -.15), .01); key(MP2.smogA, .9, C(10, 0, -.15), .4); key(MP2.hazeA, .6, C(10, 0, -.15), .5);
+  lbl(MP2.lNov, C(10, 0, 0), C(10, 2, -.25));
+  key(MP2.tk, { lon: 83.4, lat: 28.6, dist: 15, el: 50, yaw: 6 }, C(10, 0, -.15), .8, 'power2.inOut');
+  key(MP2.cold.z, .07, 0, .01); key(MP2.cold.sw, 0, 0, .01); on(MP2.cold.a, C(10, 0, .2), .3, .75); key(MP2.cold.sw, 1, C(10, 0, .2), C(10, 2) - C(10, 0, .2) + .2, 'power1.inOut'); lbl(MP2.lTib, C(10, 1, -.05), C(10, 2, -.25));
+  key(MP2.tk, { lon: 80.7, lat: 26.2, dist: 16.5, el: 46, yaw: -3 }, C(10, 2, -.2), .8, 'power2.inOut');
+  key(MP2.lid.z, 1.1, 0, .01); on(MP2.lid.a, C(10, 2, .0), .4, .55);
+  on(MP2.lid.a, C(11, 0, -.1), .15); key(MP2.lid.z, .46, C(11, 0, -.05), .55, 'bounce.out'); off(MP2.cold.a, C(11, 0, .3), .5);
+  key(MP2.tk, { lon: 80.7, lat: 26.3, dist: 15, el: 44, yaw: 2 }, C(11, 0, .5), C(12, 0) - C(11, 0, .5), 'sine.inOut');
+  // ceiling drops ~1 km -> a few hundred m, the lid rides down, the wind dies
+  key(MP2.lid.z, .17, C(12, 0, .1), C(12, 1, .3) - C(12, 0, .1), 'power2.inOut'); key(MP2.smogH, .15, C(12, 0, .1), C(12, 1, .3) - C(12, 0, .1), 'power2.inOut');
+  key(MP2.smogA, 1, C(12, 0, .1), .6); key(MP2.hazeA, .9, C(12, 0, .1), .8);
+  lbl(MP2.lFew, C(12, 1, -.05), NX(12) - .1);
+  key(MP2.smogF, 0, C(12, 2, -.05), .7, 'power2.out');
+  key(MP2.tk, { lon: 80.6, lat: 26.2, dist: 12, el: 40, yaw: -3 }, C(12, 1, -.1), NX(12) - C(12, 1, -.1), 'sine.inOut');
   // ===== L13-L16 (MP): strangest part — Delhi at zero, the plain still fills =====
   key(MP.tk, { lon: 80.0, lat: 27.0, dist: 30, el: 84, yaw: 0 }, C(13, 0, -.3), .01); key(MP.tk, { lon: 79.4, lat: 27.6, dist: 26, el: 78, yaw: -4 }, C(13, 0, -.1), C(14, 0) - C(13, 0, -.1), 'sine.inOut');
   key(MP.rise, 0, C(13, 0, -.3), .01); key(MP.hazeA, .85, C(13, 0, -.3), .01); on(MP.smogA, C(13, 0, -.2), .6, .9);
@@ -509,10 +541,10 @@ function build() {
     key(ic.a, 1, at, .25, 'back.out(2)'); key(ic.pop, .3, at, .08); key(ic.pop, 0, at + .08, .3); key(ic.a, 0, NX(16) - .1, .2); }
   // ===== L17 (GB): one sky =====
   key(GB.k, { s: 1.04, x: 0, y: 0 }, 0, .01); key(GB.k, { s: 1.16, x: 0, y: -20 }, C(17, 0, -.2), NX(17) - C(17, 0, -.2) + .3, 'sine.inOut');
-  // ===== L18 (XS): the Himalayas' twist =====
-  key(XS.ck, { x: -5.5, y: 3.8, dist: 45.6, yaw: 10, pitch: 8 }, C(18, 0, -.3), .01); key(XS.ck, { x: -5.0, y: 3.6, dist: 41.8, yaw: 4, pitch: 8 }, C(18, 0, -.1), NX(18) - C(18, 0, -.1) + .3, 'sine.inOut');
-  key(XS.lidA, 0, C(18, 0, -.3), .01); key(XS.layerA, .6, C(18, 0, -.3), .01); key(XS.smokeA, 1, C(18, 0, -.3), .01);
-  chIn(XS.cHim, C(18, 0, -.35)); talk(XS.cHim, 18); zoomTo(XS, XS.cHim, LN[18].a, LN[18].b); chOut(XS.cHim, NX(18) - .2);
+  // ===== L18 (MP2 terrain): the Himalayas' twist =====
+  key(MP2.tk, { lon: 81.8, lat: 27.9, dist: 13.5, el: 43, yaw: 6 }, C(18, 0, -.3), .01); key(MP2.tk, { lon: 82.0, lat: 28.0, dist: 12.5, el: 42, yaw: 2 }, C(18, 0, -.1), NX(18) - C(18, 0, -.1) + .3, 'sine.inOut');
+  key(MP2.lid.a, 0, C(18, 0, -.3), .01); key(MP2.smogA, .9, C(18, 0, -.3), .01); key(MP2.smogH, .3, C(18, 0, -.3), .01); key(MP2.smogF, .3, C(18, 0, -.3), .01); key(MP2.hazeA, .8, C(18, 0, -.3), .01);
+  chIn(MP2.cHim, C(18, 0, -.35)); talk(MP2.cHim, 18); zoomTo(MP2, MP2.cHim, LN[18].a, LN[18].b); chOut(MP2.cHim, NX(18) - .2);
   // ===== L19-20 (MP wide): your city's AQI? then the end card =====
   key(MP.tk, { lon: 80.0, lat: 25.5, dist: 36, el: 86, yaw: 0 }, C(19, 0, -.3), .01); key(MP.tk, { lon: 79.8, lat: 25.6, dist: 33, el: 80, yaw: -3 }, C(19, 0, -.1), D.dur - C(19, 0, -.1), 'sine.inOut');
   key(MP.smogA, .5, C(19, 0, -.3), .01); key(MP.hazeA, .7, C(19, 0, -.3), .01); key(MP.rise, 1, C(19, 0, -.3), .01); lbl(MP.lInd, C(19, 0, .2), D.end.start);
@@ -520,7 +552,7 @@ function build() {
   // ===== beats from the spec (same list drives the sound) =====
   const beat = k => (D.beats || []).filter(b => b.kind === k);
   const nextChunk = t => { const c = D.chunks.find(c => c.sn > t + .5); return c ? c.sn - .12 : t + 2; };
-  const posFn = (S, pt) => (S === XS) ? (t => XS.proj(t, pt[0], pt[1])) : (S === GA || S === GB) ? (t => S.proj(t, pt[0], pt[1])) : (t => S.proj(t, pt[0], pt[1]));
+  const posFn = (S, pt) => (t => S.proj(t, pt[0], pt[1]));
   for (const b of beat('circle')) { const S = REG[b.scene]; const r = b.r || [200, 110];
     MO.hwCircle(S.ov, posFn(S, b.c), r[0], r[1], b.t, b.u || nextChunk(b.t), { seed: 3 + b.t, col: b.col }); }
   for (const b of beat('arrow')) { const S = REG[b.scene]; const f0 = posFn(S, b.from), f1 = posFn(S, b.to);
@@ -529,10 +561,10 @@ function build() {
     el.innerHTML = `${b.prefix ? `<span class="ksuf" style="margin:0 20px 0 0">${tr(b.prefix)}</span>` : ''}<span class="knum">0</span><span class="ksuf">${tr(b.unit || '')}</span>`;
     const dur = b.dur || 1.0; tl.set(el, { opacity: 1 }, b.t);
     MO.countGrow(el.querySelector('.knum'), b.to, b.t, { dur, from: b.from || 0, startScale: .35, suffixEl: el.querySelectorAll('.ksuf')[el.querySelectorAll('.ksuf').length - 1] }); MO.textOut(el, b.u || nextChunk(b.t)); }
-  const LBL = { 'XS.lHim': XS.lHim, 'XS.lAra': XS.lAra, 'XS.lVin': XS.lVin, 'XS.lTib': XS.lTib, 'XS.lKm': XS.lKm, 'XS.lFew': XS.lFew, 'XS.lNov': XS.lNov, 'XS.lSum': XS.lSum, 'MP.lDel': MP.lDel, 'MP.lPun': MP.lPun, 'MP.lBen': MP.lBen, 'MP.lHim': MP.lHim, 'MP.lInd': MP.lInd, 'XS.lPlain': XS.lPlain };
+  const LBL = { 'MP2.lHim': MP2.lHim, 'MP2.lAra': MP2.lAra, 'MP2.lVin': MP2.lVin, 'MP2.lTib': MP2.lTib, 'MP2.lKm': MP2.lKm, 'MP2.lFew': MP2.lFew, 'MP2.lNov': MP2.lNov, 'MP2.lSum': MP2.lSum, 'MP.lDel': MP.lDel, 'MP.lPun': MP.lPun, 'MP.lBen': MP.lBen, 'MP.lHim': MP.lHim, 'MP.lInd': MP.lInd, 'MP2.lPlain': MP2.lPlain };
   for (const b of beat('slam')) {
     if (b.what === 'pop') { const Lb = LBL[b.lab]; key(Lb.pop, .32, b.t, .09, 'power2.out'); key(Lb.pop, 0, b.t + .09, .32, 'power2.inOut'); }
-    else if (b.what === 'jolt') tl.to(XS.cHim.box, { keyframes: [{ rotation: -7, y: 16, duration: .1 }, { rotation: 0, y: 0, duration: .3, ease: 'power2.out' }] }, b.t);
+    else if (b.what === 'jolt') tl.to(MP2.cHim.box, { keyframes: [{ rotation: -7, y: 16, duration: .1 }, { rotation: 0, y: 0, duration: .3, ease: 'power2.out' }] }, b.t);
     else if (b.what === 'lid') shake(b.t, .7);
     else if (b.what === 'grid') tl.fromTo(GRID.n, { scale: 1 }, { keyframes: [{ scale: 1.35, duration: .08 }, { scale: 1, duration: .25 }], ...IR }, b.t);
     else if (b.what === 'flag') tl.fromTo($('flash'), { opacity: 0 }, { keyframes: [{ opacity: .14, duration: .06 }, { opacity: 0, duration: .3 }], ...IR }, b.t); }

@@ -7,3 +7,6 @@
 - **Renders:** hyperframes needs `HYPERFRAMES_BROWSER_PATH=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell` (the 1194 path no longer exists). Run renders via a background tool call, not `nohup &` (the render is cancelled when the parent shell exits). EN 71.5 s took ~45 min; HI 75.6 s ~45 min.
 - **GitHub mailbox gotcha:** only one pending run per workflow group, so another chat's push can silently drop your queued align/fetch job. If outputs don't appear after the run before yours finished, bump `"try"` and push again.
 - QA: retention PASS (EN 95% moving, 2.1 s cadence; HI 96%, 2.1 s), sound-on-beat 50/50 both.
+
+## Revision (13 Nov 2026): terrain lid scenes
+The clay cross-section (XS) was replaced by a second map3 terrain scene (MP2): oblique views of the real DEM with Himalayan relief, a warm translucent "lid" layer and a cold-air layer shaped by a blurred plain mask (`S.layer()` in head.html), smog particles that rise in summer and get pressed down under the lid, and labels that ride heights (`label.up = t => …`). Source split: head.html + body.js + build.js, joined by assemble.py into template.html. Lesson: an abstract clay cross-section read as cheap next to the satellite terrain; explain atmosphere on the real map instead.

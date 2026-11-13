@@ -222,7 +222,7 @@
    "cut": "zoom"
   },
   {
-   "scene": "XS",
+   "scene": "MP2",
    "at": [
     4,
     0,
@@ -240,7 +240,7 @@
    "cut": "whip"
   },
   {
-   "scene": "XS",
+   "scene": "MP2",
    "at": [
     9,
     0,
@@ -267,7 +267,7 @@
    "cut": "flash"
   },
   {
-   "scene": "XS",
+   "scene": "MP2",
    "at": [
     18,
     0,
@@ -490,7 +490,7 @@
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lPlain",
+   "lab": "MP2.lPlain",
    "at": [
     4,
     0,
@@ -509,7 +509,7 @@
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lHim",
+   "lab": "MP2.lHim",
    "at": [
     5,
     0,
@@ -545,26 +545,26 @@
   },
   {
    "kind": "arrow",
-   "scene": "XS",
+   "scene": "MP2",
    "at": [
     7,
     0,
     0.1
    ],
    "from": [
-    2.2,
-    2.6
+    77.4,
+    26.4
    ],
    "to": [
-    6.4,
-    1.2
+    78.3,
+    23.9
    ],
    "col": "#FFC23A"
   },
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lAra",
+   "lab": "MP2.lAra",
    "at": [
     7,
     0,
@@ -574,7 +574,7 @@
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lVin",
+   "lab": "MP2.lVin",
    "at": [
     7,
     0,
@@ -609,7 +609,7 @@
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lSum",
+   "lab": "MP2.lSum",
    "at": [
     9,
     0,
@@ -636,7 +636,7 @@
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lNov",
+   "lab": "MP2.lNov",
    "at": [
     10,
     0,
@@ -653,9 +653,27 @@
    ]
   },
   {
+   "kind": "arrow",
+   "scene": "MP2",
+   "at": [
+    10,
+    0,
+    0.25
+   ],
+   "from": [
+    85.8,
+    31.6
+   ],
+   "to": [
+    82.0,
+    27.9
+   ],
+   "col": "#8fd8ff"
+  },
+  {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lTib",
+   "lab": "MP2.lTib",
    "at": [
     10,
     1,
@@ -674,7 +692,7 @@
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lNov",
+   "lab": "MP2.lNov",
    "at": [
     10,
     2,
@@ -702,7 +720,7 @@
   {
    "kind": "slam",
    "what": "pop",
-   "lab": "XS.lFew",
+   "lab": "MP2.lFew",
    "at": [
     12,
     1,
