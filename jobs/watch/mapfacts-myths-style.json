@@ -1,0 +1,21 @@
+{
+ "id": "mapfacts-myths-style",
+ "url": "https://www.youtube.com/watch?v=WhWPc8jsyKA",
+ "models": [
+  "gemini-3.7-flash",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest",
+  "gemini-3-flash-preview"
+ ],
+ "media_resolution": "MEDIA_RESOLUTION_MEDIUM",
+ "items": [
+  {
+   "name": "style",
+   "fps": 1,
+   "start": "0s",
+   "end": "160s",
+   "prompt": "You are a motion-graphics art director and retention editor studying a viral 2.5-minute vertical geography video ('8 Geography Myths You Probably Still Believe!', Map Facts, ~935K views in 5 days). We are making our OWN video on the same 8 myths with our own script and art; study ONLY the visual and editing craft, never copy wording. Write in English, concrete, with timestamps for every example.\n1. SHOT LOG: every cut with timestamp, what is on screen (map type: satellite / flat / globe / photo / stock video / illustration), camera move, and on-screen text. One line per shot.\n2. PACING: average shot length, longest hold, cuts per myth, how each myth's number card / title appears and how long it stays.\n3. TEXT AND CAPTIONS: caption style (font, size, colour, position, word-by-word or phrase), title cards, stat callouts, emoji.\n4. MAP AND REVEAL TECHNIQUES: how each myth's 'wrong' moment and truth reveal is shown (comparisons, overlays, scale bars, red X, zooms).\n5. SOUND: music style and energy, sound effects on cuts and reveals, any silence.\n6. RETENTION DEVICES: what keeps viewers from swiping between myths; where it is weakest.\n7. Ten concrete things a premium horizontal 16:9 version with 3D globes and terrain should do BETTER than this video."
+  }
+ ]
+}
