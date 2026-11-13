@@ -1,0 +1,63 @@
+{
+ "id": "india-clips-ca942d92",
+ "script": "gpu/india_clips_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 90,
+ "wait_minutes": 95,
+ "params": {
+  "src_file": "clips_ca942d92.tar.gz",
+  "src_sha256": "ca942d923ebee507f20405327d07cf6423fd3adbb4c442c71faf256c9ea25614",
+  "clips": [
+   {
+    "id": "G_calicut",
+    "dur": 5.667
+   },
+   {
+    "id": "G_indus_dry",
+    "dur": 15.68
+   },
+   {
+    "id": "G_buddhism",
+    "dur": 16.76
+   },
+   {
+    "id": "G_dhamma",
+    "dur": 9.82
+   },
+   {
+    "id": "G_numerals",
+    "dur": 5.61
+   },
+   {
+    "id": "G_tarain",
+    "dur": 7.59
+   },
+   {
+    "id": "G_mongols",
+    "dur": 8.56
+   },
+   {
+    "id": "G_timur",
+    "dur": 17.34
+   },
+   {
+    "id": "G_cloth",
+    "dur": 20.74
+   },
+   {
+    "id": "G_nadir",
+    "dur": 6.79
+   },
+   {
+    "id": "G_manchester",
+    "dur": 12.32
+   },
+   {
+    "id": "G_wars6265",
+    "dur": 14.08
+   }
+  ],
+  "jpeg_q": 95
+ }
+}
