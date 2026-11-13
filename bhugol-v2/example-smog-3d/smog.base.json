@@ -1,0 +1,197 @@
+{
+ "slug": "smog",
+ "voices": {
+  "him": {
+   "semitones": -3,
+   "formant": "preserved"
+  }
+ },
+ "align": {
+  "offset": 0.3,
+  "cap": 0.42,
+  "tempo": 1.12,
+  "long_before": {
+   "6": 0.5,
+   "11": 0.5,
+   "13": 0.6,
+   "17": 0.55,
+   "18": 0.6,
+   "19": 0.4
+  },
+  "line_tempo": {
+   "6": 1.0,
+   "18": 1.0
+  }
+ },
+ "tail": 2.3,
+ "lines": [
+  {
+   "o": 0,
+   "text": "This week, 86 of the world's 100 most polluted cities were in one country.",
+   "chunks": [
+    "THIS WEEK, *86*|OF THE WORLD'S *100*",
+    "MOST POLLUTED CITIES",
+    "WERE IN|*ONE COUNTRY.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "One Delhi station hit 488. The scale stops at 500.",
+   "chunks": [
+    "ONE DELHI STATION|HIT *488.*",
+    "THE SCALE|STOPS AT *500.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "So why here? From space, it's a grey river, Punjab to Bengal.",
+   "chunks": [
+    "SO WHY *HERE?*",
+    "FROM *SPACE,*|IT'S A GREY RIVER,",
+    "*PUNJAB* TO *BENGAL.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "4 in 10 Indians live under it.",
+   "chunks": [
+    "*4 IN 10* INDIANS|LIVE UNDER IT."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Because north India is a giant bowl.",
+   "chunks": [
+    "BECAUSE NORTH INDIA|IS A *GIANT BOWL.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "North, the tallest wall on Earth.",
+   "chunks": [
+    "NORTH, THE *TALLEST WALL*|ON EARTH."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Nothing gets past me. Not even smoke.",
+   "chunks": [
+    "NOTHING GETS|*PAST ME.*",
+    "NOT EVEN *SMOKE.*"
+   ],
+   "speaker": "him"
+  },
+  {
+   "o": 0,
+   "text": "South, the Aravalli and Vindhya hills.",
+   "chunks": [
+    "SOUTH, THE *ARAVALLI*|AND *VINDHYA* HILLS."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "But it's been a bowl for millions of years. So why only in winter?",
+   "chunks": [
+    "BUT IT'S BEEN A BOWL|FOR *MILLIONS OF YEARS.*",
+    "SO WHY ONLY|IN *WINTER?*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "In summer, warm air rises about a kilometre and takes the smoke away.",
+   "chunks": [
+    "IN *SUMMER,*|WARM AIR RISES",
+    "ABOUT A *KILOMETRE*",
+    "AND TAKES|THE SMOKE *AWAY.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "In November, cold air slides off the Tibetan Plateau and warm air sits on top.",
+   "chunks": [
+    "IN *NOVEMBER,*|COLD AIR SLIDES",
+    "OFF THE *TIBETAN PLATEAU*",
+    "AND WARM AIR|SITS *ON TOP.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Like a lid on a pot.",
+   "chunks": [
+    "LIKE A *LID*|ON A POT."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "The ceiling drops to a few hundred metres, and the wind goes quiet.",
+   "chunks": [
+    "THE CEILING DROPS",
+    "TO A *FEW HUNDRED METRES,*",
+    "AND THE WIND|GOES *QUIET.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "And that's still not the strangest part.",
+   "chunks": [
+    "AND THAT'S STILL NOT|THE *STRANGEST PART.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Researchers say even if Delhi made zero pollution itself,",
+   "chunks": [
+    "RESEARCHERS SAY|EVEN IF DELHI",
+    "MADE *ZERO*|POLLUTION ITSELF,"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "its winter air would likely still turn bad.",
+   "chunks": [
+    "ITS WINTER AIR|WOULD LIKELY",
+    "STILL *TURN BAD.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Because smoke from farms, roads and factories across the plain shares one sky.",
+   "chunks": [
+    "BECAUSE SMOKE FROM|*FARMS, ROADS*",
+    "AND *FACTORIES*|ACROSS THE PLAIN",
+    "SHARES *ONE SKY.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Air doesn't stop at city lines.",
+   "chunks": [
+    "AIR DOESN'T STOP|AT *CITY LINES.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Don't look at me. I'm just tall.",
+   "chunks": [
+    "DON'T LOOK|AT ME.",
+    "I'M JUST *TALL.*"
+   ],
+   "speaker": "him"
+  },
+  {
+   "o": 0,
+   "text": "Comment your city's AQI right now.",
+   "chunks": [
+    "COMMENT YOUR CITY'S|*AQI* RIGHT NOW."
+   ]
+  },
+  {
+   "o": 0,
+   "text": "This is BHUGOL. Follow for more Geography Fun Facts.",
+   "chunks": [
+    "THIS IS *BHUGOL.*",
+    "FOLLOW FOR MORE|GEOGRAPHY FUN FACTS."
+   ]
+  }
+ ]
+}
