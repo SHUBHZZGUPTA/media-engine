@@ -86,14 +86,22 @@ RENDER = r'''import puppeteer from "puppeteer-core";
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 const [chrome, ff, outDir, clipsJson, q] = process.argv.slice(2);
-const b = await puppeteer.launch({ executablePath: chrome, headless: "shell",
+const b = await puppeteer.launch({ executablePath: chrome, headless: "shell", protocolTimeout: 900000,
   args: ["--no-sandbox", "--ignore-gpu-blocklist", "--enable-gpu-rasterization", "--use-gl=angle", "--use-angle=gl-egl"] });
 const p = await b.newPage(); await p.setViewport({ width: 1920, height: 1080 });
-p.on("pageerror", e => console.log("PAGEERR", e.message));
+p.on("pageerror", e => console.log("PAGEERR", e.message)); p.on("console", m => console.log("CONSOLE", m.text().slice(0, 160)));
+p.on("response", r => { if (r.status() >= 400) console.log("HTTP", r.status(), r.url()); });
 let checked = false;
 for (const [cid, dur] of JSON.parse(clipsJson)) {
   await p.goto(`http://127.0.0.1:8765/${cid}/index.html`);
-  await p.waitForFunction(() => window.__timelines && window.__timelines.main, { timeout: 300000 });
+  const tl0 = Date.now(); let ok = false;
+  for (let i = 0; i < 120; i++) {
+    const s = await p.evaluate(() => ({ tl: !!(window.__timelines && window.__timelines.main), fonts: document.fonts.status, ready: document.readyState }));
+    if (s.tl) { ok = true; break; }
+    if (i % 10 == 0) console.log("WAIT", cid, JSON.stringify(s));
+    await new Promise(r => setTimeout(r, 1000));
+  }
+  console.log(ok ? "READY" : "NOT_READY", cid, Date.now() - tl0, "ms"); if (!ok) continue;
   if (!checked) {
     const gl = await p.evaluate(() => { const c = document.querySelector("canvas"); const g = c.getContext("webgl2") || c.getContext("webgl");
       const e = g.getExtension("WEBGL_debug_renderer_info"); return e ? g.getParameter(e.UNMASKED_RENDERER_WEBGL) : g.getParameter(g.RENDERER); });
