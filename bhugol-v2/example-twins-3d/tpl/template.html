@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Same-size countries 3D</title>
+<script src="./gsap.min.js"></script>
+<script src="./three.min.js"></script>
+<script src="./motion.js"></script>
+<script src="./shader_xfade.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 800; src: url(assets/muk800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 700; src: url(assets/muk700.woff2) format('woff2'); }
+:root { --mari: #FFC23A; --white: #F4F8FB; --fire: #FF7A1A; --ink: #03101A; --aqua: #38D6FF; }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #02070D; }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+.scene { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
+.push { position: absolute; inset: 0; }
+.cv { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.chars { position: absolute; inset: 0; }
+.char { position: absolute; opacity: 0; }
+.ov { position: absolute; inset: 0; }
+.plbl { position: absolute; left: 0; top: 0; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #03101A; line-height: 1; opacity: 0; text-align: center; }
+.plbl small { display: block; font-family: 'Arch', sans-serif; font-weight: 800; letter-spacing: .1em; margin-top: 6px; }
+#dim { background: #02070D; opacity: 0; }
+#flash { background: #ffffff; opacity: 0; }
+.ttl, .cap { position: absolute; inset: 0; opacity: 0; }
+.tl { position: absolute; left: 60px; width: 960px; text-align: center; white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; color: var(--white); line-height: 1; }
+.tl.big { font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; letter-spacing: .01em; }
+.tl.small { font-family: 'Arch', 'Muk', sans-serif; font-weight: 800; letter-spacing: .12em; }
+.k { color: var(--mari); }
+.cl { position: absolute; left: 195px; width: 740px; text-align: center; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: var(--white); paint-order: stroke fill; -webkit-text-stroke-color: #02070D; line-height: 1; }
+.hi .cl, .hi .tl.big, .hi .plbl { letter-spacing: 0; }
+.cl span { opacity: 0; display: inline-block; white-space: pre; }
+.cl .k { color: #FFFFFF; }
+#badgeWrap { position: absolute; left: 230px; top: 450px; width: 620px; height: 620px; opacity: 0; transform-origin: 0 0; }
+#badgeShadow { position: absolute; inset: 4% 3% -4% 3%; border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(8px); }
+#badge { position: absolute; inset: 0; width: 100%; height: 100%; }
+#follow { position: absolute; left: 220px; top: 1125px; width: 640px; height: 130px; opacity: 0; }
+#folBtn { position: absolute; inset: 0; border-radius: 65px; background: var(--fire); box-sizing: border-box; }
+#folTxt, #folTxt2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; font-size: 66px; letter-spacing: .05em; color: var(--ink); }
+#folTxt2 { color: var(--fire); opacity: 0; }
+#tapDot { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.85); border: 3px solid var(--ink); opacity: 0; }
+#ripple { position: absolute; left: 20px; top: -235px; width: 600px; height: 600px; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(255,255,255,.6); opacity: 0; }
+.kbox { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; line-height: 1; opacity: 0; }
+.knum, .ksuf { display: inline-block; font-family: 'BSD', 'Muk', sans-serif; font-weight: 900; paint-order: stroke fill; -webkit-text-stroke-color: #03101A; }
+.knum { font-size: 230px; -webkit-text-stroke-width: 30px; color: var(--mari); text-shadow: 0 0 40px rgba(255,194,58,.5); }
+.ksuf { font-size: 110px; -webkit-text-stroke-width: 18px; color: var(--white); margin-left: 26px; }
+.card { position: absolute; left: 0; top: 0; width: 560px; opacity: 0; }
+.cin { background: rgba(6,12,22,.88); border: 4px solid var(--aqua); border-radius: 26px; padding: 22px 30px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.6); }
+.crow { display: flex; align-items: center; gap: 14px; font-family: 'Arch', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: .08em; color: var(--white); }
+.cflag { font-family: 'Emo', sans-serif; font-size: 50px; }
+.cbig { margin-top: 6px; font-family: 'BSD', sans-serif; font-weight: 900; color: var(--mari); line-height: 1; }
+.cnum { display: inline-block; font-size: 128px; } .csuf { display: inline-block; font-size: 64px; color: var(--white); margin-left: 14px; }
+.ctag { margin-top: 10px; display: inline-block; padding: 6px 16px; border-radius: 40px; background: rgba(56,214,255,.18); color: var(--aqua); font-family: 'Arch', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: .1em; }
+.tag { position: absolute; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 54px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 10px #03101A; white-space: nowrap; opacity: 0; }
+
+.rank { position: absolute; left: 0; top: 150px; width: 1080px; height: 300px; display: flex; align-items: center; justify-content: center; opacity: 0; transform-origin: 540px 150px; }
+.rnum { position: relative; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 250px; color: #FFFFFF; paint-order: stroke fill; -webkit-text-stroke: 30px #03101A; line-height: 1; }
+.rank.one .rnum { color: #FFC23A; font-size: 330px; text-shadow: 0 0 60px rgba(255,194,58,.8); }
+.rays { position: absolute; left: 140px; top: -250px; width: 800px; height: 800px; border-radius: 50%; opacity: 0;
+  background: repeating-conic-gradient(rgba(255,214,90,.55) 0deg 10deg, rgba(255,214,90,0) 10deg 22deg); -webkit-mask: radial-gradient(circle, #000 25%, transparent 70%); mask: radial-gradient(circle, #000 25%, transparent 70%); }
+.crown { position: absolute; left: 600px; top: -90px; font-family: 'Emo', sans-serif; font-size: 170px; opacity: 0; }
+.conf { position: absolute; left: 0; top: 0; opacity: 0; border-radius: 3px; }
+.emo { position: absolute; font-family: 'Emo', sans-serif; opacity: 0; }
+.card { width: 470px; }
+.cin { border-color: #FFC23A; padding: 18px 24px 20px; }
+.crow { font-size: 30px; } .cflag { font-size: 44px; } .cnum { font-size: 96px; } .csuf { font-size: 48px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="cshake" class="scr"><div id="scenes" class="scr"></div></div></div>
+    <div id="dim" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="hook" class="scr"></div>
+    <div id="ranks" class="scr"></div>
+    <div id="badgeWrap"><div id="badgeShadow"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
+    <div id="follow"><div id="folBtn"></div><div id="folTxt"></div><div id="folTxt2"></div><div id="ripple"></div><div id="tapDot"></div></div>
+  </div>
+</div>
+__MBLUR__
+<script>
+const D = __DATA__;
+if (D.lang === 'hi') document.getElementById('root').classList.add('hi');
+const NS = 'http://www.w3.org/2000/svg', T3 = THREE;
+const $ = id => document.getElementById(id);
+const tr = s => (D.i18n && D.i18n[s]) || s;
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const LN = D.LN;
+
+/* ---------- keyframe tracks (evaluated from time only) ---------- */
+const EZ = {}; const ease = n => EZ[n || 'power2.inOut'] || (EZ[n || 'power2.inOut'] = gsap.parseEase(n || 'power2.inOut'));
+function Track(base) { return { base, last: base, keys: [] }; }
+function key(T, to, at, dur, e) { const from = (typeof T.last === 'object') ? Object.assign({}, T.last) : T.last;
+  const tgt = (typeof to === 'object') ? Object.assign({}, from, to) : to; T.keys.push({ a: at, d: Math.max(.04, dur), from, to: tgt, e: ease(e) }); T.last = tgt; }
+function valAt(T, t) { let v = T.base;
+  for (const k of T.keys) { if (t < k.a) break; const p = k.e(Math.min(1, (t - k.a) / k.d));
+    if (typeof k.to === 'object') { v = {}; for (const q in k.to) v[q] = k.from[q] + (k.to[q] - k.from[q]) * p; } else v = k.from + (k.to - k.from) * p; }
+  return v; }
+const ALLT = [];   // every track, sorted once at the end of build()
+const TK = b => { const T = Track(b); ALLT.push(T); return T; };
+
+/* ---------- assets ---------- */
+const loader = new T3.TextureLoader(); const TX = {};
+function tex(n, opt) { if (!TX[n]) TX[n] = new Promise(r => loader.load('assets/' + n, t => { t.anisotropy = 4; if (opt && opt.nearest) { t.minFilter = t.magFilter = T3.NearestFilter; t.generateMipmaps = false; } r(t); })); return TX[n]; }
+const CPU = {};
+function cpuImg(n) { if (!CPU[n]) CPU[n] = new Promise(r => { const im = new Image(); im.onload = () => { const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const x = c.getContext('2d'); x.drawImage(im, 0, 0); r({ w: im.width, h: im.height, d: x.getImageData(0, 0, im.width, im.height).data }); }; im.src = 'assets/' + n; }); return CPU[n]; }
+const sampleCPU = (I, u, v) => { const x = clamp(Math.round(u * (I.w - 1)), 0, I.w - 1), y = clamp(Math.round((1 - v) * (I.h - 1)), 0, I.h - 1); return I.d[(y * I.w + x) * 4] / 255; };
+function glowTex() { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.25, 'rgba(255,255,255,.55)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128); return new T3.CanvasTexture(c); }
+function noiseTex() { const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); const im = g.createImageData(256, 256);
+  const H = (x, y) => { const s = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return s - Math.floor(s); };
+  const V = (x, y) => { const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+    const a = H(xi % 16, yi % 16), b = H((xi + 1) % 16, yi % 16), c2 = H(xi % 16, (yi + 1) % 16), d = H((xi + 1) % 16, (yi + 1) % 16); return a + (b - a) * u + (c2 - a) * v + (a - b - c2 + d) * u * v; };
+  for (let y = 0; y < 256; y++) for (let x = 0; x < 256; x++) { const n = .55 * V(x / 16, y / 16) + .3 * V(x / 8 % 16, y / 8 % 16) + .15 * V(x / 4 % 16, y / 4 % 16); const k = (y * 256 + x) * 4; im.data[k] = im.data[k + 1] = im.data[k + 2] = n * 255; im.data[k + 3] = 255; }
+  g.putImageData(im, 0, 0); const t = new T3.CanvasTexture(c); t.wrapS = t.wrapT = T3.RepeatWrapping; return t; }
+function flagTex(stripes, vertical) { const c = document.createElement('canvas'); c.width = 300; c.height = 200; const g = c.getContext('2d');
+  stripes.forEach((col, i) => { g.fillStyle = col; if (vertical) g.fillRect(i * 300 / stripes.length, 0, 300 / stripes.length + 1, 200); else g.fillRect(0, i * 200 / stripes.length, 300, 200 / stripes.length + 1); }); return new T3.CanvasTexture(c); }
+const GLOW = glowTex(), NOISE = noiseTex();
+const READY = [];
+const FOV = 30, ASP = 1080 / 1920;
+const toScreen = (cam, p) => { const v = p.clone().project(cam); return { x: (v.x + 1) / 2 * 1080, y: (1 - v.y) / 2 * 1920, z: v.z }; };
+function newScene() { const el = mk('div', { class: 'scene' }, $('scenes')); const push = mk('div', { class: 'push' }, el); return { el, push }; }
+function renderer(push) { const cv = mk('canvas', { width: 1080, height: 1920, class: 'cv' }, push);
+  const R = new T3.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true }); R.setPixelRatio(1); R.setSize(1080, 1920, false); return { cv, R }; }
+/* ---------- 3D map: globe + terrain (flag fills baked per country) ---------- */
+function map3(P, M3, o) {
+  const [L0, L1, B0, B1] = M3.bbox; const LC = (L0 + L1) / 2, BC = (B0 + B1) / 2, KX = Math.cos(BC * Math.PI / 180);
+  const { el, push } = newScene(); const G = renderer(push), Tn = renderer(push); const ov = mk('div', { class: 'ov' }, push); const chars = mk('div', { class: 'chars' }, push);
+  const sg = new T3.Scene(); sg.background = new T3.Color(0x01040A); const cg = new T3.PerspectiveCamera(30, ASP, .01, 100);
+  const globe = new T3.Mesh(new T3.SphereGeometry(1, 160, 120), new T3.MeshBasicMaterial({ color: 0xffffff })); sg.add(globe);
+  sg.add(new T3.Mesh(new T3.SphereGeometry(1.06, 96, 72), new T3.ShaderMaterial({ side: T3.BackSide, transparent: true, blending: T3.AdditiveBlending, depthWrite: false,
+    vertexShader: `varying vec3 vN; varying vec3 vP; void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vP; void main(){ float f = pow(clamp(1.0 - abs(dot(normalize(-vP), vN)), 0.0, 1.0), 2.2); gl_FragColor = vec4(0.35, 0.65, 1.0, f * 0.9); }` })));
+  { const n = 1400, p = new Float32Array(n * 3); for (let i = 0; i < n; i++) { const a = (i * 2.399963) % (Math.PI * 2), z = 1 - 2 * ((i + .5) / n), r = Math.sqrt(1 - z * z); p.set([Math.cos(a) * r * 30, z * 30, Math.sin(a) * r * 30], i * 3); }
+    const g = new T3.BufferGeometry(); g.setAttribute('position', new T3.BufferAttribute(p, 3)); sg.add(new T3.Points(g, new T3.PointsMaterial({ color: 0xffffff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: .7 }))); }
+  const ll = (lon, lat, r) => { const ph = (lon + 180) * Math.PI / 180, th = (90 - lat) * Math.PI / 180; return new T3.Vector3(-Math.cos(ph) * Math.sin(th) * r, Math.cos(th) * r, Math.sin(ph) * Math.sin(th) * r); };
+  const st = new T3.Scene(); st.background = new T3.Color(0x0A1424); st.fog = new T3.Fog(0x0A1424, o.fog[0], o.fog[1]);
+  const ct = new T3.PerspectiveCamera(32, ASP, .005, 400); ct.up.set(0, 0, 1);
+  const Wt = (L1 - L0) * KX, Ht = (B1 - B0), EX = .0105;
+  const TU = { cl: { value: o.cls === false ? 0 : 1 }, dem: { value: null }, ne: { value: null }, cls: { value: null }, mask: { value: null }, hs: { value: null }, flg: { value: null }, fA: { value: 0 }, fB: { value: 0 }, hl: { value: 0 }, exag: { value: 0 },
+    px: { value: new T3.Vector2(2.5 / 4096, 2.5 / 4096 * (M3.bbox[1] - M3.bbox[0]) / (M3.bbox[3] - M3.bbox[2])) },
+    crect: { value: new T3.Vector4((M3.pa_close_bbox[0] - L0) / (L1 - L0), (M3.pa_close_bbox[2] - B0) / (B1 - B0), (M3.pa_close_bbox[1] - L0) / (L1 - L0), (M3.pa_close_bbox[3] - B0) / (B1 - B0)) } };
+  st.add(new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 640, 400), new T3.ShaderMaterial({ uniforms: TU,
+    vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
+    fragmentShader: `uniform sampler2D ne, cls, mask, hs, flg; uniform float fA, fB, hl, cl; uniform vec4 crect; uniform vec2 px; varying vec2 vUv;
+      float idx(vec2 u){ return floor(texture2D(mask, u).r * 255.0 / 40.0 + 0.5); }
+      void main(){ vec3 c = texture2D(ne, vUv).rgb;
+        vec2 q = (vUv - crect.xy) / (crect.zw - crect.xy); float f = smoothstep(0.0, 0.08, q.x) * smoothstep(1.0, 0.92, q.x) * smoothstep(0.0, 0.08, q.y) * smoothstep(1.0, 0.92, q.y);
+        vec3 cc = texture2D(cls, clamp(q, 0.0, 1.0)).rgb; f *= cl * smoothstep(0.03, 0.07, dot(cc, vec3(0.333))); if (f > 0.0) c = mix(c, cc, f);
+        float h = texture2D(hs, vUv).r; c *= 0.48 + 0.72 * h; float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, 0.9);
+        float i0 = idx(vUv); float fill = (i0 > 0.5 && i0 < 1.5) ? fA : ((i0 > 1.5 && i0 < 2.5) ? fB : 0.0);
+        vec3 fl = texture2D(flg, vUv).rgb * (0.78 + 0.32 * h);
+        c = mix(c, fl, fill * 0.9);
+        float e = 0.0; for (int k = 0; k < 4; k++) { vec2 d = k == 0 ? vec2(px.x, 0.0) : (k == 1 ? vec2(-px.x, 0.0) : (k == 2 ? vec2(0.0, px.y) : vec2(0.0, -px.y))); float j = idx(vUv + d); if (abs(j - i0) > 0.5) { float fj = (j > 0.5 && j < 1.5) ? fA : ((j > 1.5 && j < 2.5) ? fB : 0.0); e = max(e, max(fill, fj)); } }
+        c = mix(c, vec3(1.0), e);
+        c *= mix(1.0, 0.55, hl * (fill > 0.01 ? 0.0 : 1.0));
+        gl_FragColor = vec4(c, 1.0); }` })));
+  const demI = { I: null }; const hAt = (lon, lat) => demI.I ? sampleCPU(demI.I, (lon - L0) / (L1 - L0), (lat - B0) / (B1 - B0)) * EX : 0;
+  const wpos = (lon, lat, up) => new T3.Vector3((lon - LC) * KX, lat - BC, hAt(lon, lat) * TU.exag.value / EX + (up || 0));
+  const pin = new T3.Group(); st.add(pin);
+  const beam = new T3.Mesh(new T3.CylinderGeometry(.03, .03, 1.2, 12, 1, true), new T3.MeshBasicMaterial({ color: 0xFFC23A, transparent: true, opacity: 0, blending: T3.AdditiveBlending, depthWrite: false }));
+  beam.rotation.x = Math.PI / 2; beam.position.z = .6; pin.add(beam);
+  const head = new T3.Sprite(new T3.SpriteMaterial({ map: GLOW, color: 0xFFC23A, transparent: true, blending: T3.AdditiveBlending, depthWrite: false, opacity: 0 })); head.position.z = 1.2; head.scale.set(.7, .7, 1); pin.add(head);
+  // overlay: several rings (true size, already placed in lon/lat), flag texture over their joint bbox; dx/dy offsets in degrees
+  const ovs = [];
+  function uvGeo(shapes, bb) { const g = new T3.ShapeGeometry(shapes); const p = g.attributes.position; const uvs = [];
+    for (let i = 0; i < p.count; i++) uvs.push((p.getX(i) - bb.min.x) / (bb.max.x - bb.min.x), (p.getY(i) - bb.min.y) / (bb.max.y - bb.min.y)); g.setAttribute('uv', new T3.Float32BufferAttribute(uvs, 2)); return g; }
+  const toV = ring => ring.map(([lo, la]) => new T3.Vector2((lo - LC) * KX, la - BC));
+  function overlay(rings, flagT) { const vs = rings.map(toV); const shapes = vs.map(v => new T3.Shape(v)); const bb = new T3.Box2().setFromPoints(vs.flat());
+    const grp = new T3.Group(); st.add(grp);
+    const fill = new T3.Mesh(uvGeo(shapes, bb), new T3.MeshBasicMaterial({ map: flagT, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); fill.renderOrder = 6; grp.add(fill);
+    const edges = vs.map(v => { const pts = v.map(p => new T3.Vector3(p.x, p.y, 0)); const g = new T3.BufferGeometry().setFromPoints(pts.concat([pts[0]]));
+      const m = new T3.Line(g, new T3.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthTest: false })); m.renderOrder = 7; grp.add(m); return m; });
+    const sh = new T3.Mesh(new T3.ShapeGeometry(shapes), new T3.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0, depthWrite: false, depthTest: false })); sh.renderOrder = 4; st.add(sh);
+    const rec = { grp, fill, edges, sh, bb, a: TK(0), z: TK(2.4), d: TK({ x: 0, y: 0 }), grey: TK(0), cx: (bb.min.x + bb.max.x) / 2, cy: (bb.min.y + bb.max.y) / 2 }; ovs.push(rec); return rec; }
+  // morph overlay: ring A -> ring B (same point count), rebuilt when p changes
+  function morph(ra, rb, flagT) { const A = toV(ra), B = toV(rb); const bbA = new T3.Box2().setFromPoints(A), bbB = new T3.Box2().setFromPoints(B);
+    const mat = new T3.MeshBasicMaterial({ map: flagT, transparent: true, opacity: 0, depthWrite: false, depthTest: false });
+    const mesh = new T3.Mesh(new T3.BufferGeometry(), mat); mesh.renderOrder = 6; st.add(mesh);
+    const lmat = new T3.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthTest: false }); const line = new T3.Line(new T3.BufferGeometry(), lmat); line.renderOrder = 7; st.add(line);
+    const rec = { mesh, line, a: TK(0), p: TK(0), last: -1, z: .05 };
+    rec.update = p => { if (Math.abs(p - rec.last) < 1e-4) return; rec.last = p; const pts = A.map((a, i) => new T3.Vector2(a.x + (B[i].x - a.x) * p, a.y + (B[i].y - a.y) * p));
+      const bb = new T3.Box2().setFromPoints(pts); mesh.geometry.dispose(); mesh.geometry = uvGeo([new T3.Shape(pts)], bb);
+      line.geometry.dispose(); line.geometry = new T3.BufferGeometry().setFromPoints(pts.concat([pts[0]]).map(v => new T3.Vector3(v.x, v.y, 0))); };
+    S.morphs.push(rec); return rec; }
+  const S = { el, push, ov, chars, G, Tn, sg, cg, st, ct, globe, TU, pin, beam, head, lls: [], cards: [], meas: [], ovs, morphs: [], overlay, morph, wpos, ll, KX, LC, BC,
+    gk: TK(Object.assign({ lon: 30, lat: 12, dist: 3.5 }, o.gk0 || {})), tk: TK(Object.assign({ lon: LC, lat: BC, dist: 30, el: 80, yaw: 0 }, o.tk0 || {})), x: TK(o.globe ? 0 : 1), fA: TK(0), fB: TK(0), hl: TK(0), pinA: TK(0), wins: [] };
+  READY.push(tex('globe_flags.jpg').then(t => { globe.material.map = t; globe.material.needsUpdate = true; }), tex(P + 'ne.jpg').then(t => TU.ne.value = t), tex(P + 'pa_close.jpg').then(t => TU.cls.value = t),
+    tex(P + 'pa_mask.png', { nearest: 1 }).then(t => TU.mask.value = t), tex(P + 'hillshade.png').then(t => TU.hs.value = t), tex(P + 'dem8.png').then(t => TU.dem.value = t), tex(P + 'flags.jpg').then(t => TU.flg.value = t),
+    cpuImg(P + 'dem8.png').then(I => { demI.I = I; TU.exag.value = EX * (o.exag || 26); if (o.pin) pin.position.copy(wpos(o.pin[0], o.pin[1])); }));
+  S.cam = t => { const k = valAt(S.tk, t); const tg = new T3.Vector3((k.lon - LC) * KX, k.lat - BC, 0); const e = k.el * Math.PI / 180, y = k.yaw * Math.PI / 180;
+    ct.position.set(tg.x + Math.sin(y) * Math.cos(e) * k.dist, tg.y - Math.cos(y) * Math.cos(e) * k.dist, Math.sin(e) * k.dist); ct.lookAt(tg); ct.updateMatrixWorld(); };
+  S.proj = (t, lon, lat, up) => { S.cam(t); return toScreen(ct, wpos(lon, lat, up || .01)); };
+  S.render = t => {
+    const x = valAt(S.x, t); G.cv.style.opacity = 1 - x; Tn.cv.style.opacity = x;
+    if (x < 1) { const g = valAt(S.gk, t); cg.position.copy(ll(g.lon, g.lat, g.dist)); cg.up.set(0, 1, 0); cg.lookAt(0, 0, 0); G.R.render(sg, cg); }
+    if (x > 0) { S.cam(t); TU.fA.value = valAt(S.fA, t); TU.fB.value = valAt(S.fB, t); TU.hl.value = valAt(S.hl, t);
+      const pa = valAt(S.pinA, t); beam.material.opacity = pa * .85; head.material.opacity = pa;
+      for (const v of ovs) { const a = valAt(v.a, t), z = valAt(v.z, t), d = valAt(v.d, t), gr = valAt(v.grey, t);
+        v.fill.material.opacity = a * .95; v.fill.material.color.setRGB(1 - gr * .55, 1 - gr * .55, 1 - gr * .45); v.edges.forEach(e => e.material.opacity = a);
+        v.grp.position.set(d.x * KX, d.y, .05 + z * 1.6); v.sh.position.set(d.x * KX + .1 * z + .05, d.y - .14 * z - .07, .02); v.sh.material.opacity = a * .4; }
+      for (const m of S.morphs) { const a = valAt(m.a, t); m.mesh.material.opacity = a * .95; m.line.material.opacity = a; m.mesh.position.z = m.line.position.z = .06; if (a > 0) m.update(valAt(m.p, t)); }
+      Tn.R.render(st, ct);
+      for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const dd = L.ov ? valAt(L.ov.d, t) : { x: 0, y: 0 };
+        const q = toScreen(ct, wpos(L.lon + dd.x, L.lat + dd.y, .05)); const s = (.6 + .4 * Math.min(1, a * 1.5)) * (1 + valAt(L.pop, t));
+        L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2 + valAt(L.dy, t)).toFixed(1)}px) scale(${s.toFixed(3)}) rotate(${valAt(L.rot, t).toFixed(1)}deg)`; }
+      for (const cd of S.cards) { const a = valAt(cd.a, t); cd.el.style.opacity = a * x; cd.ln.style.opacity = a * x; if (a <= 0) continue;
+        const q = toScreen(ct, wpos(cd.lon, cd.lat, .05)); const w = cd.el.offsetWidth, h = cd.el.offsetHeight; const cx = cd.side === 'L' ? 40 : 1040 - w, cy = cd.y + (1 - a) * 40;
+        cd.el.style.transform = `translate(${cx}px,${cy.toFixed(1)}px)`; cd.path.setAttribute('d', `M${(cx + w / 2).toFixed(1)} ${(cy + h).toFixed(1)} L${q.x.toFixed(1)} ${q.y.toFixed(1)}`); cd.dot.setAttribute('cx', q.x.toFixed(1)); cd.dot.setAttribute('cy', q.y.toFixed(1)); }
+      for (const m of S.meas) { const a = valAt(m.a, t), dr = valAt(m.draw, t); m.svg.style.opacity = a * x; m.lab.style.opacity = a * x; if (a <= 0) continue;
+        const p0 = toScreen(ct, wpos(m.p0[0], m.p0[1], .02)), p1 = toScreen(ct, wpos(m.p1[0], m.p1[1], .02)); const ex = p0.x + (p1.x - p0.x) * dr, ey = p0.y + (p1.y - p0.y) * dr;
+        m.path.setAttribute('d', `M${p0.x.toFixed(1)} ${p0.y.toFixed(1)} L${ex.toFixed(1)} ${ey.toFixed(1)}`); m.c0.setAttribute('cx', p0.x); m.c0.setAttribute('cy', p0.y); m.c1.setAttribute('cx', ex); m.c1.setAttribute('cy', ey);
+        m.lab.style.transform = `translate(${((p0.x + p1.x) / 2 - m.lab.offsetWidth / 2).toFixed(1)}px,${(Math.min(p0.y, p1.y) - m.lab.offsetHeight - 40).toFixed(1)}px)`; } }
+  };
+  return S;
+}
+function mapLabel(S, txt, lon, lat, fs, col) { const e = mk('div', { class: 'plbl' }, S.ov); e.innerHTML = txt; Object.assign(e.style, { fontSize: fs + 'px', webkitTextStrokeWidth: (fs * .18) + 'px', color: col || '' });
+  const rec = { e, lon, lat, a: TK(0), pop: TK(0), dy: TK(0), rot: TK(0) }; S.lls.push(rec); return rec; }
+function mkCard(S, b) { const el = mk('div', { class: 'card' }, S.ov);
+  el.innerHTML = `<div class="cin"><div class="crow"><span class="cflag">${b.flag || ''}</span><span>${b.name || ''}</span></div><div class="cbig"><span class="cnum">0</span><span class="csuf">km²</span></div></div>`;
+  const svg = mk('svg', { width: 1080, height: 1920, style: 'position:absolute;left:0;top:0;overflow:visible;opacity:0' }, S.ov, true); S.ov.insertBefore(svg, el);
+  const path = mk('path', { stroke: '#FFFFFF', 'stroke-width': 6, 'stroke-dasharray': '14 10', fill: 'none' }, svg, true); const dot = mk('circle', { r: 11, fill: '#FFC23A', stroke: '#03101A', 'stroke-width': 4 }, svg, true);
+  const c = { el, ln: svg, path, dot, a: TK(0), side: b.side, y: b.y || 250, lon: b.lon, lat: b.lat, num: el.querySelector('.cnum') }; S.cards.push(c); return c; }
+function measure(S, p0, p1) { const svg = mk('svg', { width: 1080, height: 1920, style: 'position:absolute;left:0;top:0;overflow:visible;opacity:0' }, S.ov, true);
+  const path = mk('path', { stroke: '#FFC23A', 'stroke-width': 10, 'stroke-dasharray': '22 14', 'stroke-linecap': 'round', fill: 'none' }, svg, true);
+  const c0 = mk('circle', { r: 16, fill: '#fff', stroke: '#03101A', 'stroke-width': 5 }, svg, true), c1 = mk('circle', { r: 16, fill: '#fff', stroke: '#03101A', 'stroke-width': 5 }, svg, true);
+  const lab = mk('div', { class: 'plbl', style: 'font-size:120px;-webkit-text-stroke-width:20px;color:#FFC23A' }, S.ov); lab.innerHTML = '<span class="n">0</span> km';
+  const m = { svg, path, c0, c1, lab, p0, p1, a: TK(0), draw: TK(0) }; S.meas.push(m); return m; }
+function character(S, kind, cx, cy, sc) {
+  const box = mk('div', { class: 'char' }, S.chars); Object.assign(box.style, { left: (cx - 390) + 'px', top: (cy - 390) + 'px', width: '780px', height: '780px' });
+  const svg = mk('svg', { width: 780, height: 780, viewBox: '0 0 780 780', style: 'overflow:visible' }, box, true);
+  const d = D.shapes[kind]; const id = 'cp_' + kind + '_' + Math.round(cx);
+  const defs = mk('defs', {}, svg, true);
+  defs.innerHTML = `<clipPath id="${id}"><path d="${d}"/></clipPath><linearGradient id="h${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <filter id="s${id}" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="22" stdDeviation="14" flood-color="#000" flood-opacity=".5"/></filter>`;
+  const body = mk('g', { transform: `translate(${390 - 300 * sc},${390 - 300 * sc}) scale(${sc})`, filter: `url(#s${id})` }, svg, true);
+  body.innerHTML = `<path d="${d}" fill="none" stroke="#0b0b0b" stroke-width="30" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+    <g clip-path="url(#${id})"><image href="assets/flag_${kind}.png" x="0" y="0" width="600" height="600" preserveAspectRatio="none"/><rect x="0" y="0" width="600" height="270" fill="url(#h${id})"/></g>`;
+  const F = D.face[kind]; const face = mk('g', { transform: `translate(${F[0]},${F[1]}) scale(${F[2]})` }, body, true);
+  const eyes = mk('g', {}, face, true), extra = mk('g', {}, face, true);
+  eyes.innerHTML = `<ellipse cx="-50" cy="0" rx="34" ry="42" fill="#fff" stroke="#111" stroke-width="7"/><ellipse cx="50" cy="0" rx="34" ry="42" fill="#fff" stroke="#111" stroke-width="7"/>
+    <circle cx="-44" cy="${kind === 'gb' ? 14 : 6}" r="17" fill="#111"/><circle cx="56" cy="${kind === 'gb' ? 14 : 6}" r="17" fill="#111"/><circle cx="-38" cy="0" r="6" fill="#fff"/><circle cx="62" cy="0" r="6" fill="#fff"/>`;
+  let mouthO, mouthC;
+  if (kind === 'gb') {
+    extra.innerHTML = `<path d="M-88,-58 L-20,-40" stroke="#111" stroke-width="13" stroke-linecap="round"/><path d="M88,-58 L20,-40" stroke="#111" stroke-width="13" stroke-linecap="round" transform="scale(-1,1) rotate(180) scale(-1,-1)"/>
+      <path class="tear" d="M-58,40 q-12,26 0,34 q12,-8 0,-34z" fill="#7fd4ff" stroke="#1b5c8a" stroke-width="4"/><path class="tear" d="M58,40 q-12,26 0,34 q12,-8 0,-34z" fill="#7fd4ff" stroke="#1b5c8a" stroke-width="4"/>`;
+    mouthO = mk('g', {}, face, true); mouthO.innerHTML = `<path d="M-34,104 Q0,62 34,104 Q0,96 -34,104Z" fill="#3a0a10" stroke="#111" stroke-width="7"/>`;
+    mouthC = mk('g', {}, face, true); mouthC.innerHTML = `<path d="M-32,100 Q0,72 32,100" stroke="#111" stroke-width="11" fill="none" stroke-linecap="round"/>`;
+  } else {
+    extra.innerHTML = `<ellipse cx="-78" cy="52" rx="26" ry="14" fill="#ff6b9a" opacity=".75"/><ellipse cx="78" cy="52" rx="26" ry="14" fill="#ff6b9a" opacity=".75"/>`;
+    mouthO = mk('g', {}, face, true); mouthO.innerHTML = `<path d="M-30,70 Q0,112 30,70Z" fill="#5a0f1e" stroke="#111" stroke-width="7"/>`;
+    mouthC = mk('g', {}, face, true); mouthC.innerHTML = `<path d="M-30,72 Q0,100 30,72" stroke="#111" stroke-width="11" fill="none" stroke-linecap="round"/>`;
+  }
+  return { box, eyes, extra, mouthO, mouthC, cx, cy, tears: [...extra.querySelectorAll('.tear')] };
+}
+/* ---------- build scenes ---------- */
+const FT = iso => { const t = new T3.Texture(); READY.push(tex('flag_' + iso + '.png').then(x => { t.image = x.image; t.needsUpdate = true; })); return t; };
+const SA = map3('sa/', D.maps.sa, { globe: true, fog: [60, 170], pin: [86.925, 27.988], exag: 30, tk0: { lon: 86.6, lat: 25.6, dist: 46, el: 88, yaw: 0 }, gk0: D.loopPose });
+const WA = map3('wa/', D.maps.wa, { cls: false, fog: [50, 140], exag: 8, tk0: { lon: -11.2, lat: 10.2, dist: 22, el: 88, yaw: 0 } });
+const ZC = map3('zc/', D.maps.zc, { cls: false, fog: [120, 320], exag: 10, tk0: { lon: 25.5, lat: -13, dist: 34, el: 88, yaw: 0 } });
+const IT = map3('it/', D.maps.it, { cls: false, fog: [80, 240], exag: 12, tk0: { lon: 12.5, lat: 42, dist: 30, el: 88, yaw: 0 } });
+const SEA = map3('sea/', D.maps.sea, { cls: false, globe: true, fog: [80, 240], exag: 12, tk0: { lon: 109.4, lat: 9.6, dist: 74, el: 88, yaw: 0 }, gk0: { lon: 109.4, lat: 9.6, dist: 2.3 } });
+const REG = { SA, WA, ZC, IT, SEA }; const SCENES = [SA, WA, ZC, IT, SEA];
+const XF = BhugolXfade(T3, $('cshake'));
+const GEO = D.geo;
+WA.uk = WA.overlay(GEO.gb_on_gn, FT('GB'));
+ZC.cl = ZC.overlay(GEO.cl_side, FT('CL')); ZC.mo = ZC.morph(GEO.morph_a, GEO.morph_b, FT('ZM'));
+IT.ph = IT.overlay(GEO.ph_top, FT('PH'));
+const OVR = { 'WA.uk': WA.uk, 'ZC.cl': ZC.cl, 'IT.ph': IT.ph };
+SA.meas22 = measure(SA, [88.111, 26.586], [88.346, 26.505]);
+const LBL = (D.labels || []).map(b => { const S = REG[b.scene]; const L = mapLabel(S, b.txt, b.lon, b.lat, b.fs || 64, b.col); if (b.ov) L.ov = OVR[b.ov]; return Object.assign(L, { b }); });
+// characters
+WA.cGb = character(WA, 'gb', 540, 900, 1.25); SEA.cMy = character(SEA, 'my', 330, 900, 1.05); SEA.cVn = character(SEA, 'vn', 780, 780, 1.1);
+const heart = mk('div', { class: 'emo', style: 'left:470px;top:560px;font-size:170px' }, SEA.chars); heart.textContent = '❤️';
+// rank badges
+const RK = {}; for (const n of [5, 4, 3, 2, 1]) { const el = mk('div', { class: 'rank' + (n === 1 ? ' one' : '') }, $('ranks'));
+  el.innerHTML = (n === 1 ? '<div class="rays"></div><div class="crown">👑</div>' : '') + `<div class="rnum">#${n}</div>`; RK[n] = el; }
+const CONF = []; { const cols = ['#FFC23A', '#FF3B30', '#38D6FF', '#7CFF6B', '#FF6BD5', '#FFFFFF']; for (let i = 0; i < 70; i++) { const e = mk('div', { class: 'conf' }, $('ranks'));
+  const h = k => { const s = Math.sin((i + 1) * 91.7 + k * 13.3) * 43758.5; return s - Math.floor(s); };
+  e.style.background = cols[i % cols.length]; CONF.push({ e, a: h(1) * Math.PI * 2, v: 700 + h(2) * 900, sp: (h(3) - .5) * 900, w: 14 + h(4) * 14 }); e.style.width = CONF[i].w + 'px'; e.style.height = (CONF[i].w * .55) + 'px'; } }
+
+/* ---------- titles + captions ---------- */
+const TT = {};
+for (const t of D.titles) { const g = mk('div', { class: 'ttl', id: t.id }, $('titles')); const lines = [];
+  t.lines.forEach((ln0, i) => { const small = ln0.startsWith('~'); const ln = small ? ln0.slice(1) : ln0; const size = small ? 64 : 124;
+    const d = mk('div', { class: 'tl ' + (small ? 'small' : 'big') }, g); const base = 330 + (i === 0 ? 0 : (small ? 80 : 124));
+    Object.assign(d.style, { fontSize: size + 'px', top: (base - size * .8) + 'px', webkitTextStrokeWidth: (size * .14) + 'px' }); markup(ln, d); lines.push(d); });
+  TT[t.id] = { g, t, lines }; }
+const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps'));
+  const lines = c.txt.split('|').map(ln => { const d = mk('div', { class: 'cl' }, g); markup(ln, d); return d; });
+  return { c, g, lines, words: [...g.querySelectorAll('span')] }; });
+function layout() {
+  for (const K of CAPS) { let fs = 92; K.g.style.opacity = 1;
+    for (const d of K.lines) { d.style.fontSize = '92px'; const w = d.scrollWidth; if (w > 740) fs = Math.min(fs, 92 * 740 / w); }
+    K.g.style.opacity = 0; const n = K.lines.length;
+    K.lines.forEach((d, i) => Object.assign(d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .17).toFixed(1) + 'px', top: (1385 + (i - (n - 1) / 2) * fs - fs * .5).toFixed(1) + 'px' })); }
+  for (const id in TT) { const { g, lines } = TT[id]; g.style.opacity = 1;
+    for (const d of lines) { const w = d.scrollWidth, fs = parseFloat(d.style.fontSize); if (w > 960) d.style.fontSize = (fs * 960 / w).toFixed(1) + 'px'; }
+    g.style.opacity = 0; }
+}
+
+/* ---------- timeline ---------- */
+function build() {
+  layout();
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false };
+  const MO = BhugolMotion(tl, { xfade: true });
+  const PL = D.shots.map(s => ({ S: REG[s.scene], el: REG[s.scene].el, at: s.t, cut: s.cut }));
+  PL.forEach((p, i) => { p.S.wins.push([i ? p.at - .45 : 0, i < PL.length - 1 ? PL[i + 1].at + .1 + (PL[i + 1].cut === 'burn' ? MO.BURN_DUR : 0) : D.dur + 1]); });
+  PL.forEach((p, i) => { if (p.cut === 'burn') { const A = PL[i - 1].S; XF.add(p.at, MO.BURN_DUR, { cv: A.Tn.cv, push: A.push }, { cv: p.S.Tn.cv, push: p.S.push }, 'burn'); } });
+  MO.shots(PL); tl.set(PL[0].el, { opacity: 1 }, 0);
+  for (const b of D.beats || []) if (b.kind === 'punch') MO.punch(REG[b.scene].push, b.t, b.level, b.back);
+  const on = (T, at, d, v, e) => key(T, v === undefined ? 1 : v, at, d || .4, e || 'power1.inOut');
+  const WT = (li, ci, en, hi, off) => { const ch = D.chunks.find(c => c.li === li && c.ci === ci); const nd = (D.lang === 'hi' ? hi : en);
+    const toks = ch.txt.replace(/\|/g, ' ').replace(/\*/g, '').split(' '); const k = nd ? toks.findIndex(w => w.toUpperCase().includes(nd.toUpperCase())) : -1; return (k >= 0 ? ch.wt[k] : ch.sn) + (off || 0); };
+  const flash = at => tl.to($('flash'), { keyframes: [{ opacity: .5, duration: .08 }, { opacity: 0, duration: .45 }] }, at);
+  const chIn = (ch, at) => { tl.fromTo(ch.box, { opacity: 0, y: 420, scale: .6, rotation: -8 }, { opacity: 1, y: 0, scale: 1, rotation: 0, duration: .55, ease: 'back.out(1.8)', ...IR }, at); };
+  const chOut = (ch, at) => tl.to(ch.box, { y: 460, opacity: 0, scale: .7, duration: .35, ease: 'power3.in' }, at);
+  const mouth = (ch, a, b, step) => { tl.set(ch.mouthO, { opacity: 0 }, 0); tl.set(ch.mouthC, { opacity: 1 }, 0);
+    for (let t = a; t < b - .05; t += step) { tl.set(ch.mouthO, { opacity: 1 }, t); tl.set(ch.mouthC, { opacity: 0 }, t); tl.set(ch.mouthO, { opacity: 0 }, t + step * .55); tl.set(ch.mouthC, { opacity: 1 }, t + step * .55); } };
+  const bob = (ch, a, b) => { const n = Math.max(2, Math.floor((b - a) / .32));
+    tl.fromTo(ch.box, { scaleY: 1, rotation: 0, transformOrigin: '50% 80%' }, { keyframes: Array.from({ length: n }, (_, i) => [{ scaleY: 1.04, rotation: i % 2 ? 2 : -2, duration: .16 }, { scaleY: 1, rotation: 0, duration: .16 }]).flat(), ...IR }, a); };
+  const shake = (at, k) => MO.shake(at, .6, 'rig-6d-wobble', k || .75);
+  const LNe = i => LN[i].b;
+
+  // ===== SA: hook globe spin -> dive onto Nepal & Bangladesh (pair #5) =====
+  key(SA.gk, D.loopPose, 0, .01); key(SA.gk, { lon: 84, lat: 24, dist: 2.5 }, .05, C(1, 0, -.35) - .05, 'sine.inOut');
+  key(SA.gk, { lon: 86.6, lat: 25.6, dist: 1.75 }, C(1, 0, -.35), .45, 'power3.in'); key(SA.x, 1, C(1, 0, -.05), .35, 'power1.inOut');
+  key(SA.tk, { lon: 86.5, lat: 25.6, dist: 41, el: 86, yaw: 2 }, C(1, 0, -.05), C(2, 0, -.25) - C(1, 0, -.05), 'power2.out');
+  on(SA.fA, WT(1, 1, 'NEPAL', 'नेपाल', -.05), .35); on(SA.fB, WT(1, 1, 'BANGLADESH', 'बांग्लादेश', -.05), .35);
+  key(SA.tk, { lon: 88.23, lat: 26.4, dist: 6.5, el: 74, yaw: 0 }, C(2, 0, -.25), 1.0, 'power3.inOut');
+  key(SA.tk, { lon: 88.24, lat: 26.42, dist: 5.8, el: 70, yaw: 4 }, C(2, 0, .75), C(2, 1, -.2) - C(2, 0, .75), 'sine.inOut');
+  { const m = SA.meas22; on(m.a, C(2, 0, .35), .2); key(m.draw, 1, C(2, 0, .4), .6, 'power3.out'); key(m.a, 0, C(2, 1, -.25), .2);
+    MO.countUp(m.lab.querySelector('.n'), 22, C(2, 0, .4), { dur: .7, noScale: true }); }
+  key(SA.tk, { lon: 86.93, lat: 27.75, dist: 3.6, el: 34, yaw: 0 }, C(2, 1, -.2), 1.1, 'power3.inOut'); on(SA.pinA, C(2, 1, .3), .5); key(SA.fA, 0, C(2, 1, -.1), .6); key(SA.fB, 0, C(2, 1, -.1), .6);
+  key(SA.tk, { lon: 86.95, lat: 27.8, dist: 3.2, el: 28, yaw: -7 }, C(2, 1, .9), C(2, 3, -.2) - C(2, 1, .9), 'sine.inOut'); key(SA.pinA, 0, C(2, 3, 0), .3);
+  key(SA.tk, { lon: 90.4, lat: 23.1, dist: 8, el: 62, yaw: 6 }, C(2, 3, -.2), 1.0, 'power3.inOut');
+  key(SA.tk, { lon: 86.5, lat: 25.6, dist: 44, el: 88, yaw: 0 }, C(2, 4, .3), .9, 'power3.inOut'); key(SA.fA, 1, C(2, 4, .3), .5); key(SA.fB, 1, C(2, 4, .3), .5);
+  key(SA.tk, { lon: 86.5, lat: 25.6, dist: 42, el: 87, yaw: -2 }, C(2, 4, 1.2), Math.max(.3, C(3, 0) - C(2, 4, 1.2)), 'sine.inOut');
+
+  // ===== WA: Guinea + the UK (pair #4) =====
+  key(WA.tk, { lon: -11.0, lat: 10.6, dist: 20, el: 87, yaw: 2 }, C(3, 0, -.15), C(3, 1, .2) - C(3, 0, -.15), 'sine.inOut'); key(WA.tk, { lon: -10.9, lat: 11.0, dist: 26, el: 88, yaw: 0 }, C(3, 1, .25), .8, 'power3.inOut'); key(WA.tk, { lon: -10.9, lat: 11.0, dist: 24.5, el: 87, yaw: 2 }, C(3, 1, 1.1), C(4, 1) - C(3, 1, 1.1), 'sine.inOut');
+  on(WA.fA, WT(3, 1, 'GUINEA', 'गिनी', -.05), .35);
+  { const tu = WT(3, 1, 'UNITED', 'यूनाइटेड', .05); on(WA.uk.a, tu, .25); key(WA.uk.z, 0, tu, .6, 'bounce.out'); }
+  key(WA.tk, { lon: -10.9, lat: 11.0, dist: 23.5, el: 86, yaw: -2 }, C(4, 1), C(6, 0) - C(4, 1), 'sine.inOut');
+  key(WA.uk.grey, 1, C(5, 0, -.3), .5, 'power2.inOut');
+  chIn(WA.cGb, C(5, 0, -.4)); mouth(WA.cGb, LN[5].a, LN[5].b, .22); bob(WA.cGb, LN[5].a, LN[5].b + .2);
+  WA.cGb.tears.forEach((tr, i) => tl.fromTo(tr, { y: 0, opacity: 0 }, { keyframes: [{ opacity: 1, duration: .1 }, { y: 120, duration: .7, ease: 'power2.in' }, { opacity: 0, duration: .1 }], repeat: 1, ...IR }, LN[5].a + i * .15));
+  chOut(WA.cGb, C(6, 0, -.3));
+
+  // ===== ZC: Zambia stretched into Chile (pair #3) =====
+  key(ZC.tk, { lon: 25.5, lat: -13, dist: 32, el: 87, yaw: 2 }, C(6, 0, -.15), C(7, 0) - C(6, 0, -.15), 'sine.inOut');
+  { const tc = WT(6, 1, 'CHILE', 'चिली', -.05); key(ZC.cl.d, { x: -30, y: 0 }, 0, .01); on(ZC.cl.a, tc, .2); key(ZC.cl.z, 0, tc, .01); key(ZC.cl.d, { x: 0, y: 0 }, tc, .7, 'power3.out'); }
+  on(ZC.fA, WT(6, 1, 'ZAMBIA', 'ज़ाम्बिया', -.05), .35);
+  key(ZC.tk, { lon: 20.3, lat: -13.2, dist: 88, el: 89, yaw: 0 }, C(7, 0, -.1), 1.0, 'power3.inOut');
+  on(ZC.mo.a, C(7, 0, .25), .15); key(ZC.fA, 0, C(7, 0, .3), .15);
+  key(ZC.mo.p, 1, C(7, 1, -.05), Math.max(1.2, C(7, 2, .2) - C(7, 1, -.05)), 'power2.inOut');
+  key(ZC.tk, { lon: 20.3, lat: -13.3, dist: 85, el: 88, yaw: -1 }, C(7, 1, .9), C(8, 0) - C(7, 1, .9), 'sine.inOut');
+
+  // ===== IT: Italy + the Philippines = a body (pair #2) =====
+  key(IT.tk, { lon: 12.6, lat: 42.2, dist: 28, el: 86, yaw: 3 }, C(8, 0, -.15), C(8, 1) - C(8, 0, -.15), 'sine.inOut');
+  on(IT.fA, WT(8, 1, 'ITALY', 'इटली', -.05), .35);
+  { const tp = WT(8, 1, 'PHILIPPINES', 'फिलीपींस', -.1); key(IT.ph.d, { x: 46, y: -3.2 }, 0, .01); key(IT.ph.z, 0, 0, .01); on(IT.ph.a, tp, .2); key(IT.ph.d, { x: 18.6, y: -3.2 }, tp, .8, 'power3.out');
+    key(IT.tk, { lon: 21.5, lat: 48.5, dist: 64, el: 89, yaw: 0 }, tp - .1, .9, 'power3.inOut'); }
+  key(IT.tk, { lon: 21.3, lat: 48.6, dist: 62, el: 88, yaw: -1 }, C(9, 0), C(10, 0) - C(9, 0), 'sine.inOut');
+  { const tt = WT(10, 0, 'TOGETHER', 'जोड़', -.25); key(IT.ph.d, { x: 0, y: 0 }, tt, .7, 'power3.inOut'); key(IT.tk, { lon: 12.6, lat: 49.8, dist: 56, el: 89, yaw: 0 }, tt, .8, 'power3.inOut'); }
+  key(IT.tk, { lon: 12.6, lat: 49.8, dist: 54, el: 87, yaw: 2 }, C(10, 1), C(11, 0) - C(10, 1), 'sine.inOut');
+
+  // ===== SEA: number one, Malaysia + Vietnam, then back out to the globe (loop) =====
+  key(SEA.x, 1, 0, .01);
+  key(SEA.tk, { lon: 109.4, lat: 9.6, dist: 72, el: 87, yaw: 1 }, C(11, 0), C(12, 0) - C(11, 0), 'sine.inOut');
+  on(SEA.fA, WT(11, 1, 'MALAYSIA', 'मलेशिया', -.05), .35); on(SEA.fB, WT(11, 1, 'VIETNAM', 'वियतनाम', -.05), .35);
+  on(SEA.hl, WT(11, 0, 'ONE', 'वन', 0), .5); key(SEA.hl, 0, C(12, 0), .6);
+  key(SEA.tk, { lon: 109.4, lat: 9.7, dist: 70, el: 86, yaw: -1 }, C(12, 0), C(13, 0) - C(12, 0), 'sine.inOut');
+  key(SEA.tk, { lon: 109.4, lat: 9.8, dist: 71, el: 87, yaw: 1 }, C(13, 0, -.2), C(14, 0) - C(13, 0, -.2), 'sine.inOut');
+  chIn(SEA.cMy, C(13, 0, -.4)); chIn(SEA.cVn, C(13, 0, -.25)); bob(SEA.cMy, LN[13].a, LN[13].b); bob(SEA.cVn, LN[13].a + .1, LN[13].b);
+  tl.fromTo(heart, { opacity: 0, scale: .2 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(2.4)', ...IR }, WT(13, 0, 'MADE', 'एक-दूसरे', 0));
+  tl.to(heart, { keyframes: [{ scale: 1.18, duration: .15 }, { scale: 1, duration: .2 }, { scale: 1.18, duration: .15 }, { scale: 1, duration: .2 }] }, WT(13, 0, 'MADE', 'एक-दूसरे', .5));
+  tl.to(heart, { opacity: 0, scale: .4, duration: .3 }, C(14, 0, -.15));
+  chOut(SEA.cMy, C(14, 0, -.15)); chOut(SEA.cVn, C(14, 0, -.1));
+  { const a = C(14, 0, .05); key(SEA.gk, { lon: 109.4, lat: 9.6, dist: 2.3 }, 0, .01); key(SEA.x, 0, a, .5, 'power1.inOut'); key(SEA.tk, { lon: 109.4, lat: 9.8, dist: 80, el: 88, yaw: 0 }, a - .2, .7, 'power2.in');
+    key(SEA.fA, 0, a, .4); key(SEA.fB, 0, a, .4); key(SEA.gk, D.loopPose, a + .05, D.dur - a - .05, 'power2.inOut'); }
+
+  // ===== spec-driven beats =====
+  const beat = k => (D.beats || []).filter(b => b.kind === k);
+  const nextChunk = t => { const c = D.chunks.find(c => c.sn > t + .5); return c ? c.sn - .12 : t + 2; };
+  for (const L of LBL) { const b = L.b; key(L.a, 1, b.t, .25, 'power3.out'); key(L.pop, .3, b.t, .1, 'power2.out'); key(L.pop, 0, b.t + .1, .3, 'power2.inOut'); key(L.a, 0, b.u, .25);
+    if (b.fall) { key(L.dy, 340, b.fall, .7, 'power2.in'); key(L.rot, 50, b.fall, .7, 'power2.in'); key(L.a, 0, b.fall + .45, .25); } }
+  for (const b of beat('circle')) { const S = REG[b.scene]; const r = b.r || [200, 110];
+    MO.hwCircle(S.ov, t => S.proj(t, b.c[0], b.c[1]), r[0], r[1], b.t, b.u || nextChunk(b.t), { seed: 3 + b.t, col: b.col }); }
+  for (const b of beat('arrow')) { const S = REG[b.scene];
+    MO.hwArrow(S.ov, t => { const p0 = S.proj(t, b.from[0], b.from[1]), p1 = S.proj(t, b.to[0], b.to[1]); return { x0: p0.x, y0: p0.y, x1: p1.x, y1: p1.y }; }, b.t, b.u || nextChunk(b.t), { seed: 7 + b.t, col: b.col }); }
+  for (const b of beat('card')) { const S = REG[b.scene]; const Cd = mkCard(S, b); key(Cd.a, 1, b.t, .35, 'power3.out'); key(Cd.a, 0, b.u || nextChunk(b.t), .25);
+    MO.countGrow(Cd.num, b.to, b.t + .1, { dur: 1.1, startScale: .5 }); }
+  for (const b of beat('slam')) if (b.what === 'rank') { const el = RK[b.n];
+    tl.fromTo(el, { opacity: 0, scale: 2.6, x: 0, y: 0 }, { opacity: 1, scale: 1, duration: .32, ease: 'power4.out', ...IR }, b.t);
+    if (b.n === 1) { shake(b.t + .1, .9); flash(b.t + .05); tl.fromTo(el.querySelector('.crown'), { y: -260, opacity: 0, rotation: -30 }, { y: 0, opacity: 1, rotation: -12, duration: .5, ease: 'back.out(2)', ...IR }, b.t + .2);
+      tl.fromTo(el.querySelector('.rays'), { opacity: 0, scale: .3 }, { opacity: .9, scale: 1, duration: .5, ease: 'power3.out', ...IR }, b.t);
+      tl.to(el, { scale: 1.07, duration: .5, yoyo: true, repeat: 3, ease: 'sine.inOut' }, b.t + .4); window.__CONF = b.t + .05; }
+    else shake(b.t + .08, .45);
+    tl.to(el, { x: -330, y: -150, scale: .42, duration: .5, ease: 'power3.inOut' }, b.u); if (b.n === 1) tl.to(el.querySelector('.rays'), { opacity: 0, duration: .4 }, b.u);
+    tl.to(el, { opacity: 0, duration: .25 }, b.off); }
+  else if (b.what === 'land') { shake(b.t, .5); }
+  for (const b of beat('flashfx')) flash(b.t);
+  for (const s of D.impacts || []) shake(s, .75);
+  for (const s of D.hand || []) MO.shake(s[0], s[1] - s[0], 'handheld-normal-mild', .1, { decay: false });
+  const cs = beat('charslam')[0];
+  for (const id in TT) { const { g, t } = TT[id];
+    if (id === 'tHook' && cs && D.lang !== 'hi') { tl.set(g, { opacity: 1 }, cs.t); MO.charSlam(TT.tHook.lines[0], cs.t, { blur: false }); if (TT.tHook.lines[1]) MO.textIn(TT.tHook.lines[1], cs.t + .6); }
+    else MO.textIn(g, t.a);
+    MO.textOut(g, t.b); }
+  for (const K of CAPS) { const c = K.c;
+    tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { scale: .9, transformOrigin: '565px 1385px' }, { scale: 1, duration: .2, ease: 'power3.out', ...IR }, c.sn);
+    MO.karaoke(K.words, c.wt, w => w.classList.contains('k'));
+    K.words.forEach((w, i) => { if (w.classList.contains('k')) MO.sweep(w, c.wt[Math.min(i, c.wt.length - 1)]); }); }
+  const BW = $('badgeWrap'); const bs = 108 / 620; tl.set(BW, { opacity: 1, x: 44 - 230, y: 1332 - 450, scale: bs }, 0);
+  layout();
+  MO.shakeOn($('cshake'), D.dur);
+  for (const T of ALLT) T.keys.sort((a, b) => a.a - b.a);
+  const clk = { t: 0 };
+  tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => { const t = clk.t;
+    const live = S => S.wins.some(w => t >= w[0] - .05 && t <= w[1] + .45);
+    for (const S of SCENES) if (live(S)) S.render(t);
+    XF.render(t);
+    const r1 = RK[1].querySelector('.rays'); r1.style.transform = `rotate(${(t * 40).toFixed(1)}deg)`;
+    const t0 = window.__CONF; for (const p of CONF) { const u = t - (t0 || 1e9); if (u < 0 || u > 2.6) { p.e.style.opacity = 0; continue; }
+      const x = 540 + Math.cos(p.a) * p.v * u * .55, y = 300 - Math.abs(Math.sin(p.a)) * p.v * u * .9 + 1100 * u * u;
+      p.e.style.opacity = Math.max(0, 1 - u / 2.6); p.e.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px) rotate(${(p.sp * u).toFixed(1)}deg)`; } } }, 0);
+  window.__C = {}; if (D.thumb) ['caps', 'ranks', 'titles', 'hook', 'badgeWrap'].forEach(i => $(i).style.display = 'none');
+  if (D.t1) { const outer = gsap.timeline({ paused: true }); outer.add(tl.tweenFromTo(D.t0, D.t1, { ease: 'none' }), 0); return outer; }
+  return tl;
+}
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => Promise.all(READY)).then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>

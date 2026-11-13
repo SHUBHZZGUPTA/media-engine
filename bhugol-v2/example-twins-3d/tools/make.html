@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:BSD;font-weight:900;src:url(bsd900.woff2)} @font-face{font-family:Emo;src:url(emoji.ttf)} @font-face{font-family:Muk;font-weight:800;src:url(muk800.woff2)}
+body{margin:0} #c{position:relative;width:1080px;height:1920px;overflow:hidden;background:#000}
+#bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.35) contrast(1.08) brightness(1.06)}
+.h{position:absolute;left:0;width:1080px;text-align:center;font-family:BSD,Muk,Emo;font-weight:900;color:#fff;line-height:.95;paint-order:stroke fill;-webkit-text-stroke:26px #05101c;text-shadow:0 10px 0 rgba(0,0,0,.35)}
+.y{display:inline-block;background:#FFD21F;color:#0a0a0a;padding:4px 30px 10px;border:8px solid #fff;border-radius:14px;-webkit-text-stroke:0;text-shadow:none;transform:rotate(-2deg);box-shadow:0 12px 0 rgba(0,0,0,.4)}
+.emo{position:absolute;font-family:Emo;font-size:150px}
+svg{position:absolute;left:0;top:0}
+#badge{position:absolute;left:40px;top:40px;width:120px}
+</style></head><body><div id="c"><div id="bg"></div>
+<svg width="1080" height="1920"><path id="circ" fill="none" stroke="#FF2D2D" stroke-width="16" stroke-linecap="round"/></svg>
+<div id="t1" class="h"></div><div id="t2" class="h"></div><div id="e1" class="emo"></div><div id="e2" class="emo"></div><img id="badge" src="bhugol_badge.png"></div>
+<script>
+const P=new URLSearchParams(location.search); const $=i=>document.getElementById(i);
+$('bg').style.backgroundImage=`url(${P.get('bg')})`;
+const t1=$('t1'),t2=$('t2'); t1.innerHTML=P.get('l1'); t2.innerHTML=P.get('l2');
+t1.style.top=P.get('y1')+'px'; if(P.get('font')) { t1.style.fontFamily=t2.style.fontFamily=P.get('font'); t1.style.lineHeight=t2.style.lineHeight='1.25'; } t1.style.fontSize=P.get('f1')+'px'; t2.style.top=P.get('y2')+'px'; t2.style.fontSize=P.get('f2')+'px';
+const [cx,cy,rx,ry]=P.get('circ').split(',').map(Number); let d=''; for(let i=0;i<=40;i++){const a=-2.2+i/40*Math.PI*2*1.1; const w=1+0.04*Math.sin(i*1.7); d+=(i?'L':'M')+(cx+Math.cos(a)*rx*w).toFixed(1)+' '+(cy+Math.sin(a)*ry*w).toFixed(1);} $('circ').setAttribute('d',d);
+const em=(id,s)=>{ if(!s) return; const [t,x,y,r]=s.split(','); const e=$(id); e.textContent=t; e.style.left=x+'px'; e.style.top=y+'px'; e.style.transform=`rotate(${r||0}deg)`; };
+em('e1',P.get('e1')); em('e2',P.get('e2'));
+</script></body></html>

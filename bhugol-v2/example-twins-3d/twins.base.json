@@ -1,0 +1,159 @@
+{
+ "voices": {
+  "uk": {
+   "semitones": 3,
+   "formant": "preserved"
+  }
+ },
+ "tail": 0.35,
+ "align": {
+  "offset": 0.25,
+  "cap": 0.38,
+  "tempo": 1.08,
+  "long_before": {
+   "1": 0.45,
+   "3": 0.45,
+   "5": 0.4,
+   "6": 0.45,
+   "8": 0.45,
+   "11": 0.5,
+   "13": 0.35
+  },
+  "line_tempo": {
+   "0": 1.12,
+   "5": 1.0
+  }
+ },
+ "slug": "twins",
+ "lines": [
+  {
+   "o": 0,
+   "text": "I bet $100 you didn't know there are some countries that look completely different, but are almost exactly the same size!",
+   "chunks": [
+    "I BET *$100*",
+    "YOU DIDN'T KNOW|THERE ARE SOME COUNTRIES",
+    "THAT LOOK|*COMPLETELY DIFFERENT,*",
+    "BUT ARE ALMOST|EXACTLY THE *SAME SIZE!*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Let's start with number five: nepal and bangladesh.",
+   "chunks": [
+    "LET'S START WITH|*NUMBER FIVE:*",
+    "*NEPAL* AND *BANGLADESH.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "They are only 22 km apart, but one touches the sky with mount everest, while the other touches the ocean with its rivers!",
+   "chunks": [
+    "THEY ARE ONLY|*22 KM* APART,",
+    "BUT ONE TOUCHES|THE *SKY*",
+    "WITH *MOUNT EVEREST,*",
+    "WHILE THE OTHER|TOUCHES THE *OCEAN*",
+    "WITH ITS *RIVERS!*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Number four is guinea and the united kingdom.",
+   "chunks": [
+    "*NUMBER FOUR* IS",
+    "*GUINEA* AND THE|*UNITED KINGDOM.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "You won't believe it. once the biggest empire in the world, it now has an area as small as guinea.",
+   "chunks": [
+    "YOU WON'T|BELIEVE IT.",
+    "ONCE THE *BIGGEST*|*EMPIRE* IN THE WORLD,",
+    "IT NOW HAS AN AREA",
+    "AS SMALL AS *GUINEA.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "So sad.",
+   "chunks": [
+    "*SO SAD.*"
+   ],
+   "speaker": "uk"
+  },
+  {
+   "o": 0,
+   "text": "Number three is chile and zambia.",
+   "chunks": [
+    "*NUMBER THREE* IS",
+    "*CHILE* AND *ZAMBIA.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "If you pull zambia like chewing gum, then you would get another chile of the same size.",
+   "chunks": [
+    "IF YOU PULL *ZAMBIA*",
+    "LIKE *CHEWING GUM,*",
+    "THEN YOU WOULD GET|ANOTHER *CHILE*",
+    "OF THE *SAME SIZE.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Number two is italy and the philippines.",
+   "chunks": [
+    "*NUMBER TWO* IS",
+    "*ITALY* AND THE|*PHILIPPINES.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "One looks like a boot, while the other looks like a sitting man.",
+   "chunks": [
+    "ONE LOOKS|LIKE A *BOOT,*",
+    "WHILE THE OTHER LOOKS|LIKE A *SITTING MAN.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "But put them together, and they form a complete human body.",
+   "chunks": [
+    "BUT PUT THEM|*TOGETHER,*",
+    "AND THEY FORM A|*COMPLETE HUMAN BODY.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "And number one... is malaysia and vietnam!",
+   "chunks": [
+    "AND *NUMBER ONE...*",
+    "IS *MALAYSIA*|AND *VIETNAM!*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Both are in southeast asia, have long coastlines, and are almost the same size.",
+   "chunks": [
+    "BOTH ARE IN|*SOUTHEAST ASIA,*",
+    "HAVE LONG *COASTLINES,*",
+    "AND ARE ALMOST|THE *SAME SIZE.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "I think they were made for each other.",
+   "chunks": [
+    "I THINK THEY WERE|*MADE FOR EACH OTHER.*"
+   ]
+  },
+  {
+   "o": 0,
+   "text": "Want to go double or nothing? because...",
+   "chunks": [
+    "WANT TO GO|*DOUBLE OR NOTHING?*",
+    "*BECAUSE...*"
+   ]
+  }
+ ]
+}
