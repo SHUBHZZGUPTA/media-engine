@@ -1,0 +1,53 @@
+{
+ "job": "bigbout-voices-v1",
+ "items": [
+  {
+   "name": "general",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 24.16,
+   "took": 5.9
+  },
+  {
+   "name": "kiran",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 21.56,
+   "took": 6.4
+  },
+  {
+   "name": "daichi",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 23.76,
+   "took": 6.4
+  },
+  {
+   "name": "lin",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 18.76,
+   "took": 5.6
+  },
+  {
+   "name": "hex",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 19.08,
+   "took": 5.5
+  },
+  {
+   "name": "announcer",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 16.52,
+   "took": 6.0
+  }
+ ]
+}
