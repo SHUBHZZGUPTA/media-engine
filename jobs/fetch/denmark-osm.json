@@ -1,0 +1,15 @@
+{
+ "id": "denmark-osm",
+ "delay": 1,
+ "ua": "media-engine/1.0 (BHUGOL research)",
+ "files": [
+  {
+   "name": "osm.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%28way%5B%22ref%22%3D%2240%22%5D%5B%22highway%22%5D%2857.55%2C10.25%2C57.76%2C10.65%29%3Bway%5B%22highway%22~%22primary%7Csecondary%22%5D%2857.62%2C10.30%2C57.70%2C10.50%29%3Bnode%5B%22name%22~%22Tilsandede%22%5D%2857.6%2C10.4%2C57.8%2C10.7%29%3Bway%5B%22name%22~%22Tilsandede%22%5D%2857.6%2C10.4%2C57.8%2C10.7%29%3Bway%5B%22name%22~%22bjerg%20Mile%22%5D%2857.6%2C10.3%2C57.7%2C10.5%29%3Brelation%5B%22name%22~%22bjerg%20Mile%22%5D%2857.6%2C10.3%2C57.7%2C10.5%29%3Bnode%5B%22name%22~%22bjerg%20Mile%22%5D%2857.6%2C10.3%2C57.7%2C10.5%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm2.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%28way%5B%22ref%22%3D%2240%22%5D%5B%22highway%22%5D%2857.55%2C10.25%2C57.76%2C10.65%29%3Bway%5B%22highway%22~%22primary%7Csecondary%22%5D%2857.62%2C10.30%2C57.70%2C10.50%29%3Bnode%5B%22name%22~%22Tilsandede%22%5D%2857.6%2C10.4%2C57.8%2C10.7%29%3Bway%5B%22name%22~%22Tilsandede%22%5D%2857.6%2C10.4%2C57.8%2C10.7%29%3Bway%5B%22name%22~%22bjerg%20Mile%22%5D%2857.6%2C10.3%2C57.7%2C10.5%29%3Brelation%5B%22name%22~%22bjerg%20Mile%22%5D%2857.6%2C10.3%2C57.7%2C10.5%29%3Bnode%5B%22name%22~%22bjerg%20Mile%22%5D%2857.6%2C10.3%2C57.7%2C10.5%29%3B%29%3Bout%20geom%3B"
+  }
+ ]
+}
