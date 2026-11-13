@@ -1,0 +1,63 @@
+{
+ "id": "myths-caspian",
+ "delay": 0.3,
+ "bbox": [
+  45.0,
+  56.0,
+  35.5,
+  48.0
+ ],
+ "close": [
+  49.0,
+  52.0,
+  40.0,
+  42.0
+ ],
+ "zoom": 6,
+ "files": [
+  {
+   "name": "globe_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_NextGeneration&BBOX=-90,-180,90,180&WIDTH=8192&HEIGHT=4096"
+  },
+  {
+   "name": "ne_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_NextGeneration&BBOX=35.5,45.0,48.0,56.0&WIDTH=4096&HEIGHT=4654"
+  },
+  {
+   "name": "pa_weld.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&BBOX=40.0,49.0,42.0,52.0&WIDTH=4096&HEIGHT=2730"
+  },
+  {
+   "name": "dem_6_40_22.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/40/22.png"
+  },
+  {
+   "name": "dem_6_40_23.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/40/23.png"
+  },
+  {
+   "name": "dem_6_40_24.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/40/24.png"
+  },
+  {
+   "name": "dem_6_40_25.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/40/25.png"
+  },
+  {
+   "name": "dem_6_41_22.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/41/22.png"
+  },
+  {
+   "name": "dem_6_41_23.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/41/23.png"
+  },
+  {
+   "name": "dem_6_41_24.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/41/24.png"
+  },
+  {
+   "name": "dem_6_41_25.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/6/41/25.png"
+  }
+ ]
+}
