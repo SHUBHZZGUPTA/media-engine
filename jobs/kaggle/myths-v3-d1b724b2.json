@@ -1,0 +1,40 @@
+{
+ "id": "myths-v3-d1b724b2",
+ "script": "gpu/india_clips_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 150,
+ "wait_minutes": 150,
+ "params": {
+  "src_file": "myths_d1b724b2.tar.gz",
+  "src_sha256": "d1b724b2f2d4ebe1cff90a567636d158a231ca84595ace2f3a0d2212ff663d10",
+  "clips": [
+   {
+    "id": "s8a",
+    "dur": 8.3667
+   },
+   {
+    "id": "s8b",
+    "dur": 8.4
+   },
+   {
+    "id": "s5a",
+    "dur": 7.7333
+   },
+   {
+    "id": "s5b",
+    "dur": 7.7333
+   },
+   {
+    "id": "s3a",
+    "dur": 7.8333
+   },
+   {
+    "id": "s3b",
+    "dur": 7.8333
+   }
+  ],
+  "jpeg_q": 95,
+  "render_timeout_s": 8000
+ }
+}
