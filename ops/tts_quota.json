@@ -1,99 +1,99 @@
 {
-  "note": "Free tier: 10 Gemini TTS requests/day per API key per model (Google's 429: 'limit: 10, model: gemini-3.1-flash-tts'). Assumes the two keys are in separate Google projects; if they share one, the 10 is shared. Reserve days ahead for multi-day voice jobs.",
-  "limits": {
-    "gemini-3.1-flash-tts-preview": 10,
-    "gemini-2.5-flash-preview-tts": 10
+ "note": "Free tier: 10 Gemini TTS requests/day per API key per model (Google's 429: 'limit: 10, model: gemini-3.1-flash-tts'). Assumes the two keys are in separate Google projects; if they share one, the 10 is shared. Reserve days ahead for multi-day voice jobs.",
+ "limits": {
+  "gemini-3.1-flash-tts-preview": 10,
+  "gemini-2.5-flash-preview-tts": 10
+ },
+ "reservations": [
+  {
+   "key": "default",
+   "date": "2026-11-02",
+   "n": 3,
+   "project": "money-mirage-shorts",
+   "note": "s022-s024 EN"
   },
-  "reservations": [
-    {
-      "key": "default",
-      "date": "2026-11-02",
-      "n": 3,
-      "project": "money-mirage-shorts",
-      "note": "s022-s024 EN"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-02",
-      "n": 10,
-      "project": "india-full",
-      "note": "India EN voice d2: p03,p05-p13"
-    },
-    {
-      "key": "default",
-      "date": "2026-11-03",
-      "n": 6,
-      "project": "money-mirage-shorts",
-      "note": "s025-s030 EN"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-03",
-      "n": 10,
-      "project": "india-full",
-      "note": "India EN voice d3: p14-p23"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-04",
-      "n": 10,
-      "project": "india-full",
-      "note": "India EN voice d4: p24, p25 + 7 drift re-takes + fix1"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-09",
-      "n": 10,
-      "project": "india-remake",
-      "note": "India remake English voice day 1 (takes v1-v10)"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-10",
-      "n": 6,
-      "project": "bhugol-desert",
-      "note": "Thar desert long-form EN (3 parts) + HI (3 parts) on 3.8 Flash TTS",
-      "model": "gemini-3.8-flash-tts"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-11",
-      "n": 10,
-      "project": "india-remake",
-      "note": "India remake 3.8 re-voice takes p05-p14",
-      "model": "gemini-3.8-flash-tts"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-12",
-      "n": 6,
-      "project": "bhugol-desert",
-      "note": "Thar desert full re-voice after revisions: EN 3 parts + HI 3 parts on 3.8",
-      "model": "gemini-3.8-flash-tts"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-12",
-      "n": 4,
-      "project": "india-remake",
-      "note": "India remake p14 + retakes p05 p06 p12",
-      "model": "gemini-3.8-flash-tts"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-13",
-      "n": 4,
-      "project": "india-remake",
-      "note": "India remake retake p09 + rerolls of any retake that misses",
-      "model": "gemini-3.8-flash-tts"
-    },
-    {
-      "key": "longform",
-      "date": "2026-11-13",
-      "n": 3,
-      "project": "india-remake",
-      "note": "India remake register test p05 p12 p14",
-      "model": "gemini-3.8-flash-tts"
-    }
-  ]
+  {
+   "key": "longform",
+   "date": "2026-11-02",
+   "n": 10,
+   "project": "india-full",
+   "note": "India EN voice d2: p03,p05-p13"
+  },
+  {
+   "key": "default",
+   "date": "2026-11-03",
+   "n": 6,
+   "project": "money-mirage-shorts",
+   "note": "s025-s030 EN"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-03",
+   "n": 10,
+   "project": "india-full",
+   "note": "India EN voice d3: p14-p23"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-04",
+   "n": 10,
+   "project": "india-full",
+   "note": "India EN voice d4: p24, p25 + 7 drift re-takes + fix1"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-09",
+   "n": 10,
+   "project": "india-remake",
+   "note": "India remake English voice day 1 (takes v1-v10)"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-10",
+   "n": 6,
+   "project": "bhugol-desert",
+   "note": "Thar desert long-form EN (3 parts) + HI (3 parts) on 3.8 Flash TTS",
+   "model": "gemini-3.8-flash-tts"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-11",
+   "n": 10,
+   "project": "india-remake",
+   "note": "India remake 3.8 re-voice takes p05-p14",
+   "model": "gemini-3.8-flash-tts"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-12",
+   "n": 4,
+   "project": "india-remake",
+   "note": "India remake p14 + retakes p05 p06 p12",
+   "model": "gemini-3.8-flash-tts"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-13",
+   "n": 4,
+   "project": "india-remake",
+   "note": "India remake retake p09 + rerolls of any retake that misses",
+   "model": "gemini-3.8-flash-tts"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-13",
+   "n": 3,
+   "project": "india-remake",
+   "note": "India remake register test p05 p12 p14",
+   "model": "gemini-3.8-flash-tts"
+  },
+  {
+   "key": "longform",
+   "date": "2026-11-14",
+   "n": 6,
+   "project": "bhugol-desert",
+   "note": "Thar desert v3 full re-voice (7 time-jump lines): EN 3 parts + HI 3 parts on 3.8",
+   "model": "gemini-3.8-flash-tts"
+  }
+ ]
 }
