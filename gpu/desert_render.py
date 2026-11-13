@@ -154,8 +154,8 @@ open(f"{W}/segs.txt", "w").write("".join(f"file 'seg_{i}.mp4'\n" for i in range(
 c, s, log = sh(f"cd {W} && ffmpeg -v error -y -f concat -safe 0 -i segs.txt -c copy video.mp4", timeout=1800)
 RES["steps"]["concat"] = {"exit": c, "secs": s, "tail": log[-300:]}
 rate = P.get("rate", "1280k"); name = P["name"]
-x = (f"cd {W} && ffmpeg -v error -y -i video.mp4 -c:v libx265 -preset slow -b:v {rate} -x265-params pass=1:log-level=error -an -f null /dev/null && "
-     f"ffmpeg -v error -y -i video.mp4 -i web/mix.m4a -map 0:v -map 1:a -c:v libx265 -preset slow -b:v {rate} -x265-params pass=2:log-level=error "
+x = (f"cd {W} && ffmpeg -v error -y -i video.mp4 -c:v libx265 -preset medium -b:v {rate} -x265-params pass=1:log-level=error -an -f null /dev/null && "
+     f"ffmpeg -v error -y -i video.mp4 -i web/mix.m4a -map 0:v -map 1:a -c:v libx265 -preset medium -b:v {rate} -x265-params pass=2:log-level=error "
      f"-tag:v hvc1 -c:a copy -movflags +faststart -shortest {name}.mp4")
 c, s, log = sh(x, timeout=7200)
 RES["steps"]["encode"] = {"exit": c, "secs": s, "tail": log[-400:]}
