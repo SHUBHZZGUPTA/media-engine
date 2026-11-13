@@ -1,0 +1,78 @@
+{
+ "id": "ref-0uA4yMxT4Fo",
+ "url": "https://www.youtube.com/watch?v=0uA4yMxT4Fo",
+ "items": {
+  "breakdown": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 17188,
+    "candidatesTokenCount": 1793,
+    "totalTokenCount": 20591,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 203
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 16985
+     }
+    ],
+    "thoughtsTokenCount": 1610,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash TimeoutError: The read operation timed out"
+   ]
+  },
+  "animation": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 32978,
+    "candidatesTokenCount": 1604,
+    "totalTokenCount": 36582,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 32561
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 417
+     }
+    ],
+    "thoughtsTokenCount": 2000,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  },
+  "audio": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 5637,
+    "candidatesTokenCount": 1801,
+    "totalTokenCount": 9074,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 5369
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 268
+     }
+    ],
+    "thoughtsTokenCount": 1636,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}
