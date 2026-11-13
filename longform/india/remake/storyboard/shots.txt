@@ -1,0 +1,353 @@
+# India remake storyboard: one row per shot, pinned to the script line (line number in script_en.md).
+# line | type | asset(s) (+ = layered) | on-screen text | note
+# types: COLD (cold-open picture), MAP (3D globe clip), PIC (archive photo, slow push), PORT (framed portrait + gold name tag),
+#        SKIT (set + figures/portraits, speech bubbles, "dramatised" tag), SET (illustrated set, no dialogue), BOARD (#222 text/number board),
+#        CARD (numbered chapter card), STING (BHUGOL 2 s sting)
+# asset prefixes: in_/c_ = our art · G_ = 3D clip · plain key = archive photo · NEW-ART: / NEW-ARC: (archive to fetch) / NEW-3D: = missing
+
+# ---------------- HOOK ----------------
+10 | SET   | in_calicut_1498 | MAY 1498 · CALICUT | cold open, no logo; slow push from the sea onto the harbour
+10 | MAP   | NEW-3D:G_calicut (Lisbon to Calicut sea route, arc lands on SW coast) | CALICUT | pin + yellow arc
+10 | SKIT  | in_calicut_1498 + c_convict | | "in case things go wrong" beat: convict alone on the beach
+11 | SKIT  | in_calicut_1498 + c_convict + c_merchant | DRAMATISED | merchants spot him
+14 | BOARD | NEW-ARC:dagama_journal (page of the Roteiro) | THE SHIP'S OWN JOURNAL | truth stamp
+14 | PIC   | NEW-ARC:black_pepper + NEW-ARC:calico_textile | BLACK PEPPER · COTTON CLOTH | split screen
+14 | BOARD | calico_textile | CALICUT → *CALICO* | gold key word
+15 | BOARD | bars (pilot card, world share) | ~25% OF WORLD OUTPUT ‡ | estimate tag
+16 | PIC   | ashoka_edict | IN STONE | flash-forward 1
+16 | PIC   | koh_i_noor | PEACOCK THRONE → TOWER OF LONDON | flash-forward 2, yellow arc across a flat map
+16 | BOARD | NEW-ART:board_company_army (redcoat ranks vs a small British flag) | BIGGER THAN BRITAIN'S | flash-forward 3
+17 | BOARD | numerals board (0-9 morphing from Brahmi forms) | 1 2 3 ... 0 | flash-forward 4
+17 | BOARD | dictionary card | LOOT ← HINDI *LUT* |
+18 | BOARD | bars (25% shrinking to 4%) | ~4% BY 1950 ‡ | the fall, music drops
+18 | SET   | in_calicut_1498 (dusk grade) | WHY DID THE ROBBERS *STAY*? | the question, held 3 s, silence before
+19 | PIC   | mohenjo_ruins → indus_script | | drains + script tease
+19 | STING | BHUGOL sting | | 2 s, after the hook
+
+# ---------------- CHAPTER 1 ----------------
+21 | CARD  | chapter1 | 1 · THE CITY UNDER THE RAILWAY |
+23 | MAP   | G_nw | LAHORE → MULTAN | railway line drawn in yellow
+23 | SET   | in_railway | 1850s |
+24 | SET   | in_railway (mound close-up) | HARAPPA |
+25 | SKIT  | in_railway + c_engineer + c_foreman | DRAMATISED | 4 lines
+28 | PIC   | unicorn_seal | | the stamp the foreman found
+30 | PORT  | NEW-ARC:alexander_cunningham | ALEXANDER CUNNINGHAM |
+30 | BOARD | in_railway_1853 | ~100 MILES OF TRACK | plant: "keep those bricks in mind" (gold underline)
+31 | PIC   | harappa_ruins | 1920s: ONE OF THE OLDEST CIVILISATIONS |
+32 | MAP   | G_indus | INDUS RIVER | Pakistan + NW India highlighted
+32 | MAP   | G_cities | > EGYPT + MESOPOTAMIA | area comparison overlay
+33 | SET   | in_street | STRAIGHT STREETS · SAME-SIZE BRICKS |
+33 | SET   | in_bath | PRIVATE BATHROOMS · COVERED DRAINS |
+34 | BOARD | | 4,500 YEARS AGO | joke beat, 0.5 s pause before
+35 | PIC   | great_bath | THE GREAT BATH | push in
+36 | SET   | in_indus | COTTON | weaver figure; plant: "worth more than gold"
+37 | MAP   | G_trade | INDUS → MESOPOTAMIA | arc
+37 | PIC   | indus_script | HUNDREDS OF SIGNS |
+38 | BOARD | indus_script (signs fading) | NOT ONE WORD | silence 0.8 s
+39 | SKIT  | in_museum_study + c_scholar + c_student + unicorn_seal | DRAMATISED |
+44 | PIC   | priest_king → dancing_girl | NO PALACES · NO ROYAL TOMBS |
+45 | MAP   | NEW-3D:G_indus_dry (rivers shifting, cities dimming) | c. 1900 BCE | first fall: music thins
+46 | BOARD | | ANSWER #1: NATURE TOOK IT BACK |
+47 | MAP   | G_passes | | bridge: over the NW mountains
+
+# ---------------- CHAPTER 2 ----------------
+49 | CARD  | chapter2 | 2 · THE PRINCE WHO WASN'T ALLOWED TO SEE SADNESS |
+51 | SET   | in_hermitage | THE VEDAS · RIGVEDA 3,000+ YEARS |
+52 | MAP   | G_vedic | DEBATED | red debate box, both views on screen
+53 | SET   | in_hermitage | MEMORISED, SOUND FOR SOUND |
+53 | BOARD | | UNESCO: HERITAGE OF HUMANITY |
+54 | SKIT  | in_hermitage + c_guru + c_student | DRAMATISED |
+60 | MAP   | G_ganga | GANGA PLAIN · 16 STATES |
+60 | SET   | in_ganga | RICE · IRON · KINGDOMS |
+61 | BOARD | four-tier board | PRIESTS · WARRIORS · TRADERS · WORKERS | "varna", caste stated as history
+62 | MAP   | G_magadha (zoom to Lumbini foothills) | TODAY'S NEPAL |
+63 | SET   | NEW-ART:in_palace_lumbini (bright perfect palace garden) | SIDDHARTHA |
+64 | BOARD | | 29 YEARS | joke beat
+65 | SET   | NEW-ART:in_four_sights (road outside the palace: old man, sick man, funeral, monk) | THE FOUR SIGHTS | four-panel reveal
+66 | SET   | in_palace_lumbini (night, empty doorway) | | he leaves
+67 | SET   | in_bodhgaya | BODH GAYA |
+67 | PIC   | buddha_sarnath | THE BUDDHA · THE MIDDLE WAY |
+68 | BOARD | | THE STORY BUDDHISTS HAVE TOLD | legend stamp
+69 | PORT  | mahavira | MAHAVIRA · NON-VIOLENCE |
+70 | BOARD | buddha_sarnath + mahavira | TWO PRINCES · ZERO PALACES | joke
+71 | MAP   | NEW-3D:G_buddhism (arcs to China, Japan, SE Asia) | IDEAS TRAVEL |
+72 | MAP   | G_alex | MACEDONIA → PERSIA | bridge
+
+# ---------------- CHAPTER 3 ----------------
+74 | CARD  | chapter3 | 3 · THE MAN WHO REFUSED TO TIE HIS HAIR |
+76 | PORT  | alexander_bust | ALEXANDER · 326 BCE |
+76 | MAP   | G_alex2 | PUNJAB |
+77 | SET   | in_jhelum | JHELUM RIVER · PORUS |
+77 | PIC   | NEW-ARC:porus_elephant_coin (Alexander-vs-elephant medallion) | WAR ELEPHANTS | plant (gold underline)
+79 | SKIT  | in_jhelum + alexander_bust + porus_coin + c_greek_scribe | DRAMATISED |
+84 | MAP   | G_beas | THE BEAS: THEY STOPPED |
+85 | MAP   | G_nanda | NANDA EMPIRE · THOUSANDS OF ELEPHANTS |
+86 | BOARD | alexander_mosaic | DIED AT 32 |
+88 | PORT  | chanakya_sculpture | CHANAKYA |
+88 | SET   | in_pataliputra (Nanda court) | INSULTED. THROWN OUT. |
+89 | BOARD | | THE OATH THE OLD STORIES GIVE HIM | legend stamp
+89 | PORT  | chandragupta_jain | CHANDRAGUPTA MAURYA |
+90 | SKIT  | NEW-ART:in_forest_camp_night + chanakya_sculpture + NEW-ART:c_servant_ancient | DRAMATISED |
+95 | SET   | in_pataliputra | c. 321 BCE · PATALIPUTRA (PATNA) |
+96 | MAP   | G_maurya | THE MAURYA EMPIRE |
+97 | BOARD | | 500 WAR ELEPHANTS ⇄ LAND | joke, callback to elephants
+98 | SET   | in_maurya_office | THE ARTHASHASTRA: TAXES · TRADE · WAR · SPIES |
+99 | BOARD | | THE CONQUEROR LEFT. THE WATCHER STAYED. | question callback
+100 | PORT  | ashoka_relief | | bridge: "he would say sorry"
+
+# ---------------- CHAPTER 4 ----------------
+102 | CARD | chapter4 | 4 · THE EMPEROR WHO APOLOGISED IN STONE |
+104 | PORT | ashoka_relief | ASHOKA |
+105 | MAP  | G_maurya (zoom to Kalinga) | KALINGA · c. 261 BCE |
+105 | SET  | in_kalinga | | aftermath, no gore
+106 | PIC  | ashoka_edict | 100,000 KILLED · 150,000 CARRIED AWAY | "he says"
+107 | BOARD | ashoka_edict | AN EMPEROR, APOLOGISING, *IN STONE* | payoff of hook flash-forward 1; darkest point so far, music to near silence
+108 | SET  | in_ganga (road with wells + shade trees) | DHAMMA |
+108 | MAP  | NEW-3D:G_dhamma (monks' arcs to Sri Lanka and beyond) | |
+109 | PIC  | sanchi | PILLARS ACROSS THE EMPIRE |
+109 | BOARD | | 2,000 YEARS UNREAD |
+110 | PORT | NEW-ARC:james_prinsep | JAMES PRINSEP · 1837 |
+111 | SKIT | in_calcutta_study + NEW-ARC:james_prinsep + c_clerk_1830 | DRAMATISED |
+116 | PIC  | lion_capital | SARNATH: FOUR LIONS |
+116 | PIC  | NEW-ARC:rupee_note_lions | ON EVERY NOTE AND PASSPORT |
+117 | PIC  | lion_capital (zoom to wheel) | THE ASHOKA CHAKRA | plant: "it's going to win a contest"
+118 | MAP  | G_maurya (breaking apart) | |
+119 | MAP  | G_rome | ROME | bridge
+
+# ---------------- CHAPTER 5 ----------------
+121 | CARD | chapter5 | 5 · THE GOLDEN BIRD |
+123 | MAP  | G_sea | MONSOON WINDS: EGYPT → INDIA |
+123 | SET  | in_surat_port (ancient ships) | PEPPER · GEMS · COTTON | reuse with dated grade, or NEW-ART:in_muziris
+124 | PORT | NEW-ARC:pliny_elder | PLINY THE ELDER |
+124 | BOARD | NEW-ARC:roman_coins_india | 50 MILLION SESTERCES A YEAR | plant: "the other way round"
+126 | PIC  | kanishka_coin | THE KUSHANS: CAME, STAYED |
+127 | MAP  | G_gupta | THE GUPTAS · c. 320 CE |
+128 | PORT | aryabhata_statue | ARYABHATA · 499 CE · AGE 23 |
+128 | BOARD | | THE EARTH SPINS · ~1,000 YRS BEFORE COPERNICUS |
+129 | SKIT | in_observatory + aryabhata_statue + c_gupta_official | DRAMATISED |
+134 | BOARD | | π = 3.1416 |
+135 | BOARD | numerals board | 1 2 3 4 5 6 7 8 9 + 0 |
+136 | MAP  | NEW-3D:G_numerals (India → Baghdad → Europe arcs) | "ARABIC" NUMERALS |
+136 | BOARD | phone screen with digits | THE NUMBERS ON YOUR PHONE ARE INDIAN | payoff of hook flash-forward 4
+137 | BOARD | NEW-ART:board_chaturanga (8x8 board, elephant/chariot pieces) | CHATURANGA → CHESS |
+138 | PIC  | nalanda_ruins | NALANDA |
+138 | PIC  | iron_pillar | ~1,600 YEARS · BARELY RUSTED |
+139 | MAP  | G_chola | CHOLA NAVY → SUMATRA · MALAYA |
+139 | PIC  | brihadeeswarar | |
+140 | BOARD | NEW-ART:golden_bird (gold bird over the map of India) | SONE KI CHIDIYA · THE GOLDEN BIRD | title payoff
+141 | MAP  | G_ghazni | AFGHANISTAN | bridge
+
+# ---------------- CHAPTER 6 ----------------
+143 | CARD | chapter6 | 6 · THE MAN WHO LOST AND CAME BACK |
+145 | PORT | NEW-ARC:mahmud_ghazni (miniature painting) | MAHMUD OF GHAZNI |
+145 | MAP  | G_ghazni | ~17 RAIDS |
+146 | PIC  | NEW-ARC:somnath_temple | SOMNATH · 1026 |
+146 | SET  | NEW-ART:in_camel_caravan (camels loaded with gold leaving through a mountain pass) | | plant: "gold on someone else's camels"
+147 | BOARD | | HE DIDN'T WANT INDIA'S GOLD. HE WANTED *INDIA*. |
+148 | PORT | NEW-ARC:muhammad_ghori | MUHAMMAD OF GHOR |
+148 | PORT | NEW-ARC:prithviraj_chauhan | PRITHVIRAJ CHAUHAN |
+148 | MAP  | NEW-3D:G_tarain (Tarain near Delhi) | TARAIN · 1191 |
+149 | SET  | in_rajput_camp | | victory
+150 | SKIT | in_rajput_camp + NEW-ARC:prithviraj_chauhan + c_rajput_general | DRAMATISED |
+155 | BOARD | | WHATEVER HE REALLY SAID |
+156 | MAP  | NEW-3D:G_tarain (second battle) | 1192 · PRITHVIRAJ LOST |
+156 | BOARD | | RULE ONE OF HISTORY | joke
+157 | PIC  | qutb_minar | QUTB MINAR · STILL STANDING |
+158 | PIC  | nalanda_ruins (dim) | NALANDA SACKED |
+159 | BOARD | | MAHMUD WENT HOME. THESE NEWCOMERS *STAYED*. | the question turns: music shifts
+160 | MAP  | G_sultanate | 5 FAMILIES · 300 YEARS |
+
+# ---------------- CHAPTER 7 ----------------
+162 | CARD | chapter7 | 7 · BRILLIANT IDEAS, TERRIBLE TIMING |
+164 | MAP  | NEW-3D:G_mongols (Mongol empire spreading; Delhi holds) | CHINA · PERSIA · RUSSIA FELL |
+165 | SET  | in_bazaar (medieval market grade) | GRAIN · HORSES · CLOTH: FIXED PRICES | joke "very strict regulator"
+166 | PORT | tughlaq_token_coin (crop) | MUHAMMAD BIN TUGHLAQ |
+167 | MAP  | G_daulat | DELHI → DAULATABAD · ~1,000 KM |
+168 | SKIT | in_delhi_court + tughlaq_token_coin + c_courtier + NEW-ART:c_citizen | DRAMATISED |
+174 | BOARD | | ...AND BACK AGAIN |
+175 | PIC  | tughlaq_token_coin | COPPER = SILVER? |
+176 | SET  | NEW-ART:in_home_mint (villagers casting coins at home furnaces) | PILES OF FAKE MONEY |
+177 | BOARD | | GREAT IDEA · ~500 YEARS TOO EARLY |
+178 | PORT | NEW-ARC:timur | TIMUR · 1398 |
+178 | MAP  | NEW-3D:G_timur (Delhi → Samarkand) | | plant: "his family isn't finished"
+180 | PIC  | qutb_minar (arches detail) or tughlaqabad | ARCHES · DOMES · MINARETS |
+180 | PORT | NEW-ARC:amir_khusrau | AMIR KHUSRAU · QAWWALI |
+181 | BOARD | | URDU, COUSIN OF HINDI |
+182 | BOARD | | THEY CAME AS RAIDERS · THEY STAYED | question callback
+183 | PIC  | hampi | VIJAYANAGARA |
+184 | MAP  | G_babur | KABUL → INDIA · 1526 | bridge
+184 | BOARD | family-tree board | GREAT-GREAT-GREAT-GRANDSON OF TIMUR | payoff of Timur plant
+
+# ---------------- CHAPTER 8 ----------------
+186 | CARD | chapter8 | 8 · THE EMPEROR WHO COULDN'T READ |
+188 | PORT | babur_portrait | BABUR |
+188 | MAP  | G_babur (Panipat) | PANIPAT · 1526 |
+189 | BOARD | porus_coin + G_nanda still + 500-elephant board | REMEMBER THE ELEPHANTS? | payoff of elephant plant (3 quick callbacks)
+190 | SET  | NEW-ART:in_panipat (cannon smoke, elephants panicking) | CANNONS · MUSKETS |
+191 | MAP  | G_mughal1605 (first borders) | THE MUGHAL EMPIRE |
+192 | SKIT | in_babur_camp + babur_portrait + c_mughal_servant | DRAMATISED |
+197 | PIC  | babur_painting | IT REALLY IS IN HIS MEMOIR |
+198 | BOARD | subscribe button + melon | SUBSCRIBE · NO MELONS PROMISED | subscribe joke (~34%)
+199 | PORT | NEW-ARC:sher_shah_suri | SHER SHAH SURI |
+199 | MAP  | G_road | THE GREAT ROAD |
+199 | PIC  | NEW-ARC:sher_shah_rupiya | THE *RUPIYA* → RUPEE |
+200 | SET  | NEW-ART:in_library_stairs (Humayun's library stair) | | joke beat
+201 | PORT | akbar_painting | AKBAR · AGE 13 |
+202 | SET  | NEW-ART:in_mughal_library (books read aloud) | NEVER LEARNED TO READ |
+203 | BOARD | | 1556 · HE *INCLUDED* PEOPLE |
+204 | BOARD | | RAJPUT ALLIANCES · JIZYA SCRAPPED · FAIRER TAXES |
+205 | PIC  | fatehpur_sikri | FATEHPUR SIKRI |
+206 | SKIT | in_fatehpur + akbar_painting + c_jesuit + c_guru + c_mughal_servant | DRAMATISED |
+211 | PORT | NEW-ARC:maharana_pratap | MAHARANA PRATAP · HALDIGHATI |
+212 | MAP  | G_mughal1605 | 1605 |
+212 | BOARD | babur_portrait → akbar_painting | MISSING MELONS → AS INDIAN AS THE LAND | question callback
+213 | PIC  | NEW-ARC:peacock_throne | | bridge
+
+# ---------------- CHAPTER 9 ----------------
+215 | CARD | chapter9 | 9 · THE MAN WHO BUILT THE TAJ |
+217 | PORT | shah_jahan_old (crop) | SHAH JAHAN |
+218 | PIC  | NEW-ARC:peacock_throne | THE PEACOCK THRONE |
+218 | PIC  | koh_i_noor | KOH-I-NOOR · "MOUNTAIN OF LIGHT" | payoff of hook flash-forward 2 begins
+219 | MAP  | NEW-3D:G_cloth (Indian cloth to Japan, Africa, London; silver arcs back) | INDIAN COTTON DRESSED THE WORLD | callback to Indus cotton
+220 | PORT | NEW-ARC:mumtaz_mahal | MUMTAZ MAHAL |
+221 | PIC  | taj_mahal | ~20,000 WORKERS · 20+ YEARS | slow push, music swell
+222 | BOARD | taj_mahal | MYTH: BUILDERS' HANDS CUT OFF → NO EVIDENCE | red stamp "MYTH"
+223 | PORT | aurangzeb_portrait | AURANGZEB |
+224 | SET  | in_agra_fort | LOCKED IN AGRA FORT |
+225 | SKIT | in_agra_fort + shah_jahan_old + c_mughal_servant | DRAMATISED | quietest scene; music almost out
+230 | MAP  | G_mughal1707 | LARGEST EVER · JIZYA BACK |
+231 | PORT | NEW-ARC:shivaji | SHIVAJI |
+231 | MAP  | G_shivaji | HILL FORTS |
+231 | SET  | NEW-ART:in_sweet_baskets (baskets carried out of a Mughal mansion) | AS THE FAMOUS STORY GOES | legend stamp
+232 | MAP  | G_mughal1707 (cracking, Maratha spread) | 1707 |
+233 | PORT | nadir_shah | NADIR SHAH · 1739 |
+233 | MAP  | NEW-3D:G_nadir (Delhi → Persia, throne + diamond icons) | THE THRONE · THE DIAMOND |
+234 | SET  | in_camel_caravan (reprise) | REMEMBER MAHMUD'S CAMELS? | callback
+234 | BOARD | NEW-ART:board_ledger (quill + ledger) | THEY CAME WITH *ACCOUNT BOOKS* | bridge
+
+# ---------------- CHAPTER 10 ----------------
+236 | CARD | chapter10 | 10 · THE COMPANY |
+238 | BOARD | board_company_army (from hook) | REMEMBER THE COMPANY? | payoff of hook flash-forward 3 begins
+239 | PORT | NEW-ARC:elizabeth_i | ELIZABETH I · 31 DEC 1600 |
+239 | PIC  | NEW-ARC:eic_coat_of_arms | THE EAST INDIA COMPANY |
+240 | PIC  | NEW-ARC:chintz_textile | CALICO ← CALICUT · CHINTZ ← *CHHEENT* | payoff of hook "calico"
+241 | BOARD | | ENGLISH WEAVERS RIOT · INDIAN CLOTH *BANNED* |
+242 | MAP  | G_ports | SURAT · MADRAS · BOMBAY · CALCUTTA |
+242 | PORT | NEW-ARC:catherine_braganza | BOMBAY = A WEDDING DOWRY | joke
+243 | SET  | in_surat_port | SOLDIERS. MORE SOLDIERS. |
+244 | SKIT | in_london_board + c_director1 + c_director2 + c_clerk_1830 | DRAMATISED |
+250 | BOARD | board_company_army | ~200,000 · BIGGER THAN THE BRITISH ARMY | payoff of hook flash-forward 3
+251 | PORT | NEW-ARC:robert_clive | ROBERT CLIVE |
+252 | MAP  | G_bengal | PLASSEY · 1757 |
+252 | PIC  | clive_mir_jafar | THE SECRET DEAL |
+253 | BOARD | | WON BY A *DEAL* |
+254 | MAP  | G_company | A COMPANY RULES MILLIONS |
+255 | PIC  | famine_1876 (Bengal 1770 caption) | 1770 · UP TO 1/3 DIED · TAXES *RAISED* | darkest point of the first half: music out, 1 s silence after
+256 | BOARD | | LOOT ← HINDI *LUT* | payoff of hook "loot"
+257 | PORT | NEW-ARC:tipu_sultan | TIPU SULTAN · ROCKETS |
+257 | MAP  | G_mysore | MYSORE |
+257 | PORT | ranjit_singh | RANJIT SINGH · THE KOH-I-NOOR |
+258 | PORT | victoria_portrait | THE DIAMOND → QUEEN VICTORIA |
+259 | BOARD | | THIS ONE KEPT ITS HEADQUARTERS IN *LONDON* | question callback, the key turn
+260 | MAP  | G_company (1850s) | SEPOYS: INDIAN SOLDIERS | bridge
+
+# ---------------- CHAPTER 11 ----------------
+262 | CARD | chapter11 | 11 · THE QUEEN THEY TRIED TO RETIRE |
+264 | PIC  | NEW-ARC:enfield_cartridge | BITE THE CARTRIDGE |
+265 | SET  | in_meerut | MEERUT · 1857 |
+265 | MAP  | G_meerut | MEERUT → DELHI |
+265 | PORT | bahadur_shah_zafar | BAHADUR SHAH ZAFAR |
+267 | PORT | lakshmibai | RANI LAKSHMIBAI · JHANSI |
+267 | BOARD | | KINGDOM TAKEN · PENSION OFFERED |
+268 | SET  | NEW-ARC:lakshmibai_horseback (period painting of the Rani on horseback) | SHE STEPPED BACK IN |
+269 | BOARD | bahadur_shah_zafar | EXILED TO BURMA · MUGHALS END AFTER 330 YEARS |
+270 | MAP  | G_raj | 1858 · THE RAJ |
+271 | SKIT | in_victoria_palace + victoria_portrait + c_br_minister | DRAMATISED |
+278 | BOARD | | EMPRESS OF INDIA · 1876 |
+279 | PIC  | NEW-ARC:sake_dean_mahomed | CHAMPO → SHAMPOO | joke
+280 | SET  | in_railway_1853 | RAILWAYS | callback to the Harappa bricks (quick flash of in_railway)
+281 | MAP  | NEW-3D:G_manchester (raw cotton out, factory cloth in) | NOW BOUGHT ITS CLOTH FROM *MANCHESTER* |
+282 | PIC  | famine_1876 | 1876 · GRAIN STILL EXPORTED |
+283 | PORT | NEW-ARC:dadabhai_naoroji | DADABHAI NAOROJI |
+283 | BOARD | pliny portrait + naoroji portrait | THE DRAIN OF WEALTH | payoff of Pliny plant, split screen
+284 | SET  | in_parliament (Indian students reading) | | bridge
+
+# ---------------- CHAPTER 12 ----------------
+286 | CARD | chapter12 | 12 · A LAWYER THROWN OFF A TRAIN |
+288 | SET  | NEW-ART:in_pietermaritzburg (empty night platform, a suitcase and hat on the ground, no person) | JUNE 1893 · SOUTH AFRICA | quiet opening (matches the low voice)
+289 | SET  | NEW-ART:in_waiting_room (cold station waiting room) | GO HOME, OR FIGHT? |
+290 | PORT | gandhi_portrait | MOHANDAS KARAMCHAND GANDHI · "MAHATMA" |
+291 | BOARD | | SATYAGRAHA |
+292 | SET  | in_jallianwala | AMRITSAR · 1919 | no gore, empty garden walls
+292 | PIC  | jallianwala | 379 OFFICIAL · 1,000+ INDIAN ESTIMATES | darkest point overall; music out, 1 s silence
+293 | BOARD | | TRUST · GONE |
+294 | BOARD | calico + Manchester recap | REMEMBER THE CLOTH? | callback
+295 | SET  | NEW-ARC:gandhi_charkha_photo (1940s photo of Gandhi spinning) | CHARKHA · KHADI |
+295 | PIC  | NEW-ARC:swaraj_flag_1931 | THE WHEEL ON THE FLAG | plant for ch13 contest
+296 | MAP  | G_salt | SABARMATI → DANDI |
+297 | SKIT | in_dandi + gandhi_portrait + c_br_officer | DRAMATISED |
+303 | PIC  | gandhi_salt_march | ~380 KM · 24 DAYS |
+304 | PORT | bhagat_singh | BHAGAT SINGH |
+304 | PORT | bose_portrait | SUBHAS CHANDRA BOSE |
+304 | PORT | ambedkar | DR B R AMBEDKAR |
+305 | BOARD | | ~2.5 MILLION SOLDIERS |
+305 | PIC  | NEW-ARC:bengal_famine_1943 | 1943 · ~3 MILLION DIED |
+306 | BOARD | | BRITAIN: BROKE |
+307 | BOARD | map of India with a crack | NOT COMING *WHOLE* | bridge
+
+# ---------------- CHAPTER 13 ----------------
+309 | CARD | chapter13 | 13 · FIVE WEEKS TO DIVIDE A COUNTRY |
+311 | PORT | NEW-ARC:cyril_radcliffe | CYRIL RADCLIFFE · NEVER BEEN TO INDIA |
+312 | PORT | NEW-ARC:muhammad_ali_jinnah | MUHAMMAD ALI JINNAH · MUSLIM LEAGUE |
+313 | SKIT | in_delhi_office_1947 + NEW-ARC:cyril_radcliffe + c_assistant_1947 | DRAMATISED |
+319 | PIC  | NEW-ARC:nehru_1947 | 15 AUGUST 1947 · NEHRU |
+320 | MAP  | G_partition | THE LINE · ANNOUNCED 2 DAYS LATER |
+321 | SET  | in_partition_train | 10-20 MILLION DISPLACED |
+321 | PIC  | partition_refugees | 200,000 - 2 MILLION KILLED |
+322 | PORT | gandhi_portrait | CALCUTTA · FASTING |
+322 | BOARD | | 30 JANUARY 1948 | silence 1 s
+323 | PORT | patel_portrait | SARDAR PATEL · 560+ STATES |
+324 | SKIT | in_palace_hall + patel_portrait + c_maharaja | DRAMATISED |
+329 | MAP  | G_union | HYDERABAD · KASHMIR | official boundary, all of Kashmir inside
+330 | PORT | ambedkar | DR AMBEDKAR · THE CONSTITUTION |
+330 | PIC  | constitution | 26 JANUARY 1950 · REPUBLIC DAY |
+331 | BOARD | swaraj_flag_1931 vs lion_capital wheel | TWO WHEELS IN THE RUNNING | payoff of the wheel plant
+331 | MAP  | G_chakra | THE ASHOKA CHAKRA WINS | gold highlight, music lift
+332 | PIC  | first_election | EVERY ADULT · ~170 MILLION |
+333 | BOARD | NEW-ART:board_symbols (cow, lamp, hand, wheel symbols) | AN ELECTION RUN ON PICTURES |
+334 | BOARD | | FREE · AND POOR | bridge
+
+# ---------------- CHAPTER 14 ----------------
+336 | CARD | chapter14 | 14 · FORTY-SEVEN TONNES OF GOLD |
+338 | MAP  | NEW-3D:G_wars6265 (1962 China, 1965 Pakistan) | 1962 · 1965 |
+339 | SET  | NEW-ART:in_green_fields (Punjab wheat, tube well) | THE GREEN REVOLUTION |
+340 | MAP  | G_bangla | 1971 · BANGLADESH |
+341 | PORT | indira_gandhi | INDIRA GANDHI · THE EMERGENCY |
+341 | BOARD | board_symbols (reprise) | THE VOTERS *THREW HER OUT* | callback
+342 | BOARD | NEW-ART:board_licence_raj (stack of permit stamps) | THE LICENCE RAJ |
+343 | BOARD | | 1991 · ~3 WEEKS OF IMPORTS LEFT |
+344 | SET  | in_runway_1991 | 47 TONNES OF GOLD → BANK OF ENGLAND |
+345 | BOARD | in_camel_caravan + naoroji | REMEMBER THE CAMELS? THE DRAIN? | double callback
+346 | SKIT | in_runway_1991 + c_gov_official + c_pilot | DRAMATISED |
+351 | PORT | manmohan_singh | MANMOHAN SINGH |
+351 | BOARD | | "NO POWER ON EARTH CAN STOP AN IDEA WHOSE TIME HAS COME" |
+352 | PIC  | bengaluru_skyline | BENGALURU · HYDERABAD |
+353 | PIC  | mangalyaan | MARS · FIRST TRY · ~$74M < *GRAVITY* |
+354 | PIC  | chandrayaan3 | MOON'S SOUTH POLE · 2023 |
+355 | PORT | modi_portrait | NARENDRA MODI · SINCE 2014 |
+355 | MAP  | G_today | 5TH-LARGEST ECONOMY |
+356 | BOARD | | TO BE FAIR: JOBS · INCOMES · PRESS · MINORITIES | neutral, grey box
+357 | BOARD | golden_bird | THE GOLDEN BIRD IS CLIMBING AGAIN | music starts lifting into the ending
+
+# ---------------- ENDING ----------------
+359 | CARD | ending | THE ANSWER |
+361 | BOARD | portrait strip: alexander, kanishka, mahmud, ghori, timur, babur, nadir, Company arms | EVERYONE WHO CAME TO TAKE | portraits slide in one by one
+362 | BOARD | camels · peacock throne · koh-i-noor · drain | EVERYTHING THEY CARRIED OFF |
+363 | SET  | in_calicut_1498 (reprise) | WHY DID THEY *STAY*? | the hook question returns; 1 s silence
+364 | BOARD | golden_bird | WEALTH COULD BE CARRIED AWAY. INDIA ITSELF NEVER COULD. | THE line: music hit, hold 3 s
+365 | BOARD | kanishka_coin · qutb · taj_mahal | THEY ATE ITS FOOD · SPOKE ITS LANGUAGES · BUILT ITS MONUMENTS |
+366 | PIC  | in_london_board | ONLY ONE NEVER MOVED IN · ~4% ‡ |
+367 | SET  | in_calicut_1498 | | the Calicut sailor, full circle
+368 | PIC  | bengaluru_skyline + calico_textile | SOFTWARE · MEDICINES · CLOTH |
+369 | BOARD | golden_bird | IT NEVER LOST ITSELF | title payoff; last 2 s silent then end card
+370 | BOARD | end screen | THE ENTIRE HISTORY OF RUSSIA → | 20 s end screen
