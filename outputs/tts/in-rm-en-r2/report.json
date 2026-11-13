@@ -1,0 +1,29 @@
+{
+ "job": "in-rm-en-r2",
+ "items": [
+  {
+   "name": "p05",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 187.24,
+   "took": 14.4
+  },
+  {
+   "name": "p09",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 181.4,
+   "took": 11.7
+  },
+  {
+   "name": "p14",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 307.2,
+   "took": 21.9
+  }
+ ]
+}
