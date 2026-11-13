@@ -1,0 +1,155 @@
+{
+ "id": "in-rm-search",
+ "ua": "media-engine/1.0 (BHUGOL research; contact via GitHub)",
+ "delay": 10,
+ "files": [
+  {
+   "name": "s_dagama_journal.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Roteiro+primeira+viagem+Vasco+da+Gama+manuscript&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_black_pepper.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=black+pepper+peppercorns+Piper+nigrum+dried&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_calico_textile.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=calico+painted+cotton+India+18th+century+textile&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_chintz_textile.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=chintz+Coromandel+coast+painted+cotton+palampore&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_alexander_cunningham.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Alexander+Cunningham+archaeologist+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_porus_elephant_coin.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Alexander+Porus+decadrachm+elephant&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_james_prinsep.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=James+Prinsep+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_rupee_note_lions.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Lion+Capital+emblem+Indian+rupee+banknote&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_pliny_elder.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Pliny+the+Elder+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_roman_coins_india.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Roman+coins+hoard+India+aureus+found&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_mahmud_ghazni.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Mahmud+of+Ghazni+miniature+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_somnath_temple.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Somnath+temple+Gujarat&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_muhammad_ghori.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Muhammad+of+Ghor+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_prithviraj_chauhan.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Prithviraj+Chauhan+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_timur.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Timur+Tamerlane+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_amir_khusrau.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Amir+Khusrau+miniature&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_sher_shah_suri.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Sher+Shah+Suri+portrait+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_sher_shah_rupiya.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Sher+Shah+Suri+silver+rupiya+coin&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_maharana_pratap.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Maharana+Pratap+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_peacock_throne.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Shah+Jahan+Peacock+Throne+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_mumtaz_mahal.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Mumtaz+Mahal+portrait+miniature&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_shivaji.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Shivaji+Maharaj+portrait+painting+17th+century&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_elizabeth_i.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Elizabeth+I+Armada+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_eic_coat_of_arms.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=East+India+Company+coat+of+arms&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_catherine_braganza.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Catherine+of+Braganza+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_robert_clive.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Robert+Clive+portrait+Nathaniel+Dance&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_tipu_sultan.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Tipu+Sultan+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_enfield_cartridge.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Pattern+1853+Enfield+rifle&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_sake_dean_mahomed.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Sake+Dean+Mahomed+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_dadabhai_naoroji.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Dadabhai+Naoroji+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_gandhi_charkha_photo.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Gandhi+spinning+wheel+charkha+photograph&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_lakshmibai_horseback.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Rani+Lakshmibai+horseback+painting&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_swaraj_flag_1931.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=1931+Flag+of+India+Swaraj+charkha&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_bengal_famine_1943.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Bengal+famine+1943&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_cyril_radcliffe.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Cyril+Radcliffe&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_muhammad_ali_jinnah.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Muhammad+Ali+Jinnah+portrait&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  },
+  {
+   "name": "s_nehru_1947.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=Jawaharlal+Nehru+1947+speech&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=1800&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal"
+  }
+ ]
+}
