@@ -1,0 +1,50 @@
+{
+ "job": "desert-gpu-test1",
+ "kernel": "shubhzzgupta07/me-desert-gpu-test1",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-desert-gpu-test1",
+ "gpu_quota_before": {
+  "used_h": 0.39,
+  "remaining_h": 29.61,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-13T19:59:29+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-13T20:06:32+00:00",
+ "files": [
+  "desert_test1.json",
+  "me-desert-gpu-test1.log",
+  "render_0.log",
+  "render_1.log",
+  "renderer_0.txt",
+  "renderer_1.txt",
+  "stills/f000000.jpg",
+  "stills/f000150.jpg",
+  "stills/f000300.jpg",
+  "stills/f000450.jpg",
+  "stills/f000600.jpg",
+  "stills/f000750.jpg",
+  "stills/f000900.jpg",
+  "stills/f001050.jpg",
+  "stills/f001200.jpg",
+  "stills/f001350.jpg",
+  "stills/f001500.jpg",
+  "stills/f001650.jpg",
+  "stills/f001800.jpg",
+  "stills/f001950.jpg",
+  "stills/f002100.jpg",
+  "stills/f002250.jpg",
+  "stills/f002400.jpg",
+  "stills/f002550.jpg",
+  "stills/f002700.jpg",
+  "stills/f002850.jpg",
+  "test_seg0.mp4",
+  "test_seg1.mp4"
+ ],
+ "gpu_quota_after": {
+  "used_h": 0.5,
+  "remaining_h": 29.5,
+  "total_h": 30.0
+ }
+}

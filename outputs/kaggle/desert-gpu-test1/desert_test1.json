@@ -1,0 +1,50 @@
+{
+ "params": {
+  "name": "desert_test1",
+  "src_parts": [
+   "test1_src.part00",
+   "test1_src.part01"
+  ],
+  "src_sha256": "62e8e6572609152d97f7132ab3bcc3caa3b8708daf3542dd182d0f0490c295c9",
+  "start": 0,
+  "dur": 100,
+  "workers": 2,
+  "still_every_s": 5,
+  "jpeg_q": 92,
+  "test": true
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4",
+  "apt": 0,
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "x265": true,
+  "source": {
+   "sha256": "62e8e6572609152d97f7132ab3bcc3caa3b8708daf3542dd182d0f0490c295c9",
+   "ok": true,
+   "bytes": 69091455
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "codes": [
+    0,
+    0
+   ],
+   "secs": 239.0,
+   "frames": 3000,
+   "workers": 2
+  }
+ },
+ "renderer": [
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ ],
+ "verdict": "GPU TEST COMPLETE"
+}
