@@ -78,7 +78,7 @@
 76 | PORT  | alexander_bust | ALEXANDER · 326 BCE |
 76 | MAP   | G_alex2 | PUNJAB |
 77 | SET   | in_jhelum | JHELUM RIVER · PORUS |
-77 | PIC   | NEW-ARC:porus_elephant_coin (Alexander-vs-elephant medallion) | WAR ELEPHANTS | plant (gold underline)
+77 | PIC   | porus_coin | WAR ELEPHANTS | plant (gold underline)
 79 | SKIT  | in_jhelum + alexander_bust + porus_coin + c_greek_scribe | DRAMATISED |
 84 | MAP   | G_beas | THE BEAS: THEY STOPPED |
 85 | MAP   | G_nanda | NANDA EMPIRE · THOUSANDS OF ELEPHANTS |
@@ -109,7 +109,7 @@
 110 | PORT | NEW-ARC:james_prinsep | JAMES PRINSEP · 1837 |
 111 | SKIT | in_calcutta_study + NEW-ARC:james_prinsep + c_clerk_1830 | DRAMATISED |
 116 | PIC  | lion_capital | SARNATH: FOUR LIONS |
-116 | PIC  | NEW-ARC:rupee_note_lions | ON EVERY NOTE AND PASSPORT |
+116 | PIC  | lion_capital | ON EVERY NOTE AND PASSPORT |
 117 | PIC  | lion_capital (zoom to wheel) | THE ASHOKA CHAKRA | plant: "it's going to win a contest"
 118 | MAP  | G_maurya (breaking apart) | |
 119 | MAP  | G_rome | ROME | bridge
@@ -144,7 +144,7 @@
 146 | PIC  | NEW-ARC:somnath_temple | SOMNATH · 1026 |
 146 | SET  | NEW-ART:in_camel_caravan (camels loaded with gold leaving through a mountain pass) | | plant: "gold on someone else's camels"
 147 | BOARD | | HE DIDN'T WANT INDIA'S GOLD. HE WANTED *INDIA*. |
-148 | PORT | NEW-ARC:muhammad_ghori | MUHAMMAD OF GHOR |
+148 | PORT | NEW-ARC:muhammad_ghori (no real portrait exists: name card only) | MUHAMMAD OF GHOR |
 148 | PORT | NEW-ARC:prithviraj_chauhan | PRITHVIRAJ CHAUHAN |
 148 | MAP  | NEW-3D:G_tarain (Tarain near Delhi) | TARAIN · 1191 |
 149 | SET  | in_rajput_camp | | victory

@@ -4,7 +4,8 @@ Usage: pick_archive.py job_id search_dir [search_dir2 ...]  (later dirs override
 import json, glob, os, sys
 OVR = {"great_bath": "Great bath view Mohenjodaro", "unicorn_seal": "IndusValleySeals", "akbar_painting": "Court of Akbar from Akbarnama", "lion_capital": "Lion capital of Ashoka, Sarnath.jpg", "indira_gandhi": "Indira Gandhi official portrait (cropped)", "qutb_minar": "Qutb Minar with Neem Tree", "mahabodhi": "Worshipper at Mahabodhi", "koh_i_noor": "Replica of the Koh-i-Noor (cropped)",
        "amir_khusrau": "dedica il suo poema", "dadabhai_naoroji": "Dadabhai Naoroji, 1892", "somnath_temple": "Somnath Temple Gujarat.jpg",
-       "cyril_radcliffe": "Cyril-John-Radcliffe", "swaraj_flag_1931": "1931"}
+       "cyril_radcliffe": "Cyril-John-Radcliffe", "swaraj_flag_1931": "1931 Flag of India.svg", "pliny_elder": "Plinius", "calico_textile": "palampore",
+       "dagama_journal": "Gregório Lopes", "roman_coins_india": "Aureus, Auguste, Lyon"}
 SKIP_EXT = (".pdf", ".djvu", ".tif", ".tiff", ".svg", ".gif", ".webm", ".ogv")
 job_id, dirs = sys.argv[1], sys.argv[2:]
 res = {}
