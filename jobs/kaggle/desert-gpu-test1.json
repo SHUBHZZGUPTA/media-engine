@@ -1,0 +1,23 @@
+{
+ "id": "desert-gpu-test1",
+ "script": "gpu/desert_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 90,
+ "wait_minutes": 80,
+ "params": {
+  "name": "desert_test1",
+  "src_parts": [
+   "test1_src.part00",
+   "test1_src.part01"
+  ],
+  "src_sha256": "62e8e6572609152d97f7132ab3bcc3caa3b8708daf3542dd182d0f0490c295c9",
+  "start": 0,
+  "dur": 100,
+  "workers": 2,
+  "still_every_s": 5,
+  "jpeg_q": 92,
+  "test": true
+ },
+ "requested": "2026-11-14T01:25+05:30"
+}
