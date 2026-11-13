@@ -335,3 +335,11 @@ If installation is not possible in this environment, tell the user which depende
 - `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
 - `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
 
+exec
+/bin/bash -lc 'cp /root/.codex/generated_images/01a1d409-e9a4-7163-b739-ed1e90443451/exec-3f3f352b-bb1a-4df3-91c1-232c77bfe724.png /home/claude/media-engine/longform/india/art4/board_licence_raj.png' in /home/claude/media-engine/longform/india/art4
+ succeeded in 0ms:
+codex
+Saved `board_licence_raj.png`.
+tokens used
+40,351
+Saved `board_licence_raj.png`.
