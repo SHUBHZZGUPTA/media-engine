@@ -1,0 +1,103 @@
+{
+ "id": "smog-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel explaining a news story with a map. The Narrator is a deep, warm, confident storyteller: brisk and curious, natural emphasis on numbers, a short comic pause before each punchline, slightly hushed and serious on the 'strangest part' line. Chars voices a giant mountain range as a funny cartoon character: slow, deep, smug and deadpan.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "This week, eighty-six of the world's hundred most polluted cities were in one country."
+    ],
+    [
+     "Narrator",
+     "One Delhi station hit four hundred eighty-eight. The scale stops at five hundred."
+    ],
+    [
+     "Narrator",
+     "So why here? From space, it's a grey river... Punjab to Bengal."
+    ],
+    [
+     "Narrator",
+     "Four in ten Indians live under it."
+    ],
+    [
+     "Narrator",
+     "Because north India is a giant bowl."
+    ],
+    [
+     "Narrator",
+     "North: the tallest wall on Earth."
+    ],
+    [
+     "Chars",
+     "[smug, slow, deep] Nothing gets past me. Not even smoke."
+    ],
+    [
+     "Narrator",
+     "South: the Aravalli and Vindhya hills."
+    ],
+    [
+     "Narrator",
+     "But it's been a bowl for millions of years. So why only in winter?"
+    ],
+    [
+     "Narrator",
+     "In summer, warm air rises about a kilometre... and takes the smoke away."
+    ],
+    [
+     "Narrator",
+     "In November, cold air slides off the Tibetan Plateau... and warm air sits on top."
+    ],
+    [
+     "Narrator",
+     "Like a lid on a pot."
+    ],
+    [
+     "Narrator",
+     "The ceiling drops to a few hundred metres... and the wind goes quiet."
+    ],
+    [
+     "Narrator",
+     "And that's still not the strangest part."
+    ],
+    [
+     "Narrator",
+     "Researchers say, even if Delhi made zero pollution itself..."
+    ],
+    [
+     "Narrator",
+     "its winter air would likely still turn bad."
+    ],
+    [
+     "Narrator",
+     "Because smoke from farms, roads and factories across the plain shares one sky."
+    ],
+    [
+     "Narrator",
+     "Air doesn't stop at city lines."
+    ],
+    [
+     "Chars",
+     "[deadpan, defensive] Don't look at me. I'm just tall."
+    ],
+    [
+     "Narrator",
+     "Comment your city's A-Q-I right now."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
