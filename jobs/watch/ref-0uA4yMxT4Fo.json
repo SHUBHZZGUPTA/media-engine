@@ -1,0 +1,28 @@
+{
+ "id": "ref-0uA4yMxT4Fo",
+ "url": "https://www.youtube.com/watch?v=0uA4yMxT4Fo",
+ "models": [
+  "gemini-3.7-flash",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest",
+  "gemini-3-flash-preview"
+ ],
+ "items": [
+  {
+   "name": "breakdown",
+   "fps": 4,
+   "prompt": "This is a geography/geopolitics YouTube Short by @GeohistoryShort, studied as a craft reference. 1) Full verbatim narration transcript with timestamps (mm:ss.s) per sentence. 2) Topic in one sentence and every place, number, date and claim mentioned. 3) Timestamped visual log of EVERY visual change: what is on screen (globe, flat map, satellite imagery, stylised map, 3D terrain, extruded countries, flags, icons, characters, charts, text), what moves and how, every cut and transition, on-screen text exactly as shown with its font style, colour, outline and animation, sound effects and music. 4) Hook in the first 3 seconds (words + visual). 5) Story structure (setup, tension, payoff) and how it ends (loop, CTA, cliffhanger). 6) Total duration, number of cuts vs continuous camera moves, average seconds between visual changes, longest static hold."
+  },
+  {
+   "name": "animation",
+   "fps": 8,
+   "prompt": "Act as a senior motion designer and 3D/VFX artist reverse-engineering how this Short's animation is produced, because viewers find it unusually smooth and pleasing. Answer in detail with timestamps: 1) Is the map/globe true 3D (perspective, parallax, lighting, shadows, specular ocean, atmosphere glow, terrain relief) or 2D/2.5D (flat image panned/zoomed, fake depth)? Give the visual evidence. 2) Camera language: types of moves (orbit, dolly, push-in, tilt, pull-out to space), their speed, and the easing (linear vs ease-in-out vs exponential; do moves accelerate and settle?). Are scene changes cuts or one continuous camera that flies between locations? 3) Smoothness: apparent frame rate, motion blur on fast moves, any stutter, tile pop-in, blurry or loading map chunks, aliasing on borders. 4) Map styling: imagery source look (satellite, NASA Blue Marble, stylised flat colours, dark-mode map), border lines (width, glow, colour), how countries are highlighted (fill, raise/extrude, glow, colour wash), labels, flags, arrows, routes, how data elements (bars, numbers, icons) animate in. 5) Colour grade, contrast, saturation, vignette or overlays, lighting direction. 6) Transitions: list each and how it is built (whip pan, zoom-through, match-cut, morph, fade, flash). 7) Most likely software/toolchain with confidence levels and evidence for each: e.g. Google Earth Studio, Blender (Blender GIS / BlenderGIS addon), After Effects with GEOlayers 3, Cinema 4D, Unreal/Cesium, Mapbox/deck.gl/three.js, Mapchart/QGIS for flat maps, AI video generators, or template packs. 8) The 5 specific techniques that most contribute to the smooth, watchable feel, ranked."
+  },
+  {
+   "name": "audio",
+   "fps": 1,
+   "prompt": "Act as an audio forensics and voice-production expert. 1) Narration voice: accent, gender/age impression, timbre, pitch variation, speaking rate (estimate words per minute), pause pattern, breaths, room tone, emotional colouring, consistency. 2) Judgement: human voice actor vs AI TTS, with confidence % and timestamped evidence; if AI, which family it most resembles (ElevenLabs stock voices such as Adam/Brian/Bill or similar, Google Gemini TTS prebuilt voices such as Charon/Puck/Orus/Algenib, OpenAI TTS, Azure neural, CapCut/TikTok voices, Higgsfield/Seed audio, cloned voice) and which audible traits support or contradict each; state you cannot be certain. 3) Post-processing heard: EQ, compression, speed-up, loudness. 4) Music: genre, mood, tempo/BPM estimate, instrumentation, whether it builds or drops out, volume relative to voice, ducking under voice. 5) Sound design: every SFX with timestamp (whooshes, risers, impacts, clicks, map sounds), how they are synced to camera moves and cuts, SFX density per 10 seconds. 6) How audio and visuals are synced (beats on cuts, risers into reveals)."
+  }
+ ]
+}
