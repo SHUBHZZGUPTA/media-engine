@@ -5,7 +5,10 @@
 **Searches to win:** why is Delhi air so bad · Delhi smog explained · why north India pollution winter
 
 **Titles (ranked; title.py score vs cover "CAN'T ESCAPE?")**
-1. `Why Can't Delhi's Smog Escape? 🇮🇳`: 33 chars, 76. Your pick. The lint flags that the cover repeats it, which is your "same as title" choice.
+**FINAL TITLE:** `Why Can't Delhi's Smog Escape? 🇮🇳` (33 chars). The cover carries the same words, by your choice.
+
+Alternatives considered:
+1. (final, above)
 2. `86 of the World's 100 Dirtiest Cities?! 🇮🇳`: 42 chars, 98 (has a number)
 3. `Delhi's Smog Is Trapped in a Bowl?! 😷`: 37 chars, 94
 4. `The Himalayas Trap Delhi's Smog?! 🏔️`: 36 chars, 94 (search-first)
@@ -46,7 +49,10 @@ What's the AQI in your city right now? Drop it below 👇 Is your sky clear, or 
 **Searches to win:** दिल्ली प्रदूषण क्यों · दिल्ली स्मॉग · delhi pollution kyu hota hai
 
 **Titles**
-1. `दिल्ली का स्मॉग निकल क्यों नहीं पाता? 🇮🇳`: matches the cover "निकल नहीं पाता?"
+**FINAL TITLE:** `दिल्ली का स्मॉग निकल क्यों नहीं पाता? 🇮🇳` (the cover carries the same words)
+
+Alternatives considered:
+1. (final, above)
 2. `दुनिया के 100 में से 86 प्रदूषित शहर भारत में?! 🇮🇳`
 3. `उत्तर भारत पर ढक्कन?! दिल्ली स्मॉग 😷`
 4. `हिमालय ने रोका दिल्ली का धुआँ?! 🏔️`

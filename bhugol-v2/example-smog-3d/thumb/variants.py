@@ -10,7 +10,7 @@ def text(img, top, box, y=150):
     dr = ImageDraw.Draw(img); f1 = ImageFont.truetype(F, 170); qf = ImageFont.truetype('bsd900.ttf', 230)
     def font_for(s): return ImageFont.truetype('bsd900.ttf', 230) if all(ord(c) < 128 for c in s) else ImageFont.truetype(F, 190)
     f1 = ImageFont.truetype('bsd900.ttf', 180) if all(ord(c) < 128 for c in top) else ImageFont.truetype(F, 170)
-    tw = dr.textlength(top, font=f1); dr.text(((W - tw) / 2, y), top, font=f1, fill=(255, 255, 255), stroke_width=16, stroke_fill=(3, 16, 26))
+    if top: tw = dr.textlength(top, font=f1); dr.text(((W - tw) / 2, y), top, font=f1, fill=(255, 255, 255), stroke_width=16, stroke_fill=(3, 16, 26))
     q = ''
     if not all(ord(c) < 128 for c in box) and box.endswith('?'): box, q = box[:-1], '?'
     f2 = font_for(box); bb = dr.textbbox((0, 0), box, font=f2); bw = bb[2] - bb[0]; qw = dr.textlength(q, font=qf) if q else 0
@@ -19,6 +19,19 @@ def text(img, top, box, y=150):
     dr.text((bx, by), box, font=f2, fill=(10, 10, 10))
     if q: dr.text((bx + bw + 6, by + bb[1] - 40), q, font=qf, fill=(10, 10, 10))
     badge = Image.open('/home/claude/media-engine/citylapse/engine/assets/bhugol_badge.png').convert('RGBA').resize((120, 120)); img.alpha_composite(badge, (30, 30))
+def title_text(img, lines, box, y):
+    dr = ImageDraw.Draw(img); asc = lambda t: all(ord(c) < 128 for c in t)
+    for ln in lines:
+        f = ImageFont.truetype('bsd900.ttf', 150) if asc(ln) else ImageFont.truetype(F, 128)
+        if ln.endswith('🇮🇳'):
+            ln = ln[:-2].rstrip(); tw = dr.textlength(ln, font=f) + 130
+            x = (W - tw) / 2; dr.text((x, y), ln, font=f, fill=(255, 255, 255), stroke_width=14, stroke_fill=(3, 16, 26))
+            em = ImageFont.truetype('/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf', 109); e = Image.new('RGBA', (140, 140), (0, 0, 0, 0))
+            ImageDraw.Draw(e).text((0, 0), '🇮🇳', font=em, embedded_color=True); e = e.resize((112, 112)); img.alpha_composite(e, (int(x + tw - 112), int(y + 22)))
+        else:
+            tw = dr.textlength(ln, font=f); dr.text(((W - tw) / 2, y), ln, font=f, fill=(255, 255, 255), stroke_width=14, stroke_fill=(3, 16, 26))
+        y += 158
+    text(img, '', box, y=y - 250 + 20)
 def outline(img, P, fillcol=None, flag=False):
     if flag:
         m = Image.new('L', (W, H), 0); d = ImageDraw.Draw(m)
@@ -87,5 +100,14 @@ d.polygon([(ax1 + math.cos(hd) * 40, ay1 + math.sin(hd) * 40), (ax1 + math.cos(h
 bx, by = (ax0 + ax1) / 2 + 10, (ay0 + ay1) / 2 + 30; r = 95
 d.ellipse((bx - r, by - r, bx + r, by + r), fill=(255, 255, 255), outline=(200, 20, 20), width=22); d.line((bx - r * .62, by - r * .62, bx + r * .62, by + r * .62), fill=(200, 20, 20), width=24)
 text(b4, *TXT['v4'], y=1330); b4.convert('RGB').save(f'v4_{LANG}.jpg', quality=92)
-for v in ('v1', 'v2', 'v3', 'v4'): Image.open(f'{v}_{LANG}.jpg').resize((140, 249), Image.LANCZOS).save(f'{v}_{LANG}_feed.jpg')
+b5 = pop(hz).convert('RGBA'); outline(b5, P3); cloud(b5, cx, cy - 60, 210, face=True); d = ImageDraw.Draw(b5)
+ax0, ay0, ax1, ay1 = cx + 30, cy - 290, cx + 110, cy - 640
+d.line((ax0, ay0, ax1, ay1), fill=(255, 59, 48), width=26); hd = math.atan2(ay1 - ay0, ax1 - ax0)
+d.polygon([(ax1 + math.cos(hd) * 40, ay1 + math.sin(hd) * 40), (ax1 + math.cos(hd + 2.4) * 70, ay1 + math.sin(hd + 2.4) * 70), (ax1 + math.cos(hd - 2.4) * 70, ay1 + math.sin(hd - 2.4) * 70)], fill=(255, 59, 48))
+bx, by = (ax0 + ax1) / 2 + 10, (ay0 + ay1) / 2 + 30; r = 95
+d.ellipse((bx - r, by - r, bx + r, by + r), fill=(255, 255, 255), outline=(200, 20, 20), width=22); d.line((bx - r * .62, by - r * .62, bx + r * .62, by + r * .62), fill=(200, 20, 20), width=24)
+if LANG == 'en': title_text(b5, ["WHY CAN'T", "DELHI'S SMOG 🇮🇳"], 'ESCAPE?', 1180)
+else: title_text(b5, ['दिल्ली का स्मॉग', 'निकल क्यों 🇮🇳'], 'नहीं पाता?', 1180)
+b5.convert('RGB').save(f'v5_{LANG}.jpg', quality=92)
+for v in ('v1', 'v2', 'v3', 'v4', 'v5'): Image.open(f'{v}_{LANG}.jpg').resize((140, 249), Image.LANCZOS).save(f'{v}_{LANG}_feed.jpg')
 print('ok')
