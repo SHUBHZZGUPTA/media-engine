@@ -1,0 +1,115 @@
+{
+ "id": "denmark-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis and a short comic pause before each punchline ('just to get to church', 'On purpose', 'And the twist?'). A beat of intrigue on the opening line. Chars voices two funny cartoon characters: a slow, deep, deadpan, unbothered sand dune, and a pompous, easily outraged old church tower. Short and punchy.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You'd never guess Denmark has a desert."
+    ],
+    [
+     "Narrator",
+     "But it's forty metres tall... and it's walking."
+    ],
+    [
+     "Narrator",
+     "Up to eighteen metres a year. That's almost a cricket pitch."
+    ],
+    [
+     "Narrator",
+     "So how does a green, rainy country grow a desert?"
+    ],
+    [
+     "Narrator",
+     "Rewind to the fifteen hundreds."
+    ],
+    [
+     "Narrator",
+     "Danes cut down their forests, for timber and farmland."
+    ],
+    [
+     "Narrator",
+     "By eighteen hundred, only two to four percent of Denmark was still forest."
+    ],
+    [
+     "Narrator",
+     "So what were those trees doing? Holding the sand down."
+    ],
+    [
+     "Narrator",
+     "So the wind took over, burying farms and whole villages up to seven kilometres inland."
+    ],
+    [
+     "Narrator",
+     "Then the sand reached Skay-en's church, the biggest in the region."
+    ],
+    [
+     "Narrator",
+     "For twenty years, people dug the door free... just to get to church."
+    ],
+    [
+     "Chars",
+     "[slow, deep, deadpan] Knock knock."
+    ],
+    [
+     "Chars",
+     "[outraged, pompous, high-pitched] I'm a church! Show some respect!"
+    ],
+    [
+     "Chars",
+     "[slow, deep, deadpan] Was."
+    ],
+    [
+     "Narrator",
+     "In seventeen ninety-five, the king closed it. Only the tower still pokes out."
+    ],
+    [
+     "Narrator",
+     "So Denmark fought back with trees, and by the nineteen fifties, the sand was tamed."
+    ],
+    [
+     "Narrator",
+     "So why is one dune still walking?"
+    ],
+    [
+     "Narrator",
+     "Because Denmark kept it. On purpose."
+    ],
+    [
+     "Narrator",
+     "The state bought Roh-byerg Mee-leh in nineteen hundred, and lets it roam free, as a reminder."
+    ],
+    [
+     "Narrator",
+     "And the twist?"
+    ],
+    [
+     "Narrator",
+     "The story goes, the sand that buried that church came from this very dune."
+    ],
+    [
+     "Narrator",
+     "In a century or two, it should reach the main road to Skay-en."
+    ],
+    [
+     "Chars",
+     "[slow, deep, deadpan, unbothered] Relax. I'm just passing through."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol."
+    ]
+   ]
+  }
+ ]
+}
