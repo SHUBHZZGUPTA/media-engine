@@ -1,0 +1,128 @@
+{
+ "id": "myths-v2-4d8f33aa",
+ "script": "gpu/india_clips_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 150,
+ "wait_minutes": 150,
+ "params": {
+  "src_file": "myths_4d8f33aa.tar.gz",
+  "src_sha256": "4d8f33aa7e4a0a36dff99b13788d2b72139223920ae2e906d35f33a06fad1bda",
+  "clips": [
+   {
+    "id": "s0a",
+    "dur": 6.1333
+   },
+   {
+    "id": "s0b",
+    "dur": 6.1333
+   },
+   {
+    "id": "s8a",
+    "dur": 8.3667
+   },
+   {
+    "id": "s8b",
+    "dur": 8.4
+   },
+   {
+    "id": "s8c",
+    "dur": 8.4
+   },
+   {
+    "id": "s8d",
+    "dur": 8.4
+   },
+   {
+    "id": "s7a",
+    "dur": 7.2
+   },
+   {
+    "id": "s7b",
+    "dur": 7.2
+   },
+   {
+    "id": "s7c",
+    "dur": 7.2
+   },
+   {
+    "id": "s6a",
+    "dur": 6.9333
+   },
+   {
+    "id": "s6b",
+    "dur": 6.9667
+   },
+   {
+    "id": "s6c",
+    "dur": 6.9667
+   },
+   {
+    "id": "s5a",
+    "dur": 7.7333
+   },
+   {
+    "id": "s5b",
+    "dur": 7.7333
+   },
+   {
+    "id": "s5c",
+    "dur": 7.7667
+   },
+   {
+    "id": "s4a",
+    "dur": 6.2667
+   },
+   {
+    "id": "s4b",
+    "dur": 6.2667
+   },
+   {
+    "id": "s4c",
+    "dur": 6.2667
+   },
+   {
+    "id": "s3a",
+    "dur": 7.8333
+   },
+   {
+    "id": "s3b",
+    "dur": 7.8333
+   },
+   {
+    "id": "s3c",
+    "dur": 7.8667
+   },
+   {
+    "id": "s2a",
+    "dur": 6.7333
+   },
+   {
+    "id": "s2b",
+    "dur": 6.7333
+   },
+   {
+    "id": "s2c",
+    "dur": 6.7333
+   },
+   {
+    "id": "s1a",
+    "dur": 6.8
+   },
+   {
+    "id": "s1b",
+    "dur": 6.8
+   },
+   {
+    "id": "s1c",
+    "dur": 6.8333
+   },
+   {
+    "id": "s9a",
+    "dur": 5.0333
+   }
+  ],
+  "jpeg_q": 95,
+  "render_timeout_s": 8000
+ }
+}
