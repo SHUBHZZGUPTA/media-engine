@@ -1,0 +1,44 @@
+{
+ "params": {
+  "src_file": "clips_ca942d92.tar.gz",
+  "src_sha256": "ca942d923ebee507f20405327d07cf6423fd3adbb4c442c71faf256c9ea25614",
+  "jpeg_q": 95
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "source": {
+   "sha256": "ca942d923ebee507f20405327d07cf6423fd3adbb4c442c71faf256c9ea25614",
+   "ok": true
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "exit": 0,
+   "secs": 640.3,
+   "tail": "READY G_calicut 2 ms\nGLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\nCLIP_DONE G_calicut 170 28.0s\nREADY G_indus_dry 16 ms\nCLIP_DONE G_indus_dry 470 91.4s\nREADY G_buddhism 12 ms\nCLIP_DONE G_buddhism 503 65.0s\nREADY G_dhamma 14 ms\nCLIP_DONE G_dhamma 295 44.1s\nREADY G_numerals 14 ms\nCLIP_DONE G_numerals 168 22.8s\nREADY G_tarain 13 ms\nCLIP_DONE G_tarain 228 42.0s\nREADY G_mongols 12 ms\nCLIP_DONE G_mongols 257 35.4s\nREADY G_timur 14 ms\nCLIP_DONE G_timur 520 80.1s\nREADY G_cloth 9 ms\nCLIP_DONE G_cloth 622 74.6s\nREADY G_nadir 14 ms\nCLIP_DONE G_nadir 204 31.4s\nREADY G_manchester 11 ms\nCLIP_DONE G_manchester 370 41.1s\nREADY G_wars6265 13 ms\nCLIP_DONE G_wars6265 422 69.5s\nALL_DONE\n"
+  }
+ },
+ "renderer": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+ "files": [
+  "G_buddhism",
+  "G_calicut",
+  "G_cloth",
+  "G_dhamma",
+  "G_indus_dry",
+  "G_manchester",
+  "G_mongols",
+  "G_nadir",
+  "G_numerals",
+  "G_tarain",
+  "G_timur",
+  "G_wars6265"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
