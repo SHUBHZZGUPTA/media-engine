@@ -2,7 +2,9 @@
 """Pick one image per search result and write a download job + credits.
 Usage: pick_archive.py job_id search_dir [search_dir2 ...]  (later dirs override earlier); OVR = manual picks by title substring."""
 import json, glob, os, sys
-OVR = {"great_bath": "Great bath view Mohenjodaro", "unicorn_seal": "IndusValleySeals", "akbar_painting": "Court of Akbar from Akbarnama", "lion_capital": "Lion capital of Ashoka, Sarnath.jpg", "indira_gandhi": "Indira Gandhi official portrait (cropped)", "qutb_minar": "Qutb Minar with Neem Tree", "mahabodhi": "Worshipper at Mahabodhi", "koh_i_noor": "Replica of the Koh-i-Noor (cropped)"}
+OVR = {"great_bath": "Great bath view Mohenjodaro", "unicorn_seal": "IndusValleySeals", "akbar_painting": "Court of Akbar from Akbarnama", "lion_capital": "Lion capital of Ashoka, Sarnath.jpg", "indira_gandhi": "Indira Gandhi official portrait (cropped)", "qutb_minar": "Qutb Minar with Neem Tree", "mahabodhi": "Worshipper at Mahabodhi", "koh_i_noor": "Replica of the Koh-i-Noor (cropped)",
+       "amir_khusrau": "dedica il suo poema", "dadabhai_naoroji": "Dadabhai Naoroji, 1892", "somnath_temple": "Somnath Temple Gujarat.jpg",
+       "cyril_radcliffe": "Cyril-John-Radcliffe", "swaraj_flag_1931": "1931"}
 SKIP_EXT = (".pdf", ".djvu", ".tif", ".tiff", ".svg", ".gif", ".webm", ".ogv")
 job_id, dirs = sys.argv[1], sys.argv[2:]
 res = {}
@@ -14,7 +16,8 @@ for d in dirs:
         if pages: res[os.path.basename(f)[2:-5]] = pages
 files, credits = [], {}
 for k, pages in sorted(res.items()):
-    cand = [p for p in pages if p.get("imageinfo") and not p["title"].lower().endswith(SKIP_EXT) and p["imageinfo"][0].get("width", 0) >= 380]
+    skip = tuple(e for e in SKIP_EXT if not (k in OVR and e == ".svg"))   # an OVR pick may be an SVG (Commons serves a PNG thumbnail)
+    cand = [p for p in pages if p.get("imageinfo") and not p["title"].lower().endswith(skip) and p["imageinfo"][0].get("width", 0) >= 380]
     if k in OVR: cand = [p for p in cand if OVR[k] in p["title"]] or cand
     if not cand: print("none:", k); continue
     land = [p for p in cand if p["imageinfo"][0]["width"] >= p["imageinfo"][0]["height"] * 1.1]

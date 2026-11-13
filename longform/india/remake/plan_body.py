@@ -91,7 +91,7 @@ def new_globe(cid, t0, t1, layers):
 skit_spans = []
 for r in ROWS:
     if r["type"] != "SKIT" or not LNO_SKIT.get(r["line"]): continue
-    skit_spans.append((r["line"],) + LNO_SKIT[r["line"]])
+    skit_spans.append((r["line"],) + tuple(LNO_SKIT[r["line"]]))
 def in_skit(fileline):
     for sl, i0, i1 in skit_spans:
         if LNO[i0] <= fileline <= LNO[i1] and fileline != sl: return (sl, i0, i1)

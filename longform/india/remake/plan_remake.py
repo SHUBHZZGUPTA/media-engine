@@ -334,7 +334,7 @@ for s in shots:   # labels never sit in the caption band
         if isinstance(L_.get("img"), dict) and L_["y"] > 860: L_["y"] = 250
 
 # captions from the script words, timed by the transcriber
-from num_in import digits
+sys.path.insert(0, os.path.join(HERE, "..", "full")); from num_in import digits
 Wt = [(float(x) / SPEED, float(y) / SPEED, w.strip()) for x, y, w in (l.split(None, 2) for l in open(WORDS) if l.strip())]
 STOP = {"and", "the", "a", "an", "of", "to", "in", "on", "it", "is"}
 def norm(w): return re.sub(r"[^a-z0-9']", "", w.lower())
