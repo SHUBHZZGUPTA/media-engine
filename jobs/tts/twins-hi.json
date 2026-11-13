@@ -1,0 +1,79 @@
+{
+ "id": "twins-hi",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk, playful and curious, with natural emphasis on the country names and a short comic pause before each punchline. Chars voices a funny cartoon United Kingdom, crying dramatically. The countdown builds: number one is the biggest, most excited reveal. The last line trails off so it can loop back into the first line.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "मैं हंड्रेड डॉलर की शर्त लगाता हूँ, आपको नहीं पता था कि कुछ countries दिखने में बिल्कुल अलग हैं, पर size में लगभग एक जैसी हैं!"
+    ],
+    [
+     "Narrator",
+     "शुरू करते हैं नंबर फाइव से: नेपाल और बांग्लादेश।"
+    ],
+    [
+     "Narrator",
+     "दोनों बस twenty-two kilometre दूर हैं, पर एक Mount Everest से आसमान छूता है, और दूसरा अपनी नदियों से समंदर!"
+    ],
+    [
+     "Narrator",
+     "नंबर फोर: गिनी और यूनाइटेड किंगडम।"
+    ],
+    [
+     "Narrator",
+     "यकीन नहीं होगा। कभी दुनिया का सबसे बड़ा empire, आज उसका area बस गिनी जितना है।"
+    ],
+    [
+     "Chars",
+     "[sobbing, over-dramatic, posh] कितना दुखद।"
+    ],
+    [
+     "Narrator",
+     "नंबर थ्री: चिली और ज़ाम्बिया।"
+    ],
+    [
+     "Narrator",
+     "ज़ाम्बिया को chewing gum की तरह खींचो, तो उतनी ही बड़ी एक और चिली बन जाएगी।"
+    ],
+    [
+     "Narrator",
+     "नंबर टू: इटली और फिलीपींस।"
+    ],
+    [
+     "Narrator",
+     "एक जूते जैसा दिखता है, और दूसरा बैठे हुए आदमी जैसा।"
+    ],
+    [
+     "Narrator",
+     "पर दोनों को जोड़ दो, तो पूरा इंसान बन जाता है।"
+    ],
+    [
+     "Narrator",
+     "[building excitement, big reveal] और नंबर वन है... मलेशिया और वियतनाम!"
+    ],
+    [
+     "Narrator",
+     "दोनों Southeast Asia में हैं, दोनों के लंबे coastlines हैं, और size लगभग बराबर।"
+    ],
+    [
+     "Narrator",
+     "[warm, a little teasing] लगता है, ये एक-दूसरे के लिए ही बने हैं।"
+    ],
+    [
+     "Narrator",
+     "[cheeky, quick, trailing off] Double or nothing करें? क्योंकि..."
+    ]
+   ]
+  }
+ ]
+}
