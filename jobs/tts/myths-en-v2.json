@@ -1,0 +1,67 @@
+{
+ "id": "myths-en-v2",
+ "key": "longform",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "items": [
+  {
+   "name": "p1",
+   "direction": "Narrate this as a high-energy, feel-good countdown video for BHUGOL, a popular geography fun-facts YouTube channel. The Narrator is thrilled to be telling you this: enthusiastic, upbeat, bright and very expressive, like an excited friend who can't wait to show you something amazing. Big smile in the voice the whole way. Wide, lively pitch movement: rise with real curiosity on every question, hit 'Wrong!' and 'Right?' with playful delight after a tiny comic pause, and say every number with genuine amazement, as if it surprises you too. Announce each 'Number eight!' like a bright, punchy game-show countdown call. Land each punchline with a grin. Pace is quick and bouncy, about 170 words per minute, with short crisp pauses; never slow, flat, calm, sleepy or documentary-serious. Accent: native General American English narrator, neutral American accent from the first word to the last. VOICE IDENTITY: always the same warm baritone host, same person and same energy level from the first line to the last. Read numbers naturally. Pronounce Mauna Kea as 'MAO-nuh KAY-uh'. Pronounce 'Bhoogol' as 'BHOO-gol'.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Do you think geography is boring? Wait to see these places, because the world is full of places that make no sense. Let's get started with our countdown of the eight biggest geography lies that you believed."
+    ],
+    [
+     "Narrator",
+     "Number eight. Mount Everest is the world's tallest mountain. Let's start with the big one. Everyone knows Mount Everest is the tallest mountain on Earth. Right? Wrong. This is probably the biggest lie in geography. The real tallest mountain is Mauna Kea in Hawaii. From base to peak, it's 33,500 feet tall. That's 4,500 feet taller than Everest. The only reason nobody talks about this is because most of Mauna Kea is underwater. So technically, you'd need scuba gear to climb the world's actual tallest mountain."
+    ],
+    [
+     "Narrator",
+     "Number seven. The Sahara Desert is just sand. When people picture the Sahara, they see endless sand dunes, but sand only covers about 25% of the Sahara. Most of it is actually rocky plateaus, gravel plains, and mountains. The sand dune image comes from movies and postcards, but it's not what most of the Sahara actually looks like."
+    ],
+    [
+     "Narrator",
+     "Number six. The Red Sea is red. The Red Sea has red right in the name, so the water must be red, right? The water is actually blue like any other sea. The name comes from seasonal algae blooms that sometimes create reddish patches, but 99% of the time it looks like normal blue ocean water."
+    ]
+   ]
+  },
+  {
+   "name": "p2",
+   "direction": "Narrate this as a high-energy, feel-good countdown video for BHUGOL, a popular geography fun-facts YouTube channel. The Narrator is thrilled to be telling you this: enthusiastic, upbeat, bright and very expressive, like an excited friend who can't wait to show you something amazing. Big smile in the voice the whole way. Wide, lively pitch movement: rise with real curiosity on every question, hit 'Wrong!' and 'Right?' with playful delight after a tiny comic pause, and say every number with genuine amazement, as if it surprises you too. Announce each 'Number eight!' like a bright, punchy game-show countdown call. Land each punchline with a grin. Pace is quick and bouncy, about 170 words per minute, with short crisp pauses; never slow, flat, calm, sleepy or documentary-serious. Accent: native General American English narrator, neutral American accent from the first word to the last. VOICE IDENTITY: always the same warm baritone host, same person and same energy level from the first line to the last. Read numbers naturally. Pronounce Mauna Kea as 'MAO-nuh KAY-uh'. Pronounce 'Bhoogol' as 'BHOO-gol'.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Number five. Alaska is huge compared to other countries. Speaking of map lies, Alaska looks enormous on most maps, bigger than Brazil or Australia. Brazil is five times bigger than Alaska, and Australia is four times bigger. The same map distortion that makes Greenland look massive also makes Alaska look like a giant, when it's actually much smaller than you think."
+    ],
+    [
+     "Narrator",
+     "Number four. The Caspian Sea is a sea, and it's salty like an ocean. But it's actually the world's largest lake. It's completely surrounded by land, with no connection to any ocean. We just call it a sea because it's so big and salty, but geographically, it's a lake."
+    ],
+    [
+     "Narrator",
+     "Number three. Rivers always flow north to south. This seems logical because we think of north as up and south as down on maps. But rivers flow downhill, and downhill can be in any direction. The Nile flows north, the Mississippi flows south, the Amazon flows east. Rivers don't care about your map directions. They just follow gravity."
+    ],
+    [
+     "Narrator",
+     "Number two. Holland and the Netherlands are the same thing. Millions of people think Holland is a country. It's not. Holland is just one region inside the Netherlands. Calling the whole country Holland is like calling all of America Texas. Some Dutch people actually get annoyed when you do this. So, now you know better."
+    ],
+    [
+     "Narrator",
+     "Number one. Africa is mostly in the Southern Hemisphere. Look at most maps, and Africa seems like it's mostly below the equator. Wrong again. Almost two-thirds of Africa is actually in the Northern Hemisphere. Countries like Egypt, Libya, Algeria, and most of Nigeria are all north of the equator."
+    ],
+    [
+     "Narrator",
+     "This is Bhoogol. Follow for more Geography Fun Facts."
+    ]
+   ]
+  }
+ ]
+}
