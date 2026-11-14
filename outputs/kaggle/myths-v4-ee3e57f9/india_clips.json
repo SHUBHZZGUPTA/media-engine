@@ -1,0 +1,59 @@
+{
+ "params": {
+  "src_file": "myths_ee3e57f9.tar.gz",
+  "src_sha256": "ee3e57f9452acba3cc864d0f766a5841b424f3ac85db3cb0bc99713ccd9fcc34",
+  "jpeg_q": 95,
+  "render_timeout_s": 8000
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "source": {
+   "sha256": "ee3e57f9452acba3cc864d0f766a5841b424f3ac85db3cb0bc99713ccd9fcc34",
+   "ok": true
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "exit": 0,
+   "secs": 1021.0,
+   "tail": "{\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s5a 1003 ms\nCLIP_DONE s5a 228 43.6s\nWAIT s5b {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s5b 1003 ms\nCLIP_DONE s5b 228 34.1s\nWAIT s5c {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s5c 1004 ms\nCLIP_DONE s5c 229 41.9s\nWAIT s4a {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s4a 1160 ms\nCLIP_DONE s4a 267 48.1s\nWAIT s4b {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s4b 1267 ms\nCLIP_DONE s4b 267 47.1s\nWAIT s3a {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s3a 1013 ms\nCLIP_DONE s3a 219 35.1s\nWAIT s3b {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s3b 1013 ms\nCLIP_DONE s3b 219 35.2s\nWAIT s3c {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s3c 1019 ms\nCLIP_DONE s3c 220 32.5s\nWAIT s2a {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s2a 1168 ms\nCLIP_DONE s2a 199 34.4s\nWAIT s2b {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s2b 1192 ms\nCLIP_DONE s2b 199 37.1s\nWAIT s2c {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s2c 1007 ms\nCLIP_DONE s2c 199 36.5s\nWAIT s1a {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s1a 1491 ms\nCLIP_DONE s1a 192 26.4s\nWAIT s1b {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s1b 1481 ms\nCLIP_DONE s1b 193 29.6s\nWAIT s1c {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s1c 1498 ms\nCLIP_DONE s1c 193 32.7s\nWAIT s9a {\"tl\":false,\"fonts\":\"loaded\",\"ready\":\"complete\"}\nREADY s9a 1029 ms\nCLIP_DONE s9a 145 23.4s\nALL_DONE\n"
+  }
+ },
+ "renderer": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+ "files": [
+  "s0a",
+  "s0b",
+  "s1a",
+  "s1b",
+  "s1c",
+  "s2a",
+  "s2b",
+  "s2c",
+  "s3a",
+  "s3b",
+  "s3c",
+  "s4a",
+  "s4b",
+  "s5a",
+  "s5b",
+  "s5c",
+  "s6a",
+  "s6b",
+  "s7a",
+  "s7b",
+  "s7c",
+  "s8a",
+  "s8b",
+  "s8c",
+  "s8d",
+  "s9a"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
