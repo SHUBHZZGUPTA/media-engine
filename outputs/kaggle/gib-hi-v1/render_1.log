@@ -1,21 +1,26 @@
+READY 1 2026-11-14T21:18:38.419Z
 GLRENDERER 1 ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)
-file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:97
-    #error = new ProtocolError();
-             ^
-
-ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
-    at <instance_members_initializer> (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:97:14)
-    at new Callback (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:101:16)
-    at CallbackRegistry.create (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:20:26)
-    at Connection._rawSend (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/Connection.js:89:26)
-    at CdpCDPSession.send (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/CDPSession.js:65:33)
-    at #evaluate (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:360:50)
-    at ExecutionContext.evaluate (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:275:36)
-    at IsolatedWorld.evaluate (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/IsolatedWorld.js:97:30)
-    at CdpFrame.evaluate (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/api/Frame.js:345:43)
-    at CdpFrame.<anonymous> (file:///tmp/dr/node_modules/puppeteer-core/lib/esm/puppeteer/util/decorators.js:101:27)
-
-Node.js v22.23.4
-[out#0/mp4 @ 0x599505d5b5c0] Output file does not contain any stream
-Error opening output file /tmp/dr/seg_1.mp4.
-Error opening output files: Invalid argument
+FRAME 1 862 seek 104 ms shot 460 ms
+PROGRESS 1 862 1s
+FRAME 1 863 seek 7 ms shot 275 ms
+FRAME 1 864 seek 4 ms shot 272 ms
+FRAME 1 865 seek 4 ms shot 281 ms
+FRAME 1 866 seek 6 ms shot 323 ms
+FRAME 1 867 seek 5 ms shot 243 ms
+FRAME 1 922 seek 3 ms shot 401 ms
+FRAME 1 982 seek 7 ms shot 751 ms
+FRAME 1 1042 seek 24 ms shot 647 ms
+FRAME 1 1102 seek 17 ms shot 493 ms
+FRAME 1 1162 seek 7 ms shot 292 ms
+PROGRESS 1 1162 154s
+FRAME 1 1222 seek 2 ms shot 333 ms
+FRAME 1 1282 seek 5 ms shot 431 ms
+FRAME 1 1342 seek 5 ms shot 434 ms
+FRAME 1 1402 seek 3 ms shot 394 ms
+FRAME 1 1462 seek 12 ms shot 472 ms
+PROGRESS 1 1462 282s
+FRAME 1 1522 seek 9 ms shot 390 ms
+FRAME 1 1582 seek 3 ms shot 409 ms
+FRAME 1 1642 seek 2 ms shot 254 ms
+FRAME 1 1702 seek 2 ms shot 240 ms
+SEG_DONE 1 862 1725 381.4s

@@ -3,18 +3,23 @@
  "kernel": "shubhzzgupta07/me-gib-en-v1",
  "url": "https://www.kaggle.com/code/shubhzzgupta07/me-gib-en-v1",
  "gpu_quota_before": {
-  "used_h": 0.95,
-  "remaining_h": 29.05,
+  "used_h": 1.16,
+  "remaining_h": 28.84,
   "total_h": 30.0
  },
- "pushed_at": "2026-11-14T17:01:42+00:00",
+ "pushed_at": "2026-11-14T19:37:55+00:00",
  "accelerator": "NvidiaTeslaT4",
- "version": 1,
+ "version": 2,
  "status": "COMPLETE",
- "checked_at": "2026-11-14T17:04:43+00:00",
+ "checked_at": "2026-11-14T20:59:54+00:00",
  "files": [
   "gib-en-v1.json",
   "gib-en-v1.mp4.part00",
+  "gib-en-v1.mp4.part01",
+  "gib-en-v1.mp4.part02",
+  "gib-en-v1.mp4.part03",
+  "gib-en-v1.mp4.part04",
+  "gib-en-v1.mp4.part05",
   "me-gib-en-v1.log",
   "render_0.log",
   "render_1.log",
@@ -46,8 +51,8 @@
   "stills/f002477.jpg"
  ],
  "gpu_quota_after": {
-  "used_h": 0.99,
-  "remaining_h": 29.01,
+  "used_h": 1.35,
+  "remaining_h": 28.65,
   "total_h": 30.0
  }
 }

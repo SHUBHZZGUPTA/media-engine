@@ -46,13 +46,13 @@
     0,
     0
    ],
-   "secs": 83.8,
+   "secs": 406.1,
    "frames": 2478,
    "workers": 3
   },
   "concat": {
    "exit": 0,
-   "secs": 0.2,
+   "secs": 0.7,
    "tail": ""
   }
  },
@@ -62,12 +62,17 @@
   "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
  ],
  "final": {
-  "bytes": 217152,
-  "sha256": "f8177f6cdbc3872d8c325ee9ed40a1679e915a78b8585287c0c43afbf51cb68d",
+  "bytes": 216518652,
+  "sha256": "300bb1c0e56f0c5b019d5c913c3ab8c7f86e7a837637159c8de8f0e830f2150e",
   "probe": "1080,1920,2478\n82.600000"
  },
  "parts": [
-  "gib-en-v1.mp4.part00"
+  "gib-en-v1.mp4.part00",
+  "gib-en-v1.mp4.part01",
+  "gib-en-v1.mp4.part02",
+  "gib-en-v1.mp4.part03",
+  "gib-en-v1.mp4.part04",
+  "gib-en-v1.mp4.part05"
  ],
  "verdict": "GPU RENDER COMPLETE"
 }

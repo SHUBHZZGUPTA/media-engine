@@ -42,13 +42,18 @@
   },
   "render": {
    "codes": [
-    1,
-    1,
-    1
+    0,
+    0,
+    0
    ],
-   "secs": 186.1,
+   "secs": 387.5,
    "frames": 2587,
    "workers": 3
+  },
+  "concat": {
+   "exit": 0,
+   "secs": 0.6,
+   "tail": ""
   }
  },
  "renderer": [
@@ -56,5 +61,18 @@
   "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
   "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
  ],
- "verdict": "RENDER FAILED codes [1, 1, 1]"
+ "final": {
+  "bytes": 226331292,
+  "sha256": "fed7a2a6ac43714f65c20d96e80b98e0c3f9b2fa9cddd3167a4e8deb6d7ccd47",
+  "probe": "1080,1920,2587\n86.233333"
+ },
+ "parts": [
+  "gib-hi-v1.mp4.part00",
+  "gib-hi-v1.mp4.part01",
+  "gib-hi-v1.mp4.part02",
+  "gib-hi-v1.mp4.part03",
+  "gib-hi-v1.mp4.part04",
+  "gib-hi-v1.mp4.part05"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
 }
