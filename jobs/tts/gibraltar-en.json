@@ -1,0 +1,107 @@
+{
+ "id": "gibraltar-en",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a popular geography YouTube Shorts channel. The Narrator is a deep, warm, confident storyteller: brisk and curious, with natural emphasis on the numbers and a short comic pause before each punchline. Chars voices two funny cartoon countries, short and punchy. The last line trails off, unfinished, so it can loop straight back into the first line.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "You can see Africa from Europe. It's fourteen kilometres away. So why can't you drive there?"
+    ],
+    [
+     "Narrator",
+     "That's shorter than Manhattan. The Channel Tunnel is fifty kilometres."
+    ],
+    [
+     "Narrator",
+     "So fourteen should be easy... right?"
+    ],
+    [
+     "Narrator",
+     "Here's the catch. The problem isn't the distance. It's the depth."
+    ],
+    [
+     "Narrator",
+     "Up to nine hundred metres. Drop the Burj Khalifa in the middle... and it vanishes."
+    ],
+    [
+     "Narrator",
+     "Add racing currents, colliding tectonic plates, and one of the world's busiest shipping lanes."
+    ],
+    [
+     "Narrator",
+     "So how do you join two continents?"
+    ],
+    [
+     "Narrator",
+     "Rewind to nineteen twenty-eight. A German architect, Hair-mahn Zur-gul, had a plan:"
+    ],
+    [
+     "Narrator",
+     "dam the strait, and lower the whole Mediterranean by up to two hundred metres."
+    ],
+    [
+     "Narrator",
+     "New land about the size of France. Nobody asked the fish."
+    ],
+    [
+     "Narrator",
+     "It never happened. So in nineteen seventy-nine, Spain and Morocco agreed to link up."
+    ],
+    [
+     "Chars",
+     "[Spain, excited, eager] Let's build it!"
+    ],
+    [
+     "Chars",
+     "[Morocco, cheerful, keen] Deal! When do we start?"
+    ],
+    [
+     "Chars",
+     "[Spain, sheepish, stalling] Right after... one more study."
+    ],
+    [
+     "Narrator",
+     "Forty-seven years later..."
+    ],
+    [
+     "Narrator",
+     "one study finally came back different."
+    ],
+    [
+     "Narrator",
+     "It's possible. A rail tunnel, diving four hundred and seventy-five metres below the sea."
+    ],
+    [
+     "Narrator",
+     "Four times deeper than the Channel Tunnel. Spain to Morocco in thirty minutes."
+    ],
+    [
+     "Narrator",
+     "Ready by... twenty thirty-five? Maybe twenty forty. Too late for the twenty thirty World Cup they're co-hosting."
+    ],
+    [
+     "Narrator",
+     "Or just wait. Africa is creeping toward Europe a few millimetres a year."
+    ],
+    [
+     "Narrator",
+     "Give it millions of years, and geologists expect the gap to close... for free."
+    ],
+    [
+     "Narrator",
+     "Until then? Don't worry..."
+    ]
+   ]
+  }
+ ]
+}
