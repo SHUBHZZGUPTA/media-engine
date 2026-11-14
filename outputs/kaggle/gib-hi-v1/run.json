@@ -1,0 +1,30 @@
+{
+ "job": "gib-hi-v1",
+ "kernel": "shubhzzgupta07/me-gib-hi-v1",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-gib-hi-v1",
+ "gpu_quota_before": {
+  "used_h": 0.88,
+  "remaining_h": 29.12,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-14T11:41:24+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-14T15:27:32+00:00",
+ "files": [
+  "gib-hi-v1.json",
+  "me-gib-hi-v1.log",
+  "render_0.log",
+  "render_1.log",
+  "render_2.log",
+  "renderer_0.txt",
+  "renderer_1.txt",
+  "renderer_2.txt"
+ ],
+ "gpu_quota_after": {
+  "used_h": 0.95,
+  "remaining_h": 29.05,
+  "total_h": 30.0
+ }
+}
