@@ -1,0 +1,13 @@
+{
+ "job": "brazil-en-up",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 43.08,
+   "took": 5.4
+  }
+ ]
+}
