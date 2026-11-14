@@ -1,0 +1,21 @@
+{
+ "job": "japan-en-g38",
+ "items": [
+  {
+   "name": "p1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 130.2,
+   "took": 21.8
+  },
+  {
+   "name": "p2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 115.56,
+   "took": 21.0
+  }
+ ]
+}
