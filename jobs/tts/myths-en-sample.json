@@ -1,0 +1,34 @@
+{
+ "id": "myths-en-sample",
+ "key": "longform",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "items": [
+  {
+   "name": "hook_m8",
+   "direction": "Narrate this as a fast, punchy countdown video for BHUGOL, a popular geography fun-facts YouTube channel. The Narrator is a deep, warm, confident storyteller with real energy: brisk and upbeat, playful, clearly enjoying busting each myth. Punch the myth-bust words ('Wrong.', 'Right?') with a short comic pause before them, lift the numbers with real surprise, and land each punchline with a dry smile. Announce each 'Number eight.' like a quick, bright countdown call. Keep the pace quick, about 165 words per minute; never slow, flat or sleepy. Accent: native General American English narrator, neutral American accent from the first word to the last. VOICE IDENTITY: always the same low, warm baritone host from the first line to the last. Read numbers naturally. Pronounce Mauna Kea as 'MAO-nuh KAY-uh'.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Do you think geography is boring? Wait to see these places, because the world is full of places that make no sense. Let's get started with our countdown of the eight biggest geography lies that you believed."
+    ],
+    [
+     "Narrator",
+     "Number eight. Mount Everest is the world's tallest mountain. Let's start with the big one. Everyone knows Mount Everest is the tallest mountain on Earth. Right? Wrong. This is probably the biggest lie in geography."
+    ],
+    [
+     "Narrator",
+     "The real tallest mountain is Mauna Kea in Hawaii. From base to peak, it's 33,500 feet tall. That's 4,500 feet taller than Everest."
+    ],
+    [
+     "Narrator",
+     "The only reason nobody talks about this is because most of Mauna Kea is underwater. So technically, you'd need scuba gear to climb the world's actual tallest mountain."
+    ]
+   ]
+  }
+ ]
+}
