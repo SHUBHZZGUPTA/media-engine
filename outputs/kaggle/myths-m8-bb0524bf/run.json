@@ -1,0 +1,33 @@
+{
+ "job": "myths-m8-bb0524bf",
+ "kernel": "shubhzzgupta07/me-myths-m8-bb0524bf",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-myths-m8-bb0524bf",
+ "gpu_quota_before": {
+  "used_h": 1.08,
+  "remaining_h": 28.92,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-14T19:18:25+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-14T19:23:57+00:00",
+ "files": [
+  "india_clips.json",
+  "m8a.mp4",
+  "m8a_last.jpg",
+  "m8b.mp4",
+  "m8b_last.jpg",
+  "m8c.mp4",
+  "m8c_last.jpg",
+  "m8d.mp4",
+  "m8d_last.jpg",
+  "me-myths-m8-bb0524bf.log",
+  "renderer.txt"
+ ],
+ "gpu_quota_after": {
+  "used_h": 1.16,
+  "remaining_h": 28.84,
+  "total_h": 30.0
+ }
+}
