@@ -1,0 +1,32 @@
+{
+ "id": "myths-m8-bb0524bf",
+ "script": "gpu/india_clips_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 90,
+ "wait_minutes": 90,
+ "params": {
+  "src_file": "myths_m8_bb0524bf.tar.gz",
+  "src_sha256": "bb0524bf8b842886ff29c21a85b289cc1d5993ad563f33601de71a17aae0a83a",
+  "clips": [
+   {
+    "id": "m8a",
+    "dur": 8.1333
+   },
+   {
+    "id": "m8b",
+    "dur": 8.1667
+   },
+   {
+    "id": "m8c",
+    "dur": 8.1333
+   },
+   {
+    "id": "m8d",
+    "dur": 8.1667
+   }
+  ],
+  "jpeg_q": 95,
+  "render_timeout_s": 4500
+ }
+}
