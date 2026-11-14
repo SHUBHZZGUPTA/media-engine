@@ -3,8 +3,8 @@
  "script": "gpu/gib_render.py",
  "accelerator": "NvidiaTeslaT4",
  "internet": true,
- "timeout_minutes": 300,
- "wait_minutes": 300,
+ "timeout_minutes": 60,
+ "wait_minutes": 150,
  "params": {
   "name": "gib-en-v1",
   "src_parts": [
@@ -27,6 +27,6 @@
   "still_every_s": 5,
   "render_timeout_s": 16000
  },
- "requested": "2026-11-14T21:10+05:30",
- "try": 2
+ "requested": "2026-11-14T23:37+05:30",
+ "try": 3
 }
