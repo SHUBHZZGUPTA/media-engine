@@ -1,0 +1,71 @@
+{
+ "params": {
+  "name": "BHUGOL_Sea_to_Thar_EN",
+  "src_parts": [
+   "en_v4_src.part00",
+   "en_v4_src.part01"
+  ],
+  "src_sha256": "41b320952337bcc0f3ce4082f94f80f23810bf2b5b853bcf08f2d1ac1d87e621",
+  "start": 0,
+  "dur": 488.2,
+  "workers": 2,
+  "still_every_s": 30,
+  "jpeg_q": 92,
+  "rate": "1280k",
+  "test": false
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4",
+  "apt": 0,
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "x265": true,
+  "source": {
+   "sha256": "41b320952337bcc0f3ce4082f94f80f23810bf2b5b853bcf08f2d1ac1d87e621",
+   "ok": true,
+   "bytes": 72077525
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "codes": [
+    0,
+    0
+   ],
+   "secs": 1361.7,
+   "frames": 14646,
+   "workers": 2
+  },
+  "concat": {
+   "exit": 0,
+   "secs": 1.3,
+   "tail": ""
+  },
+  "encode": {
+   "exit": 0,
+   "secs": 1667.6,
+   "tail": "permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\nset_mempolicy: Operation not permitted\n"
+  }
+ },
+ "renderer": [
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ ],
+ "final": {
+  "bytes": 90417318,
+  "sha256": "b34b384b549a7d3d9f8294ca80895c1c670901e75705643b7ecd8784c8ebfeb0",
+  "probe": "hevc,1920,1080\naac\n488.200000"
+ },
+ "parts": [
+  "BHUGOL_Sea_to_Thar_EN.mp4.part00",
+  "BHUGOL_Sea_to_Thar_EN.mp4.part01",
+  "BHUGOL_Sea_to_Thar_EN.mp4.part02"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}

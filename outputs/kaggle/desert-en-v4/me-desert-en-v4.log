@@ -1,0 +1,8 @@
+[{"stream_name":"stdout","time":3149.872302508,"data":"GPU RENDER COMPLETE\n"}
+,{"stream_name":"stderr","time":3152.393725744,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3152.393749532,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3152.782987477,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3152.783020003,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3154.937812375,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3156.056222716,"data":"[NbConvertApp] Writing 318775 bytes to __results__.html\n"}
+]

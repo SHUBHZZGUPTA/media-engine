@@ -1,0 +1,48 @@
+{
+ "job": "desert-en-v4",
+ "kernel": "shubhzzgupta07/me-desert-en-v4",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-desert-en-v4",
+ "gpu_quota_before": {
+  "used_h": 0.0,
+  "remaining_h": 30.0,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-14T08:26:27+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-14T11:37:26+00:00",
+ "files": [
+  "BHUGOL_Sea_to_Thar_EN.json",
+  "BHUGOL_Sea_to_Thar_EN.mp4.part00",
+  "BHUGOL_Sea_to_Thar_EN.mp4.part01",
+  "BHUGOL_Sea_to_Thar_EN.mp4.part02",
+  "me-desert-en-v4.log",
+  "render_0.log",
+  "render_1.log",
+  "renderer_0.txt",
+  "renderer_1.txt",
+  "stills/f000000.jpg",
+  "stills/f000900.jpg",
+  "stills/f001800.jpg",
+  "stills/f002700.jpg",
+  "stills/f003600.jpg",
+  "stills/f004500.jpg",
+  "stills/f005400.jpg",
+  "stills/f006300.jpg",
+  "stills/f007200.jpg",
+  "stills/f008100.jpg",
+  "stills/f009000.jpg",
+  "stills/f009900.jpg",
+  "stills/f010800.jpg",
+  "stills/f011700.jpg",
+  "stills/f012600.jpg",
+  "stills/f013500.jpg",
+  "stills/f014400.jpg"
+ ],
+ "gpu_quota_after": {
+  "used_h": 0.88,
+  "remaining_h": 29.12,
+  "total_h": 30.0
+ }
+}
