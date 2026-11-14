@@ -1,0 +1,55 @@
+{
+ "id": "jp-fuji",
+ "delay": 0.3,
+ "bbox": [
+  137.5,
+  140.0,
+  34.6,
+  36.2
+ ],
+ "close": [
+  138.5,
+  139.0,
+  35.15,
+  35.55
+ ],
+ "zoom": 8,
+ "files": [
+  {
+   "name": "globe_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_NextGeneration&BBOX=-90,-180,90,180&WIDTH=8192&HEIGHT=4096"
+  },
+  {
+   "name": "ne_bmng.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_NextGeneration&BBOX=34.6,137.5,36.2,140.0&WIDTH=4096&HEIGHT=2621"
+  },
+  {
+   "name": "pa_weld.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&BBOX=35.15,138.5,35.55,139.0&WIDTH=4096&HEIGHT=3276"
+  },
+  {
+   "name": "dem_8_225_100.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/225/100.png"
+  },
+  {
+   "name": "dem_8_225_101.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/225/101.png"
+  },
+  {
+   "name": "dem_8_226_100.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/226/100.png"
+  },
+  {
+   "name": "dem_8_226_101.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/226/101.png"
+  },
+  {
+   "name": "dem_8_227_100.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/227/100.png"
+  },
+  {
+   "name": "dem_8_227_101.png",
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/8/227/101.png"
+  }
+ ]
+}
