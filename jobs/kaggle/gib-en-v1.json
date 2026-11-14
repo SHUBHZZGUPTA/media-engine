@@ -1,0 +1,31 @@
+{
+ "id": "gib-en-v1",
+ "script": "gpu/gib_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 300,
+ "wait_minutes": 300,
+ "params": {
+  "name": "gib-en-v1",
+  "src_parts": [
+   "gib-en-v1.tgz.part00",
+   "gib-en-v1.tgz.part01"
+  ],
+  "src_sha256": "bd46b6623d630bf8a6552feb042bfe56b60a0639ebf093703e3b4b0caa67c13a",
+  "dur": 82.612,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   6,
+   12,
+   2466,
+   2472,
+   2477
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000
+ },
+ "requested": "2026-11-14T15:20+05:30"
+}
