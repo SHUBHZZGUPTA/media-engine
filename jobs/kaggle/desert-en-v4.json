@@ -1,0 +1,21 @@
+{
+ "id": "desert-en-v4",
+ "script": "gpu/desert_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 240,
+ "wait_minutes": 230,
+ "params": {
+  "name": "BHUGOL_Sea_to_Thar_EN",
+  "src_parts": ["en_v4_src.part00", "en_v4_src.part01"],
+  "src_sha256": "41b320952337bcc0f3ce4082f94f80f23810bf2b5b853bcf08f2d1ac1d87e621",
+  "start": 0,
+  "dur": 488.2,
+  "workers": 2,
+  "still_every_s": 30,
+  "jpeg_q": 92,
+  "rate": "1280k",
+  "test": false
+ },
+ "requested": "2026-11-14T13:55+05:30"
+}
