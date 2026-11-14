@@ -101,6 +101,10 @@ const p = await b.newPage(); await p.setViewport({ width: 1080, height: 1920 });
 p.on("pageerror", e => console.log("PAGEERR", tag, e.message));
 p.on("console", m => { const t = m.text(); if (/error|warn/i.test(m.type())) console.log("CONSOLE", tag, t.slice(0, 300)); });
 await p.goto("http://127.0.0.1:8765/index.html"); await p.waitForFunction(() => !!window.__seek, { timeout: 600000 });
+await p.addStyleTag({ content: "html,body{width:1080px;height:1920px;margin:0;overflow:hidden}" });  // the HyperFrames runtime normally sizes the page; without it #root is 0 px tall
+await p.evaluate(() => { window.__seek(0.5); });  // warm-up render so a later seek to ~0 draws frame 0
+const rootH = await p.evaluate(() => document.getElementById("root").getBoundingClientRect().height);
+if (rootH < 1900) { console.log("ROOT_TOO_SMALL", tag, rootH); await b.close(); process.exit(5); }
 await p.evaluate(() => document.fonts.ready);
 console.log("READY", tag, new Date().toISOString());
 const gl = await p.evaluate(() => { const c = document.createElement("canvas"); const g = c.getContext("webgl2") || c.getContext("webgl");
@@ -110,7 +114,7 @@ if (!/nvidia|tesla|t4/i.test(gl) || /swiftshader|llvmpipe|software/i.test(gl)) {
 const out = `/tmp/dr/seg_${tag}.mp4`; const t0 = Date.now();
 const enc = spawn(ff, ["-v", "error", "-y", "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "13", "-pix_fmt", "yuv420p", out], { stdio: ["pipe", "inherit", "inherit"] });
 for (let f = f0; f < f1; f++) {
-  const ts = Date.now(); await p.evaluate(t => { window.__seek(t); }, f / FPS); const tk = Date.now();
+  const ts = Date.now(); await p.evaluate(t => { window.__seek(Math.max(t, 0.001)); }, f / FPS); const tk = Date.now();
   const buf = await p.screenshot({ type: "jpeg", quality: Number(q) });
   if (f - f0 < 6 || (f - f0) % 60 === 0) console.log("FRAME", tag, f, "seek", tk - ts, "ms shot", Date.now() - tk, "ms");
   if (stills.has(f)) fs.writeFileSync(`${outDir}/stills/f${String(f).padStart(6, "0")}.jpg`, buf);
