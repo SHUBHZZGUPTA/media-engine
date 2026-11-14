@@ -10,6 +10,28 @@
  "pushed_at": "2026-11-14T15:32:07+00:00",
  "accelerator": "NvidiaTeslaT4",
  "version": 1,
- "status": "QUEUED",
- "checked_at": "2026-11-14T16:57:26+00:00"
+ "status": "COMPLETE",
+ "checked_at": "2026-11-14T19:28:11+00:00",
+ "gpu_quota_now": {
+  "used_h": 1.16,
+  "remaining_h": 28.84,
+  "total_h": 30.0
+ },
+ "files": [
+  "BHUGOL_Japan_EN_preview30.json",
+  "BHUGOL_Japan_EN_preview30.mp4.part00",
+  "me-japan-en-preview.log",
+  "render_0.log",
+  "render_1.log",
+  "renderer_0.txt",
+  "renderer_1.txt",
+  "stills/f000000.jpg",
+  "stills/f000300.jpg",
+  "stills/f000600.jpg"
+ ],
+ "gpu_quota_after": {
+  "used_h": 1.16,
+  "remaining_h": 28.84,
+  "total_h": 30.0
+ }
 }
