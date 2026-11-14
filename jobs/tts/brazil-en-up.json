@@ -1,0 +1,58 @@
+{
+ "id": "brazil-en-up",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_en",
+   "direction": "Narrate this as a high-energy, feel-good true-size reveal video for BHUGOL, a popular geography fun-facts YouTube channel. The Narrator is thrilled to be telling you this: enthusiastic, upbeat, bright and very expressive, like an excited friend who can't wait to show you something amazing. Big smile in the voice the whole way. Wide, lively pitch movement: rise with real curiosity on every question, hit 'Don't believe me?' and 'Australia?' with playful delight after a tiny comic pause, and say every number with genuine amazement, as if it surprises you too. Land each punchline with a grin. Chars is a funny cartoon Europe being squashed flat under Brazil: squeaky, strained and out of breath. The last line trails off unfinished on 'because...', voice staying up, so it can loop straight back into the first line. Pace is quick and bouncy, about 170 words per minute, with short crisp pauses; never slow, flat, calm, sleepy or documentary-serious. Accent: native General American English narrator, neutral American accent from the first word to the last. VOICE IDENTITY: always the same warm baritone host, same person and same energy level from the first line to the last. Read numbers naturally. Pronounce 'Bhoogol' as 'BHOO-gol'.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "Your map is lying about Brazil!"
+    ],
+    [
+     "Narrator",
+     "On it, Greenland looks bigger. In real life, Brazil is almost four times Greenland's size."
+    ],
+    [
+     "Narrator",
+     "Don't believe me? Let's drag it around."
+    ],
+    [
+     "Narrator",
+     "Drop Brazil on Europe: it stretches about as far as Lisbon to Moscow."
+    ],
+    [
+     "Chars",
+     "[squashed, squeaky] Too big!"
+    ],
+    [
+     "Narrator",
+     "Put it on the United States: it's bigger than all forty-eight connected states."
+    ],
+    [
+     "Narrator",
+     "Australia? That's an entire continent... and Brazil is still bigger."
+    ],
+    [
+     "Narrator",
+     "Back home, it fills almost half of South America, and touches every country there except two."
+    ],
+    [
+     "Narrator",
+     "And its east coast is closer to Africa than to its own western border."
+    ],
+    [
+     "Narrator",
+     "And if it still looks small to you, that's because..."
+    ]
+   ]
+  }
+ ]
+}
