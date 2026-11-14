@@ -1,0 +1,59 @@
+{
+ "id": "brazil-hi",
+ "models": [
+  "gemini-3.1-flash-tts-preview",
+  "gemini-2.5-flash-preview-tts"
+ ],
+ "items": [
+  {
+   "name": "narration_hi",
+   "direction": "Narrate this in natural spoken Hindi, the way a popular Indian geography explainer YouTube Shorts channel talks. Numbers and English words are read in English. The Narrator is a deep, warm, confident storyteller: brisk, playful and curious, with natural emphasis on the place names and a short pause between sentences. Chars voices a funny cartoon Europe being squashed under Brazil. The last line trails off, unfinished, so it can loop back into the first line.",
+   "speakers": {
+    "Narrator": "Sadaltager",
+    "Chars": "Puck"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "आपका map Brazil के बारे में झूठ बोल रहा है!"
+    ],
+    [
+     "Narrator",
+     "Map पर Greenland बड़ा दिखता है। पर असल में Brazil, Greenland से लगभग चार गुना बड़ा है।"
+    ],
+    [
+     "Narrator",
+     "यकीन नहीं? चलो इसे घुमाकर देखते हैं।"
+    ],
+    [
+     "Narrator",
+     "Brazil को Europe पर रखो: ये Lisbon से Moscow जितना फैल जाता है।"
+    ],
+    [
+     "Chars",
+     "[squashed, squeaky, out of breath] बहुत बड़ा!"
+    ],
+    [
+     "Narrator",
+     "America पर रखो: ये उसके अड़तालीस जुड़े हुए states से भी बड़ा है।"
+    ],
+    [
+     "Narrator",
+     "Australia? वो तो पूरा continent है… और Brazil फिर भी बड़ा है।"
+    ],
+    [
+     "Narrator",
+     "अपने घर में, ये लगभग आधा South America घेरता है, और दो को छोड़कर वहाँ के हर देश को छूता है।"
+    ],
+    [
+     "Narrator",
+     "और इसका east coast, अपने ही western border से ज़्यादा Africa के पास है।"
+    ],
+    [
+     "Narrator",
+     "और अगर ये अब भी छोटा लगे, तो वो इसलिए क्योंकि…"
+    ]
+   ]
+  }
+ ]
+}
