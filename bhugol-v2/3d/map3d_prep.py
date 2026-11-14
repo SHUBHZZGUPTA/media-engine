@@ -84,7 +84,7 @@ def build(a):
     for c in ring[1:]:
         if math.hypot(c[0] - out[-1][0], c[1] - out[-1][1]) > .04: out.append(c[:2])
     pin = [float(x) for x in a.pin.split(',')]
-    json.dump({'bbox': [L0, L1, B0, B1], 'outline': out, 'pa': out, 'pin': pin, 'centralia': pin, 'pa_close_bbox': CL}, open(A + 'map3d.json', 'w'))
+    json.dump({'bbox': [L0, L1, B0, B1], 'outline': out, 'pa': out, 'pin': pin, 'centralia': pin, 'pa_close_bbox': CL, 'top': round(top, 1)}, open(A + 'map3d.json', 'w'))
     print('map assets ->', A, '| outline points', len(out), '| elevation cap', round(top))
 
 
