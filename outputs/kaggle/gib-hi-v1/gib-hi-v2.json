@@ -1,0 +1,80 @@
+{
+ "params": {
+  "name": "gib-hi-v2",
+  "src_parts": [
+   "gib-hi-v2.tgz.part00",
+   "gib-hi-v2.tgz.part01"
+  ],
+  "src_sha256": "5d67a95f6edf29c0479b3f874e7ee781ab3e5f54ced98b4185c88aba2dea16b9",
+  "dur": 87.989,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   6,
+   12,
+   2628,
+   2634,
+   2639
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "gib"
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4",
+  "apt": 0,
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "x265": true,
+  "source": {
+   "sha256": "5d67a95f6edf29c0479b3f874e7ee781ab3e5f54ced98b4185c88aba2dea16b9",
+   "ok": true,
+   "bytes": 75086681
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "codes": [
+    0,
+    0,
+    0
+   ],
+   "secs": 384.4,
+   "frames": 2640,
+   "workers": 3
+  },
+  "concat": {
+   "exit": 0,
+   "secs": 0.7,
+   "tail": ""
+  }
+ },
+ "renderer": [
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ ],
+ "final": {
+  "bytes": 238653453,
+  "sha256": "449c1fd9693ac0210befd15f74d6b382faeb2a90d791eaf25cc5d369c8d09371",
+  "probe": "1080,1920,2640\n88.000000"
+ },
+ "parts": [
+  "gib-hi-v2.mp4.part00",
+  "gib-hi-v2.mp4.part01",
+  "gib-hi-v2.mp4.part02",
+  "gib-hi-v2.mp4.part03",
+  "gib-hi-v2.mp4.part04",
+  "gib-hi-v2.mp4.part05",
+  "gib-hi-v2.mp4.part06"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
