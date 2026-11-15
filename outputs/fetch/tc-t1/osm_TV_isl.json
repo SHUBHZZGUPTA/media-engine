@@ -1,0 +1,1190 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T23:44:48Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2141262680,
+  "lat": -9.4269847,
+  "lon": 179.8527938,
+  "tags": {
+    "name": "Aula",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262682,
+  "lat": -9.4297079,
+  "lon": 179.8628277,
+  "tags": {
+    "name": "Fenualago",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262683,
+  "lat": -9.4324730,
+  "lon": 179.8573411,
+  "tags": {
+    "name": "Fetuatasi",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262684,
+  "lat": -9.3827118,
+  "lon": 179.8542509,
+  "tags": {
+    "name": "Kalilaia",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262685,
+  "lat": -9.3490044,
+  "lon": 179.8246419,
+  "tags": {
+    "name": "Kavutu",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262688,
+  "lat": -9.4342860,
+  "lon": 179.8596358,
+  "tags": {
+    "name": "Motualama",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262689,
+  "lat": -9.3483696,
+  "lon": 179.8226623,
+  "tags": {
+    "name": "Motukatuli Foliki",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262690,
+  "lat": -9.3478195,
+  "lon": 179.8246990,
+  "tags": {
+    "name": "Motukatuli",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262718,
+  "lat": -9.3804729,
+  "lon": 179.8526897,
+  "tags": {
+    "name": "Tapuaelani",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262719,
+  "lat": -9.4229769,
+  "lon": 179.8423947,
+  "tags": {
+    "name": "Teafatule",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262720,
+  "lat": -9.4320688,
+  "lon": 179.8536420,
+  "tags": {
+    "name": "Teafuafatu",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262721,
+  "lat": -9.4253449,
+  "lon": 179.8483584,
+  "tags": {
+    "name": "Temotutafa",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262722,
+  "lat": -9.4230746,
+  "lon": 179.8470964,
+  "tags": {
+    "name": "Temututoto",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "node",
+  "id": 2141262723,
+  "lat": -9.3492242,
+  "lon": 179.8341690,
+  "tags": {
+    "name": "Tumiloto",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "way",
+  "id": 14483884,
+  "center": {
+    "lat": -8.5109552,
+    "lon": 179.0374541
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Fuafatu",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q3051903"
+  }
+},
+{
+  "type": "way",
+  "id": 14483885,
+  "center": {
+    "lat": -8.5588966,
+    "lon": 179.0507341
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Vasafua",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q5260330"
+  }
+},
+{
+  "type": "way",
+  "id": 14483887,
+  "center": {
+    "lat": -8.5975601,
+    "lon": 179.0705097
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Tefala",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q775910"
+  }
+},
+{
+  "type": "way",
+  "id": 14483888,
+  "center": {
+    "lat": -8.6252683,
+    "lon": 179.0788384
+  },
+  "tags": {
+    "name": "Falaoigo",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q5431664"
+  }
+},
+{
+  "type": "way",
+  "id": 14483889,
+  "center": {
+    "lat": -8.6274173,
+    "lon": 179.0780412
+  },
+  "tags": {
+    "name": "Tutanga",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q7856906"
+  }
+},
+{
+  "type": "way",
+  "id": 14483890,
+  "center": {
+    "lat": -8.6369545,
+    "lon": 179.0746365
+  },
+  "tags": {
+    "name": "Avalau",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q4827522"
+  }
+},
+{
+  "type": "way",
+  "id": 14483892,
+  "center": {
+    "lat": -8.6415034,
+    "lon": 179.0851957
+  },
+  "tags": {
+    "name": "Motuloa",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q6918766"
+  }
+},
+{
+  "type": "way",
+  "id": 14483893,
+  "center": {
+    "lat": -8.6354838,
+    "lon": 179.0950998
+  },
+  "tags": {
+    "name": "Telele",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q3296773"
+  }
+},
+{
+  "type": "way",
+  "id": 14483954,
+  "center": {
+    "lat": -8.5800275,
+    "lon": 179.1163575
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Falefatu",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q5431840"
+  }
+},
+{
+  "type": "way",
+  "id": 50900723,
+  "center": {
+    "lat": -5.6477193,
+    "lon": 176.0687238
+  },
+  "tags": {
+    "name": "Lakina",
+    "natural": "coastline",
+    "place": "island"
+  }
+},
+{
+  "type": "way",
+  "id": 50901011,
+  "center": {
+    "lat": -6.2870747,
+    "lon": 176.3199203
+  },
+  "tags": {
+    "name": "Nanumanga",
+    "name:en": "Nanumanga",
+    "name:zh": "纳努曼加岛",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q367027",
+    "wikipedia": "en:Nanumanga"
+  }
+},
+{
+  "type": "way",
+  "id": 50943264,
+  "center": {
+    "lat": -8.6428797,
+    "lon": 179.0802529
+  },
+  "tags": {
+    "name": "Motugie",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat",
+    "wikidata": "Q6918742"
+  }
+},
+{
+  "type": "way",
+  "id": 50955403,
+  "center": {
+    "lat": -6.1085933,
+    "lon": 177.3422031
+  },
+  "tags": {
+    "name": "Niutao",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q475219",
+    "wikipedia": "en:Niutao"
+  }
+},
+{
+  "type": "way",
+  "id": 51049449,
+  "center": {
+    "lat": -7.9948073,
+    "lon": 178.4158548
+  },
+  "tags": {
+    "landuse": "forest",
+    "name": "Kongo Loto Lafanga",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q6429211",
+    "wikipedia": "en:Kongo Loto Lafanga"
+  }
+},
+{
+  "type": "way",
+  "id": 51049450,
+  "center": {
+    "lat": -8.0449952,
+    "lon": 178.3853495
+  },
+  "tags": {
+    "name": "Motulalo",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q3394461"
+  }
+},
+{
+  "type": "way",
+  "id": 51631501,
+  "center": {
+    "lat": -7.9313024,
+    "lon": 178.3807322
+  },
+  "tags": {
+    "name": "Funaota",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q5508737"
+  }
+},
+{
+  "type": "way",
+  "id": 60419889,
+  "center": {
+    "lat": -8.0395269,
+    "lon": 178.3288425
+  },
+  "tags": {
+    "landuse": "forest",
+    "name": "Motumua",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q10332738"
+  }
+},
+{
+  "type": "way",
+  "id": 60419890,
+  "center": {
+    "lat": -8.0345357,
+    "lon": 178.3199229
+  },
+  "tags": {
+    "landuse": "forest",
+    "name": "Temotuloto",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q7698221"
+  }
+},
+{
+  "type": "way",
+  "id": 60419891,
+  "center": {
+    "lat": -8.0284283,
+    "lon": 178.3144947
+  },
+  "tags": {
+    "name": "Savave",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q3293321"
+  }
+},
+{
+  "type": "way",
+  "id": 60419892,
+  "center": {
+    "lat": -7.9897165,
+    "lon": 178.3478642
+  },
+  "tags": {
+    "name": "Sakalua",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q7402798"
+  }
+},
+{
+  "type": "way",
+  "id": 60419893,
+  "center": {
+    "lat": -8.0303203,
+    "lon": 178.3095274
+  },
+  "tags": {
+    "landuse": "forest",
+    "name": "Fale",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q3293321"
+  }
+},
+{
+  "type": "way",
+  "id": 60419894,
+  "center": {
+    "lat": -7.9882864,
+    "lon": 178.3395763
+  },
+  "tags": {
+    "name": "Teafuone",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q7691354"
+  }
+},
+{
+  "type": "way",
+  "id": 91078886,
+  "center": {
+    "lat": -7.9567516,
+    "lon": 178.3481503
+  },
+  "tags": {
+    "name": "Teafatule",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q7691348"
+  }
+},
+{
+  "type": "way",
+  "id": 91078888,
+  "center": {
+    "lat": -7.9581248,
+    "lon": 178.3477514
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 91079817,
+  "center": {
+    "lat": -7.9516371,
+    "lon": 178.4196262
+  },
+  "tags": {
+    "name": "Teafuanonu",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q7691352"
+  }
+},
+{
+  "type": "way",
+  "id": 91079825,
+  "center": {
+    "lat": -7.9500162,
+    "lon": 178.4163935
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet",
+    "source": "Landsat ajusté bing"
+  }
+},
+{
+  "type": "way",
+  "id": 91079827,
+  "center": {
+    "lat": -7.9604997,
+    "lon": 178.4294077
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 91079840,
+  "center": {
+    "lat": -7.9589789,
+    "lon": 178.4281222
+  },
+  "tags": {
+    "name": "Niuatui",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q7041661"
+  }
+},
+{
+  "type": "way",
+  "id": 91079845,
+  "center": {
+    "lat": -7.9553887,
+    "lon": 178.4245381
+  },
+  "tags": {
+    "name": "Teafuaniua",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "Landsat ajusté bing",
+    "wikidata": "Q7691351"
+  }
+},
+{
+  "type": "way",
+  "id": 91079847,
+  "center": {
+    "lat": -7.9342497,
+    "lon": 178.3854325
+  },
+  "tags": {
+    "name": "Matanukulaelae",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "Landsat ajusté bing",
+    "wikidata": "Q3393538"
+  }
+},
+{
+  "type": "way",
+  "id": 91079851,
+  "center": {
+    "lat": -7.9483694,
+    "lon": 178.4145524
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 91079854,
+  "center": {
+    "lat": -7.9531225,
+    "lon": 178.4220982
+  },
+  "tags": {
+    "name": "Motulua",
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 136841669,
+  "center": {
+    "lat": -8.5649163,
+    "lon": 179.1330507
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Funamanu",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "Bing",
+    "wikidata": "Q5508730"
+  }
+},
+{
+  "type": "way",
+  "id": 136848780,
+  "center": {
+    "lat": -8.4907185,
+    "lon": 179.0609049
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Fualopa",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "Bing",
+    "wikidata": "Q5506898"
+  }
+},
+{
+  "type": "way",
+  "id": 136848791,
+  "center": {
+    "lat": -8.4629298,
+    "lon": 179.0799520
+  },
+  "tags": {
+    "name": "Tepuka",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "Bing",
+    "wikidata": "Q1047935"
+  }
+},
+{
+  "type": "way",
+  "id": 136848800,
+  "center": {
+    "lat": -8.4343584,
+    "lon": 179.1664394
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Mulitefala",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "Bing",
+    "wikidata": "Q10333104"
+  }
+},
+{
+  "type": "way",
+  "id": 137027092,
+  "center": {
+    "lat": -7.2291405,
+    "lon": 177.1627543
+  },
+  "tags": {
+    "name": "Unimai",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q3297058"
+  }
+},
+{
+  "type": "way",
+  "id": 137027093,
+  "center": {
+    "lat": -7.2135617,
+    "lon": 177.1617625
+  },
+  "tags": {
+    "name": "Talalolae",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q7678850"
+  }
+},
+{
+  "type": "way",
+  "id": 137027116,
+  "center": {
+    "lat": -7.2189911,
+    "lon": 177.1619295
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 137027119,
+  "center": {
+    "lat": -7.2181559,
+    "lon": 177.1616820
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 137027122,
+  "center": {
+    "lat": -7.2244165,
+    "lon": 177.1626543
+  },
+  "tags": {
+    "name": "Piliaieve",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q3393323"
+  }
+},
+{
+  "type": "way",
+  "id": 137027124,
+  "center": {
+    "lat": -7.2210071,
+    "lon": 177.1627812
+  },
+  "tags": {
+    "name": "Pakantou",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q10343703"
+  }
+},
+{
+  "type": "way",
+  "id": 162929333,
+  "center": {
+    "lat": -10.7890547,
+    "lon": 179.4730789
+  },
+  "tags": {
+    "name": "Niulakita",
+    "name:en": "Niulakita",
+    "name:zh": "纽拉基塔岛",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q632489",
+    "wikipedia": "en:Niulakita"
+  }
+},
+{
+  "type": "way",
+  "id": 162929345,
+  "center": {
+    "lat": -9.4074544,
+    "lon": 179.8633119
+  },
+  "tags": {
+    "name": "Niuoko",
+    "natural": "coastline",
+    "place": "island",
+    "source:img": "https://commons.wikimedia.org/wiki/File:Nukulaelae.PNG"
+  }
+},
+{
+  "type": "way",
+  "id": 162929355,
+  "center": {
+    "lat": -9.3736525,
+    "lon": 179.8094831
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Fagaua",
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 162929356,
+  "center": {
+    "lat": -9.3513900,
+    "lon": 179.8188535
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Asia",
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 162929357,
+  "center": {
+    "lat": -9.3538983,
+    "lon": 179.8142671
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Moliteatua",
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 264339309,
+  "center": {
+    "lat": -8.4355284,
+    "lon": 179.0944489
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Te Afualiku",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q3296767"
+  }
+},
+{
+  "type": "way",
+  "id": 264341394,
+  "center": {
+    "lat": -7.2402078,
+    "lon": 177.1641948
+  },
+  "tags": {
+    "name": "Motupuakaka",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q3394335"
+  }
+},
+{
+  "type": "way",
+  "id": 264341395,
+  "center": {
+    "lat": -7.2461150,
+    "lon": 177.1551680
+  },
+  "tags": {
+    "name": "Fenua Tapu",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q2840927"
+  }
+},
+{
+  "type": "way",
+  "id": 267333832,
+  "center": {
+    "lat": -8.0117703,
+    "lon": 178.4015620
+  },
+  "tags": {
+    "landuse": "forest",
+    "name": "Motuloa",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q6918761"
+  }
+},
+{
+  "type": "way",
+  "id": 267333836,
+  "center": {
+    "lat": -7.9706154,
+    "lon": 178.4329201
+  },
+  "tags": {
+    "name": "Lafanga",
+    "natural": "coastline",
+    "place": "island",
+    "wikidata": "Q3394447",
+    "wikipedia": "en:Lafanga"
+  }
+},
+{
+  "type": "way",
+  "id": 267334637,
+  "center": {
+    "lat": -5.6606861,
+    "lon": 176.1142873
+  },
+  "tags": {
+    "name": "Temotufoliki",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q1728303",
+    "wikipedia": "en:Nanumea"
+  }
+},
+{
+  "type": "way",
+  "id": 283860325,
+  "center": {
+    "lat": -7.2362861,
+    "lon": 177.1635402
+  },
+  "tags": {
+    "name": "Pongalei",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q7227793"
+  }
+},
+{
+  "type": "way",
+  "id": 295619624,
+  "center": {
+    "lat": -8.4275525,
+    "lon": 179.1166836
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Paava",
+    "natural": "coastline",
+    "place": "islet",
+    "source": "landsat"
+  }
+},
+{
+  "type": "way",
+  "id": 355308612,
+  "center": {
+    "lat": -8.0323056,
+    "lon": 178.3135222
+  },
+  "tags": {
+    "landuse": "forest",
+    "natural": "coastline",
+    "place": "island"
+  }
+},
+{
+  "type": "way",
+  "id": 355308613,
+  "center": {
+    "lat": -8.0339074,
+    "lon": 178.3178871
+  },
+  "tags": {
+    "landuse": "forest",
+    "natural": "coastline",
+    "place": "island"
+  }
+},
+{
+  "type": "way",
+  "id": 495215219,
+  "center": {
+    "lat": -7.2184447,
+    "lon": 177.1632680
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 495215220,
+  "center": {
+    "lat": -7.2223949,
+    "lon": 177.1620686
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 495215221,
+  "center": {
+    "lat": -7.2195279,
+    "lon": 177.1621777
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 496376693,
+  "center": {
+    "lat": -7.1888812,
+    "lon": 177.1494624
+  },
+  "tags": {
+    "natural": "coastline",
+    "place": "islet"
+  }
+},
+{
+  "type": "relation",
+  "id": 1843904,
+  "center": {
+    "lat": -8.5474661,
+    "lon": 179.1615218
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Fatato",
+    "place": "islet",
+    "type": "multipolygon",
+    "wikidata": "Q5437338"
+  }
+},
+{
+  "type": "relation",
+  "id": 1843984,
+  "center": {
+    "lat": -8.4940623,
+    "lon": 179.1874148
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Fongafale",
+    "name:el": "Φονγκαφάλε",
+    "name:ru": "Фонгафале",
+    "name:zh": "风加法列岛",
+    "place": "island",
+    "source": "landsat;oam",
+    "type": "multipolygon",
+    "wikidata": "Q731947",
+    "wikipedia": "en:Fongafale"
+  }
+},
+{
+  "type": "relation",
+  "id": 1843985,
+  "center": {
+    "lat": -8.5577215,
+    "lon": 179.1450297
+  },
+  "tags": {
+    "name": "Funangongo",
+    "place": "island",
+    "source": "landsat",
+    "type": "multipolygon",
+    "wikidata": "Q7132334"
+  }
+},
+{
+  "type": "relation",
+  "id": 1844092,
+  "center": {
+    "lat": -8.4396478,
+    "lon": 179.1710351
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Amatuku",
+    "place": "island",
+    "source": "landsat",
+    "type": "multipolygon",
+    "wikidata": "Q3494219"
+  }
+},
+{
+  "type": "relation",
+  "id": 3766618,
+  "center": {
+    "lat": -7.2044166,
+    "lon": 177.1550846
+  },
+  "tags": {
+    "name": "Tokinivae",
+    "place": "island",
+    "type": "multipolygon",
+    "wikidata": "Q7813595"
+  }
+},
+{
+  "type": "relation",
+  "id": 4675883,
+  "center": {
+    "lat": -5.6817166,
+    "lon": 176.1236195
+  },
+  "tags": {
+    "name": "Nanumea",
+    "place": "island",
+    "type": "multipolygon",
+    "wikidata": "Q174618",
+    "wikipedia": "en:Nanumea"
+  }
+},
+{
+  "type": "relation",
+  "id": 11619394,
+  "center": {
+    "lat": -8.4276435,
+    "lon": 179.1206679
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Fualefeke",
+    "natural": "beach",
+    "place": "islet",
+    "type": "multipolygon",
+    "wikidata": "Q3296759"
+  }
+},
+{
+  "type": "relation",
+  "id": 11619678,
+  "center": {
+    "lat": -8.5747974,
+    "lon": 179.0651684
+  },
+  "tags": {
+    "name": "Fuagea",
+    "place": "islet",
+    "type": "multipolygon",
+    "wikidata": "Q3296774"
+  }
+},
+{
+  "type": "relation",
+  "id": 19924746,
+  "center": {
+    "lat": -9.3517023,
+    "lon": 179.8168855
+  },
+  "tags": {
+    "island": "yes",
+    "name": "Motala",
+    "place": "islet",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19975232,
+  "center": {
+    "lat": -8.6147127,
+    "lon": 179.0995174
+  },
+  "tags": {
+    "name": "Funafala",
+    "natural": "coastline",
+    "place": "islet",
+    "type": "multipolygon",
+    "wikidata": "Q2423894"
+  }
+}
+
+  ]
+}

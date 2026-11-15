@@ -1,0 +1,247 @@
+[
+ {
+  "name": "t_eox_SM.jpg",
+  "ok": true,
+  "bytes": 65848
+ },
+ {
+  "name": "t_eox_TVR.jpg",
+  "ok": true,
+  "bytes": 5756
+ },
+ {
+  "name": "t_eox_TV.jpg",
+  "ok": true,
+  "bytes": 4025
+ },
+ {
+  "name": "t_eox_NR.jpg",
+  "ok": true,
+  "bytes": 45066
+ },
+ {
+  "name": "t_eox_MC.jpg",
+  "ok": true,
+  "bytes": 47445
+ },
+ {
+  "name": "t_eox_VA.jpg",
+  "ok": true,
+  "bytes": 95292
+ },
+ {
+  "name": "t_naip_cp_def.jpg",
+  "ok": true,
+  "bytes": 83860
+ },
+ {
+  "name": "t_naip_cp_06.jpg",
+  "ok": true,
+  "bytes": 52896
+ },
+ {
+  "name": "t_naip_ny_26.jpg",
+  "ok": true,
+  "bytes": 56332
+ },
+ {
+  "name": "t_naip_ny_26bil.jpg",
+  "ok": true,
+  "bytes": 49152
+ },
+ {
+  "name": "naip_info.json",
+  "ok": true,
+  "bytes": 7184
+ },
+ {
+  "name": "t_ign_MC.jpg",
+  "ok": true,
+  "bytes": 74616
+ },
+ {
+  "name": "t_ign_MC2.jpg",
+  "ok": true,
+  "bytes": 79494
+ },
+ {
+  "name": "pcn12_caps.xml",
+  "ok": true,
+  "bytes": 23803
+ },
+ {
+  "name": "t_pcn12_VA.jpg",
+  "ok": true,
+  "bytes": 93983
+ },
+ {
+  "name": "t_pcn12_SM.jpg",
+  "ok": true,
+  "bytes": 4723
+ },
+ {
+  "name": "pcn12s_caps.xml",
+  "ok": true,
+  "bytes": 23803
+ },
+ {
+  "name": "t_pcn12s_VA.jpg",
+  "ok": true,
+  "bytes": 93983
+ },
+ {
+  "name": "t_pcn12s_SM.jpg",
+  "ok": true,
+  "bytes": 4723
+ },
+ {
+  "name": "pcn06_caps.xml",
+  "ok": true,
+  "bytes": 23669
+ },
+ {
+  "name": "t_pcn06_VA.jpg",
+  "ok": true,
+  "bytes": 62379
+ },
+ {
+  "name": "t_pcn06_SM.jpg",
+  "ok": true,
+  "bytes": 82382
+ },
+ {
+  "name": "er20_caps.xml",
+  "ok": true,
+  "bytes": 6455
+ },
+ {
+  "name": "t_er20_VA.jpg",
+  "ok": true,
+  "bytes": 4779
+ },
+ {
+  "name": "t_er20_SM.jpg",
+  "ok": true,
+  "bytes": 77634
+ },
+ {
+  "name": "lazio_geonode_caps.xml",
+  "ok": true,
+  "bytes": 1238723
+ },
+ {
+  "name": "er_wms_list.html",
+  "ok": false,
+  "error": "<HTTPError 401: 'UNAUTHORIZED'>"
+ },
+ {
+  "name": "marche_caps.xml",
+  "ok": false,
+  "error": "URLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'wms.cartografia.marche.it'. (_ssl.c:1011)\"))"
+ },
+ {
+  "name": "oam_TV.json",
+  "ok": true,
+  "bytes": 147
+ },
+ {
+  "name": "oam_NR.json",
+  "ok": true,
+  "bytes": 3589
+ },
+ {
+  "name": "oam_VA.json",
+  "ok": true,
+  "bytes": 147
+ },
+ {
+  "name": "oam_MC.json",
+  "ok": true,
+  "bytes": 147
+ },
+ {
+  "name": "oam_SM.json",
+  "ok": true,
+  "bytes": 147
+ },
+ {
+  "name": "osm_adm2_SM.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_adm2_MC.json",
+  "ok": true,
+  "bytes": 274518
+ },
+ {
+  "name": "osm_adm2_VA.json",
+  "ok": true,
+  "bytes": 137991
+ },
+ {
+  "name": "osm_adm2_NR.json",
+  "ok": true,
+  "bytes": 37096
+ },
+ {
+  "name": "osm_adm2_TV.json",
+  "ok": true,
+  "bytes": 143288
+ },
+ {
+  "name": "osm_coast_MC.json",
+  "ok": true,
+  "bytes": 93085
+ },
+ {
+  "name": "osm_coast_NR.json",
+  "ok": true,
+  "bytes": 33755
+ },
+ {
+  "name": "osm_coast_TV.json",
+  "ok": true,
+  "bytes": 582538
+ },
+ {
+  "name": "osm_TV_isl.json",
+  "ok": true,
+  "bytes": 20126
+ },
+ {
+  "name": "osm_TV_rwy.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_NR_roads.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_NR_poi.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_MC_parts.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_VA_poi.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_NY.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_NY_coast.json",
+  "ok": true,
+  "bytes": 531195
+ }
+]

@@ -1,0 +1,314 @@
+<WMS_Capabilities xmlns="http://www.opengis.net/wms" xmlns:sld="http://www.opengis.net/sld" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.3.0" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd  http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd  http://mapserver.gis.umn.edu/mapserver http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;service=WMS&amp;version=1.3.0&amp;request=GetSchemaExtension http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd">
+
+
+
+<Service>
+  <Name>WMS</Name>
+  <Title>Ortofoto a colori anno 2012</Title>
+  <Abstract>Ortofoto digitali, con pixel di 50 centimetri, acquisite dall'Agenzia per l'Erogazioni in Agricoltura mediante l'impiego di camera digitale. Risoluzione 1:10.000. Il servizio &#232; visualizzabile solo a scale superiori a 1:100.000.</Abstract>
+  <KeywordList><Keyword vocabulary="ISO">infoMapAccessService</Keyword><Keyword vocabulary="GEMET">Orto immagini</Keyword><Keyword vocabulary="GEMET">Informazione</Keyword><Keyword vocabulary="GEMET">Fotografia aerea (immagine)</Keyword><Keyword>Ortofoto</Keyword></KeywordList><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" />
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson>Geoportale Nazionale - Ministero dell'Ambiente e della Sicurezza Energetica</ContactPerson>
+      <ContactOrganization>Geoportale Nazionale - Ministero dell'Ambiente e della Sicurezza Energetica</ContactOrganization>
+    </ContactPersonPrimary>
+      <ContactPosition>distributor</ContactPosition>
+    <ContactAddress>
+        <AddressType>Postale</AddressType>
+        <Address>Via Cristoforo Colombo, 44</Address>
+        <City>Roma</City>
+        <StateOrProvince>RM</StateOrProvince>
+        <PostCode>00147</PostCode>
+        <Country>Italia</Country>
+    </ContactAddress>
+      <ContactVoiceTelephone />
+  <ContactElectronicMailAddress>gn@mase.gov.it</ContactElectronicMailAddress>
+  </ContactInformation>
+  <Fees>Nessuna condizione applicata</Fees>
+  <AccessConstraints>Nessuno</AccessConstraints>
+  <MaxWidth>2048</MaxWidth>
+  <MaxHeight>2048</MaxHeight>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Get>
+          <Post><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/gif</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>application/x-pdf</Format>
+      <Format>image/svg+xml</Format>
+      <Format>image/tiff</Format>
+      <Format>application/vnd.google-earth.kml+xml</Format>
+      <Format>application/vnd.google-earth.kmz</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Get>
+          <Post><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/plain</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Get>
+          <Post><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <sld:DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Get>
+          <Post><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Post>
+        </HTTP>
+      </DCPType>
+    </sld:DescribeLayer>
+    <sld:GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/gif</Format>
+      <Format>image/png; mode=8bit</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Get>
+          <Post><OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;" /></Post>
+        </HTTP>
+      </DCPType>
+    </sld:GetLegendGraphic>
+    </Request>
+  <Exception>
+    <Format>XML</Format>
+    <Format>INIMAGE</Format>
+    <Format>BLANK</Format>
+  </Exception>
+  <inspire_vs:ExtendedCapabilities><inspire_common:ResourceLocator xsi:type="inspire_common:resourceLocatorType"><inspire_common:URL>http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map</inspire_common:URL><inspire_common:MediaType>application/vnd.ogc.wms_xml</inspire_common:MediaType></inspire_common:ResourceLocator><inspire_common:ResourceType>service</inspire_common:ResourceType><inspire_common:TemporalReference><inspire_common:DateOfCreation>2014-12-26</inspire_common:DateOfCreation></inspire_common:TemporalReference><inspire_common:TemporalReference><inspire_common:DateOfPublication>2014-12-26</inspire_common:DateOfPublication></inspire_common:TemporalReference><inspire_common:TemporalReference><inspire_common:DateOfLastRevision>2014-12-26</inspire_common:DateOfLastRevision></inspire_common:TemporalReference><inspire_common:Conformity><inspire_common:Specification><inspire_common:Title>Regolamento (UE) n.1253/2013 della Commissione del 21 ottobre 2013 che modifica il regolamento (UE) n. 1089/2010 recante modalit&#224; di applicazione della direttiva 2007/2/CE del Parlamento europeo e del Consiglio per quanto riguarda linteroperabilit&#224; dei set di dati territoriali e dei servizi ad essi relativi</inspire_common:Title><inspire_common:DateOfPublication>2013-10-21</inspire_common:DateOfPublication><inspire_common:URI>OJ:L:2013:331:0001:0267:IT:PDF</inspire_common:URI><inspire_common:ResourceLocator><inspire_common:URL>http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:331:0001:0267:IT:PDF</inspire_common:URL><inspire_common:MediaType>application/pdf</inspire_common:MediaType></inspire_common:ResourceLocator></inspire_common:Specification><inspire_common:Degree>notConformant</inspire_common:Degree></inspire_common:Conformity><inspire_common:MetadataPointOfContact><inspire_common:OrganisationName>Ministero dell'Ambiente e della Sicurezza Energetica</inspire_common:OrganisationName><inspire_common:EmailAddress>gn@mase.gov.it</inspire_common:EmailAddress></inspire_common:MetadataPointOfContact><inspire_common:MetadataDate>2014-12-26</inspire_common:MetadataDate><inspire_common:SpatialDataServiceType>view</inspire_common:SpatialDataServiceType><inspire_common:MandatoryKeyword><inspire_common:KeywordValue>infoMapAccessService</inspire_common:KeywordValue></inspire_common:MandatoryKeyword><inspire_common:Keyword xsi:type="inspire_common:inspireTheme_ita"><inspire_common:OriginatingControlledVocabulary><inspire_common:Title>GEMET - INSPIRE themes</inspire_common:Title><inspire_common:DateOfPublication>2008-06-01</inspire_common:DateOfPublication></inspire_common:OriginatingControlledVocabulary><inspire_common:KeywordValue>Orto immagini</inspire_common:KeywordValue></inspire_common:Keyword><inspire_common:Keyword><inspire_common:KeywordValue>Mappe di base</inspire_common:KeywordValue></inspire_common:Keyword><inspire_common:Keyword><inspire_common:OriginatingControlledVocabulary><inspire_common:Title>GEMET - Themes, version 2.4</inspire_common:Title><inspire_common:DateOfPublication>2010-01-13</inspire_common:DateOfPublication></inspire_common:OriginatingControlledVocabulary><inspire_common:KeywordValue>Informazione</inspire_common:KeywordValue></inspire_common:Keyword><inspire_common:Keyword><inspire_common:OriginatingControlledVocabulary><inspire_common:Title>GEMET - Concepts, version 2.4</inspire_common:Title><inspire_common:DateOfPublication>2010-01-13</inspire_common:DateOfPublication></inspire_common:OriginatingControlledVocabulary><inspire_common:KeywordValue>Fotografia aerea (immagine)</inspire_common:KeywordValue></inspire_common:Keyword><inspire_common:Keyword><inspire_common:KeywordValue>Ortofoto</inspire_common:KeywordValue></inspire_common:Keyword><inspire_common:SupportedLanguages><inspire_common:DefaultLanguage><inspire_common:Language>ita</inspire_common:Language></inspire_common:DefaultLanguage><inspire_common:SupportedLanguage><inspire_common:Language>ita</inspire_common:Language></inspire_common:SupportedLanguage></inspire_common:SupportedLanguages><inspire_common:ResponseLanguage><inspire_common:Language>ita</inspire_common:Language></inspire_common:ResponseLanguage></inspire_vs:ExtendedCapabilities><sld:UserDefinedSymbolization InlineFeature="0" RemoteWCS="0" RemoteWFS="0" SupportSLD="1" UserLayer="0" UserStyle="1" />
+  <Layer>
+    <Title>Ortofoto a colori anno 2012</Title>
+    <Abstract>Ortofoto digitali, con pixel di 50 centimetri, acquisite dall'Agenzia per l'Erogazioni in Agricoltura mediante l'impiego di camera digitale. Risoluzione 1:10.000. Il servizio &#232; visualizzabile solo a scale superiori a 1:100.000.</Abstract>
+    <CRS>EPSG:4326</CRS>
+    <CRS>EPSG:32632</CRS>
+    <CRS>EPSG:32633</CRS>
+    <CRS>EPSG:4258</CRS>
+    <CRS>EPSG:3004</CRS>
+    <CRS>EPSG:3003</CRS>
+    <CRS>EPSG:4265</CRS>
+    <CRS>EPSG:4806</CRS>
+    <CRS>EPSG:21781</CRS>
+    <CRS>EPSG:900913</CRS>
+    <CRS>EPSG:3857</CRS>
+    <CRS>EPSG:2056</CRS>
+    <CRS>EPSG:3035</CRS>
+    <CRS>EPSG:25832</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>6</westBoundLongitude>
+        <eastBoundLongitude>19</eastBoundLongitude>
+        <southBoundLatitude>34</southBoundLatitude>
+        <northBoundLatitude>48</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+    <BoundingBox CRS="EPSG:4326" maxx="48" maxy="19" minx="34" miny="6" />
+    <BoundingBox CRS="EPSG:32632" maxx="1.42524e+006" maxy="5.36488e+006" minx="222909" miny="3.76216e+006" />
+    <BoundingBox CRS="EPSG:32633" maxx="869505" maxy="5.35562e+006" minx="-332416" miny="3.76216e+006" />
+    <BoundingBox CRS="EPSG:4258" maxx="48" maxy="19" minx="34" miny="6" />
+    <BoundingBox CRS="EPSG:3004" maxx="2.88952e+006" maxy="5.35573e+006" minx="1.68755e+006" miny="3.76221e+006" />
+    <BoundingBox CRS="EPSG:3003" maxx="2.42528e+006" maxy="5.36499e+006" minx="1.2229e+006" miny="3.76221e+006" />
+    <BoundingBox CRS="EPSG:4265" maxx="48" maxy="19" minx="34" miny="6" />
+    <BoundingBox CRS="EPSG:4806" maxx="47.9993" maxy="6.54763" minx="33.9994" miny="-6.452" />
+    <BoundingBox CRS="EPSG:21781" maxx="1.69067e+006" maxy="380047" minx="463631" miny="-1.25051e+006" />
+    <BoundingBox CRS="EPSG:900913" maxx="2.11507e+006" maxy="6.10685e+006" minx="667917" miny="4.0288e+006" />
+    <BoundingBox CRS="EPSG:3857" maxx="2.11507e+006" maxy="6.10685e+006" minx="667917" miny="4.0288e+006" />
+    <BoundingBox CRS="EPSG:2056" maxx="3.69067e+006" maxy="1.38005e+006" minx="2.46363e+006" miny="-250511" />
+    <BoundingBox CRS="EPSG:3035" maxx="2.80604e+006" maxy="5.16043e+006" minx="1.21818e+006" miny="3.94717e+006" />
+    <BoundingBox CRS="EPSG:25832" maxx="1.42524e+006" maxy="5.36488e+006" minx="222909" miny="3.76216e+006" />
+    <AuthorityURL name="http://www.pcn.minambiente.it/">
+      <OnlineResource xlink:href="http://www.pcn.minambiente.it/" />
+    </AuthorityURL>
+
+    <Layer>
+      <Title>Ortofoto a colori anno 2012</Title>
+      <Abstract>OI.ORTOIMMAGINI.2012</Abstract>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL height="5" width="35">
+          <Format>image/png</Format>
+          <OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=OI.ORTOIMMAGINI.2012&amp;format=image/png&amp;STYLE=default" xlink:type="simple" />
+       </LegendURL>
+    </Style>
+      <Layer cascaded="0" opaque="0" queryable="0">
+        <Name>OI.ORTOIMMAGINI.2012.32</Name>
+        <Title>Copertura regioni zona WGS84 - UTM32</Title>
+        <Abstract>Ortofoto digitali, con pixel di 50 centimetri, acquisite dall'Agenzia per l'Erogazioni in Agricoltura mediante l'impiego di camera digitale, delle regioni appartenenti alla zona WGS84-UTM32: Valle d'Aosta, Piemonte, Liguria, Trentino Alto Adige, Veneto, Emilia Romagna, Toscana, Sardegna.</Abstract>
+        <KeywordList>
+            <Keyword>Orto immagini</Keyword>
+            <Keyword> informazione</Keyword>
+            <Keyword> fotografia aerea (immagine)</Keyword>
+            <Keyword> Ortofoto</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:32632</CRS>
+        <CRS>EPSG:32633</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3004</CRS>
+        <CRS>EPSG:3003</CRS>
+        <CRS>EPSG:4265</CRS>
+        <CRS>EPSG:4806</CRS>
+        <CRS>EPSG:21781</CRS>
+        <CRS>EPSG:900913</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:2056</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:25832</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>6.33499</westBoundLongitude>
+            <eastBoundLongitude>19.8408</eastBoundLongitude>
+            <southBoundLatitude>35.0343</southBoundLatitude>
+            <northBoundLatitude>47.3109</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" maxx="47.3109" maxy="19.8408" minx="35.0343" miny="6.33499" />
+        <BoundingBox CRS="EPSG:32632" maxx="1.327e+006" maxy="5.23971e+006" minx="298457" miny="3.91454e+006" />
+        <BoundingBox CRS="EPSG:32633" maxx="869403" maxy="5.27279e+006" minx="-247517" miny="3.88111e+006" />
+        <BoundingBox CRS="EPSG:4258" maxx="47.3109" maxy="19.8408" minx="35.0343" miny="6.33499" />
+        <BoundingBox CRS="EPSG:3004" maxx="2.88942e+006" maxy="5.2729e+006" minx="1.77245e+006" miny="3.88117e+006" />
+        <BoundingBox CRS="EPSG:3003" maxx="2.32704e+006" maxy="5.23981e+006" minx="1.29845e+006" miny="3.91461e+006" />
+        <BoundingBox CRS="EPSG:4265" maxx="47.3101" maxy="19.8408" minx="35.0343" miny="6.33499" />
+        <BoundingBox CRS="EPSG:4806" maxx="47.3102" maxy="7.38836" minx="35.0337" miny="-6.11685" />
+        <BoundingBox CRS="EPSG:21781" maxx="1.58602e+006" maxy="257203" minx="516502" miny="-1.09656e+006" />
+        <BoundingBox CRS="EPSG:900913" maxx="2.20867e+006" maxy="5.99296e+006" minx="705208" miny="4.16854e+006" />
+        <BoundingBox CRS="EPSG:3857" maxx="2.20867e+006" maxy="5.99296e+006" minx="705208" miny="4.16854e+006" />
+        <BoundingBox CRS="EPSG:2056" maxx="3.58602e+006" maxy="1.2572e+006" minx="2.5165e+006" miny="-96556.9" />
+        <BoundingBox CRS="EPSG:3035" maxx="2.69201e+006" maxy="5.07049e+006" minx="1.367e+006" miny="4.02558e+006" />
+        <BoundingBox CRS="EPSG:25832" maxx="1.327e+006" maxy="5.23971e+006" minx="298457" miny="3.91454e+006" />
+        <Identifier authority="www.pcn.minambiente.it">m_amte:299FN3:7343f40b-935d-456f-a279-7cfbeb0b8314</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="http://www.pcn.minambiente.it/geoportal/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;Id=m_amte:299FN3:0cf65452-2c51-49d7-b57b-a5871f108335&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSet" xlink:type="simple" />
+        </MetadataURL>
+        <MaxScaleDenominator>500000</MaxScaleDenominator>
+      </Layer>
+      <Layer cascaded="0" opaque="0" queryable="0">
+        <Name>OI.ORTOIMMAGINI.2012.33</Name>
+        <Title>Copertura regioni zona WGS84 - UTM33</Title>
+        <Abstract>Ortofoto digitali, con pixel di 50 centimetri, acquisite dall'Agenzia per l'Erogazioni in Agricoltura mediante l'impiego di camera digitale, delle regioni appartenenti alla zona WGS84-UTM33: Friuli Venezia Giulia, Marche, Umbria, Lazio, Abruzzo, Campania, Molise, Puglia, Basilicata, Calabria, Sicilia.</Abstract>
+        <KeywordList>
+            <Keyword>Orto immagini</Keyword>
+            <Keyword> informazione</Keyword>
+            <Keyword> fotografia aerea (immagine)</Keyword>
+            <Keyword> mosaico (immagine)</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:32632</CRS>
+        <CRS>EPSG:32633</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3004</CRS>
+        <CRS>EPSG:3003</CRS>
+        <CRS>EPSG:4265</CRS>
+        <CRS>EPSG:4806</CRS>
+        <CRS>EPSG:21781</CRS>
+        <CRS>EPSG:900913</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:2056</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:25832</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>5.21068</westBoundLongitude>
+            <eastBoundLongitude>19.8652</eastBoundLongitude>
+            <southBoundLatitude>35.1655</southBoundLatitude>
+            <northBoundLatitude>47.1671</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" maxx="47.1671" maxy="19.8652" minx="35.1655" miny="5.21068" />
+        <BoundingBox CRS="EPSG:32632" maxx="1.41585e+006" maxy="5.26982e+006" minx="210568" miny="3.89361e+006" />
+        <BoundingBox CRS="EPSG:32633" maxx="869406" maxy="5.22374e+006" minx="-247517" miny="3.92232e+006" />
+        <BoundingBox CRS="EPSG:4258" maxx="47.1671" maxy="19.8652" minx="35.1655" miny="5.21068" />
+        <BoundingBox CRS="EPSG:3004" maxx="2.88942e+006" maxy="5.22384e+006" minx="1.77245e+006" miny="3.92238e+006" />
+        <BoundingBox CRS="EPSG:3003" maxx="2.41589e+006" maxy="5.26993e+006" minx="1.21055e+006" miny="3.89367e+006" />
+        <BoundingBox CRS="EPSG:4265" maxx="47.1665" maxy="19.8652" minx="35.1655" miny="5.21068" />
+        <BoundingBox CRS="EPSG:4806" maxx="47.1664" maxy="7.41276" minx="35.1649" miny="-7.24113" />
+        <BoundingBox CRS="EPSG:21781" maxx="1.6734e+006" maxy="287030" minx="429771" miny="-1.11791e+006" />
+        <BoundingBox CRS="EPSG:900913" maxx="2.21138e+006" maxy="5.9694e+006" minx="580050" miny="4.18639e+006" />
+        <BoundingBox CRS="EPSG:3857" maxx="2.21138e+006" maxy="5.9694e+006" minx="580050" miny="4.18639e+006" />
+        <BoundingBox CRS="EPSG:2056" maxx="3.6734e+006" maxy="1.28703e+006" minx="2.42977e+006" miny="-117913" />
+        <BoundingBox CRS="EPSG:3035" maxx="2.71098e+006" maxy="5.15114e+006" minx="1.35211e+006" miny="3.95497e+006" />
+        <BoundingBox CRS="EPSG:25832" maxx="1.41585e+006" maxy="5.26982e+006" minx="210568" miny="3.89361e+006" />
+        <Identifier authority="www.pcn.minambiente.it">m_amte:299FN3:1bef93b5-b7b4-42fe-f938-916f2ff7bc37</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="http://www.pcn.minambiente.it/geoportal/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;Id=m_amte:299FN3:eda6494c-b619-441a-a2d7-4097f8cde540&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSet" xlink:type="simple" />
+        </MetadataURL>
+        <MaxScaleDenominator>500000</MaxScaleDenominator>
+      </Layer>
+    </Layer>
+    <Layer cascaded="0" opaque="0" queryable="1">
+        <Name>OI.DATEVOLO.2012</Name>
+        <Title>Date ortofoto a colori anno 2012</Title>
+        <Abstract>Poligoni di ingombro delle ortofoto a colori  AGEA 2009-2012 con le informazioni sulla data della ripresa aerea.</Abstract>
+        <KeywordList>
+            <Keyword>Orto immagini</Keyword>
+            <Keyword> informazione</Keyword>
+            <Keyword> fotografia aerea (immagine)</Keyword>
+            <Keyword> mosaico (immagine)</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:32632</CRS>
+        <CRS>EPSG:32633</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3004</CRS>
+        <CRS>EPSG:3003</CRS>
+        <CRS>EPSG:4265</CRS>
+        <CRS>EPSG:4806</CRS>
+        <CRS>EPSG:21781</CRS>
+        <CRS>EPSG:900913</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:2056</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:25832</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>6</westBoundLongitude>
+            <eastBoundLongitude>19</eastBoundLongitude>
+            <southBoundLatitude>34.5</southBoundLatitude>
+            <northBoundLatitude>49</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" maxx="49" maxy="19" minx="34.5" miny="6" />
+        <BoundingBox CRS="EPSG:32632" maxx="1.41971e+006" maxy="5.47582e+006" minx="224545" miny="3.8176e+006" />
+        <BoundingBox CRS="EPSG:32633" maxx="867321" maxy="5.4666e+006" minx="-327451" miny="3.8176e+006" />
+        <BoundingBox CRS="EPSG:4258" maxx="49" maxy="19" minx="34.5" miny="6" />
+        <BoundingBox CRS="EPSG:3004" maxx="2.88734e+006" maxy="5.46671e+006" minx="1.69251e+006" miny="3.81766e+006" />
+        <BoundingBox CRS="EPSG:3003" maxx="2.41975e+006" maxy="5.47593e+006" minx="1.22453e+006" miny="3.81766e+006" />
+        <BoundingBox CRS="EPSG:4265" maxx="49" maxy="19" minx="34.5" miny="6" />
+        <BoundingBox CRS="EPSG:4806" maxx="48.9993" maxy="6.54763" minx="34.4994" miny="-6.45199" />
+        <BoundingBox CRS="EPSG:21781" maxx="1.68218e+006" maxy="490123" minx="464700" miny="-1.19366e+006" />
+        <BoundingBox CRS="EPSG:900913" maxx="2.11507e+006" maxy="6.27486e+006" minx="667917" miny="4.09614e+006" />
+        <BoundingBox CRS="EPSG:3857" maxx="2.11507e+006" maxy="6.27486e+006" minx="667917" miny="4.09614e+006" />
+        <BoundingBox CRS="EPSG:2056" maxx="3.68218e+006" maxy="1.49012e+006" minx="2.4647e+006" miny="-193662" />
+        <BoundingBox CRS="EPSG:3035" maxx="2.91653e+006" maxy="5.15491e+006" minx="1.273e+006" miny="3.94963e+006" />
+        <BoundingBox CRS="EPSG:25832" maxx="1.41971e+006" maxy="5.47582e+006" minx="224545" miny="3.8176e+006" />
+        <Identifier authority="www.pcn.minambiente.it">m_amte:299FN3:a9721668-dc33-4eaf-ad5e-ada3363700c6</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="http://www.pcn.minambiente.it/geoportal/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementSetName=full&amp;ID=m_amte:299FN3:acd4f94e-cd9b-40df-df31-cb366017dcf9" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>GN:Predefinito</Name>
+          <Title>GN:Predefinito</Title>
+          <LegendURL height="21" width="125">
+             <Format>image/png</Format>
+             <OnlineResource xlink:href="http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=OI.DATEVOLO.2012&amp;format=image/png&amp;STYLE=GN:Predefinito" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+    </Layer>
+  </Layer>
+</Capability>
+</WMS_Capabilities>
