@@ -1,0 +1,30 @@
+{
+ "id": "borders-hi-v1",
+ "script": "gpu/hf3d_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 150,
+ "params": {
+  "name": "borders-hi-v1",
+  "src_parts": [
+   "borders.tgz.part00",
+   "borders.tgz.part01"
+  ],
+  "src_sha256": "a495dcf2cc4a6cfbfb9d3b8081a1e03807442c84ddc5fa80c60d9544bb9464ac",
+  "dur": 85.254,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   3,
+   6
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "borders",
+  "page_dir": "hf_hi"
+ },
+ "requested": "2026-11-15T21:35+05:30"
+}
