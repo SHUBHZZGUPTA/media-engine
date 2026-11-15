@@ -17,7 +17,7 @@ Spec: {"w":1920,"h":1080,"fps":30,"shots":[{t0,t1,bg,layers}...]}
            "talk": [[a, b], ...], "flip": bool, "move": [[t, x, y], ...]}
 Times are absolute seconds on the video timeline.
 """
-import json, math, subprocess, sys, functools
+import json, math, os, subprocess, sys, functools
 import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont
 
@@ -220,8 +220,11 @@ def main():
                 src = L["img"]
                 L["h"] = text_rgba(src["text"], src.get("size", 64), src.get("color", "#ffffff"), src.get("box"), src.get("font")).shape[0]
     plates = {}
+    # optional COMPOSE_VF: a filtergraph applied while encoding (e.g. the film-fade grade), so no second full-length
+    # encode is needed. Unset = unchanged behaviour.
+    vf = os.environ.get("COMPOSE_VF"); vfa = ["-vf", vf] if vf else []
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
-                            "-r", str(fps), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+                            "-r", str(fps), "-i", "-", *vfa, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
                             "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
     caps = Captions(spec.get("captions", []), W, H)
     punches = sorted(spec.get("punch", [])); shakes = spec.get("shake", [])

@@ -29,6 +29,16 @@ def clip_path(cid):
         if os.path.exists(p): return p
     return None
 
+
+from PIL import Image as _Im
+def fitcard(path, x, ybot, maxw, maxh, t, framed=True):
+    """Image card fitted inside maxw x maxh, anchored by its bottom edge (compose's convention for image layers)."""
+    if not path: return None
+    try: w0, h0 = _Im.open(path).size
+    except Exception: return None
+    w = min(maxw, maxh * w0 / h0)
+    return imgcard(path, x, ybot, int(w), t, framed=framed)
+
 # ---- storyboard rows ----
 ROWS = []
 for r in open(os.path.join(RM, "storyboard", "shots.txt"), encoding="utf-8"):
@@ -55,7 +65,7 @@ def box_for(s): return "#c99400" if any(c.isdigit() for c in s) or "*" in s else
 def wrap(s, n=26): return "\n".join(textwrap.wrap(clean(s), n))
 def blur_board(t0, layers, dur=6.0):
     bg = LAST[0] or "#1d2733"
-    return shot(t0, bg, list(layers), cam=[[t0, .5, .5, 1.0], [t0 + dur, .5, .5, 1.08]], blur=14, dim=.5)
+    return shot(t0, bg, [l for l in layers if l], cam=[[t0, .5, .5, 1.0], [t0 + dur, .5, .5, 1.08]], blur=14, dim=.5)
 
 # real people speak through their real picture; unnamed people are toy figures
 REAL.update({"PRINSEP": ("james_prinsep", None), "PRITHVIRAJ": ("prithviraj_chauhan", None), "AKBAR": ("akbar_painting", None),
@@ -122,7 +132,8 @@ for fl, rs in groups.items():
         s = skit(i0, i1, bg, pos, cast=cast)
         for (ii, rr) in pending_skit_inserts.get(fl, []):
             p_ = anyimg(keys_of(rr["asset"])[0])
-            if p_: s["layers"].append(imgcard(p_, 960, 560, 520, T(ii, 0), out=T(ii, 1), framed=True))
+            c_ = fitcard(p_, 960, 620, 700, 460, T(ii, 0))
+            if c_: c_["out"] = T(ii, 1); s["layers"].append(c_)
         continue
     i = idx_of(fl); n = len(rs)
     for k, r in enumerate(rs):
@@ -147,7 +158,7 @@ for fl, rs in groups.items():
                 for j, key in enumerate(sk):
                     tj = t0 + (t1 - t0) * j / len(sk); pic(tj, key, L_ if j == 0 else [], fallback=a(key))
             else:
-                extra = [imgcard(anyimg(x), 1500, 700, 560, t0 + .4, framed=True) for x in ks[1:] if anyimg(x)]
+                extra = [c for c in (fitcard(anyimg(x), 1480, 900, 620, 560, t0 + .4) for x in ks[1:]) if c]
                 p_ = anyimg(ks[0]) if ks else None
                 if p_ and p_ in (a(ks[0]),): plate(t0, p_, layers=L_ + extra)
                 else: pic(t0, ks[0], L_ + extra, fallback=a(ks[0]))
@@ -156,8 +167,8 @@ for fl, rs in groups.items():
                 {"tughlaq_token_coin": ("tughlaq_token_coin", (0, 0, .52, 1)), "shah_jahan_old": ("shah_jahan_old", (.31, .24, .69, .6)),
                  "chanakya_sculpture": ("chanakya_sculpture", (0, 0, .56, 1))}[key]
             p_ = crop(key, box) if box else anyimg(key)
-            lay = [imgcard(p_, 960, 560, 640, t0 + .05, framed=True)] if p_ else [txt(f"[{key}]", 960, 540, t0, size=40, scale=1)]
-            lay.append(txt(clean(text), 960, 930, t0 + .3, size=56, box="#c99400"))
+            lay = [fitcard(p_, 960, 900, 1100, 600, t0 + .05)] if p_ else []
+            lay.append(txt(wrap(text, 30), 960, 250 if p_ else 600, t0 + .3, size=56 if p_ else 80, box="#c99400"))
             blur_board(t0, lay)
         elif typ == "SKIT":                                # scene beat on a narrator line: set + figures, no bubbles
             p_ = a(ks[0]) if ks else None; xs = [620, 1300, 960]
@@ -171,6 +182,6 @@ for fl, rs in groups.items():
         else:   # BOARD
             imgs = [anyimg(x) for x in ks if anyimg(x)]
             lay = []
-            if imgs: lay.append(imgcard(imgs[0], 960, 640, 900 if len(imgs) == 1 else 700, t0 + .05, framed=not imgs[0].endswith("_panel.png")))
-            if text: lay.append(txt(wrap(text, 28), 960, 240 if imgs else 540, t0 + .2, size=78 if not imgs else 64, box=box_for(text)))
+            if imgs: lay.append(fitcard(imgs[0], 960, 900, 1300, 640, t0 + .05, framed=not imgs[0].endswith("_panel.png")))
+            if text: lay.append(txt(wrap(text, 28), 960, 205 if imgs else 600, t0 + .2, size=78 if not imgs else 60, box=box_for(text)))
             blur_board(t0, lay)
