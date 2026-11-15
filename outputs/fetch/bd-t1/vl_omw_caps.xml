@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WMS_Capabilities version="1.3.0" xsi:schemaLocation="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd http://inspire.ec.europa.eu/schemas/common/1.0 http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd" xmlns="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" xmlns:insp_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
+  <Service>
+    <Name>WMS</Name>
+    <Title>Orthofotomozaïek, middenschalig, winteropnamen</Title>
+    <Abstract>WMS met de tijdsreeks van middenschalige orthofotomozaïeken (winteropnamen) met een resolutie van 25cm (tot 2021) en 15cm (vanaf 2022), gebiedsdekkend voor Vlaanderen</Abstract>
+    <KeywordList>
+      <Keyword>kleurenorthofotomozaïek</Keyword>
+      <Keyword>kleurenorthofoto's</Keyword>
+      <Keyword>kleurenortho's</Keyword>
+      <Keyword>luchtopnamen</Keyword>
+      <Keyword>Vlaams Gewest</Keyword>
+      <Keyword>vliegdagcontour</Keyword>
+      <Keyword>luchtfoto</Keyword>
+      <Keyword>luchtfoto's</Keyword>
+      <Keyword>middenschalig</Keyword>
+      <Keyword>winter</Keyword>
+      <Keyword>open data</Keyword>
+      <Keyword>orthofoto</Keyword>
+      <Keyword>orthofoto's</Keyword>
+      <Keyword>orthofotomozaïek</Keyword>
+      <Keyword>2025</Keyword>
+      <Keyword>2024</Keyword>
+      <Keyword>2023</Keyword>
+      <Keyword>2022</Keyword>
+      <Keyword>2021</Keyword>
+      <Keyword>2020</Keyword>
+      <Keyword>2019</Keyword>
+      <Keyword>2018</Keyword>
+      <Keyword>2017</Keyword>
+      <Keyword>2016</Keyword>
+      <Keyword>2015</Keyword>
+      <Keyword>2014</Keyword>
+      <Keyword>2013</Keyword>
+      <Keyword>2012</Keyword>
+      <Keyword>2008-2011</Keyword>
+      <Keyword>2005-2007</Keyword>
+      <Keyword>2000-2003</Keyword>
+      <Keyword>tijdreeks</Keyword>
+      <Keyword vocabulary="GDI-Vlaanderen Service Types">OGC:WMS</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OMW/wms" />
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Helpdesk Digitaal Vlaanderen</ContactPerson>
+        <ContactOrganization>agentschap Digitaal Vlaanderen</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactAddress>
+        <AddressType>Postal</AddressType>
+        <Address>Havenlaan 88</Address>
+        <City>Brussel</City>
+        <StateOrProvince />
+        <PostCode>1000</PostCode>
+        <Country>België</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>+32 9 276 15 00</ContactVoiceTelephone>
+      <ContactElectronicMailAddress>digitaal.vlaanderen@vlaanderen.be</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>Het gebruik van de service is kosteloos.</Fees>
+    <AccessConstraints>Het gebruiksrecht is te vinden op https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten.</AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OMW/wms" />
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OMW/wms" />
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <Format>application/geo+json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OMW/wms" />
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <insp_vs:ExtendedCapabilities>
+      <inspire_common:ResourceLocator>
+        <inspire_common:URL>https://geo.api.vlaanderen.be/OMW/wms?</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.wms_xml</inspire_common:MediaType>
+      </inspire_common:ResourceLocator>
+      <inspire_common:ResourceType>service</inspire_common:ResourceType>
+      <inspire_common:TemporalReference>
+        <inspire_common:DateOfCreation>2015-11-17</inspire_common:DateOfCreation>
+      </inspire_common:TemporalReference>
+      <inspire_common:Conformity>
+        <inspire_common:Specification xsi:type="inspire_common:citationInspireInteroperabilityRegulation_dut">
+          <inspire_common:Title>VERORDENING (EU) Nr. 1089/2010 VAN DE COMMISSIE van 23 november 2010 ter uitvoering van Richtlijn 2007/2/EG van het Europees Parlement en de Raad betreffende de interoperabiliteit van verzamelingen ruimtelijke gegevens en van diensten met betrekking tot ruimtelijke gegevens</inspire_common:Title>
+          <inspire_common:DateOfPublication>2010-12-08</inspire_common:DateOfPublication>
+          <inspire_common:URI>OJ:L:2010:323:0011:0102:NL:PDF</inspire_common:URI>
+          <inspire_common:ResourceLocator>
+            <inspire_common:URL>http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2010:323:0011:0102:NL:PDF</inspire_common:URL>
+            <inspire_common:MediaType>application/pdf</inspire_common:MediaType>
+          </inspire_common:ResourceLocator>
+        </inspire_common:Specification>
+        <inspire_common:Degree>notEvaluated</inspire_common:Degree>
+      </inspire_common:Conformity>
+      <inspire_common:MetadataPointOfContact>
+        <inspire_common:OrganisationName>agentschap Digitaal Vlaanderen</inspire_common:OrganisationName>
+        <inspire_common:EmailAddress>digitaal.vlaanderen@vlaanderen.be</inspire_common:EmailAddress>
+      </inspire_common:MetadataPointOfContact>
+      <inspire_common:MetadataDate xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:gml="http://www.opengis.net/gml" xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs_ows11/1.0">2026-01-31</inspire_common:MetadataDate>
+      <inspire_common:SpatialDataServiceType>view</inspire_common:SpatialDataServiceType>
+      <inspire_common:MandatoryKeyword xsi:type="inspire_common:classificationOfSpatialDataService">
+        <inspire_common:KeywordValue>infoMapAccessService</inspire_common:KeywordValue>
+      </inspire_common:MandatoryKeyword>
+      <inspire_common:SupportedLanguages xsi:type="inspire_common:supportedLanguagesType">
+        <inspire_common:DefaultLanguage>
+          <inspire_common:Language>dut</inspire_common:Language>
+        </inspire_common:DefaultLanguage>
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+        <inspire_common:Language>dut</inspire_common:Language>
+      </inspire_common:ResponseLanguage>
+      <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
+        <inspire_common:URL>https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=505e64fa-9f3d-13d3-2cfe-76ff-9bf6-5f13-75693604&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.csw.GetRecordByIdResponse_xml</inspire_common:MediaType>
+      </inspire_common:MetadataUrl>
+    </insp_vs:ExtendedCapabilities>
+    <Layer>
+      <Title>Orthofoto, Vlaanderen, winter, tijdsreeks - kleur</Title>
+      <Abstract>Tijdsreeks van de middenschalige orthofotomozaïeken op basis van winteropnamen die voor Vlaanderen beschikbaar zijn samen met de vliegdagcontour die van ieder deel de opnamedata weergeeft.</Abstract>
+      <KeywordList>
+        <Keyword>kleurenorthofotomozaïek</Keyword>
+        <Keyword>kleurenorthofoto's</Keyword>
+        <Keyword>kleurenortho's</Keyword>
+        <Keyword>luchtopnamen</Keyword>
+        <Keyword>ortho</Keyword>
+        <Keyword>orthofoto</Keyword>
+        <Keyword>orthofotomozaïek</Keyword>
+        <Keyword>orthofoto's</Keyword>
+        <Keyword>ortho's</Keyword>
+        <Keyword>Vlaams Gewest</Keyword>
+        <Keyword>vliegdagcontour</Keyword>
+        <Keyword>tijdsreeks</Keyword>
+        <Keyword>luchtfoto</Keyword>
+        <Keyword>luchtfoto's</Keyword>
+        <Keyword>middenschalig</Keyword>
+        <Keyword>winter</Keyword>
+        <Keyword>open data</Keyword>
+      </KeywordList>
+      <CRS>CRS:84</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:31370</CRS>
+      <CRS>EPSG:3812</CRS>
+      <CRS>EPSG:3043</CRS>
+      <CRS>EPSG:32631</CRS>
+      <CRS>EPSG:25831</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:102100</CRS>
+      <CRS>EPSG:3035</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>2.52</westBoundLongitude>
+        <eastBoundLongitude>5.94</eastBoundLongitude>
+        <southBoundLatitude>50.64</southBoundLatitude>
+        <northBoundLatitude>51.51</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox maxx="5.94" maxy="51.51" minx="2.52" miny="50.64" CRS="CRS:84" />
+      <BoundingBox maxx="51.51" maxy="5.94" minx="50.64" miny="2.52" CRS="EPSG:4326" />
+      <BoundingBox maxx="51.51" maxy="5.94" minx="50.64" miny="2.52" CRS="EPSG:4258" />
+      <BoundingBox CRS="EPSG:31370" minx="22000" miny="150000" maxx="259000" maxy="245000" />
+      <BoundingBox maxy="800000" maxx="762144" miny="537856" minx="500000" CRS="EPSG:3812" />
+      <BoundingBox CRS="EPSG:3043" minx="466900" miny="5610500" maxx="705700" maxy="5710000" />
+      <BoundingBox CRS="EPSG:32631" minx="466900" miny="5610500" maxx="705700" maxy="5710000" />
+      <BoundingBox CRS="EPSG:25831" minx="466900" miny="5610500" maxx="705700" maxy="5710000" />
+      <BoundingBox CRS="EPSG:3857" minx="280525" miny="6557859" maxx="661237" maxy="6712007" />
+      <BoundingBox CRS="EPSG:102100" minx="280525" miny="6557859" maxx="661237" maxy="6712007" />
+      <BoundingBox CRS="EPSG:3035" maxy="5446513" maxx="6293974" miny="1528101" minx="2426378" />
+      <AuthorityURL name="geo-api-vlaanderen-be">
+        <OnlineResource xlink:href="https://geo.api.vlaanderen.be" xlink:type="simple" />
+      </AuthorityURL>
+      <Layer queryable="0">
+        <Name>OMWRGB25VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2025, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2025 werden aangemaakt. De compilatie heeft een grondresolutie van 15cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2025</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">dc5293de-7ed4-4b42-a729-d0ec0848fb1c</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/088a9e65-83c7-4154-8078-ac2309bf41a2" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=088a9e65-83c7-4154-8078-ac2309bf41a2&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB25VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB25VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB25VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2025, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2025</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">dc5293de-7ed4-4b42-a729-d0ec0848fb1c</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/088a9e65-83c7-4154-8078-ac2309bf41a2" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=088a9e65-83c7-4154-8078-ac2309bf41a2&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB25VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB25VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB24VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2024, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2024 werden aangemaakt. De compilatie heeft een grondresolutie van 15cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2024</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">a3362bec-4f67-4f28-b09f-140e7cd632de</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/72ecb198-84d1-4015-82c2-8e10a3c16cdf" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=72ecb198-84d1-4015-82c2-8e10a3c16cdf&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB24VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB24VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB24VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2024, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2024</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">a3362bec-4f67-4f28-b09f-140e7cd632de</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/72ecb198-84d1-4015-82c2-8e10a3c16cdf" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=72ecb198-84d1-4015-82c2-8e10a3c16cdf&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB24VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB24VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB23VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2023, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2023 werden aangemaakt. De compilatie heeft een grondresolutie van 15cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2023</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">44259aa0-3377-4de0-9207-1bf5ca9d2586</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/2601e264-8089-4b0c-bcb7-e6a708a093aa" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=2601e264-8089-4b0c-bcb7-e6a708a093aa&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB23VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB23VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB23VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2023, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2023</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">44259aa0-3377-4de0-9207-1bf5ca9d2586</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/2601e264-8089-4b0c-bcb7-e6a708a093aa" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=2601e264-8089-4b0c-bcb7-e6a708a093aa&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB23VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB23VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB22VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2022, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2022 werden aangemaakt. De compilatie heeft een grondresolutie van 15cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2022</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">7d02f1a6-4802-460d-a0b8-5d968671a5ff</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/d9dcd6df-28a1-4ec3-a699-38eed3e7fe9a" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=d9dcd6df-28a1-4ec3-a699-38eed3e7fe9a&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB22VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB22VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB22VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2022, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2022</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">7d02f1a6-4802-460d-a0b8-5d968671a5ff</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/d9dcd6df-28a1-4ec3-a699-38eed3e7fe9a" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=d9dcd6df-28a1-4ec3-a699-38eed3e7fe9a&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB22VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB22VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB21VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2021, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2021 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2021</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">6ef67bb0-1efe-4c4a-b404-3dfb05a2a42c</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/5f429f28-2d6b-4f3d-831a-492bd86bec1a" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=5f429f28-2d6b-4f3d-831a-492bd86bec1a&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB21VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB21VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB21VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2021, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2021</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">6ef67bb0-1efe-4c4a-b404-3dfb05a2a42c</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/5f429f28-2d6b-4f3d-831a-492bd86bec1a" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=5f429f28-2d6b-4f3d-831a-492bd86bec1a&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB21VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB21VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB20VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2020, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2020 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2020</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">beaec965-363e-41e6-8943-0ef60b353975</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/328d097a-8e13-4ae2-b292-b01712058657" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=328d097a-8e13-4ae2-b292-b01712058657&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB20VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB20VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB20VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2020, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2020</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">beaec965-363e-41e6-8943-0ef60b353975</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/328d097a-8e13-4ae2-b292-b01712058657" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=328d097a-8e13-4ae2-b292-b01712058657&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB20VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB20VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB19VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2019, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2019 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2019</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">6b21cc26-fbcc-429d-b8f6-48d7b23faef3</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/d2165ce3-e811-40c1-8316-907c864b0715" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=d2165ce3-e811-40c1-8316-907c864b0715&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB19VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB19VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB19VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2019, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2019</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">6b21cc26-fbcc-429d-b8f6-48d7b23faef3</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/d2165ce3-e811-40c1-8316-907c864b0715" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=d2165ce3-e811-40c1-8316-907c864b0715&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB19VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB19VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB18VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2018, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2018 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2018</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">5560dc86-69b1-4d86-a8fa-eebcecc519ec</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/5f50d192-e764-4a8f-93c7-a0935936eafe" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=5f50d192-e764-4a8f-93c7-a0935936eafe&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB18VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB18VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB18VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2018, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2018</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">5560dc86-69b1-4d86-a8fa-eebcecc519ec</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/5f50d192-e764-4a8f-93c7-a0935936eafe" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=5f50d192-e764-4a8f-93c7-a0935936eafe&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB18VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB18VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB17VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2017, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2017 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2017</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">9dd8e9b5-50b1-4309-b574-78a8d3211f8f</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/5cd08643-9713-4086-a17f-3563e64c3451" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=5cd08643-9713-4086-a17f-3563e64c3451&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB17VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB17VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB17VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2017, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2017</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">9dd8e9b5-50b1-4309-b574-78a8d3211f8f</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/5cd08643-9713-4086-a17f-3563e64c3451" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=5cd08643-9713-4086-a17f-3563e64c3451&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB17VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB17VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB16VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2016, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2016 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2016</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">91995094-1722-4497-87c3-8d14ad541b72</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/94ad463c-c96d-44f7-bf3e-89b8942895be" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=94ad463c-c96d-44f7-bf3e-89b8942895be&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB16VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB16VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB16VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2016, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2016</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">91995094-1722-4497-87c3-8d14ad541b72</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/94ad463c-c96d-44f7-bf3e-89b8942895be" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=94ad463c-c96d-44f7-bf3e-89b8942895be&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB16VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB16VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB15VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2015, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2015 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2015</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">c1f69aec-0008-4d7c-8413-9d1cb0f979d9</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/9bf3c6bc-9093-45c3-b7f5-cbfadc78a7bd" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=9bf3c6bc-9093-45c3-b7f5-cbfadc78a7bd&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB15VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB15VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB15VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2015, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2015</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">c1f69aec-0008-4d7c-8413-9d1cb0f979d9</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/9bf3c6bc-9093-45c3-b7f5-cbfadc78a7bd" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=9bf3c6bc-9093-45c3-b7f5-cbfadc78a7bd&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB15VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB15VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB14VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2014, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2014 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2014</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">26ceeb53-2fda-4266-a542-82866ab74266</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/c07719ff-bbf9-4a6d-9a8c-cc3ca08736c1" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=c07719ff-bbf9-4a6d-9a8c-cc3ca08736c1&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB14VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB14VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB14VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2014, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2014</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">26ceeb53-2fda-4266-a542-82866ab74266</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/c07719ff-bbf9-4a6d-9a8c-cc3ca08736c1" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=c07719ff-bbf9-4a6d-9a8c-cc3ca08736c1&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB14VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB14VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB13VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2013, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2013 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2013</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">34f09db8-cc98-4be1-a8f5-32940bb06fd1</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/7511d678-1a1b-465c-b880-6414b26689cb" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=7511d678-1a1b-465c-b880-6414b26689cb&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB13VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB13VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB13VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2013, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2013</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">34f09db8-cc98-4be1-a8f5-32940bb06fd1</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/7511d678-1a1b-465c-b880-6414b26689cb" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=7511d678-1a1b-465c-b880-6414b26689cb&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB13VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB13VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB12VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2012, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in 2012 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2012</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">B4029D04-CE59-45CE-9EC4-748083B80F29</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/e2a4923f-3547-4e0a-8016-38c489f106f3" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=e2a4923f-3547-4e0a-8016-38c489f106f3&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB12VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB12VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB12VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2012, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2012</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">B4029D04-CE59-45CE-9EC4-748083B80F29</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/e2a4923f-3547-4e0a-8016-38c489f106f3" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=e2a4923f-3547-4e0a-8016-38c489f106f3&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB12VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB12VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB08_11VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2008-2011, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in de periode 2008-2011 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2008-2011</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">73b65f1f-9434-4320-82fc-ce53b7934226</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/68e01569-5d34-42c5-9212-350b45283fa2" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=68e01569-5d34-42c5-9212-350b45283fa2&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB08_11VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB08_11VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB08_11VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2008-2011, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2008-2011</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">73b65f1f-9434-4320-82fc-ce53b7934226</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/68e01569-5d34-42c5-9212-350b45283fa2" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=68e01569-5d34-42c5-9212-350b45283fa2&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB08_11VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB08_11VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB05_07VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2005-2007, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in de periode 2005-2007 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2005-2007</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">d7ef9c35-7e67-4c29-868f-bb7c0efa86c5</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/dbf9ede8-97ce-4dd9-93e6-8a5baeba1fa7" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=dbf9ede8-97ce-4dd9-93e6-8a5baeba1fa7&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB05_07VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB05_07VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB05_07VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2005-2007, Vlaanderen ,vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2005-2007</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">d7ef9c35-7e67-4c29-868f-bb7c0efa86c5</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/dbf9ede8-97ce-4dd9-93e6-8a5baeba1fa7" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=dbf9ede8-97ce-4dd9-93e6-8a5baeba1fa7&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB05_07VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB05_07VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0">
+        <Name>OMWRGB00_03VL</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2000-2003, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de orthofotomozaïeken (winteropnamen) die voor Vlaanderen in de periode 2000-2003 werden aangemaakt. De compilatie heeft een grondresolutie van 25cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2000-2003</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">4de365fd-8733-4aac-b24d-b971f67b479b</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/ded85fcf-bf6e-497c-8a89-4896762e04ad" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=ded85fcf-bf6e-497c-8a89-4896762e04ad&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB00_03VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB00_03VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OMWRGB00_03VL_vdc</Name>
+        <Title>Orthofotomozaïek, middenschalig, winteropnamen, kleur, 2000-2003, Vlaanderen, vliegdagcontour</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2000-2003</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>middenschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">4de365fd-8733-4aac-b24d-b971f67b479b</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/ded85fcf-bf6e-497c-8a89-4896762e04ad" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=ded85fcf-bf6e-497c-8a89-4896762e04ad&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OMWRGB00_03VL_vdc</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OMW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OMWRGB00_03VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>
