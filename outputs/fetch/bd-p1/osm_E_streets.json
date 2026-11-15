@@ -1,0 +1,2966 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T14:48:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 7216904,
+  "bounds": {
+    "minlat": 51.4440310,
+    "minlon": 4.9185063,
+    "maxlat": 51.4444418,
+    "maxlon": 4.9187622
+  },
+  "nodes": [
+    42641132,
+    5975127359,
+    5975127360,
+    42642261
+  ],
+  "geometry": [
+    { "lat": 51.4440310, "lon": 4.9187609 },
+    { "lat": 51.4440896, "lon": 4.9187622 },
+    { "lat": 51.4442804, "lon": 4.9186290 },
+    { "lat": 51.4444418, "lon": 4.9185063 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Loveren",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7216905,
+  "bounds": {
+    "minlat": 51.4443620,
+    "minlon": 4.9158120,
+    "maxlat": 51.4445524,
+    "maxlon": 4.9185063
+  },
+  "nodes": [
+    42642257,
+    42642458,
+    42642259,
+    42642158,
+    10876513866,
+    5975127362,
+    5975127361,
+    42642261
+  ],
+  "geometry": [
+    { "lat": 51.4444359, "lon": 4.9158120 },
+    { "lat": 51.4445524, "lon": 4.9158325 },
+    { "lat": 51.4444413, "lon": 4.9171088 },
+    { "lat": 51.4443654, "lon": 4.9178918 },
+    { "lat": 51.4443620, "lon": 4.9180179 },
+    { "lat": 51.4443669, "lon": 4.9181145 },
+    { "lat": 51.4444296, "lon": 4.9184411 },
+    { "lat": 51.4444418, "lon": 4.9185063 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Loveren",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7216906,
+  "bounds": {
+    "minlat": 51.4442895,
+    "minlon": 4.9170661,
+    "maxlat": 51.4444413,
+    "maxlon": 4.9171088
+  },
+  "nodes": [
+    42641848,
+    42642259
+  ],
+  "geometry": [
+    { "lat": 51.4442895, "lon": 4.9170661 },
+    { "lat": 51.4444413, "lon": 4.9171088 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Loveren",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7216940,
+  "bounds": {
+    "minlat": 51.4440465,
+    "minlon": 4.9267042,
+    "maxlat": 51.4453005,
+    "maxlon": 4.9269543
+  },
+  "nodes": [
+    253819425,
+    8004086060,
+    42641391,
+    4607870488,
+    10876623786,
+    42643537,
+    8238446109,
+    42644184,
+    42644257,
+    11403181562,
+    8238446108,
+    8004086036
+  ],
+  "geometry": [
+    { "lat": 51.4440465, "lon": 4.9269043 },
+    { "lat": 51.4440714, "lon": 4.9269270 },
+    { "lat": 51.4441045, "lon": 4.9269543 },
+    { "lat": 51.4444087, "lon": 4.9268646 },
+    { "lat": 51.4444865, "lon": 4.9268435 },
+    { "lat": 51.4449166, "lon": 4.9267151 },
+    { "lat": 51.4449712, "lon": 4.9267042 },
+    { "lat": 51.4450631, "lon": 4.9267141 },
+    { "lat": 51.4451687, "lon": 4.9267446 },
+    { "lat": 51.4452245, "lon": 4.9267767 },
+    { "lat": 51.4452727, "lon": 4.9268117 },
+    { "lat": 51.4453005, "lon": 4.9268171 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "mofa": "no",
+    "moped": "no",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "ref": "29",
+    "smoothness": "good",
+    "surface": "asphalt",
+    "traffic_sign": "NL:G13",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217006,
+  "bounds": {
+    "minlat": 51.4454968,
+    "minlon": 4.9265747,
+    "maxlat": 51.4480766,
+    "maxlon": 4.9267895
+  },
+  "nodes": [
+    10153262450,
+    42645644,
+    6265533456,
+    11403181564,
+    1936362201,
+    42647010,
+    11403181565,
+    11403181566,
+    42649824,
+    11403181567,
+    1936362195,
+    8004076084,
+    42652249
+  ],
+  "geometry": [
+    { "lat": 51.4454968, "lon": 4.9267895 },
+    { "lat": 51.4456889, "lon": 4.9267590 },
+    { "lat": 51.4460938, "lon": 4.9266996 },
+    { "lat": 51.4461531, "lon": 4.9266891 },
+    { "lat": 51.4461773, "lon": 4.9266861 },
+    { "lat": 51.4462288, "lon": 4.9266798 },
+    { "lat": 51.4462752, "lon": 4.9266718 },
+    { "lat": 51.4466047, "lon": 4.9266332 },
+    { "lat": 51.4471892, "lon": 4.9265836 },
+    { "lat": 51.4473618, "lon": 4.9265796 },
+    { "lat": 51.4474681, "lon": 4.9265763 },
+    { "lat": 51.4477572, "lon": 4.9265747 },
+    { "lat": 51.4480766, "lon": 4.9265920 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "mapillary": "318095503177848",
+    "mofa": "no",
+    "moped": "no",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "railway": "abandoned",
+    "ref": "29",
+    "surface": "asphalt",
+    "traffic_sign": "NL:G13",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217016,
+  "bounds": {
+    "minlat": 51.4444418,
+    "minlon": 4.9184300,
+    "maxlat": 51.4448300,
+    "maxlon": 4.9185063
+  },
+  "nodes": [
+    42642261,
+    42642484,
+    42643237
+  ],
+  "geometry": [
+    { "lat": 51.4444418, "lon": 4.9185063 },
+    { "lat": 51.4445700, "lon": 4.9184300 },
+    { "lat": 51.4448300, "lon": 4.9184300 }
+  ],
+  "tags": {
+    "highway": "service"
+  }
+},
+{
+  "type": "way",
+  "id": 7217017,
+  "bounds": {
+    "minlat": 51.4439703,
+    "minlon": 4.9271131,
+    "maxlat": 51.4446509,
+    "maxlon": 4.9273210
+  },
+  "nodes": [
+    42641084,
+    42641198,
+    11411741483,
+    42641693,
+    4607870479,
+    42641965,
+    4607870590,
+    2625074822
+  ],
+  "geometry": [
+    { "lat": 51.4439703, "lon": 4.9271131 },
+    { "lat": 51.4440422, "lon": 4.9271898 },
+    { "lat": 51.4441672, "lon": 4.9272984 },
+    { "lat": 51.4442124, "lon": 4.9273168 },
+    { "lat": 51.4442369, "lon": 4.9273210 },
+    { "lat": 51.4443235, "lon": 4.9273117 },
+    { "lat": 51.4444594, "lon": 4.9272717 },
+    { "lat": 51.4446509, "lon": 4.9272154 }
+  ],
+  "tags": {
+    "highway": "unclassified",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Sint Janstraat",
+    "surface": "paving_stones",
+    "wikidata": "Q19515834",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217024,
+  "bounds": {
+    "minlat": 51.4442085,
+    "minlon": 4.9274184,
+    "maxlat": 51.4443007,
+    "maxlon": 4.9283022
+  },
+  "nodes": [
+    11411741482,
+    42641716,
+    11411741481,
+    42641717,
+    6485818568,
+    42641773
+  ],
+  "geometry": [
+    { "lat": 51.4442085, "lon": 4.9274184 },
+    { "lat": 51.4442253, "lon": 4.9278734 },
+    { "lat": 51.4442338, "lon": 4.9280994 },
+    { "lat": 51.4442522, "lon": 4.9281805 },
+    { "lat": 51.4442879, "lon": 4.9282245 },
+    { "lat": 51.4443007, "lon": 4.9283022 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Pastoor Vekemanshof",
+    "surface": "paving_stones",
+    "wikidata": "Q19408057",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217032,
+  "bounds": {
+    "minlat": 51.4437022,
+    "minlon": 4.9268418,
+    "maxlat": 51.4439409,
+    "maxlon": 4.9270513
+  },
+  "nodes": [
+    5942908456,
+    266721738,
+    266721736
+  ],
+  "geometry": [
+    { "lat": 51.4439409, "lon": 4.9270513 },
+    { "lat": 51.4438239, "lon": 4.9269407 },
+    { "lat": 51.4437022, "lon": 4.9268418 }
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "name": "de Loswal",
+    "oneway": "yes",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217086,
+  "bounds": {
+    "minlat": 51.4449121,
+    "minlon": 4.9257237,
+    "maxlat": 51.4453325,
+    "maxlon": 4.9268182
+  },
+  "nodes": [
+    42644803,
+    6726264213,
+    11347253836,
+    42644556,
+    11347253837,
+    10153262449,
+    42644135,
+    10153262451
+  ],
+  "geometry": [
+    { "lat": 51.4453325, "lon": 4.9268182 },
+    { "lat": 51.4452928, "lon": 4.9266615 },
+    { "lat": 51.4452757, "lon": 4.9265818 },
+    { "lat": 51.4452422, "lon": 4.9264755 },
+    { "lat": 51.4452272, "lon": 4.9264281 },
+    { "lat": 51.4451722, "lon": 4.9262780 },
+    { "lat": 51.4450922, "lon": 4.9261044 },
+    { "lat": 51.4449121, "lon": 4.9257237 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "name": "Leliestraat",
+    "oneway": "yes",
+    "oneway:bicycle": "no",
+    "oneway:mofa": "no",
+    "oneway:moped": "no",
+    "surface": "paving_stones",
+    "wikidata": "Q19324327",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217090,
+  "bounds": {
+    "minlat": 51.4453325,
+    "minlon": 4.9268182,
+    "maxlat": 51.4453778,
+    "maxlon": 4.9270037
+  },
+  "nodes": [
+    42644994,
+    9720104728,
+    42644803
+  ],
+  "geometry": [
+    { "lat": 51.4453778, "lon": 4.9270037 },
+    { "lat": 51.4453566, "lon": 4.9269215 },
+    { "lat": 51.4453325, "lon": 4.9268182 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Leliestraat",
+    "oneway": "yes",
+    "oneway:bicycle": "no",
+    "oneway:mofa": "no",
+    "oneway:moped": "no",
+    "surface": "paving_stones",
+    "wikidata": "Q19324327",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217202,
+  "bounds": {
+    "minlat": 51.4416394,
+    "minlon": 4.9274870,
+    "maxlat": 51.4434083,
+    "maxlon": 4.9277339
+  },
+  "nodes": [
+    42634217,
+    11407494745,
+    12435726399,
+    4582545553,
+    13281545435,
+    42636930,
+    11407473869,
+    6286486279,
+    9720104724
+  ],
+  "geometry": [
+    { "lat": 51.4416394, "lon": 4.9277339 },
+    { "lat": 51.4417198, "lon": 4.9277276 },
+    { "lat": 51.4421606, "lon": 4.9276585 },
+    { "lat": 51.4422067, "lon": 4.9276528 },
+    { "lat": 51.4424696, "lon": 4.9276163 },
+    { "lat": 51.4426436, "lon": 4.9275921 },
+    { "lat": 51.4431637, "lon": 4.9275204 },
+    { "lat": 51.4432973, "lon": 4.9275005 },
+    { "lat": 51.4434083, "lon": 4.9274870 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxweight:conditional": "none @ destination",
+    "name": "Stationsstraat",
+    "surface": "paving_stones",
+    "wikidata": "Q19546959",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217209,
+  "bounds": {
+    "minlat": 51.4441201,
+    "minlon": 4.9176977,
+    "maxlat": 51.4442119,
+    "maxlon": 4.9182860
+  },
+  "nodes": [
+    5975127364,
+    617380888,
+    3455727417
+  ],
+  "geometry": [
+    { "lat": 51.4441201, "lon": 4.9182860 },
+    { "lat": 51.4441957, "lon": 4.9178234 },
+    { "lat": 51.4442119, "lon": 4.9176977 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Loveren",
+    "operator": "Gemeente Baarle-Nassau",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217211,
+  "bounds": {
+    "minlat": 51.4441276,
+    "minlon": 4.9184003,
+    "maxlat": 51.4444418,
+    "maxlon": 4.9185063
+  },
+  "nodes": [
+    42641231,
+    10153262442,
+    5975127363,
+    10876513871,
+    42642261
+  ],
+  "geometry": [
+    { "lat": 51.4441276, "lon": 4.9184003 },
+    { "lat": 51.4441463, "lon": 4.9184391 },
+    { "lat": 51.4441780, "lon": 4.9184578 },
+    { "lat": 51.4443979, "lon": 4.9185044 },
+    { "lat": 51.4444418, "lon": 4.9185063 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "no",
+    "maxspeed": "30",
+    "name": "Loveren",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217217,
+  "bounds": {
+    "minlat": 51.4434534,
+    "minlon": 4.9188792,
+    "maxlat": 51.4440059,
+    "maxlon": 4.9212634
+  },
+  "nodes": [
+    11388367511,
+    11343213376,
+    266721745,
+    11343255491,
+    11343213377,
+    11343213374,
+    42640791,
+    5975127358,
+    11343213378,
+    11388367512
+  ],
+  "geometry": [
+    { "lat": 51.4434534, "lon": 4.9212634 },
+    { "lat": 51.4434754, "lon": 4.9212028 },
+    { "lat": 51.4434935, "lon": 4.9211406 },
+    { "lat": 51.4435364, "lon": 4.9210019 },
+    { "lat": 51.4435730, "lon": 4.9208647 },
+    { "lat": 51.4436316, "lon": 4.9206388 },
+    { "lat": 51.4436713, "lon": 4.9204402 },
+    { "lat": 51.4438527, "lon": 4.9195776 },
+    { "lat": 51.4439960, "lon": 4.9189283 },
+    { "lat": 51.4440059, "lon": 4.9188792 }
+  ],
+  "tags": {
+    "cycleway:both": "shared_lane",
+    "cycleway:both:lane": "advisory",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Loveren",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217218,
+  "bounds": {
+    "minlat": 51.4442119,
+    "minlon": 4.9148635,
+    "maxlat": 51.4445497,
+    "maxlon": 4.9176977
+  },
+  "nodes": [
+    3455727417,
+    11343213379,
+    42641676,
+    2625425531,
+    42641848,
+    42642257,
+    11343213380,
+    42642500
+  ],
+  "geometry": [
+    { "lat": 51.4442119, "lon": 4.9176977 },
+    { "lat": 51.4442216, "lon": 4.9176176 },
+    { "lat": 51.4442308, "lon": 4.9175375 },
+    { "lat": 51.4442633, "lon": 4.9172700 },
+    { "lat": 51.4442895, "lon": 4.9170661 },
+    { "lat": 51.4444359, "lon": 4.9158120 },
+    { "lat": 51.4444628, "lon": 4.9155934 },
+    { "lat": 51.4445497, "lon": 4.9148635 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lane_markings": "no",
+    "maxspeed": "50",
+    "name": "Loveren",
+    "operator": "Gemeente Baarle-Nassau",
+    "surface": "asphalt",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217268,
+  "bounds": {
+    "minlat": 51.4440465,
+    "minlon": 4.9267144,
+    "maxlat": 51.4440927,
+    "maxlon": 4.9269043
+  },
+  "nodes": [
+    253819425,
+    5942908453,
+    5942908459
+  ],
+  "geometry": [
+    { "lat": 51.4440465, "lon": 4.9269043 },
+    { "lat": 51.4440920, "lon": 4.9267750 },
+    { "lat": 51.4440927, "lon": 4.9267144 }
+  ],
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Chaamseweg",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "paving_stones",
+    "wikidata": "Q18985665",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217270,
+  "bounds": {
+    "minlat": 51.4438094,
+    "minlon": 4.9271131,
+    "maxlat": 51.4439703,
+    "maxlon": 4.9274886
+  },
+  "nodes": [
+    42640649,
+    5942908452,
+    42641084
+  ],
+  "geometry": [
+    { "lat": 51.4438094, "lon": 4.9274886 },
+    { "lat": 51.4438618, "lon": 4.9274199 },
+    { "lat": 51.4439703, "lon": 4.9271131 }
+  ],
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Nieuwstraat",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "paving_stones",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217277,
+  "bounds": {
+    "minlat": 51.4439703,
+    "minlon": 4.9269043,
+    "maxlat": 51.4440465,
+    "maxlon": 4.9271131
+  },
+  "nodes": [
+    42641084,
+    253819425
+  ],
+  "geometry": [
+    { "lat": 51.4439703, "lon": 4.9271131 },
+    { "lat": 51.4440465, "lon": 4.9269043 }
+  ],
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Chaamseweg",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "paving_stones",
+    "wikidata": "Q18985665",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 7217296,
+  "bounds": {
+    "minlat": 51.4449317,
+    "minlon": 4.9220945,
+    "maxlat": 51.4457006,
+    "maxlon": 4.9243135
+  },
+  "nodes": [
+    11346118624,
+    8006079762,
+    42643019,
+    9755895381,
+    11346118625,
+    8006079775,
+    8006079769,
+    42643284,
+    11388399114
+  ],
+  "geometry": [
+    { "lat": 51.4449317, "lon": 4.9243135 },
+    { "lat": 51.4450827, "lon": 4.9238498 },
+    { "lat": 51.4451377, "lon": 4.9236882 },
+    { "lat": 51.4453320, "lon": 4.9231192 },
+    { "lat": 51.4454102, "lon": 4.9229010 },
+    { "lat": 51.4455009, "lon": 4.9226529 },
+    { "lat": 51.4455586, "lon": 4.9224916 },
+    { "lat": 51.4455660, "lon": 4.9224708 },
+    { "lat": 51.4457006, "lon": 4.9220945 }
+  ],
+  "tags": {
+    "emergency": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Chaamseweg",
+    "surface": "asphalt",
+    "wikidata": "Q18985665",
+    "zone:traffic:left": "BE-VLG:urban",
+    "zone:traffic:right": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 18470003,
+  "bounds": {
+    "minlat": 51.4432870,
+    "minlon": 4.9268011,
+    "maxlat": 51.4440082,
+    "maxlon": 4.9271385
+  },
+  "nodes": [
+    5942908457,
+    8006079731,
+    5942908454,
+    34077842,
+    266721738,
+    34077848,
+    10153262446
+  ],
+  "geometry": [
+    { "lat": 51.4440082, "lon": 4.9268677 },
+    { "lat": 51.4439781, "lon": 4.9268394 },
+    { "lat": 51.4439441, "lon": 4.9268136 },
+    { "lat": 51.4438714, "lon": 4.9268011 },
+    { "lat": 51.4438239, "lon": 4.9269407 },
+    { "lat": 51.4437728, "lon": 4.9270654 },
+    { "lat": 51.4432870, "lon": 4.9271385 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "railway": "abandoned",
+    "ref": "29",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 18475096,
+  "bounds": {
+    "minlat": 51.4440737,
+    "minlon": 4.9241174,
+    "maxlat": 51.4446506,
+    "maxlon": 4.9251592
+  },
+  "nodes": [
+    11388399115,
+    8006079737,
+    5972580023,
+    5972580024,
+    5972580025,
+    190590057
+  ],
+  "geometry": [
+    { "lat": 51.4446506, "lon": 4.9251592 },
+    { "lat": 51.4446138, "lon": 4.9251047 },
+    { "lat": 51.4446012, "lon": 4.9250851 },
+    { "lat": 51.4445345, "lon": 4.9249595 },
+    { "lat": 51.4443740, "lon": 4.9246645 },
+    { "lat": 51.4440737, "lon": 4.9241174 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "no",
+    "maxspeed": "50",
+    "name": "Burgemeester van Gilsestraat",
+    "sidewalk": "no",
+    "surface": "paving_stones",
+    "wikidata": "Q18979886",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 24529165,
+  "bounds": {
+    "minlat": 51.4444418,
+    "minlon": 4.9185063,
+    "maxlat": 51.4451499,
+    "maxlon": 4.9199045
+  },
+  "nodes": [
+    3867837637,
+    42644235,
+    11343345670,
+    42642748,
+    11343345671,
+    42642432,
+    42642261
+  ],
+  "geometry": [
+    { "lat": 51.4451499, "lon": 4.9199045 },
+    { "lat": 51.4451200, "lon": 4.9198625 },
+    { "lat": 51.4447372, "lon": 4.9191772 },
+    { "lat": 51.4446516, "lon": 4.9190159 },
+    { "lat": 51.4446233, "lon": 4.9189544 },
+    { "lat": 51.4444562, "lon": 4.9185464 },
+    { "lat": 51.4444418, "lon": 4.9185063 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Nonnenkuil",
+    "source": "survey",
+    "surface": "paving_stones",
+    "wikidata": "Q19371421",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 24529167,
+  "bounds": {
+    "minlat": 51.4431774,
+    "minlon": 4.9216936,
+    "maxlat": 51.4439230,
+    "maxlon": 4.9237307
+  },
+  "nodes": [
+    5972484694,
+    5972484695,
+    8006079728,
+    8006079729,
+    5972484696,
+    8005882664,
+    8005882663,
+    42639860
+  ],
+  "geometry": [
+    { "lat": 51.4439230, "lon": 4.9237307 },
+    { "lat": 51.4438562, "lon": 4.9235539 },
+    { "lat": 51.4438451, "lon": 4.9235174 },
+    { "lat": 51.4438178, "lon": 4.9234452 },
+    { "lat": 51.4436289, "lon": 4.9229452 },
+    { "lat": 51.4435193, "lon": 4.9226115 },
+    { "lat": 51.4433464, "lon": 4.9221533 },
+    { "lat": 51.4431774, "lon": 4.9216936 }
+  ],
+  "tags": {
+    "highway": "track",
+    "mapillary": "3971164582939501",
+    "motorcar": "no",
+    "motorcycle": "no",
+    "name": "Burgemeester van Gilsestraat",
+    "source": "survey",
+    "surface": "gravel",
+    "tracktype": "grade2",
+    "wikidata": "Q18979886",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 47341634,
+  "bounds": {
+    "minlat": 51.4444174,
+    "minlon": 4.9252840,
+    "maxlat": 51.4445045,
+    "maxlon": 4.9254217
+  },
+  "nodes": [
+    2780611897,
+    602866477,
+    602866476,
+    602866475,
+    602866457,
+    602866456,
+    2780611897
+  ],
+  "geometry": [
+    { "lat": 51.4445045, "lon": 4.9253416 },
+    { "lat": 51.4444944, "lon": 4.9253712 },
+    { "lat": 51.4444980, "lon": 4.9253745 },
+    { "lat": 51.4444813, "lon": 4.9254217 },
+    { "lat": 51.4444174, "lon": 4.9253447 },
+    { "lat": 51.4444375, "lon": 4.9252840 },
+    { "lat": 51.4445045, "lon": 4.9253416 }
+  ],
+  "tags": {
+    "addr:city": "Zondereigen",
+    "addr:housenumber": "10,11",
+    "addr:postcode": "2387",
+    "addr:street": "Chaamseweg",
+    "building": "yes",
+    "source": "3dShapes"
+  }
+},
+{
+  "type": "way",
+  "id": 204135539,
+  "bounds": {
+    "minlat": 51.4432289,
+    "minlon": 4.9268418,
+    "maxlat": 51.4437022,
+    "maxlon": 4.9269992
+  },
+  "nodes": [
+    10153262447,
+    6286491604,
+    6286491595,
+    6286491605,
+    2141508733,
+    2141508738,
+    6286530826,
+    6198778406,
+    266721736
+  ],
+  "geometry": [
+    { "lat": 51.4432289, "lon": 4.9269992 },
+    { "lat": 51.4432521, "lon": 4.9269956 },
+    { "lat": 51.4432602, "lon": 4.9269946 },
+    { "lat": 51.4432749, "lon": 4.9269925 },
+    { "lat": 51.4433176, "lon": 4.9269847 },
+    { "lat": 51.4436094, "lon": 4.9269439 },
+    { "lat": 51.4436374, "lon": 4.9269359 },
+    { "lat": 51.4436617, "lon": 4.9269115 },
+    { "lat": 51.4437022, "lon": 4.9268418 }
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "name": "de Loswal",
+    "service": "parking_aisle",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 256970071,
+  "bounds": {
+    "minlat": 51.4446509,
+    "minlon": 4.9270037,
+    "maxlat": 51.4453778,
+    "maxlon": 4.9272154
+  },
+  "nodes": [
+    2625074822,
+    42643486,
+    2625074823,
+    4607870487,
+    42644540,
+    11347253834,
+    2625074825,
+    42644994
+  ],
+  "geometry": [
+    { "lat": 51.4446509, "lon": 4.9272154 },
+    { "lat": 51.4448629, "lon": 4.9271529 },
+    { "lat": 51.4450749, "lon": 4.9270905 },
+    { "lat": 51.4451688, "lon": 4.9270629 },
+    { "lat": 51.4452271, "lon": 4.9270457 },
+    { "lat": 51.4452748, "lon": 4.9270317 },
+    { "lat": 51.4453451, "lon": 4.9270115 },
+    { "lat": 51.4453778, "lon": 4.9270037 }
+  ],
+  "tags": {
+    "highway": "unclassified",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Sint Janstraat",
+    "surface": "paving_stones",
+    "wikidata": "Q19515834",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 273188846,
+  "bounds": {
+    "minlat": 51.4439034,
+    "minlon": 4.9182947,
+    "maxlat": 51.4440260,
+    "maxlon": 4.9185482
+  },
+  "nodes": [
+    2780610753,
+    2780610713,
+    2780610582,
+    2780610636,
+    2780610753
+  ],
+  "geometry": [
+    { "lat": 51.4440260, "lon": 4.9183271 },
+    { "lat": 51.4439974, "lon": 4.9185482 },
+    { "lat": 51.4439034, "lon": 4.9185170 },
+    { "lat": 51.4439338, "lon": 4.9182947 },
+    { "lat": 51.4440260, "lon": 4.9183271 }
+  ],
+  "tags": {
+    "addr:city": "Baarle-Hertog",
+    "addr:housenumber": "2",
+    "addr:postcode": "2387",
+    "addr:street": "Loveren",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 338492891,
+  "bounds": {
+    "minlat": 51.4415969,
+    "minlon": 4.9168418,
+    "maxlat": 51.4440986,
+    "maxlon": 4.9178303
+  },
+  "nodes": [
+    11365747867,
+    3455727416,
+    11365747868,
+    3455727415,
+    11365759269,
+    3455727414,
+    11365759270,
+    11365759271,
+    11365759272,
+    3455727413,
+    11365759274,
+    11365759275,
+    3455727412,
+    3455256625
+  ],
+  "geometry": [
+    { "lat": 51.4440986, "lon": 4.9176820 },
+    { "lat": 51.4439026, "lon": 4.9176559 },
+    { "lat": 51.4438718, "lon": 4.9176629 },
+    { "lat": 51.4437416, "lon": 4.9176888 },
+    { "lat": 51.4435414, "lon": 4.9177317 },
+    { "lat": 51.4432057, "lon": 4.9177815 },
+    { "lat": 51.4430502, "lon": 4.9178029 },
+    { "lat": 51.4426448, "lon": 4.9178303 },
+    { "lat": 51.4425449, "lon": 4.9178256 },
+    { "lat": 51.4424682, "lon": 4.9178024 },
+    { "lat": 51.4423835, "lon": 4.9177591 },
+    { "lat": 51.4422989, "lon": 4.9176799 },
+    { "lat": 51.4421531, "lon": 4.9175091 },
+    { "lat": 51.4415969, "lon": 4.9168418 }
+  ],
+  "tags": {
+    "highway": "track",
+    "maxspeed": "60",
+    "name": "Akkerstraat",
+    "surface": "dirt",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 383497980,
+  "bounds": {
+    "minlat": 51.4451499,
+    "minlon": 4.9199045,
+    "maxlat": 51.4457556,
+    "maxlon": 4.9202902
+  },
+  "nodes": [
+    3867837994,
+    266721743,
+    11343345669,
+    266721744,
+    3867837637
+  ],
+  "geometry": [
+    { "lat": 51.4457556, "lon": 4.9202902 },
+    { "lat": 51.4457000, "lon": 4.9202561 },
+    { "lat": 51.4454537, "lon": 4.9201113 },
+    { "lat": 51.4452598, "lon": 4.9199986 },
+    { "lat": 51.4451499, "lon": 4.9199045 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Nonnenkuil / Hoogbraak",
+    "name:left": "Nonnenkuil",
+    "name:right": "Hoogbraak",
+    "source": "survey",
+    "surface": "paving_stones",
+    "wikidata": "Q19371421",
+    "zone:traffic:left": "NL:urban",
+    "zone:traffic:right": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 435988554,
+  "bounds": {
+    "minlat": 51.4452854,
+    "minlon": 4.9235098,
+    "maxlat": 51.4457779,
+    "maxlon": 4.9246461
+  },
+  "nodes": [
+    4338766069,
+    5320860751,
+    4338766111,
+    9755895386,
+    5320860750
+  ],
+  "geometry": [
+    { "lat": 51.4452854, "lon": 4.9246461 },
+    { "lat": 51.4454256, "lon": 4.9242207 },
+    { "lat": 51.4456475, "lon": 4.9235510 },
+    { "lat": 51.4456822, "lon": 4.9235400 },
+    { "lat": 51.4457779, "lon": 4.9235098 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Kogelflesstraat",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 435988555,
+  "bounds": {
+    "minlat": 51.4456399,
+    "minlon": 4.9248741,
+    "maxlat": 51.4458572,
+    "maxlon": 4.9253625
+  },
+  "nodes": [
+    6248940518,
+    6758799039
+  ],
+  "geometry": [
+    { "lat": 51.4458572, "lon": 4.9253625 },
+    { "lat": 51.4456399, "lon": 4.9248741 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Limfalaan",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 465883890,
+  "bounds": {
+    "minlat": 51.4442391,
+    "minlon": 4.9268361,
+    "maxlat": 51.4450060,
+    "maxlon": 4.9270759
+  },
+  "nodes": [
+    4607870480,
+    4607870589,
+    4623279939,
+    10876698203,
+    11411741484,
+    4607870591,
+    10876706122
+  ],
+  "geometry": [
+    { "lat": 51.4442391, "lon": 4.9270759 },
+    { "lat": 51.4444306, "lon": 4.9270174 },
+    { "lat": 51.4444424, "lon": 4.9270136 },
+    { "lat": 51.4445015, "lon": 4.9269937 },
+    { "lat": 51.4447510, "lon": 4.9269196 },
+    { "lat": 51.4449703, "lon": 4.9268471 },
+    { "lat": 51.4450060, "lon": 4.9268361 }
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "parking_aisle",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 465883893,
+  "bounds": {
+    "minlat": 51.4449703,
+    "minlon": 4.9268471,
+    "maxlat": 51.4450696,
+    "maxlon": 4.9270390
+  },
+  "nodes": [
+    4607870591,
+    4607870592,
+    4607870593,
+    4607870594,
+    8004086034
+  ],
+  "geometry": [
+    { "lat": 51.4449703, "lon": 4.9268471 },
+    { "lat": 51.4449845, "lon": 4.9269440 },
+    { "lat": 51.4450312, "lon": 4.9269276 },
+    { "lat": 51.4450628, "lon": 4.9269621 },
+    { "lat": 51.4450696, "lon": 4.9270390 }
+  ],
+  "tags": {
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 550944421,
+  "bounds": {
+    "minlat": 51.4451372,
+    "minlon": 4.9239772,
+    "maxlat": 51.4454256,
+    "maxlon": 4.9242207
+  },
+  "nodes": [
+    5320860752,
+    5320860751
+  ],
+  "geometry": [
+    { "lat": 51.4451372, "lon": 4.9239772 },
+    { "lat": 51.4454256, "lon": 4.9242207 }
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "parking_aisle"
+  }
+},
+{
+  "type": "way",
+  "id": 578273574,
+  "bounds": {
+    "minlat": 51.4456044,
+    "minlon": 4.9241065,
+    "maxlat": 51.4463228,
+    "maxlon": 4.9249120
+  },
+  "nodes": [
+    10119114251,
+    11347253840,
+    11347253841,
+    6758799039,
+    4338765863
+  ],
+  "geometry": [
+    { "lat": 51.4463228, "lon": 4.9241065 },
+    { "lat": 51.4459823, "lon": 4.9244626 },
+    { "lat": 51.4457278, "lon": 4.9247701 },
+    { "lat": 51.4456399, "lon": 4.9248741 },
+    { "lat": 51.4456044, "lon": 4.9249120 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Beugelflesstraat",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 629496566,
+  "bounds": {
+    "minlat": 51.4440282,
+    "minlon": 4.9268874,
+    "maxlat": 51.4440465,
+    "maxlon": 4.9269043
+  },
+  "nodes": [
+    253819425,
+    10153262445
+  ],
+  "geometry": [
+    { "lat": 51.4440465, "lon": 4.9269043 },
+    { "lat": 51.4440282, "lon": 4.9268874 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "lit": "yes",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "railway": "abandoned",
+    "ref": "29",
+    "surface": "paving_stones",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 629496567,
+  "bounds": {
+    "minlat": 51.4438094,
+    "minlon": 4.9270513,
+    "maxlat": 51.4439409,
+    "maxlon": 4.9274886
+  },
+  "nodes": [
+    5942908456,
+    5942908455,
+    42640649
+  ],
+  "geometry": [
+    { "lat": 51.4439409, "lon": 4.9270513 },
+    { "lat": 51.4438207, "lon": 4.9273776 },
+    { "lat": 51.4438094, "lon": 4.9274886 }
+  ],
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Nieuwstraat",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "paving_stones",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 629496568,
+  "bounds": {
+    "minlat": 51.4439409,
+    "minlon": 4.9268677,
+    "maxlat": 51.4440082,
+    "maxlon": 4.9270513
+  },
+  "nodes": [
+    5942908457,
+    5942908456
+  ],
+  "geometry": [
+    { "lat": 51.4440082, "lon": 4.9268677 },
+    { "lat": 51.4439409, "lon": 4.9270513 }
+  ],
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Chaamseweg",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "paving_stones",
+    "wikidata": "Q18985665",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 629496569,
+  "bounds": {
+    "minlat": 51.4440927,
+    "minlon": 4.9254550,
+    "maxlat": 51.4445491,
+    "maxlon": 4.9267144
+  },
+  "nodes": [
+    5942908459,
+    9720104726
+  ],
+  "geometry": [
+    { "lat": 51.4440927, "lon": 4.9267144 },
+    { "lat": 51.4445491, "lon": 4.9254550 }
+  ],
+  "tags": {
+    "emergency": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Chaamseweg",
+    "surface": "paving_stones",
+    "wikidata": "Q18985665",
+    "zone:traffic:left": "BE-VLG:urban",
+    "zone:traffic:right": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 629496570,
+  "bounds": {
+    "minlat": 51.4439571,
+    "minlon": 4.9270846,
+    "maxlat": 51.4439703,
+    "maxlon": 4.9271131
+  },
+  "nodes": [
+    42641084,
+    10153262444
+  ],
+  "geometry": [
+    { "lat": 51.4439703, "lon": 4.9271131 },
+    { "lat": 51.4439571, "lon": 4.9270846 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "unclassified",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Sint Janstraat",
+    "sidewalk": "no",
+    "surface": "paving_stones",
+    "wikidata": "Q19515834",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 629496571,
+  "bounds": {
+    "minlat": 51.4440082,
+    "minlon": 4.9267144,
+    "maxlat": 51.4440927,
+    "maxlon": 4.9268677
+  },
+  "nodes": [
+    5942908459,
+    5942908458,
+    5942908457
+  ],
+  "geometry": [
+    { "lat": 51.4440927, "lon": 4.9267144 },
+    { "lat": 51.4440568, "lon": 4.9267481 },
+    { "lat": 51.4440082, "lon": 4.9268677 }
+  ],
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Chaamseweg",
+    "oneway": "yes",
+    "sidewalk": "right",
+    "surface": "paving_stones",
+    "wikidata": "Q18985665",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 662114462,
+  "bounds": {
+    "minlat": 51.4418450,
+    "minlon": 4.9268351,
+    "maxlat": 51.4431779,
+    "maxlon": 4.9271521
+  },
+  "nodes": [
+    10153262448,
+    13281545440,
+    42636439,
+    42635961,
+    42635427,
+    2141508729,
+    2141508722
+  ],
+  "geometry": [
+    { "lat": 51.4431779, "lon": 4.9268351 },
+    { "lat": 51.4424831, "lon": 4.9269371 },
+    { "lat": 51.4424309, "lon": 4.9269448 },
+    { "lat": 51.4422150, "lon": 4.9269765 },
+    { "lat": 51.4420534, "lon": 4.9270071 },
+    { "lat": 51.4418954, "lon": 4.9270576 },
+    { "lat": 51.4418450, "lon": 4.9271521 }
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "name": "de Loswal",
+    "oneway": "yes",
+    "service": "parking_aisle",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 671292213,
+  "bounds": {
+    "minlat": 51.4432908,
+    "minlon": 4.9272126,
+    "maxlat": 51.4436854,
+    "maxlon": 4.9275005
+  },
+  "nodes": [
+    6286486279,
+    6286486280,
+    6286486281,
+    6286486282,
+    6286486283,
+    11407428568,
+    6286486284
+  ],
+  "geometry": [
+    { "lat": 51.4432973, "lon": 4.9275005 },
+    { "lat": 51.4432908, "lon": 4.9273466 },
+    { "lat": 51.4432938, "lon": 4.9273074 },
+    { "lat": 51.4433030, "lon": 4.9272879 },
+    { "lat": 51.4433162, "lon": 4.9272764 },
+    { "lat": 51.4433373, "lon": 4.9272649 },
+    { "lat": 51.4436854, "lon": 4.9272126 }
+  ],
+  "tags": {
+    "highway": "service",
+    "oneway": "no",
+    "service": "parking_aisle",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 671292215,
+  "bounds": {
+    "minlat": 51.4432602,
+    "minlon": 4.9269946,
+    "maxlat": 51.4432938,
+    "maxlon": 4.9273074
+  },
+  "nodes": [
+    6286486281,
+    6286491592,
+    6286491598,
+    6286491593,
+    6286491596,
+    7595913782,
+    6286491594,
+    6286491597,
+    6286491595
+  ],
+  "geometry": [
+    { "lat": 51.4432938, "lon": 4.9273074 },
+    { "lat": 51.4432814, "lon": 4.9272770 },
+    { "lat": 51.4432779, "lon": 4.9272591 },
+    { "lat": 51.4432731, "lon": 4.9272209 },
+    { "lat": 51.4432727, "lon": 4.9272120 },
+    { "lat": 51.4432680, "lon": 4.9271407 },
+    { "lat": 51.4432681, "lon": 4.9271338 },
+    { "lat": 51.4432633, "lon": 4.9270540 },
+    { "lat": 51.4432602, "lon": 4.9269946 }
+  ],
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "path",
+    "motor_vehicle": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 715717848,
+  "bounds": {
+    "minlat": 51.4452928,
+    "minlon": 4.9256379,
+    "maxlat": 51.4464393,
+    "maxlon": 4.9266615
+  },
+  "nodes": [
+    6726264213,
+    6726264214,
+    6726264215,
+    6726264216,
+    6726264217,
+    6726264218,
+    6726264219
+  ],
+  "geometry": [
+    { "lat": 51.4452928, "lon": 4.9266615 },
+    { "lat": 51.4454546, "lon": 4.9266067 },
+    { "lat": 51.4455329, "lon": 4.9265712 },
+    { "lat": 51.4456052, "lon": 4.9265025 },
+    { "lat": 51.4458650, "lon": 4.9262419 },
+    { "lat": 51.4460201, "lon": 4.9260832 },
+    { "lat": 51.4464393, "lon": 4.9256379 }
+  ],
+  "tags": {
+    "highway": "service",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 720127424,
+  "bounds": {
+    "minlat": 51.4449253,
+    "minlon": 4.9243344,
+    "maxlat": 51.4456044,
+    "maxlon": 4.9249120
+  },
+  "nodes": [
+    4338765863,
+    4338766069,
+    11347253842,
+    4338765959
+  ],
+  "geometry": [
+    { "lat": 51.4456044, "lon": 4.9249120 },
+    { "lat": 51.4452854, "lon": 4.9246461 },
+    { "lat": 51.4451631, "lon": 4.9245414 },
+    { "lat": 51.4449253, "lon": 4.9243344 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Limfalaan",
+    "operator": "Gemeente Baarle-Nassau",
+    "operator:addr:country": "NL",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 858614767,
+  "bounds": {
+    "minlat": 51.4450696,
+    "minlon": 4.9270390,
+    "maxlat": 51.4450798,
+    "maxlon": 4.9271367
+  },
+  "nodes": [
+    8004086034,
+    2625074823,
+    8004086035
+  ],
+  "geometry": [
+    { "lat": 51.4450696, "lon": 4.9270390 },
+    { "lat": 51.4450749, "lon": 4.9270905 },
+    { "lat": 51.4450798, "lon": 4.9271367 }
+  ],
+  "tags": {
+    "crossing": "marked",
+    "crossing:markings": "yes",
+    "footway": "crossing",
+    "highway": "footway",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 858614768,
+  "bounds": {
+    "minlat": 51.4442145,
+    "minlon": 4.9268171,
+    "maxlat": 51.4453157,
+    "maxlon": 4.9272653
+  },
+  "nodes": [
+    8004086036,
+    8004086037,
+    8004086038,
+    8004086039,
+    8004086040,
+    8004086041,
+    8004086034,
+    8004086043,
+    8004086044,
+    8004086045,
+    8004086046,
+    8004086047,
+    8004086048,
+    10876698202,
+    8004086050,
+    8004086051,
+    8004086052,
+    8004086054,
+    8238446111
+  ],
+  "geometry": [
+    { "lat": 51.4453005, "lon": 4.9268171 },
+    { "lat": 51.4453131, "lon": 4.9268700 },
+    { "lat": 51.4453157, "lon": 4.9269194 },
+    { "lat": 51.4453044, "lon": 4.9269602 },
+    { "lat": 51.4452716, "lon": 4.9269805 },
+    { "lat": 51.4451626, "lon": 4.9270110 },
+    { "lat": 51.4450696, "lon": 4.9270390 },
+    { "lat": 51.4449821, "lon": 4.9270631 },
+    { "lat": 51.4449112, "lon": 4.9270674 },
+    { "lat": 51.4448757, "lon": 4.9270642 },
+    { "lat": 51.4447734, "lon": 4.9270900 },
+    { "lat": 51.4446631, "lon": 4.9271222 },
+    { "lat": 51.4445728, "lon": 4.9271511 },
+    { "lat": 51.4445132, "lon": 4.9271653 },
+    { "lat": 51.4444516, "lon": 4.9271834 },
+    { "lat": 51.4443856, "lon": 4.9272294 },
+    { "lat": 51.4443053, "lon": 4.9272627 },
+    { "lat": 51.4442467, "lon": 4.9272653 },
+    { "lat": 51.4442145, "lon": 4.9272546 }
+  ],
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 858614769,
+  "bounds": {
+    "minlat": 51.4440468,
+    "minlon": 4.9270069,
+    "maxlat": 51.4441528,
+    "maxlon": 4.9271858
+  },
+  "nodes": [
+    8004086061,
+    8004086066,
+    8004086067,
+    8004086068
+  ],
+  "geometry": [
+    { "lat": 51.4441268, "lon": 4.9271858 },
+    { "lat": 51.4441528, "lon": 4.9270556 },
+    { "lat": 51.4441451, "lon": 4.9270335 },
+    { "lat": 51.4440468, "lon": 4.9270069 }
+  ],
+  "tags": {
+    "highway": "footway",
+    "lit": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 858822234,
+  "bounds": {
+    "minlat": 51.4419630,
+    "minlon": 4.9236708,
+    "maxlat": 51.4430810,
+    "maxlon": 4.9244372
+  },
+  "nodes": [
+    8005882636,
+    8005882637,
+    8005882644,
+    11348404641,
+    12205659595,
+    8005882645,
+    12205659596,
+    11348404642,
+    12205659597,
+    11348404643,
+    12205659598,
+    12205659599,
+    11348404644,
+    12205659600,
+    8005882646,
+    11348404645,
+    11348404646,
+    12205685107,
+    8005882647,
+    12205685106,
+    12205685105,
+    11348404647,
+    12205685104,
+    12205685103,
+    11348404648,
+    12205685102,
+    12205685101,
+    8005882648,
+    8005882649,
+    8005882650
+  ],
+  "geometry": [
+    { "lat": 51.4419630, "lon": 4.9236708 },
+    { "lat": 51.4421084, "lon": 4.9237873 },
+    { "lat": 51.4423168, "lon": 4.9239849 },
+    { "lat": 51.4424924, "lon": 4.9241594 },
+    { "lat": 51.4425102, "lon": 4.9241674 },
+    { "lat": 51.4425271, "lon": 4.9241690 },
+    { "lat": 51.4425413, "lon": 4.9241674 },
+    { "lat": 51.4425551, "lon": 4.9241606 },
+    { "lat": 51.4425779, "lon": 4.9241394 },
+    { "lat": 51.4426083, "lon": 4.9241086 },
+    { "lat": 51.4426374, "lon": 4.9240906 },
+    { "lat": 51.4426684, "lon": 4.9240774 },
+    { "lat": 51.4426964, "lon": 4.9240707 },
+    { "lat": 51.4427217, "lon": 4.9240694 },
+    { "lat": 51.4427483, "lon": 4.9240739 },
+    { "lat": 51.4428101, "lon": 4.9241084 },
+    { "lat": 51.4428594, "lon": 4.9241462 },
+    { "lat": 51.4428900, "lon": 4.9241799 },
+    { "lat": 51.4428981, "lon": 4.9241950 },
+    { "lat": 51.4429005, "lon": 4.9242143 },
+    { "lat": 51.4429061, "lon": 4.9242615 },
+    { "lat": 51.4429123, "lon": 4.9243033 },
+    { "lat": 51.4429207, "lon": 4.9243396 },
+    { "lat": 51.4429271, "lon": 4.9243627 },
+    { "lat": 51.4429357, "lon": 4.9243807 },
+    { "lat": 51.4429497, "lon": 4.9243999 },
+    { "lat": 51.4429683, "lon": 4.9244138 },
+    { "lat": 51.4429866, "lon": 4.9244234 },
+    { "lat": 51.4430186, "lon": 4.9244334 },
+    { "lat": 51.4430810, "lon": 4.9244372 }
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway",
+    "surface": "ground"
+  }
+},
+{
+  "type": "way",
+  "id": 858844049,
+  "bounds": {
+    "minlat": 51.4438178,
+    "minlon": 4.9233084,
+    "maxlat": 51.4439782,
+    "maxlon": 4.9234452
+  },
+  "nodes": [
+    8006079729,
+    8006079730
+  ],
+  "geometry": [
+    { "lat": 51.4438178, "lon": 4.9234452 },
+    { "lat": 51.4439782, "lon": 4.9233084 }
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 858844050,
+  "bounds": {
+    "minlat": 51.4439781,
+    "minlon": 4.9250289,
+    "maxlat": 51.4446418,
+    "maxlon": 4.9268394
+  },
+  "nodes": [
+    8006079731,
+    8006079732,
+    8006079733,
+    8006079734,
+    8006079735,
+    8006079736,
+    8006079737,
+    8006079758
+  ],
+  "geometry": [
+    { "lat": 51.4439781, "lon": 4.9268394 },
+    { "lat": 51.4440676, "lon": 4.9266341 },
+    { "lat": 51.4442440, "lon": 4.9261267 },
+    { "lat": 51.4443519, "lon": 4.9258177 },
+    { "lat": 51.4444482, "lon": 4.9255632 },
+    { "lat": 51.4445521, "lon": 4.9252648 },
+    { "lat": 51.4446138, "lon": 4.9251047 },
+    { "lat": 51.4446418, "lon": 4.9250289 }
+  ],
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 858844053,
+  "bounds": {
+    "minlat": 51.4446418,
+    "minlon": 4.9248142,
+    "maxlat": 51.4447140,
+    "maxlon": 4.9250289
+  },
+  "nodes": [
+    8006079758,
+    8006079738,
+    8006079759
+  ],
+  "geometry": [
+    { "lat": 51.4446418, "lon": 4.9250289 },
+    { "lat": 51.4446692, "lon": 4.9249550 },
+    { "lat": 51.4447140, "lon": 4.9248142 }
+  ],
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "image": "https://images.mapillary.com/a7qGDWSMnqagV3hsZ4YhTO/thumb-2048.jpg",
+    "mapillary": "227023222101577"
+  }
+},
+{
+  "type": "way",
+  "id": 858844054,
+  "bounds": {
+    "minlat": 51.4447140,
+    "minlon": 4.9210444,
+    "maxlat": 51.4460793,
+    "maxlon": 4.9248142
+  },
+  "nodes": [
+    8006079759,
+    8006079768,
+    8006079739,
+    8006079740,
+    8006079741,
+    8006079763,
+    8006079742,
+    8006079743,
+    8006079744,
+    8006079745,
+    8006079746,
+    8006079747,
+    8006079748,
+    8006079749,
+    8006079750,
+    8006079755
+  ],
+  "geometry": [
+    { "lat": 51.4447140, "lon": 4.9248142 },
+    { "lat": 51.4447292, "lon": 4.9247664 },
+    { "lat": 51.4447881, "lon": 4.9245814 },
+    { "lat": 51.4448997, "lon": 4.9242208 },
+    { "lat": 51.4450123, "lon": 4.9238866 },
+    { "lat": 51.4450370, "lon": 4.9238099 },
+    { "lat": 51.4451035, "lon": 4.9236037 },
+    { "lat": 51.4451861, "lon": 4.9233663 },
+    { "lat": 51.4452722, "lon": 4.9231313 },
+    { "lat": 51.4454146, "lon": 4.9227264 },
+    { "lat": 51.4455200, "lon": 4.9224076 },
+    { "lat": 51.4456589, "lon": 4.9220425 },
+    { "lat": 51.4457542, "lon": 4.9217840 },
+    { "lat": 51.4458611, "lon": 4.9215279 },
+    { "lat": 51.4460725, "lon": 4.9210444 },
+    { "lat": 51.4460793, "lon": 4.9210517 }
+  ],
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway"
+  }
+},
+{
+  "type": "way",
+  "id": 858844058,
+  "bounds": {
+    "minlat": 51.4455586,
+    "minlon": 4.9224916,
+    "maxlat": 51.4459304,
+    "maxlon": 4.9233713
+  },
+  "nodes": [
+    8006079769,
+    8006079772,
+    8006079773,
+    8006079774
+  ],
+  "geometry": [
+    { "lat": 51.4455586, "lon": 4.9224916 },
+    { "lat": 51.4457575, "lon": 4.9226932 },
+    { "lat": 51.4458404, "lon": 4.9230238 },
+    { "lat": 51.4459304, "lon": 4.9233713 }
+  ],
+  "tags": {
+    "highway": "service",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 1057847860,
+  "bounds": {
+    "minlat": 51.4434083,
+    "minlon": 4.9274527,
+    "maxlat": 51.4438094,
+    "maxlon": 4.9274892
+  },
+  "nodes": [
+    9720104724,
+    42638827,
+    11407473870,
+    11407473871,
+    42640649
+  ],
+  "geometry": [
+    { "lat": 51.4434083, "lon": 4.9274870 },
+    { "lat": 51.4436282, "lon": 4.9274527 },
+    { "lat": 51.4436959, "lon": 4.9274651 },
+    { "lat": 51.4437515, "lon": 4.9274892 },
+    { "lat": 51.4438094, "lon": 4.9274886 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "tertiary",
+    "maxspeed": "50",
+    "name": "Stationsstraat",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19546959",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1057847861,
+  "bounds": {
+    "minlat": 51.4436173,
+    "minlon": 4.9274886,
+    "maxlat": 51.4438094,
+    "maxlon": 4.9280510
+  },
+  "nodes": [
+    9720104725,
+    42639840,
+    11407426453,
+    11407426452,
+    42640649
+  ],
+  "geometry": [
+    { "lat": 51.4436173, "lon": 4.9280510 },
+    { "lat": 51.4436342, "lon": 4.9280034 },
+    { "lat": 51.4436608, "lon": 4.9279262 },
+    { "lat": 51.4437217, "lon": 4.9277417 },
+    { "lat": 51.4438094, "lon": 4.9274886 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "maxspeed": "50",
+    "name": "Nieuwstraat",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "zone:traffic:left": "BE-VLG:urban",
+    "zone:traffic:right": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1057847862,
+  "bounds": {
+    "minlat": 51.4445491,
+    "minlon": 4.9252336,
+    "maxlat": 51.4446251,
+    "maxlon": 4.9254550
+  },
+  "nodes": [
+    9720104726,
+    9720104727,
+    42642729
+  ],
+  "geometry": [
+    { "lat": 51.4445491, "lon": 4.9254550 },
+    { "lat": 51.4445951, "lon": 4.9253211 },
+    { "lat": 51.4446251, "lon": 4.9252336 }
+  ],
+  "tags": {
+    "emergency": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Chaamseweg",
+    "surface": "paving_stones",
+    "wikidata": "Q18985665",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1057847863,
+  "bounds": {
+    "minlat": 51.4441167,
+    "minlon": 4.9182860,
+    "maxlat": 51.4441276,
+    "maxlon": 4.9184003
+  },
+  "nodes": [
+    42641231,
+    10153262441,
+    5975127364
+  ],
+  "geometry": [
+    { "lat": 51.4441276, "lon": 4.9184003 },
+    { "lat": 51.4441167, "lon": 4.9183376 },
+    { "lat": 51.4441201, "lon": 4.9182860 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Loveren",
+    "operator": "Gemeente Baarle-Nassau",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1061907304,
+  "bounds": {
+    "minlat": 51.4453320,
+    "minlon": 4.9231192,
+    "maxlat": 51.4456822,
+    "maxlon": 4.9235400
+  },
+  "nodes": [
+    9755895381,
+    9755895382,
+    9755895383,
+    9755895384,
+    9755895385,
+    9755895386
+  ],
+  "geometry": [
+    { "lat": 51.4453320, "lon": 4.9231192 },
+    { "lat": 51.4454330, "lon": 4.9232159 },
+    { "lat": 51.4455087, "lon": 4.9232859 },
+    { "lat": 51.4455843, "lon": 4.9233665 },
+    { "lat": 51.4456658, "lon": 4.9234424 },
+    { "lat": 51.4456822, "lon": 4.9235400 }
+  ],
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "cycleway",
+    "oneway": "no",
+    "segregated": "no",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875344,
+  "bounds": {
+    "minlat": 51.4439409,
+    "minlon": 4.9270513,
+    "maxlat": 51.4439571,
+    "maxlon": 4.9270846
+  },
+  "nodes": [
+    10153262444,
+    5942908456
+  ],
+  "geometry": [
+    { "lat": 51.4439571, "lon": 4.9270846 },
+    { "lat": 51.4439409, "lon": 4.9270513 }
+  ],
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "unclassified",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Sint Janstraat",
+    "sidewalk": "no",
+    "surface": "paving_stones",
+    "wikidata": "Q19515834",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875345,
+  "bounds": {
+    "minlat": 51.4440082,
+    "minlon": 4.9268677,
+    "maxlat": 51.4440282,
+    "maxlon": 4.9268874
+  },
+  "nodes": [
+    10153262445,
+    5942908457
+  ],
+  "geometry": [
+    { "lat": 51.4440282, "lon": 4.9268874 },
+    { "lat": 51.4440082, "lon": 4.9268677 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "lit": "yes",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "railway": "abandoned",
+    "ref": "29",
+    "surface": "paving_stones",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875346,
+  "bounds": {
+    "minlat": 51.4416503,
+    "minlon": 4.9271385,
+    "maxlat": 51.4432870,
+    "maxlon": 4.9273769
+  },
+  "nodes": [
+    10153262446,
+    7595913782,
+    11403181561,
+    13281545436,
+    857476954,
+    11403181560,
+    11403181559,
+    42634262
+  ],
+  "geometry": [
+    { "lat": 51.4432870, "lon": 4.9271385 },
+    { "lat": 51.4432680, "lon": 4.9271407 },
+    { "lat": 51.4432596, "lon": 4.9271412 },
+    { "lat": 51.4424493, "lon": 4.9272638 },
+    { "lat": 51.4421117, "lon": 4.9273148 },
+    { "lat": 51.4418918, "lon": 4.9273470 },
+    { "lat": 51.4416985, "lon": 4.9273769 },
+    { "lat": 51.4416503, "lon": 4.9273708 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "railway": "abandoned",
+    "ref": "29",
+    "surface": "paving_stones",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875347,
+  "bounds": {
+    "minlat": 51.4418450,
+    "minlon": 4.9269992,
+    "maxlat": 51.4432289,
+    "maxlon": 4.9272045
+  },
+  "nodes": [
+    2141508722,
+    2141508736,
+    6286530822,
+    13281545437,
+    10153262447
+  ],
+  "geometry": [
+    { "lat": 51.4418450, "lon": 4.9271521 },
+    { "lat": 51.4419111, "lon": 4.9272045 },
+    { "lat": 51.4421065, "lon": 4.9271740 },
+    { "lat": 51.4424416, "lon": 4.9271218 },
+    { "lat": 51.4432289, "lon": 4.9269992 }
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "name": "de Loswal",
+    "service": "parking_aisle",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875348,
+  "bounds": {
+    "minlat": 51.4431779,
+    "minlon": 4.9267871,
+    "maxlat": 51.4437022,
+    "maxlon": 4.9268418
+  },
+  "nodes": [
+    266721736,
+    2141508726,
+    11407428567,
+    10153262448
+  ],
+  "geometry": [
+    { "lat": 51.4437022, "lon": 4.9268418 },
+    { "lat": 51.4435890, "lon": 4.9267871 },
+    { "lat": 51.4434650, "lon": 4.9267975 },
+    { "lat": 51.4431779, "lon": 4.9268351 }
+  ],
+  "tags": {
+    "highway": "service",
+    "maxspeed": "30",
+    "name": "de Loswal",
+    "oneway": "yes",
+    "service": "parking_aisle",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875349,
+  "bounds": {
+    "minlat": 51.4439230,
+    "minlon": 4.9237307,
+    "maxlat": 51.4440737,
+    "maxlon": 4.9241174
+  },
+  "nodes": [
+    190590057,
+    5972484694
+  ],
+  "geometry": [
+    { "lat": 51.4440737, "lon": 4.9241174 },
+    { "lat": 51.4439230, "lon": 4.9237307 }
+  ],
+  "tags": {
+    "highway": "track",
+    "mapillary": "3971164582939501",
+    "motorcar": "no",
+    "motorcycle": "no",
+    "name": "Burgemeester van Gilsestraat",
+    "source": "survey",
+    "surface": "gravel",
+    "tracktype": "grade2",
+    "wikidata": "Q18979886",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875350,
+  "bounds": {
+    "minlat": 51.4453325,
+    "minlon": 4.9267895,
+    "maxlat": 51.4454968,
+    "maxlon": 4.9268182
+  },
+  "nodes": [
+    42644803,
+    11403181563,
+    10153262450
+  ],
+  "geometry": [
+    { "lat": 51.4453325, "lon": 4.9268182 },
+    { "lat": 51.4454063, "lon": 4.9268029 },
+    { "lat": 51.4454968, "lon": 4.9267895 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "mapillary": "318095503177848",
+    "mofa": "no",
+    "moped": "no",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "railway": "abandoned",
+    "ref": "29",
+    "surface": "asphalt",
+    "traffic_sign": "NL:G13",
+    "zone:traffic": "BE-VLG:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1109875351,
+  "bounds": {
+    "minlat": 51.4446251,
+    "minlon": 4.9252336,
+    "maxlat": 51.4449121,
+    "maxlon": 4.9257237
+  },
+  "nodes": [
+    10153262451,
+    42643205,
+    11347253838,
+    11347253839,
+    11388399116,
+    42642729
+  ],
+  "geometry": [
+    { "lat": 51.4449121, "lon": 4.9257237 },
+    { "lat": 51.4447736, "lon": 4.9254363 },
+    { "lat": 51.4447532, "lon": 4.9253983 },
+    { "lat": 51.4447122, "lon": 4.9253375 },
+    { "lat": 51.4446490, "lon": 4.9252619 },
+    { "lat": 51.4446251, "lon": 4.9252336 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "name": "Leliestraat",
+    "oneway": "yes",
+    "surface": "paving_stones",
+    "wikidata": "Q19324327",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1169748358,
+  "bounds": {
+    "minlat": 51.4442369,
+    "minlon": 4.9270759,
+    "maxlat": 51.4442511,
+    "maxlon": 4.9273210
+  },
+  "nodes": [
+    4607870479,
+    8004086054,
+    8238446110,
+    4607870480
+  ],
+  "geometry": [
+    { "lat": 51.4442369, "lon": 4.9273210 },
+    { "lat": 51.4442467, "lon": 4.9272653 },
+    { "lat": 51.4442511, "lon": 4.9272123 },
+    { "lat": 51.4442391, "lon": 4.9270759 }
+  ],
+  "tags": {
+    "highway": "service",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 1169748359,
+  "bounds": {
+    "minlat": 51.4450060,
+    "minlon": 4.9268103,
+    "maxlat": 51.4451688,
+    "maxlon": 4.9270629
+  },
+  "nodes": [
+    10876706122,
+    4607870483,
+    4607870484,
+    10876706119,
+    4607870485,
+    8004086041,
+    4607870487
+  ],
+  "geometry": [
+    { "lat": 51.4450060, "lon": 4.9268361 },
+    { "lat": 51.4450918, "lon": 4.9268103 },
+    { "lat": 51.4451193, "lon": 4.9268271 },
+    { "lat": 51.4451421, "lon": 4.9268683 },
+    { "lat": 51.4451532, "lon": 4.9269377 },
+    { "lat": 51.4451626, "lon": 4.9270110 },
+    { "lat": 51.4451688, "lon": 4.9270629 }
+  ],
+  "tags": {
+    "highway": "service",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 1169748756,
+  "bounds": {
+    "minlat": 51.4444865,
+    "minlon": 4.9268435,
+    "maxlat": 51.4445132,
+    "maxlon": 4.9271653
+  },
+  "nodes": [
+    10876623786,
+    10876698203,
+    10876698202
+  ],
+  "geometry": [
+    { "lat": 51.4444865, "lon": 4.9268435 },
+    { "lat": 51.4445015, "lon": 4.9269937 },
+    { "lat": 51.4445132, "lon": 4.9271653 }
+  ],
+  "tags": {
+    "highway": "footway",
+    "lit": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1225595429,
+  "bounds": {
+    "minlat": 51.4440986,
+    "minlon": 4.9176820,
+    "maxlat": 51.4442119,
+    "maxlon": 4.9176977
+  },
+  "nodes": [
+    3455727417,
+    11365747867
+  ],
+  "geometry": [
+    { "lat": 51.4442119, "lon": 4.9176977 },
+    { "lat": 51.4440986, "lon": 4.9176820 }
+  ],
+  "tags": {
+    "highway": "track",
+    "maxspeed": "50",
+    "name": "Akkerstraat",
+    "surface": "dirt",
+    "tracktype": "grade4"
+  }
+},
+{
+  "type": "way",
+  "id": 1228083758,
+  "bounds": {
+    "minlat": 51.4446506,
+    "minlon": 4.9243135,
+    "maxlat": 51.4449317,
+    "maxlon": 4.9251592
+  },
+  "nodes": [
+    11388399115,
+    11346118622,
+    11346118623,
+    4338765959,
+    11346118624
+  ],
+  "geometry": [
+    { "lat": 51.4446506, "lon": 4.9251592 },
+    { "lat": 51.4447035, "lon": 4.9250052 },
+    { "lat": 51.4448033, "lon": 4.9247029 },
+    { "lat": 51.4449253, "lon": 4.9243344 },
+    { "lat": 51.4449317, "lon": 4.9243135 }
+  ],
+  "tags": {
+    "emergency": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Chaamseweg",
+    "surface": "asphalt",
+    "wikidata": "Q18985665",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1228083759,
+  "bounds": {
+    "minlat": 51.4446251,
+    "minlon": 4.9251592,
+    "maxlat": 51.4446506,
+    "maxlon": 4.9252336
+  },
+  "nodes": [
+    42642729,
+    11388399115
+  ],
+  "geometry": [
+    { "lat": 51.4446251, "lon": 4.9252336 },
+    { "lat": 51.4446506, "lon": 4.9251592 }
+  ],
+  "tags": {
+    "emergency": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "50",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Chaamseweg",
+    "surface": "asphalt",
+    "wikidata": "Q18985665",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1228085552,
+  "bounds": {
+    "minlat": 51.4440059,
+    "minlon": 4.9184557,
+    "maxlat": 51.4440898,
+    "maxlon": 4.9188792
+  },
+  "nodes": [
+    11388367512,
+    42641132,
+    10153262443
+  ],
+  "geometry": [
+    { "lat": 51.4440059, "lon": 4.9188792 },
+    { "lat": 51.4440310, "lon": 4.9187609 },
+    { "lat": 51.4440898, "lon": 4.9184557 }
+  ],
+  "tags": {
+    "cycleway:both": "shared_lane",
+    "cycleway:both:lane": "advisory",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Loveren",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic:left": "BE-VLG:urban",
+    "zone:traffic:right": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1228085553,
+  "bounds": {
+    "minlat": 51.4440898,
+    "minlon": 4.9184003,
+    "maxlat": 51.4441276,
+    "maxlon": 4.9184557
+  },
+  "nodes": [
+    10153262443,
+    42641231
+  ],
+  "geometry": [
+    { "lat": 51.4440898, "lon": 4.9184557 },
+    { "lat": 51.4441276, "lon": 4.9184003 }
+  ],
+  "tags": {
+    "cycleway:both": "shared_lane",
+    "cycleway:both:lane": "advisory",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Loveren",
+    "sidewalk": "both",
+    "surface": "paving_stones",
+    "wikidata": "Q19330987",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1230526583,
+  "bounds": {
+    "minlat": 51.4453778,
+    "minlon": 4.9267375,
+    "maxlat": 51.4480795,
+    "maxlon": 4.9270037
+  },
+  "nodes": [
+    42644994,
+    11347253835,
+    42645570,
+    11411741478,
+    11411741477,
+    1936362206,
+    11411741476,
+    11411737648,
+    42648458,
+    8004085994,
+    8004085997,
+    8004086008,
+    8004085999,
+    11411737646,
+    8004086002,
+    1936362187,
+    8004086005,
+    11411737645,
+    11411737644,
+    267066298
+  ],
+  "geometry": [
+    { "lat": 51.4453778, "lon": 4.9270037 },
+    { "lat": 51.4454714, "lon": 4.9269782 },
+    { "lat": 51.4455975, "lon": 4.9269477 },
+    { "lat": 51.4457666, "lon": 4.9269092 },
+    { "lat": 51.4461051, "lon": 4.9268582 },
+    { "lat": 51.4461857, "lon": 4.9268448 },
+    { "lat": 51.4463219, "lon": 4.9268269 },
+    { "lat": 51.4465565, "lon": 4.9267925 },
+    { "lat": 51.4466812, "lon": 4.9267824 },
+    { "lat": 51.4468519, "lon": 4.9267687 },
+    { "lat": 51.4470352, "lon": 4.9267583 },
+    { "lat": 51.4470895, "lon": 4.9267555 },
+    { "lat": 51.4472399, "lon": 4.9267425 },
+    { "lat": 51.4473670, "lon": 4.9267375 },
+    { "lat": 51.4474052, "lon": 4.9267376 },
+    { "lat": 51.4474696, "lon": 4.9267378 },
+    { "lat": 51.4475241, "lon": 4.9267379 },
+    { "lat": 51.4475737, "lon": 4.9267380 },
+    { "lat": 51.4478606, "lon": 4.9267496 },
+    { "lat": 51.4480795, "lon": 4.9267677 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Boschovenseweg",
+    "surface": "paving_stones",
+    "wikidata": "Q18963014",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1318852731,
+  "bounds": {
+    "minlat": 51.4438094,
+    "minlon": 4.9274184,
+    "maxlat": 51.4442085,
+    "maxlon": 4.9274886
+  },
+  "nodes": [
+    11411741482,
+    12205601657,
+    12205601656,
+    14096096324,
+    14096096323,
+    42640649
+  ],
+  "geometry": [
+    { "lat": 51.4442085, "lon": 4.9274184 },
+    { "lat": 51.4441697, "lon": 4.9274258 },
+    { "lat": 51.4440368, "lon": 4.9274527 },
+    { "lat": 51.4438846, "lon": 4.9274285 },
+    { "lat": 51.4438612, "lon": 4.9274862 },
+    { "lat": 51.4438094, "lon": 4.9274886 }
+  ],
+  "tags": {
+    "highway": "footway",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 1418645522,
+  "bounds": {
+    "minlat": 51.4453778,
+    "minlon": 4.9270037,
+    "maxlat": 51.4456632,
+    "maxlon": 4.9282141
+  },
+  "nodes": [
+    42644994,
+    12435726400,
+    11347253833,
+    6779339036,
+    11410451232,
+    6265546723,
+    42645645
+  ],
+  "geometry": [
+    { "lat": 51.4453778, "lon": 4.9270037 },
+    { "lat": 51.4454140, "lon": 4.9271431 },
+    { "lat": 51.4454306, "lon": 4.9272070 },
+    { "lat": 51.4456034, "lon": 4.9279299 },
+    { "lat": 51.4456252, "lon": 4.9280278 },
+    { "lat": 51.4456387, "lon": 4.9280922 },
+    { "lat": 51.4456632, "lon": 4.9282141 }
+  ],
+  "tags": {
+    "cycleway": "shared_lane",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Generaal Maczeklaan",
+    "surface": "paving_stones",
+    "wikidata": "Q19123254",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1549815174,
+  "bounds": {
+    "minlat": 51.4453005,
+    "minlon": 4.9268171,
+    "maxlat": 51.4453325,
+    "maxlon": 4.9268182
+  },
+  "nodes": [
+    8004086036,
+    42644803
+  ],
+  "geometry": [
+    { "lat": 51.4453005, "lon": 4.9268171 },
+    { "lat": 51.4453325, "lon": 4.9268182 }
+  ],
+  "tags": {
+    "highway": "cycleway",
+    "mofa": "no",
+    "moped": "no",
+    "name": "Bels Lijntje",
+    "oneway": "no",
+    "ref": "29",
+    "smoothness": "good",
+    "surface": "asphalt",
+    "traffic_sign": "NL:G13",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1549815175,
+  "bounds": {
+    "minlat": 51.4440454,
+    "minlon": 4.9269270,
+    "maxlat": 51.4442145,
+    "maxlon": 4.9272546
+  },
+  "nodes": [
+    8238446111,
+    8238446112,
+    8004086055,
+    8004086061,
+    8004086056,
+    8238446113,
+    8004086057,
+    8238446114,
+    8004086058,
+    8004086068,
+    8004086059,
+    8004086060
+  ],
+  "geometry": [
+    { "lat": 51.4442145, "lon": 4.9272546 },
+    { "lat": 51.4441899, "lon": 4.9272414 },
+    { "lat": 51.4441523, "lon": 4.9272103 },
+    { "lat": 51.4441268, "lon": 4.9271858 },
+    { "lat": 51.4440960, "lon": 4.9271554 },
+    { "lat": 51.4440724, "lon": 4.9271327 },
+    { "lat": 51.4440588, "lon": 4.9271072 },
+    { "lat": 51.4440488, "lon": 4.9270744 },
+    { "lat": 51.4440454, "lon": 4.9270431 },
+    { "lat": 51.4440468, "lon": 4.9270069 },
+    { "lat": 51.4440499, "lon": 4.9269902 },
+    { "lat": 51.4440714, "lon": 4.9269270 }
+  ],
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 1549815176,
+  "bounds": {
+    "minlat": 51.4442085,
+    "minlon": 4.9273168,
+    "maxlat": 51.4442124,
+    "maxlon": 4.9274184
+  },
+  "nodes": [
+    42641693,
+    11411741482
+  ],
+  "geometry": [
+    { "lat": 51.4442124, "lon": 4.9273168 },
+    { "lat": 51.4442085, "lon": 4.9274184 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "maxweight:conditional": "none @ destination",
+    "name": "Pastoor Vekemanshof",
+    "surface": "paving_stones",
+    "wikidata": "Q19408057",
+    "zone:traffic": "NL:urban"
+  }
+},
+{
+  "type": "way",
+  "id": 1549815177,
+  "bounds": {
+    "minlat": 51.4442124,
+    "minlon": 4.9272546,
+    "maxlat": 51.4442145,
+    "maxlon": 4.9273168
+  },
+  "nodes": [
+    8238446111,
+    42641693
+  ],
+  "geometry": [
+    { "lat": 51.4442145, "lon": 4.9272546 },
+    { "lat": 51.4442124, "lon": 4.9273168 }
+  ],
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "surface": "paving_stones"
+  }
+}
+
+  ]
+}

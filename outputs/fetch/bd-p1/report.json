@@ -1,0 +1,67 @@
+[
+ {
+  "name": "C_rueckschlag_nrw__r0c0.jpg",
+  "ok": true,
+  "bytes": 456915
+ },
+ {
+  "name": "C_rueckschlag_nrw__r0c1.jpg",
+  "ok": true,
+  "bytes": 396816
+ },
+ {
+  "name": "C_rueckschlag_nrw__r1c0.jpg",
+  "ok": true,
+  "bytes": 439185
+ },
+ {
+  "name": "C_rueckschlag_nrw__r1c1.jpg",
+  "ok": true,
+  "bytes": 433280
+ },
+ {
+  "name": "osm_C_venn.json",
+  "ok": true,
+  "bytes": 115952
+ },
+ {
+  "name": "osm_C_vennrel.json",
+  "ok": true,
+  "bytes": 176712
+ },
+ {
+  "name": "osm_C_adm2.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_C_rk.json",
+  "ok": true,
+  "bytes": 42712
+ },
+ {
+  "name": "osm_A_roads.json",
+  "ok": true,
+  "bytes": 1261763
+ },
+ {
+  "name": "osm_A_routes.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_A_school.json",
+  "ok": true,
+  "bytes": 35555
+ },
+ {
+  "name": "osm_B_pitch.json",
+  "ok": true,
+  "bytes": 850
+ },
+ {
+  "name": "osm_E_streets.json",
+  "ok": true,
+  "bytes": 65664
+ }
+]

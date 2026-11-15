@@ -1,0 +1,40 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T14:48:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 109264515,
+  "bounds": {
+    "minlat": 47.6976812,
+    "minlon": 8.7003137,
+    "maxlat": 47.6986030,
+    "maxlon": 8.7019449
+  },
+  "nodes": [
+    1251326915,
+    1251326899,
+    1251326905,
+    1251326904,
+    1251326915
+  ],
+  "geometry": [
+    { "lat": 47.6986030, "lon": 8.7006654 },
+    { "lat": 47.6980496, "lon": 8.7003137 },
+    { "lat": 47.6976812, "lon": 8.7015932 },
+    { "lat": 47.6982347, "lon": 8.7019449 },
+    { "lat": 47.6986030, "lon": 8.7006654 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+}
+
+  ]
+}

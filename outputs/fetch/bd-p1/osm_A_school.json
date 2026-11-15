@@ -1,0 +1,1588 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T14:47:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 37082050,
+  "lat": 49.0001550,
+  "lon": -122.7553963,
+  "tags": {
+    "barrier": "border_control",
+    "bus": "no",
+    "hgv": "no",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 148877202,
+  "lat": 49.0047925,
+  "lon": -122.7570900,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 258018162,
+  "lat": 49.0013247,
+  "lon": -123.0684275,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Point Roberts",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 267764196,
+  "lat": 49.0013807,
+  "lon": -122.7360768,
+  "tags": {
+    "barrier": "border_control",
+    "bicycle": "yes",
+    "foot": "yes",
+    "hgv": "designated",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Port of Entry - Blaine",
+    "opening_hours": "24/7",
+    "psv": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 340143711,
+  "lat": 49.0030050,
+  "lon": -122.7347224,
+  "tags": {
+    "barrier": "border_control",
+    "bicycle": "yes",
+    "foot": "yes",
+    "hgv": "designated",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7",
+    "psv": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1273556135,
+  "lat": 49.0022368,
+  "lon": -123.0679420,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Boundary Bay",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 1583222554,
+  "lat": 49.0030091,
+  "lon": -122.7337195,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 1583222905,
+  "lat": 49.0025664,
+  "lon": -122.7342264,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 2415645573,
+  "lat": 48.9923378,
+  "lon": -122.7304990,
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "1733",
+    "addr:postcode": "98230",
+    "addr:state": "WA",
+    "addr:street": "H Street",
+    "amenity": "post_office",
+    "name": "Blaine Package Hub",
+    "opening_hours": "Mo-Fr 08:00-19:00, Sa 09:00-17:00",
+    "shop": "copyshop",
+    "source": "Official website"
+  }
+},
+{
+  "type": "node",
+  "id": 2724338084,
+  "lat": 48.9946420,
+  "lon": -122.7408450,
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "763",
+    "addr:postcode": "98230",
+    "addr:street": "G Street",
+    "amenity": "community_centre",
+    "name": "Blaine Senior Center",
+    "phone": "+1-360-332-8040",
+    "website": "https://blaineseniorcenter.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236307,
+  "lat": 49.0047916,
+  "lon": -122.7572540,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236308,
+  "lat": 49.0047928,
+  "lon": -122.7566090,
+  "tags": {
+    "access": "yes",
+    "barrier": "border_control",
+    "bicycle": "no",
+    "foot": "no",
+    "horse": "no",
+    "motor_vehicle": "yes",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "Su-Sa 07:00-24:00"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236309,
+  "lat": 49.0047920,
+  "lon": -122.7570080,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236310,
+  "lat": 49.0047919,
+  "lon": -122.7569330,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236311,
+  "lat": 49.0047919,
+  "lon": -122.7568520,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236312,
+  "lat": 49.0047913,
+  "lon": -122.7567730,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236313,
+  "lat": 49.0047923,
+  "lon": -122.7566950,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3215236318,
+  "lat": 49.0047921,
+  "lon": -122.7571700,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3775993992,
+  "lat": 49.0047927,
+  "lon": -122.7565270,
+  "tags": {
+    "access": "yes",
+    "barrier": "border_control",
+    "bicycle": "no",
+    "foot": "no",
+    "horse": "no",
+    "motor_vehicle": "yes",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "Su-Sa 07:00-24:00"
+  }
+},
+{
+  "type": "node",
+  "id": 3921166844,
+  "lat": 48.9945067,
+  "lon": -122.7314775,
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "1580",
+    "addr:postcode": "98230",
+    "addr:state": "WA",
+    "addr:street": "H Street",
+    "amenity": "police",
+    "name": "Blaine Border Patrol Station",
+    "website": "https://www.cbp.gov/border-security/along-us-borders/border-patrol-sectors/blaine-sector-washington/blaine-station"
+  }
+},
+{
+  "type": "node",
+  "id": 3921193797,
+  "lat": 48.9831387,
+  "lon": -122.7249342,
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "9408",
+    "addr:postcode": "98230",
+    "addr:state": "WA",
+    "addr:street": "Odell Road",
+    "amenity": "fire_station",
+    "name": "Fire Station #61 (Blaine)",
+    "operator": "Whatcom County Fire District 21 (North Whatcom Fire & Rescue)"
+  }
+},
+{
+  "type": "node",
+  "id": 4426771469,
+  "lat": 49.0018230,
+  "lon": -122.7367156,
+  "tags": {
+    "barrier": "border_control",
+    "bicycle": "yes",
+    "foot": "yes",
+    "hgv": "designated",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Port of Entry - Blaine",
+    "opening_hours": "24/7",
+    "psv": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4426775229,
+  "lat": 49.0030050,
+  "lon": -122.7346548,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4426775230,
+  "lat": 49.0030030,
+  "lon": -122.7347900,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4426775231,
+  "lat": 49.0030046,
+  "lon": -122.7348515,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4426775232,
+  "lat": 49.0030041,
+  "lon": -122.7349252,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4426775233,
+  "lat": 49.0013848,
+  "lon": -122.7363624,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Blaine",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4426783851,
+  "lat": 49.0001538,
+  "lon": -122.7554869,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "Su-Sa 06:00-21:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4426803097,
+  "lat": 48.9915804,
+  "lon": -122.7512549,
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "936",
+    "addr:street": "Peace Portal Drive",
+    "amenity": "post_office",
+    "name": "Blaine Enterprises",
+    "opening_hours": "Mo-Tu 09:00-17:00,We 09:00-18:00,Th-Fr 09:00-17:00,Sa 09:00-12:00,Su off"
+  }
+},
+{
+  "type": "node",
+  "id": 4450954335,
+  "lat": 49.0025646,
+  "lon": -122.7343528,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4450954343,
+  "lat": 49.0025650,
+  "lon": -122.7344267,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4450954348,
+  "lat": 49.0025654,
+  "lon": -122.7345064,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4722764286,
+  "lat": 49.0001542,
+  "lon": -122.7546839,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4812392937,
+  "lat": 49.0001581,
+  "lon": -122.7553077,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4812392940,
+  "lat": 49.0001582,
+  "lon": -122.7552211,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4812392943,
+  "lat": 49.0001555,
+  "lon": -122.7551265,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4812392945,
+  "lat": 49.0001572,
+  "lon": -122.7550395,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4812392947,
+  "lat": 49.0001584,
+  "lon": -122.7549550,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4812392949,
+  "lat": 49.0001580,
+  "lon": -122.7548658,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 4812392952,
+  "lat": 49.0001538,
+  "lon": -122.7547728,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Peace Arch",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 5737023763,
+  "lat": 49.0047728,
+  "lon": -122.7572850,
+  "tags": {
+    "access": "no",
+    "barrier": "border_control",
+    "bicycle": "yes",
+    "foot": "yes",
+    "motor_vehicle": "no",
+    "name": "Port of Entry - Douglas",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 8066967904,
+  "lat": 48.9929175,
+  "lon": -122.7514080,
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "816",
+    "addr:state": "WA",
+    "addr:street": "Peace Portal Drive",
+    "amenity": "post_office",
+    "name": "Hagen's of Blaine",
+    "website": "https://hagensofblaine.com"
+  }
+},
+{
+  "type": "node",
+  "id": 8288274953,
+  "lat": 49.0018762,
+  "lon": -122.7381960,
+  "tags": {
+    "access": "no",
+    "barrier": "border_control",
+    "covered": "yes",
+    "goods": "designated",
+    "hazmat": "designated",
+    "hgv": "designated",
+    "motor_vehicle": "designated",
+    "name": "Port of Entry - Blaine",
+    "opening_hours": "24/7",
+    "tunnel": "building_passage"
+  }
+},
+{
+  "type": "node",
+  "id": 8288274961,
+  "lat": 49.0018279,
+  "lon": -122.7381993,
+  "tags": {
+    "access": "no",
+    "barrier": "border_control",
+    "goods": "designated",
+    "hazmat": "designated",
+    "hgv": "designated",
+    "motor_vehicle": "designated",
+    "name": "Port of Entry - Blaine",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 8288274962,
+  "lat": 49.0019216,
+  "lon": -122.7381959,
+  "tags": {
+    "access": "no",
+    "barrier": "border_control",
+    "goods": "designated",
+    "hazmat": "designated",
+    "hgv": "designated",
+    "motor_vehicle": "designated",
+    "name": "Port of Entry - Blaine",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 8455836849,
+  "lat": 49.0025642,
+  "lon": -122.7345963,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 8455836850,
+  "lat": 49.0025670,
+  "lon": -122.7346948,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 9311639660,
+  "lat": 49.0013157,
+  "lon": -123.0685107,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 9311639661,
+  "lat": 49.0013321,
+  "lon": -123.0683595,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 9311639792,
+  "lat": 49.0022372,
+  "lon": -123.0680348,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 9311639809,
+  "lat": 49.0022364,
+  "lon": -123.0678470,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 9311639830,
+  "lat": 49.0013454,
+  "lon": -123.0686410,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 9311639858,
+  "lat": 49.0022360,
+  "lon": -123.0677500,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 10077045491,
+  "lat": 49.0001545,
+  "lon": -122.7545926,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608766,
+  "lat": 49.0011559,
+  "lon": -122.7370452,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608787,
+  "lat": 49.0011545,
+  "lon": -122.7371168,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608788,
+  "lat": 49.0011555,
+  "lon": -122.7371783,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608789,
+  "lat": 49.0011552,
+  "lon": -122.7372397,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608790,
+  "lat": 49.0011543,
+  "lon": -122.7369812,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608791,
+  "lat": 49.0011533,
+  "lon": -122.7369198,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608792,
+  "lat": 49.0011532,
+  "lon": -122.7368537,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693608793,
+  "lat": 49.0011525,
+  "lon": -122.7367909,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 10693723725,
+  "lat": 49.0025685,
+  "lon": -122.7342775,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 10693776562,
+  "lat": 49.0030052,
+  "lon": -122.7345912,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 10693850343,
+  "lat": 49.0030067,
+  "lon": -122.7338067,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 10693850344,
+  "lat": 49.0030067,
+  "lon": -122.7336312,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Port of Entry - Pacific Highway",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 10883690667,
+  "lat": 49.0013817,
+  "lon": -122.7360052,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 10883690668,
+  "lat": 49.0013806,
+  "lon": -122.7361491,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 10883690669,
+  "lat": 49.0013821,
+  "lon": -122.7362202,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 10883690670,
+  "lat": 49.0013846,
+  "lon": -122.7362880,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 10961179067,
+  "lat": 49.0017828,
+  "lon": -122.7367133,
+  "tags": {
+    "barrier": "border_control",
+    "bicycle": "yes",
+    "foot": "yes",
+    "hgv": "designated",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Port of Entry - Blaine",
+    "opening_hours": "24/7",
+    "psv": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 144822134,
+  "bounds": {
+    "minlat": 49.0047429,
+    "minlon": -122.7573275,
+    "maxlat": 49.0048493,
+    "maxlon": -122.7565330
+  },
+  "nodes": [
+    1583222525,
+    1583222649,
+    1583222296,
+    10694612708,
+    1583222541,
+    1583222525
+  ],
+  "geometry": [
+    { "lat": 49.0048492, "lon": -122.7565334 },
+    { "lat": 49.0047438, "lon": -122.7565330 },
+    { "lat": 49.0047429, "lon": -122.7573275 },
+    { "lat": 49.0047994, "lon": -122.7573176 },
+    { "lat": 49.0048493, "lon": -122.7573101 },
+    { "lat": 49.0048492, "lon": -122.7565334 }
+  ],
+  "tags": {
+    "addr:housenumber": "220",
+    "addr:street": "British Columbia Highway 99",
+    "area": "yes",
+    "barrier": "border_control",
+    "building": "roof",
+    "name": "Canadian Border - Douglas (Peace Arch) Crossing"
+  }
+},
+{
+  "type": "way",
+  "id": 144822137,
+  "bounds": {
+    "minlat": 49.0052347,
+    "minlon": -122.7574920,
+    "maxlat": 49.0061869,
+    "maxlon": -122.7570950
+  },
+  "nodes": [
+    1583222779,
+    1583222655,
+    1583222378,
+    1583222640,
+    1583222465,
+    1583222817,
+    1583222805,
+    1583222842,
+    1583222523,
+    1583222779
+  ],
+  "geometry": [
+    { "lat": 49.0061869, "lon": -122.7573120 },
+    { "lat": 49.0061254, "lon": -122.7574550 },
+    { "lat": 49.0061412, "lon": -122.7574920 },
+    { "lat": 49.0053139, "lon": -122.7574900 },
+    { "lat": 49.0052347, "lon": -122.7573070 },
+    { "lat": 49.0060587, "lon": -122.7572920 },
+    { "lat": 49.0060585, "lon": -122.7572350 },
+    { "lat": 49.0061201, "lon": -122.7570950 },
+    { "lat": 49.0061866, "lon": -122.7572430 },
+    { "lat": 49.0061869, "lon": -122.7573120 }
+  ],
+  "tags": {
+    "barrier": "border_control",
+    "building": "roof",
+    "layer": "1",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "way",
+  "id": 218844040,
+  "bounds": {
+    "minlat": 48.9934455,
+    "minlon": -122.7473077,
+    "maxlat": 48.9938311,
+    "maxlon": -122.7467625
+  },
+  "nodes": [
+    2280503800,
+    2280503791,
+    2280503790,
+    2280503793,
+    2280503792,
+    2280503799,
+    2280503800
+  ],
+  "geometry": [
+    { "lat": 48.9938311, "lon": -122.7467675 },
+    { "lat": 48.9934459, "lon": -122.7467625 },
+    { "lat": 48.9934455, "lon": -122.7468291 },
+    { "lat": 48.9934749, "lon": -122.7468295 },
+    { "lat": 48.9934723, "lon": -122.7473030 },
+    { "lat": 48.9938281, "lon": -122.7473077 },
+    { "lat": 48.9938311, "lon": -122.7467675 }
+  ],
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "701",
+    "addr:state": "WA",
+    "addr:street": "Harrison Avenue",
+    "amenity": "post_office",
+    "brand": "United States Post Office",
+    "brand:wikidata": "Q668687",
+    "building": "yes",
+    "check_date": "2026-05-31",
+    "name": "Blaine Post Office",
+    "opening_hours": "Mo-Fr 08:30-17:00",
+    "operator": "United States Postal Service",
+    "operator:short": "USPS",
+    "operator:type": "public",
+    "operator:website": "https://www.usps.com",
+    "operator:wikidata": "Q668687",
+    "operator:wikipedia": "en:United States Postal Service",
+    "phone": "+1-360-332-7184",
+    "short_name": "USPS",
+    "website": "https://tools.usps.com/locations/details/1355100",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 233184814,
+  "bounds": {
+    "minlat": 48.9945358,
+    "minlon": -122.7492895,
+    "maxlat": 48.9948948,
+    "maxlon": -122.7490858
+  },
+  "nodes": [
+    2415396533,
+    2415396534,
+    2415396536,
+    2415396535,
+    2415396533
+  ],
+  "geometry": [
+    { "lat": 48.9945358, "lon": -122.7490892 },
+    { "lat": 48.9945366, "lon": -122.7492895 },
+    { "lat": 48.9948948, "lon": -122.7492861 },
+    { "lat": 48.9948940, "lon": -122.7490858 },
+    { "lat": 48.9945358, "lon": -122.7490892 }
+  ],
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "610",
+    "addr:postcode": "98230",
+    "addr:state": "WA",
+    "addr:street": "3rd Street",
+    "amenity": "library",
+    "building": "yes",
+    "internet_access": "wlan",
+    "name": "Blaine Library",
+    "opening_hours": "Mo-Th 10:00-20:00, Fr 10:00-18:00, Sa 10:00-17:00; Su,PH off",
+    "operator": "Whatcom County Library System",
+    "operator:wikidata": "Q69494158",
+    "phone": "+1-360-305-3637",
+    "source": "Local knowledge;website",
+    "website": "https://www.wcls.org/locations-hours/"
+  }
+},
+{
+  "type": "way",
+  "id": 233184816,
+  "bounds": {
+    "minlat": 48.9929115,
+    "minlon": -122.7473550,
+    "maxlat": 48.9930242,
+    "maxlon": -122.7468805
+  },
+  "nodes": [
+    2415396479,
+    2415396475,
+    2415396476,
+    2415396481,
+    2415396479
+  ],
+  "geometry": [
+    { "lat": 48.9930222, "lon": -122.7468805 },
+    { "lat": 48.9929115, "lon": -122.7468816 },
+    { "lat": 48.9929134, "lon": -122.7473550 },
+    { "lat": 48.9930242, "lon": -122.7473540 },
+    { "lat": 48.9930222, "lon": -122.7468805 }
+  ],
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "435",
+    "addr:postcode": "98230",
+    "addr:street": "Martin Street",
+    "amenity": "townhall",
+    "building": "yes",
+    "building:levels": "4",
+    "name": "Blaine City Hall",
+    "operator": "City of Blaine",
+    "source": "Local knowledge",
+    "website": "https://www.ci.blaine.wa.us/"
+  }
+},
+{
+  "type": "way",
+  "id": 233184827,
+  "bounds": {
+    "minlat": 48.9941321,
+    "minlon": -122.7495869,
+    "maxlat": 48.9943361,
+    "maxlon": -122.7491365
+  },
+  "nodes": [
+    2415396505,
+    2415396506,
+    3188857709,
+    3188857713,
+    2415396512,
+    2415396511,
+    2415396520,
+    2415396519,
+    2415396505
+  ],
+  "geometry": [
+    { "lat": 48.9941321, "lon": -122.7491393 },
+    { "lat": 48.9941338, "lon": -122.7495509 },
+    { "lat": 48.9941908, "lon": -122.7495533 },
+    { "lat": 48.9941904, "lon": -122.7495869 },
+    { "lat": 48.9942888, "lon": -122.7495854 },
+    { "lat": 48.9942871, "lon": -122.7494476 },
+    { "lat": 48.9943361, "lon": -122.7494470 },
+    { "lat": 48.9943361, "lon": -122.7491365 },
+    { "lat": 48.9941321, "lon": -122.7491393 }
+  ],
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "322",
+    "addr:postcode": "98230",
+    "addr:street": "H Street",
+    "amenity": "police",
+    "building": "yes",
+    "building:levels": "1",
+    "contact:email": "mhaslip@cityofblaine.com",
+    "fax": "+1-360-332-7255",
+    "name": "Blaine Public Safety Department",
+    "operator": "City of Blaine",
+    "phone": "+1-360-332-6769",
+    "source": "Local knowledge",
+    "website": "https://www.ci.blaine.wa.us/175/Police-Operations"
+  }
+},
+{
+  "type": "way",
+  "id": 306962022,
+  "bounds": {
+    "minlat": 48.9915872,
+    "minlon": -122.7416333,
+    "maxlat": 48.9939360,
+    "maxlon": -122.7396575
+  },
+  "nodes": [
+    3119836272,
+    3119836273,
+    3119836274,
+    3119836275,
+    3119836276,
+    3119836277,
+    3119836278,
+    3119836279,
+    3119836280,
+    3921160822,
+    3119836301,
+    3119836272
+  ],
+  "geometry": [
+    { "lat": 48.9939293, "lon": -122.7415785 },
+    { "lat": 48.9939360, "lon": -122.7396575 },
+    { "lat": 48.9919607, "lon": -122.7397185 },
+    { "lat": 48.9918020, "lon": -122.7405519 },
+    { "lat": 48.9918393, "lon": -122.7406780 },
+    { "lat": 48.9917939, "lon": -122.7410534 },
+    { "lat": 48.9916312, "lon": -122.7411983 },
+    { "lat": 48.9915872, "lon": -122.7414097 },
+    { "lat": 48.9916739, "lon": -122.7416333 },
+    { "lat": 48.9933020, "lon": -122.7415955 },
+    { "lat": 48.9935560, "lon": -122.7415896 },
+    { "lat": 48.9939293, "lon": -122.7415785 }
+  ],
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "836",
+    "addr:postcode": "98230",
+    "addr:street": "Mitchell Avenue",
+    "amenity": "school",
+    "contact:email": "cbaldwin@blainesd.org",
+    "fax": "+1-360-332-0580",
+    "mascot": "Borderites",
+    "name": "Blaine Elementary School",
+    "opening_hours": "Mo-Fr 08:00-16:00",
+    "operator": "Blaine School District",
+    "phone": "+1-360-332-5213",
+    "source": "Local knowledge, official website",
+    "website": "http://blaine.wednet.edu/bes/Welcome.html"
+  }
+},
+{
+  "type": "way",
+  "id": 306962024,
+  "bounds": {
+    "minlat": 48.9918028,
+    "minlon": -122.7395744,
+    "maxlat": 48.9939093,
+    "maxlon": -122.7376695
+  },
+  "nodes": [
+    3119836285,
+    3119836286,
+    3119836287,
+    3119836289,
+    3119836290,
+    3119836291,
+    3921160814,
+    3119836292,
+    3119836293,
+    3119836294,
+    3119836285
+  ],
+  "geometry": [
+    { "lat": 48.9918028, "lon": -122.7394585 },
+    { "lat": 48.9918074, "lon": -122.7380692 },
+    { "lat": 48.9919024, "lon": -122.7378871 },
+    { "lat": 48.9919560, "lon": -122.7376723 },
+    { "lat": 48.9925446, "lon": -122.7376695 },
+    { "lat": 48.9925451, "lon": -122.7379046 },
+    { "lat": 48.9937898, "lon": -122.7379037 },
+    { "lat": 48.9939011, "lon": -122.7379052 },
+    { "lat": 48.9939093, "lon": -122.7395653 },
+    { "lat": 48.9919909, "lon": -122.7395744 },
+    { "lat": 48.9918028, "lon": -122.7394585 }
+  ],
+  "tags": {
+    "amenity": "school",
+    "name": "Blaine Middle School"
+  }
+},
+{
+  "type": "way",
+  "id": 306962025,
+  "bounds": {
+    "minlat": 48.9906379,
+    "minlon": -122.7381729,
+    "maxlat": 48.9939242,
+    "maxlon": -122.7354219
+  },
+  "nodes": [
+    3119836295,
+    8359071635,
+    8359071636,
+    8359071637,
+    8359071638,
+    3119836296,
+    3119836297,
+    3119836298,
+    3119836299,
+    3119836300,
+    3119836295
+  ],
+  "geometry": [
+    { "lat": 48.9919482, "lon": -122.7376185 },
+    { "lat": 48.9918825, "lon": -122.7378755 },
+    { "lat": 48.9917005, "lon": -122.7381711 },
+    { "lat": 48.9906379, "lon": -122.7381729 },
+    { "lat": 48.9906751, "lon": -122.7354219 },
+    { "lat": 48.9919607, "lon": -122.7354372 },
+    { "lat": 48.9939242, "lon": -122.7354633 },
+    { "lat": 48.9939104, "lon": -122.7378665 },
+    { "lat": 48.9925912, "lon": -122.7378490 },
+    { "lat": 48.9925925, "lon": -122.7376270 },
+    { "lat": 48.9919482, "lon": -122.7376185 }
+  ],
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "1055",
+    "addr:postcode": "98230",
+    "addr:street": "H Street",
+    "amenity": "school",
+    "contact:email": "scott_ellis@blainesd.org",
+    "fax": "+1-360-332-0333",
+    "mascot": "Borderites",
+    "name": "Blaine High School",
+    "opening_hours": "Mo-Fr 08:00-16:00",
+    "operator": "Blaine School District",
+    "phone": "+1-360-332-6045",
+    "source": "Local knowledge, official website",
+    "wikidata": "Q4923947"
+  }
+},
+{
+  "type": "way",
+  "id": 388929690,
+  "bounds": {
+    "minlat": 48.9906398,
+    "minlon": -122.7413889,
+    "maxlat": 48.9919381,
+    "maxlon": -122.7393610
+  },
+  "nodes": [
+    3921073411,
+    3921075199,
+    3921075200,
+    3921075201,
+    3921073423,
+    3921075198,
+    3921073422,
+    3921075197,
+    3921073421,
+    3921073420,
+    3921073419,
+    3921073418,
+    3921073417,
+    3921073416,
+    3921073415,
+    3921073414,
+    3921073413,
+    3921073412,
+    3921073411
+  ],
+  "geometry": [
+    { "lat": 48.9915744, "lon": -122.7413889 },
+    { "lat": 48.9911855, "lon": -122.7410006 },
+    { "lat": 48.9909890, "lon": -122.7408001 },
+    { "lat": 48.9908890, "lon": -122.7406931 },
+    { "lat": 48.9908004, "lon": -122.7405583 },
+    { "lat": 48.9907188, "lon": -122.7403830 },
+    { "lat": 48.9906670, "lon": -122.7401916 },
+    { "lat": 48.9906398, "lon": -122.7397841 },
+    { "lat": 48.9906398, "lon": -122.7393697 },
+    { "lat": 48.9911396, "lon": -122.7393610 },
+    { "lat": 48.9914644, "lon": -122.7395435 },
+    { "lat": 48.9917890, "lon": -122.7395554 },
+    { "lat": 48.9918416, "lon": -122.7395996 },
+    { "lat": 48.9919381, "lon": -122.7396739 },
+    { "lat": 48.9917661, "lon": -122.7405541 },
+    { "lat": 48.9918151, "lon": -122.7406864 },
+    { "lat": 48.9917687, "lon": -122.7410310 },
+    { "lat": 48.9916179, "lon": -122.7411592 },
+    { "lat": 48.9915744, "lon": -122.7413889 }
+  ],
+  "tags": {
+    "addr:city": "Blaine",
+    "addr:housenumber": "820",
+    "addr:postcode": "98230",
+    "addr:state": "WA",
+    "addr:street": "Boblett Street",
+    "amenity": "school",
+    "name": "Blaine Primary School",
+    "operator": "Blaine School District"
+  }
+},
+{
+  "type": "way",
+  "id": 438354535,
+  "bounds": {
+    "minlat": 48.9994482,
+    "minlon": -122.7459732,
+    "maxlat": 48.9996638,
+    "maxlon": -122.7457662
+  },
+  "nodes": [
+    4360882058,
+    13049568100,
+    13049568099,
+    13049568098,
+    13049568097,
+    13049568096,
+    4360882059,
+    13049568095,
+    13049568094,
+    13049568093,
+    13049568092,
+    13049568091,
+    13049568090,
+    13049568089,
+    4360882061,
+    4360882058
+  ],
+  "geometry": [
+    { "lat": 48.9996638, "lon": -122.7459722 },
+    { "lat": 48.9996637, "lon": -122.7458915 },
+    { "lat": 48.9996587, "lon": -122.7458916 },
+    { "lat": 48.9996586, "lon": -122.7458682 },
+    { "lat": 48.9996399, "lon": -122.7458414 },
+    { "lat": 48.9996250, "lon": -122.7458415 },
+    { "lat": 48.9996250, "lon": -122.7458314 },
+    { "lat": 48.9995928, "lon": -122.7458316 },
+    { "lat": 48.9995927, "lon": -122.7457960 },
+    { "lat": 48.9995365, "lon": -122.7457964 },
+    { "lat": 48.9995365, "lon": -122.7457871 },
+    { "lat": 48.9994917, "lon": -122.7457873 },
+    { "lat": 48.9994916, "lon": -122.7457662 },
+    { "lat": 48.9994482, "lon": -122.7457664 },
+    { "lat": 48.9994486, "lon": -122.7459732 },
+    { "lat": 48.9996638, "lon": -122.7459722 }
+  ],
+  "tags": {
+    "addr:housenumber": "500",
+    "addr:street": "C Street",
+    "amenity": "social_facility",
+    "building": "yes",
+    "name": "Blaine Food Bank",
+    "social_facility": "food_bank"
+  }
+},
+{
+  "type": "way",
+  "id": 905352587,
+  "bounds": {
+    "minlat": 49.0055855,
+    "minlon": -122.7440987,
+    "maxlat": 49.0075512,
+    "maxlon": -122.7424164
+  },
+  "nodes": [
+    8407662476,
+    11500264661,
+    8407662477,
+    11162386363,
+    11162386366,
+    11162386365,
+    11162386364,
+    11162386370,
+    11162386371,
+    11162386372,
+    11162386369,
+    8407662478,
+    8407662480,
+    8407662481,
+    8921319054,
+    8921319055,
+    8921319056,
+    11162387438,
+    11162387437,
+    8921319057,
+    11162387418,
+    11162387417,
+    11162387416,
+    11162387419,
+    11162387420,
+    8326581087,
+    8407662476
+  ],
+  "geometry": [
+    { "lat": 49.0075512, "lon": -122.7424401 },
+    { "lat": 49.0075023, "lon": -122.7424394 },
+    { "lat": 49.0055886, "lon": -122.7424164 },
+    { "lat": 49.0055870, "lon": -122.7427087 },
+    { "lat": 49.0055898, "lon": -122.7427253 },
+    { "lat": 49.0056045, "lon": -122.7427470 },
+    { "lat": 49.0056080, "lon": -122.7427605 },
+    { "lat": 49.0056075, "lon": -122.7433165 },
+    { "lat": 49.0056050, "lon": -122.7433297 },
+    { "lat": 49.0055883, "lon": -122.7433586 },
+    { "lat": 49.0055855, "lon": -122.7433773 },
+    { "lat": 49.0055862, "lon": -122.7436634 },
+    { "lat": 49.0060193, "lon": -122.7436724 },
+    { "lat": 49.0060179, "lon": -122.7440919 },
+    { "lat": 49.0065457, "lon": -122.7440987 },
+    { "lat": 49.0065855, "lon": -122.7440828 },
+    { "lat": 49.0066249, "lon": -122.7440794 },
+    { "lat": 49.0067502, "lon": -122.7440822 },
+    { "lat": 49.0068543, "lon": -122.7440845 },
+    { "lat": 49.0068817, "lon": -122.7440851 },
+    { "lat": 49.0068919, "lon": -122.7440827 },
+    { "lat": 49.0069094, "lon": -122.7440619 },
+    { "lat": 49.0069197, "lon": -122.7440568 },
+    { "lat": 49.0075243, "lon": -122.7440611 },
+    { "lat": 49.0075326, "lon": -122.7440665 },
+    { "lat": 49.0075409, "lon": -122.7440772 },
+    { "lat": 49.0075512, "lon": -122.7424401 }
+  ],
+  "tags": {
+    "addr:city": "Surrey",
+    "addr:housenumber": "17325",
+    "addr:province": "BC",
+    "addr:street": "2 Avenue",
+    "amenity": "school",
+    "name": "Douglas Elementary School"
+  }
+},
+{
+  "type": "way",
+  "id": 1149509842,
+  "bounds": {
+    "minlat": 49.0024563,
+    "minlon": -122.7347507,
+    "maxlat": 49.0026112,
+    "maxlon": -122.7341812
+  },
+  "nodes": [
+    10693734415,
+    10693776586,
+    10693734416,
+    10693734420,
+    10693734419,
+    10693734417,
+    10693734418,
+    10693734415
+  ],
+  "geometry": [
+    { "lat": 49.0026112, "lon": -122.7347473 },
+    { "lat": 49.0026110, "lon": -122.7347130 },
+    { "lat": 49.0026083, "lon": -122.7341893 },
+    { "lat": 49.0026086, "lon": -122.7341812 },
+    { "lat": 49.0024563, "lon": -122.7341823 },
+    { "lat": 49.0024563, "lon": -122.7341897 },
+    { "lat": 49.0024574, "lon": -122.7347507 },
+    { "lat": 49.0026112, "lon": -122.7347473 }
+  ],
+  "tags": {
+    "barrier": "border_control",
+    "building": "roof",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1149513562,
+  "bounds": {
+    "minlat": 49.0029371,
+    "minlon": -122.7351339,
+    "maxlat": 49.0030691,
+    "maxlon": -122.7343537
+  },
+  "nodes": [
+    10693776513,
+    10693776515,
+    10693776517,
+    10693776518,
+    10693776516,
+    10693918226,
+    10693923217,
+    10693776514,
+    10693776513
+  ],
+  "geometry": [
+    { "lat": 49.0030691, "lon": -122.7343544 },
+    { "lat": 49.0030682, "lon": -122.7351335 },
+    { "lat": 49.0030395, "lon": -122.7351336 },
+    { "lat": 49.0029674, "lon": -122.7351338 },
+    { "lat": 49.0029371, "lon": -122.7351339 },
+    { "lat": 49.0029372, "lon": -122.7350215 },
+    { "lat": 49.0029376, "lon": -122.7343723 },
+    { "lat": 49.0029376, "lon": -122.7343537 },
+    { "lat": 49.0030691, "lon": -122.7343544 }
+  ],
+  "tags": {
+    "barrier": "border_control",
+    "building": "roof",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1149516440,
+  "bounds": {
+    "minlat": 49.0031490,
+    "minlon": -122.7343020,
+    "maxlat": 49.0036031,
+    "maxlon": -122.7338898
+  },
+  "nodes": [
+    1583222421,
+    8288274998,
+    10693786586,
+    10693928440,
+    10693786587,
+    10693786588,
+    10693786589,
+    10693928439,
+    10693928447,
+    10693786590,
+    10693786591,
+    10693786592,
+    10693786593,
+    1583222578,
+    1583222421
+  ],
+  "geometry": [
+    { "lat": 49.0031509, "lon": -122.7342760 },
+    { "lat": 49.0031677, "lon": -122.7342750 },
+    { "lat": 49.0031677, "lon": -122.7343005 },
+    { "lat": 49.0035632, "lon": -122.7343019 },
+    { "lat": 49.0035844, "lon": -122.7343020 },
+    { "lat": 49.0035846, "lon": -122.7342762 },
+    { "lat": 49.0036014, "lon": -122.7342762 },
+    { "lat": 49.0036019, "lon": -122.7341681 },
+    { "lat": 49.0036026, "lon": -122.7340086 },
+    { "lat": 49.0036031, "lon": -122.7338903 },
+    { "lat": 49.0031661, "lon": -122.7338898 },
+    { "lat": 49.0031664, "lon": -122.7339159 },
+    { "lat": 49.0031490, "lon": -122.7339164 },
+    { "lat": 49.0031494, "lon": -122.7339203 },
+    { "lat": 49.0031509, "lon": -122.7342760 }
+  ],
+  "tags": {
+    "barrier": "border_control",
+    "building": "roof",
+    "layer": "1",
+    "name": "Secondary Inspection"
+  }
+},
+{
+  "type": "way",
+  "id": 1149587760,
+  "bounds": {
+    "minlat": 49.0000849,
+    "minlon": -122.7555050,
+    "maxlat": 49.0002264,
+    "maxlon": -122.7544632
+  },
+  "nodes": [
+    10694433490,
+    10694433491,
+    10694433492,
+    10694433493,
+    10694433490
+  ],
+  "geometry": [
+    { "lat": 49.0002264, "lon": -122.7545966 },
+    { "lat": 49.0000857, "lon": -122.7544632 },
+    { "lat": 49.0000849, "lon": -122.7553766 },
+    { "lat": 49.0002237, "lon": -122.7555050 },
+    { "lat": 49.0002264, "lon": -122.7545966 }
+  ],
+  "tags": {
+    "barrier": "border_control",
+    "building": "yes",
+    "layer": "1"
+  }
+}
+
+  ]
+}
