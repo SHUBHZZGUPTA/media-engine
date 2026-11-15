@@ -68,6 +68,7 @@ for s in spec["shots"][1:]:                       # a designed sound for every c
     c = s.get("cut", "curve")
     if c == "flash":
         place(sfx, S["riser"], s["t0"] - len(S["riser"]) / SR, db(-20)); place(sfx, S["impact2"], s["t0"], db(-12))
+    elif c == "silent": pass                      # no sound on this cut (e.g. trailer clip to trailer clip)
     elif c == "whip": place(sfx, S["whip"], s["t0"] - .12, db(-14))
     elif c == "zoom": place(sfx, S["zoom"], s["t0"] - .2, db(-14))
     else: place(sfx, S["whoosh"], s["t0"] - .08, db(-17 if c == "curve" else -15))
