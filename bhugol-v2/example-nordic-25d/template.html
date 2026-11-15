@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Nordic what-if</title>
+<script src="./gsap.min.js"></script>
+<script src="./motion.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+:root { --gold: #FFC23A; --white: #F4F8FB; --ink: #03101A; --red: #FF3B30; --sea: #0B3A78; }
+body { margin: 0; background: var(--sea); }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--sea); }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+#view { position: absolute; inset: 0; perspective: 2200px; perspective-origin: 540px 860px; overflow: hidden; }
+#cam { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+#cam img { position: absolute; display: block; }
+#cam svg { position: absolute; left: 0; top: 0; overflow: visible; }
+#sepia { background: #C49A5A; mix-blend-mode: color; opacity: 0; }
+#warm { background: radial-gradient(ellipse 70% 55% at 50% 45%, rgba(255,200,90,.0), rgba(120,70,20,.35)); opacity: 0; }
+#flash { background: #fff; opacity: 0; }
+.emo { position: absolute; left: 0; top: 0; font-family: 'Emo', sans-serif; line-height: 1; opacity: 0; white-space: nowrap; }
+.pin { position: absolute; left: 0; top: 0; opacity: 0; }
+.pin .dot { position: absolute; left: -15px; top: -15px; width: 30px; height: 30px; border-radius: 50%; background: var(--red); border: 6px solid #fff; box-sizing: border-box; box-shadow: 0 4px 10px rgba(0,0,0,.45); }
+.pin .tag { position: absolute; left: 0; bottom: 26px; transform: translateX(-50%); white-space: nowrap; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 52px; letter-spacing: .04em;
+  color: #fff; paint-order: stroke fill; -webkit-text-stroke: 11px #03101A; }
+.ring { position: absolute; left: 0; top: 0; width: 160px; height: 160px; margin: -80px 0 0 -80px; border-radius: 50%; border: 6px solid var(--gold); opacity: 0; box-sizing: border-box; }
+.lab { position: absolute; left: 0; top: 0; transform-origin: 50% 50%; white-space: nowrap; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 50px; letter-spacing: .06em; color: #fff;
+  paint-order: stroke fill; -webkit-text-stroke: 10px #03101A; opacity: 0; }
+.card { position: absolute; left: 0; top: 0; opacity: 0; background: rgba(8,18,34,.86); border: 4px solid rgba(255,255,255,.9); border-radius: 30px; padding: 22px 34px;
+  box-shadow: 0 20px 44px rgba(0,0,0,.55); font-family: 'Arch', 'Emo', sans-serif; font-weight: 800; color: #fff; transform-origin: 50% 50%; }
+.card .lbl { font-size: 32px; letter-spacing: .12em; color: #BFD6EE; }
+.card .big { font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 120px; line-height: 1.02; color: var(--gold); }
+.card .big .u { font-size: 64px; color: #fff; margin-left: 10px; }
+.card .chip { display: inline-block; margin-top: 8px; padding: 6px 18px; border-radius: 40px; background: var(--gold); color: #03101A; font-size: 32px; letter-spacing: .08em; }
+.ttl { position: absolute; left: 0; width: 1080px; text-align: center; opacity: 0; white-space: nowrap; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; color: #fff; line-height: 1;
+  paint-order: stroke fill; -webkit-text-stroke-color: #03101A; }
+.ttl .k { color: var(--gold); }
+.ttl .box { display: inline-block; background: var(--gold); color: #03101A; -webkit-text-stroke-width: 0; padding: 0 .16em; border-radius: 14px; margin-left: .2em; }
+.cl { position: absolute; left: 100px; width: 880px; text-align: center; white-space: nowrap; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; color: #fff; paint-order: stroke fill;
+  -webkit-text-stroke-color: #02070D; line-height: 1; }
+.cl span { opacity: 0; display: inline-block; white-space: pre; }
+.cap { position: absolute; inset: 0; opacity: 0; }
+.rank { position: absolute; left: 90px; top: 395px; width: 900px; opacity: 0; display: flex; justify-content: space-between; }
+.rk { width: 138px; height: 168px; border-radius: 26px; background: rgba(8,18,34,.86); border: 4px solid #fff; text-align: center; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; color: #fff; opacity: 0; box-sizing: border-box; }
+.rk .n { font-size: 52px; padding-top: 10px; color: var(--gold); } .rk .f { font-size: 70px; line-height: 80px; } .rk.dim { opacity: 0; border-color: #6c7a88; } .rk.dim .n { color: #8b98a6; }
+.bars { position: absolute; left: 150px; top: 330px; width: 780px; height: 620px; opacity: 0; }
+.bar { position: absolute; bottom: 120px; width: 250px; border-radius: 22px 22px 0 0; border: 5px solid #03101A; box-sizing: border-box; transform-origin: 50% 100%; }
+.bcap { position: absolute; bottom: 20px; width: 330px; text-align: center; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 54px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 10px #03101A; }
+.bnum { position: absolute; width: 330px; text-align: center; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 84px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 14px #03101A; }
+.tline { position: absolute; left: 110px; top: 360px; width: 860px; height: 260px; opacity: 0; }
+.tl-track { position: absolute; left: 0; top: 150px; width: 860px; height: 26px; border-radius: 14px; background: rgba(8,18,34,.8); border: 4px solid #fff; box-sizing: border-box; }
+.tl-fill { position: absolute; left: 4px; top: 154px; width: 0; height: 18px; border-radius: 10px; background: linear-gradient(90deg, #FFE08A, #FFB21A); }
+.tl-y { position: absolute; top: 190px; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 64px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 12px #03101A; }
+.tl-big { position: absolute; left: 0; width: 860px; top: -10px; text-align: center; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 140px; color: var(--gold); paint-order: stroke fill; -webkit-text-stroke: 22px #03101A; }
+.stamp { position: absolute; left: 0; top: 0; opacity: 0; padding: 10px 36px; border: 10px solid var(--red); border-radius: 22px; color: var(--red); font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 110px;
+  letter-spacing: .04em; background: rgba(255,255,255,.88); transform-origin: 50% 50%; white-space: nowrap; }
+.vote { position: absolute; top: 380px; width: 430px; height: 200px; border-radius: 34px; opacity: 0; border: 6px solid #03101A; box-sizing: border-box; text-align: center;
+  font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; color: #03101A; box-shadow: 0 14px 0 rgba(3,16,26,.55); }
+.vote .vt { font-size: 66px; padding-top: 16px; } .vote .vf { font-size: 56px; }
+.ball { position: absolute; left: 0; top: 0; width: 300px; height: 300px; opacity: 0; transform-origin: 50% 100%; }
+.bubble { position: absolute; left: 0; top: 0; opacity: 0; padding: 18px 34px; border-radius: 40px; background: #fff; border: 6px solid #03101A; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900;
+  font-size: 64px; color: #03101A; white-space: nowrap; transform-origin: 20% 100%; }
+.bubble:after { content: ''; position: absolute; left: 60px; bottom: -34px; border: 18px solid transparent; border-top: 22px solid #03101A; }
+#badge { position: absolute; left: 34px; top: 1712px; width: 150px; height: 150px; opacity: 0; filter: drop-shadow(0 6px 10px rgba(0,0,0,.5)); }
+.snow { position: absolute; left: 0; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #fff; opacity: 0; }
+.coin { position: absolute; left: 0; top: 0; font-family: 'Emo'; font-size: 90px; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="cshake" class="scr">
+      <div id="view"><div id="cam"></div></div>
+      <div id="sepia" class="scr"></div><div id="warm" class="scr"></div>
+      <div id="world2" class="scr"></div>
+    </div></div>
+    <div id="fx" class="scr"></div>
+    <div id="hud" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <img id="badge" src="assets/bhugol_badge.png" alt="" />
+  </div>
+</div>
+<script>
+const D = __DATA__;
+const NS = 'http://www.w3.org/2000/svg', $ = id => document.getElementById(id), M = D.map, PT = M.pt;
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const LN = D.LN;
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+
+/* ================= world (one map, one continuous camera) ================= */
+const cam = $('cam'); Object.assign(cam.style, { width: M.W + 'px', height: M.H + 'px' });
+const ctx = mk('img', { src: 'assets/context.jpg', alt: '' }, cam); Object.assign(ctx.style, { left: '0px', top: '0px', width: M.W + 'px', height: M.H + 'px' });
+const [dx, dy, dw, dh] = M.detail; const det = mk('img', { src: 'assets/detail.jpg', alt: '' }, cam); Object.assign(det.style, { left: dx + 'px', top: dy + 'px', width: dw + 'px', height: dh + 'px' });
+const svg = mk('svg', { width: M.W, height: M.H, viewBox: `0 0 ${M.W} ${M.H}` }, cam, true);
+const defs = mk('defs', {}, svg, true);
+const gr = mk('linearGradient', { id: 'gold', x1: 0, y1: 0, x2: .3, y2: 1 }, defs, true);
+mk('stop', { offset: 0, 'stop-color': '#FFE27A' }, gr, true); mk('stop', { offset: .55, 'stop-color': '#F6B630' }, gr, true); mk('stop', { offset: 1, 'stop-color': '#E08E1A' }, gr, true);
+const ice = mk('linearGradient', { id: 'ice', x1: 0, y1: 0, x2: 1, y2: 1 }, defs, true);
+mk('stop', { offset: 0, 'stop-color': '#FFFFFF' }, ice, true); mk('stop', { offset: 1, 'stop-color': '#A9DCFF' }, ice, true);
+const shine = mk('linearGradient', { id: 'shine', x1: 0, y1: 0, x2: 1, y2: 0, gradientUnits: 'userSpaceOnUse' }, defs, true);
+const sh0 = mk('stop', { offset: 0, 'stop-color': '#fff', 'stop-opacity': 0 }, shine, true), sh1 = mk('stop', { offset: .5, 'stop-color': '#fff', 'stop-opacity': .75 }, shine, true), sh2 = mk('stop', { offset: 1, 'stop-color': '#fff', 'stop-opacity': 0 }, shine, true);
+
+// flags drawn inside each country's border (cover-fit to the country's bbox)
+const FLAG = {   // Nordic crosses drawn through each country's own main landmass (arms sized to it), so every flag reads at a glance
+  DNK: { bg: '#C8102E', arms: [['#fff', .2]], dx: -.08 }, NOR: { bg: '#BA0C2F', arms: [['#fff', .2], ['#00205B', .1]], dx: -.05, dy: .1 },
+  SWE: { bg: '#006AA7', arms: [['#FECC02', .16]], dx: -.08, dy: .05 }, FIN: { bg: '#ffffff', arms: [['#002F6C', .18]], dx: -.1 },
+  ISL: { bg: '#02529C', arms: [['#fff', .22], ['#DC1E35', .11]], dx: -.1 }, FRO: { bg: '#ffffff', arms: [['#0065BD', .22], ['#EF303E', .11]] },
+  ALA: { bg: '#0064AE', arms: [['#FFD300', .22], ['#DA0E15', .1]] }, GRL: { bg: '#ffffff', grl: true },
+};
+const FL = {};
+for (const k in M.paths) {
+  const cp = mk('clipPath', { id: 'cp' + k }, defs, true); mk('path', { d: M.paths[k] }, cp, true);
+  const g = mk('g', { 'clip-path': `url(#cp${k})`, opacity: 0 }, svg, true); const f = FLAG[k]; const [x0, y0, x1, y1] = M.bbox[k];
+  const [ax0, ay0, mw, mh] = M.anchor[k]; const ax = ax0 + (f.dx || 0) * mw, ay = ay0 + (f.dy || 0) * mh, m = Math.min(mw, mh);
+  mk('rect', { x: x0 - 20, y: y0 - 20, width: x1 - x0 + 40, height: y1 - y0 + 40, fill: f.bg }, g, true);
+  if (f.grl) { mk('rect', { x: x0 - 20, y: ay, width: x1 - x0 + 40, height: y1 - ay + 20, fill: '#C8102E' }, g, true); const R = m * .3;
+    mk('path', { d: `M${ax - R},${ay} A${R},${R} 0 0 1 ${ax + R},${ay} Z`, fill: '#C8102E' }, g, true); mk('path', { d: `M${ax - R},${ay} A${R},${R} 0 0 0 ${ax + R},${ay} Z`, fill: '#fff' }, g, true); }
+  for (const [c, th] of f.arms || []) { const w = th * m; mk('rect', { x: ax - w / 2, y: y0 - 20, width: w, height: y1 - y0 + 40, fill: c }, g, true); mk('rect', { x: x0 - 20, y: ay - w / 2, width: x1 - x0 + 40, height: w, fill: c }, g, true); }
+  mk('rect', { x: x0 - 20, y: y0 - 20, width: x1 - x0 + 40, height: y1 - y0 + 40, fill: '#000', opacity: .06 }, g, true);
+  FL[k] = g;
+}
+// country outlines (constant screen width)
+const OUT = {}; for (const k in M.paths) OUT[k] = mk('path', { d: M.paths[k], fill: 'none', stroke: '#fff', 'stroke-width': 3, 'vector-effect': 'non-scaling-stroke', 'stroke-linejoin': 'round', opacity: .95 }, svg, true);
+// unified gold country: extrusion + fill + shine + rim
+const goldG = mk('g', { opacity: 0 }, svg, true);
+const extr = mk('path', { d: M.union, fill: '#7A4A0A' }, goldG, true);
+const goldF = mk('path', { d: M.union, fill: 'url(#gold)' }, goldG, true);
+const cpU = mk('clipPath', { id: 'cpU' }, defs, true); mk('path', { d: M.union }, cpU, true);
+const shineR = mk('rect', { x: 0, y: 0, width: M.W, height: M.H, fill: 'url(#shine)', 'clip-path': 'url(#cpU)', opacity: 0 }, svg, true);
+const iceP = mk('path', { d: M.paths.GRL, fill: 'url(#ice)', opacity: 0 }, svg, true);
+const rimW = mk('path', { d: M.union, fill: 'none', stroke: '#FFE7A0', 'stroke-width': 16, 'vector-effect': 'non-scaling-stroke', opacity: 0, 'stroke-linejoin': 'round' }, svg, true);
+const rim = mk('path', { d: M.union, fill: 'none', stroke: '#FFF6D6', 'stroke-width': 4, 'vector-effect': 'non-scaling-stroke', opacity: 0, 'stroke-linejoin': 'round' }, svg, true);
+// city lights inside the union
+const lights = mk('g', { opacity: 0 }, svg, true); for (const [x, y, r] of D.cities) mk('circle', { cx: x, cy: y, r, fill: '#FFF7D0' }, lights, true);
+// internal land borders (erased by the eraser, redrawn when Sweden walks out)
+const BRD = Object.values(M.borders).map(d => mk('path', { d, fill: 'none', stroke: '#fff', 'stroke-width': 5, 'vector-effect': 'non-scaling-stroke', pathLength: 1, 'stroke-dasharray': 1, 'stroke-dashoffset': 0, opacity: 1 }, svg, true));
+const BRDR = Object.values(M.borders).filter((d, i) => i < 2).map(d => mk('path', { d, fill: 'none', stroke: '#FF3B30', 'stroke-width': 7, 'vector-effect': 'non-scaling-stroke', 'stroke-dasharray': '18 12', opacity: 0 }, svg, true));
+// Sweden on its own layer (walks out in 1523)
+const sweG = mk('g', {}, svg, true); const sweGold = mk('path', { d: M.paths.SWE, fill: 'url(#gold)', opacity: 0 }, sweG, true);
+const sweFlag = FL.SWE.cloneNode(true); sweFlag.setAttribute('opacity', 0); sweG.appendChild(sweFlag);
+const sweOut = mk('path', { d: M.paths.SWE, fill: 'none', stroke: '#fff', 'stroke-width': 5, 'vector-effect': 'non-scaling-stroke', opacity: 0 }, sweG, true);
+// travel arcs between capitals (passport-free)
+const ARCS = [['oslo', 'stockholm'], ['stockholm', 'helsinki'], ['copenhagen', 'oslo'], ['copenhagen', 'stockholm'], ['reykjavik', 'oslo']].map(([a, b]) => { const p = PT[a], q = PT[b];
+  const mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2 - Math.hypot(q[0] - p[0], q[1] - p[1]) * .28;
+  return mk('path', { d: `M${p[0]},${p[1]} Q${mx},${my} ${q[0]},${q[1]}`, fill: 'none', stroke: '#fff', 'stroke-width': 11, 'vector-effect': 'non-scaling-stroke', 'stroke-dasharray': '3 20', 'stroke-linecap': 'round', opacity: 0 }, svg, true); });
+
+/* ================= camera ================= */
+const VX = 540, VY = 860, PERS = 2200;
+const bez = (x1, y1, x2, y2) => t => { if (t <= 0) return 0; if (t >= 1) return 1; let u = t; for (let i = 0; i < 8; i++) { const x = 3 * (1 - u) * (1 - u) * u * x1 + 3 * (1 - u) * u * u * x2 + u * u * u - t;
+  const dx = 3 * (1 - u) * (1 - u) * x1 + 6 * (1 - u) * u * (x2 - x1) + 3 * u * u * (1 - x2); if (Math.abs(dx) < 1e-6) break; u -= x / dx; u = Math.min(1, Math.max(0, u)); }
+  return 3 * (1 - u) * (1 - u) * u * y1 + 3 * (1 - u) * u * u * y2 + u * u * u; };
+const EASE = { glide: bez(.5, 0, .08, 1), snap: bez(.7, 0, .05, 1), soft: bez(.42, 0, .2, 1) };
+const KEYS = D.cam; // [{at, dur, x, y, z, tilt, rot, ease}] — the first one is the opening pose
+function camAt(t) {
+  let s = Object.assign({}, KEYS[0]); let last = 0;
+  for (let i = 1; i < KEYS.length; i++) { const k = KEYS[i]; if (t <= k.at) break; const u = Math.min(1, (t - k.at) / k.dur), e = EASE[k.ease || 'glide'](u);
+    const p = Object.assign({}, s); for (const f of ['x', 'y', 'z', 'tilt', 'rot']) if (k[f] !== undefined) s[f] = p[f] + (k[f] - p[f]) * e; last = k.at + k.dur; if (u < 1) { last = null; break; } }
+  if (last !== null && t < KEYS[KEYS.length - 1].at) { const h = Math.max(0, t - last); const d = D.drift; s.z *= 1 + Math.min(h, 6) * d; s.x += Math.min(h, 6) * 2.2; }  // holds keep drifting (no frozen frames)
+  return s;
+}
+let CS = camAt(0);
+function camApply(s) { CS = s; cam.style.transform = `translate(${VX}px,${VY}px) rotateX(${s.tilt.toFixed(3)}deg) rotate(${(s.rot || 0).toFixed(3)}deg) scale(${s.z.toFixed(5)}) translate(${(-s.x).toFixed(2)}px,${(-s.y).toFixed(2)}px)`;
+  extr.setAttribute('transform', `translate(0,${(9 / s.z).toFixed(2)})`); }
+function proj(wx, wy) { const s = CS, r = (s.rot || 0) * Math.PI / 180; let x = (wx - s.x) * s.z, y = (wy - s.y) * s.z; const xr = x * Math.cos(r) - y * Math.sin(r), yr = x * Math.sin(r) + y * Math.cos(r);
+  const a = s.tilt * Math.PI / 180, y2 = yr * Math.cos(a), z2 = yr * Math.sin(a), f = PERS / (PERS - z2); return { x: VX + xr * f, y: VY + y2 * f, f }; }
+
+/* ================= HUD helpers ================= */
+const hud = $('hud'), fx = $('fx');
+function pin(key, label, flag) { const p = mk('div', { class: 'pin' }, hud); p.innerHTML = `<div class="dot"></div><div class="tag">${flag ? `<span style="font-family:Emo">${flag}</span> ` : ''}${label}</div>`; p.key = key; return p; }
+function emo(ch, size) { const e = mk('div', { class: 'emo' }, fx); e.textContent = ch; e.style.fontSize = size + 'px'; return e; }
+function lab(txt) { const e = mk('div', { class: 'lab' }, hud); e.textContent = txt; return e; }
+const ANCH = [];  // HUD elements that ride a world point: {el, key|xy, dx, dy}
+const ride = (el, key, dx, dy) => ANCH.push({ el, key, dx: dx || 0, dy: dy || 0 });
+
+/* ================= build ================= */
+function build() {
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false }; const MO = BhugolMotion(tl);
+  const evs = [];  // visual beats (for the sound plan)
+  const ev = (t, kind) => evs.push({ t: +t.toFixed(3), kind });
+  const PUN = (at, lv, back) => { MO.punch($('cshake'), at, lv, back); ev(at, 'punch'); };
+  const pop = (el, at, s0, ease) => { tl.fromTo(el, { opacity: 0, scale: s0 || .4 }, { opacity: 1, scale: 1, duration: .45, ease: ease || 'back.out(1.6)', ...IR }, at); };
+  const out = (el, at, d) => tl.to(el, { opacity: 0, duration: d || .25, ease: 'power2.in' }, at);
+  const fadeA = (el, v, at, d) => tl.to(el, { attr: { opacity: v }, duration: d || .4, ...IR }, at);
+  const place = (el, x, y) => tl.set(el, { x, y }, 0);
+
+  // ---- camera driver (pure function of time) + HUD anchors ----
+  MO.driver(0, D.dur, t => { camApply(camAt(t)); for (const a of ANCH) { const w = a.fn ? a.fn(t) : a.key ? PT[a.key] : a.xy; const q = proj(w[0], w[1]); a.el.style.left = (q.x + a.dx).toFixed(1) + 'px'; a.el.style.top = (q.y + a.dy).toFixed(1) + 'px'; } });
+
+  // ===== cover at frame 0 (= loop seam) =====
+  for (const k in FL) tl.set(FL[k], { attr: { opacity: .78 } }, 0);
+  const cov = mk('div', { class: 'ttl' }, $('titles')); cov.style.top = '170px';
+  cov.innerHTML = D.cover.map((l, i) => `<div style="font-size:${i ? 150 : 118}px;-webkit-text-stroke-width:${i ? 22 : 18}px;margin-top:${i ? 6 : 0}px">${l}</div>`).join('');
+  tl.set(cov, { opacity: 1 }, 0); tl.to(cov, { opacity: 0, y: -30, scale: .92, duration: .28, ease: 'power2.in' }, .12);
+  tl.fromTo(cov, { opacity: 0, y: 30, scale: .92 }, { opacity: 1, y: 0, scale: 1, duration: .38, ease: 'power3.out', ...IR }, D.dur - .45);
+  tl.fromTo($('badge'), { opacity: 1 }, { opacity: 1, duration: .1, ...IR }, 0);
+
+  // ===== L0 hook =====
+  const h1 = mk('div', { class: 'ttl' }, $('titles')); h1.style.top = '175px'; h1.innerHTML = '<div style="font-size:150px;-webkit-text-stroke-width:22px">🇩🇰🇳🇴🇸🇪🇫🇮🇮🇸 → <span class="k">1?</span></div>';
+  tl.fromTo(h1, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: .3, ease: 'expo.out', ...IR }, .32); ev(.32, 'slam'); out(h1, C(0, 1, -.1));
+  const rank = mk('div', { class: 'rank' }, hud); rank.innerHTML = [['1', '🇫🇮'], ['2', '🇮🇸'], ['3', '🇩🇰'], ['4', '🇨🇷'], ['5', '🇸🇪'], ['6', '🇳🇴']].map(([n, f]) => `<div class="rk${n === '4' ? ' dim' : ''}"><div class="n">#${n}</div><div class="f">${f}</div></div>`).join('');
+  const rkTitle = mk('div', { class: 'ttl' }, $('titles')); rkTitle.style.top = '230px'; rkTitle.innerHTML = '<div style="font-size:84px;-webkit-text-stroke-width:15px">😊 HAPPIEST <span class="k">2026</span></div>';
+  tl.set(rank, { opacity: 1 }, C(0, 1)); MO.textIn(rkTitle, C(0, 1));
+  [...rank.children].forEach((r, i) => { tl.fromTo(r, { opacity: 0, y: 60, scale: .6 }, { opacity: i === 3 ? .45 : 1, y: 0, scale: 1, duration: .4, ease: 'back.out(1.8)', ...IR }, C(0, 1, .06 + i * .08)); });
+  ev(C(0, 1), 'card'); out(rank, C(1, 0, -.1)); out(rkTitle, C(1, 0, -.1));
+  PUN(C(0, 0, .02), 1.06, C(0, 1, -.05)); PUN(C(0, 1, .05), 1.1, C(0, 2)); PUN(C(0, 3, .1), 1.14, C(1, 0, .1));
+
+  // ===== L1 erase the borders, name the five =====
+  const NAMES = [['DENMARK', 'denmark_c', [1, 1]], ['NORWAY', 'norway_c', [1, 2]], ['SWEDEN', 'sweden_c', [1, 2, .45]], ['FINLAND', 'finland_c', [1, 2, .85]], ['ICELAND', 'iceland_c', [1, 3, .25]]];
+  const NL = NAMES.map(([n, k, at]) => { const e = lab(n); ride(e, k, 0, 0); e.style.transform = 'translate(-50%,-50%)'; return { e, t: C(at[0], at[1], at[2] || 0) }; });
+  for (const { e, t } of NL) { tl.fromTo(e, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)', ...IR }, t); ev(t, 'pop'); out(e, C(2, 0, .1)); }
+  const eraser = emo('🧽', 120); ride(eraser, null, -60, -110);
+  const eA = ANCH[ANCH.length - 1]; const bpaths = BRD; const tE0 = C(1, 0, .05), tE1 = C(1, 3, .2);
+  const eraserAt = t => { const u = Math.min(1, Math.max(0, (t - tE0) / (tE1 - tE0))); const n = bpaths.length, seg = Math.min(n - 1, Math.floor(u * n)), su = Math.min(1, u * n - seg);
+    const P = bpaths[seg], q = P.getPointAtLength(P.getTotalLength() * su); return [q.x, q.y]; };
+  eA.fn = eraserAt;
+  tl.to(eraser, { opacity: 1, duration: .2 }, tE0); out(eraser, tE1 + .1);
+  MO.driver(tE0, tE1 + .2, t => { const u = Math.min(1, Math.max(0, (t - tE0) / (tE1 - tE0))); const n = bpaths.length, seg = Math.min(n - 1, Math.floor(u * n)), su = Math.min(1, u * n - seg);
+    bpaths.forEach((p, i) => p.setAttribute('stroke-dashoffset', i < seg ? 1 : i === seg ? su : 0));
+    eraser.style.transform = `rotate(${Math.sin(t * 18) * 14}deg)`; });
+  ev(tE0, 'whoosh'); ev(C(1, 2), 'whoosh');
+  // flags -> gold
+  const tG = C(2, 0, -.15);
+  for (const k in FL) tl.to(FL[k], { attr: { opacity: 0 }, duration: .45, ...IR }, tG + .1);
+  for (const k in OUT) tl.to(OUT[k], { attr: { opacity: 0 }, duration: .45, ...IR }, tG + .1);
+  fadeA(goldG, 1, tG, .5); fadeA(rim, 1, tG + .1, .4); fadeA(rimW, .35, tG + .1, .4); fadeA(lights, .9, tG + .5, .6);
+  tl.set(shineR, { attr: { opacity: 1 } }, tG + .2);
+  MO.driver(tG + .2, tG + 1.4, t => { const u = Math.min(1, Math.max(0, (t - tG - .2) / 1.1)); const x = -600 + u * (M.W + 1200); shine.setAttribute('x1', x - 500); shine.setAttribute('x2', x + 500); shineR.setAttribute('opacity', u < 1 ? 1 : 0); });
+  tl.to($('flash'), { keyframes: [{ opacity: .35, duration: .06 }, { opacity: 0, duration: .45 }] }, tG + .15); ev(tG + .15, 'boom');
+  // #7 card
+  const c7 = mk('div', { class: 'card' }, hud); c7.innerHTML = '<div class="lbl">ONE COUNTRY · AREA</div><div class="big"><span class="n">0</span><span class="u">M km²</span></div><div class="chip">#7 BIGGEST ON EARTH 🌍</div>';
+  place(c7, 250, 300); pop(c7, C(2, 1)); MO.countUp(c7.querySelector('.n'), 3.4, C(2, 1, .05), { decimals: 1, dur: 1.1, noScale: true }); ev(C(2, 1), 'count'); out(c7, C(3, 0, -.05));
+  PUN(C(2, 1, .05), 1.07, C(3, 0));
+
+  // ===== L3 half of it is ice =====
+  fadeA(iceP, .85, C(3, 1), .6); const icel = emo('🧊', 150); ride(icel, 'greenland', -75, -200); pop(icel, C(3, 1, .1)); ev(C(3, 1, .1), 'pop');
+  const iceT = mk('div', { class: 'card' }, hud); iceT.innerHTML = '<div class="big" style="color:#BEE8FF">~50%<span class="u">ICE</span></div>'; place(iceT, 330, 300); pop(iceT, C(3, 2)); ev(C(3, 2), 'pop');
+  const SN = []; for (let i = 0; i < 70; i++) { const s = mk('div', { class: 'snow' }, fx); const r = 5 + (i * 37) % 9; Object.assign(s.style, { width: r + 'px', height: r + 'px' }); SN.push({ s, x: (i * 157) % 1080, ph: (i * .618) % 1, sp: .18 + ((i * 13) % 10) / 60 }); }
+  const sA = C(3, 1), sB = C(4, 0, .2);
+  MO.driver(sA - .02, sB + .02, t => { const a = Math.max(0, Math.min(1, (t - sA) / .4, (sB - t) / .4)); for (const o of SN) { const ph = (o.ph + t * o.sp) % 1; o.s.style.opacity = (a * .85).toFixed(3);
+    o.s.style.transform = `translate(${(o.x + Math.sin(t * 1.3 + o.ph * 9) * 30).toFixed(1)}px,${(ph * 1500 + 150).toFixed(1)}px)`; } });
+  out(icel, C(4, 0)); out(iceT, C(4, 0)); fadeA(iceP, 0, C(4, 0), .5);
+
+  // ===== L4 28M vs Texas =====
+  const bars = mk('div', { class: 'bars' }, hud);
+  bars.innerHTML = `<div class="bar" id="bA" style="left:40px;height:410px;background:linear-gradient(#FFE27A,#F0A020)"></div><div class="bar" id="bB" style="left:490px;height:460px;background:linear-gradient(#ff8a7a,#C8102E)"></div>
+  <div class="bnum" id="nA" style="left:0;bottom:545px">28.3M</div><div class="bnum" id="nB" style="left:450px;bottom:595px">31.7M</div>
+  <div class="bcap" style="left:0">🟡 NORDIC</div><div class="bcap" style="left:450px">🤠 TEXAS</div>`;
+  tl.set(bars, { opacity: 1 }, C(4, 0)); const bA = bars.querySelector('#bA'), bB = bars.querySelector('#bB'), nA = bars.querySelector('#nA'), nB = bars.querySelector('#nB');
+  tl.fromTo(bA, { scaleY: 0 }, { scaleY: 1, duration: .7, ease: 'power3.out', ...IR }, C(4, 0)); MO.countUp(nA, 28.3, C(4, 0), { decimals: 1, suffix: 'M', dur: .8, noScale: true }); ev(C(4, 0), 'count');
+  tl.set([bB, nB], { opacity: 0 }, 0); tl.set([bB, nB], { opacity: 1 }, C(4, 3, -.1));
+  tl.fromTo(bB, { scaleY: 0 }, { scaleY: 1, duration: .6, ease: 'power3.out', ...IR }, C(4, 3, -.1)); MO.countUp(nB, 31.7, C(4, 3, -.1), { decimals: 1, suffix: 'M', dur: .6, noScale: true }); ev(C(4, 3, -.1), 'count');
+  tl.set(bars.querySelectorAll('.bcap'), { opacity: 0 }, 0); tl.set(bars.querySelectorAll('.bcap')[0], { opacity: 1 }, C(4, 0)); tl.set(bars.querySelectorAll('.bcap')[1], { opacity: 1 }, C(4, 3, -.1));
+  out(bars, C(5, 0, -.05));
+
+  // ===== L5 economy =====
+  const COINS = []; for (let i = 0; i < 14; i++) { const c = mk('div', { class: 'coin' }, fx); c.textContent = '🪙'; COINS.push(c); }
+  const c12 = mk('div', { class: 'card' }, hud); c12.innerHTML = '<div class="lbl">ECONOMY</div><div class="big"><span class="n">$0</span><span class="u">TRILLION</span></div><div class="chip">TOP 12 ON EARTH 📈</div>';
+  place(c12, 200, 300); pop(c12, C(5, 1, -.05)); MO.countUp(c12.querySelector('.n'), 2.2, C(5, 1), { decimals: 1, prefix: '$', dur: 1.0, noScale: true }); ev(C(5, 1), 'count');
+  COINS.forEach((c, i) => { const x = 160 + (i * 197) % 760, y0 = -120 - (i * 53) % 200; tl.fromTo(c, { opacity: 1, x, y: y0, rotation: -30 }, { y: 900 + (i * 41) % 200, rotation: 20, duration: .85, ease: 'power2.in', ...IR }, C(5, 1, .05 + i * .05));
+    out(c, C(5, 1, .95 + i * .05), .12); });
+  ev(C(5, 1, .3), 'coins'); out(c12, C(6, 0, -.05));
+
+  // ===== L6 Norway piggy bank =====
+  const piggy = emo('🐷', 190); ride(piggy, 'oslo', -95, -290); tl.fromTo(piggy, { opacity: 0, y: -500 }, { opacity: 1, y: 0, duration: .55, ease: 'bounce.out', ...IR }, C(6, 2, -.1)); ev(C(6, 2, .2), 'thud');
+  ev(C(6, 0), 'pop'); const norF = FL.NOR.cloneNode(true); norF.setAttribute('opacity', 0); svg.insertBefore(norF, rimW); tl.to(norF, { attr: { opacity: .85 }, duration: .4, ...IR }, C(6, 0)); tl.to(norF, { attr: { opacity: 0 }, duration: .4, ...IR }, C(7, 0, -.1));
+  const cF = mk('div', { class: 'card' }, hud); cF.innerHTML = '<div class="lbl">🇳🇴 OIL FUND</div><div class="big"><span class="n">$0</span><span class="u">TRILLION</span></div><div class="chip">WORLD\'S BIGGEST 🏆</div>';
+  place(cF, 250, 300); pop(cF, C(6, 3, -.05)); MO.countUp(cF.querySelector('.n'), 2.3, C(6, 3), { decimals: 1, prefix: '$', dur: .9, noScale: true }); ev(C(6, 3), 'count');
+  out(piggy, C(7, 0, -.05)); out(cF, C(7, 0, -.05));
+
+  // ===== L7 OL1 =====
+  const q = mk('div', { class: 'ttl' }, $('titles')); q.style.top = '250px'; q.innerHTML = '<div style="font-size:140px;-webkit-text-stroke-width:22px">SO… <span class="k">WHY NOT?</span> 🤔</div>';
+  MO.slam(q, C(7, 0, .05), { shake: false }); ev(C(7, 0, .05), 'slam'); out(q, C(8, 0, -.05)); PUN(C(7, 1), 1.12, C(8, 0));
+
+  // ===== L8-L10 the twist: Kalmar Union 1397 =====
+  const tT = C(8, 0, -.05);
+  tl.to($('flash'), { keyframes: [{ opacity: .9, duration: .07 }, { opacity: 0, duration: .5 }] }, tT); ev(tT, 'flash');
+  tl.to($('sepia'), { opacity: .32, duration: .5 }, tT + .05); tl.to($('warm'), { opacity: .6, duration: .5 }, tT + .05);
+  fadeA(lights, 0, tT, .3);
+  const st1 = mk('div', { class: 'stamp' }, hud); st1.textContent = 'DONE BEFORE ✅'; place(st1, 160, 330);
+  tl.fromTo(st1, { opacity: 0, scale: 2.2, rotation: -14 }, { opacity: 1, scale: 1, rotation: -8, duration: .26, ease: 'power4.in', ...IR }, C(8, 1)); ev(C(8, 1, .24), 'stamp'); out(st1, C(9, 0, -.05));
+  const yr = mk('div', { class: 'ttl' }, $('titles')); yr.style.top = '230px'; yr.innerHTML = '<div style="font-size:190px;-webkit-text-stroke-width:26px">⏪ <span class="k n">2026</span></div>';
+  MO.textIn(yr, C(9, 0, -.05)); { const n = yr.querySelector('.n'); const st = { v: 2026 }; tl.fromTo(st, { v: 2026 }, { v: 1397, duration: .9, ease: 'power3.out', ...IR, onUpdate: () => { n.textContent = Math.round(st.v); } }, C(9, 0)); }
+  ev(C(9, 0), 'count'); out(yr, C(9, 3, -.1));
+  const CR = [['denmark_c', 0], ['norway_c', 1], ['sweden_c', 2]].map(([k, i]) => { const e = emo('👑', 120); ride(e, k, -60, -140); return e; });
+  CR.forEach((e, i) => { pop(e, C(9, 1, .1 + i * .28)); ev(C(9, 1, .1 + i * .28), 'pop'); });
+  const kal = pin('kalmar', 'KALMAR', '🏰'); ride(kal, 'kalmar');
+  // the three crowns fly to Kalmar and merge at "one king"
+  const tK = C(9, 3, -.1);
+  CR.forEach((e, i) => { const A = ANCH.find(a => a.el === e); const p = PT[A.key], q2 = PT.kalmar;
+    A.fn = t => { const u = EASE.snap(Math.min(1, Math.max(0, (t - tK) / .6))); return [p[0] + (q2[0] - p[0]) * u, p[1] + (q2[1] - p[1]) * u]; };
+    if (i) tl.to(e, { opacity: 0, duration: .5, ease: 'power2.in' }, tK + .1); else tl.to(e, { scale: 1.45, duration: .6, ease: 'power3.out' }, tK); });
+  ev(tK + .5, 'chime');
+  tl.fromTo(kal, { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: .4, ease: 'back.out(2)', ...IR }, C(9, 5, -.1)); ev(C(9, 5, -.1), 'pop');
+  CR.forEach(e => out(e, C(10, 0, .1))); out(kal, C(11, 0, -.05));
+  const tl126 = mk('div', { class: 'tline' }, hud);
+  tl126.innerHTML = '<div class="tl-big"><span class="n">0</span> YEARS</div><div class="tl-track"></div><div class="tl-fill"></div><div class="tl-y" style="left:-20px">1397</div><div class="tl-y" style="right:-20px">1523</div>';
+  tl.set(tl126, { opacity: 1 }, C(10, 0)); tl.fromTo(tl126.querySelector('.tl-fill'), { width: 0 }, { width: 852, duration: 1.3, ease: 'power2.inOut', ...IR }, C(10, 0, .1));
+  MO.countUp(tl126.querySelector('.n'), 126, C(10, 1, -.2), { dur: .9, noScale: true }); ev(C(10, 1, -.2), 'count'); out(tl126, C(11, 0, -.05));
+  // OL2
+  PUN(C(11, 1, .1), 1.16, C(12, 0, -.05));
+  const pc = emo('🍿', 150); place(pc, 860, 380); pop(pc, C(11, 1)); ev(C(11, 1), 'pop'); out(pc, C(12, 0));
+
+  // ===== L12-L13 Sweden walks out =====
+  const tW = C(12, 2, -.1);
+  const s1523 = mk('div', { class: 'stamp' }, hud); s1523.textContent = '1523'; place(s1523, 330, 300);
+  tl.fromTo(s1523, { opacity: 0, scale: 2.2, rotation: 10 }, { opacity: 1, scale: 1, rotation: 6, duration: .26, ease: 'power4.in', ...IR }, C(12, 0)); ev(C(12, 0, .24), 'stamp'); out(s1523, C(13, 0, -.05));
+  tl.set(sweGold, { attr: { opacity: 1 } }, tW - .02); tl.to(sweOut, { attr: { opacity: 1 }, duration: .2, ...IR }, tW);
+  tl.to(sweFlag, { attr: { opacity: .9 }, duration: .35, ...IR }, tW + .25);
+  tl.fromTo(sweG, { x: 0, y: 0 }, { x: 70, y: 40, duration: .9, ease: 'power3.out', ...IR }, tW); ev(tW, 'whoosh');
+  BRDR.forEach(p => tl.to(p, { attr: { opacity: 1 }, duration: .3, ...IR }, tW + .3));
+  const walker = emo('🚶', 140); ride(walker, 'sweden_c', -40, -70); tl.fromTo(walker, { opacity: 0, x: -40 }, { opacity: 1, x: 60, duration: 1.2, ease: 'none', ...IR }, tW); out(walker, C(13, 0, .2));
+  const nd = mk('div', { class: 'card' }, hud); nd.innerHTML = '<div class="lbl">🇸🇪 NATIONAL DAY</div><div class="big">6 JUNE<span class="u">🎉</span></div><div class="chip">= THE DAY THEY LEFT</div>';
+  place(nd, 270, 300); pop(nd, C(13, 0, .05)); ev(C(13, 0, .05), 'pop'); out(nd, C(14, 0, -.05));
+  const CONF = []; for (let i = 0; i < 26; i++) { const c = mk('div', { class: 'snow' }, fx); c.style.background = ['#006AA7', '#FECC02', '#fff', '#FF3B30'][i % 4]; c.style.borderRadius = '3px'; Object.assign(c.style, { width: '16px', height: '26px' }); CONF.push(c); }
+  CONF.forEach((c, i) => { tl.fromTo(c, { opacity: 1, x: 540, y: 520, rotation: 0 }, { x: 540 + ((i * 97) % 760 - 380), y: 520 + ((i * 61) % 700) + 200, rotation: (i % 2 ? 1 : -1) * 540, duration: 1.4, ease: 'power2.out', ...IR }, C(13, 2, -.1)); out(c, C(13, 2, 1.2), .3); });
+  ev(C(13, 2, -.1), 'sparkle');
+
+  // ===== L14 passport-free (back to today) =====
+  const tP = C(14, 0, -.1);
+  tl.to($('sepia'), { opacity: 0, duration: .5 }, tP); tl.to($('warm'), { opacity: 0, duration: .5 }, tP);
+  tl.to(sweG, { x: 0, y: 0, duration: .6, ease: 'power3.inOut' }, tP); tl.to(sweFlag, { attr: { opacity: 0 }, duration: .3, ...IR }, tP); tl.to(sweOut, { attr: { opacity: 0 }, duration: .3, ...IR }, tP);
+  BRDR.forEach(p => tl.to(p, { attr: { opacity: 0 }, duration: .3, ...IR }, tP)); ev(tP, 'whoosh');
+  // today: still five separate countries -> back to the five flags
+  fadeA(goldG, 0, tP + .1, .5); fadeA(rim, 0, tP + .1, .4); fadeA(rimW, 0, tP + .1, .4);
+  for (const k in FL) tl.to(FL[k], { attr: { opacity: .78 }, duration: .5, ...IR }, tP + .1);
+  for (const k in OUT) tl.to(OUT[k], { attr: { opacity: .95 }, duration: .5, ...IR }, tP + .1);
+  BRD.forEach(p => tl.to(p, { attr: { 'stroke-dashoffset': 0 }, duration: .5, ...IR }, tP + .1)); tl.set(sweGold, { attr: { opacity: 0 } }, tP + .6);
+  ARCS.forEach((a, i) => { tl.to(a, { attr: { opacity: 1 }, duration: .3, ...IR }, C(14, 1, i * .14)); MO.driver(C(14, 1), C(15, 0), t => a.setAttribute('stroke-dashoffset', (-t * 60).toFixed(1))); out(a, C(15, 0, -.1)); });
+  const pass = mk('div', { class: 'card' }, hud); pass.innerHTML = '<div class="big" style="font-size:96px">🛂 <s style="text-decoration-thickness:12px;text-decoration-color:#FF3B30">PASSPORT</s></div><div class="chip">NORDIC TRAVEL · SINCE 1952</div>';
+  place(pass, 140, 300); pop(pass, C(14, 2, -.05)); ev(C(14, 2, -.05), 'pop'); out(pass, C(15, 0, -.05));
+  const plane = emo('✈️', 90); ride(plane, null, -45, -45); const pA = ANCH[ANCH.length - 1];
+  pA.fn = t => { const u = Math.max(0, ((t - C(14, 1)) / 1.6)) % 1; const P = ARCS[0], p = P.getPointAtLength(P.getTotalLength() * u); return [p.x, p.y]; };
+  tl.to(plane, { opacity: 1, duration: .2 }, C(14, 1)); ev(C(14, 1), 'whoosh'); out(plane, C(15, 0, -.1));
+
+  // ===== L15-L16 capitals + Iceland =====
+  const CAPS4 = [['stockholm', 'STOCKHOLM', '🇸🇪', [15, 2]], ['oslo', 'OSLO', '🇳🇴', [15, 2, .55]], ['copenhagen', 'COPENHAGEN', '🇩🇰', [15, 3]], ['helsinki', 'HELSINKI', '🇫🇮', [15, 4]]];
+  const CP = CAPS4.map(([k, n, f, at]) => { const p = pin(k, n, f); ride(p, k); const t = C(at[0], at[1], at[2] || 0); tl.fromTo(p, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(2)', ...IR }, t); ev(t, 'pop'); return p; });
+  
+  CP.forEach(p => out(p, C(16, 0, -.1)));
+  const rey = pin('reykjavik', 'REYKJAVIK', '🇮🇸'); ride(rey, 'reykjavik'); tl.fromTo(rey, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(2)', ...IR }, C(16, 1, -.05));
+  const ball = mk('div', { class: 'ball' }, hud);
+  ball.innerHTML = `<svg width="300" height="300" viewBox="0 0 300 300"><defs><clipPath id="bc"><circle cx="150" cy="160" r="120"/></clipPath></defs>
+   <g clip-path="url(#bc)"><rect x="0" y="0" width="300" height="300" fill="#02529C"/><rect x="90" y="0" width="54" height="300" fill="#fff"/><rect x="0" y="133" width="300" height="54" fill="#fff"/>
+   <rect x="103" y="0" width="28" height="300" fill="#DC1E35"/><rect x="0" y="146" width="300" height="28" fill="#DC1E35"/></g>
+   <circle cx="150" cy="160" r="120" fill="none" stroke="#03101A" stroke-width="9"/>
+   <ellipse cx="112" cy="140" rx="30" ry="26" fill="#fff" stroke="#03101A" stroke-width="6"/><ellipse cx="190" cy="140" rx="30" ry="26" fill="#fff" stroke="#03101A" stroke-width="6"/>
+   <circle cx="120" cy="146" r="10" fill="#03101A"/><circle cx="198" cy="146" r="10" fill="#03101A"/>
+   <path d="M80 104 L140 122" stroke="#03101A" stroke-width="11" stroke-linecap="round"/><path d="M222 104 L162 122" stroke="#03101A" stroke-width="11" stroke-linecap="round"/></svg>`;
+  Object.assign(ball.style, { left: '70px', top: '990px' }); tl.fromTo(ball, { opacity: 0, y: 400, scaleY: .7 }, { opacity: 1, y: 0, scaleY: 1, duration: .45, ease: 'back.out(1.8)', ...IR }, C(16, 0, -.15)); ev(C(16, 0, -.15), 'pop');
+  tl.to(ball, { keyframes: [{ scaleY: .92, duration: .1 }, { scaleY: 1.04, duration: .12 }, { scaleY: 1, duration: .1 }] }, C(16, 1));
+  const bub = mk('div', { class: 'bubble' }, hud); bub.textContent = 'Hello?! 😤'; Object.assign(bub.style, { left: '250px', top: '850px' }); pop(bub, C(16, 0)); ev(C(16, 0), 'pop');
+  out(ball, C(17, 0, .05)); out(bub, C(17, 0, .05)); out(rey, C(17, 0, .05));
+
+  // ===== L17 Kalmar =====
+  const crown = emo('👑', 170); ride(crown, 'kalmar', -85, -260); pop(crown, C(17, 1, -.05)); ev(C(17, 1, -.05), 'chime');
+  const rg = mk('div', { class: 'ring' }, hud); ride(rg, 'kalmar');
+  tl.fromTo(rg, { opacity: .9, scale: .2 }, { opacity: 0, scale: 2.2, duration: 1.1, ease: 'power2.out', ...IR }, C(17, 1));
+  tl.fromTo(kal, { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(2)', ...IR }, C(17, 1, -.15)); out(kal, C(18, 0, -.05)); out(crown, C(18, 0, -.05));
+  PUN(C(17, 1), 1.1, C(17, 2, .2));
+
+  // ===== L18 vote + back to the opening frame (loop) =====
+  const v1 = mk('div', { class: 'vote' }, hud); v1.style.left = '90px'; v1.style.background = 'linear-gradient(#FFE27A,#F6B630)'; v1.innerHTML = '<div class="vt">ONE FLAG</div><div class="vf">🟡</div>';
+  const v2 = mk('div', { class: 'vote' }, hud); v2.style.left = '560px'; v2.style.background = '#fff'; v2.innerHTML = '<div class="vt">STAY FIVE</div><div class="vf">🇩🇰🇳🇴🇸🇪🇫🇮🇮🇸</div>';
+  pop(v1, C(18, 0, .05)); pop(v2, C(18, 1, -.05)); ev(C(18, 0, .05), 'pop'); ev(C(18, 1, -.05), 'pop');
+  tl.to(v1, { keyframes: [{ scale: 1.08, duration: .15 }, { scale: 1, duration: .2 }] }, C(18, 1, .3)); tl.to(v2, { keyframes: [{ scale: 1.08, duration: .15 }, { scale: 1, duration: .2 }] }, C(18, 2, -.05));
+  out(v1, D.dur - .55); out(v2, D.dur - .55);
+
+
+  // ===== captions =====
+  const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps')); const d = mk('div', { class: 'cl' }, g); markup(c.txt, d); return { c, g, d, words: [...g.querySelectorAll('span')] }; });
+  for (const K of CAPS) { let fs = 96; K.g.style.opacity = 1; K.d.style.fontSize = '96px'; const w = K.d.scrollWidth; if (w > 860) fs = 96 * 860 / w; K.g.style.opacity = 0;
+    Object.assign(K.d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .17).toFixed(1) + 'px', top: (1390 - fs * .5).toFixed(1) + 'px' }); }
+  for (const K of CAPS) { const c = K.c; tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { scale: .9, transformOrigin: '540px 1390px' }, { scale: 1, duration: .2, ease: 'power3.out', ...IR }, c.sn);
+    MO.karaoke(K.words, c.wt, w => w.classList.contains('k'));
+    K.words.forEach((w, i) => { if (w.classList.contains('k')) MO.sweep(w, c.wt[Math.min(i, c.wt.length - 1)]); }); }
+  window.__EVS = evs;
+  return tl;
+}
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>
