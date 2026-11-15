@@ -1,0 +1,14 @@
+{
+ "id": "bd-p2",
+ "delay": 2.0,
+ "files": [
+  {
+   "name": "osm_A_roads2.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Cmotorway_link%7Ctrunk%7Ctrunk_link%7Cprimary%29%24%22%5D%2849.03%2C-123.10%2C49.12%2C-122.84%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_A_roads2_kumi.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Cmotorway_link%7Ctrunk%7Ctrunk_link%7Cprimary%29%24%22%5D%2849.03%2C-123.10%2C49.12%2C-122.84%29%3Bout%20geom%3B"
+  }
+ ]
+}
