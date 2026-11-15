@@ -1,0 +1,24 @@
+{
+ "id": "gib-ch-hd",
+ "delay": 0.5,
+ "close": [
+  0.334,
+  2.657,
+  49.903,
+  52.315
+ ],
+ "close_grid": [
+  2,
+  1
+ ],
+ "files": [
+  {
+   "name": "pa_t_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&BBOX=51.108999999999995,0.334,52.315,2.657&WIDTH=2848&HEIGHT=2338"
+  },
+  {
+   "name": "pa_t_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&BBOX=49.903,0.334,51.108999999999995,2.657&WIDTH=2848&HEIGHT=2338"
+  }
+ ]
+}
