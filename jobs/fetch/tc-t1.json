@@ -1,0 +1,202 @@
+{
+ "id": "tc-t1",
+ "delay": 1.5,
+ "files": [
+  {
+   "name": "t_eox_SM.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=12.4,43.9,12.5,43.98&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_eox_TVR.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=178.0,-9.5,179.95,-7.5&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_eox_TV.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=179.05,-8.66,179.25,-8.43&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_eox_NR.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=166.88,-0.565,166.97,-0.485&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_eox_MC.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=7.38,43.715,7.46,43.765&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_eox_VA.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=12.4,41.86,12.52,41.94&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_naip_cp_def.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.975,40.77,-73.955,40.785&bboxSR=4326&imageSR=4326&size=512,512&format=jpgpng&adjustAspectRatio=false&f=image"
+  },
+  {
+   "name": "t_naip_cp_06.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.9695,40.7745,-73.9635,40.779&bboxSR=4326&imageSR=4326&size=512,512&format=jpgpng&adjustAspectRatio=false&f=image"
+  },
+  {
+   "name": "t_naip_ny_26.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-74.0,40.7,-73.984,40.712&bboxSR=4326&imageSR=4326&size=512,512&format=jpgpng&adjustAspectRatio=false&f=image"
+  },
+  {
+   "name": "t_naip_ny_26bil.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-74.0,40.7,-73.984,40.712&bboxSR=4326&imageSR=4326&size=512,512&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "naip_info.json",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer?f=json"
+  },
+  {
+   "name": "t_ign_MC.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.73,7.415,43.7347,7.4215&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_ign_MC2.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.739,7.425,43.7437,7.4315&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "pcn12_caps.xml",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&SERVICE=WMS&REQUEST=GetCapabilities"
+  },
+  {
+   "name": "t_pcn12_VA.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2012&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9,12.45,41.9045,12.456&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_pcn12_SM.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2012&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.932,12.443,43.939,12.452&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "pcn12s_caps.xml",
+   "url": "https://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&SERVICE=WMS&REQUEST=GetCapabilities"
+  },
+  {
+   "name": "t_pcn12s_VA.jpg",
+   "url": "https://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2012&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9,12.45,41.9045,12.456&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_pcn12s_SM.jpg",
+   "url": "https://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2012&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.932,12.443,43.939,12.452&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "pcn06_caps.xml",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetCapabilities"
+  },
+  {
+   "name": "t_pcn06_VA.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9,12.45,41.9045,12.456&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_pcn06_SM.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.932,12.443,43.939,12.452&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "er20_caps.xml",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetCapabilities"
+  },
+  {
+   "name": "t_er20_VA.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9,12.45,41.9045,12.456&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_er20_SM.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.932,12.443,43.939,12.452&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "lazio_geonode_caps.xml",
+   "url": "https://geoportale.regione.lazio.it/geoserver/ows?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0"
+  },
+  {
+   "name": "er_wms_list.html",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/"
+  },
+  {
+   "name": "marche_caps.xml",
+   "url": "https://wms.cartografia.marche.it/geoserver/Ortofoto2019/wms?SERVICE=WMS&REQUEST=GetCapabilities"
+  },
+  {
+   "name": "oam_TV.json",
+   "url": "https://api.openaerialmap.org/meta?bbox=179.0,-8.75,179.3,-8.4&limit=50"
+  },
+  {
+   "name": "oam_NR.json",
+   "url": "https://api.openaerialmap.org/meta?bbox=166.88,-0.57,166.97,-0.48&limit=50"
+  },
+  {
+   "name": "oam_VA.json",
+   "url": "https://api.openaerialmap.org/meta?bbox=12.44,41.897,12.466,41.91&limit=50"
+  },
+  {
+   "name": "oam_MC.json",
+   "url": "https://api.openaerialmap.org/meta?bbox=7.40,43.72,7.44,43.755&limit=50"
+  },
+  {
+   "name": "oam_SM.json",
+   "url": "https://api.openaerialmap.org/meta?bbox=12.40,43.89,12.52,44.0&limit=50"
+  },
+  {
+   "name": "osm_adm2_SM.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2843.86%2C12.33%2C44.02%2C12.58%29%3Bout%20geom%2843.86%2C12.33%2C44.02%2C12.58%29%3B"
+  },
+  {
+   "name": "osm_adm2_MC.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2843.715%2C7.38%2C43.765%2C7.46%29%3Bout%20geom%2843.715%2C7.38%2C43.765%2C7.46%29%3B"
+  },
+  {
+   "name": "osm_adm2_VA.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2841.86%2C12.40%2C41.94%2C12.52%29%3Bout%20geom%2841.86%2C12.40%2C41.94%2C12.52%29%3B"
+  },
+  {
+   "name": "osm_adm2_NR.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bout%20geom%28-0.60%2C166.85%2C-0.45%2C167.00%29%3B"
+  },
+  {
+   "name": "osm_adm2_TV.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%28-11.0%2C176.0%2C-5.4%2C179.95%29%3Bout%20geom%28-11.0%2C176.0%2C-5.4%2C179.95%29%3B"
+  },
+  {
+   "name": "osm_coast_MC.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2843.715%2C7.38%2C43.765%2C7.46%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coast_NR.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coast_TV.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%28-11.0%2C176.0%2C-5.4%2C179.95%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_TV_isl.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28nwr%5B%22place%22~%22%5E%28island%7Cislet%7Catoll%29%24%22%5D%28-11.0%2C176.0%2C-5.4%2C179.95%29%3B%29%3Bout%20center%20tags%3B"
+  },
+  {
+   "name": "osm_TV_rwy.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bway%5B%22aeroway%22%3D%22runway%22%5D%28-8.56%2C179.18%2C-8.50%2C179.22%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NR_roads.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28way%5B%22highway%22~%22%5E%28primary%7Csecondary%7Ctrunk%7Ctertiary%29%24%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bway%5B%22name%22~%22Ring%22%2Ci%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NR_poi.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28nwr%5B%22aeroway%22~%22aerodrome%7Crunway%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bnwr%5B%22name%22~%22Buada%22%2Ci%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_MC_parts.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28nwr%5B%22name%22~%22Fontvieille%7CMareterra%7CPortier%7CLarvotto%22%2Ci%5D%2843.715%2C7.38%2C43.765%2C7.46%29%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22~%22%5E%288%7C9%7C10%29%24%22%5D%2843.715%2C7.38%2C43.765%2C7.46%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_VA_poi.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28nwr%5B%22name%22~%22Piazza%20San%20Pietro%7CBasilica%20di%20San%20Pietro%7CGiardini%20Vaticani%22%2Ci%5D%2841.895%2C12.44%2C41.91%2C12.465%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NY.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28nwr%5B%22leisure%22%3D%22park%22%5D%5B%22name%22%3D%22Central%20Park%22%5D%2840.76%2C-73.99%2C40.81%2C-73.94%29%3Bnwr%5B%22place%22%3D%22island%22%5D%5B%22name%22%3D%22Manhattan%22%5D%2840.68%2C-74.05%2C40.89%2C-73.90%29%3Bnode%5B%22name%22%3D%22Times%20Square%22%5D%2840.75%2C-74.0%2C40.77%2C-73.97%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NY_coast.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2840.68%2C-74.05%2C40.89%2C-73.90%29%3Bout%20geom%3B"
+  }
+ ]
+}
