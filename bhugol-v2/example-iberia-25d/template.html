@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<title>BHUGOL Nordic what-if</title>
+<script src="./gsap.min.js"></script>
+<script src="./motion.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Muk'; font-weight: 800; src: url(assets/muk800.woff2) format('woff2'); }
+:root { --gold: #FFC23A; --white: #F4F8FB; --ink: #03101A; --red: #FF3B30; --sea: #0B3A78; }
+body { margin: 0; background: var(--sea); }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--sea); }
+#stage { position: absolute; inset: 0; }
+.scr { position: absolute; inset: 0; pointer-events: none; }
+#view { position: absolute; inset: 0; perspective: 2200px; perspective-origin: 540px 860px; overflow: hidden; }
+#cam { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+#cam img { position: absolute; display: block; }
+#cam svg { position: absolute; left: 0; top: 0; overflow: visible; }
+#sepia { background: #C49A5A; mix-blend-mode: color; opacity: 0; }
+#warm { background: radial-gradient(ellipse 70% 55% at 50% 45%, rgba(255,200,90,.0), rgba(120,70,20,.35)); opacity: 0; }
+#flash { background: #fff; opacity: 0; }
+.emo { position: absolute; left: 0; top: 0; font-family: 'Emo', sans-serif; line-height: 1; opacity: 0; white-space: nowrap; }
+.pin { position: absolute; left: 0; top: 0; opacity: 0; }
+.pin .dot { position: absolute; left: -15px; top: -15px; width: 30px; height: 30px; border-radius: 50%; background: var(--red); border: 6px solid #fff; box-sizing: border-box; box-shadow: 0 4px 10px rgba(0,0,0,.45); }
+.pin .tag { position: absolute; left: 0; bottom: 26px; transform: translateX(-50%); white-space: nowrap; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 52px; letter-spacing: .04em;
+  color: #fff; paint-order: stroke fill; -webkit-text-stroke: 11px #03101A; }
+.ring { position: absolute; left: 0; top: 0; width: 160px; height: 160px; margin: -80px 0 0 -80px; border-radius: 50%; border: 6px solid var(--gold); opacity: 0; box-sizing: border-box; }
+.lab { position: absolute; left: 0; top: 0; transform-origin: 50% 50%; white-space: nowrap; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 50px; letter-spacing: .06em; color: #fff;
+  paint-order: stroke fill; -webkit-text-stroke: 10px #03101A; opacity: 0; }
+.card { position: absolute; left: 0; top: 0; opacity: 0; background: rgba(8,18,34,.86); border: 4px solid rgba(255,255,255,.9); border-radius: 30px; padding: 22px 34px;
+  box-shadow: 0 20px 44px rgba(0,0,0,.55); font-family: 'Arch', 'Emo', sans-serif; font-weight: 800; color: #fff; transform-origin: 50% 50%; }
+.card .lbl { font-size: 32px; letter-spacing: .12em; color: #BFD6EE; }
+.card .big { font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 120px; line-height: 1.02; color: var(--gold); }
+.card .big .u { font-size: 64px; color: #fff; margin-left: 10px; }
+.card .chip { display: inline-block; margin-top: 8px; padding: 6px 18px; border-radius: 40px; background: var(--gold); color: #03101A; font-size: 32px; letter-spacing: .08em; }
+.ttl { position: absolute; left: 0; width: 1080px; text-align: center; opacity: 0; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: #fff; line-height: 1;
+  paint-order: stroke fill; -webkit-text-stroke-color: #03101A; }
+.ttl .k { color: var(--gold); }
+.ttl .box { display: inline-block; background: var(--gold); color: #03101A; -webkit-text-stroke-width: 0; padding: 0 .16em; border-radius: 14px; margin-left: .2em; }
+.cl { position: absolute; left: 100px; width: 880px; text-align: center; white-space: nowrap; font-family: 'BSD', 'Muk', 'Emo', sans-serif; font-weight: 900; color: #fff; paint-order: stroke fill;
+  -webkit-text-stroke-color: #02070D; line-height: 1; }
+.cl span { opacity: 0; display: inline-block; white-space: pre; }
+.cap { position: absolute; inset: 0; opacity: 0; }
+.rank { position: absolute; left: 90px; top: 395px; width: 900px; opacity: 0; display: flex; justify-content: space-between; }
+.rk { width: 138px; height: 168px; border-radius: 26px; background: rgba(8,18,34,.86); border: 4px solid #fff; text-align: center; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; color: #fff; opacity: 0; box-sizing: border-box; }
+.rk .n { font-size: 52px; padding-top: 10px; color: var(--gold); } .rk .f { font-size: 70px; line-height: 80px; } .rk.dim { opacity: 0; border-color: #6c7a88; } .rk.dim .n { color: #8b98a6; }
+.bars { position: absolute; left: 150px; top: 330px; width: 780px; height: 620px; opacity: 0; }
+.bar { position: absolute; bottom: 120px; width: 250px; border-radius: 22px 22px 0 0; border: 5px solid #03101A; box-sizing: border-box; transform-origin: 50% 100%; }
+.bcap { position: absolute; bottom: 20px; width: 330px; text-align: center; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 54px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 10px #03101A; }
+.bnum { position: absolute; width: 330px; text-align: center; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 84px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 14px #03101A; }
+.tline { position: absolute; left: 110px; top: 360px; width: 860px; height: 260px; opacity: 0; }
+.tl-track { position: absolute; left: 0; top: 150px; width: 860px; height: 26px; border-radius: 14px; background: rgba(8,18,34,.8); border: 4px solid #fff; box-sizing: border-box; }
+.tl-fill { position: absolute; left: 4px; top: 154px; width: 0; height: 18px; border-radius: 10px; background: linear-gradient(90deg, #FFE08A, #FFB21A); }
+.tl-y { position: absolute; top: 190px; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 64px; color: #fff; paint-order: stroke fill; -webkit-text-stroke: 12px #03101A; }
+.tl-big { position: absolute; left: 0; width: 860px; top: -10px; text-align: center; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 140px; color: var(--gold); paint-order: stroke fill; -webkit-text-stroke: 22px #03101A; }
+.stamp { position: absolute; left: 0; top: 0; opacity: 0; padding: 10px 36px; border: 10px solid var(--red); border-radius: 22px; color: var(--red); font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; font-size: 110px;
+  letter-spacing: .04em; background: rgba(255,255,255,.88); transform-origin: 50% 50%; white-space: nowrap; }
+.vote { position: absolute; top: 380px; width: 430px; height: 200px; border-radius: 34px; opacity: 0; border: 6px solid #03101A; box-sizing: border-box; text-align: center;
+  font-family: 'BSD', 'Emo', sans-serif; font-weight: 900; color: #03101A; box-shadow: 0 14px 0 rgba(3,16,26,.55); }
+.vote .vt { font-size: 66px; padding-top: 16px; } .vote .vf { font-size: 56px; }
+.ball { position: absolute; left: 0; top: 0; width: 300px; height: 300px; opacity: 0; transform-origin: 50% 100%; }
+.bubble { position: absolute; left: 0; top: 0; opacity: 0; padding: 18px 34px; border-radius: 40px; background: #fff; border: 6px solid #03101A; font-family: 'BSD', 'Emo', sans-serif; font-weight: 900;
+  font-size: 64px; color: #03101A; white-space: nowrap; transform-origin: 20% 100%; }
+.bubble:after { content: ''; position: absolute; left: 60px; bottom: -34px; border: 18px solid transparent; border-top: 22px solid #03101A; }
+#badge { position: absolute; left: 34px; top: 1712px; width: 150px; height: 150px; opacity: 0; filter: drop-shadow(0 6px 10px rgba(0,0,0,.5)); }
+.snow { position: absolute; left: 0; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #fff; opacity: 0; }
+.coin { position: absolute; left: 0; top: 0; font-family: 'Emo'; font-size: 90px; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+  <div id="stage" class="clip" data-start="0" data-duration="__DUR__">
+    <div id="shake" class="scr"><div id="cshake" class="scr">
+      <div id="view"><div id="cam"></div></div>
+      <div id="sepia" class="scr"></div><div id="warm" class="scr"></div>
+      <div id="world2" class="scr"></div>
+    </div></div>
+    <div id="fx" class="scr"></div>
+    <div id="hud" class="scr"></div>
+    <div id="titles" class="scr"></div>
+    <div id="caps" class="scr"></div>
+    <div id="flash" class="scr"></div>
+    <img id="badge" src="assets/bhugol_badge.png" alt="" />
+  </div>
+</div>
+<script>
+const D = __DATA__;
+const NS = 'http://www.w3.org/2000/svg', $ = id => document.getElementById(id), M = D.map, PT = M.pt;
+const mk = (tag, attrs, parent, ns) => { const e = ns ? document.createElementNS(NS, tag) : document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const C = (li, ci, off) => D.C[li + '.' + (ci || 0)] + (off || 0);
+const LN = D.LN;
+const markup = (txt, el) => { let key = false; txt.split(' ').forEach((w, i) => { let word = w; if (word.startsWith('*')) { key = true; word = word.slice(1); } const end = word.endsWith('*'); if (end) word = word.slice(0, -1);
+  const s = document.createElement('span'); if (key) s.className = 'k'; s.textContent = (i ? ' ' : '') + word; el.appendChild(s); if (end) key = false; }); };
+
+/* ================= world (one map, one continuous camera) ================= */
+const cam = $('cam'); Object.assign(cam.style, { width: M.W + 'px', height: M.H + 'px' });
+const ctx = mk('img', { src: 'assets/context.jpg', alt: '' }, cam); Object.assign(ctx.style, { left: '0px', top: '0px', width: M.W + 'px', height: M.H + 'px' });
+const [dx, dy, dw, dh] = M.detail; const det = mk('img', { src: 'assets/detail.jpg', alt: '' }, cam); Object.assign(det.style, { left: dx + 'px', top: dy + 'px', width: dw + 'px', height: dh + 'px' });
+const svg = mk('svg', { width: M.W, height: M.H, viewBox: `0 0 ${M.W} ${M.H}` }, cam, true);
+const defs = mk('defs', {}, svg, true);
+const gr = mk('linearGradient', { id: 'gold', x1: 0, y1: 0, x2: .3, y2: 1 }, defs, true);
+mk('stop', { offset: 0, 'stop-color': '#FFE27A' }, gr, true); mk('stop', { offset: .55, 'stop-color': '#F6B630' }, gr, true); mk('stop', { offset: 1, 'stop-color': '#E08E1A' }, gr, true);
+const ice = mk('linearGradient', { id: 'ice', x1: 0, y1: 0, x2: 1, y2: 1 }, defs, true);
+mk('stop', { offset: 0, 'stop-color': '#FFFFFF' }, ice, true); mk('stop', { offset: 1, 'stop-color': '#A9DCFF' }, ice, true);
+const shine = mk('linearGradient', { id: 'shine', x1: 0, y1: 0, x2: 1, y2: 0, gradientUnits: 'userSpaceOnUse' }, defs, true);
+const sh0 = mk('stop', { offset: 0, 'stop-color': '#fff', 'stop-opacity': 0 }, shine, true), sh1 = mk('stop', { offset: .5, 'stop-color': '#fff', 'stop-opacity': .75 }, shine, true), sh2 = mk('stop', { offset: 1, 'stop-color': '#fff', 'stop-opacity': 0 }, shine, true);
+
+// flags: pre-rendered PNG layers in world coordinates (fast to render), see bake_flags.cjs
+const FL = {};
+for (const k of ['ESP', 'PRT']) { const [x0, y0, x1, y1] = M.bbox[k]; const im = mk('img', { src: `assets/flag_${k}.png`, alt: '' }, cam);
+  Object.assign(im.style, { left: (x0 - 4) + 'px', top: (y0 - 4) + 'px', width: (x1 - x0 + 8) + 'px', height: (y1 - y0 + 8) + 'px', opacity: 0 }); FL[k] = im; }
+// country outlines (constant screen width)
+const OUT = {}; for (const k in M.paths) OUT[k] = mk('path', { d: M.paths[k], fill: 'none', stroke: '#fff', 'stroke-width': 3, 'vector-effect': 'non-scaling-stroke', 'stroke-linejoin': 'round', opacity: .95 }, svg, true);
+// Spain-Portugal land border (dashed, shown in the clock scene)
+const STB = mk('path', { d: M.borders.states, fill: 'none', stroke: '#fff', 'stroke-width': 3.5, 'vector-effect': 'non-scaling-stroke', 'stroke-dasharray': '10 7', opacity: 0 }, svg, true);
+// unified gold country: extrusion + fill + shine + rim
+const goldG = mk('g', { opacity: 0 }, svg, true);
+const extr = mk('path', { d: M.union, fill: '#7A4A0A' }, goldG, true);
+const goldF = mk('path', { d: M.union, fill: 'url(#gold)' }, goldG, true);
+const cpU = mk('clipPath', { id: 'cpU' }, defs, true); mk('path', { d: M.union }, cpU, true);
+const shineR = mk('rect', { x: 0, y: 0, width: M.W, height: M.H, fill: 'url(#shine)', 'clip-path': 'url(#cpU)', opacity: 0 }, svg, true);
+const rimW = mk('path', { d: M.union, fill: 'none', stroke: '#FFE7A0', 'stroke-width': 16, 'vector-effect': 'non-scaling-stroke', opacity: 0, 'stroke-linejoin': 'round' }, svg, true);
+const rim = mk('path', { d: M.union, fill: 'none', stroke: '#FFF6D6', 'stroke-width': 4, 'vector-effect': 'non-scaling-stroke', opacity: 0, 'stroke-linejoin': 'round' }, svg, true);
+const lights = mk('g', { opacity: 0 }, svg, true); for (const [x, y, r] of D.cities) mk('circle', { cx: x, cy: y, r, fill: '#FFF7D0' }, lights, true);
+const P = PT, mid = (a, b) => [(P[a][0] + P[b][0]) / 2, (P[a][1] + P[b][1]) / 2];
+const ptGold = mk('path', { d: M.paths.PRT, fill: 'url(#gold)', opacity: 0 }, svg, true);
+const ruler = mk('path', { d: `M${P.madrid[0]},${P.madrid[1]} L${P.lisbon[0]},${P.lisbon[1]}`, fill: 'none', stroke: '#fff', 'stroke-width': 8, 'vector-effect': 'non-scaling-stroke', 'stroke-dasharray': '22 14', pathLength: 1, opacity: 0 }, svg, true);
+const BGLOW = mk('path', { d: M.borders.states, fill: 'none', stroke: '#FFC23A', 'stroke-width': 16, 'vector-effect': 'non-scaling-stroke', 'stroke-linecap': 'round', opacity: 0 }, svg, true);
+
+function flagSVG(k, w, h, inner) {
+  let s = '';
+  if (k === 'ESP') s = `<rect width="${w}" height="${h}" fill="#AA151B"/><rect y="${h / 4}" width="${w}" height="${h / 2}" fill="#F1BF00"/>`;
+  else { const cx = w * .4, cy = h / 2, r = h * .2;
+    s = `<rect width="${w}" height="${h}" fill="#DA291C"/><rect width="${w * .4}" height="${h}" fill="#046A38"/>
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#FFE000" stroke-width="${h * .035}"/><ellipse cx="${cx}" cy="${cy}" rx="${r}" ry="${r * .35}" fill="none" stroke="#FFE000" stroke-width="${h * .02}"/>
+    <path d="M${cx - r * .55},${cy - r * .62} h${r * 1.1} v${r * .7} q0,${r * .55} -${r * .55},${r * .7} q-${r * .55},-${r * .15} -${r * .55},-${r * .7}Z" fill="#fff" stroke="#DA291C" stroke-width="${h * .03}"/>`; }
+  return inner ? s : `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="display:block;border-radius:10px">${s}</svg>`;
+}
+/* ================= camera ================= */
+const VX = 540, VY = 860, PERS = 2200;
+const bez = (x1, y1, x2, y2) => t => { if (t <= 0) return 0; if (t >= 1) return 1; let u = t; for (let i = 0; i < 8; i++) { const x = 3 * (1 - u) * (1 - u) * u * x1 + 3 * (1 - u) * u * u * x2 + u * u * u - t;
+  const dx = 3 * (1 - u) * (1 - u) * x1 + 6 * (1 - u) * u * (x2 - x1) + 3 * u * u * (1 - x2); if (Math.abs(dx) < 1e-6) break; u -= x / dx; u = Math.min(1, Math.max(0, u)); }
+  return 3 * (1 - u) * (1 - u) * u * y1 + 3 * (1 - u) * u * u * y2 + u * u * u; };
+const EASE = { glide: bez(.5, 0, .08, 1), snap: bez(.7, 0, .05, 1), soft: bez(.42, 0, .2, 1) };
+const KEYS = D.cam; // [{at, dur, x, y, z, tilt, rot, ease}] — the first one is the opening pose
+function camAt(t) {
+  let s = Object.assign({}, KEYS[0]); let last = 0;
+  for (let i = 1; i < KEYS.length; i++) { const k = KEYS[i]; if (t <= k.at) break; const u = Math.min(1, (t - k.at) / k.dur), e = EASE[k.ease || 'glide'](u);
+    const p = Object.assign({}, s); for (const f of ['x', 'y', 'z', 'tilt', 'rot']) if (k[f] !== undefined) s[f] = p[f] + (k[f] - p[f]) * e; last = k.at + k.dur; if (u < 1) { last = null; break; } }
+  if (last !== null && t < KEYS[KEYS.length - 1].at) { const h = Math.max(0, t - last); const d = D.drift; s.z *= 1 + Math.min(h, 6) * d; s.x += Math.min(h, 6) * 2.2; }  // holds keep drifting (no frozen frames)
+  return s;
+}
+let CS = camAt(0);
+function camApply(s) { CS = s; cam.style.transform = `translate(${VX}px,${VY}px) rotateX(${s.tilt.toFixed(3)}deg) rotate(${(s.rot || 0).toFixed(3)}deg) scale(${s.z.toFixed(5)}) translate(${(-s.x).toFixed(2)}px,${(-s.y).toFixed(2)}px)`;
+  extr.setAttribute('transform', `translate(0,${(9 / s.z).toFixed(2)})`); }
+function proj(wx, wy) { const s = CS, r = (s.rot || 0) * Math.PI / 180; let x = (wx - s.x) * s.z, y = (wy - s.y) * s.z; const xr = x * Math.cos(r) - y * Math.sin(r), yr = x * Math.sin(r) + y * Math.cos(r);
+  const a = s.tilt * Math.PI / 180, y2 = yr * Math.cos(a), z2 = yr * Math.sin(a), f = PERS / (PERS - z2); return { x: VX + xr * f, y: VY + y2 * f, f }; }
+
+/* ================= HUD helpers ================= */
+const hud = $('hud'), fx = $('fx');
+function pin(key, label, flag) { const p = mk('div', { class: 'pin' }, hud); p.innerHTML = `<div class="dot"></div><div class="tag">${flag ? `<span style="font-family:Emo">${flag}</span> ` : ''}${label}</div>`; p.key = key; return p; }
+function emo(ch, size) { const e = mk('div', { class: 'emo' }, fx); e.textContent = ch; e.style.fontSize = size + 'px'; return e; }
+function lab(txt) { const e = mk('div', { class: 'lab' }, hud); e.textContent = txt; return e; }
+const ANCH = [];  // HUD elements that ride a world point: {el, key|xy, dx, dy}
+const ride = (el, key, dx, dy) => ANCH.push({ el, key, dx: dx || 0, dy: dy || 0 });
+
+/* ================= build ================= */
+function build() {
+  const tl = gsap.timeline({ paused: true }); const IR = { immediateRender: false }; const MO = BhugolMotion(tl);
+  const evs = [];  // visual beats (for the sound plan)
+  const ev = (t, kind) => evs.push({ t: +t.toFixed(3), kind });
+  const PUN = (at, lv, back) => { MO.punch($('cshake'), at, lv, back); ev(at, 'punch'); };
+  const pop = (el, at, s0, ease) => { tl.fromTo(el, { opacity: 0, scale: s0 || .4 }, { opacity: 1, scale: 1, duration: .45, ease: ease || 'back.out(1.6)', ...IR }, at); };
+  const out = (el, at, d) => tl.to(el, { opacity: 0, duration: d || .25, ease: 'power2.in' }, at);
+  const fadeA = (el, v, at, d) => tl.to(el, { attr: { opacity: v }, duration: d || .4, ...IR }, at);
+  const place = (el, x, y) => tl.set(el, { x, y }, 0);
+
+  // ---- camera driver (pure function of time) + HUD anchors ----
+  MO.driver(0, D.dur, t => { camApply(camAt(t)); for (const a of ANCH) { const w = a.fn ? a.fn(t) : a.key ? PT[a.key] : a.xy; const q = proj(w[0], w[1]); a.el.style.left = (q.x + a.dx).toFixed(1) + 'px'; a.el.style.top = (q.y + a.dy).toFixed(1) + 'px'; } });
+
+  // ===== cover at frame 0 (= loop seam) =====
+  for (const k in FL) tl.set(FL[k], { opacity: .82 }, 0);
+  const cov = mk('div', { class: 'ttl' }, $('titles')); cov.style.top = '170px';
+  cov.innerHTML = D.cover.map((l, i) => `<div style="font-size:${i === 2 ? 150 : 124}px;-webkit-text-stroke-width:${i === 2 ? 22 : 19}px;margin-top:${i ? 6 : 0}px">${l}</div>`).join('');
+  tl.set(cov, { opacity: 1 }, 0); tl.to(cov, { opacity: 0, y: -30, scale: .92, duration: .28, ease: 'power2.in' }, .12);
+  tl.fromTo($('badge'), { opacity: 1 }, { opacity: 1, duration: .1, ...IR }, 0);
+
+  // ===== L0 hook: Spain + Portugal = ? ... AGAIN? =====
+  const h1 = mk('div', { class: 'ttl' }, $('titles')); h1.style.top = '175px'; h1.innerHTML = '<div style="font-size:160px;-webkit-text-stroke-width:22px">🇪🇸 + 🇵🇹 = <span class="k">?</span></div>';
+  tl.fromTo(h1, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: .3, ease: 'expo.out', ...IR }, .32); ev(.32, 'slam'); out(h1, C(0, 2, .25));
+  PUN(C(0, 0, .3), 1.08, C(0, 1)); PUN(C(0, 1, .05), 1.12, C(0, 2));
+  tl.fromTo(FL.ESP, { opacity: .82 }, { keyframes: [{ opacity: 1, duration: .15 }, { opacity: .82, duration: .35 }] }, C(0, 0, .2));
+  tl.fromTo(FL.PRT, { opacity: .82 }, { keyframes: [{ opacity: 1, duration: .15 }, { opacity: .82, duration: .35 }] }, C(0, 1));
+  const ag = mk('div', { class: 'stamp' }, hud); ag.textContent = 'AGAIN?! 🔁'; place(ag, 250, 330);
+  tl.fromTo(ag, { opacity: 0, scale: 2.2, rotation: -14 }, { opacity: 1, scale: 1, rotation: -7, duration: .26, ease: 'power4.in', ...IR }, C(0, 2, .45)); ev(C(0, 2, .69), 'stamp');
+  PUN(C(0, 2, .7), 1.2, C(1, 0, .1)); out(ag, C(1, 1, -.05));
+
+  // ===== L1 they've already done it once =====
+  const doc = mk('div', { class: 'card' }, hud); doc.innerHTML = '<div class="big" style="font-size:110px">📜</div><div class="lbl">IT ALREADY HAPPENED</div><div class="chip">1580 – 1640</div>';
+  place(doc, 300, 290); doc.style.textAlign = 'center'; pop(doc, C(1, 1, -.05)); ev(C(1, 1, -.05), 'card');
+  const tr = mk('div', { class: 'stamp' }, hud); tr.textContent = 'TRUE STORY ✅'; place(tr, 150, 700);
+  tl.fromTo(tr, { opacity: 0, scale: 2.2, rotation: -14 }, { opacity: 1, scale: 1, rotation: -8, duration: .26, ease: 'power4.in', ...IR }, C(1, 2)); ev(C(1, 2, .24), 'stamp');
+  out(doc, C(2, 0, -.05)); out(tr, C(2, 0, -.05));
+
+  // ===== L2 1580: Portugal's royal family ran out of heirs (flashback) =====
+  const tT = C(2, 0, -.05);
+  tl.to($('flash'), { keyframes: [{ opacity: .9, duration: .07 }, { opacity: 0, duration: .5 }] }, tT); ev(tT, 'flash');
+  tl.to($('sepia'), { opacity: .2, duration: .5 }, tT + .05); tl.to($('warm'), { opacity: .22, duration: .5 }, tT + .05);
+  const yr = mk('div', { class: 'ttl' }, $('titles')); yr.style.top = '230px'; yr.innerHTML = '<div style="font-size:190px;-webkit-text-stroke-width:26px">⏪ <span class="k n">2026</span></div>';
+  MO.textIn(yr, tT); { const n = yr.querySelector('.n'); const st = { v: 2026 }; tl.fromTo(st, { v: 2026 }, { v: 1580, duration: .9, ease: 'power3.out', ...IR, onUpdate: () => { n.textContent = Math.round(st.v); } }, C(2, 0)); }
+  ev(C(2, 0), 'count'); out(yr, C(2, 1, .2));
+  const crP = emo('👑', 170); ride(crP, 'lisbon', -85, -260); pop(crP, C(2, 1)); ev(C(2, 1), 'pop');
+  const nh = mk('div', { class: 'card' }, hud); nh.innerHTML = '<div class="lbl">PORTUGAL\'S NEXT KING</div><div class="big" style="font-size:100px">NO HEIR <span style="font-family:Emo">❌</span></div>';
+  place(nh, 200, 300); pop(nh, C(2, 2, -.05)); ev(C(2, 2, -.05), 'card');
+  tl.to(crP, { keyframes: [{ rotation: -12, duration: .12 }, { rotation: 10, duration: .12 }, { rotation: 0, duration: .12 }] }, C(2, 2, .2)); out(nh, C(3, 0, -.05));
+
+  // ===== L3 Spain's king took the crown... for sixty years =====
+  const mp = pin('madrid', 'MADRID', '🇪🇸'); ride(mp, 'madrid'); tl.fromTo(mp, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(2)', ...IR }, C(3, 0)); ev(C(3, 0), 'pop');
+  { const A = ANCH.find(a => a.el === crP); const t0 = C(3, 1, -.05), t1 = t0 + .8; A.key = null;
+    A.fn = t => { const u = EASE.soft(Math.min(1, Math.max(0, (t - t0) / (t1 - t0)))); const a = P.lisbon, b = P.madrid; return [a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u - Math.sin(Math.PI * u) * 260]; }; }
+  ev(C(3, 1, -.05), 'whoosh'); ev(C(3, 1, .75), 'thud');
+  const tG0 = C(3, 2, -.1);
+  for (const k in FL) tl.to(FL[k], { opacity: 0, duration: .45 }, tG0);
+  fadeA(goldG, 1, tG0, .5); fadeA(rim, 1, tG0, .4);
+  const s60 = mk('div', { class: 'stamp' }, hud); s60.textContent = '60 YEARS'; place(s60, 270, 300);
+  tl.fromTo(s60, { opacity: 0, scale: 2.2, rotation: 10 }, { opacity: 1, scale: 1, rotation: 6, duration: .26, ease: 'power4.in', ...IR }, C(3, 2)); ev(C(3, 2, .24), 'stamp');
+  out(s60, C(4, 0, -.05)); out(crP, C(4, 0, -.05)); out(mp, C(4, 0, -.05));
+
+  // ===== L4 OL1: so what would this country get TODAY? =====
+  const tN = C(4, 0, -.1);
+  tl.to($('sepia'), { opacity: 0, duration: .4 }, tN); tl.to($('warm'), { opacity: 0, duration: .4 }, tN);
+  tl.to($('flash'), { keyframes: [{ opacity: .35, duration: .06 }, { opacity: 0, duration: .45 }] }, tN); ev(tN, 'boom');
+  for (const k in OUT) tl.to(OUT[k], { attr: { opacity: 0 }, duration: .4, ...IR }, tN);
+  fadeA(rimW, .35, tN, .4); fadeA(lights, .9, tN + .3, .6);
+  tl.set(shineR, { attr: { opacity: 1 } }, tN + .1);
+  MO.driver(tN + .1, tN + 1.3, t => { const u = Math.min(1, Math.max(0, (t - tN - .1) / 1.1)); const x = P.atl[0] - 600 + u * 3200; shine.setAttribute('x1', x - 500); shine.setAttribute('x2', x + 500); shineR.setAttribute('opacity', u < 1 ? 1 : 0); });
+  const nm = mk('div', { class: 'ttl' }, $('titles')); nm.style.top = '230px'; nm.innerHTML = '<div style="font-size:120px;-webkit-text-stroke-width:19px">🇪🇸🤝🇵🇹</div><div style="font-size:110px;-webkit-text-stroke-width:18px"><span class="k">TODAY?</span></div>';
+  MO.textIn(nm, C(4, 0)); PUN(C(4, 1, .1), 1.12, C(5, 0)); out(nm, C(5, 0, -.05));
+
+  // ===== L5 61 million people, more than Italy =====
+  const cP = mk('div', { class: 'card' }, hud); cP.innerHTML = '<div class="lbl">PEOPLE</div><div class="big"><span class="n">0</span><span class="u">MILLION 👥</span></div><div class="chip">MORE THAN 🇮🇹 ITALY ✅</div>';
+  place(cP, 190, 280); pop(cP, C(5, 0, -.05)); MO.countUp(cP.querySelector('.n'), 61, C(5, 0), { dur: 1.0, noScale: true }); ev(C(5, 0), 'count');
+  const chP = cP.querySelector('.chip'); tl.set(chP, { opacity: 0 }, 0); tl.fromTo(chP, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)', ...IR }, C(5, 1, .1)); ev(C(5, 1, .1), 'pop');
+  out(cP, C(6, 0, -.05));
+
+  // ===== L6 two languages, 800 million speakers =====
+  const cL = mk('div', { class: 'card' }, hud); cL.innerHTML = '<div class="lbl">ESPAÑOL + PORTUGUÊS</div><div class="big"><span class="n">0</span><span class="u">MILLION 🗣️</span></div>';
+  place(cL, 170, 280); pop(cL, C(6, 0, -.05)); ev(C(6, 0, -.05), 'card');
+  MO.countUp(cL.querySelector('.n'), 800, C(6, 1, -.05), { suffix: '+', dur: 1.4, noScale: true }); ev(C(6, 1, -.05), 'count');
+  const BUB = []; for (let i = 0; i < 12; i++) { const c = mk('div', { class: 'coin' }, fx); c.textContent = i % 2 ? '💬' : '🗨️'; c.style.fontSize = (80 + (i * 23) % 50) + 'px'; BUB.push(c); }
+  BUB.forEach((c, i) => { const x = 80 + (i * 233) % 880, y1 = 1080 - (i * 61) % 380; tl.fromTo(c, { opacity: 0, x, y: y1 + 260, scale: .4 }, { opacity: 1, y: y1, scale: 1, duration: .5, ease: 'back.out(1.8)', ...IR }, C(6, 1, i * .05));
+    out(c, C(7, 0, -.1 + i * .02), .15); });
+  ev(C(6, 1, .1), 'pop'); out(cL, C(7, 0, -.05));
+
+  // ===== L7 a Nobel-winning writer picked its name: IBERIA =====
+  const cN = mk('div', { class: 'card' }, hud); cN.innerHTML = '<div class="big" style="font-size:100px">🏅 NOBEL</div><div class="lbl">PORTUGUESE WRITER · 2007 IDEA</div>';
+  place(cN, 230, 290); cN.style.textAlign = 'center'; pop(cN, C(7, 0, -.05)); ev(C(7, 0, -.05), 'card'); out(cN, C(7, 2, -.1));
+  const ib = mk('div', { class: 'ttl' }, $('titles')); ib.style.top = '300px'; ib.innerHTML = '<div style="font-size:200px;-webkit-text-stroke-width:28px"><span class="k">IBERIA</span></div>';
+  MO.slam(ib, C(7, 2), { shake: false }); ev(C(7, 2), 'slam'); PUN(C(7, 2, .05), 1.14, C(8, 0, -.1)); out(ib, C(8, 0, -.05));
+
+  // ===== L8 so why did Portugal walk away? =====
+  const tB = C(8, 0, -.1);
+  for (const k in FL) tl.to(FL[k], { opacity: .82, duration: .4 }, tB);
+  for (const k in OUT) tl.to(OUT[k], { attr: { opacity: .95 }, duration: .4, ...IR }, tB);
+  fadeA(goldG, 0, tB, .4); fadeA(rim, 0, tB, .3); fadeA(rimW, 0, tB, .3); fadeA(lights, 0, tB, .3);
+  const q = mk('div', { class: 'ttl' }, $('titles')); q.style.top = '250px'; q.innerHTML = '<div style="font-size:130px;-webkit-text-stroke-width:21px">WHY <span class="k">LEAVE?!</span> 🤨</div>';
+  MO.slam(q, C(8, 1, -.05), { shake: false }); ev(C(8, 1, -.05), 'slam'); out(q, C(9, 0, -.05));
+  const walk = emo('🚶', 170); ride(walk, 'atl', -85, -120); tl.fromTo(walk, { opacity: 0, x: 120 }, { opacity: 1, x: -60, duration: .7, ease: 'power2.out', ...IR }, C(8, 1)); out(walk, C(9, 0, -.05));
+
+  // ===== L9 Spain kept dragging Portugal into its wars =====
+  const tW = C(9, 0, -.05);
+  tl.to($('sepia'), { opacity: .2, duration: .4 }, tW); tl.to($('warm'), { opacity: .22, duration: .4 }, tW); ev(tW, 'whoosh');
+  const SW = []; [[-260, -340], [120, -420], [-40, -160]].forEach(([dx, dy], i) => { const s = emo('⚔️', 150); ride(s, 'es_c', dx - 75, dy); SW.push(s);
+    tl.fromTo(s, { opacity: 0, scale: 2, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: .28, ease: 'power4.in', ...IR }, C(9, 2, -.1 + i * .16)); ev(C(9, 2, .15 + i * .16), 'thud'); });
+  const rope = emo('🪢', 130); ride(rope, 'border', -65, -170); pop(rope, C(9, 0, .1)); ev(C(9, 0, .1), 'pop');
+  tl.to(rope, { keyframes: [{ x: 30, duration: .15 }, { x: -10, duration: .15 }, { x: 30, duration: .15 }, { x: 0, duration: .15 }] }, C(9, 1));
+  SW.forEach(s => out(s, C(10, 0, -.05))); out(rope, C(10, 0, -.05));
+
+  // ===== L10 December 1st 1640: Portugal took its crown back =====
+  const d1 = mk('div', { class: 'stamp' }, hud); d1.textContent = '1 DEC 1640'; place(d1, 200, 300);
+  tl.fromTo(d1, { opacity: 0, scale: 2.2, rotation: -12 }, { opacity: 1, scale: 1, rotation: -6, duration: .26, ease: 'power4.in', ...IR }, C(10, 0, .1)); ev(C(10, 0, .34), 'stamp');
+  const crB = emo('👑', 170); ride(crB, 'lisbon', -85, -260);
+  tl.fromTo(crB, { opacity: 0, y: -300, rotation: -30 }, { opacity: 1, y: 0, rotation: 0, duration: .5, ease: 'bounce.out', ...IR }, C(10, 2)); ev(C(10, 2, .35), 'thud');
+  tl.to(FL.PRT, { keyframes: [{ opacity: 1, duration: .2 }] }, C(10, 2)); tl.to(FL.ESP, { opacity: .5, duration: .3 }, C(10, 2));
+  tl.to($('flash'), { keyframes: [{ opacity: .3, duration: .06 }, { opacity: 0, duration: .4 }] }, C(10, 2, .05)); ev(C(10, 2, .05), 'boom');
+  out(d1, C(11, 0, -.05));
+
+  // ===== L11 ...and it still gets a day off =====
+  tl.to($('sepia'), { opacity: 0, duration: .4 }, C(11, 0, -.1)); tl.to($('warm'), { opacity: 0, duration: .4 }, C(11, 0, -.1));
+  const cal = mk('div', { class: 'card' }, hud); cal.innerHTML = '<div class="lbl">EVERY YEAR 🇵🇹</div><div class="big" style="font-size:110px">📅 1 DEC</div><div class="chip">DAY OFF 🎉</div>';
+  place(cal, 260, 290); pop(cal, C(11, 0)); ev(C(11, 0), 'card');
+  const chC = cal.querySelector('.chip'); tl.set(chC, { opacity: 0 }, 0); tl.fromTo(chC, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)', ...IR }, C(11, 1, .15)); ev(C(11, 1, .15), 'pop');
+  const beach = emo('🏖️', 140); place(beach, 820, 640); pop(beach, C(11, 1, .3)); ev(C(11, 1, .3), 'pop');
+  out(cal, C(12, 0, -.05)); out(beach, C(12, 0, -.05)); out(crB, C(12, 0, -.05)); tl.to(FL.ESP, { opacity: .82, duration: .3 }, C(12, 0, -.1));
+
+  // ===== L12 OL2 =====
+  PUN(C(12, 1, .05), 1.16, C(13, 0, -.05));
+  const pc = emo('🍿', 150); place(pc, 860, 380); pop(pc, C(12, 1)); ev(C(12, 1), 'pop'); out(pc, C(13, 0));
+
+  // ===== L13 cross the border... and travel back in time =====
+  for (const k in FL) tl.to(FL[k], { opacity: .3, duration: .4 }, C(13, 0, -.15));
+  tl.to(STB, { attr: { opacity: .95 }, duration: .4, ...IR }, C(13, 0, -.1)); tl.to(BGLOW, { attr: { opacity: .55 }, duration: .4, ...IR }, C(13, 0, -.1));
+  const car = emo('🚗', 120); ride(car, null, -60, -90); const cA = ANCH[ANCH.length - 1];
+  { const t0 = C(13, 0, .2), t1 = C(13, 2, .3); const a = [P.border[0] + 380, P.border[1] + 10], b = [P.border[0] - 380, P.border[1] - 10];
+    cA.fn = t => { const u = Math.min(1, Math.max(0, (t - t0) / (t1 - t0))); return [a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u]; }; }
+  tl.fromTo(car, { opacity: 0, scaleX: -1 }, { opacity: 1, scaleX: -1, duration: .25, ...IR }, C(13, 0, .2)); ev(C(13, 0, .2), 'whoosh');
+  const tt = mk('div', { class: 'ttl' }, $('titles')); tt.style.top = '250px'; tt.innerHTML = '<div style="font-size:130px;-webkit-text-stroke-width:21px">⏪ <span class="k">TIME TRAVEL</span></div>';
+  MO.slam(tt, C(13, 2), { shake: false }); ev(C(13, 2), 'slam'); out(tt, C(14, 0, -.05));
+  tl.to($('flash'), { keyframes: [{ opacity: .4, duration: .06 }, { opacity: 0, duration: .4 }] }, C(13, 2, .05));
+  out(car, C(14, 0, .1));
+
+  // ===== L14 Spain's clocks run an hour ahead. Since 1940 =====
+  const ckE = lab('🇪🇸 13:00'), ckP = lab('🇵🇹 12:00'); [ckE, ckP].forEach(e => { e.style.fontSize = '78px'; e.style.transform = 'translate(-50%,-50%)'; });
+  ride(ckE, null, 230, -60); ANCH[ANCH.length - 1].xy = P.border; ride(ckP, null, -230, -60); ANCH[ANCH.length - 1].xy = P.border;
+  pop(ckP, C(14, 0, -.05)); ev(C(14, 0, -.05), 'pop');
+  tl.fromTo(ckE, { opacity: 0, scale: .4 }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(2)', ...IR }, C(14, 1)); ev(C(14, 1), 'pop');
+  const ar = emo('⏩', 110); ride(ar, 'border', -55, -190); pop(ar, C(14, 1, .2)); ev(C(14, 1, .2), 'pop');
+  const s40 = mk('div', { class: 'stamp' }, hud); s40.textContent = 'SINCE 1940'; place(s40, 230, 300);
+  tl.fromTo(s40, { opacity: 0, scale: 2.2, rotation: -12 }, { opacity: 1, scale: 1, rotation: -6, duration: .26, ease: 'power4.in', ...IR }, C(14, 2)); ev(C(14, 2, .24), 'stamp');
+  [ckE, ckP, ar, s40].forEach(e => out(e, C(15, 0, -.05)));
+  tl.to(STB, { attr: { opacity: 0 }, duration: .3, ...IR }, C(15, 0, -.05)); tl.to(BGLOW, { attr: { opacity: 0 }, duration: .3, ...IR }, C(15, 0, -.05));
+
+  // ===== L15 capital fight =====
+  for (const k in FL) tl.to(FL[k], { opacity: .82, duration: .4 }, C(15, 0, -.1));
+  const cq = mk('div', { class: 'ttl' }, $('titles')); cq.style.top = '250px'; cq.innerHTML = '<div style="font-size:130px;-webkit-text-stroke-width:21px">🏛️ <span class="k">CAPITAL?</span></div>';
+  MO.textIn(cq, C(15, 0)); ev(C(15, 0), 'pop'); out(cq, C(15, 1, -.05));
+  PUN(C(15, 0, .1), 1.08, C(15, 1, -.1));
+  const md = pin('madrid', 'MADRID', '🇪🇸'); ride(md, 'madrid'); tl.fromTo(md, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(2)', ...IR }, C(15, 1)); ev(C(15, 1), 'pop');
+  const lb = pin('lisbon', 'LISBON', '🇵🇹'); ride(lb, 'lisbon'); tl.fromTo(lb, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(2)', ...IR }, C(15, 2)); ev(C(15, 2), 'pop');
+  const vs = emo('⚔️', 140); ride(vs, null, -70, -70); ANCH[ANCH.length - 1].xy = mid('madrid', 'lisbon'); pop(vs, C(15, 2, .3)); ev(C(15, 2, .3), 'thud');
+  out(md, C(16, 0, -.1)); out(lb, C(17, 0, -.1)); out(vs, C(16, 0, -.1));
+
+  // ===== L16 Portugal's one demand: NATA > CHURROS =====
+  const ball = mk('div', { class: 'ball' }, hud);
+  ball.innerHTML = `<svg width="300" height="300" viewBox="0 0 300 300"><defs><clipPath id="bc"><circle cx="150" cy="160" r="120"/></clipPath></defs>
+   <g clip-path="url(#bc)"><svg x="0" y="40" width="300" height="240" viewBox="0 0 480 240" preserveAspectRatio="xMidYMid slice">${flagSVG('PRT', 480, 240, true)}</svg></g>
+   <circle cx="150" cy="160" r="120" fill="none" stroke="#03101A" stroke-width="9"/>
+   <ellipse cx="112" cy="150" rx="30" ry="26" fill="#fff" stroke="#03101A" stroke-width="6"/><ellipse cx="190" cy="150" rx="30" ry="26" fill="#fff" stroke="#03101A" stroke-width="6"/>
+   <circle cx="120" cy="156" r="10" fill="#03101A"/><circle cx="198" cy="156" r="10" fill="#03101A"/>
+   <path d="M84 116 L140 130" stroke="#03101A" stroke-width="11" stroke-linecap="round"/><path d="M220 116 L164 130" stroke="#03101A" stroke-width="11" stroke-linecap="round"/></svg>`;
+  Object.assign(ball.style, { left: '70px', top: '990px' }); tl.fromTo(ball, { opacity: 0, y: 400, scaleY: .7 }, { opacity: 1, y: 0, scaleY: 1, duration: .45, ease: 'back.out(1.8)', ...IR }, C(16, 0, -.15)); ev(C(16, 0, -.15), 'pop');
+  tl.to(ball, { keyframes: [{ scaleY: .9, duration: .1 }, { scaleY: 1.05, duration: .12 }, { scaleY: 1, duration: .1 }] }, C(16, 1));
+  const bub = mk('div', { class: 'bubble' }, hud); bub.textContent = D.bubble; Object.assign(bub.style, { left: '250px', top: '850px' }); pop(bub, C(16, 1)); ev(C(16, 1), 'pop');
+  const tart = emo('🥧', 150); place(tart, 780, 700); pop(tart, C(16, 1, .25)); ev(C(16, 1, .25), 'pop');
+  out(ball, C(17, 0, .05)); out(bub, C(17, 0, .05)); out(tart, C(17, 0, .05));
+
+  // ===== L17 vote, back to the opening frame =====
+  const v1 = mk('div', { class: 'vote' }, hud); v1.style.left = '90px'; v1.style.background = 'linear-gradient(#FFE27A,#F6B630)'; v1.innerHTML = '<div class="vt">ONE COUNTRY</div><div class="vf">🟡</div>';
+  const v2 = mk('div', { class: 'vote' }, hud); v2.style.left = '560px'; v2.style.background = '#fff'; v2.innerHTML = '<div class="vt">STAY TWO</div><div class="vf">🇪🇸🇵🇹</div>';
+  v1.querySelector('.vt').style.fontSize = '58px';
+  if (D.lang === 'hi') { v1.querySelector('.vt').textContent = 'एक देश'; v2.querySelector('.vt').textContent = 'दो देश'; [v1, v2].forEach(v => v.querySelector('.vt').style.fontFamily = 'Muk, BSD, sans-serif'); }
+  pop(v1, C(17, 0, .05)); pop(v2, C(17, 1, -.05)); ev(C(17, 0, .05), 'pop'); ev(C(17, 1, -.05), 'pop');
+  tl.to(v1, { keyframes: [{ scale: 1.08, duration: .15 }, { scale: 1, duration: .2 }] }, C(17, 1, .3)); tl.to(v2, { keyframes: [{ scale: 1.08, duration: .15 }, { scale: 1, duration: .2 }] }, C(17, 2, -.05));
+  out(v1, D.dur - .55); out(v2, D.dur - .55);
+
+
+  // ===== captions =====
+  const CAPS = D.chunks.map(c => { const g = mk('div', { class: 'cap' }, $('caps')); const d = mk('div', { class: 'cl' }, g); markup(c.txt, d); return { c, g, d, words: [...g.querySelectorAll('span')] }; });
+  for (const K of CAPS) { let fs = 96; K.g.style.opacity = 1; K.d.style.fontSize = '96px'; const w = K.d.scrollWidth; if (w > 860) fs = 96 * 860 / w; K.g.style.opacity = 0;
+    Object.assign(K.d.style, { fontSize: fs.toFixed(1) + 'px', webkitTextStrokeWidth: (fs * .17).toFixed(1) + 'px', top: (1390 - fs * .5).toFixed(1) + 'px' }); }
+  for (const K of CAPS) { const c = K.c; tl.set(K.g, { opacity: 1 }, c.sn); tl.set(K.g, { opacity: 0 }, c.en);
+    tl.fromTo(K.g, { scale: .9, transformOrigin: '540px 1390px' }, { scale: 1, duration: .2, ease: 'power3.out', ...IR }, c.sn);
+    MO.karaoke(K.words, c.wt, w => w.classList.contains('k'));
+    K.words.forEach((w, i) => { if (w.classList.contains('k')) MO.sweep(w, c.wt[Math.min(i, c.wt.length - 1)]); }); }
+  window.__EVS = evs;
+  return tl;
+}
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => { window.__timelines['main'] = build(); });
+</script>
+</body>
+</html>
