@@ -1,0 +1,25 @@
+{
+ "id": "japan-en-full4",
+ "script": "gpu/japan_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 150,
+ "wait_minutes": 140,
+ "params": {
+  "name": "BHUGOL_Japan_EN_v4",
+  "src_dir": "japan",
+  "src_parts": [
+   "en_v6_src.part00",
+   "en_v6_src.part01"
+  ],
+  "src_sha256": "b08b96bbd5534147036cbe5f283f362806ce0b02ee7d606306b2e218020950f2",
+  "start": 0,
+  "dur": 241.2,
+  "workers": 2,
+  "still_every_s": 30,
+  "jpeg_q": 92,
+  "rate": "1280k",
+  "test": false
+ },
+ "requested": "2026-11-15T16:07+05:30"
+}
