@@ -1,5 +1,5 @@
 # Builds the same-size countries HyperFrames project. Usage: python3 build.py <spec.json> <timing.json> <out_dir> [en|hi] [--preview=N] [--allow-gaps]
-import json, os, sys, shutil
+import subprocess, json, os, sys, shutil
 args = [x for x in sys.argv[1:] if not x.startswith('--')]; spec_p, tim_p, out = args[:3]; LANG = args[3] if len(args) > 3 else 'en'
 PREVIEW = next((float(x.split('=')[1]) for x in sys.argv if x.startswith('--preview=')), None)
 MOT = '/home/claude/media-engine/bhugol-v2/motion'; sys.path.insert(0, MOT); import motion_plan
@@ -49,7 +49,9 @@ D = {'beats': BEATS, 'labels': LABELS, 'shots': PLAN, 'dur': DUR, 'lang': LANG, 
      'hand': [], 'impacts': [C(*x) for x in SPEC.get('impacts', [])]}
 for s in ('sa', 'wa', 'zc', 'it', 'sea'):
     os.makedirs(os.path.join(out, 'assets', s), exist_ok=True)
-    for f in ('ne.jpg', 'pa_close.jpg', 'pa_mask.png', 'hillshade.png', 'dem8.png', 'flags.jpg'): shutil.copy(os.path.join(ART, s, f), os.path.join(out, 'assets', s, f))
+    if not os.path.exists(os.path.join(ART, s, 'pa_cov.png')):   # smooth border/fill texture the map shader needs (15 Nov 2026)
+        subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '3d', 'map3d_prep.py'), 'cov', os.path.join(ART, s)], check=True)
+    for f in ('ne.jpg', 'pa_close.jpg', 'pa_mask.png', 'pa_cov.png', 'hillshade.png', 'dem8.png', 'flags.jpg'): shutil.copy(os.path.join(ART, s, f), os.path.join(out, 'assets', s, f))
 shutil.copy(ART + '/globe_flags.jpg', out + '/assets/globe_flags.jpg')
 for iso in ('GB', 'CL', 'ZM', 'PH', 'MY', 'VN'): shutil.copy(f'{W}/flags/{iso}.png', f'{out}/assets/flag_{iso}.png')
 for k in ('gb', 'my', 'vn'): shutil.copy(f'{W}/flags/{k.upper()}.png', f'{out}/assets/flag_{k}.png')

@@ -60,3 +60,9 @@ the next caption chunk that starts at least 0.5 s after the beat):
 | `flap` | `at`, `until`, `text`, `y` |
 | `card` | `scene` (map), `at`, `until`, `flag`, `name`, `to`, `unit`, `tag` |
 | `moment` | `at`, `what` — a hand-made animation already in the template (emoji pop, thermometer, bars, character); counts for the plan check |
+
+## Map sharpness gate (15 Nov 2026, after the Gibraltar Short's blocky map edges)
+- `../3d/footprint.cjs <build> fp.json`: plays the camera through every frame and, per map, records the ground each visible frame shows and the metres per screen pixel. `zones.lt300` / `patch` = where the sharp patch must reach; `soft` lists every frame whose imagery is stretched more than 2.5x (exit 1 = fail). Run it before fetching imagery (to size the patch: `map3d_prep.py job ... --footprint fp.json --map mp/`) and again on the final build (the gate).
+- `sharp_qa.py <video or frames>`: full-resolution 1:1 crops of the least-detailed tiles (`sheet.jpg`) - LOOK at it; the score only points where to look.
+- `gpu/hf3d_render.py` with `"only_frames": fp.json preview_frames`: GPU stills of the closest frame of every map shot, minutes instead of a full render. Check them at 1:1 before the full render.
+- Flag fills and borders come from `pa_cov.png` (anti-aliased, 8192 px; `map3d_prep.py cov <art_dir>` derives it from an id mask), never from the nearest-sampled `pa_mask.png`.

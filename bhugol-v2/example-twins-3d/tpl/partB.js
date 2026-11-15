@@ -13,26 +13,33 @@ function map3(P, M3, o) {
   const st = new T3.Scene(); st.background = new T3.Color(0x0A1424); st.fog = new T3.Fog(0x0A1424, o.fog[0], o.fog[1]);
   const ct = new T3.PerspectiveCamera(32, ASP, .005, 400); ct.up.set(0, 0, 1);
   const Wt = (L1 - L0) * KX, Ht = (B1 - B0), EX = .0105;
-  const TU = { cl: { value: o.cls === false ? 0 : 1 }, dem: { value: null }, ne: { value: null }, cls: { value: null }, mask: { value: null }, hs: { value: null }, flg: { value: null }, fA: { value: 0 }, fB: { value: 0 }, hl: { value: 0 }, exag: { value: 0 },
+  const TU = { cl: { value: o.cls === false ? 0 : 1 }, dem: { value: null }, ne: { value: null }, cls: { value: null }, mask: { value: null }, cov: { value: null }, hs: { value: null }, flg: { value: null }, fA: { value: 0 }, fB: { value: 0 }, hl: { value: 0 }, exag: { value: 0 },
     px: { value: new T3.Vector2(2.5 / 4096, 2.5 / 4096 * (M3.bbox[1] - M3.bbox[0]) / (M3.bbox[3] - M3.bbox[2])) },
     crect: { value: new T3.Vector4((M3.pa_close_bbox[0] - L0) / (L1 - L0), (M3.pa_close_bbox[2] - B0) / (B1 - B0), (M3.pa_close_bbox[1] - L0) / (L1 - L0), (M3.pa_close_bbox[3] - B0) / (B1 - B0)) } };
   st.add(new T3.Mesh(new T3.PlaneGeometry(Wt, Ht, 640, 400), new T3.ShaderMaterial({ uniforms: TU,
     vertexShader: `uniform sampler2D dem; uniform float exag; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.z += texture2D(dem, uv).r * exag; gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0); }`,
-    fragmentShader: `uniform sampler2D ne, cls, mask, hs, flg; uniform float fA, fB, hl, cl; uniform vec4 crect; uniform vec2 px; varying vec2 vUv;
+    fragmentShader: `uniform sampler2D ne, cls, mask, hs, flg, cov; uniform float fA, fB, hl, cl; uniform vec4 crect; uniform vec2 px; varying vec2 vUv;
       float idx(vec2 u){ return floor(texture2D(mask, u).r * 255.0 / 40.0 + 0.5); }
       void main(){ vec3 c = texture2D(ne, vUv).rgb;
         vec2 q = (vUv - crect.xy) / (crect.zw - crect.xy); float f = smoothstep(0.0, 0.08, q.x) * smoothstep(1.0, 0.92, q.x) * smoothstep(0.0, 0.08, q.y) * smoothstep(1.0, 0.92, q.y);
         vec3 cc = texture2D(cls, clamp(q, 0.0, 1.0)).rgb; f *= cl * smoothstep(0.03, 0.07, dot(cc, vec3(0.333))); if (f > 0.0) c = mix(c, cc, f);
         float h = texture2D(hs, vUv).r; c *= 0.48 + 0.72 * h; float lu = dot(c, vec3(0.299,0.587,0.114)); c = mix(vec3(lu), c, 0.9);
-        float i0 = idx(vUv); float fill = (i0 > 0.5 && i0 < 1.5) ? fA : ((i0 > 1.5 && i0 < 2.5) ? fB : 0.0);
+        vec2 cv = texture2D(cov, vUv).rg; float fill = fA * smoothstep(0.3, 0.7, cv.r) + fB * smoothstep(0.3, 0.7, cv.g);
         vec3 fl = texture2D(flg, vUv).rgb * (0.78 + 0.32 * h);
         c = mix(c, fl, fill * 0.9);
-        float e = 0.0; for (int k = 0; k < 4; k++) { vec2 d = k == 0 ? vec2(px.x, 0.0) : (k == 1 ? vec2(-px.x, 0.0) : (k == 2 ? vec2(0.0, px.y) : vec2(0.0, -px.y))); float j = idx(vUv + d); if (abs(j - i0) > 0.5) { float fj = (j > 0.5 && j < 1.5) ? fA : ((j > 1.5 && j < 2.5) ? fB : 0.0); e = max(e, max(fill, fj)); } }
+        float e = max(fA * smoothstep(0.1, 0.4, cv.r) * smoothstep(0.9, 0.6, cv.r), fB * smoothstep(0.1, 0.4, cv.g) * smoothstep(0.9, 0.6, cv.g));  // anti-aliased border (pa_cov.png)
         c = mix(c, vec3(1.0), e);
         c *= mix(1.0, 0.55, hl * (fill > 0.01 ? 0.0 : 1.0));
         gl_FragColor = vec4(c, 1.0); }` })));
   const demI = { I: null }; const hAt = (lon, lat) => demI.I ? sampleCPU(demI.I, (lon - L0) / (L1 - L0), (lat - B0) / (B1 - B0)) * EX : 0;
   const wpos = (lon, lat, up) => new T3.Vector3((lon - LC) * KX, lat - BC, hAt(lon, lat) * TU.exag.value / EX + (up || 0));
+  // footprint probe (15 Nov 2026): with window.__FP set, every visible map frame records the ground it shows + the finest metres per screen pixel
+  const fpSample = (name, cv) => { if (cv.checkVisibility && !cv.checkVisibility({ opacityProperty: true, visibilityProperty: true })) return;
+    const rc = new T3.Raycaster(), pl = new T3.Plane(new T3.Vector3(0, 0, 1), 0), hit = new T3.Vector3(); const pts = []; let mpp = 1e9, hz = 0;
+    const g = (nx, ny) => { rc.setFromCamera(new T3.Vector2(nx, ny), ct); return rc.ray.intersectPlane(pl, hit) ? { lon: hit.x / KX + LC, lat: hit.y + BC } : null; };
+    for (let i = 0; i <= 4; i++) for (let j = 0; j <= 4; j++) { const nx = -1 + i / 2, ny = -1 + j / 2, p = g(nx, ny); if (!p) { hz = 1; continue; }
+      const q = g(nx + (i < 4 ? 2 : -2) / 1080, ny); if (q) { p.m = Math.hypot((q.lon - p.lon) * 111320 * Math.cos(p.lat * Math.PI / 180), (q.lat - p.lat) * 110540); mpp = Math.min(mpp, p.m); } pts.push(p); }
+    (window.__FPD = window.__FPD || []).push({ map: name, t: window.__FPT, pts, mpp, hz, bb: M3.bbox, cb: M3.pa_close_bbox, cl: TU.cl.value }); };
   const pin = new T3.Group(); st.add(pin);
   const beam = new T3.Mesh(new T3.CylinderGeometry(.03, .03, 1.2, 12, 1, true), new T3.MeshBasicMaterial({ color: 0xFFC23A, transparent: true, opacity: 0, blending: T3.AdditiveBlending, depthWrite: false }));
   beam.rotation.x = Math.PI / 2; beam.position.z = .6; pin.add(beam);
@@ -62,7 +69,7 @@ function map3(P, M3, o) {
   const S = { el, push, ov, chars, G, Tn, sg, cg, st, ct, globe, TU, pin, beam, head, lls: [], cards: [], meas: [], ovs, morphs: [], overlay, morph, wpos, ll, KX, LC, BC,
     gk: TK(Object.assign({ lon: 30, lat: 12, dist: 3.5 }, o.gk0 || {})), tk: TK(Object.assign({ lon: LC, lat: BC, dist: 30, el: 80, yaw: 0 }, o.tk0 || {})), x: TK(o.globe ? 0 : 1), fA: TK(0), fB: TK(0), hl: TK(0), pinA: TK(0), wins: [] };
   READY.push(tex('globe_flags.jpg').then(t => { globe.material.map = t; globe.material.needsUpdate = true; }), tex(P + 'ne.jpg').then(t => TU.ne.value = t), tex(P + 'pa_close.jpg').then(t => TU.cls.value = t),
-    tex(P + 'pa_mask.png', { nearest: 1 }).then(t => TU.mask.value = t), tex(P + 'hillshade.png').then(t => TU.hs.value = t), tex(P + 'dem8.png').then(t => TU.dem.value = t), tex(P + 'flags.jpg').then(t => TU.flg.value = t),
+    tex(P + 'pa_mask.png', { nearest: 1 }).then(t => TU.mask.value = t), tex(P + 'hillshade.png').then(t => TU.hs.value = t), tex(P + 'dem8.png').then(t => TU.dem.value = t), tex(P + 'flags.jpg').then(t => TU.flg.value = t), tex(P + 'pa_cov.png').then(t => TU.cov.value = t),
     cpuImg(P + 'dem8.png').then(I => { demI.I = I; TU.exag.value = EX * (o.exag || 26); if (o.pin) pin.position.copy(wpos(o.pin[0], o.pin[1])); }));
   S.cam = t => { const k = valAt(S.tk, t); const tg = new T3.Vector3((k.lon - LC) * KX, k.lat - BC, 0); const e = k.el * Math.PI / 180, y = k.yaw * Math.PI / 180;
     ct.position.set(tg.x + Math.sin(y) * Math.cos(e) * k.dist, tg.y - Math.cos(y) * Math.cos(e) * k.dist, Math.sin(e) * k.dist); ct.lookAt(tg); ct.updateMatrixWorld(); };
@@ -76,7 +83,7 @@ function map3(P, M3, o) {
         v.fill.material.opacity = a * .95; v.fill.material.color.setRGB(1 - gr * .55, 1 - gr * .55, 1 - gr * .45); v.edges.forEach(e => e.material.opacity = a);
         v.grp.position.set(d.x * KX, d.y, .05 + z * 1.6); v.sh.position.set(d.x * KX + .1 * z + .05, d.y - .14 * z - .07, .02); v.sh.material.opacity = a * .4; }
       for (const m of S.morphs) { const a = valAt(m.a, t); m.mesh.material.opacity = a * .95; m.line.material.opacity = a; m.mesh.position.z = m.line.position.z = .06; if (a > 0) m.update(valAt(m.p, t)); }
-      Tn.R.render(st, ct);
+      Tn.R.render(st, ct); if (window.__FP) fpSample(P, Tn.cv);
       for (const L of S.lls) { const a = valAt(L.a, t); L.e.style.opacity = a * x; if (a <= 0) continue; const dd = L.ov ? valAt(L.ov.d, t) : { x: 0, y: 0 };
         const q = toScreen(ct, wpos(L.lon + dd.x, L.lat + dd.y, .05)); const s = (.6 + .4 * Math.min(1, a * 1.5)) * (1 + valAt(L.pop, t));
         L.e.style.transform = `translate(${(q.x - L.e.offsetWidth / 2).toFixed(1)}px,${(q.y - L.e.offsetHeight / 2 + valAt(L.dy, t)).toFixed(1)}px) scale(${s.toFixed(3)}) rotate(${valAt(L.rot, t).toFixed(1)}deg)`; }
