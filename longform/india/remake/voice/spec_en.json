@@ -43,7 +43,8 @@
   {
    "t0": 5.316666666666666,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_calicut.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -57,19 +58,6 @@
      "x": 960,
      "y": 250,
      "in": 5.416666666666666,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_calicut]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 5.316666666666666,
      "enter": "pop"
     }
    ],
@@ -283,15 +271,24 @@
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_dagama_journal.png",
+     "x": 960,
+     "y": 640,
+     "h": 1115,
+     "in": 22.150000000000002,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "THE SHIP'S OWN JOURNAL",
-      "size": 97,
+      "size": 80,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 540,
+     "y": 240,
      "in": 22.3,
      "enter": "pop"
     }
@@ -302,9 +299,7 @@
   {
    "t0": 26.243333333333332,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_calicut_1498.png",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/black_pepper.jpg",
     "cam": [
      [
       26.243333333333332,
@@ -316,20 +311,11 @@
       32.24333333333333,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "BLACK PEPPER \u00b7 COTTON CLOTH",
@@ -342,6 +328,15 @@
      "y": 250,
      "in": 26.343333333333334,
      "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_calico_textile.png",
+     "x": 1500,
+     "y": 700,
+     "h": 771,
+     "in": 26.64333333333333,
+     "enter": "pop",
+     "shadow": false
     }
    ],
    "t1": 30.236666666666665,
@@ -350,7 +345,7 @@
   {
    "t0": 30.236666666666665,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_calicut_1498.png",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/black_pepper.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -370,15 +365,24 @@
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_calico_textile.png",
+     "x": 960,
+     "y": 640,
+     "h": 1240,
+     "in": 30.286666666666665,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "CALICUT \u2192 CALICO",
-      "size": 97,
+      "size": 80,
       "color": "#ffffff",
       "box": "#c99400",
       "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
      },
      "x": 960,
-     "y": 540,
+     "y": 240,
      "in": 30.436666666666664,
      "enter": "pop"
     }
@@ -389,7 +393,7 @@
   {
    "t0": 34.86,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_calicut_1498.png",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/black_pepper.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -1397,17 +1401,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[alexander_cunningham]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_alexander_cunningham.png",
      "x": 960,
-     "y": 540,
-     "in": 128.07999999999998,
-     "enter": "pop"
+     "y": 560,
+     "h": 898,
+     "in": 128.13,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -2543,7 +2543,8 @@
   {
    "t0": 256.76000000000005,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_indus_dry.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -2558,19 +2559,6 @@
      "y": 250,
      "in": 256.86000000000007,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_indus_dry]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 256.76000000000005,
-     "enter": "pop"
     }
    ],
    "clip": "G_indus_dry",
@@ -2580,7 +2568,7 @@
   {
    "t0": 271.84000000000003,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_indus_dry_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4010,7 +3998,8 @@
   {
    "t0": 494.32000000000005,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_buddhism.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -4024,19 +4013,6 @@
      "x": 960,
      "y": 250,
      "in": 494.4200000000001,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_buddhism]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 494.32000000000005,
      "enter": "pop"
     }
    ],
@@ -4215,9 +4191,7 @@
   {
    "t0": 537.6500000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_jhelum.png",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive2/porus_coin.png",
     "cam": [
      [
       537.6500000000001,
@@ -4226,23 +4200,14 @@
       1.0
      ],
      [
-      548.75,
+      541.35,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "WAR ELEPHANTS",
@@ -4257,8 +4222,82 @@
      "enter": "pop"
     }
    ],
-   "t1": 548.75,
+   "t1": 541.35,
    "cut": "curve"
+  },
+  {
+   "t0": 541.35,
+   "t1": 545.0500000000001,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive2/porus_coin.png",
+    "cam": [
+     [
+      541.35,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      545.0500000000001,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "WAR ELEPHANTS",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 541.35,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 545.0500000000001,
+   "t1": 548.75,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive2/porus_coin.png",
+    "cam": [
+     [
+      545.0500000000001,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      548.75,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "WAR ELEPHANTS",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 545.0500000000001,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 548.75,
@@ -5825,23 +5864,10 @@
   {
    "t0": 768.88,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_dhamma.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D G_dhamma]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 768.88,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "G_dhamma",
    "t1": 778.1,
    "cut": "whip"
@@ -5945,17 +5971,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[james_prinsep]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_james_prinsep.png",
      "x": 960,
-     "y": 540,
-     "in": 788.9,
-     "enter": "pop"
+     "y": 560,
+     "h": 640,
+     "in": 788.9499999999999,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -6011,6 +6033,15 @@
       ]
      ],
      "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_james_prinsep.png",
+     "x": 1400,
+     "y": 595,
+     "h": 430,
+     "enter": "pop",
+     "shadow": true,
+     "in": 801.63
     },
     {
      "img": {
@@ -6098,6 +6129,15 @@
      "in": 802.1225000000001
     },
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_james_prinsep.png",
+     "x": 1400,
+     "y": 595,
+     "h": 430,
+     "enter": "none",
+     "shadow": true,
+     "in": 802.1225000000001
+    },
+    {
      "img": {
       "text": "Prinsep",
       "size": 50,
@@ -6178,6 +6218,15 @@
       ]
      ],
      "flip": false,
+     "in": 805.915
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_james_prinsep.png",
+     "x": 1400,
+     "y": 595,
+     "h": 430,
+     "enter": "none",
+     "shadow": true,
      "in": 805.915
     },
     {
@@ -6292,6 +6341,15 @@
      "in": 809.7075
     },
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_james_prinsep.png",
+     "x": 1400,
+     "y": 595,
+     "h": 430,
+     "enter": "none",
+     "shadow": true,
+     "in": 809.7075
+    },
+    {
      "img": {
       "text": "Prinsep",
       "size": 50,
@@ -6374,8 +6432,6 @@
    "t0": 817.99,
    "bg": {
     "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/lion_capital.jpg",
-    "blur": 14,
-    "dim": 0.5,
     "cam": [
      [
       817.99,
@@ -6387,20 +6443,11 @@
       823.99,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "ON EVERY NOTE AND PASSPORT",
@@ -6682,17 +6729,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[pliny_elder]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_pliny_elder.png",
      "x": 960,
-     "y": 540,
-     "in": 876.5600000000001,
-     "enter": "pop"
+     "y": 560,
+     "h": 842,
+     "in": 876.61,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -6734,15 +6777,24 @@
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_roman_coins_india.png",
+     "x": 960,
+     "y": 640,
+     "h": 467,
+     "in": 885.6199999999999,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "50 MILLION SESTERCES A YEAR",
-      "size": 97,
+      "size": 80,
       "color": "#ffffff",
       "box": "#c99400",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 540,
+     "y": 240,
      "in": 885.77,
      "enter": "pop"
     }
@@ -7370,7 +7422,8 @@
   {
    "t0": 979.3000000000001,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_numerals.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -7385,19 +7438,6 @@
      "y": 250,
      "in": 979.4000000000001,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_numerals]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 979.3000000000001,
-     "enter": "pop"
     }
    ],
    "clip": "G_numerals",
@@ -7407,7 +7447,7 @@
   {
    "t0": 984.31,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_observatory.png",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_numerals_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -7446,7 +7486,7 @@
   {
    "t0": 989.5600000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_observatory.png",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_numerals_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -7816,17 +7856,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[mahmud_ghazni]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_mahmud_ghazni.png",
      "x": 960,
-     "y": 540,
-     "in": 1052.28,
-     "enter": "pop"
+     "y": 560,
+     "h": 359,
+     "in": 1052.33,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -7872,9 +7908,7 @@
   {
    "t0": 1063.48,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_ghazni_last.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/somnath_temple.jpg",
     "cam": [
      [
       1063.48,
@@ -7883,23 +7917,14 @@
       1.0
      ],
      [
-      1072.87,
+      1068.175,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "SOMNATH \u00b7 1026",
@@ -7914,8 +7939,45 @@
      "enter": "pop"
     }
    ],
-   "t1": 1072.87,
+   "t1": 1068.175,
    "cut": "curve"
+  },
+  {
+   "t0": 1068.175,
+   "t1": 1072.87,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/somnath_temple.jpg",
+    "cam": [
+     [
+      1068.175,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1072.87,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "SOMNATH \u00b7 1026",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1068.175,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 1072.87,
@@ -8100,17 +8162,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[prithviraj_chauhan]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_prithviraj_chauhan.png",
      "x": 960,
-     "y": 540,
-     "in": 1099.81,
-     "enter": "pop"
+     "y": 560,
+     "h": 484,
+     "in": 1099.86,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -8132,7 +8190,8 @@
   {
    "t0": 1102.95,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_tarain.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -8146,19 +8205,6 @@
      "x": 960,
      "y": 250,
      "in": 1103.05,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_tarain]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1102.95,
      "enter": "pop"
     }
    ],
@@ -8226,6 +8272,15 @@
       ]
      ],
      "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_prithviraj_chauhan.png",
+     "x": 1400,
+     "y": 595,
+     "h": 429,
+     "enter": "pop",
+     "shadow": true,
+     "in": 1114.97
     },
     {
      "img": {
@@ -8324,6 +8379,15 @@
       ]
      ],
      "flip": false,
+     "in": 1117.675
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_prithviraj_chauhan.png",
+     "x": 1400,
+     "y": 595,
+     "h": 429,
+     "enter": "none",
+     "shadow": true,
      "in": 1117.675
     },
     {
@@ -8438,7 +8502,8 @@
   {
    "t0": 1126.1,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_tarain.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -8453,19 +8518,6 @@
      "y": 250,
      "in": 1126.1999999999998,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_tarain]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1126.1,
-     "enter": "pop"
     }
    ],
    "clip": "G_tarain",
@@ -8475,7 +8527,7 @@
   {
    "t0": 1133.0900000000001,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_rajput_camp.png",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_tarain_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -8760,7 +8812,8 @@
   {
    "t0": 1186.88,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_mongols.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -8774,19 +8827,6 @@
      "x": 960,
      "y": 250,
      "in": 1184.58,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_mongols]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1184.48,
      "enter": "pop"
     }
    ],
@@ -9671,17 +9711,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[timur]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_timur.png",
      "x": 960,
-     "y": 540,
-     "in": 1290.74,
-     "enter": "pop"
+     "y": 560,
+     "h": 427,
+     "in": 1290.79,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -9703,23 +9739,10 @@
   {
    "t0": 1300.9,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_timur.mp4",
+    "img": "#02070d"
    },
-   "layers": [
-    {
-     "img": {
-      "text": "[3D G_timur]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1300.9,
-     "enter": "pop"
-    }
-   ],
+   "layers": [],
    "clip": "G_timur",
    "t1": 1317.6399999999999,
    "cut": "whip"
@@ -9821,17 +9844,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[amir_khusrau]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_amir_khusrau.png",
      "x": 960,
-     "y": 540,
-     "in": 1324.6,
-     "enter": "pop"
+     "y": 560,
+     "h": 863,
+     "in": 1324.6499999999999,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -10771,17 +10790,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[sher_shah_suri]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_sher_shah_suri.png",
      "x": 960,
-     "y": 540,
-     "in": 1444.6599999999999,
-     "enter": "pop"
+     "y": 560,
+     "h": 424,
+     "in": 1444.7099999999998,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -10827,9 +10842,7 @@
   {
    "t0": 1455.21,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_road_last.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/sher_shah_rupiya.jpg",
     "cam": [
      [
       1455.21,
@@ -10841,20 +10854,11 @@
       1461.21,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "THE RUPIYA \u2192 RUPEE",
@@ -11507,17 +11511,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[maharana_pratap]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_maharana_pratap.png",
      "x": 960,
-     "y": 540,
-     "in": 1531.48,
-     "enter": "pop"
+     "y": 560,
+     "h": 436,
+     "in": 1531.53,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -11611,9 +11611,7 @@
   {
    "t0": 1558.24,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_mughal1605_last.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/peacock_throne.jpg",
     "cam": [
      [
       1558.24,
@@ -11622,31 +11620,44 @@
       1.0
      ],
      [
-      1567.08,
+      1562.6599999999999,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
-   "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    }
-   ],
-   "t1": 1567.08,
+   "layers": [],
+   "t1": 1562.6599999999999,
    "cut": "curve"
+  },
+  {
+   "t0": 1562.6599999999999,
+   "t1": 1567.08,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/peacock_throne.jpg",
+    "cam": [
+     [
+      1562.6599999999999,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1567.08,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": []
   },
   {
    "t0": 1567.08,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_mughal1605_last.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/peacock_throne.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -11681,7 +11692,7 @@
   {
    "t0": 1569.48,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_mughal1605_last.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/peacock_throne.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -11729,9 +11740,7 @@
   {
    "t0": 1575.58,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_mughal1605_last.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/peacock_throne.jpg",
     "cam": [
      [
       1575.58,
@@ -11740,23 +11749,14 @@
       1.0
      ],
      [
-      1584.13,
+      1579.855,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "THE PEACOCK THRONE",
@@ -11771,8 +11771,45 @@
      "enter": "pop"
     }
    ],
-   "t1": 1584.13,
+   "t1": 1579.855,
    "cut": "curve"
+  },
+  {
+   "t0": 1579.855,
+   "t1": 1584.13,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/peacock_throne.jpg",
+    "cam": [
+     [
+      1579.855,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1584.13,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "THE PEACOCK THRONE",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1579.855,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 1584.13,
@@ -11851,7 +11888,8 @@
   {
    "t0": 1592.3799999999999,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_cloth.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -11866,19 +11904,6 @@
      "y": 250,
      "in": 1592.4799999999998,
      "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_cloth]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1592.3799999999999,
-     "enter": "pop"
     }
    ],
    "clip": "G_cloth",
@@ -11888,7 +11913,7 @@
   {
    "t0": 1612.52,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_cloth_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -11908,17 +11933,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[mumtaz_mahal]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_mumtaz_mahal.png",
      "x": 960,
-     "y": 540,
-     "in": 1612.52,
-     "enter": "pop"
+     "y": 560,
+     "h": 486,
+     "in": 1612.57,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -12619,17 +12640,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[shivaji]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_shivaji.png",
      "x": 960,
-     "y": 540,
-     "in": 1696.1799999999998,
-     "enter": "pop"
+     "y": 560,
+     "h": 842,
+     "in": 1696.2299999999998,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -12784,7 +12801,8 @@
   {
    "t0": 1729.67,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_nadir.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -12798,19 +12816,6 @@
      "x": 960,
      "y": 250,
      "in": 1729.77,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_nadir]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 1729.67,
      "enter": "pop"
     }
    ],
@@ -13009,17 +13014,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[elizabeth_i]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_elizabeth_i.png",
      "x": 960,
-     "y": 540,
-     "in": 1755.6,
-     "enter": "pop"
+     "y": 560,
+     "h": 514,
+     "in": 1755.6499999999999,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -13041,9 +13042,7 @@
   {
    "t0": 1759.74,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art4/in_camel_caravan.png",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/eic_coat_of_arms.jpg",
     "cam": [
      [
       1759.74,
@@ -13055,20 +13054,11 @@
       1765.74,
       0.5,
       0.5,
-      1.08
+      1.15
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "THE EAST INDIA COMPANY",
@@ -13089,9 +13079,7 @@
   {
    "t0": 1764.08,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art4/in_camel_caravan.png",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
     "cam": [
      [
       1764.08,
@@ -13100,23 +13088,14 @@
       1.0
      ],
      [
-      1779.58,
+      1767.955,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
@@ -13131,13 +13110,124 @@
      "enter": "pop"
     }
    ],
-   "t1": 1779.58,
+   "t1": 1767.955,
    "cut": "curve"
+  },
+  {
+   "t0": 1767.955,
+   "t1": 1771.83,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
+    "cam": [
+     [
+      1767.955,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1771.83,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1767.955,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 1771.83,
+   "t1": 1775.705,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
+    "cam": [
+     [
+      1771.83,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      1775.705,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1771.83,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 1775.705,
+   "t1": 1779.58,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
+    "cam": [
+     [
+      1775.705,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1779.58,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1775.705,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 1779.58,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art4/in_camel_caravan.png",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -13220,17 +13310,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[catherine_braganza]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_catherine_braganza.png",
      "x": 960,
-     "y": 540,
-     "in": 1796.28,
-     "enter": "pop"
+     "y": 560,
+     "h": 1029,
+     "in": 1796.33,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -13755,17 +13841,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[robert_clive]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_robert_clive.png",
      "x": 960,
-     "y": 540,
-     "in": 1838.74,
-     "enter": "pop"
+     "y": 560,
+     "h": 1011,
+     "in": 1838.79,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -14118,17 +14200,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[tipu_sultan]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_tipu_sultan.png",
      "x": 960,
-     "y": 540,
-     "in": 1905.6999999999998,
-     "enter": "pop"
+     "y": 560,
+     "h": 869,
+     "in": 1905.7499999999998,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -14368,34 +14446,23 @@
   {
    "t0": 1953.56,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_company_last.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/enfield_cartridge.png",
     "cam": [
      [
-      1951.1599999999999,
+      1953.56,
       0.5,
       0.5,
       1.0
      ],
      [
-      1967.34,
+      1958.1533333333332,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "BITE THE CARTRIDGE",
@@ -14410,8 +14477,82 @@
      "enter": "pop"
     }
    ],
-   "t1": 1967.34,
+   "t1": 1958.1533333333332,
    "cut": "curve"
+  },
+  {
+   "t0": 1958.1533333333332,
+   "t1": 1962.7466666666667,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/enfield_cartridge.png",
+    "cam": [
+     [
+      1958.1533333333332,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      1962.7466666666667,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "BITE THE CARTRIDGE",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1958.1533333333332,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 1962.7466666666667,
+   "t1": 1967.34,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/enfield_cartridge.png",
+    "cam": [
+     [
+      1962.7466666666667,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      1967.34,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "BITE THE CARTRIDGE",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 1962.7466666666667,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 1967.34,
@@ -15179,9 +15320,7 @@
   {
    "t0": 2057.8199999999997,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_victoria_palace.png",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/sake_dean_mahomed.jpg",
     "cam": [
      [
       2057.8199999999997,
@@ -15190,23 +15329,14 @@
       1.0
      ],
      [
-      2070.3399999999997,
+      2061.993333333333,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "CHAMPO \u2192 SHAMPOO",
@@ -15221,8 +15351,82 @@
      "enter": "pop"
     }
    ],
-   "t1": 2070.3399999999997,
+   "t1": 2061.993333333333,
    "cut": "curve"
+  },
+  {
+   "t0": 2061.993333333333,
+   "t1": 2066.1666666666665,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/sake_dean_mahomed.jpg",
+    "cam": [
+     [
+      2061.993333333333,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      2066.1666666666665,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "CHAMPO \u2192 SHAMPOO",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 2061.993333333333,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 2066.1666666666665,
+   "t1": 2070.3399999999997,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/sake_dean_mahomed.jpg",
+    "cam": [
+     [
+      2066.1666666666665,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      2070.3399999999997,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "CHAMPO \u2192 SHAMPOO",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 2066.1666666666665,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 2070.3399999999997,
@@ -15338,7 +15542,8 @@
   {
    "t0": 2083.2999999999997,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_manchester.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -15352,19 +15557,6 @@
      "x": 960,
      "y": 250,
      "in": 2083.3999999999996,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_manchester]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 2083.2999999999997,
      "enter": "pop"
     }
    ],
@@ -15469,17 +15661,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[dadabhai_naoroji]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_dadabhai_naoroji.png",
      "x": 960,
-     "y": 540,
-     "in": 2104.44,
-     "enter": "pop"
+     "y": 560,
+     "h": 874,
+     "in": 2104.4900000000002,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -16315,9 +16503,7 @@
   {
    "t0": 2236.81,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/jallianwala.jpg",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/swaraj_flag_1931.jpg",
     "cam": [
      [
       2236.81,
@@ -16326,23 +16512,14 @@
       1.0
      ],
      [
-      2244.96,
+      2240.885,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "THE WHEEL ON THE FLAG",
@@ -16357,8 +16534,45 @@
      "enter": "pop"
     }
    ],
-   "t1": 2244.96,
+   "t1": 2240.885,
    "cut": "curve"
+  },
+  {
+   "t0": 2240.885,
+   "t1": 2244.96,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/swaraj_flag_1931.jpg",
+    "cam": [
+     [
+      2240.885,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      2244.96,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "THE WHEEL ON THE FLAG",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#222222",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 2240.885,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 2244.96,
@@ -17007,25 +17221,16 @@
    },
    "layers": [
     {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
-    {
      "img": {
-      "text": "1943 \u00b7 ~3 MILLION DIED",
-      "size": 87,
+      "text": "1943 \u00b7 BENGAL FAMINE \u00b7 ~3\nMILLION DIED",
+      "size": 97,
       "color": "#ffffff",
       "box": "#c99400",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 2303.97,
+     "y": 540,
+     "in": 2304.0699999999997,
      "enter": "pop"
     }
    ],
@@ -17168,17 +17373,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[cyril_radcliffe]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_cyril_radcliffe.png",
      "x": 960,
-     "y": 540,
-     "in": 2325.7599999999998,
-     "enter": "pop"
+     "y": 560,
+     "h": 856,
+     "in": 2325.81,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -17220,17 +17421,13 @@
    },
    "layers": [
     {
-     "img": {
-      "text": "[muhammad_ali_jinnah]",
-      "size": 40,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_muhammad_ali_jinnah.png",
      "x": 960,
-     "y": 540,
-     "in": 2336.58,
-     "enter": "pop"
+     "y": 560,
+     "h": 498,
+     "in": 2336.63,
+     "enter": "pop",
+     "shadow": false
     },
     {
      "img": {
@@ -17290,6 +17487,15 @@
       ]
      ],
      "flip": false
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_cyril_radcliffe.png",
+     "x": 1400,
+     "y": 595,
+     "h": 429,
+     "enter": "pop",
+     "shadow": true,
+     "in": 2352.79
     },
     {
      "img": {
@@ -17392,6 +17598,15 @@
       ]
      ],
      "flip": false,
+     "in": 2355.6866666666665
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_cyril_radcliffe.png",
+     "x": 1400,
+     "y": 595,
+     "h": 429,
+     "enter": "none",
+     "shadow": true,
      "in": 2355.6866666666665
     },
     {
@@ -17510,6 +17725,15 @@
      "in": 2360.1633333333334
     },
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_cyril_radcliffe.png",
+     "x": 1400,
+     "y": 595,
+     "h": 429,
+     "enter": "none",
+     "shadow": true,
+     "in": 2360.1633333333334
+    },
+    {
      "img": {
       "text": "Radcliffe",
       "size": 50,
@@ -17568,9 +17792,7 @@
   {
    "t0": 2364.64,
    "bg": {
-    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_delhi_office_1947.png",
-    "blur": 14,
-    "dim": 0.5,
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/nehru_1947.jpg",
     "cam": [
      [
       2364.64,
@@ -17579,23 +17801,14 @@
       1.0
      ],
      [
-      2382.92,
+      2369.21,
       0.5,
       0.5,
-      1.08
+      1.06
      ]
     ]
    },
    "layers": [
-    {
-     "img": "/home/claude/media-engine/longform/india/remake/../art/c_traveller.png",
-     "x": 360,
-     "y": 1030,
-     "h": 700,
-     "enter": "none",
-     "talk": [],
-     "flip": false
-    },
     {
      "img": {
       "text": "15 AUGUST 1947 \u00b7 NEHRU",
@@ -17610,8 +17823,119 @@
      "enter": "pop"
     }
    ],
-   "t1": 2382.92,
+   "t1": 2369.21,
    "cut": "curve"
+  },
+  {
+   "t0": 2369.21,
+   "t1": 2373.7799999999997,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/nehru_1947.jpg",
+    "cam": [
+     [
+      2369.21,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      2373.7799999999997,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "15 AUGUST 1947 \u00b7 NEHRU",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 2369.21,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 2373.7799999999997,
+   "t1": 2378.35,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/nehru_1947.jpg",
+    "cam": [
+     [
+      2373.7799999999997,
+      0.5652173913043478,
+      0.5,
+      1.15
+     ],
+     [
+      2378.35,
+      0.58,
+      0.5,
+      1.2075
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "15 AUGUST 1947 \u00b7 NEHRU",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 2373.7799999999997,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "t0": 2378.35,
+   "t1": 2382.92,
+   "bg": {
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/nehru_1947.jpg",
+    "cam": [
+     [
+      2378.35,
+      0.38,
+      0.45,
+      1.35
+     ],
+     [
+      2382.92,
+      0.42,
+      0.45,
+      1.4175000000000002
+     ]
+    ]
+   },
+   "cut": "hard",
+   "layers": [
+    {
+     "img": {
+      "text": "15 AUGUST 1947 \u00b7 NEHRU",
+      "size": 87,
+      "color": "#ffffff",
+      "box": "#c99400",
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+     },
+     "x": 960,
+     "y": 250,
+     "in": 2378.35,
+     "enter": "none"
+    }
+   ]
   },
   {
    "t0": 2382.92,
@@ -18406,15 +18730,24 @@
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_swaraj_flag_1931.png",
+     "x": 960,
+     "y": 640,
+     "h": 611,
+     "in": 2481.79,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "TWO WHEELS IN THE RUNNING",
-      "size": 97,
+      "size": 80,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 540,
+     "y": 240,
      "in": 2481.9399999999996,
      "enter": "pop"
     }
@@ -18719,7 +19052,8 @@
   {
    "t0": 2542.34,
    "bg": {
-    "img": "#0b1a2a"
+    "video": "/home/claude/media-engine/longform/india/remake/clips3d/G_wars6265.mp4",
+    "img": "#02070d"
    },
    "layers": [
     {
@@ -18733,19 +19067,6 @@
      "x": 960,
      "y": 250,
      "in": 2540.04,
-     "enter": "pop"
-    },
-    {
-     "img": {
-      "text": "[3D G_wars6265]",
-      "size": 30,
-      "color": "#ffffff",
-      "box": null,
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 1700,
-     "y": 80,
-     "in": 2539.94,
      "enter": "pop"
     }
    ],
@@ -20445,6 +20766,15 @@
      "y": 250,
      "in": 2819.8999999999996,
      "enter": "pop"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_calico_textile.png",
+     "x": 1500,
+     "y": 700,
+     "h": 771,
+     "in": 2820.2,
+     "enter": "pop",
+     "shadow": false
     }
    ],
    "t1": 2823.8066666666664,
@@ -20484,6 +20814,15 @@
      "y": 250,
      "in": 2823.8066666666664,
      "enter": "none"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_calico_textile.png",
+     "x": 1500,
+     "y": 700,
+     "h": 771,
+     "in": 2823.8066666666664,
+     "enter": "none",
+     "shadow": false
     }
    ]
   },
@@ -20521,6 +20860,15 @@
      "y": 250,
      "in": 2827.813333333333,
      "enter": "none"
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_calico_textile.png",
+     "x": 1500,
+     "y": 700,
+     "h": 771,
+     "in": 2827.813333333333,
+     "enter": "none",
+     "shadow": false
     }
    ]
   },
