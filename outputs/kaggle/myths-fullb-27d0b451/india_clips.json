@@ -1,0 +1,45 @@
+{
+ "params": {
+  "src_file": "myths_full_27d0b451.tar.gz",
+  "src_sha256": "27d0b4517548b3c035acfbd9bf4139ac1cc6d001865f87aa2008936ea020f1c3",
+  "jpeg_q": 95,
+  "render_timeout_s": 9000
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "source": {
+   "sha256": "27d0b4517548b3c035acfbd9bf4139ac1cc6d001865f87aa2008936ea020f1c3",
+   "ok": true
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "exit": 0,
+   "secs": 516.7,
+   "tail": "READY m4a 769 ms\nGLRENDERER ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)\nCLIP_DONE m4a 178 37.3s\nREADY m4b 2143 ms\nCLIP_DONE m4b 178 40.6s\nREADY m4c 2789 ms\nCLIP_DONE m4c 178 33.9s\nREADY m3a 389 ms\nCLIP_DONE m3a 219 39.6s\nREADY m3b 371 ms\nCLIP_DONE m3b 219 50.1s\nREADY m3c 2857 ms\nCLIP_DONE m3c 219 43.5s\nREADY m2a 729 ms\nCLIP_DONE m2a 199 39.3s\nREADY m2b 3 ms\nCLIP_DONE m2b 199 38.7s\nREADY m2c 1451 ms\nCLIP_DONE m2c 199 38.5s\nREADY m1a 357 ms\nCLIP_DONE m1a 242 45.6s\nREADY m1b 1 ms\nCLIP_DONE m1b 242 44.5s\nREADY m1c 2 ms\nCLIP_DONE m1c 242 39.7s\nALL_DONE\n"
+  }
+ },
+ "renderer": "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+ "files": [
+  "m1a",
+  "m1b",
+  "m1c",
+  "m2a",
+  "m2b",
+  "m2c",
+  "m3a",
+  "m3b",
+  "m3c",
+  "m4a",
+  "m4b",
+  "m4c"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
