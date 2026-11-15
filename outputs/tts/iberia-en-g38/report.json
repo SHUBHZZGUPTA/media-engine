@@ -1,0 +1,13 @@
+{
+ "job": "iberia-en-g38",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 64.96,
+   "took": 7.5
+  }
+ ]
+}
