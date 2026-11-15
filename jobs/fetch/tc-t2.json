@@ -1,0 +1,122 @@
+{
+ "id": "tc-t2",
+ "delay": 1.0,
+ "files": [
+  {
+   "name": "t_lz2023_VA.jpg",
+   "url": "https://geoportale.regione.lazio.it/geoserver/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=geonode%3A2023_AGEA_25833_COG&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9,12.45,41.9045,12.456&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_lz2020_VA.jpg",
+   "url": "https://geoportale.regione.lazio.it/geoserver/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=geonode%3A2020_AGEA_25833_COG&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9,12.45,41.9045,12.456&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_lz2023_VA02.jpg",
+   "url": "https://geoportale.regione.lazio.it/geoserver/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=geonode%3A2023_AGEA_25833_COG&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9015,12.4525,41.9024,12.4537&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_pcn12_VA05.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_12.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2012&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=41.9015,12.4525,41.9024,12.4537&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_er20_SM02.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.935,12.446,43.9361,12.4475&WIDTH=512&HEIGHT=512"
+  },
+  {
+   "name": "t_ign_pal_ORTHOIMAGERY.ORTHOPHOTOS.BDORTHO.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS.BDORTHO&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.7295,7.417,43.733,7.4215&WIDTH=512&HEIGHT=400"
+  },
+  {
+   "name": "t_ign_pal_HR.ORTHOIMAGERY.ORTHOPHOTOS.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=HR.ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.7295,7.417,43.733,7.4215&WIDTH=512&HEIGHT=400"
+  },
+  {
+   "name": "t_ign_pal_ORTHOIMAGERY.ORTHOPHOTOS2021.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS2021&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.7295,7.417,43.733,7.4215&WIDTH=512&HEIGHT=400"
+  },
+  {
+   "name": "t_ign_pal_ORTHOIMAGERY.ORTHOPHOTOS2018.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS2018&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.7295,7.417,43.733,7.4215&WIDTH=512&HEIGHT=400"
+  },
+  {
+   "name": "t_ign_pal_ORTHOIMAGERY.ORTHOPHOTOS2015.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS2015&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.7295,7.417,43.733,7.4215&WIDTH=512&HEIGHT=400"
+  },
+  {
+   "name": "t_ign_pal_ORTHOIMAGERY.ORTHOPHOTOS2012.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS2012&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.7295,7.417,43.733,7.4215&WIDTH=512&HEIGHT=400"
+  },
+  {
+   "name": "t_ign_MCall.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.722,7.405,43.753,7.44&WIDTH=1400&HEIGHT=1560"
+  },
+  {
+   "name": "stac_Nanumea.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=176.05,-5.72,176.16,-5.62&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Niutao.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=177.32,-6.13,177.36,-6.09&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Nanumanga.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=176.3,-6.31,176.34,-6.27&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Nui.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=177.13,-7.27,177.18,-7.19&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Vaitupu.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=178.66,-7.5,178.7,-7.45&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Nukufetau.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=178.3,-8.08,178.42,-7.95&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Funafuti.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=179.05,-8.66,179.25,-8.43&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Nukulaelae.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=179.8,-9.42,179.86,-9.36&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Niulakita.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=179.46,-10.8,179.48,-10.78&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "stac_Nauru.json",
+   "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=sentinel-2-l2a&bbox=166.9,-0.55,166.95,-0.5&datetime=2019-01-01T00:00:00Z/2026-11-01T00:00:00Z&limit=200&filter=eo%3Acloud_cover%20%3C%2015&filter-lang=cql2-text"
+  },
+  {
+   "name": "osm_adm2_SM.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2843.86%2C12.33%2C44.08%2C12.62%29%3Bout%20geom%2843.86%2C12.33%2C44.08%2C12.62%29%3B"
+  },
+  {
+   "name": "osm_coast_SM.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2843.86%2C12.33%2C44.08%2C12.62%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_TV_rwy.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bway%5B%22aeroway%22%3D%22runway%22%5D%28-8.56%2C179.18%2C-8.50%2C179.22%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NR.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28way%5B%22highway%22~%22%5E%28primary%7Csecondary%7Ctrunk%7Ctertiary%29%24%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bnwr%5B%22aeroway%22~%22aerodrome%7Crunway%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bnwr%5B%22name%22~%22Buada%22%2Ci%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_MC_parts.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28nwr%5B%22name%22~%22Fontvieille%7CMareterra%7CPortier%7CLarvotto%22%2Ci%5D%2843.715%2C7.38%2C43.765%2C7.46%29%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22~%22%5E%288%7C9%7C10%29%24%22%5D%2843.715%2C7.38%2C43.765%2C7.46%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_VA_poi.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3Bnwr%5B%22name%22~%22Piazza%20San%20Pietro%7CBasilica%20di%20San%20Pietro%7CGiardini%20Vaticani%7CBasilica%20Papale%20di%20San%20Pietro%22%2Ci%5D%2841.895%2C12.44%2C41.91%2C12.465%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NY.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28nwr%5B%22leisure%22%3D%22park%22%5D%5B%22name%22%3D%22Central%20Park%22%5D%2840.76%2C-73.99%2C40.81%2C-73.94%29%3Bnwr%5B%22place%22%3D%22island%22%5D%5B%22name%22%3D%22Manhattan%22%5D%2840.68%2C-74.05%2C40.89%2C-73.90%29%3Bnode%5B%22name%22%3D%22Times%20Square%22%5D%2840.75%2C-74.0%2C40.77%2C-73.97%29%3B%29%3Bout%20geom%3B"
+  }
+ ]
+}
