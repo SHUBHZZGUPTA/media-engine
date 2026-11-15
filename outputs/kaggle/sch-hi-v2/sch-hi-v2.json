@@ -1,0 +1,86 @@
+{
+ "params": {
+  "name": "sch-hi-v2",
+  "src_dir": "sch",
+  "src_parts": [
+   "sch-hi2.tgz.part00",
+   "sch-hi2.tgz.part01"
+  ],
+  "src_sha256": "a7ee69e2d7ae3abec656ed0290ba76fb3791af23c7854edb003b0592fcfe280e",
+  "dur": 82.515,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   1,
+   2,
+   1335,
+   1815,
+   1935,
+   1980,
+   2085,
+   2205,
+   2340,
+   2472,
+   2474
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 3300
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4",
+  "apt": 0,
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "x265": true,
+  "source": {
+   "sha256": "a7ee69e2d7ae3abec656ed0290ba76fb3791af23c7854edb003b0592fcfe280e",
+   "ok": true,
+   "bytes": 47966173
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "codes": [
+    0,
+    0,
+    0
+   ],
+   "secs": 415.5,
+   "frames": 2475,
+   "workers": 3
+  },
+  "concat": {
+   "exit": 0,
+   "secs": 0.7,
+   "tail": ""
+  }
+ },
+ "renderer": [
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ ],
+ "final": {
+  "bytes": 249580127,
+  "sha256": "0eb878963d59f0d13cb9afad6a539951fecc85461319cb53a2f81891e9dcd704",
+  "probe": "1080,1920,2475\n82.500000"
+ },
+ "parts": [
+  "sch-hi-v2.mp4.part00",
+  "sch-hi-v2.mp4.part01",
+  "sch-hi-v2.mp4.part02",
+  "sch-hi-v2.mp4.part03",
+  "sch-hi-v2.mp4.part04",
+  "sch-hi-v2.mp4.part05",
+  "sch-hi-v2.mp4.part06"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
