@@ -1,0 +1,37 @@
+{
+ "id": "sch-hi-v2",
+ "script": "gpu/hf3d_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 150,
+ "params": {
+  "name": "sch-hi-v2",
+  "src_dir": "sch",
+  "src_parts": [
+   "sch-hi2.tgz.part00",
+   "sch-hi2.tgz.part01"
+  ],
+  "src_sha256": "a7ee69e2d7ae3abec656ed0290ba76fb3791af23c7854edb003b0592fcfe280e",
+  "dur": 82.515,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   1,
+   2,
+   1335,
+   1815,
+   1935,
+   1980,
+   2085,
+   2205,
+   2340,
+   2472,
+   2474
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 3300
+ }
+}
