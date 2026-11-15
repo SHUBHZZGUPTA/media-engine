@@ -60,9 +60,9 @@ def keys_of(asset):                                       # "x + NEW-ARC:y (desc
 def seq_keys(asset):                                      # "a → b" = two pictures one after the other
     first = _re.sub(r"\(.*?\)", "", asset.split("+")[0])
     return [_re.sub(r"NEW-[A-Z0-9]+:", "", x).strip().split()[0] for x in first.split("→") if x.strip()]
-def clean(s): return s.replace("*", "").replace("‡", "‡")
+def clean(s): return s.replace("*", "")
 def box_for(s): return "#c99400" if any(c.isdigit() for c in s) or "*" in s else "#222222"
-def wrap(s, n=26): return "\n".join(textwrap.wrap(clean(s), n))
+def wrap(s, n=24): return "\n".join(textwrap.wrap(clean(s), n))
 def blur_board(t0, layers, dur=6.0):
     bg = LAST[0] or "#1d2733"
     return shot(t0, bg, [l for l in layers if l], cam=[[t0, .5, .5, 1.0], [t0 + dur, .5, .5, 1.08]], blur=14, dim=.5)
@@ -139,7 +139,7 @@ for fl, rs in groups.items():
     for k, r in enumerate(rs):
         t0 = T(i, -.15) if k == 0 else T(i, k / n); t1 = T(i, (k + 1) / n) if k + 1 < n else T(i, 1)
         typ, text = r["type"], r["text"]; ks = keys_of(r["asset"])
-        L_ = [lab(wrap(text, 30), t0 + .1, size=70, box=box_for(text))] if text and text != "DRAMATISED" else []
+        L_ = [lab(wrap(text, 24), t0 + .1, size=70, box=box_for(text))] if text and text != "DRAMATISED" else []
         if typ == "CARD":
             nm = ks[0] if ks else "ending"
             shot(t0, LAST[0] or "#1d2733", [imgcard(card(nm), 960, 1000, 1550, t0 + .05)], cam=[[t0, .5, .5, 1.0], [t0 + 4, .5, .5, 1.06]], blur=14, dim=.5)
@@ -156,19 +156,28 @@ for fl, rs in groups.items():
             sk = seq_keys(r["asset"])
             if len(sk) > 1:
                 for j, key in enumerate(sk):
-                    tj = t0 + (t1 - t0) * j / len(sk); pic(tj, key, L_ if j == 0 else [], fallback=a(key))
+                    tj = t0 + (t1 - t0) * j / len(sk); pj = anyimg(key)
+                    try: _w, _h = _Im.open(pj).size if pj else (16, 9)
+                    except Exception: _w, _h = 16, 9
+                    if pj and _h > _w * .9: blur_board(tj, [fitcard(pj, 960, 900, 1300, 640, tj + .05)] + (L_ if j == 0 else []))
+                    else: pic(tj, key, L_ if j == 0 else [], fallback=a(key))
             else:
                 extra = [c for c in (fitcard(anyimg(x), 1480, 900, 620, 560, t0 + .4) for x in ks[1:]) if c]
                 p_ = anyimg(ks[0]) if ks else None
                 if p_ and p_ in (a(ks[0]),): plate(t0, p_, layers=L_ + extra)
-                else: pic(t0, ks[0], L_ + extra, fallback=a(ks[0]))
+                else:
+                    try: _w, _h = _Im.open(p_).size if p_ else (16, 9)
+                    except Exception: _w, _h = 16, 9
+                    if p_ and _h > _w * .9:                # tall picture: show it whole as a framed card, not a crop
+                        blur_board(t0, [fitcard(p_, 960, 900, 1300, 640, t0 + .05)] + ([txt(wrap(text, 28), 960, 205, t0 + .2, size=60, box=box_for(text))] if text else []))
+                    else: pic(t0, ks[0], L_ + extra, fallback=a(ks[0]))
         elif typ == "PORT":
             key = ks[0]; key, box = (key, None) if key not in ("tughlaq_token_coin", "shah_jahan_old", "chanakya_sculpture") else \
                 {"tughlaq_token_coin": ("tughlaq_token_coin", (0, 0, .52, 1)), "shah_jahan_old": ("shah_jahan_old", (.31, .24, .69, .6)),
                  "chanakya_sculpture": ("chanakya_sculpture", (0, 0, .56, 1))}[key]
             p_ = crop(key, box) if box else anyimg(key)
             lay = [fitcard(p_, 960, 900, 1100, 600, t0 + .05)] if p_ else []
-            lay.append(txt(wrap(text, 30), 960, 250 if p_ else 600, t0 + .3, size=56 if p_ else 80, box="#c99400"))
+            if text: lay.append(txt(wrap(text, 28), 960, 250 if p_ else 600, t0 + .3, size=56 if p_ else 80, box="#c99400"))
             blur_board(t0, lay)
         elif typ == "SKIT":                                # scene beat on a narrator line: set + figures, no bubbles
             p_ = a(ks[0]) if ks else None; xs = [620, 1300, 960]
@@ -179,6 +188,13 @@ for fl, rs in groups.items():
             p_ = a(ks[0]) if ks else None
             if p_: plate(t0, p_, layers=L_)
             else: blur_board(t0, L_)
+        elif typ == "BOARD" and " · " in r["asset"]:     # a strip of pictures, one after another
+            keys = [x.strip() for x in r["asset"].split(" · ") if anyimg(x.strip())]; lay = []
+            for j, key in enumerate(keys):
+                tj = t0 + (t1 - t0) * j / len(keys); c_ = fitcard(anyimg(key), 960, 900, 1300, 620, tj + .05)
+                if c_: c_["out"] = t0 + (t1 - t0) * (j + 1) / len(keys); lay.append(c_)
+            if text: lay.append(txt(wrap(text, 28), 960, 205, t0 + .2, size=60, box=box_for(text)))
+            blur_board(t0, lay, dur=t1 - t0)
         else:   # BOARD
             imgs = [anyimg(x) for x in ks if anyimg(x)]
             lay = []

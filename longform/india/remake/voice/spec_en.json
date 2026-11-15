@@ -318,7 +318,7 @@
    "layers": [
     {
      "img": {
-      "text": "BLACK PEPPER \u00b7 COTTON CLOTH",
+      "text": "BLACK PEPPER \u00b7 COTTON\nCLOTH",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -478,7 +478,9 @@
   {
    "t0": 45.85666666666667,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/ashoka_edict.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       45.85666666666667,
@@ -490,22 +492,31 @@
       51.85666666666667,
       0.5,
       0.5,
-      1.15
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_koh_i_noor.png",
+     "x": 960,
+     "y": 900,
+     "h": 640,
+     "in": 45.906666666666666,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "PEACOCK THRONE \u2192 TOWER OF\nLONDON",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 45.95666666666667,
+     "y": 205,
+     "in": 46.05666666666667,
      "enter": "pop"
     }
    ],
@@ -515,7 +526,7 @@
   {
    "t0": 50.86333333333333,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/ashoka_edict.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -563,7 +574,7 @@
   {
    "t0": 56.120000000000005,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/ashoka_edict.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -602,7 +613,7 @@
   {
    "t0": 59.17,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/ashoka_edict.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -627,7 +638,7 @@
       "size": 97,
       "color": "#ffffff",
       "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
      },
      "x": 960,
      "y": 600,
@@ -641,7 +652,7 @@
   {
    "t0": 62.6,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/ashoka_edict.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -708,7 +719,7 @@
    "layers": [
     {
      "img": {
-      "text": "WHY DID THE ROBBERS STAY?",
+      "text": "WHY DID THE ROBBERS\nSTAY?",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -747,7 +758,7 @@
    "layers": [
     {
      "img": {
-      "text": "WHY DID THE ROBBERS STAY?",
+      "text": "WHY DID THE ROBBERS\nSTAY?",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -1618,7 +1629,7 @@
    "layers": [
     {
      "img": {
-      "text": "STRAIGHT STREETS \u00b7 SAME-SIZE\nBRICKS",
+      "text": "STRAIGHT STREETS \u00b7 SAME-\nSIZE BRICKS",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -1655,7 +1666,7 @@
    "layers": [
     {
      "img": {
-      "text": "PRIVATE BATHROOMS \u00b7 COVERED\nDRAINS",
+      "text": "PRIVATE BATHROOMS \u00b7\nCOVERED DRAINS",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -1694,7 +1705,7 @@
    "layers": [
     {
      "img": {
-      "text": "PRIVATE BATHROOMS \u00b7 COVERED\nDRAINS",
+      "text": "PRIVATE BATHROOMS \u00b7\nCOVERED DRAINS",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -2442,7 +2453,7 @@
    "layers": [
     {
      "img": {
-      "text": "NO PALACES \u00b7 NO ROYAL TOMBS",
+      "text": "NO PALACES \u00b7 NO ROYAL\nTOMBS",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -2481,7 +2492,7 @@
    "layers": [
     {
      "img": {
-      "text": "NO PALACES \u00b7 NO ROYAL TOMBS",
+      "text": "NO PALACES \u00b7 NO ROYAL\nTOMBS",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -2497,7 +2508,9 @@
   {
    "t0": 249.35500000000002,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-pilot-archive/dancing_girl.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-pilot-archive/priest_king.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       249.35500000000002,
@@ -2506,39 +2519,26 @@
       1.0
      ],
      [
-      253.05750000000003,
-      0.5,
-      0.5,
-      1.06
-     ]
-    ]
-   },
-   "layers": [],
-   "t1": 253.05750000000003,
-   "cut": "curve"
-  },
-  {
-   "t0": 253.05750000000003,
-   "t1": 256.76000000000005,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-pilot-archive/dancing_girl.jpg",
-    "cam": [
-     [
-      253.05750000000003,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
       256.76000000000005,
-      0.42,
-      0.45,
-      1.4175000000000002
+      0.5,
+      0.5,
+      1.08
      ]
     ]
    },
-   "cut": "hard",
-   "layers": []
+   "layers": [
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_dancing_girl.png",
+     "x": 960,
+     "y": 900,
+     "h": 626,
+     "in": 249.40500000000003,
+     "enter": "pop",
+     "shadow": false
+    }
+   ],
+   "t1": 256.76000000000005,
+   "cut": "curve"
   },
   {
    "t0": 256.76000000000005,
@@ -2671,7 +2671,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE VEDAS \u00b7 RIGVEDA 3,000+\nYEARS",
+      "text": "THE VEDAS \u00b7 RIGVEDA\n3,000+ YEARS",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -2710,7 +2710,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE VEDAS \u00b7 RIGVEDA 3,000+\nYEARS",
+      "text": "THE VEDAS \u00b7 RIGVEDA\n3,000+ YEARS",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -2769,7 +2769,7 @@
    "layers": [
     {
      "img": {
-      "text": "MEMORISED, SOUND FOR SOUND",
+      "text": "MEMORISED, SOUND FOR\nSOUND",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -2808,7 +2808,7 @@
    "layers": [
     {
      "img": {
-      "text": "MEMORISED, SOUND FOR SOUND",
+      "text": "MEMORISED, SOUND FOR\nSOUND",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -3752,7 +3752,9 @@
   {
    "t0": 461.12,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/buddha_sarnath.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_bodhgaya.png",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       461.12,
@@ -3761,109 +3763,44 @@
       1.0
      ],
      [
-      464.50666666666666,
+      471.28000000000003,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_buddha_sarnath.png",
+     "x": 960,
+     "y": 900,
+     "h": 634,
+     "in": 461.17,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "THE BUDDHA \u00b7 THE MIDDLE WAY",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 461.22,
+     "y": 205,
+     "in": 461.32,
      "enter": "pop"
     }
    ],
-   "t1": 464.50666666666666,
-   "cut": "curve"
-  },
-  {
-   "t0": 464.50666666666666,
-   "t1": 467.8933333333334,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/buddha_sarnath.jpg",
-    "cam": [
-     [
-      464.50666666666666,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      467.8933333333334,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "THE BUDDHA \u00b7 THE MIDDLE WAY",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 464.50666666666666,
-     "enter": "none"
-    }
-   ]
-  },
-  {
-   "t0": 467.8933333333334,
    "t1": 471.28000000000003,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/buddha_sarnath.jpg",
-    "cam": [
-     [
-      467.8933333333334,
-      0.5652173913043478,
-      0.5,
-      1.15
-     ],
-     [
-      471.28000000000003,
-      0.58,
-      0.5,
-      1.2075
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "THE BUDDHA \u00b7 THE MIDDLE WAY",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 467.8933333333334,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 471.28000000000003,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/buddha_sarnath.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_bodhgaya.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3902,7 +3839,7 @@
   {
    "t0": 475.72,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/buddha_sarnath.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_bodhgaya.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -3950,7 +3887,7 @@
   {
    "t0": 489.32000000000005,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/buddha_sarnath.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_bodhgaya.png",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -4191,7 +4128,9 @@
   {
    "t0": 537.6500000000001,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive2/porus_coin.png",
+    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_jhelum.png",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       537.6500000000001,
@@ -4200,104 +4139,39 @@
       1.0
      ],
      [
-      541.35,
+      548.75,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_porus_coin.png",
+     "x": 960,
+     "y": 900,
+     "h": 638,
+     "in": 537.7,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "WAR ELEPHANTS",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 537.7500000000001,
+     "y": 205,
+     "in": 537.8500000000001,
      "enter": "pop"
     }
    ],
-   "t1": 541.35,
-   "cut": "curve"
-  },
-  {
-   "t0": 541.35,
-   "t1": 545.0500000000001,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive2/porus_coin.png",
-    "cam": [
-     [
-      541.35,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      545.0500000000001,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "WAR ELEPHANTS",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 541.35,
-     "enter": "none"
-    }
-   ]
-  },
-  {
-   "t0": 545.0500000000001,
    "t1": 548.75,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive2/porus_coin.png",
-    "cam": [
-     [
-      545.0500000000001,
-      0.5652173913043478,
-      0.5,
-      1.15
-     ],
-     [
-      548.75,
-      0.58,
-      0.5,
-      1.2075
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "WAR ELEPHANTS",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 545.0500000000001,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 548.75,
@@ -4385,7 +4259,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 440,
-     "y": 138,
+     "y": 200,
      "in": 549.05,
      "enter": "pop",
      "out": 550.92
@@ -4399,7 +4273,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1480,
-     "y": 120,
+     "y": 150,
      "in": 551.43,
      "enter": "pop",
      "out": 552.24
@@ -4413,7 +4287,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 120,
+     "y": 150,
      "in": 552.85,
      "enter": "pop",
      "out": 554.12
@@ -4426,7 +4300,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 548.75,
      "enter": "pop"
@@ -4525,7 +4399,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 120,
+     "y": 150,
      "in": 552.875,
      "enter": "none",
      "out": 554.12
@@ -4539,7 +4413,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 440,
-     "y": 138,
+     "y": 200,
      "in": 553.87,
      "enter": "pop",
      "out": 557.4
@@ -4552,7 +4426,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 552.875,
      "enter": "none"
@@ -4592,7 +4466,7 @@
    "layers": [
     {
      "img": {
-      "text": "NANDA EMPIRE \u00b7 THOUSANDS OF\nELEPHANTS",
+      "text": "NANDA EMPIRE \u00b7 THOUSANDS\nOF ELEPHANTS",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -4933,7 +4807,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 627.49,
      "enter": "pop",
      "out": 629.42
@@ -4947,7 +4821,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 629.91,
      "enter": "pop",
      "out": 631.72
@@ -4961,7 +4835,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 631.47,
      "enter": "pop",
      "out": 634.88
@@ -4974,7 +4848,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 627.19,
      "enter": "pop"
@@ -5055,7 +4929,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 632.0550000000001,
      "enter": "none",
      "out": 634.88
@@ -5069,7 +4943,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 635.21,
      "enter": "pop",
      "out": 636.58
@@ -5082,7 +4956,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 632.0550000000001,
      "enter": "none"
@@ -5252,7 +5126,7 @@
       "size": 97,
       "color": "#ffffff",
       "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
      },
      "x": 960,
      "y": 600,
@@ -5285,7 +5159,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE ARTHASHASTRA: TAXES \u00b7\nTRADE \u00b7 WAR \u00b7 SPIES",
+      "text": "THE ARTHASHASTRA: TAXES\n\u00b7 TRADE \u00b7 WAR \u00b7 SPIES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -5324,7 +5198,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE ARTHASHASTRA: TAXES \u00b7\nTRADE \u00b7 WAR \u00b7 SPIES",
+      "text": "THE ARTHASHASTRA: TAXES\n\u00b7 TRADE \u00b7 WAR \u00b7 SPIES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -5361,7 +5235,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE ARTHASHASTRA: TAXES \u00b7\nTRADE \u00b7 WAR \u00b7 SPIES",
+      "text": "THE ARTHASHASTRA: TAXES\n\u00b7 TRADE \u00b7 WAR \u00b7 SPIES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -5398,7 +5272,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE ARTHASHASTRA: TAXES \u00b7\nTRADE \u00b7 WAR \u00b7 SPIES",
+      "text": "THE ARTHASHASTRA: TAXES\n\u00b7 TRADE \u00b7 WAR \u00b7 SPIES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -5480,19 +5354,6 @@
      "in": 702.17,
      "enter": "pop",
      "shadow": false
-    },
-    {
-     "img": {
-      "text": "",
-      "size": 70,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 702.42,
-     "enter": "pop"
     }
    ],
    "t1": 717.28,
@@ -5894,7 +5755,7 @@
    "layers": [
     {
      "img": {
-      "text": "PILLARS ACROSS THE EMPIRE",
+      "text": "PILLARS ACROSS THE\nEMPIRE",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -6065,7 +5926,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 798.63,
      "enter": "pop",
      "out": 801.72
@@ -6078,7 +5939,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 798.33,
      "enter": "pop"
@@ -6159,7 +6020,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 172,
+     "y": 270,
      "in": 802.13,
      "enter": "pop",
      "out": 806.82
@@ -6172,7 +6033,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 802.1225000000001,
      "enter": "none"
@@ -6251,7 +6112,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 172,
+     "y": 270,
      "in": 805.915,
      "enter": "none",
      "out": 806.82
@@ -6265,7 +6126,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 807.09,
      "enter": "pop",
      "out": 808.52
@@ -6279,7 +6140,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 172,
+     "y": 270,
      "in": 808.93,
      "enter": "pop",
      "out": 813.14
@@ -6292,7 +6153,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 805.915,
      "enter": "none"
@@ -6371,7 +6232,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 172,
+     "y": 270,
      "in": 809.7075,
      "enter": "none",
      "out": 813.14
@@ -6384,7 +6245,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 809.7075,
      "enter": "none"
@@ -6394,7 +6255,9 @@
   {
    "t0": 813.5,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/lion_capital.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_calcutta_study.png",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       813.5,
@@ -6406,22 +6269,31 @@
       819.5,
       0.5,
       0.5,
-      1.15
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_lion_capital.png",
+     "x": 960,
+     "y": 900,
+     "h": 631,
+     "in": 813.55,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "SARNATH: FOUR LIONS",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 813.6,
+     "y": 205,
+     "in": 813.7,
      "enter": "pop"
     }
    ],
@@ -6431,7 +6303,9 @@
   {
    "t0": 817.99,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/lion_capital.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_calcutta_study.png",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       817.99,
@@ -6443,22 +6317,31 @@
       823.99,
       0.5,
       0.5,
-      1.15
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_lion_capital.png",
+     "x": 960,
+     "y": 900,
+     "h": 631,
+     "in": 818.04,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "ON EVERY NOTE AND PASSPORT",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 818.09,
+     "y": 205,
+     "in": 818.19,
      "enter": "pop"
     }
    ],
@@ -6468,7 +6351,9 @@
   {
    "t0": 822.9,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/lion_capital.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art3/in_calcutta_study.png",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       822.9,
@@ -6477,67 +6362,39 @@
       1.0
      ],
      [
-      827.5,
+      832.1,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_lion_capital.png",
+     "x": 960,
+     "y": 900,
+     "h": 631,
+     "in": 822.9499999999999,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "THE ASHOKA CHAKRA",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 823.0,
+     "y": 205,
+     "in": 823.1,
      "enter": "pop"
     }
    ],
-   "t1": 827.5,
-   "cut": "curve"
-  },
-  {
-   "t0": 827.5,
    "t1": 832.1,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/lion_capital.jpg",
-    "cam": [
-     [
-      827.5,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      832.1,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "THE ASHOKA CHAKRA",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 827.5,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 832.1,
@@ -6617,7 +6474,7 @@
    "layers": [
     {
      "img": {
-      "text": "MONSOON WINDS: EGYPT \u2192 INDIA",
+      "text": "MONSOON WINDS: EGYPT \u2192\nINDIA",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -6824,7 +6681,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE KUSHANS: CAME, STAYED",
+      "text": "THE KUSHANS: CAME,\nSTAYED",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -6863,7 +6720,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE KUSHANS: CAME, STAYED",
+      "text": "THE KUSHANS: CAME,\nSTAYED",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -6900,7 +6757,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE KUSHANS: CAME, STAYED",
+      "text": "THE KUSHANS: CAME,\nSTAYED",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -7093,7 +6950,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 943.21,
      "enter": "pop",
      "out": 946.12
@@ -7107,7 +6964,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 946.47,
      "enter": "pop",
      "out": 950.64
@@ -7120,7 +6977,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 942.9100000000001,
      "enter": "pop"
@@ -7201,7 +7058,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 947.5866666666667,
      "enter": "none",
      "out": 950.64
@@ -7215,7 +7072,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 951.05,
      "enter": "pop",
      "out": 952.86
@@ -7228,7 +7085,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 947.5866666666667,
      "enter": "none"
@@ -7307,7 +7164,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 952.2633333333334,
      "enter": "none",
      "out": 952.86
@@ -7321,7 +7178,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 172,
+     "y": 270,
      "in": 953.09,
      "enter": "pop",
      "out": 956.84
@@ -7334,7 +7191,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 952.2633333333334,
      "enter": "none"
@@ -7627,7 +7484,7 @@
    "layers": [
     {
      "img": {
-      "text": "~1,600 YEARS \u00b7 BARELY RUSTED",
+      "text": "~1,600 YEARS \u00b7 BARELY\nRUSTED",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -7666,7 +7523,7 @@
    "layers": [
     {
      "img": {
-      "text": "~1,600 YEARS \u00b7 BARELY RUSTED",
+      "text": "~1,600 YEARS \u00b7 BARELY\nRUSTED",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -7688,7 +7545,7 @@
    "layers": [
     {
      "img": {
-      "text": "CHOLA NAVY \u2192 SUMATRA \u00b7 MALAYA",
+      "text": "CHOLA NAVY \u2192 SUMATRA \u00b7\nMALAYA",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -8291,7 +8148,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 1113.23,
      "enter": "pop",
      "out": 1114.9
@@ -8305,7 +8162,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 172,
+     "y": 270,
      "in": 1115.47,
      "enter": "pop",
      "out": 1119.14
@@ -8318,7 +8175,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1112.93,
      "enter": "pop"
@@ -8399,7 +8256,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 172,
+     "y": 270,
      "in": 1117.675,
      "enter": "none",
      "out": 1119.14
@@ -8413,7 +8270,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 1119.63,
      "enter": "pop",
      "out": 1120.78
@@ -8427,7 +8284,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 1121.17,
      "enter": "pop",
      "out": 1122.36
@@ -8440,7 +8297,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1117.675,
      "enter": "none"
@@ -8553,7 +8410,9 @@
   {
    "t0": 1140.3999999999999,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_tarain_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       1140.3999999999999,
@@ -8562,104 +8421,39 @@
       1.0
      ],
      [
-      1144.4066666666665,
+      1152.4199999999998,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_qutb_minar.png",
+     "x": 960,
+     "y": 900,
+     "h": 626,
+     "in": 1140.4499999999998,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "QUTB MINAR \u00b7 STILL STANDING",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 1140.4999999999998,
+     "y": 205,
+     "in": 1140.6,
      "enter": "pop"
     }
    ],
-   "t1": 1144.4066666666665,
-   "cut": "curve"
-  },
-  {
-   "t0": 1144.4066666666665,
-   "t1": 1148.4133333333332,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
-    "cam": [
-     [
-      1144.4066666666665,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      1148.4133333333332,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "QUTB MINAR \u00b7 STILL STANDING",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1144.4066666666665,
-     "enter": "none"
-    }
-   ]
-  },
-  {
-   "t0": 1148.4133333333332,
    "t1": 1152.4199999999998,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
-    "cam": [
-     [
-      1148.4133333333332,
-      0.5652173913043478,
-      0.5,
-      1.15
-     ],
-     [
-      1152.4199999999998,
-      0.58,
-      0.5,
-      1.2075
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "QUTB MINAR \u00b7 STILL STANDING",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1148.4133333333332,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 1152.4199999999998,
@@ -8805,7 +8599,7 @@
    "layers": [
     {
      "img": {
-      "text": "CHINA \u00b7 PERSIA \u00b7 RUSSIA FELL",
+      "text": "CHINA \u00b7 PERSIA \u00b7 RUSSIA\nFELL",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -8843,7 +8637,7 @@
    "layers": [
     {
      "img": {
-      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH: FIXED\nPRICES",
+      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH:\nFIXED PRICES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -8882,7 +8676,7 @@
    "layers": [
     {
      "img": {
-      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH: FIXED\nPRICES",
+      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH:\nFIXED PRICES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -8919,7 +8713,7 @@
    "layers": [
     {
      "img": {
-      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH: FIXED\nPRICES",
+      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH:\nFIXED PRICES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -8956,7 +8750,7 @@
    "layers": [
     {
      "img": {
-      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH: FIXED\nPRICES",
+      "text": "GRAIN \u00b7 HORSES \u00b7 CLOTH:\nFIXED PRICES",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -9026,7 +8820,7 @@
    "layers": [
     {
      "img": {
-      "text": "DELHI \u2192 DAULATABAD \u00b7 ~1,000 KM",
+      "text": "DELHI \u2192 DAULATABAD \u00b7\n~1,000 KM",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -9105,7 +8899,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 440,
-     "y": 172,
+     "y": 270,
      "in": 1243.39,
      "enter": "pop",
      "out": 1247.14
@@ -9118,7 +8912,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1243.0900000000001,
      "enter": "pop"
@@ -9209,8 +9003,8 @@
       "box": "#ffffffee",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1480,
-     "y": 120,
+     "x": 1435,
+     "y": 150,
      "in": 1247.63,
      "enter": "pop",
      "out": 1249.38
@@ -9224,7 +9018,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 440,
-     "y": 120,
+     "y": 150,
      "in": 1250.01,
      "enter": "pop",
      "out": 1250.62
@@ -9238,7 +9032,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 138,
+     "y": 200,
      "in": 1251.03,
      "enter": "pop",
      "out": 1253.74
@@ -9251,7 +9045,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1247.3866666666668,
      "enter": "none"
@@ -9341,7 +9135,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 138,
+     "y": 200,
      "in": 1251.6833333333334,
      "enter": "none",
      "out": 1253.74
@@ -9355,7 +9149,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 440,
-     "y": 120,
+     "y": 150,
      "in": 1254.21,
      "enter": "pop",
      "out": 1255.78
@@ -9368,7 +9162,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1251.6833333333334,
      "enter": "none"
@@ -9737,7 +9531,9 @@
   {
    "t0": 1317.6399999999999,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_timur_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       1317.6399999999999,
@@ -9746,72 +9542,44 @@
       1.0
      ],
      [
-      1321.12,
+      1324.6,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_qutb_minar.png",
+     "x": 960,
+     "y": 900,
+     "h": 626,
+     "in": 1317.6899999999998,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "ARCHES \u00b7 DOMES \u00b7 MINARETS",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 1317.7399999999998,
+     "y": 205,
+     "in": 1317.84,
      "enter": "pop"
     }
    ],
-   "t1": 1321.12,
-   "cut": "curve"
-  },
-  {
-   "t0": 1321.12,
    "t1": 1324.6,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
-    "cam": [
-     [
-      1321.12,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      1324.6,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "ARCHES \u00b7 DOMES \u00b7 MINARETS",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1321.12,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 1324.6,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_timur_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -9859,7 +9627,7 @@
   {
    "t0": 1331.8799999999999,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_timur_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -9898,7 +9666,7 @@
   {
    "t0": 1340.08,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/qutb_minar.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_timur_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -10430,7 +10198,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 1423.39,
      "enter": "pop",
      "out": 1426.26
@@ -10444,7 +10212,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 1427.25,
      "enter": "pop",
      "out": 1428.48
@@ -10457,7 +10225,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1423.0900000000001,
      "enter": "pop"
@@ -10538,7 +10306,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 1427.6133333333335,
      "enter": "none",
      "out": 1428.48
@@ -10552,7 +10320,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 1429.13,
      "enter": "pop",
      "out": 1432.1
@@ -10566,7 +10334,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 1431.85,
      "enter": "pop",
      "out": 1436.46
@@ -10579,7 +10347,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1427.6133333333335,
      "enter": "none"
@@ -10658,7 +10426,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 1432.1366666666665,
      "enter": "none",
      "out": 1436.46
@@ -10671,7 +10439,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1432.1366666666665,
      "enter": "none"
@@ -10700,7 +10468,7 @@
    "layers": [
     {
      "img": {
-      "text": "IT REALLY IS IN HIS MEMOIR",
+      "text": "IT REALLY IS IN HIS\nMEMOIR",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -11292,8 +11060,8 @@
       "box": "#ffffffee",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 402,
-     "y": 120,
+     "x": 450,
+     "y": 150,
      "in": 1522.27,
      "enter": "pop",
      "out": 1523.94
@@ -11307,7 +11075,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1540,
-     "y": 120,
+     "y": 150,
      "in": 1524.53,
      "enter": "pop",
      "out": 1525.78
@@ -11321,7 +11089,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 120,
+     "y": 150,
      "in": 1525.97,
      "enter": "pop",
      "out": 1527.26
@@ -11334,7 +11102,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1521.97,
      "enter": "pop"
@@ -11441,7 +11209,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 120,
+     "y": 150,
      "in": 1526.725,
      "enter": "none",
      "out": 1527.26
@@ -11455,7 +11223,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1180,
-     "y": 172,
+     "y": 270,
      "in": 1527.65,
      "enter": "pop",
      "out": 1531.2
@@ -11468,7 +11236,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1526.725,
      "enter": "none"
@@ -11801,7 +11569,9 @@
   {
    "t0": 1584.13,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/peacock_throne.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       1584.13,
@@ -11810,67 +11580,39 @@
       1.0
      ],
      [
-      1588.255,
+      1592.3799999999999,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_koh_i_noor.png",
+     "x": 960,
+     "y": 900,
+     "h": 640,
+     "in": 1584.18,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "KOH-I-NOOR \u00b7 \"MOUNTAIN OF\nLIGHT\"",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 1584.23,
+     "y": 205,
+     "in": 1584.3300000000002,
      "enter": "pop"
     }
    ],
-   "t1": 1588.255,
-   "cut": "curve"
-  },
-  {
-   "t0": 1588.255,
    "t1": 1592.3799999999999,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive/koh_i_noor.jpg",
-    "cam": [
-     [
-      1588.255,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      1592.3799999999999,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "KOH-I-NOOR \u00b7 \"MOUNTAIN OF\nLIGHT\"",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1588.255,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 1592.3799999999999,
@@ -11881,7 +11623,7 @@
    "layers": [
     {
      "img": {
-      "text": "INDIAN COTTON DRESSED THE\nWORLD",
+      "text": "INDIAN COTTON DRESSED\nTHE WORLD",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -11967,7 +11709,7 @@
    "layers": [
     {
      "img": {
-      "text": "~20,000 WORKERS \u00b7 20+ YEARS",
+      "text": "~20,000 WORKERS \u00b7 20+\nYEARS",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -12006,7 +11748,7 @@
    "layers": [
     {
      "img": {
-      "text": "~20,000 WORKERS \u00b7 20+ YEARS",
+      "text": "~20,000 WORKERS \u00b7 20+\nYEARS",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -12043,7 +11785,7 @@
    "layers": [
     {
      "img": {
-      "text": "~20,000 WORKERS \u00b7 20+ YEARS",
+      "text": "~20,000 WORKERS \u00b7 20+\nYEARS",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -12332,7 +12074,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 1670.07,
      "enter": "pop",
      "out": 1671.28
@@ -12346,7 +12088,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 1671.69,
      "enter": "pop",
      "out": 1673.94
@@ -12359,7 +12101,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1669.77,
      "enter": "pop"
@@ -12440,7 +12182,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 1673.7,
      "enter": "none",
      "out": 1673.94
@@ -12454,7 +12196,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 1674.49,
      "enter": "pop",
      "out": 1677.4
@@ -12468,7 +12210,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 1677.15,
      "enter": "pop",
      "out": 1681.42
@@ -12481,7 +12223,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1673.7,
      "enter": "none"
@@ -12560,7 +12302,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 1677.6299999999999,
      "enter": "none",
      "out": 1681.42
@@ -12573,7 +12315,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 1677.6299999999999,
      "enter": "none"
@@ -12589,7 +12331,7 @@
    "layers": [
     {
      "img": {
-      "text": "LARGEST EVER \u00b7 JIZYA BACK",
+      "text": "LARGEST EVER \u00b7 JIZYA\nBACK",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -12832,7 +12574,7 @@
    "layers": [
     {
      "img": {
-      "text": "REMEMBER MAHMUD'S CAMELS?",
+      "text": "REMEMBER MAHMUD'S\nCAMELS?",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -13066,7 +12808,9 @@
   {
    "t0": 1764.08,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/eic_coat_of_arms.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       1764.08,
@@ -13075,146 +12819,44 @@
       1.0
      ],
      [
-      1767.955,
+      1779.58,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_chintz_textile.png",
+     "x": 960,
+     "y": 900,
+     "h": 614,
+     "in": 1764.1299999999999,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 1764.1799999999998,
+     "y": 205,
+     "in": 1764.28,
      "enter": "pop"
     }
    ],
-   "t1": 1767.955,
-   "cut": "curve"
-  },
-  {
-   "t0": 1767.955,
-   "t1": 1771.83,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
-    "cam": [
-     [
-      1767.955,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      1771.83,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1767.955,
-     "enter": "none"
-    }
-   ]
-  },
-  {
-   "t0": 1771.83,
-   "t1": 1775.705,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
-    "cam": [
-     [
-      1771.83,
-      0.5652173913043478,
-      0.5,
-      1.15
-     ],
-     [
-      1775.705,
-      0.58,
-      0.5,
-      1.2075
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1771.83,
-     "enter": "none"
-    }
-   ]
-  },
-  {
-   "t0": 1775.705,
    "t1": 1779.58,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
-    "cam": [
-     [
-      1775.705,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      1779.58,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "CALICO \u2190 CALICUT \u00b7 CHINTZ \u2190\nCHHEENT",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1775.705,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 1779.58,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/chintz_textile.jpg",
+    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/eic_coat_of_arms.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -13259,7 +12901,7 @@
    "layers": [
     {
      "img": {
-      "text": "SURAT \u00b7 MADRAS \u00b7 BOMBAY \u00b7\nCALCUTTA",
+      "text": "SURAT \u00b7 MADRAS \u00b7 BOMBAY\n\u00b7 CALCUTTA",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -14017,7 +13659,9 @@
   {
    "t0": 1885.54,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_company_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       1885.54,
@@ -14026,109 +13670,35 @@
       1.0
      ],
      [
-      1889.5466666666666,
+      1897.56,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
      "img": {
-      "text": "1770 \u00b7 UP TO 1/3 DIED \u00b7 TAXES\nRAISED",
-      "size": 87,
+      "text": "1770 \u00b7 UP TO 1/3 DIED \u00b7\nTAXES RAISED",
+      "size": 97,
       "color": "#ffffff",
       "box": "#c99400",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 1885.6399999999999,
+     "y": 600,
+     "in": 1885.74,
      "enter": "pop"
     }
    ],
-   "t1": 1889.5466666666666,
-   "cut": "curve"
-  },
-  {
-   "t0": 1889.5466666666666,
-   "t1": 1893.5533333333333,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
-    "cam": [
-     [
-      1889.5466666666666,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      1893.5533333333333,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "1770 \u00b7 UP TO 1/3 DIED \u00b7 TAXES\nRAISED",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1889.5466666666666,
-     "enter": "none"
-    }
-   ]
-  },
-  {
-   "t0": 1893.5533333333333,
    "t1": 1897.56,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
-    "cam": [
-     [
-      1893.5533333333333,
-      0.5652173913043478,
-      0.5,
-      1.15
-     ],
-     [
-      1897.56,
-      0.58,
-      0.5,
-      1.2075
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "1770 \u00b7 UP TO 1/3 DIED \u00b7 TAXES\nRAISED",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 1893.5533333333333,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 1897.56,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_company_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -14153,7 +13723,7 @@
       "size": 97,
       "color": "#ffffff",
       "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
+      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
      },
      "x": 960,
      "y": 600,
@@ -14167,7 +13737,7 @@
   {
    "t0": 1905.6999999999998,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_company_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -14269,7 +13839,7 @@
     },
     {
      "img": {
-      "text": "RANJIT SINGH \u00b7 THE KOH-I-NOOR",
+      "text": "RANJIT SINGH \u00b7 THE KOH-I-\nNOOR",
       "size": 70,
       "color": "#ffffff",
       "box": "#c99400",
@@ -14899,7 +14469,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2038.83,
      "enter": "pop",
      "out": 2042.36
@@ -14912,7 +14482,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2038.53,
      "enter": "pop"
@@ -14997,7 +14567,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 2043.09,
      "enter": "pop",
      "out": 2044.92
@@ -15011,7 +14581,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 2045.23,
      "enter": "pop",
      "out": 2046.94
@@ -15024,7 +14594,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2042.4824999999998,
      "enter": "none"
@@ -15107,7 +14677,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 2046.435,
      "enter": "none",
      "out": 2046.94
@@ -15121,7 +14691,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 2047.39,
      "enter": "pop",
      "out": 2049.56
@@ -15135,7 +14705,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2050.07,
      "enter": "pop",
      "out": 2051.34
@@ -15148,7 +14718,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2046.435,
      "enter": "none"
@@ -15231,7 +14801,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2050.3875,
      "enter": "none",
      "out": 2051.34
@@ -15245,7 +14815,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 2052.41,
      "enter": "pop",
      "out": 2054.24
@@ -15258,7 +14828,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2050.3875,
      "enter": "none"
@@ -15307,7 +14877,9 @@
   {
    "t0": 2057.8199999999997,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/sake_dean_mahomed.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../art2/in_victoria_palace.png",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       2057.8199999999997,
@@ -15316,104 +14888,39 @@
       1.0
      ],
      [
-      2061.993333333333,
+      2070.3399999999997,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_sake_dean_mahomed.png",
+     "x": 960,
+     "y": 900,
+     "h": 628,
+     "in": 2057.87,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
       "text": "CHAMPO \u2192 SHAMPOO",
-      "size": 87,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 2057.9199999999996,
+     "y": 205,
+     "in": 2058.0199999999995,
      "enter": "pop"
     }
    ],
-   "t1": 2061.993333333333,
-   "cut": "curve"
-  },
-  {
-   "t0": 2061.993333333333,
-   "t1": 2066.1666666666665,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/sake_dean_mahomed.jpg",
-    "cam": [
-     [
-      2061.993333333333,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      2066.1666666666665,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "CHAMPO \u2192 SHAMPOO",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 2061.993333333333,
-     "enter": "none"
-    }
-   ]
-  },
-  {
-   "t0": 2066.1666666666665,
    "t1": 2070.3399999999997,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-rm-archive/sake_dean_mahomed.jpg",
-    "cam": [
-     [
-      2066.1666666666665,
-      0.5652173913043478,
-      0.5,
-      1.15
-     ],
-     [
-      2070.3399999999997,
-      0.58,
-      0.5,
-      1.2075
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "CHAMPO \u2192 SHAMPOO",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#222222",
-      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 2066.1666666666665,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 2070.3399999999997,
@@ -15535,7 +15042,7 @@
    "layers": [
     {
      "img": {
-      "text": "NOW BOUGHT ITS CLOTH FROM\nMANCHESTER",
+      "text": "NOW BOUGHT ITS CLOTH\nFROM MANCHESTER",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -15554,7 +15061,9 @@
   {
    "t0": 2095.02,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_manchester_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       2095.02,
@@ -15563,10 +15072,10 @@
       1.0
      ],
      [
-      2099.73,
+      2104.44,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
@@ -15574,61 +15083,24 @@
     {
      "img": {
       "text": "1876 \u00b7 GRAIN STILL EXPORTED",
-      "size": 87,
+      "size": 97,
       "color": "#ffffff",
       "box": "#c99400",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 2095.12,
+     "y": 600,
+     "in": 2095.22,
      "enter": "pop"
     }
    ],
-   "t1": 2099.73,
-   "cut": "curve"
-  },
-  {
-   "t0": 2099.73,
    "t1": 2104.44,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
-    "cam": [
-     [
-      2099.73,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      2104.44,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "1876 \u00b7 GRAIN STILL EXPORTED",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 2099.73,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 2104.44,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_manchester_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -15676,7 +15148,7 @@
   {
    "t0": 2114.12,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/famine_1876.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/clips3d/G_manchester_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -16281,7 +15753,7 @@
    "layers": [
     {
      "img": {
-      "text": "379 OFFICIAL \u00b7 1,000+ INDIAN\nESTIMATES",
+      "text": "379 OFFICIAL \u00b7 1,000+\nINDIAN ESTIMATES",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -16320,7 +15792,7 @@
    "layers": [
     {
      "img": {
-      "text": "379 OFFICIAL \u00b7 1,000+ INDIAN\nESTIMATES",
+      "text": "379 OFFICIAL \u00b7 1,000+\nINDIAN ESTIMATES",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -16357,7 +15829,7 @@
    "layers": [
     {
      "img": {
-      "text": "379 OFFICIAL \u00b7 1,000+ INDIAN\nESTIMATES",
+      "text": "379 OFFICIAL \u00b7 1,000+\nINDIAN ESTIMATES",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -16658,7 +16130,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2256.55,
      "enter": "pop",
      "out": 2259.38
@@ -16672,7 +16144,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 2259.79,
      "enter": "pop",
      "out": 2260.8
@@ -16685,7 +16157,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2256.25,
      "enter": "pop"
@@ -16770,7 +16242,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 2260.44,
      "enter": "none",
      "out": 2260.8
@@ -16784,7 +16256,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 2261.15,
      "enter": "pop",
      "out": 2262.74
@@ -16798,7 +16270,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 2263.35,
      "enter": "pop",
      "out": 2266.8
@@ -16811,7 +16283,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2260.44,
      "enter": "none"
@@ -16894,7 +16366,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 2264.6299999999997,
      "enter": "none",
      "out": 2266.8
@@ -16908,7 +16380,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2266.97,
      "enter": "pop",
      "out": 2268.46
@@ -16921,7 +16393,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2264.6299999999997,
      "enter": "none"
@@ -17506,7 +16978,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2351.51,
      "enter": "pop",
      "out": 2353.54
@@ -17520,7 +16992,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 2353.29,
      "enter": "pop",
      "out": 2356.18
@@ -17533,7 +17005,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2351.21,
      "enter": "pop"
@@ -17618,7 +17090,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 2355.6866666666665,
      "enter": "none",
      "out": 2356.18
@@ -17632,7 +17104,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 2356.83,
      "enter": "pop",
      "out": 2358.48
@@ -17646,7 +17118,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 2358.77,
      "enter": "pop",
      "out": 2361.16
@@ -17659,7 +17131,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2355.6866666666665,
      "enter": "none"
@@ -17742,7 +17214,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 138,
+     "y": 200,
      "in": 2360.1633333333334,
      "enter": "none",
      "out": 2361.16
@@ -17756,7 +17228,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2361.67,
      "enter": "pop",
      "out": 2364.46
@@ -17769,7 +17241,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2360.1633333333334,
      "enter": "none"
@@ -17933,7 +17405,7 @@
    "layers": [
     {
      "img": {
-      "text": "THE LINE \u00b7 ANNOUNCED 2 DAYS\nLATER",
+      "text": "THE LINE \u00b7 ANNOUNCED 2\nDAYS LATER",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -18044,7 +17516,7 @@
    "layers": [
     {
      "img": {
-      "text": "200,000 - 2 MILLION KILLED",
+      "text": "200,000 - 2 MILLION\nKILLED",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -18083,7 +17555,7 @@
    "layers": [
     {
      "img": {
-      "text": "200,000 - 2 MILLION KILLED",
+      "text": "200,000 - 2 MILLION\nKILLED",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -18300,7 +17772,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 138,
+     "y": 200,
      "in": 2442.57,
      "enter": "pop",
      "out": 2445.84
@@ -18314,7 +17786,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 206,
+     "y": 340,
      "in": 2446.29,
      "enter": "pop",
      "out": 2451.3
@@ -18327,7 +17799,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2442.27,
      "enter": "pop"
@@ -18408,7 +17880,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 206,
+     "y": 340,
      "in": 2446.4733333333334,
      "enter": "none",
      "out": 2451.3
@@ -18421,7 +17893,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2446.4733333333334,
      "enter": "none"
@@ -18500,7 +17972,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 206,
+     "y": 340,
      "in": 2450.6766666666667,
      "enter": "none",
      "out": 2451.3
@@ -18514,7 +17986,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 520,
-     "y": 120,
+     "y": 150,
      "in": 2451.71,
      "enter": "pop",
      "out": 2452.58
@@ -18528,7 +18000,7 @@
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 1400,
-     "y": 120,
+     "y": 150,
      "in": 2453.15,
      "enter": "pop",
      "out": 2454.26
@@ -18541,7 +18013,7 @@
       "box": "#000000aa",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
-     "x": 1771,
+     "x": 1760,
      "y": 60,
      "in": 2450.6766666666667,
      "enter": "none"
@@ -18605,7 +18077,7 @@
     },
     {
      "img": {
-      "text": "DR AMBEDKAR \u00b7 THE CONSTITUTION",
+      "text": "DR AMBEDKAR \u00b7 THE\nCONSTITUTION",
       "size": 70,
       "color": "#ffffff",
       "box": "#c99400",
@@ -18623,7 +18095,9 @@
   {
    "t0": 2474.37,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/constitution.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_union_last.jpg",
+    "blur": 14,
+    "dim": 0.5,
     "cam": [
      [
       2474.37,
@@ -18632,72 +18106,44 @@
       1.0
      ],
      [
-      2478.055,
+      2481.74,
       0.5,
       0.5,
-      1.06
+      1.08
      ]
     ]
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_constitution.png",
+     "x": 960,
+     "y": 900,
+     "h": 630,
+     "in": 2474.42,
+     "enter": "pop",
+     "shadow": false
+    },
+    {
      "img": {
-      "text": "26 JANUARY 1950 \u00b7 REPUBLIC DAY",
-      "size": 87,
+      "text": "26 JANUARY 1950 \u00b7 REPUBLIC\nDAY",
+      "size": 75,
       "color": "#ffffff",
       "box": "#c99400",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 250,
-     "in": 2474.47,
+     "y": 205,
+     "in": 2474.5699999999997,
      "enter": "pop"
     }
    ],
-   "t1": 2478.055,
-   "cut": "curve"
-  },
-  {
-   "t0": 2478.055,
    "t1": 2481.74,
-   "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/constitution.jpg",
-    "cam": [
-     [
-      2478.055,
-      0.38,
-      0.45,
-      1.35
-     ],
-     [
-      2481.74,
-      0.42,
-      0.45,
-      1.4175000000000002
-     ]
-    ]
-   },
-   "cut": "hard",
-   "layers": [
-    {
-     "img": {
-      "text": "26 JANUARY 1950 \u00b7 REPUBLIC DAY",
-      "size": 87,
-      "color": "#ffffff",
-      "box": "#c99400",
-      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
-     },
-     "x": 960,
-     "y": 250,
-     "in": 2478.055,
-     "enter": "none"
-    }
-   ]
+   "cut": "curve"
   },
   {
    "t0": 2481.74,
    "bg": {
-    "img": "/home/claude/media-engine/outputs/fetch/in-full-archive3/constitution.jpg",
+    "img": "/home/claude/media-engine/longform/india/remake/../full/clips3d/G_union_last.jpg",
     "blur": 14,
     "dim": 0.5,
     "cam": [
@@ -18788,7 +18234,7 @@
    "layers": [
     {
      "img": {
-      "text": "EVERY ADULT \u00b7 ~170 MILLION",
+      "text": "EVERY ADULT \u00b7 ~170\nMILLION",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -18827,7 +18273,7 @@
    "layers": [
     {
      "img": {
-      "text": "EVERY ADULT \u00b7 ~170 MILLION",
+      "text": "EVERY ADULT \u00b7 ~170\nMILLION",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -18864,7 +18310,7 @@
    "layers": [
     {
      "img": {
-      "text": "EVERY ADULT \u00b7 ~170 MILLION",
+      "text": "EVERY ADULT \u00b7 ~170\nMILLION",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -18901,7 +18347,7 @@
    "layers": [
     {
      "img": {
-      "text": "EVERY ADULT \u00b7 ~170 MILLION",
+      "text": "EVERY ADULT \u00b7 ~170\nMILLION",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -19192,7 +18638,7 @@
     },
     {
      "img": {
-      "text": "INDIRA GANDHI \u00b7 THE EMERGENCY",
+      "text": "INDIRA GANDHI \u00b7 THE\nEMERGENCY",
       "size": 70,
       "color": "#ffffff",
       "box": "#c99400",
@@ -19364,7 +18810,7 @@
    "layers": [
     {
      "img": {
-      "text": "47 TONNES OF GOLD \u2192 BANK OF\nENGLAND",
+      "text": "47 TONNES OF GOLD \u2192 BANK\nOF ENGLAND",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -19403,7 +18849,7 @@
    "layers": [
     {
      "img": {
-      "text": "47 TONNES OF GOLD \u2192 BANK OF\nENGLAND",
+      "text": "47 TONNES OF GOLD \u2192 BANK\nOF ENGLAND",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -19934,7 +19380,7 @@
    "layers": [
     {
      "img": {
-      "text": "MARS \u00b7 FIRST TRY \u00b7 ~$74M <\nGRAVITY",
+      "text": "MARS \u00b7 FIRST TRY \u00b7 ~$74M\n< GRAVITY",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -19973,7 +19419,7 @@
    "layers": [
     {
      "img": {
-      "text": "MARS \u00b7 FIRST TRY \u00b7 ~$74M <\nGRAVITY",
+      "text": "MARS \u00b7 FIRST TRY \u00b7 ~$74M\n< GRAVITY",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -20010,7 +19456,7 @@
    "layers": [
     {
      "img": {
-      "text": "MARS \u00b7 FIRST TRY \u00b7 ~$74M <\nGRAVITY",
+      "text": "MARS \u00b7 FIRST TRY \u00b7 ~$74M\n< GRAVITY",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -20316,15 +19762,85 @@
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_alexander_bust.png",
+     "x": 960,
+     "y": 900,
+     "h": 608,
+     "in": 2731.4100000000003,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2733.2214285714285
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_kanishka_coin.png",
+     "x": 960,
+     "y": 900,
+     "h": 642,
+     "in": 2733.2714285714287,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2735.0828571428574
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_mahmud_ghazni.png",
+     "x": 960,
+     "y": 900,
+     "h": 639,
+     "in": 2735.1328571428576,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2736.944285714286
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_timur.png",
+     "x": 960,
+     "y": 900,
+     "h": 632,
+     "in": 2736.994285714286,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2738.805714285714
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_babur_portrait.png",
+     "x": 960,
+     "y": 900,
+     "h": 608,
+     "in": 2738.8557142857144,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2740.6671428571426
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_nadir_shah.png",
+     "x": 960,
+     "y": 900,
+     "h": 604,
+     "in": 2740.717142857143,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2742.5285714285715
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_eic_coat_of_arms.png",
+     "x": 960,
+     "y": 900,
+     "h": 627,
+     "in": 2742.5785714285716,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2744.39
+    },
+    {
      "img": {
       "text": "EVERYONE WHO CAME TO TAKE",
-      "size": 97,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 600,
+     "y": 205,
      "in": 2731.56,
      "enter": "pop"
     }
@@ -20355,15 +19871,55 @@
    },
    "layers": [
     {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_in_camel_caravan.png",
+     "x": 960,
+     "y": 900,
+     "h": 631,
+     "in": 2744.9100000000003,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2748.0625
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_peacock_throne.png",
+     "x": 960,
+     "y": 900,
+     "h": 637,
+     "in": 2748.1125,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2751.2650000000003
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_koh_i_noor.png",
+     "x": 960,
+     "y": 900,
+     "h": 620,
+     "in": 2751.3150000000005,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2754.4675
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_dadabhai_naoroji.png",
+     "x": 960,
+     "y": 900,
+     "h": 605,
+     "in": 2754.5175000000004,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2757.67
+    },
+    {
      "img": {
       "text": "EVERYTHING THEY CARRIED OFF",
-      "size": 97,
+      "size": 75,
       "color": "#ffffff",
       "box": "#222222",
       "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
-     "y": 600,
+     "y": 205,
      "in": 2745.06,
      "enter": "pop"
     }
@@ -20522,7 +20078,28 @@
      "h": 642,
      "in": 2773.53,
      "enter": "pop",
-     "shadow": false
+     "shadow": false,
+     "out": 2780.8966666666665
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_qutb_minar.png",
+     "x": 960,
+     "y": 900,
+     "h": 607,
+     "in": 2780.9466666666667,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2788.3133333333335
+    },
+    {
+     "img": "/home/claude/media-engine/longform/india/remake/cards/_framed_taj_mahal.png",
+     "x": 960,
+     "y": 900,
+     "h": 631,
+     "in": 2788.3633333333337,
+     "enter": "pop",
+     "shadow": false,
+     "out": 2795.73
     },
     {
      "img": {
@@ -20563,7 +20140,7 @@
    "layers": [
     {
      "img": {
-      "text": "ONLY ONE NEVER MOVED IN \u00b7 ~4%\n\u2021",
+      "text": "ONLY ONE NEVER MOVED IN\n\u00b7 ~4% \u2021",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -20602,7 +20179,7 @@
    "layers": [
     {
      "img": {
-      "text": "ONLY ONE NEVER MOVED IN \u00b7 ~4%\n\u2021",
+      "text": "ONLY ONE NEVER MOVED IN\n\u00b7 ~4% \u2021",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -20639,7 +20216,7 @@
    "layers": [
     {
      "img": {
-      "text": "ONLY ONE NEVER MOVED IN \u00b7 ~4%\n\u2021",
+      "text": "ONLY ONE NEVER MOVED IN\n\u00b7 ~4% \u2021",
       "size": 87,
       "color": "#ffffff",
       "box": "#c99400",
@@ -20743,7 +20320,7 @@
    "layers": [
     {
      "img": {
-      "text": "SOFTWARE \u00b7 MEDICINES \u00b7 CLOTH",
+      "text": "SOFTWARE \u00b7 MEDICINES \u00b7\nCLOTH",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -20791,7 +20368,7 @@
    "layers": [
     {
      "img": {
-      "text": "SOFTWARE \u00b7 MEDICINES \u00b7 CLOTH",
+      "text": "SOFTWARE \u00b7 MEDICINES \u00b7\nCLOTH",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -20837,7 +20414,7 @@
    "layers": [
     {
      "img": {
-      "text": "SOFTWARE \u00b7 MEDICINES \u00b7 CLOTH",
+      "text": "SOFTWARE \u00b7 MEDICINES \u00b7\nCLOTH",
       "size": 87,
       "color": "#ffffff",
       "box": "#222222",
@@ -20931,11 +20508,11 @@
    "layers": [
     {
      "img": {
-      "text": "THE ENTIRE HISTORY OF RUSSIA\n\u2192",
+      "text": "MORE COUNTRY HISTORIES ON\nBHUGOL",
       "size": 97,
       "color": "#ffffff",
       "box": "#222222",
-      "font": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+      "font": "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
      },
      "x": 960,
      "y": 600,

@@ -242,7 +242,7 @@
 252 | PIC  | clive_mir_jafar | THE SECRET DEAL |
 253 | BOARD | | WON BY A *DEAL* |
 254 | MAP  | G_company | A COMPANY RULES MILLIONS |
-255 | PIC  | famine_1876 (Bengal 1770 caption) | 1770 · UP TO 1/3 DIED · TAXES *RAISED* | darkest point of the first half: music out, 1 s silence after
+255 | BOARD | | 1770 · UP TO 1/3 DIED · TAXES *RAISED* | no picture: the famine engraving is graphic (risk review)
 256 | BOARD | | LOOT ← HINDI *LUT* | payoff of hook "loot"
 257 | PORT | NEW-ARC:tipu_sultan | TIPU SULTAN · ROCKETS |
 257 | MAP  | G_mysore | MYSORE |
@@ -267,7 +267,7 @@
 279 | PIC  | NEW-ARC:sake_dean_mahomed | CHAMPO → SHAMPOO | joke
 280 | SET  | in_railway_1853 | RAILWAYS | callback to the Harappa bricks (quick flash of in_railway)
 281 | MAP  | NEW-3D:G_manchester (raw cotton out, factory cloth in) | NOW BOUGHT ITS CLOTH FROM *MANCHESTER* |
-282 | PIC  | famine_1876 | 1876 · GRAIN STILL EXPORTED |
+282 | BOARD | | 1876 · GRAIN STILL EXPORTED | no picture: the famine engraving is graphic (risk review)
 283 | PORT | NEW-ARC:dadabhai_naoroji | DADABHAI NAOROJI |
 283 | BOARD | pliny portrait + naoroji portrait | THE DRAIN OF WEALTH | payoff of Pliny plant, split screen
 284 | SET  | in_parliament (Indian students reading) | | bridge
@@ -341,13 +341,13 @@
 
 # ---------------- ENDING ----------------
 359 | CARD | ending | THE ANSWER |
-361 | BOARD | portrait strip: alexander, kanishka, mahmud, ghori, timur, babur, nadir, Company arms | EVERYONE WHO CAME TO TAKE | portraits slide in one by one
-362 | BOARD | camels · peacock throne · koh-i-noor · drain | EVERYTHING THEY CARRIED OFF |
+361 | BOARD | alexander_bust · kanishka_coin · mahmud_ghazni · timur · babur_portrait · nadir_shah · eic_coat_of_arms | EVERYONE WHO CAME TO TAKE | portraits slide in one by one
+362 | BOARD | in_camel_caravan · peacock_throne · koh_i_noor · dadabhai_naoroji | EVERYTHING THEY CARRIED OFF |
 363 | SET  | in_calicut_1498 (reprise) | WHY DID THEY *STAY*? | the hook question returns; 1 s silence
 364 | BOARD | golden_bird | WEALTH COULD BE CARRIED AWAY. INDIA ITSELF NEVER COULD. | THE line: music hit, hold 3 s
-365 | BOARD | kanishka_coin · qutb · taj_mahal | THEY ATE ITS FOOD · SPOKE ITS LANGUAGES · BUILT ITS MONUMENTS |
+365 | BOARD | kanishka_coin · qutb_minar · taj_mahal | THEY ATE ITS FOOD · SPOKE ITS LANGUAGES · BUILT ITS MONUMENTS |
 366 | PIC  | in_london_board | ONLY ONE NEVER MOVED IN · ~4% ‡ |
 367 | SET  | in_calicut_1498 | | the Calicut sailor, full circle
 368 | PIC  | bengaluru_skyline + calico_textile | SOFTWARE · MEDICINES · CLOTH |
 369 | BOARD | golden_bird | IT NEVER LOST ITSELF | title payoff; last 2 s silent then end card
-370 | BOARD | end screen | THE ENTIRE HISTORY OF RUSSIA → | 20 s end screen
+370 | BOARD | end screen | MORE COUNTRY HISTORIES ON BHUGOL | 20 s end screen

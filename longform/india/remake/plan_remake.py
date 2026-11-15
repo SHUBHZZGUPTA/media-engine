@@ -72,8 +72,8 @@ def card(n):
 # ---- layers ----
 def txt(s, x, y, t, size=72, box=None, color="#ffffff", out=None, enter="pop", scale=1.25):
     size = int(size * scale)
-    font = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if any(c in s for c in "→✓↓↑✗⅓π≈") else FONT
-    wmax = max(len(r) for r in s.split("\n")) * size * .56 + (60 if box else 0)
+    font = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if any(c in s for c in "→←⇄✓↓↑✗⅓π≈") else FONT
+    wmax = max(len(r) for r in s.split("\n")) * size * .64 + (60 if box else 0)
     x = int(min(max(x, 40 + wmax / 2), 1880 - wmax / 2)) if wmax < 1800 else 960
     d = {"img": {"text": s, "size": size, "color": color, "box": box, "font": font}, "x": x, "y": y, "in": t, "enter": enter}
     if out is not None: d["out"] = out
@@ -82,7 +82,7 @@ def lab(s, t, x=960, y=250, size=90, box=None, **k): return txt(s, x, y, t, size
 def tag(s, t, x=1250, y=420, size=70): return txt(s, x, y, t, size=size, box="#222222")
 def say(i, x, y=380, width=24, size=54):
     if len(EN[i]) > 110: width = 34
-    s = "\n".join(textwrap.wrap(EN[i], width)); y = max(y, 70 + s.count("\n") * 34 + 34)
+    s = "\n".join(textwrap.wrap(EN[i], width)); y = max(y, 40 + (s.count("\n") + 1) * int(size * 1.3) + 20)
     return txt(s, x, y, T(i), size=size, box="#ffffffee", color="#222222", out=T(i, 1) + .25, scale=1.0)
 def ch(name, x, y=1045, h=560, t=None, enter="pop", talks=(), flip=False, out=None):
     p = a(name)
@@ -206,7 +206,7 @@ def skit(i0, i1, bg, pos, cast=None):
             lay.append(ch(cast[who], x, enter=("slideL" if x < 960 else "slideR") if k else "none", t=None if k == 0 else T(first, -.5), flip=flip, talks=mine,
                           h=640 if who == "TRAVELLER" else 560, y=1030 if who == "TRAVELLER" else 1045))
     for i in lines:
-        x = pos.get(SPK[i], (960, False))[0]; lay.append(say(i, x, y=120 if real else 380))
+        x = pos.get(SPK[i], (960, False))[0]; lay.append(say(i, x, y=150 if real else 380))
     if real: lay.append(txt("dramatised", 1780, 60, t0, size=28, box="#000000aa", scale=1.0))
     for L_ in lay:
         if L_ and L_.get("in") is None: L_.pop("in", None)
