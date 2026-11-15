@@ -1,0 +1,32 @@
+{
+ "job": "japan-en-preview2",
+ "kernel": "shubhzzgupta07/me-japan-en-preview2",
+ "url": "https://www.kaggle.com/code/shubhzzgupta07/me-japan-en-preview2",
+ "gpu_quota_before": {
+  "used_h": 1.79,
+  "remaining_h": 28.21,
+  "total_h": 30.0
+ },
+ "pushed_at": "2026-11-15T07:00:46+00:00",
+ "accelerator": "NvidiaTeslaT4",
+ "version": 1,
+ "status": "COMPLETE",
+ "checked_at": "2026-11-15T07:06:17+00:00",
+ "files": [
+  "BHUGOL_Japan_EN_preview30_v2.json",
+  "BHUGOL_Japan_EN_preview30_v2.mp4.part00",
+  "me-japan-en-preview2.log",
+  "render_0.log",
+  "render_1.log",
+  "renderer_0.txt",
+  "renderer_1.txt",
+  "stills/f000000.jpg",
+  "stills/f000300.jpg",
+  "stills/f000600.jpg"
+ ],
+ "gpu_quota_after": {
+  "used_h": 1.87,
+  "remaining_h": 28.13,
+  "total_h": 30.0
+ }
+}
