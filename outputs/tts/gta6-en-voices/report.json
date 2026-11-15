@@ -1,0 +1,37 @@
+{
+ "job": "gta6-en-voices",
+ "items": [
+  {
+   "name": "hook_puck",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 40.84,
+   "took": 14.3
+  },
+  {
+   "name": "hook_fenrir",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 39.08,
+   "took": 15.2
+  },
+  {
+   "name": "hook_sadachbia",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 35.92,
+   "took": 10.9
+  },
+  {
+   "name": "hook_sadaltager",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 38.56,
+   "took": 11.5
+  }
+ ]
+}
