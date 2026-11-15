@@ -1,0 +1,23 @@
+{
+ "id": "gta6-en-sample3",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "try": 2,
+ "key": "longform",
+ "items": [
+  {
+   "name": "s1",
+   "direction": "Narrate this as an upbeat YouTube geography video comparing the GTA 6 game map with real Miami. The Narrator is genuinely excited and having a great time: a fun, energetic friend who just discovered how much Rockstar copied from Miami and can't wait to show you. Big smile in the voice from start to finish, warm and natural, like real conversation, not a script being read. Lively, expressive pitch that rises with curiosity and falls naturally; real enthusiasm on every reveal and number, little bursts of delighted disbelief on the funny facts (the lobster that turned into a whale, the 105 metres, the hotel copied twice). The opening bet ('I bet you a hundred dollars') is a playful, confident challenge with a grin. Before each reveal of a game name (Ocean Beach, the Cortez, Hotel Dixon, the Colon Hotel) take a tiny excited half-second pause, then land the name like a punchline. Pace quick and bouncy, about 168 words per minute, with short natural breaths; never flat, never monotone, never sleepy, never documentary-serious, and never shouty or fake hype. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: always the same warm baritone host, same person and same energy level throughout. Say 'GTA six' as the letters G, T, A then 'six'. Pronounce 'Cortez' as 'cor-TEZ', 'Colon' exactly like the punctuation mark 'colon' (KOH-lun), never 'Colonna', 'Leonida' as 'lee-oh-NEE-dah'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own.",
+   "speakers": {
+    "Narrator": "Sadaltager"
+   },
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars you've already seen the GTA six map. Because Rockstar didn't invent Vice City. They copied it. From Miami. A hotel strip, copied right down to the palm trees. An apartment building that doesn't exist anymore... except in the game. A swamp, a sugar town, a giant lobster that turned into a whale. And mountains, in a state whose highest point is 105 metres. GTA six launches November 19th. So let's put the trailers next to the real map. And at the end, I'll show you the moment Miami started copying the game back. Grab a controller. And a map of Florida. Ten stops. Stop one. Ocean Drive, Miami Beach. Pastel Art Deco hotels, neon signs, palm trees, and the beach right across the road. In the trailers, it's called Ocean Beach. Same strip. Same pastel colours. The Colony Hotel becomes the Cortez. Hotel Victor becomes Hotel Dixon. And here's the thing. Rockstar has copied this street before. In 2002's Vice City, that same Colony Hotel was the \"Colon\" Hotel. Same building. Copied twice. Twenty-four years apart. That hotel is still standing. But a few blocks away, two towers are slowly going down."
+    ]
+   ]
+  }
+ ]
+}
