@@ -1,0 +1,22 @@
+{
+ "id": "nordic-relief",
+ "delay": 0.3,
+ "files": [
+  {
+   "name": "rb_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=50,-80,68,-17.5&WIDTH=5200&HEIGHT=3350"
+  },
+  {
+   "name": "rb_01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=68,-80,86,-17.5&WIDTH=5200&HEIGHT=3350"
+  },
+  {
+   "name": "rb_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=50,-17.5,68,45&WIDTH=5200&HEIGHT=3350"
+  },
+  {
+   "name": "rb_11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=68,-17.5,86,45&WIDTH=5200&HEIGHT=3350"
+  }
+ ]
+}
