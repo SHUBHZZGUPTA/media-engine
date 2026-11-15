@@ -1,0 +1,37 @@
+[
+ {
+  "name": "osm_adm2_A.json",
+  "ok": true,
+  "bytes": 395084
+ },
+ {
+  "name": "osm_adm2_A_kumi.json",
+  "ok": false,
+  "error": "<HTTPError 504: 'Gateway Timeout'>"
+ },
+ {
+  "name": "osm_adm2_B.json",
+  "ok": true,
+  "bytes": 486934
+ },
+ {
+  "name": "osm_B_muni.json",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "osm_B_poi.json",
+  "ok": true,
+  "bytes": 48797
+ },
+ {
+  "name": "osm_E_bld2.json",
+  "ok": true,
+  "bytes": 4293376
+ },
+ {
+  "name": "osm_E_addr.json",
+  "ok": true,
+  "bytes": 574476
+ }
+]
