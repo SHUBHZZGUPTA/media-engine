@@ -1,0 +1,79 @@
+{
+ "id": "gta6-commons-q",
+ "ua": "media-engine/1.0 (BHUGOL maps; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "delay": 1,
+ "files": [
+  {
+   "name": "q_oceandrive.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Ocean+Drive+Miami+Beach+art+deco+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_colony.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Colony+Hotel+Miami+Beach+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_victor.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Hotel+Victor+Miami+Beach+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_murano.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Murano+Grande+Miami+Beach+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_floridian.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Floridian+condominium+Miami+Beach+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_wynwood.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Wynwood+Walls+Miami+mural+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_kaseya.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Kaseya+Center+Miami+arena+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_mia.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Miami+International+Airport+aerial+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_everglades.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Everglades+sawgrass+airboat+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_python.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Burmese+python+Everglades+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_clewiston.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Clewiston+Florida+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_okeechobee.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Lake+Okeechobee+sugar+cane+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_sevenmile.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Seven+Mile+Bridge+Florida+Keys+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_betsy.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Betsy+lobster+Islamorada+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_britton.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Britton+Hill+Florida+highest+point+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_providence.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Providence+Canyon+Georgia+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_skyline.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Miami+skyline+Biscayne+Bay+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_belmar.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Edgewater+Miami+condominium+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  }
+ ]
+}
