@@ -1,0 +1,14 @@
+{
+ "id": "nordic-relief2",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "rb_01a.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=68,-80,86,-48.75&WIDTH=2600&HEIGHT=3350"
+  },
+  {
+   "name": "rb_01b.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=68,-48.75,86,-17.5&WIDTH=2600&HEIGHT=3350"
+  }
+ ]
+}
