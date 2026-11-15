@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WMS_Capabilities version="1.3.0" xsi:schemaLocation="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd http://inspire.ec.europa.eu/schemas/common/1.0 http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd" xmlns="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" xmlns:insp_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
+  <Service>
+    <Name>WMS</Name>
+    <Title>Orthofotomozaïek, grootschalig, winteropnamen</Title>
+    <Abstract>WMS met de tijdsreeks van grootschalige orthofotomozaïeken met een resolutie van 10cm, gebiedsdekkend voor Vlaanderen</Abstract>
+    <KeywordList>
+      <Keyword>kleurenorthofotomozaïek</Keyword>
+      <Keyword>kleurenorthofoto's</Keyword>
+      <Keyword>kleurenortho's</Keyword>
+      <Keyword>luchtopnamen</Keyword>
+      <Keyword>ortho</Keyword>
+      <Keyword>orthofoto</Keyword>
+      <Keyword>orthofotomozaïek</Keyword>
+      <Keyword>orthofoto's</Keyword>
+      <Keyword>ortho's</Keyword>
+      <Keyword>Vlaams Gewest</Keyword>
+      <Keyword>vliegdagcontour</Keyword>
+      <Keyword>2013-2015</Keyword>
+      <Keyword>luchtfoto</Keyword>
+      <Keyword>luchtfoto's</Keyword>
+      <Keyword>grootschalig</Keyword>
+      <Keyword>winter</Keyword>
+      <Keyword>open data</Keyword>
+      <Keyword>Digitaal Hoogtemodel Vlaanderen II</Keyword>
+      <Keyword>DHMV II</Keyword>
+      <Keyword>tijdreeks</Keyword>
+      <Keyword vocabulary="GDI-Vlaanderen Service Types">OGC:WMS</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OGW/wms" />
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Helpdesk Digitaal Vlaanderen</ContactPerson>
+        <ContactOrganization>agentschap Digitaal Vlaanderen</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactAddress>
+        <AddressType>Postal</AddressType>
+        <Address>Havenlaan 88</Address>
+        <City>Brussel</City>
+        <StateOrProvince />
+        <PostCode>1000</PostCode>
+        <Country>België</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>+32 9 276 15 00</ContactVoiceTelephone>
+      <ContactElectronicMailAddress>digitaal.vlaanderen@vlaanderen.be</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>Het gebruik van de service is kosteloos.</Fees>
+    <AccessConstraints>Het gebruiksrecht is te vinden op https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten.</AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OGW/wms" />
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OGW/wms" />
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <Format>application/geo+json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo.api.vlaanderen.be/OGW/wms" />
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <insp_vs:ExtendedCapabilities>
+      <inspire_common:ResourceLocator>
+        <inspire_common:URL>https://geo.api.vlaanderen.be/OGW/wms?</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.wms_xml</inspire_common:MediaType>
+      </inspire_common:ResourceLocator>
+      <inspire_common:ResourceType>service</inspire_common:ResourceType>
+      <inspire_common:TemporalReference>
+        <inspire_common:DateOfCreation>2016-01-21</inspire_common:DateOfCreation>
+      </inspire_common:TemporalReference>
+      <inspire_common:Conformity>
+        <inspire_common:Specification xsi:type="inspire_common:citationInspireInteroperabilityRegulation_dut">
+          <inspire_common:Title>VERORDENING (EU) Nr. 1089/2010 VAN DE COMMISSIE van 23 november 2010 ter uitvoering van Richtlijn 2007/2/EG van het Europees Parlement en de Raad betreffende de interoperabiliteit van verzamelingen ruimtelijke gegevens en van diensten met betrekking tot ruimtelijke gegevens</inspire_common:Title>
+          <inspire_common:DateOfPublication>2010-12-08</inspire_common:DateOfPublication>
+          <inspire_common:URI>OJ:L:2010:323:0011:0102:NL:PDF</inspire_common:URI>
+          <inspire_common:ResourceLocator>
+            <inspire_common:URL>http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2010:323:0011:0102:NL:PDF</inspire_common:URL>
+            <inspire_common:MediaType>application/pdf</inspire_common:MediaType>
+          </inspire_common:ResourceLocator>
+        </inspire_common:Specification>
+        <inspire_common:Degree>notEvaluated</inspire_common:Degree>
+      </inspire_common:Conformity>
+      <inspire_common:MetadataPointOfContact>
+        <inspire_common:OrganisationName>agentschap Digitaal Vlaanderen</inspire_common:OrganisationName>
+        <inspire_common:EmailAddress>digitaal.vlaanderen@vlaanderen.be</inspire_common:EmailAddress>
+      </inspire_common:MetadataPointOfContact>
+      <inspire_common:MetadataDate>2022-08-11</inspire_common:MetadataDate>
+      <inspire_common:SpatialDataServiceType>view</inspire_common:SpatialDataServiceType>
+      <inspire_common:MandatoryKeyword xsi:type="inspire_common:classificationOfSpatialDataService">
+        <inspire_common:KeywordValue>infoMapAccessService</inspire_common:KeywordValue>
+      </inspire_common:MandatoryKeyword>
+      <inspire_common:SupportedLanguages xsi:type="inspire_common:supportedLanguagesType">
+        <inspire_common:DefaultLanguage>
+          <inspire_common:Language>dut</inspire_common:Language>
+        </inspire_common:DefaultLanguage>
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+        <inspire_common:Language>dut</inspire_common:Language>
+      </inspire_common:ResponseLanguage>
+      <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
+        <inspire_common:URL>https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=0ffd5eee-c197-4f8f-b491-b01bd1792f7c&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.csw.GetRecordByIdResponse_xml</inspire_common:MediaType>
+      </inspire_common:MetadataUrl>
+    </insp_vs:ExtendedCapabilities>
+    <Layer>
+      <Title>Orthofoto, Vlaanderen, winter, grootschalig - kleur</Title>
+      <Abstract>Tijdsreeks van de grootschalige orthofotomozaïeken op basis van winteropnamen die voor Vlaanderen beschikbaar zijn samen met de vliegdagcontour die van ieder deel de opnamedata weergeeft.</Abstract>
+      <KeywordList>
+        <Keyword>kleurenorthofotomozaïek</Keyword>
+        <Keyword>kleurenorthofoto's</Keyword>
+        <Keyword>kleurenortho's</Keyword>
+        <Keyword>luchtopnamen</Keyword>
+        <Keyword>ortho</Keyword>
+        <Keyword>orthofoto</Keyword>
+        <Keyword>orthofotomozaïek</Keyword>
+        <Keyword>orthofoto's</Keyword>
+        <Keyword>ortho's</Keyword>
+        <Keyword>Vlaams Gewest</Keyword>
+        <Keyword>vliegdagcontour</Keyword>
+        <Keyword>tijdsreeks</Keyword>
+        <Keyword>luchtfoto</Keyword>
+        <Keyword>luchtfoto's</Keyword>
+        <Keyword>grootschalig</Keyword>
+        <Keyword>winter</Keyword>
+        <Keyword>open data</Keyword>
+      </KeywordList>
+      <CRS>CRS:84</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:31370</CRS>
+      <CRS>EPSG:3812</CRS>
+      <CRS>EPSG:3043</CRS>
+      <CRS>EPSG:32631</CRS>
+      <CRS>EPSG:25831</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:102100</CRS>
+      <CRS>EPSG:3035</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>2.52</westBoundLongitude>
+        <eastBoundLongitude>5.94</eastBoundLongitude>
+        <southBoundLatitude>50.64</southBoundLatitude>
+        <northBoundLatitude>51.51</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox maxx="5.94" maxy="51.51" minx="2.52" miny="50.64" CRS="CRS:84" />
+      <BoundingBox maxx="51.51" maxy="5.94" minx="50.64" miny="2.52" CRS="EPSG:4326" />
+      <BoundingBox maxx="51.51" maxy="5.94" minx="50.64" miny="2.52" CRS="EPSG:4258" />
+      <BoundingBox CRS="EPSG:31370" minx="22000" miny="150000" maxx="259000" maxy="245000" />
+      <BoundingBox maxy="800000" maxx="762144" miny="537856" minx="500000" CRS="EPSG:3812" />
+      <BoundingBox CRS="EPSG:3043" minx="466900" miny="5610500" maxx="705700" maxy="5710000" />
+      <BoundingBox CRS="EPSG:32631" minx="466900" miny="5610500" maxx="705700" maxy="5710000" />
+      <BoundingBox CRS="EPSG:25831" minx="466900" miny="5610500" maxx="705700" maxy="5710000" />
+      <BoundingBox CRS="EPSG:3857" minx="280525" miny="6557859" maxx="661237" maxy="6712007" />
+      <BoundingBox CRS="EPSG:102100" minx="280525" miny="6557859" maxx="661237" maxy="6712007" />
+      <BoundingBox maxy="5446513" maxx="6293974" miny="1528101" minx="2426378" CRS="EPSG:3035" />
+      <AuthorityURL name="geo-api-vlaanderen-be">
+        <OnlineResource xlink:href="https://geo.api.vlaanderen.be" xlink:type="simple" />
+      </AuthorityURL>
+      <Layer queryable="0">
+        <Name>OGWRGB13_15VL</Name>
+        <Title>Orthofotomozaïek, grootschalig, winteropnamen, kleur, 2013-2015, Vlaanderen</Title>
+        <Abstract>Deze rasterlaag is een compilatie van de grootschalige orthofotomozaïeken (winteropnamen) die voor Vlaanderen in de periode 2013-2015 werden aangemaakt. De compilatie heeft een grondresolutie van 10cm.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2013-2015</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>grootschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+          <Keyword>Digitaal Hoogtemodel Vlaanderen II</Keyword>
+          <Keyword>DHMV II</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">d8f6a96e-3234-412f-b872-4a003a8348fb</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/dbbeddd4-0452-4413-9f2a-fa47a4f98e55" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=dbbeddd4-0452-4413-9f2a-fa47a4f98e55&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OGWRGB13_15VL</Title>
+          <LegendURL width="66" height="21">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OGW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OGWRGB13_15VL" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>OGWRGB13_15VL_vdc</Name>
+        <Title>Vliegdagcontour, grootschalig, winteropnamen, kleur, 2013-2015, Vlaanderen</Title>
+        <Abstract>Vectorlaag die voor ieder deel van het bijhorende product de opnamedatum weergeeft.</Abstract>
+        <KeywordList>
+          <Keyword>kleurenorthofotomozaïek</Keyword>
+          <Keyword>kleurenorthofoto's</Keyword>
+          <Keyword>kleurenortho's</Keyword>
+          <Keyword>luchtopnamen</Keyword>
+          <Keyword>ortho</Keyword>
+          <Keyword>orthofoto</Keyword>
+          <Keyword>orthofotomozaïek</Keyword>
+          <Keyword>orthofoto's</Keyword>
+          <Keyword>ortho's</Keyword>
+          <Keyword>Vlaams Gewest</Keyword>
+          <Keyword>vliegdagcontour</Keyword>
+          <Keyword>2013-2015</Keyword>
+          <Keyword>luchtfoto</Keyword>
+          <Keyword>luchtfoto's</Keyword>
+          <Keyword>grootschalig</Keyword>
+          <Keyword>winter</Keyword>
+          <Keyword>open data</Keyword>
+          <Keyword>Digitaal Hoogtemodel Vlaanderen II</Keyword>
+          <Keyword>DHMV II</Keyword>
+        </KeywordList>
+        <Identifier authority="geo-api-vlaanderen-be">d8f6a96e-3234-412f-b872-4a003a8348fb</Identifier>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/html</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/dbbeddd4-0452-4413-9f2a-fa47a4f98e55" xlink:type="simple" />
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2005">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:href="https://metadata.vlaanderen.be/srv/dut/csw?request=GetRecordById&amp;service=CSW&amp;constraintLanguage=CQL_TEXT&amp;version=2.0.2&amp;resultType=results&amp;ElementSetName=full&amp;typenames=csw:Record&amp;id=dbbeddd4-0452-4413-9f2a-fa47a4f98e55&amp;OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd" xlink:type="simple" />
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>OGWRGB13_15VL_vdc</Title>
+          <LegendURL width="135" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://geo.api.vlaanderen.be/OGW/wms?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=OGWRGB13_15VL_vdc" xlink:type="simple" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

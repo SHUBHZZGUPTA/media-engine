@@ -1,0 +1,214 @@
+{
+ "id": "bd-j4",
+ "delay": 0.3,
+ "files": [
+  {
+   "name": "B_context_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=8.55,47.71,8.674966622162884,47.78&WIDTH=1872&HEIGHT=1548"
+  },
+  {
+   "name": "B_context_s2__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=8.674966622162884,47.71,8.8,47.78&WIDTH=1873&HEIGHT=1548"
+  },
+  {
+   "name": "B_context_s2__r1c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=8.55,47.64,8.674966622162884,47.71&WIDTH=1872&HEIGHT=1548"
+  },
+  {
+   "name": "B_context_s2__r1c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=8.674966622162884,47.64,8.8,47.71&WIDTH=1873&HEIGHT=1548"
+  },
+  {
+   "name": "B_mid_swiss__r0c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.705,8.62,47.745,8.669988876529477&WIDTH=1498&HEIGHT=1769"
+  },
+  {
+   "name": "B_mid_swiss__r0c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.705,8.669988876529477,47.745,8.720011123470522&WIDTH=1499&HEIGHT=1769"
+  },
+  {
+   "name": "B_mid_swiss__r0c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.705,8.720011123470522,47.745,8.77&WIDTH=1498&HEIGHT=1769"
+  },
+  {
+   "name": "B_mid_swiss__r1c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.665,8.62,47.705,8.669988876529477&WIDTH=1498&HEIGHT=1769"
+  },
+  {
+   "name": "B_mid_swiss__r1c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.665,8.669988876529477,47.705,8.720011123470522&WIDTH=1499&HEIGHT=1769"
+  },
+  {
+   "name": "B_mid_swiss__r1c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.665,8.720011123470522,47.705,8.77&WIDTH=1498&HEIGHT=1769"
+  },
+  {
+   "name": "B_exclave_swiss__r0c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7085,8.655,47.717,8.668398344861659&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r0c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7085,8.668398344861659,47.717,8.681796689723319&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r0c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7085,8.681796689723319,47.717,8.69520331027668&WIDTH=1620&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r0c3.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7085,8.69520331027668,47.717,8.70860165513834&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r0c4.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7085,8.70860165513834,47.717,8.722&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r1c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7,8.655,47.7085,8.668398344861659&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r1c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7,8.668398344861659,47.7085,8.681796689723319&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r1c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7,8.681796689723319,47.7085,8.69520331027668&WIDTH=1620&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r1c3.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7,8.69520331027668,47.7085,8.70860165513834&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r1c4.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.7,8.70860165513834,47.7085,8.722&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r2c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.6915,8.655,47.7,8.668398344861659&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r2c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.6915,8.668398344861659,47.7,8.681796689723319&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r2c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.6915,8.681796689723319,47.7,8.69520331027668&WIDTH=1620&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r2c3.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.6915,8.69520331027668,47.7,8.70860165513834&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r2c4.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.6915,8.70860165513834,47.7,8.722&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r3c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.683,8.655,47.6915,8.668398344861659&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r3c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.683,8.668398344861659,47.6915,8.681796689723319&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r3c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.683,8.681796689723319,47.6915,8.69520331027668&WIDTH=1620&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r3c3.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.683,8.69520331027668,47.6915,8.70860165513834&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_exclave_swiss__r3c4.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.683,8.70860165513834,47.6915,8.722&WIDTH=1619&HEIGHT=1516"
+  },
+  {
+   "name": "B_village_swiss__r0c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.699334539263674,8.672,47.705,8.682&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_village_swiss__r0c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.699334539263674,8.682,47.705,8.692&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_village_swiss__r0c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.699334539263674,8.692,47.705,8.702&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_village_swiss__r0c3.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.699334539263674,8.702,47.705,8.712&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_village_swiss__r1c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69366546073633,8.672,47.699334539263674,8.682&WIDTH=1873&HEIGHT=1567"
+  },
+  {
+   "name": "B_village_swiss__r1c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69366546073633,8.682,47.699334539263674,8.692&WIDTH=1873&HEIGHT=1567"
+  },
+  {
+   "name": "B_village_swiss__r1c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69366546073633,8.692,47.699334539263674,8.702&WIDTH=1873&HEIGHT=1567"
+  },
+  {
+   "name": "B_village_swiss__r1c3.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69366546073633,8.702,47.699334539263674,8.712&WIDTH=1873&HEIGHT=1567"
+  },
+  {
+   "name": "B_village_swiss__r2c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.688,8.672,47.69366546073633,8.682&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_village_swiss__r2c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.688,8.682,47.69366546073633,8.692&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_village_swiss__r2c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.688,8.692,47.69366546073633,8.702&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_village_swiss__r2c3.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.688,8.702,47.69366546073633,8.712&WIDTH=1873&HEIGHT=1566"
+  },
+  {
+   "name": "B_gap_swiss__r0c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69733423778984,8.712,47.701,8.718666666666666&WIDTH=1665&HEIGHT=1351"
+  },
+  {
+   "name": "B_gap_swiss__r0c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69733423778984,8.718666666666666,47.701,8.725333333333333&WIDTH=1665&HEIGHT=1351"
+  },
+  {
+   "name": "B_gap_swiss__r0c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69733423778984,8.725333333333333,47.701,8.732&WIDTH=1665&HEIGHT=1351"
+  },
+  {
+   "name": "B_gap_swiss__r1c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69366576221016,8.712,47.69733423778984,8.718666666666666&WIDTH=1665&HEIGHT=1352"
+  },
+  {
+   "name": "B_gap_swiss__r1c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69366576221016,8.718666666666666,47.69733423778984,8.725333333333333&WIDTH=1665&HEIGHT=1352"
+  },
+  {
+   "name": "B_gap_swiss__r1c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69366576221016,8.725333333333333,47.69733423778984,8.732&WIDTH=1665&HEIGHT=1352"
+  },
+  {
+   "name": "B_gap_swiss__r2c0.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69,8.712,47.69366576221016,8.718666666666666&WIDTH=1665&HEIGHT=1351"
+  },
+  {
+   "name": "B_gap_swiss__r2c1.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69,8.718666666666666,47.69366576221016,8.725333333333333&WIDTH=1665&HEIGHT=1351"
+  },
+  {
+   "name": "B_gap_swiss__r2c2.jpg",
+   "url": "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ch.swisstopo.swissimage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=47.69,8.725333333333333,47.69366576221016,8.732&WIDTH=1665&HEIGHT=1351"
+  },
+  {
+   "name": "E_chaamseweg_pdok__r0c0.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44381,4.92427,51.44516,4.92643&WIDTH=1998&HEIGHT=1990"
+  }
+ ]
+}

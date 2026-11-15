@@ -1,0 +1,438 @@
+{
+ "id": "bd-j3",
+ "delay": 0.3,
+ "files": [
+  {
+   "name": "A_context_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-123.3,48.99995162070634,-123.0,49.1&WIDTH=2048&HEIGHT=1034"
+  },
+  {
+   "name": "A_context_s2__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-123.0,48.99995162070634,-122.7,49.1&WIDTH=2048&HEIGHT=1034"
+  },
+  {
+   "name": "A_context_s2__r1c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-123.3,48.9,-123.0,48.99995162070634&WIDTH=2048&HEIGHT=1033"
+  },
+  {
+   "name": "A_context_s2__r1c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-123.0,48.9,-122.7,48.99995162070634&WIDTH=2048&HEIGHT=1033"
+  },
+  {
+   "name": "A_pointroberts_naip__r0c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.1,49.005,-123.0800024642681,49.02&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r0c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.0800024642681,49.005,-123.06000492853622,49.02&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r0c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.06000492853622,49.005,-123.03999507146378,49.02&bboxSR=4326&imageSR=4326&size=1624,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r0c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.03999507146378,49.005,-123.01999753573189,49.02&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r0c4.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.01999753573189,49.005,-123.0,49.02&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r1c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.1,48.99,-123.0800024642681,49.005&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r1c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.0800024642681,48.99,-123.06000492853622,49.005&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r1c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.06000492853622,48.99,-123.03999507146378,49.005&bboxSR=4326&imageSR=4326&size=1624,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r1c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.03999507146378,48.99,-123.01999753573189,49.005&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r1c4.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.01999753573189,48.99,-123.0,49.005&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r2c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.1,48.975,-123.0800024642681,48.99&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r2c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.0800024642681,48.975,-123.06000492853622,48.99&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r2c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.06000492853622,48.975,-123.03999507146378,48.99&bboxSR=4326&imageSR=4326&size=1624,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r2c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.03999507146378,48.975,-123.01999753573189,48.99&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r2c4.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.01999753573189,48.975,-123.0,48.99&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r3c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.1,48.96,-123.0800024642681,48.975&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r3c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.0800024642681,48.96,-123.06000492853622,48.975&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r3c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.06000492853622,48.96,-123.03999507146378,48.975&bboxSR=4326&imageSR=4326&size=1624,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r3c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.03999507146378,48.96,-123.01999753573189,48.975&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_pointroberts_naip__r3c4.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-123.01999753573189,48.96,-123.0,48.975&bboxSR=4326&imageSR=4326&size=1623,1843&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r0c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.77,49.00400090436356,-122.76374794610581,49.008&bboxSR=4326&imageSR=4326&size=1522,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r0c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.76374794610581,49.00400090436356,-122.7575,49.008&bboxSR=4326&imageSR=4326&size=1521,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r0c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.7575,49.00400090436356,-122.75125205389419,49.008&bboxSR=4326&imageSR=4326&size=1521,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r0c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.75125205389419,49.00400090436356,-122.745,49.008&bboxSR=4326&imageSR=4326&size=1522,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r1c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.77,48.99999909563645,-122.76374794610581,49.00400090436356&bboxSR=4326&imageSR=4326&size=1522,1475&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r1c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.76374794610581,48.99999909563645,-122.7575,49.00400090436356&bboxSR=4326&imageSR=4326&size=1521,1475&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r1c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.7575,48.99999909563645,-122.75125205389419,49.00400090436356&bboxSR=4326&imageSR=4326&size=1521,1475&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r1c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.75125205389419,48.99999909563645,-122.745,49.00400090436356&bboxSR=4326&imageSR=4326&size=1522,1475&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r2c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.77,48.996,-122.76374794610581,48.99999909563645&bboxSR=4326&imageSR=4326&size=1522,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r2c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.76374794610581,48.996,-122.7575,48.99999909563645&bboxSR=4326&imageSR=4326&size=1521,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r2c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.7575,48.996,-122.75125205389419,48.99999909563645&bboxSR=4326&imageSR=4326&size=1521,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "A_peacearch_naip__r2c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-122.75125205389419,48.996,-122.745,48.99999909563645&bboxSR=4326&imageSR=4326&size=1522,1474&format=jpgpng&f=image"
+  },
+  {
+   "name": "C_context_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=6.05,50.6250307503075,6.199999999999999,50.75&WIDTH=1558&HEIGHT=2032"
+  },
+  {
+   "name": "C_context_s2__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=6.199999999999999,50.6250307503075,6.35,50.75&WIDTH=1558&HEIGHT=2032"
+  },
+  {
+   "name": "C_context_s2__r1c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=6.05,50.5,6.199999999999999,50.6250307503075&WIDTH=1558&HEIGHT=2033"
+  },
+  {
+   "name": "C_context_s2__r1c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=6.199999999999999,50.5,6.35,50.6250307503075&WIDTH=1558&HEIGHT=2033"
+  },
+  {
+   "name": "C_exclave_nrw__r0c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.58025,6.165,50.597,6.1875&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r0c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.58025,6.1875,50.597,6.21&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r0c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.58025,6.21,50.597,6.2325&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r0c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.58025,6.2325,50.597,6.255&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r1c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.563500000000005,6.165,50.58025,6.1875&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r1c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.563500000000005,6.1875,50.58025,6.21&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r1c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.563500000000005,6.21,50.58025,6.2325&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r1c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.563500000000005,6.2325,50.58025,6.255&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r2c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.54675,6.165,50.563500000000005,6.1875&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r2c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.54675,6.1875,50.563500000000005,6.21&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r2c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.54675,6.21,50.563500000000005,6.2325&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r2c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.54675,6.2325,50.563500000000005,6.255&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r3c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.53,6.165,50.54675,6.1875&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r3c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.53,6.1875,50.54675,6.21&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r3c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.53,6.21,50.54675,6.2325&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_exclave_nrw__r3c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.53,6.2325,50.54675,6.255&WIDTH=1591&HEIGHT=1852"
+  },
+  {
+   "name": "C_muetzenich_nrw__r0c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.56550056525562,6.215,50.57,6.2219999999999995&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r0c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.56550056525562,6.2219999999999995,50.57,6.229&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r0c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.56550056525562,6.229,50.57,6.236000000000001&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r0c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.56550056525562,6.236000000000001,50.57,6.243&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r1c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.561001130511244,6.215,50.56550056525562,6.2219999999999995&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r1c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.561001130511244,6.2219999999999995,50.56550056525562,6.229&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r1c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.561001130511244,6.229,50.56550056525562,6.236000000000001&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r1c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.561001130511244,6.236000000000001,50.56550056525562,6.243&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r2c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.55649943474438,6.215,50.561001130511244,6.2219999999999995&WIDTH=1980&HEIGHT=1991"
+  },
+  {
+   "name": "C_muetzenich_nrw__r2c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.55649943474438,6.2219999999999995,50.561001130511244,6.229&WIDTH=1980&HEIGHT=1991"
+  },
+  {
+   "name": "C_muetzenich_nrw__r2c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.55649943474438,6.229,50.561001130511244,6.236000000000001&WIDTH=1980&HEIGHT=1991"
+  },
+  {
+   "name": "C_muetzenich_nrw__r2c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.55649943474438,6.236000000000001,50.561001130511244,6.243&WIDTH=1980&HEIGHT=1991"
+  },
+  {
+   "name": "C_muetzenich_nrw__r3c0.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.552,6.215,50.55649943474438,6.2219999999999995&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r3c1.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.552,6.2219999999999995,50.55649943474438,6.229&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r3c2.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.552,6.229,50.55649943474438,6.236000000000001&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "C_muetzenich_nrw__r3c3.jpg",
+   "url": "https://www.wms.nrw.de/geobasis/wms_nw_dop?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=nw_dop_rgb&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=50.552,6.236000000000001,50.55649943474438,6.243&WIDTH=1980&HEIGHT=1990"
+  },
+  {
+   "name": "D_context_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-1.84,43.3,-1.7650308769040757,43.39&WIDTH=1214&HEIGHT=1990"
+  },
+  {
+   "name": "D_context_s2__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-1.7650308769040757,43.3,-1.69,43.39&WIDTH=1215&HEIGHT=1990"
+  },
+  {
+   "name": "D_mid_ignfr__r0c0.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342505651846274,-1.797,43.365,-1.776&WIDTH=1360&HEIGHT=1990"
+  },
+  {
+   "name": "D_mid_ignfr__r0c1.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342505651846274,-1.776,43.365,-1.755&WIDTH=1360&HEIGHT=1990"
+  },
+  {
+   "name": "D_mid_ignfr__r0c2.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342505651846274,-1.755,43.365,-1.734&WIDTH=1360&HEIGHT=1990"
+  },
+  {
+   "name": "D_mid_ignfr__r1c0.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.32,-1.797,43.342505651846274,-1.776&WIDTH=1360&HEIGHT=1991"
+  },
+  {
+   "name": "D_mid_ignfr__r1c1.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.32,-1.776,43.342505651846274,-1.755&WIDTH=1360&HEIGHT=1991"
+  },
+  {
+   "name": "D_mid_ignfr__r1c2.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.32,-1.755,43.342505651846274,-1.734&WIDTH=1360&HEIGHT=1991"
+  },
+  {
+   "name": "D_mid_pnoa__r0c0.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342505651846274,-1.797,43.365,-1.776&WIDTH=1360&HEIGHT=1990"
+  },
+  {
+   "name": "D_mid_pnoa__r0c1.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342505651846274,-1.776,43.365,-1.755&WIDTH=1360&HEIGHT=1990"
+  },
+  {
+   "name": "D_mid_pnoa__r0c2.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342505651846274,-1.755,43.365,-1.734&WIDTH=1360&HEIGHT=1990"
+  },
+  {
+   "name": "D_mid_pnoa__r1c0.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.32,-1.797,43.342505651846274,-1.776&WIDTH=1360&HEIGHT=1991"
+  },
+  {
+   "name": "D_mid_pnoa__r1c1.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.32,-1.776,43.342505651846274,-1.755&WIDTH=1360&HEIGHT=1991"
+  },
+  {
+   "name": "D_mid_pnoa__r1c2.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.32,-1.755,43.342505651846274,-1.734&WIDTH=1360&HEIGHT=1991"
+  },
+  {
+   "name": "D_island_ignfr__r0c0.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342800678196,-1.7692,43.3448,-1.7655&WIDTH=1997&HEIGHT=1474"
+  },
+  {
+   "name": "D_island_ignfr__r0c1.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342800678196,-1.7655,43.3448,-1.7618&WIDTH=1997&HEIGHT=1474"
+  },
+  {
+   "name": "D_island_ignfr__r1c0.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.3408,-1.7692,43.342800678196,-1.7655&WIDTH=1997&HEIGHT=1475"
+  },
+  {
+   "name": "D_island_ignfr__r1c1.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.3408,-1.7655,43.342800678196,-1.7618&WIDTH=1997&HEIGHT=1475"
+  },
+  {
+   "name": "D_island_pnoa__r0c0.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342800678196,-1.7692,43.3448,-1.7655&WIDTH=1997&HEIGHT=1474"
+  },
+  {
+   "name": "D_island_pnoa__r0c1.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.342800678196,-1.7655,43.3448,-1.7618&WIDTH=1997&HEIGHT=1474"
+  },
+  {
+   "name": "D_island_pnoa__r1c0.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.3408,-1.7692,43.342800678196,-1.7655&WIDTH=1997&HEIGHT=1475"
+  },
+  {
+   "name": "D_island_pnoa__r1c1.jpg",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.3408,-1.7655,43.342800678196,-1.7618&WIDTH=1997&HEIGHT=1475"
+  },
+  {
+   "name": "E_context_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=4.85,51.4,4.93,51.48&WIDTH=1110&HEIGHT=1769"
+  },
+  {
+   "name": "E_context_s2__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=4.93,51.4,5.01,51.48&WIDTH=1110&HEIGHT=1769"
+  },
+  {
+   "name": "E_town_pdok__r0c0.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44100339159927,4.912,51.454,4.93199459605512&WIDTH=1850&HEIGHT=1916"
+  },
+  {
+   "name": "E_town_pdok__r0c1.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44100339159927,4.93199459605512,51.454,4.952&WIDTH=1851&HEIGHT=1916"
+  },
+  {
+   "name": "E_town_pdok__r1c0.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.428,4.912,51.44100339159927,4.93199459605512&WIDTH=1850&HEIGHT=1917"
+  },
+  {
+   "name": "E_town_pdok__r1c1.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.428,4.93199459605512,51.44100339159927,4.952&WIDTH=1851&HEIGHT=1917"
+  },
+  {
+   "name": "E_town_vl__r0c0.jpg",
+   "url": "https://geo.api.vlaanderen.be/OMW/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OMWRGB25VL&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44100339159927,4.912,51.454,4.93199459605512&WIDTH=1850&HEIGHT=1916"
+  },
+  {
+   "name": "E_town_vl__r0c1.jpg",
+   "url": "https://geo.api.vlaanderen.be/OMW/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OMWRGB25VL&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44100339159927,4.93199459605512,51.454,4.952&WIDTH=1851&HEIGHT=1916"
+  },
+  {
+   "name": "E_town_vl__r1c0.jpg",
+   "url": "https://geo.api.vlaanderen.be/OMW/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OMWRGB25VL&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.428,4.912,51.44100339159927,4.93199459605512&WIDTH=1850&HEIGHT=1917"
+  },
+  {
+   "name": "E_town_vl__r1c1.jpg",
+   "url": "https://geo.api.vlaanderen.be/OMW/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OMWRGB25VL&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.428,4.93199459605512,51.44100339159927,4.952&WIDTH=1851&HEIGHT=1917"
+  },
+  {
+   "name": "E_loveren_pdok__r0c0.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44409033915212,4.9172,51.44477,4.918300540540541&WIDTH=1018&HEIGHT=1002"
+  },
+  {
+   "name": "E_loveren_pdok__r0c1.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44409033915212,4.918300540540541,51.44477,4.9194&WIDTH=1017&HEIGHT=1002"
+  },
+  {
+   "name": "E_loveren_pdok__r1c0.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44341,4.9172,51.44409033915212,4.918300540540541&WIDTH=1018&HEIGHT=1003"
+  },
+  {
+   "name": "E_loveren_pdok__r1c1.jpg",
+   "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Actueel_orthoHR&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=51.44341,4.918300540540541,51.44409033915212,4.9194&WIDTH=1017&HEIGHT=1003"
+  }
+ ]
+}

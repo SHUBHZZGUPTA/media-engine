@@ -1,0 +1,2179 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T11:21:50Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 28915061,
+  "lat": 47.7404415,
+  "lon": 8.7189824,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "both",
+    "TMC:cid_58:tabcd_1:LCLversion": "8.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "23073",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "23074",
+    "alt_name": "Grenzübergang Thayngen",
+    "barrier": "border_control",
+    "contact:city": "Thayngen",
+    "contact:email": "zoll.schaffhausen@bazg.admin.ch",
+    "contact:housenumber": "87",
+    "contact:phone": "+41 58 467 22 11",
+    "contact:postcode": "8240",
+    "contact:street": "Zollstrasse",
+    "contact:website": "https://www.offices.customs.admin.ch/dst/print?id=153&lang=1",
+    "motor_vehicle": "yes",
+    "name": "Zoll Thayngen",
+    "operator": "Bundesamt für Zoll und Grenzsicherheit BAZG",
+    "ref": "247",
+    "reg_name": "Zoll Thayngen/Bietingen"
+  }
+},
+{
+  "type": "node",
+  "id": 30012528,
+  "lat": 47.6903572,
+  "lon": 8.7506454,
+  "tags": {
+    "alt_name": "Grenzübergang Diessenhofen",
+    "barrier": "border_control",
+    "contact:city": "Diessenhofen",
+    "contact:email": "zoll.schaffhausen@bazg.admin.ch",
+    "contact:housenumber": "1",
+    "contact:phone": "+41 58 480 90 00",
+    "contact:postcode": "8253",
+    "contact:street": "Schwaderloch",
+    "contact:website": "https://www.offices.customs.admin.ch/dst/print?id=770",
+    "name": "Zoll Diessenhofen",
+    "opening_hours": "24/7",
+    "operator": "Bundesamt für Zoll und Grenzsicherheit BAZG",
+    "ref": "238"
+  }
+},
+{
+  "type": "node",
+  "id": 305248676,
+  "lat": 47.6962516,
+  "lon": 8.7113380,
+  "tags": {
+    "barrier": "border_control",
+    "name": "Grenzübergang Dörflingen-Gailingen-West",
+    "opening_hours": "24/7",
+    "operator": "Bundesamt für Zoll und Grenzsicherheit BAZG"
+  }
+},
+{
+  "type": "node",
+  "id": 984762149,
+  "lat": 47.6987031,
+  "lon": 8.7029994,
+  "tags": {
+    "bus": "yes",
+    "ele": "402",
+    "name": "Kirche St. Michael",
+    "network": "Ostwind",
+    "operator": "VBSH",
+    "public_transport": "stop_position",
+    "uic_name": "Büsingen, Kirche St. Michael",
+    "uic_ref": "8573745"
+  }
+},
+{
+  "type": "node",
+  "id": 1037599678,
+  "lat": 47.7405090,
+  "lon": 8.7191274,
+  "tags": {
+    "alt_name": "Grenzübergang Thayngen",
+    "barrier": "border_control",
+    "contact:city": "Thayngen",
+    "contact:email": "zoll.schaffhausen@bazg.admin.ch",
+    "contact:housenumber": "87",
+    "contact:phone": "+41 58 467 22 11",
+    "contact:postcode": "8240",
+    "contact:street": "Zollstrasse",
+    "contact:website": "https://www.offices.customs.admin.ch/dst/print?id=153&lang=1",
+    "motor_vehicle": "yes",
+    "name": "Zoll Thayngen",
+    "operator": "Bundesamt für Zoll und Grenzsicherheit BAZG",
+    "ref": "247",
+    "reg_name": "Zoll Thayngen/Bietingen"
+  }
+},
+{
+  "type": "node",
+  "id": 1177040790,
+  "lat": 47.6962012,
+  "lon": 8.7363647,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 1177113257,
+  "lat": 47.6912419,
+  "lon": 8.7511506,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 4382141791,
+  "lat": 47.6984792,
+  "lon": 8.6524062,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 4382149592,
+  "lat": 47.6965802,
+  "lon": 8.6561026,
+  "tags": {
+    "leisure": "pitch",
+    "name": "Pingpong Tisch",
+    "name:de": "Pingpong Tisch",
+    "name:en": "Tabletennis",
+    "name:fr": "Table de Pingpong",
+    "opening_hours": "24/7",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 6413703862,
+  "lat": 47.7406618,
+  "lon": 8.7191440,
+  "tags": {
+    "barrier": "border_control",
+    "boundary": "national",
+    "motor_vehicle": "yes",
+    "name": "Thayngen/Bietingen"
+  }
+},
+{
+  "type": "node",
+  "id": 6413709739,
+  "lat": 47.7403425,
+  "lon": 8.7191650,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "both",
+    "TMC:cid_58:tabcd_1:LCLversion": "8.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "23073",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "23074",
+    "barrier": "border_control",
+    "boundary": "national",
+    "motor_vehicle": "yes",
+    "name": "Thayngen/Bietingen"
+  }
+},
+{
+  "type": "node",
+  "id": 6413717832,
+  "lat": 47.7409848,
+  "lon": 8.7184297,
+  "tags": {
+    "barrier": "border_control"
+  }
+},
+{
+  "type": "node",
+  "id": 7358999284,
+  "lat": 47.6986165,
+  "lon": 8.7029622,
+  "tags": {
+    "departures_board": "timetable",
+    "highway": "bus_stop",
+    "name": "Kirche St. Michael",
+    "network": "Ostwind",
+    "operator": "VBSH",
+    "public_transport": "platform",
+    "shelter": "no",
+    "uic_name": "Büsingen, Kirche St. Michael",
+    "uic_ref": "8573745"
+  }
+},
+{
+  "type": "node",
+  "id": 7359004785,
+  "lat": 47.6987230,
+  "lon": 8.7029656,
+  "tags": {
+    "departures_board": "timetable",
+    "highway": "bus_stop",
+    "name": "Kirche St. Michael",
+    "network": "Ostwind",
+    "operator": "VBSH",
+    "public_transport": "platform",
+    "shelter": "no",
+    "uic_name": "Büsingen, Kirche St. Michael",
+    "uic_ref": "8573745"
+  }
+},
+{
+  "type": "node",
+  "id": 7359004786,
+  "lat": 47.6986415,
+  "lon": 8.7029297,
+  "tags": {
+    "bus": "yes",
+    "ele": "402",
+    "name": "Kirche St. Michael",
+    "network": "Ostwind",
+    "operator": "VBSH",
+    "public_transport": "stop_position",
+    "uic_name": "Büsingen, Kirche St. Michael",
+    "uic_ref": "8573745"
+  }
+},
+{
+  "type": "node",
+  "id": 7536507003,
+  "lat": 47.7068488,
+  "lon": 8.7184529,
+  "tags": {
+    "amenity": "townhall",
+    "name": "Gemeindekanzlei",
+    "opening_hours": "Tu 08:30-11:30, 14:00-17:00; Th 08:30-11:30, 14:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 7608651868,
+  "lat": 47.6978369,
+  "lon": 8.6633503,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 7608651869,
+  "lat": 47.6978478,
+  "lon": 8.6633972,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 8467852548,
+  "lat": 47.6988306,
+  "lon": 8.6616393,
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 8548405229,
+  "lat": 47.6980564,
+  "lon": 8.6533333,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 8670736688,
+  "lat": 47.7194555,
+  "lon": 8.6503928,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 8670736689,
+  "lat": 47.7194276,
+  "lon": 8.6504291,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 8872439633,
+  "lat": 47.7068331,
+  "lon": 8.7236882,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 10678048765,
+  "lat": 47.7011799,
+  "lon": 8.6539103,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 10678048766,
+  "lat": 47.7011447,
+  "lon": 8.6539143,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 10799563718,
+  "lat": 47.6947629,
+  "lon": 8.6969369,
+  "tags": {
+    "access": "customers",
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 11333626535,
+  "lat": 47.6951314,
+  "lon": 8.7266394,
+  "tags": {
+    "alt_name": "Grenzübergang Dörflingen Laag",
+    "barrier": "border_control",
+    "contact:city": "Gailingen am Hochrhein",
+    "contact:email": "zoll.schaffhausen@bazg.admin.ch",
+    "contact:housenumber": "17",
+    "contact:phone": "+41 58 480 90 00",
+    "contact:postcode": "78262",
+    "contact:street": "Büsinger Strasse",
+    "contact:website": "https://www.offices.customs.admin.ch/dst/print?id=769",
+    "crossing": "unmarked",
+    "crossing:island": "yes",
+    "highway": "crossing",
+    "name": "Zoll Dörflingen Laag",
+    "opening_hours": "24/7",
+    "operator": "Bundesamt für Zoll und Grenzsicherheit BAZG",
+    "ref": "238"
+  }
+},
+{
+  "type": "node",
+  "id": 12030666737,
+  "lat": 47.6880494,
+  "lon": 8.6550762,
+  "tags": {
+    "addr:city": "Langwiesen",
+    "addr:housenumber": "100",
+    "addr:postcode": "8246",
+    "addr:street": "Hauptstrasse",
+    "club": "sport",
+    "name": "Ruderclub Schaffhausen",
+    "operator": "Ruderclub Schaffhausen",
+    "sport": "rudern",
+    "website": "https://www.ruderclub-schaffhausen.ch"
+  }
+},
+{
+  "type": "node",
+  "id": 12053680968,
+  "lat": 47.6868389,
+  "lon": 8.6564654,
+  "tags": {
+    "access": "customers",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "table_tennis",
+    "survey:date": "2024-07-14",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 14017059163,
+  "lat": 47.6840140,
+  "lon": 8.6766346,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "roman_catholic",
+    "name": "St. Michael",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 26193496,
+  "bounds": {
+    "minlat": 47.7196122,
+    "minlon": 8.6607638,
+    "maxlat": 47.7203976,
+    "maxlon": 8.6623435
+  },
+  "nodes": [
+    286817821,
+    286817824,
+    286817826,
+    286817829,
+    286817821
+  ],
+  "geometry": [
+    { "lat": 47.7202241, "lon": 8.6607638 },
+    { "lat": 47.7196122, "lon": 8.6609126 },
+    { "lat": 47.7197941, "lon": 8.6623435 },
+    { "lat": 47.7203976, "lon": 8.6621885 },
+    { "lat": 47.7202241, "lon": 8.6607638 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 26193497,
+  "bounds": {
+    "minlat": 47.7196537,
+    "minlon": 8.6597791,
+    "maxlat": 47.7198803,
+    "maxlon": 8.6599768
+  },
+  "nodes": [
+    286817832,
+    286817834,
+    286817837,
+    286817840,
+    286817832
+  ],
+  "geometry": [
+    { "lat": 47.7198639, "lon": 8.6597791 },
+    { "lat": 47.7198803, "lon": 8.6599245 },
+    { "lat": 47.7196700, "lon": 8.6599768 },
+    { "lat": 47.7196537, "lon": 8.6598314 },
+    { "lat": 47.7198639, "lon": 8.6597791 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 34079712,
+  "bounds": {
+    "minlat": 47.6942126,
+    "minlon": 8.6958877,
+    "maxlat": 47.6949741,
+    "maxlon": 8.6974297
+  },
+  "nodes": [
+    390518489,
+    390407199,
+    390407200,
+    390407201,
+    390407202,
+    390518496,
+    390407224,
+    390407204,
+    14061887651,
+    3684443431,
+    390518500,
+    390518489
+  ],
+  "geometry": [
+    { "lat": 47.6946284, "lon": 8.6958877 },
+    { "lat": 47.6946924, "lon": 8.6959258 },
+    { "lat": 47.6949172, "lon": 8.6960280 },
+    { "lat": 47.6948327, "lon": 8.6963395 },
+    { "lat": 47.6949474, "lon": 8.6963840 },
+    { "lat": 47.6949741, "lon": 8.6966273 },
+    { "lat": 47.6948359, "lon": 8.6971311 },
+    { "lat": 47.6947518, "lon": 8.6974297 },
+    { "lat": 47.6943176, "lon": 8.6972838 },
+    { "lat": 47.6943029, "lon": 8.6972740 },
+    { "lat": 47.6942126, "lon": 8.6972066 },
+    { "lat": 47.6946284, "lon": 8.6958877 }
+  ],
+  "tags": {
+    "amenity": "public_bath",
+    "contact:city": "Büsingen am Hochrhein",
+    "contact:email": "info@lido-buesingen.ch",
+    "contact:housenumber": "7",
+    "contact:postcode": "78266",
+    "contact:street": "Strandbadweg",
+    "contact:website": "https://www.badi-info.ch/a/buesingen.html",
+    "leisure": "sports_centre",
+    "name": "Strandbad Büsingen",
+    "opening_hours": "Mo-Su 08:30-20:00",
+    "sport": "swimming"
+  }
+},
+{
+  "type": "way",
+  "id": 34781658,
+  "bounds": {
+    "minlat": 47.6961559,
+    "minlon": 8.6871814,
+    "maxlat": 47.6966241,
+    "maxlon": 8.6876329
+  },
+  "nodes": [
+    406449833,
+    2851697945,
+    2851697944,
+    2851697946,
+    2851697947,
+    2851697949,
+    2851697948,
+    1352991104,
+    2851697950,
+    2851697952,
+    2851697953,
+    2851697954,
+    406449836,
+    406449839,
+    406449827,
+    406449833
+  ],
+  "geometry": [
+    { "lat": 47.6963072, "lon": 8.6876329 },
+    { "lat": 47.6963818, "lon": 8.6875870 },
+    { "lat": 47.6963506, "lon": 8.6874751 },
+    { "lat": 47.6964033, "lon": 8.6874426 },
+    { "lat": 47.6964096, "lon": 8.6874654 },
+    { "lat": 47.6964662, "lon": 8.6874305 },
+    { "lat": 47.6964529, "lon": 8.6873827 },
+    { "lat": 47.6964888, "lon": 8.6873605 },
+    { "lat": 47.6965197, "lon": 8.6873415 },
+    { "lat": 47.6965399, "lon": 8.6874139 },
+    { "lat": 47.6965615, "lon": 8.6874006 },
+    { "lat": 47.6965725, "lon": 8.6874399 },
+    { "lat": 47.6966241, "lon": 8.6874081 },
+    { "lat": 47.6965608, "lon": 8.6871814 },
+    { "lat": 47.6961559, "lon": 8.6874307 },
+    { "lat": 47.6963072, "lon": 8.6876329 }
+  ],
+  "tags": {
+    "addr:city": "Büsingen am Hochrhein",
+    "addr:country": "DE",
+    "addr:housenumber": "86",
+    "addr:postcode": "78266",
+    "addr:street": "Junkerstraße",
+    "amenity": "townhall",
+    "building": "yes",
+    "name": "Rathaus Büsingen",
+    "phone": "+49 7734 93020",
+    "toilets:wheelchair": "yes",
+    "website": "https://www.buesingen.de",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 52093628,
+  "bounds": {
+    "minlat": 47.7018755,
+    "minlon": 8.6497220,
+    "maxlat": 47.7024507,
+    "maxlon": 8.6510077
+  },
+  "nodes": [
+    663902902,
+    663902903,
+    663902904,
+    663902906,
+    663902902
+  ],
+  "geometry": [
+    { "lat": 47.7024151, "lon": 8.6497220 },
+    { "lat": 47.7018755, "lon": 8.6497559 },
+    { "lat": 47.7019111, "lon": 8.6510077 },
+    { "lat": 47.7024507, "lon": 8.6509739 },
+    { "lat": 47.7024151, "lon": 8.6497220 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "name": "Sportplatz Gruben",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 109264515,
+  "bounds": {
+    "minlat": 47.6976812,
+    "minlon": 8.7003137,
+    "maxlat": 47.6986030,
+    "maxlon": 8.7019449
+  },
+  "nodes": [
+    1251326915,
+    1251326899,
+    1251326905,
+    1251326904,
+    1251326915
+  ],
+  "geometry": [
+    { "lat": 47.6986030, "lon": 8.7006654 },
+    { "lat": 47.6980496, "lon": 8.7003137 },
+    { "lat": 47.6976812, "lon": 8.7015932 },
+    { "lat": 47.6982347, "lon": 8.7019449 },
+    { "lat": 47.6986030, "lon": 8.7006654 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 119370343,
+  "bounds": {
+    "minlat": 47.6946179,
+    "minlon": 8.6969466,
+    "maxlat": 47.6948111,
+    "maxlon": 8.6973029
+  },
+  "nodes": [
+    1341464248,
+    1341464241,
+    1341464271,
+    1341464251,
+    1341464248
+  ],
+  "geometry": [
+    { "lat": 47.6948111, "lon": 8.6970126 },
+    { "lat": 47.6947401, "lon": 8.6973029 },
+    { "lat": 47.6946179, "lon": 8.6972369 },
+    { "lat": 47.6946889, "lon": 8.6969466 },
+    { "lat": 47.6948111, "lon": 8.6970126 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "volleyball",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 150249048,
+  "bounds": {
+    "minlat": 47.6924201,
+    "minlon": 8.6815224,
+    "maxlat": 47.6928675,
+    "maxlon": 8.6821457
+  },
+  "nodes": [
+    1631764825,
+    1631764811,
+    1631764815,
+    1631764821,
+    1631764825
+  ],
+  "geometry": [
+    { "lat": 47.6927272, "lon": 8.6815224 },
+    { "lat": 47.6928675, "lon": 8.6817893 },
+    { "lat": 47.6925604, "lon": 8.6821457 },
+    { "lat": 47.6924201, "lon": 8.6818788 },
+    { "lat": 47.6927272, "lon": 8.6815224 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "handball",
+    "surface": "tartan"
+  }
+},
+{
+  "type": "way",
+  "id": 159097696,
+  "bounds": {
+    "minlat": 47.6984987,
+    "minlon": 8.6518594,
+    "maxlat": 47.6988411,
+    "maxlon": 8.6528941
+  },
+  "nodes": [
+    1711950725,
+    1711950740,
+    1711950724,
+    1711950742,
+    1711950725
+  ],
+  "geometry": [
+    { "lat": 47.6987852, "lon": 8.6518594 },
+    { "lat": 47.6984987, "lon": 8.6518947 },
+    { "lat": 47.6985545, "lon": 8.6528941 },
+    { "lat": 47.6988411, "lon": 8.6528588 },
+    { "lat": 47.6987852, "lon": 8.6518594 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "name": "Sportplatz Zündelgut",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 159097701,
+  "bounds": {
+    "minlat": 47.6986280,
+    "minlon": 8.6531164,
+    "maxlat": 47.6988826,
+    "maxlon": 8.6534847
+  },
+  "nodes": [
+    1711950723,
+    1711950704,
+    1712488384,
+    1712488343,
+    1712488358,
+    1712488369,
+    1711950695,
+    1711950692,
+    1711950723
+  ],
+  "geometry": [
+    { "lat": 47.6988826, "lon": 8.6532372 },
+    { "lat": 47.6986978, "lon": 8.6532316 },
+    { "lat": 47.6986993, "lon": 8.6531184 },
+    { "lat": 47.6986331, "lon": 8.6531164 },
+    { "lat": 47.6986280, "lon": 8.6534828 },
+    { "lat": 47.6986902, "lon": 8.6534847 },
+    { "lat": 47.6986912, "lon": 8.6534099 },
+    { "lat": 47.6988801, "lon": 8.6534157 },
+    { "lat": 47.6988826, "lon": 8.6532372 }
+  ],
+  "tags": {
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "Alte Turnhalle Zündelgut",
+    "source": "GIS Schaffhausen"
+  }
+},
+{
+  "type": "way",
+  "id": 159146542,
+  "bounds": {
+    "minlat": 47.7060590,
+    "minlon": 8.7227885,
+    "maxlat": 47.7062037,
+    "maxlon": 8.7230533
+  },
+  "nodes": [
+    1712476082,
+    10798112928,
+    10798112925,
+    1712476109,
+    7536507007,
+    7536507006,
+    7536507005,
+    7536507008,
+    1712476089,
+    7536507009,
+    7536507010,
+    1712476054,
+    1712476082
+  ],
+  "geometry": [
+    { "lat": 47.7061215, "lon": 8.7227885 },
+    { "lat": 47.7061366, "lon": 8.7228015 },
+    { "lat": 47.7061712, "lon": 8.7228312 },
+    { "lat": 47.7062037, "lon": 8.7228592 },
+    { "lat": 47.7061705, "lon": 8.7229491 },
+    { "lat": 47.7061737, "lon": 8.7229517 },
+    { "lat": 47.7061707, "lon": 8.7229599 },
+    { "lat": 47.7061675, "lon": 8.7229573 },
+    { "lat": 47.7061407, "lon": 8.7230301 },
+    { "lat": 47.7061021, "lon": 8.7230533 },
+    { "lat": 47.7060696, "lon": 8.7230265 },
+    { "lat": 47.7060590, "lon": 8.7229668 },
+    { "lat": 47.7061215, "lon": 8.7227885 }
+  ],
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "protestant",
+    "name": "Evangelisch-reformierte Kirche Dörflingen",
+    "religion": "christian",
+    "wikidata": "Q29787110"
+  }
+},
+{
+  "type": "way",
+  "id": 167045554,
+  "bounds": {
+    "minlat": 47.6835651,
+    "minlon": 8.6718789,
+    "maxlat": 47.6845520,
+    "maxlon": 8.6735554
+  },
+  "nodes": [
+    1784518224,
+    1784518151,
+    1784518218,
+    1784518160,
+    1784518224
+  ],
+  "geometry": [
+    { "lat": 47.6845520, "lon": 8.6731382 },
+    { "lat": 47.6839852, "lon": 8.6735554 },
+    { "lat": 47.6835651, "lon": 8.6722961 },
+    { "lat": 47.6841320, "lon": 8.6718789 },
+    { "lat": 47.6845520, "lon": 8.6731382 }
+  ],
+  "tags": {
+    "leisure": "pitch"
+  }
+},
+{
+  "type": "way",
+  "id": 168101268,
+  "bounds": {
+    "minlat": 47.6973143,
+    "minlon": 8.6623489,
+    "maxlat": 47.6979703,
+    "maxlon": 8.6638413
+  },
+  "nodes": [
+    1794081259,
+    1794081279,
+    1794081205,
+    8112756417,
+    8112753412,
+    8112753411,
+    1794081257,
+    8112753416,
+    8112753415,
+    1794081259
+  ],
+  "geometry": [
+    { "lat": 47.6976511, "lon": 8.6623489 },
+    { "lat": 47.6973143, "lon": 8.6625124 },
+    { "lat": 47.6975528, "lon": 8.6635882 },
+    { "lat": 47.6977555, "lon": 8.6637332 },
+    { "lat": 47.6977775, "lon": 8.6637443 },
+    { "lat": 47.6979033, "lon": 8.6638076 },
+    { "lat": 47.6979703, "lon": 8.6638413 },
+    { "lat": 47.6978280, "lon": 8.6630848 },
+    { "lat": 47.6978020, "lon": 8.6630400 },
+    { "lat": 47.6976511, "lon": 8.6623489 }
+  ],
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "TC Buchthalen",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 168112780,
+  "bounds": {
+    "minlat": 47.6964936,
+    "minlon": 8.6578909,
+    "maxlat": 47.6965832,
+    "maxlon": 8.6580753
+  },
+  "nodes": [
+    1794207369,
+    3734262153,
+    3734262151,
+    1794207373,
+    1794207393,
+    3734262149,
+    3734262150,
+    1794207350,
+    1794207369
+  ],
+  "geometry": [
+    { "lat": 47.6965827, "lon": 8.6579239 },
+    { "lat": 47.6965569, "lon": 8.6578914 },
+    { "lat": 47.6965201, "lon": 8.6578909 },
+    { "lat": 47.6964968, "lon": 8.6579257 },
+    { "lat": 47.6964936, "lon": 8.6580366 },
+    { "lat": 47.6965205, "lon": 8.6580744 },
+    { "lat": 47.6965557, "lon": 8.6580753 },
+    { "lat": 47.6965832, "lon": 8.6580367 },
+    { "lat": 47.6965827, "lon": 8.6579239 }
+  ],
+  "tags": {
+    "addr:full": "Windeggstrasse, 8203 Schaffhausen",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "protestant",
+    "image": "https://commons.wikimedia.org/wiki/File:Kirche_Buchthalen.JPG",
+    "name": "Kirche Buchthalen",
+    "religion": "christian",
+    "wikidata": "Q55382651",
+    "wikimedia_commons": "Category:Kirche Buchthalen (Windeggstrasse, Schaffhausen)"
+  }
+},
+{
+  "type": "way",
+  "id": 193409828,
+  "bounds": {
+    "minlat": 47.7062041,
+    "minlon": 8.7241353,
+    "maxlat": 47.7074026,
+    "maxlon": 8.7257092
+  },
+  "nodes": [
+    2039181483,
+    2039181439,
+    10814766011,
+    10814766012,
+    2039181508,
+    2039181489,
+    2039181525,
+    2039181533,
+    2039181514,
+    2039181413,
+    13955761295,
+    2039181483
+  ],
+  "geometry": [
+    { "lat": 47.7068496, "lon": 8.7242168 },
+    { "lat": 47.7071160, "lon": 8.7244696 },
+    { "lat": 47.7072643, "lon": 8.7241353 },
+    { "lat": 47.7073567, "lon": 8.7242225 },
+    { "lat": 47.7074026, "lon": 8.7242658 },
+    { "lat": 47.7070633, "lon": 8.7250383 },
+    { "lat": 47.7067702, "lon": 8.7257092 },
+    { "lat": 47.7063656, "lon": 8.7252571 },
+    { "lat": 47.7062041, "lon": 8.7250544 },
+    { "lat": 47.7066167, "lon": 8.7246443 },
+    { "lat": 47.7067964, "lon": 8.7242593 },
+    { "lat": 47.7068496, "lon": 8.7242168 }
+  ],
+  "tags": {
+    "leisure": "pitch"
+  }
+},
+{
+  "type": "way",
+  "id": 201660018,
+  "bounds": {
+    "minlat": 47.7169063,
+    "minlon": 8.6497729,
+    "maxlat": 47.7171302,
+    "maxlon": 8.6502682
+  },
+  "nodes": [
+    2116830773,
+    2116830769,
+    2116830730,
+    2116830709,
+    2116830713,
+    2116830739,
+    2116830773
+  ],
+  "geometry": [
+    { "lat": 47.7171302, "lon": 8.6498059 },
+    { "lat": 47.7170950, "lon": 8.6502682 },
+    { "lat": 47.7169975, "lon": 8.6502667 },
+    { "lat": 47.7169063, "lon": 8.6502105 },
+    { "lat": 47.7169941, "lon": 8.6498623 },
+    { "lat": 47.7170174, "lon": 8.6497729 },
+    { "lat": 47.7171302, "lon": 8.6498059 }
+  ],
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "catholic",
+    "name": "St. Peter",
+    "religion": "christian",
+    "wikidata": "Q55381141"
+  }
+},
+{
+  "type": "way",
+  "id": 205893303,
+  "bounds": {
+    "minlat": 47.6865704,
+    "minlon": 8.6521696,
+    "maxlat": 47.6868989,
+    "maxlon": 8.6525898
+  },
+  "nodes": [
+    2158831805,
+    2158831802,
+    2158831804,
+    2158831800,
+    2158831799,
+    2158831797,
+    2158831807,
+    2158831809,
+    2158831812,
+    2158831816,
+    2158831822,
+    2158831824,
+    2158831827,
+    2158831833,
+    2158831851,
+    2158831832,
+    2158831829,
+    2158831825,
+    2158831818,
+    2158831819,
+    2158831814,
+    2158831811,
+    2158831805
+  ],
+  "geometry": [
+    { "lat": 47.6866678, "lon": 8.6521696 },
+    { "lat": 47.6866297, "lon": 8.6522955 },
+    { "lat": 47.6866392, "lon": 8.6523011 },
+    { "lat": 47.6866113, "lon": 8.6524061 },
+    { "lat": 47.6865958, "lon": 8.6523970 },
+    { "lat": 47.6865704, "lon": 8.6524926 },
+    { "lat": 47.6867240, "lon": 8.6525827 },
+    { "lat": 47.6867282, "lon": 8.6525669 },
+    { "lat": 47.6867674, "lon": 8.6525898 },
+    { "lat": 47.6868089, "lon": 8.6524370 },
+    { "lat": 47.6868210, "lon": 8.6524338 },
+    { "lat": 47.6868317, "lon": 8.6524256 },
+    { "lat": 47.6868373, "lon": 8.6524144 },
+    { "lat": 47.6868675, "lon": 8.6524321 },
+    { "lat": 47.6868989, "lon": 8.6523143 },
+    { "lat": 47.6868539, "lon": 8.6522879 },
+    { "lat": 47.6868456, "lon": 8.6522626 },
+    { "lat": 47.6868348, "lon": 8.6522460 },
+    { "lat": 47.6868121, "lon": 8.6522310 },
+    { "lat": 47.6868128, "lon": 8.6522159 },
+    { "lat": 47.6867723, "lon": 8.6522144 },
+    { "lat": 47.6867528, "lon": 8.6522286 },
+    { "lat": 47.6866678, "lon": 8.6521696 }
+  ],
+  "tags": {
+    "addr:housenumber": "11",
+    "addr:street": "Forbüelstrasse",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "catholic",
+    "name": "St. Leonhard",
+    "religion": "christian",
+    "start_date": "2008",
+    "wikidata": "Q18028060",
+    "wikipedia": "de:St. Leonhard (Feuerthalen)"
+  }
+},
+{
+  "type": "way",
+  "id": 225047920,
+  "bounds": {
+    "minlat": 47.6983109,
+    "minlon": 8.7038124,
+    "maxlat": 47.6984143,
+    "maxlon": 8.7041679
+  },
+  "nodes": [
+    2338726071,
+    2338726072,
+    6448724898,
+    6448724897,
+    2338726070,
+    6448724899,
+    6448724900,
+    2338726069,
+    2338726071
+  ],
+  "geometry": [
+    { "lat": 47.6983928, "lon": 8.7038124 },
+    { "lat": 47.6984143, "lon": 8.7040913 },
+    { "lat": 47.6984050, "lon": 8.7040929 },
+    { "lat": 47.6984096, "lon": 8.7041527 },
+    { "lat": 47.6983197, "lon": 8.7041679 },
+    { "lat": 47.6983109, "lon": 8.7040537 },
+    { "lat": 47.6983371, "lon": 8.7040493 },
+    { "lat": 47.6983198, "lon": 8.7038248 },
+    { "lat": 47.6983928, "lon": 8.7038124 }
+  ],
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "protestant",
+    "name": "Bergkirche St. Michael",
+    "religion": "christian",
+    "wikidata": "Q819912"
+  }
+},
+{
+  "type": "way",
+  "id": 241918718,
+  "bounds": {
+    "minlat": 47.6966868,
+    "minlon": 8.6919924,
+    "maxlat": 47.6969764,
+    "maxlon": 8.6922362
+  },
+  "nodes": [
+    2494902405,
+    2494902406,
+    2494902407,
+    2494902408,
+    2494902409,
+    2494902410,
+    2494902411,
+    2494902412,
+    5159823100,
+    5159823101,
+    9045559525,
+    5159823103,
+    5159823102,
+    2494902405
+  ],
+  "geometry": [
+    { "lat": 47.6969764, "lon": 8.6920616 },
+    { "lat": 47.6967679, "lon": 8.6919924 },
+    { "lat": 47.6967622, "lon": 8.6920300 },
+    { "lat": 47.6967022, "lon": 8.6920101 },
+    { "lat": 47.6966868, "lon": 8.6921124 },
+    { "lat": 47.6967470, "lon": 8.6921324 },
+    { "lat": 47.6967418, "lon": 8.6921672 },
+    { "lat": 47.6969499, "lon": 8.6922362 },
+    { "lat": 47.6969585, "lon": 8.6921788 },
+    { "lat": 47.6969659, "lon": 8.6921812 },
+    { "lat": 47.6969700, "lon": 8.6921531 },
+    { "lat": 47.6969739, "lon": 8.6921264 },
+    { "lat": 47.6969670, "lon": 8.6921242 },
+    { "lat": 47.6969764, "lon": 8.6920616 }
+  ],
+  "tags": {
+    "addr:city": "Büsingen am Hochrhein",
+    "addr:country": "DE",
+    "addr:housenumber": "43",
+    "addr:postcode": "78266",
+    "addr:street": "Junkerstraße",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "name": "Dorfkirche Büsingen",
+    "phone": "+49 7734 97343",
+    "religion": "christian",
+    "website": "https://www.buesingen.de/de/Unser-Buesingen/Kirchen/Kirche?view=publish&item=denomination&id=1008",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 241926296,
+  "bounds": {
+    "minlat": 47.6983909,
+    "minlon": 8.6888679,
+    "maxlat": 47.6984699,
+    "maxlon": 8.6890510
+  },
+  "nodes": [
+    2494966029,
+    2494966030,
+    2494966031,
+    9045559529,
+    9045559534,
+    9045559532,
+    2494966032,
+    2494966029
+  ],
+  "geometry": [
+    { "lat": 47.6984699, "lon": 8.6888690 },
+    { "lat": 47.6983920, "lon": 8.6888679 },
+    { "lat": 47.6983909, "lon": 8.6890498 },
+    { "lat": 47.6983957, "lon": 8.6890499 },
+    { "lat": 47.6984105, "lon": 8.6890501 },
+    { "lat": 47.6984346, "lon": 8.6890505 },
+    { "lat": 47.6984687, "lon": 8.6890510 },
+    { "lat": 47.6984699, "lon": 8.6888690 }
+  ],
+  "tags": {
+    "addr:city": "Büsingen am Hochrhein",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "78266",
+    "addr:street": "Schwärzlenstraße",
+    "amenity": "place_of_worship",
+    "building": "chapel",
+    "denomination": "united_methodist",
+    "name": "Evangelisch-methodistische Kirche Büsingen",
+    "phone": "+41 52 625 44 78",
+    "religion": "christian",
+    "website": "https://emk-schaffhausen.ch/meet/predigt-orte/"
+  }
+},
+{
+  "type": "way",
+  "id": 241930924,
+  "bounds": {
+    "minlat": 47.6959015,
+    "minlon": 8.7001993,
+    "maxlat": 47.6962562,
+    "maxlon": 8.7005083
+  },
+  "nodes": [
+    2495009352,
+    3908281331,
+    3908281329,
+    2495009355,
+    2495009352
+  ],
+  "geometry": [
+    { "lat": 47.6962307, "lon": 8.7001993 },
+    { "lat": 47.6962562, "lon": 8.7004268 },
+    { "lat": 47.6959271, "lon": 8.7005083 },
+    { "lat": 47.6959015, "lon": 8.7002809 },
+    { "lat": 47.6962307, "lon": 8.7001993 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 288067451,
+  "bounds": {
+    "minlat": 47.6874462,
+    "minlon": 8.7351901,
+    "maxlat": 47.6876604,
+    "maxlon": 8.7355497
+  },
+  "nodes": [
+    2865939819,
+    2916086732,
+    2916086728,
+    2916086738,
+    2865939819
+  ],
+  "geometry": [
+    { "lat": 47.6876604, "lon": 8.7352709 },
+    { "lat": 47.6875177, "lon": 8.7355497 },
+    { "lat": 47.6874462, "lon": 8.7354689 },
+    { "lat": 47.6875889, "lon": 8.7351901 },
+    { "lat": 47.6876604, "lon": 8.7352709 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "shooting"
+  }
+},
+{
+  "type": "way",
+  "id": 288067469,
+  "bounds": {
+    "minlat": 47.6879326,
+    "minlon": 8.7390100,
+    "maxlat": 47.6882285,
+    "maxlon": 8.7393097
+  },
+  "nodes": [
+    2916086850,
+    2916086848,
+    2916086823,
+    2916086834,
+    2916086850
+  ],
+  "geometry": [
+    { "lat": 47.6882285, "lon": 8.7390999 },
+    { "lat": 47.6881958, "lon": 8.7393097 },
+    { "lat": 47.6879326, "lon": 8.7392133 },
+    { "lat": 47.6879654, "lon": 8.7390100 },
+    { "lat": 47.6882285, "lon": 8.7390999 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 288067485,
+  "bounds": {
+    "minlat": 47.6872104,
+    "minlon": 8.7350557,
+    "maxlat": 47.6875964,
+    "maxlon": 8.7357226
+  },
+  "nodes": [
+    2865939820,
+    2916086700,
+    2916086712,
+    2916086728,
+    2916086738,
+    2916086740,
+    2865939820
+  ],
+  "geometry": [
+    { "lat": 47.6874904, "lon": 8.7350557 },
+    { "lat": 47.6872104, "lon": 8.7356029 },
+    { "lat": 47.6873164, "lon": 8.7357226 },
+    { "lat": 47.6874462, "lon": 8.7354689 },
+    { "lat": 47.6875889, "lon": 8.7351901 },
+    { "lat": 47.6875964, "lon": 8.7351754 },
+    { "lat": 47.6874904, "lon": 8.7350557 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "shooting"
+  }
+},
+{
+  "type": "way",
+  "id": 340420449,
+  "bounds": {
+    "minlat": 47.6995677,
+    "minlon": 8.6667535,
+    "maxlat": 47.7021264,
+    "maxlon": 8.6675346
+  },
+  "nodes": [
+    2800942539,
+    2800942540,
+    7798293092,
+    1711950721,
+    7798293093,
+    1711950717,
+    13269998065,
+    13269998066,
+    2800942539
+  ],
+  "geometry": [
+    { "lat": 47.7021264, "lon": 8.6672740 },
+    { "lat": 47.7021011, "lon": 8.6675346 },
+    { "lat": 47.6995929, "lon": 8.6670365 },
+    { "lat": 47.6995677, "lon": 8.6670312 },
+    { "lat": 47.6995839, "lon": 8.6668612 },
+    { "lat": 47.6995941, "lon": 8.6667535 },
+    { "lat": 47.6996070, "lon": 8.6667562 },
+    { "lat": 47.6998681, "lon": 8.6668098 },
+    { "lat": 47.7021264, "lon": 8.6672740 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "shooting"
+  }
+},
+{
+  "type": "way",
+  "id": 387558902,
+  "bounds": {
+    "minlat": 47.6959271,
+    "minlon": 8.7004268,
+    "maxlat": 47.6962817,
+    "maxlon": 8.7007357
+  },
+  "nodes": [
+    3908281331,
+    3908281332,
+    3908281330,
+    3908281329,
+    3908281331
+  ],
+  "geometry": [
+    { "lat": 47.6962562, "lon": 8.7004268 },
+    { "lat": 47.6962817, "lon": 8.7006542 },
+    { "lat": 47.6959526, "lon": 8.7007357 },
+    { "lat": 47.6959271, "lon": 8.7005083 },
+    { "lat": 47.6962562, "lon": 8.7004268 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 387558903,
+  "bounds": {
+    "minlat": 47.6959526,
+    "minlon": 8.7006542,
+    "maxlat": 47.6963078,
+    "maxlon": 8.7009639
+  },
+  "nodes": [
+    3908281332,
+    2495009353,
+    2495009354,
+    3908281330,
+    3908281332
+  ],
+  "geometry": [
+    { "lat": 47.6962817, "lon": 8.7006542 },
+    { "lat": 47.6963078, "lon": 8.7008807 },
+    { "lat": 47.6959787, "lon": 8.7009639 },
+    { "lat": 47.6959526, "lon": 8.7007357 },
+    { "lat": 47.6962817, "lon": 8.7006542 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 404201877,
+  "bounds": {
+    "minlat": 47.6981937,
+    "minlon": 8.6530692,
+    "maxlat": 47.6986158,
+    "maxlon": 8.6535399
+  },
+  "nodes": [
+    4064751925,
+    4064751926,
+    4064751927,
+    4064751928,
+    4064751925
+  ],
+  "geometry": [
+    { "lat": 47.6985511, "lon": 8.6530692 },
+    { "lat": 47.6981937, "lon": 8.6532389 },
+    { "lat": 47.6982585, "lon": 8.6535399 },
+    { "lat": 47.6986158, "lon": 8.6533701 },
+    { "lat": 47.6985511, "lon": 8.6530692 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "multi",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 482697778,
+  "bounds": {
+    "minlat": 47.7192545,
+    "minlon": 8.6596338,
+    "maxlat": 47.7194811,
+    "maxlon": 8.6598315
+  },
+  "nodes": [
+    4754990463,
+    4754990464,
+    4754990465,
+    4754990466,
+    4754990463
+  ],
+  "geometry": [
+    { "lat": 47.7194647, "lon": 8.6596338 },
+    { "lat": 47.7194811, "lon": 8.6597792 },
+    { "lat": 47.7192709, "lon": 8.6598315 },
+    { "lat": 47.7192545, "lon": 8.6596861 },
+    { "lat": 47.7194647, "lon": 8.6596338 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 482697779,
+  "bounds": {
+    "minlat": 47.7196499,
+    "minlon": 8.6603765,
+    "maxlat": 47.7200635,
+    "maxlon": 8.6607863
+  },
+  "nodes": [
+    4754990467,
+    4754990468,
+    4754990469,
+    4754990470,
+    4754990467
+  ],
+  "geometry": [
+    { "lat": 47.7200287, "lon": 8.6603765 },
+    { "lat": 47.7200635, "lon": 8.6606946 },
+    { "lat": 47.7196848, "lon": 8.6607863 },
+    { "lat": 47.7196499, "lon": 8.6604682 },
+    { "lat": 47.7200287, "lon": 8.6603765 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "skateboard"
+  }
+},
+{
+  "type": "way",
+  "id": 612348461,
+  "bounds": {
+    "minlat": 47.6865929,
+    "minlon": 8.6578362,
+    "maxlat": 47.6867784,
+    "maxlon": 8.6581708
+  },
+  "nodes": [
+    5796542934,
+    5796542935,
+    5796542936,
+    5796542937,
+    5796542934
+  ],
+  "geometry": [
+    { "lat": 47.6867784, "lon": 8.6579031 },
+    { "lat": 47.6866635, "lon": 8.6578362 },
+    { "lat": 47.6865929, "lon": 8.6581038 },
+    { "lat": 47.6867078, "lon": 8.6581708 },
+    { "lat": 47.6867784, "lon": 8.6579031 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "beachvolleyball",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 614295553,
+  "bounds": {
+    "minlat": 47.6916384,
+    "minlon": 8.7177168,
+    "maxlat": 47.6931882,
+    "maxlon": 8.7252531
+  },
+  "nodes": [
+    5811001528,
+    5811001529,
+    5811001530,
+    5811001531,
+    3009127461,
+    5811001533,
+    5811001534,
+    5811001535,
+    5811001536,
+    5811001537,
+    5811001538,
+    5811001539,
+    5811001540,
+    5811001541,
+    5811001542,
+    5811001543,
+    5811001544,
+    5811001545,
+    5811001546,
+    5811001547,
+    5811001548,
+    5811001549,
+    5811001550,
+    5811001528
+  ],
+  "geometry": [
+    { "lat": 47.6916895, "lon": 8.7177168 },
+    { "lat": 47.6919332, "lon": 8.7186422 },
+    { "lat": 47.6923124, "lon": 8.7202569 },
+    { "lat": 47.6925062, "lon": 8.7209944 },
+    { "lat": 47.6927280, "lon": 8.7218631 },
+    { "lat": 47.6931826, "lon": 8.7250822 },
+    { "lat": 47.6931882, "lon": 8.7252339 },
+    { "lat": 47.6931374, "lon": 8.7252328 },
+    { "lat": 47.6930691, "lon": 8.7252531 },
+    { "lat": 47.6930265, "lon": 8.7246216 },
+    { "lat": 47.6929742, "lon": 8.7241705 },
+    { "lat": 47.6929468, "lon": 8.7239619 },
+    { "lat": 47.6927351, "lon": 8.7224518 },
+    { "lat": 47.6925483, "lon": 8.7216839 },
+    { "lat": 47.6925035, "lon": 8.7213929 },
+    { "lat": 47.6924375, "lon": 8.7211944 },
+    { "lat": 47.6924041, "lon": 8.7209283 },
+    { "lat": 47.6923373, "lon": 8.7207569 },
+    { "lat": 47.6922310, "lon": 8.7202122 },
+    { "lat": 47.6919524, "lon": 8.7190709 },
+    { "lat": 47.6918705, "lon": 8.7186728 },
+    { "lat": 47.6917042, "lon": 8.7179296 },
+    { "lat": 47.6916384, "lon": 8.7177432 },
+    { "lat": 47.6916895, "lon": 8.7177168 }
+  ],
+  "tags": {
+    "bath:open_air": "yes",
+    "bath:type": "river",
+    "fee": "no",
+    "fixme": "name?",
+    "leisure": "sports_centre",
+    "name": "Laag Badestelle",
+    "sport": "swimming"
+  }
+},
+{
+  "type": "way",
+  "id": 805917255,
+  "bounds": {
+    "minlat": 47.7152288,
+    "minlon": 8.7116687,
+    "maxlat": 47.7178276,
+    "maxlon": 8.7129750
+  },
+  "nodes": [
+    3174894748,
+    7536490749,
+    7536490750,
+    3174894759,
+    3174894748
+  ],
+  "geometry": [
+    { "lat": 47.7152288, "lon": 8.7128101 },
+    { "lat": 47.7177798, "lon": 8.7116687 },
+    { "lat": 47.7178276, "lon": 8.7119034 },
+    { "lat": 47.7152556, "lon": 8.7129750 },
+    { "lat": 47.7152288, "lon": 8.7128101 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "shooting": "range",
+    "sport": "shooting"
+  }
+},
+{
+  "type": "way",
+  "id": 805917257,
+  "bounds": {
+    "minlat": 47.7134821,
+    "minlon": 8.7151080,
+    "maxlat": 47.7136509,
+    "maxlon": 8.7157387
+  },
+  "nodes": [
+    7536490756,
+    7536490758,
+    7536490757,
+    7536490755,
+    7536490756
+  ],
+  "geometry": [
+    { "lat": 47.7135249, "lon": 8.7151080 },
+    { "lat": 47.7136509, "lon": 8.7157112 },
+    { "lat": 47.7136031, "lon": 8.7157387 },
+    { "lat": 47.7134821, "lon": 8.7151287 },
+    { "lat": 47.7135249, "lon": 8.7151080 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "shooting": "range",
+    "sport": "shooting"
+  }
+},
+{
+  "type": "way",
+  "id": 805917260,
+  "bounds": {
+    "minlat": 47.7114000,
+    "minlon": 8.7171540,
+    "maxlat": 47.7118049,
+    "maxlon": 8.7176559
+  },
+  "nodes": [
+    7536490764,
+    7536490763,
+    7536490762,
+    7536490761,
+    7536490764
+  ],
+  "geometry": [
+    { "lat": 47.7117144, "lon": 8.7176559 },
+    { "lat": 47.7118049, "lon": 8.7174158 },
+    { "lat": 47.7114904, "lon": 8.7171540 },
+    { "lat": 47.7114000, "lon": 8.7173941 },
+    { "lat": 47.7117144, "lon": 8.7176559 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "equestrian"
+  }
+},
+{
+  "type": "way",
+  "id": 869096382,
+  "bounds": {
+    "minlat": 47.6998160,
+    "minlon": 8.6533789,
+    "maxlat": 47.7000814,
+    "maxlon": 8.6537907
+  },
+  "nodes": [
+    8100664177,
+    8100664176,
+    8100664175,
+    8100664174,
+    8100664173,
+    8100664172,
+    8100664177
+  ],
+  "geometry": [
+    { "lat": 47.7000814, "lon": 8.6534125 },
+    { "lat": 47.7000706, "lon": 8.6535694 },
+    { "lat": 47.6999207, "lon": 8.6535479 },
+    { "lat": 47.6999009, "lon": 8.6537907 },
+    { "lat": 47.6998160, "lon": 8.6537772 },
+    { "lat": 47.6998476, "lon": 8.6533789 },
+    { "lat": 47.7000814, "lon": 8.6534125 }
+  ],
+  "tags": {
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "Hallenbad Winkelried",
+    "sport": "swimming"
+  }
+},
+{
+  "type": "way",
+  "id": 870919003,
+  "bounds": {
+    "minlat": 47.7055981,
+    "minlon": 8.6568811,
+    "maxlat": 47.7057442,
+    "maxlon": 8.6571985
+  },
+  "nodes": [
+    8112753345,
+    8112753344,
+    8112753343,
+    8112753342,
+    8112753345
+  ],
+  "geometry": [
+    { "lat": 47.7055981, "lon": 8.6571961 },
+    { "lat": 47.7056005, "lon": 8.6568811 },
+    { "lat": 47.7057442, "lon": 8.6568835 },
+    { "lat": 47.7057418, "lon": 8.6571985 },
+    { "lat": 47.7055981, "lon": 8.6571961 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "basketball",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 870919004,
+  "bounds": {
+    "minlat": 47.7054060,
+    "minlon": 8.6568781,
+    "maxlat": 47.7055521,
+    "maxlon": 8.6571955
+  },
+  "nodes": [
+    8112753346,
+    8112753347,
+    8112753349,
+    8112753348,
+    8112753346
+  ],
+  "geometry": [
+    { "lat": 47.7054060, "lon": 8.6571931 },
+    { "lat": 47.7054084, "lon": 8.6568781 },
+    { "lat": 47.7055521, "lon": 8.6568805 },
+    { "lat": 47.7055497, "lon": 8.6571955 },
+    { "lat": 47.7054060, "lon": 8.6571931 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "basketball",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 870919014,
+  "bounds": {
+    "minlat": 47.6973778,
+    "minlon": 8.6624281,
+    "maxlat": 47.6976407,
+    "maxlon": 8.6627108
+  },
+  "nodes": [
+    8112753401,
+    8112753400,
+    8112753399,
+    8112753398,
+    8112753401
+  ],
+  "geometry": [
+    { "lat": 47.6973778, "lon": 8.6625399 },
+    { "lat": 47.6974164, "lon": 8.6627108 },
+    { "lat": 47.6976407, "lon": 8.6625990 },
+    { "lat": 47.6976022, "lon": 8.6624281 },
+    { "lat": 47.6973778, "lon": 8.6625399 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 870919015,
+  "bounds": {
+    "minlat": 47.6974270,
+    "minlon": 8.6626467,
+    "maxlat": 47.6976900,
+    "maxlon": 8.6629293
+  },
+  "nodes": [
+    8112753405,
+    8112753404,
+    8112753403,
+    8112753402,
+    8112753405
+  ],
+  "geometry": [
+    { "lat": 47.6974270, "lon": 8.6627585 },
+    { "lat": 47.6974656, "lon": 8.6629293 },
+    { "lat": 47.6976900, "lon": 8.6628175 },
+    { "lat": 47.6976514, "lon": 8.6626467 },
+    { "lat": 47.6974270, "lon": 8.6627585 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 870919016,
+  "bounds": {
+    "minlat": 47.6974744,
+    "minlon": 8.6628642,
+    "maxlat": 47.6977373,
+    "maxlon": 8.6631468
+  },
+  "nodes": [
+    8112753408,
+    8112753406,
+    8112753407,
+    8112753409,
+    8112753408
+  ],
+  "geometry": [
+    { "lat": 47.6974744, "lon": 8.6629760 },
+    { "lat": 47.6975129, "lon": 8.6631468 },
+    { "lat": 47.6977373, "lon": 8.6630350 },
+    { "lat": 47.6976987, "lon": 8.6628642 },
+    { "lat": 47.6974744, "lon": 8.6629760 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 911874766,
+  "bounds": {
+    "minlat": 47.6988018,
+    "minlon": 8.6610968,
+    "maxlat": 47.6991041,
+    "maxlon": 8.6618117
+  },
+  "nodes": [
+    8467852542,
+    8467852543,
+    8467852544,
+    1783588855,
+    1783588843,
+    1783588839,
+    8467852545,
+    8467852542
+  ],
+  "geometry": [
+    { "lat": 47.6989274, "lon": 8.6618117 },
+    { "lat": 47.6991041, "lon": 8.6615857 },
+    { "lat": 47.6989877, "lon": 8.6611571 },
+    { "lat": 47.6988962, "lon": 8.6610968 },
+    { "lat": 47.6988744, "lon": 8.6612451 },
+    { "lat": 47.6988018, "lon": 8.6613667 },
+    { "lat": 47.6988042, "lon": 8.6614736 },
+    { "lat": 47.6989274, "lon": 8.6618117 }
+  ],
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 1008856045,
+  "bounds": {
+    "minlat": 47.7164728,
+    "minlon": 8.6661017,
+    "maxlat": 47.7177218,
+    "maxlon": 8.6679407
+  },
+  "nodes": [
+    9308476982,
+    9308476981,
+    9308476980,
+    9308476979,
+    9308476982
+  ],
+  "geometry": [
+    { "lat": 47.7177218, "lon": 8.6671968 },
+    { "lat": 47.7172352, "lon": 8.6679407 },
+    { "lat": 47.7164728, "lon": 8.6668456 },
+    { "lat": 47.7169594, "lon": 8.6661017 },
+    { "lat": 47.7177218, "lon": 8.6671968 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 1130932649,
+  "bounds": {
+    "minlat": 47.6959787,
+    "minlon": 8.7008807,
+    "maxlat": 47.6963356,
+    "maxlon": 8.7012067
+  },
+  "nodes": [
+    2495009353,
+    10539873504,
+    10539873505,
+    2495009354,
+    2495009353
+  ],
+  "geometry": [
+    { "lat": 47.6963078, "lon": 8.7008807 },
+    { "lat": 47.6963356, "lon": 8.7011235 },
+    { "lat": 47.6960066, "lon": 8.7012067 },
+    { "lat": 47.6959787, "lon": 8.7009639 },
+    { "lat": 47.6963078, "lon": 8.7008807 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1162831529,
+  "bounds": {
+    "minlat": 47.7071160,
+    "minlon": 8.7241353,
+    "maxlat": 47.7073567,
+    "maxlon": 8.7245597
+  },
+  "nodes": [
+    2039181439,
+    10814766011,
+    10814766012,
+    10814766013,
+    2039181439
+  ],
+  "geometry": [
+    { "lat": 47.7071160, "lon": 8.7244696 },
+    { "lat": 47.7072643, "lon": 8.7241353 },
+    { "lat": 47.7073567, "lon": 8.7242225 },
+    { "lat": 47.7072088, "lon": 8.7245597 },
+    { "lat": 47.7071160, "lon": 8.7244696 }
+  ],
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 1163342169,
+  "bounds": {
+    "minlat": 47.7196830,
+    "minlon": 8.6600191,
+    "maxlat": 47.7199096,
+    "maxlon": 8.6602168
+  },
+  "nodes": [
+    10819203853,
+    10819203852,
+    10819203851,
+    10819203850,
+    10819203853
+  ],
+  "geometry": [
+    { "lat": 47.7198932, "lon": 8.6600191 },
+    { "lat": 47.7199096, "lon": 8.6601645 },
+    { "lat": 47.7196994, "lon": 8.6602168 },
+    { "lat": 47.7196830, "lon": 8.6600714 },
+    { "lat": 47.7198932, "lon": 8.6600191 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 1163342170,
+  "bounds": {
+    "minlat": 47.7192806,
+    "minlon": 8.6598743,
+    "maxlat": 47.7195072,
+    "maxlon": 8.6600720
+  },
+  "nodes": [
+    10819203857,
+    10819203856,
+    10819203855,
+    10819203854,
+    10819203857
+  ],
+  "geometry": [
+    { "lat": 47.7194908, "lon": 8.6598743 },
+    { "lat": 47.7195072, "lon": 8.6600197 },
+    { "lat": 47.7192970, "lon": 8.6600720 },
+    { "lat": 47.7192806, "lon": 8.6599266 },
+    { "lat": 47.7194908, "lon": 8.6598743 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 1252952106,
+  "bounds": {
+    "minlat": 47.6984978,
+    "minlon": 8.6516682,
+    "maxlat": 47.6989138,
+    "maxlon": 8.6530418
+  },
+  "nodes": [
+    11646390386,
+    11646390387,
+    11646390388,
+    11646390389,
+    11646390390,
+    11646390391,
+    11646390386
+  ],
+  "geometry": [
+    { "lat": 47.6988367, "lon": 8.6516682 },
+    { "lat": 47.6984978, "lon": 8.6517104 },
+    { "lat": 47.6985054, "lon": 8.6518449 },
+    { "lat": 47.6987938, "lon": 8.6518091 },
+    { "lat": 47.6988631, "lon": 8.6530418 },
+    { "lat": 47.6989138, "lon": 8.6530355 },
+    { "lat": 47.6988367, "lon": 8.6516682 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "athletics",
+    "surface": "tartan"
+  }
+},
+{
+  "type": "way",
+  "id": 1541034645,
+  "bounds": {
+    "minlat": 47.7000852,
+    "minlon": 8.7391568,
+    "maxlat": 47.7003224,
+    "maxlon": 8.7395640
+  },
+  "nodes": [
+    14029076111,
+    14029076112,
+    14029076113,
+    14029076114,
+    14029076111
+  ],
+  "geometry": [
+    { "lat": 47.7003224, "lon": 8.7392132 },
+    { "lat": 47.7001178, "lon": 8.7391568 },
+    { "lat": 47.7000852, "lon": 8.7395030 },
+    { "lat": 47.7002591, "lon": 8.7395640 },
+    { "lat": 47.7003224, "lon": 8.7392132 }
+  ],
+  "tags": {
+    "leisure": "pitch",
+    "sport": "equestrian"
+  }
+},
+{
+  "type": "relation",
+  "id": 13506476,
+  "bounds": {
+    "minlat": 47.7163621,
+    "minlon": 8.6656621,
+    "maxlat": 47.7180106,
+    "maxlon": 8.6681140
+  },
+  "members": [
+    {
+      "type": "way",
+      "ref": 412957282,
+      "role": "outer",
+      "geometry": [
+         { "lat": 47.7180106, "lon": 8.6670855 },
+         { "lat": 47.7170292, "lon": 8.6656621 },
+         { "lat": 47.7163621, "lon": 8.6666848 },
+         { "lat": 47.7163714, "lon": 8.6669658 },
+         { "lat": 47.7171489, "lon": 8.6680885 },
+         { "lat": 47.7173354, "lon": 8.6681140 },
+         { "lat": 47.7180106, "lon": 8.6670855 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 1008856045,
+      "role": "inner",
+      "geometry": [
+         { "lat": 47.7177218, "lon": 8.6671968 },
+         { "lat": 47.7172352, "lon": 8.6679407 },
+         { "lat": 47.7164728, "lon": 8.6668456 },
+         { "lat": 47.7169594, "lon": 8.6661017 },
+         { "lat": 47.7177218, "lon": 8.6671968 }
+      ]
+    }
+  ],
+  "tags": {
+    "building": "yes",
+    "layer": "1",
+    "leisure": "stadium",
+    "name": "Wefox Arena",
+    "operator": "FC Schaffhausen",
+    "sport": "soccer",
+    "type": "multipolygon",
+    "wikidata": "Q28500460"
+  }
+}
+
+  ]
+}

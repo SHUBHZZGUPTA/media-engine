@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<WMS_Capabilities version="1.3.0"  xmlns="http://www.opengis.net/wms"   xmlns:sld="http://www.opengis.net/sld"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xmlns:ms="http://mapserver.gis.umn.edu/mapserver"   xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0"   xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0"   xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd  http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd  http://inspire.ec.europa.eu/schemas/inspire_vs/1.0  https://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd http://mapserver.gis.umn.edu/mapserver https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;service=WMS&amp;version=1.3.0&amp;request=GetSchemaExtension">
+<Service>
+  <Name>WMS</Name>
+  <Title>WMS NW DOP</Title>
+  <Abstract>Orthophotos sind hochauflösende, verzerrungsfreie, maßstabsgetreue Abbildungen der Erdoberfläche. Sie werden durch photogrammetrische Verfahren in Kenntnis der Orientierungsparameter und unter Hinzunahme eines Digitalen Höhenmodells aus Luftbildern hergestellt, die als Senkrechtaufnahmen vorliegen. Digitale Orthophotos sind georeferenziert, liegen flächendeckend vor und werden in einem 2-jährigen Zyklus erneuert. Sie werden nach dem Produktstandard des Landes, der auf den Festlegungen eines AdV-Standards (AdV Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder) beruht, hergestellt und weisen eine Bodenauflösung von 10cm/Pixel auf. Es handelt sich um 4-Kanal Multispektralbilder mit der Kanalbelegung RGBI (Rot-Grün-Blau-Nahes Infrarot). Mit dem Bildflug 2018 wurde die Prozessierung des DOP als True Orthophoto eingeführt mit den gleichen geometrischen und radiometrischen Qualitäten wie bisher. Die Umstellung auf die neue Produktqualität wird mit der Prozessierung des Bildflugs 2020 Mitte 2021 abgeschlossen sein.</Abstract>
+  <KeywordList>
+      <Keyword>Digitale Orthophotos</Keyword>
+      <Keyword>Digitales Orthophoto</Keyword>
+      <Keyword>Luftbild</Keyword>
+      <Keyword>DOP</Keyword>
+      <Keyword>GSD10</Keyword>
+      <Keyword>CIR</Keyword>
+      <Keyword>Colorinfrarot</Keyword>
+      <Keyword>NIR</Keyword>
+      <Keyword>Nahes Infrarot</Keyword>
+      <Keyword>RGBI</Keyword>
+      <Keyword>NW</Keyword>
+      <Keyword>NRW</Keyword>
+      <Keyword>Bezirksregierung Köln</Keyword>
+      <Keyword>Abteilung 7</Keyword>
+      <Keyword>Geobasis NRW</Keyword>
+      <Keyword>Geobasisdaten</Keyword>
+      <Keyword>Landesvermessung</Keyword>
+      <Keyword>AdV</Keyword>
+      <Keyword>Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder</Keyword>
+      <Keyword>Nordrhein-Westfalen</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>WMS_NW_DOP</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson></ContactPerson>
+      <ContactOrganization>Geobasis NRW</ContactOrganization>
+    </ContactPersonPrimary>
+      <ContactPosition></ContactPosition>
+    <ContactAddress>
+        <AddressType>postalisch</AddressType>
+        <Address></Address>
+        <City>Köln</City>
+        <StateOrProvince>Nordrhein-Westfalen</StateOrProvince>
+        <PostCode>50606</PostCode>
+        <Country>Deutschland</Country>
+    </ContactAddress>
+      <ContactVoiceTelephone>+49(0)221-147-4994</ContactVoiceTelephone>
+      <ContactFacsimileTelephone>+49(0)221-147-4874</ContactFacsimileTelephone>
+  <ContactElectronicMailAddress>geobasis@bezreg-koeln.nrw.de</ContactElectronicMailAddress>
+  </ContactInformation>
+  <Fees>Die Geobasisdaten des amtlichen Vermessungswesens werden als öffentliche Aufgabe gem. VermKatG NRW und gebührenfrei nach Open Data-Prinzipien über online-Verfahren bereitgestellt. Nutzungsbedingungen: Es gelten die durch den IT-Planungsrat im Datenportal für Deutschland (GovData) veröffentlichten einheitlichen Lizenzbedingungen „Datenlizenz Deutschland – Zero“ (https://www.govdata.de/dl-de/zero-2-0). Jede Nutzung ist ohne Einschränkungen oder Bedingungen zulässig. Eine Haftung für die zur Verfügung gestellten Daten und Dienste wird ausgeschlossen. Dies gilt insbesondere für deren Aktualität, Richtigkeit, Verfügbarkeit, Qualität und Vollständigkeit sowie die Kompatibilität und Interoperabilität mit den Systemen des Nutzers. Vom Haftungsausschluss ausgenommen sind gesetzliche Schadensersatzansprüche für eine Verletzung des Lebens, des Körpers und der Gesundheit sowie die gesetzliche Haftung für sonstige Schäden, soweit diese auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung beruhen.</Fees>
+  <AccessConstraints>NONE</AccessConstraints>
+  <MaxWidth>5000</MaxWidth>
+  <MaxHeight>5000</MaxHeight>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/tiff</Format>
+      <Format>image/png; mode=8bit</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/html</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <Format>text/plain</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+  </Request>
+  <Exception>
+    <Format>XML</Format>
+    <Format>INIMAGE</Format>
+    <Format>BLANK</Format>
+  </Exception>
+  <inspire_vs:ExtendedCapabilities>
+    <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
+      <inspire_common:URL>https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=8c57a324-df73-4d0e-861e-0302390b5a4d</inspire_common:URL>
+      <inspire_common:MediaType>application/vnd.iso.19139+xml</inspire_common:MediaType>
+    </inspire_common:MetadataUrl>
+    <inspire_common:SupportedLanguages>
+      <inspire_common:DefaultLanguage><inspire_common:Language>ger</inspire_common:Language></inspire_common:DefaultLanguage>
+    </inspire_common:SupportedLanguages>
+    <inspire_common:ResponseLanguage><inspire_common:Language>ger</inspire_common:Language></inspire_common:ResponseLanguage>
+  </inspire_vs:ExtendedCapabilities>
+  <Layer queryable="1">
+    <Name>WMS_NW_DOP</Name>
+    <Title>WMS NW DOP</Title>
+    <Abstract>Orthophotos sind hochauflösende, verzerrungsfreie, maßstabsgetreue Abbildungen der Erdoberfläche. Sie werden durch photogrammetrische Verfahren in Kenntnis der Orientierungsparameter und unter Hinzunahme eines Digitalen Höhenmodells aus Luftbildern hergestellt, die als Senkrechtaufnahmen vorliegen. Digitale Orthophotos sind georeferenziert, liegen flächendeckend vor und werden in einem 2-jährigen Zyklus erneuert. Sie werden nach dem Produktstandard des Landes, der auf den Festlegungen eines AdV-Standards (AdV Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder) beruht, hergestellt und weisen eine Bodenauflösung von 10cm/Pixel auf. Es handelt sich um 4-Kanal Multispektralbilder mit der Kanalbelegung RGBI (Rot-Grün-Blau-Nahes Infrarot). Mit dem Bildflug 2018 wurde die Prozessierung des DOP als True Orthophoto eingeführt mit den gleichen geometrischen und radiometrischen Qualitäten wie bisher. Die Umstellung auf die neue Produktqualität wird mit der Prozessierung des Bildflugs 2020 Mitte 2021 abgeschlossen sein.</Abstract>
+    <KeywordList>
+        <Keyword>Digitale Orthophotos</Keyword>
+        <Keyword>Digitales Orthophoto</Keyword>
+        <Keyword>Luftbild</Keyword>
+        <Keyword>DOP</Keyword>
+        <Keyword>GSD10</Keyword>
+        <Keyword>CIR</Keyword>
+        <Keyword>Colorinfrarot</Keyword>
+        <Keyword>NIR</Keyword>
+        <Keyword>Nahes Infrarot</Keyword>
+        <Keyword>RGBI</Keyword>
+        <Keyword>NW</Keyword>
+        <Keyword>NRW</Keyword>
+        <Keyword>Bezirksregierung Köln</Keyword>
+        <Keyword>Abteilung 7</Keyword>
+        <Keyword>Geobasis NRW</Keyword>
+        <Keyword>Geobasisdaten</Keyword>
+        <Keyword>Landesvermessung</Keyword>
+        <Keyword>AdV</Keyword>
+        <Keyword>Arbeitsgemeinschaft der Vermessungsverwaltungen der Länder</Keyword>
+        <Keyword>Nordrhein-Westfalen</Keyword>
+        <Keyword>WMS</Keyword>
+        <Keyword>WMS_NW_DOP</Keyword>
+    </KeywordList>
+    <CRS>EPSG:25832</CRS>
+    <CRS>EPSG:3034</CRS>
+    <CRS>EPSG:3035</CRS>
+    <CRS>EPSG:3043</CRS>
+    <CRS>EPSG:3044</CRS>
+    <CRS>EPSG:3045</CRS>
+    <CRS>EPSG:3857</CRS>
+    <CRS>EPSG:4258</CRS>
+    <CRS>EPSG:4326</CRS>
+    <CRS>EPSG:4647</CRS>
+    <CRS>EPSG:5649</CRS>
+    <CRS>EPSG:5650</CRS>
+    <CRS>EPSG:5651</CRS>
+    <CRS>EPSG:5652</CRS>
+    <CRS>EPSG:5653</CRS>
+    <CRS>EPSG:28992</CRS>
+    <CRS>EPSG:25831</CRS>
+    <CRS>EPSG:25833</CRS>
+    <CRS>EPSG:31466</CRS>
+    <CRS>EPSG:31467</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>5.724991</westBoundLongitude>
+        <eastBoundLongitude>9.531542</eastBoundLongitude>
+        <southBoundLatitude>50.150604</southBoundLatitude>
+        <northBoundLatitude>52.602020</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+    <BoundingBox CRS="EPSG:25832"
+                minx="278000" miny="5.56e+06" maxx="536000" maxy="5.828e+06" />
+    <AuthorityURL name="GDI-NW">
+      <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.geoportal.nrw.de"/>
+    </AuthorityURL>
+    <Style>
+       <Name>default</Name>
+       <Title>default</Title>
+       <LegendURL width="35" height="5">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://www.wms.nrw.de/geobasis/wms_nw_dop?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=WMS_NW_DOP&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>nw_dop_utm_info</Name>
+        <Title>DOP Metadaten</Title>
+        <Abstract>Informationen zu den Orthophotos in UTM-Projektion; weitere Metadaten siehe Metadatenkatalog des Geoportals NRW unter www.geoportal.nrw.de</Abstract>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3043</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4647</CRS>
+        <CRS>EPSG:5649</CRS>
+        <CRS>EPSG:5650</CRS>
+        <CRS>EPSG:5651</CRS>
+        <CRS>EPSG:5652</CRS>
+        <CRS>EPSG:5653</CRS>
+        <CRS>EPSG:28992</CRS>
+        <CRS>EPSG:25831</CRS>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:31466</CRS>
+        <CRS>EPSG:31467</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>5.593338</westBoundLongitude>
+            <eastBoundLongitude>9.741582</eastBoundLongitude>
+            <southBoundLatitude>50.057798</southBoundLatitude>
+            <northBoundLatitude>52.799797</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25832"
+                    minx="270100" miny="5.55e+06" maxx="550000" maxy="5.85e+06" />
+        <Identifier authority="GDI-NW">https://registry.gdi-de.org/id/de.nw/DOP</Identifier>
+        <MetadataURL type="TC211">
+          <Format>application/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=56fb584b-10cf-4009-a405-0bef06bb3e00"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="300" height="42">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://www.wms.nrw.de/legends/geobasis/wms_nw_dop/nw_dop_utm_info.png"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>1e+07</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>nw_dop_rgb</Name>
+        <Title>DOP Farbe</Title>
+        <Abstract>RGB-/Colorbild - Normale farbliche Darstellung.</Abstract>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3043</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4647</CRS>
+        <CRS>EPSG:5649</CRS>
+        <CRS>EPSG:5650</CRS>
+        <CRS>EPSG:5651</CRS>
+        <CRS>EPSG:5652</CRS>
+        <CRS>EPSG:5653</CRS>
+        <CRS>EPSG:28992</CRS>
+        <CRS>EPSG:25831</CRS>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:31466</CRS>
+        <CRS>EPSG:31467</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>5.593338</westBoundLongitude>
+            <eastBoundLongitude>9.741582</eastBoundLongitude>
+            <southBoundLatitude>50.057798</southBoundLatitude>
+            <northBoundLatitude>52.799797</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25832"
+                    minx="270100" miny="5.55e+06" maxx="550000" maxy="5.85e+06" />
+        <Identifier authority="GDI-NW">https://registry.gdi-de.org/id/de.nw/DOP</Identifier>
+        <MetadataURL type="TC211">
+          <Format>application/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=56fb584b-10cf-4009-a405-0bef06bb3e00"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="300" height="50">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://www.wms.nrw.de/legends/geobasis/wms_nw_dop/keine_legende.png"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>nw_dop_cir</Name>
+        <Title>DOP Colorinfrarot</Title>
+        <Abstract>CIR-/Colorinfrarot-Bilder - Farbige Darstellung der Kanal-Kombination Infrarot (NIR), Rot (R) und Grün (B). - Bei CIR-Darstellungen treten Bereiche mit Vegetation in Rottönen hervor, da der Pflanzenfarbstoff Chlorophyll das Nahe Infrarot (NIR) besonders stark reflektiert. Die Abgrenzung zu vegetationsfreien Flächen wie versiegelten Böden, Böden ohne Bewuchs oder Gewässern in Blautönen ist sehr deutlich. Diese Eigenschaften können die Identifizierung und geometrische Auswertung speziell in den Themenbereichen Versiegelung, Forst- und Landwirtschaft sowie Umwelt unterstützen.</Abstract>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3043</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4647</CRS>
+        <CRS>EPSG:5649</CRS>
+        <CRS>EPSG:5650</CRS>
+        <CRS>EPSG:5651</CRS>
+        <CRS>EPSG:5652</CRS>
+        <CRS>EPSG:5653</CRS>
+        <CRS>EPSG:28992</CRS>
+        <CRS>EPSG:25831</CRS>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:31466</CRS>
+        <CRS>EPSG:31467</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>5.593338</westBoundLongitude>
+            <eastBoundLongitude>9.741582</eastBoundLongitude>
+            <southBoundLatitude>50.057798</southBoundLatitude>
+            <northBoundLatitude>52.799797</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25832"
+                    minx="270100" miny="5.55e+06" maxx="550000" maxy="5.85e+06" />
+        <Identifier authority="GDI-NW">https://registry.gdi-de.org/id/de.nw/DOP</Identifier>
+        <MetadataURL type="TC211">
+          <Format>application/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=56fb584b-10cf-4009-a405-0bef06bb3e00"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="300" height="50">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://www.wms.nrw.de/legends/geobasis/wms_nw_dop/keine_legende.png"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>nw_dop_nir</Name>
+        <Title>DOP Nahes Infrarot</Title>
+        <Abstract>Infrarot-/IR-Bilder - Graustufendarstellung des Kanals des Nahen Infrarots.</Abstract>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3043</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4647</CRS>
+        <CRS>EPSG:5649</CRS>
+        <CRS>EPSG:5650</CRS>
+        <CRS>EPSG:5651</CRS>
+        <CRS>EPSG:5652</CRS>
+        <CRS>EPSG:5653</CRS>
+        <CRS>EPSG:28992</CRS>
+        <CRS>EPSG:25831</CRS>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:31466</CRS>
+        <CRS>EPSG:31467</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>5.593338</westBoundLongitude>
+            <eastBoundLongitude>9.741582</eastBoundLongitude>
+            <southBoundLatitude>50.057798</southBoundLatitude>
+            <northBoundLatitude>52.799797</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25832"
+                    minx="270100" miny="5.55e+06" maxx="550000" maxy="5.85e+06" />
+        <Identifier authority="GDI-NW">https://registry.gdi-de.org/id/de.nw/DOP</Identifier>
+        <MetadataURL type="TC211">
+          <Format>application/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=56fb584b-10cf-4009-a405-0bef06bb3e00"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="300" height="50">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://www.wms.nrw.de/legends/geobasis/wms_nw_dop/keine_legende.png"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+  </Layer>
+</Capability>
+</WMS_Capabilities>

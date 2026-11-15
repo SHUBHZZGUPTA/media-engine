@@ -10,6 +10,8 @@ Step 1, write the fetch job (NASA GIBS imagery + AWS Terrarium elevation tiles),
   which takes the patch from fp.json zones.lt300 (every frame that needs finer than 300 m per screen pixel, +15%),
   picks the pixel size from the closest frame (mpp_min; Landsat floor ~30 m) and splits it into <=4096 px WMS tiles.
   --patch-only writes a fetch job with just those tiles (to re-sharpen a map that was already built).
+  map3d_prep.py patch <fetch_dir> <art_dir> [--land-only ne_10m_admin_0_countries.geojson]: stitch + colour-match; --land-only
+  blacks out water so turbid seas (Channel, North Sea, deltas) don't show Landsat swath seams; the sea comes from the regional plate.
 Step 2, after outputs/fetch/<id>/ arrives, build the assets:
   python3 map3d_prep.py build outputs/fetch/<id> <art_dir> --admin1 "Pennsylvania" --pin -76.343,40.804
     or --admin0 "Hungary" for a country outline (Natural Earth 50m, fetched from raw.githubusercontent.com)
@@ -102,7 +104,19 @@ def patch_cmd(a):
         x0, x1 = int((CL[0] - L0) / (L1 - L0) * w_), int((CL[1] - L0) / (L1 - L0) * w_); y0, y1 = int((B1 - CL[3]) / (B1 - B0) * h_), int((B1 - CL[2]) / (B1 - B0) * h_)
         ref = n[max(0, y0):y1, max(0, x0):x1].reshape(-1, 3); k = 1.15
     if os.path.exists(old): os.replace(old, A + 'pa_close_prev.jpg')
-    Image.fromarray(np.clip((pc - src.mean(0)) / (src.std(0) + 1e-6) * (ref.std(0) * k) + ref.mean(0), 0, 255).astype(np.uint8)).save(old, quality=92)
+    out = np.clip((pc - src.mean(0)) / (src.std(0) + 1e-6) * (ref.std(0) * k) + ref.mean(0), 0, 255)
+    if a.land_only:   # water -> black, so the shader falls back to the smooth regional plate (turbid seas show Landsat swath seams)
+        CL = J['close']; H_, W_ = out.shape[:2]; m = Image.new('L', (W_, H_), 0); d = ImageDraw.Draw(m)
+        pt = lambda lo, la: ((lo - CL[0]) / (CL[1] - CL[0]) * W_, (CL[3] - la) / (CL[3] - CL[2]) * H_)
+        for f in json.load(open(a.land_only))['features']:
+            g = f['geometry']; polys = g['coordinates'] if g['type'] == 'MultiPolygon' else [g['coordinates']]
+            for poly in polys:
+                r = poly[0]; lo = [c[0] for c in r]; la = [c[1] for c in r]
+                if max(lo) < CL[0] or min(lo) > CL[1] or max(la) < CL[2] or min(la) > CL[3]: continue
+                d.polygon([pt(*c[:2]) for c in r], fill=255)
+        m = m.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(4))   # ~4 px past the vector coast, feathered
+        out = out * (np.asarray(m, np.float32)[..., None] / 255)
+    Image.fromarray(out.astype(np.uint8)).save(old, quality=92)
     M['pa_close_bbox'] = J['close']; json.dump(M, open(A + 'map3d.json', 'w')); print('sharp patch ->', old, J['close'])
 
 
@@ -170,7 +184,7 @@ def build(a):
 ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest='cmd', required=True)
 j = sp.add_parser('job'); j.add_argument('id'); [j.add_argument(k, type=float) for k in ('lon0', 'lon1', 'lat0', 'lat1')]; j.add_argument('--close'); j.add_argument('--zoom', type=int, default=8)  # 7 for very wide (continent-scale) regions
 j.add_argument('--footprint'); j.add_argument('--map'); j.add_argument('--patch-only', action='store_true')
-pp = sp.add_parser('patch'); pp.add_argument('fetch_dir'); pp.add_argument('art_dir')
+pp = sp.add_parser('patch'); pp.add_argument('fetch_dir'); pp.add_argument('art_dir'); pp.add_argument('--land-only', help='Natural Earth admin-0 GeoJSON: keep the patch on land only (sea from the regional plate)')
 cv = sp.add_parser('cov'); cv.add_argument('art_dir')
 b = sp.add_parser('build'); b.add_argument('fetch_dir'); b.add_argument('art_dir'); b.add_argument('--admin1'); b.add_argument('--admin0'); b.add_argument('--pin', required=True)
 b.add_argument('--bbox'); b.add_argument('--close')

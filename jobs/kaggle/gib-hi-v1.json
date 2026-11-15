@@ -1,18 +1,18 @@
 {
  "id": "gib-hi-v1",
- "script": "gpu/gib_render.py",
+ "script": "gpu/hf3d_render.py",
  "accelerator": "NvidiaTeslaT4",
  "internet": true,
  "timeout_minutes": 60,
  "wait_minutes": 150,
  "params": {
-  "name": "gib-hi-v1",
+  "name": "gib-hi-v2",
   "src_parts": [
-   "gib-hi-v1.tgz.part00",
-   "gib-hi-v1.tgz.part01"
+   "gib-hi-v2.tgz.part00",
+   "gib-hi-v2.tgz.part01"
   ],
-  "src_sha256": "951840a55d9f29ac9f37a72622c5c5fa0ddcd73c1efc862c5d3b1c68b357aedf",
-  "dur": 86.244,
+  "src_sha256": "5d67a95f6edf29c0479b3f874e7ee781ab3e5f54ced98b4185c88aba2dea16b9",
+  "dur": 87.989,
   "fps": 30,
   "workers": 3,
   "jpeg_q": 95,
@@ -20,13 +20,14 @@
    0,
    6,
    12,
-   2575,
-   2581,
-   2586
+   2628,
+   2634,
+   2639
   ],
   "still_every_s": 5,
-  "render_timeout_s": 16000
+  "render_timeout_s": 16000,
+  "src_dir": "gib"
  },
- "requested": "2026-11-15T01:04+05:30",
- "try": 5
+ "requested": "2026-11-15T17:25+05:30",
+ "try": 6
 }
