@@ -1,0 +1,63 @@
+{
+ "id": "gta6-commons-q2",
+ "ua": "media-engine/1.0 (BHUGOL maps; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "delay": 1,
+ "files": [
+  {
+   "name": "q_sunnyisles.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Sunny+Isles+Beach+skyline+condominiums+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_floridian2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Floridian+Miami+Beach+West+Avenue+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_edgewater.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Edgewater+Miami+Biscayne+Bay+towers+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_lobster.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Betsy+giant+lobster+Islamorada+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_lobster2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Rain+Barrel+lobster+Islamorada+sculpture+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_okeechobee2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Lake+Okeechobee+aerial+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_sugarcane.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=sugarcane+field+Florida+harvest+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_metromover.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Miami+Metromover+downtown+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_everglades2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Everglades+National+Park+sawgrass+river+of+grass+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_alligator.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=American+alligator+Everglades+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_airboat.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Everglades+airboat+ride+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_wynwood2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Wynwood+murals+warehouse+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_manhole.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Miami+Beach+Ocean+Drive+aerial+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  },
+  {
+   "name": "q_southbeach.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=South+Beach+Miami+aerial+filetype%3Abitmap&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiextmetadatafilter=LicenseShortName%7CArtist%7CDateTimeOriginal&iiurlwidth=1920&format=json"
+  }
+ ]
+}
