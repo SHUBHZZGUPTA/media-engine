@@ -1,0 +1,43 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-31T22:37:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 438961277,
+  "bounds": {
+    "minlat": -8.5290566,
+    "minlon": 179.1920188,
+    "maxlat": -8.5189120,
+    "maxlon": 179.2015470
+  },
+  "nodes": [
+    4365976383,
+    7009822490,
+    7009822496,
+    10739324419,
+    4365976382
+  ],
+  "geometry": [
+    { "lat": -8.5290566, "lon": 179.1920188 },
+    { "lat": -8.5252559, "lon": 179.1955886 },
+    { "lat": -8.5250451, "lon": 179.1957866 },
+    { "lat": -8.5248577, "lon": 179.1959626 },
+    { "lat": -8.5189120, "lon": 179.2015470 }
+  ],
+  "tags": {
+    "aeroway": "runway",
+    "length": "1524",
+    "ref": "03/21",
+    "surface": "asphalt",
+    "width": "45"
+  }
+}
+
+  ]
+}
