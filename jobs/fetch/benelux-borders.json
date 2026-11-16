@@ -1,0 +1,22 @@
+{
+ "id": "benelux-borders",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "gisco_BE.geojson",
+   "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/distribution/BE-region-01m-4326-2020.geojson"
+  },
+  {
+   "name": "gisco_NL.geojson",
+   "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/distribution/NL-region-01m-4326-2020.geojson"
+  },
+  {
+   "name": "gb_BEL_ADM1.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BEL/ADM1/geoBoundaries-BEL-ADM1.geojson"
+  },
+  {
+   "name": "gb_BEL_ADM3.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BEL/ADM3/geoBoundaries-BEL-ADM3.geojson"
+  }
+ ]
+}
