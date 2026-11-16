@@ -1,0 +1,38 @@
+{
+ "id": "dv-t7",
+ "delay": 2,
+ "files": [
+  {
+   "name": "osm_coastGM_0b0_0.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.0%2C-17.0%2C16.5%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b1_0.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.5%2C-17.0%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b0_1.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.0%2C-17.0%2C16.5%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b1_1.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.5%2C-17.0%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b0_2.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.0%2C-17.0%2C16.5%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b1_2.json",
+   "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.5%2C-17.0%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b0_3.json",
+   "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.0%2C-17.0%2C16.5%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b1_3.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.5%2C-17.0%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  }
+ ]
+}
