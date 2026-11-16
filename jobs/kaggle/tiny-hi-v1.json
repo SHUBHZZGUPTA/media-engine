@@ -1,0 +1,42 @@
+{
+ "id": "tiny-hi-v1",
+ "script": "gpu/hf3d_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 150,
+ "params": {
+  "name": "tiny-hi-v1",
+  "src_parts": [
+   "tiny.tgz.part00",
+   "tiny.tgz.part01",
+   "tiny.tgz.part02"
+  ],
+  "src_sha256": "8f15d5493b67a5f074b6c64bd107c5da0d58a97ec72b941b35805d2a1e67fdcc",
+  "dur": 61.921,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   30,
+   129,
+   300,
+   480,
+   600,
+   720,
+   840,
+   900,
+   1080,
+   1260,
+   1410,
+   1560,
+   1680,
+   1800
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "tiny",
+  "page_dir": "hf_hi"
+ },
+ "requested": "2026-11-16T14:40+05:30"
+}
