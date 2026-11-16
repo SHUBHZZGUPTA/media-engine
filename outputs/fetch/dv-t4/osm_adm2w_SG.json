@@ -1,0 +1,4193 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-24T11:04:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 53549914,
+  "bounds": {
+    "minlat": 1.1956685,
+    "minlon": 103.5655797,
+    "maxlat": 1.2693120,
+    "maxlon": 103.5856950
+  },
+  "nodes": [
+    2872820107,
+    10680295468,
+    13327687573
+  ],
+  "geometry": [
+    { "lat": 1.2693120, "lon": 103.5856950 },
+    { "lat": 1.2636372, "lon": 103.5774028 },
+    { "lat": 1.1956685, "lon": 103.5655797 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "disputed": "yes",
+    "maritime": "yes",
+    "note": "course of the boundary is unclear as there may be historical titels which may affect the course of the boundary"
+  }
+},
+{
+  "type": "way",
+  "id": 190681125,
+  "bounds": {
+    "minlat": 1.1303611,
+    "minlon": 103.5655797,
+    "maxlat": 1.1956685,
+    "maxlon": 103.8261698
+  },
+  "nodes": [
+    13327687573,
+    13327693114,
+    3404763110,
+    1879216357,
+    1879216355,
+    1879216356,
+    13327687572
+  ],
+  "geometry": [
+    { "lat": 1.1956685, "lon": 103.5655797 },
+    { "lat": 1.1955000, "lon": 103.5666667 },
+    { "lat": 1.1873193, "lon": 103.6602652 },
+    { "lat": 1.1794444, "lon": 103.6707222 },
+    { "lat": 1.1303611, "lon": 103.7406944 },
+    { "lat": 1.1714444, "lon": 103.8050000 },
+    { "lat": 1.1809141, "lon": 103.8261698 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Indonesia",
+    "name:de": "Singapur - Indonesien",
+    "name:en": "Singapore - Indonesia",
+    "name:es": "Singapur - Indonesia",
+    "name:fr": "Singapour - Indonésie",
+    "name:id": "Singapura - Indonesia",
+    "name:lt": "Singapūras - Indonezija",
+    "name:pl": "Singapur - Indonezja",
+    "name:pt": "Singapura - Indonésia",
+    "source": "Badan Informasi Geospasial, year 2017 agreement"
+  }
+},
+{
+  "type": "way",
+  "id": 288680799,
+  "bounds": {
+    "minlat": 1.2210595,
+    "minlon": 103.9170735,
+    "maxlat": 1.2654096,
+    "maxlon": 104.0259210
+  },
+  "nodes": [
+    13327687571,
+    13327687570
+  ],
+  "geometry": [
+    { "lat": 1.2210595, "lon": 103.9170735 },
+    { "lat": 1.2654096, "lon": 104.0259210 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "source": "Badan Informasi Geospasial, year 2017 agreement"
+  }
+},
+{
+  "type": "way",
+  "id": 288680800,
+  "bounds": {
+    "minlat": 1.2726318,
+    "minlon": 103.9200435,
+    "maxlat": 1.4465999,
+    "maxlon": 104.1290145
+  },
+  "nodes": [
+    3404763174,
+    3404763179,
+    3404763180,
+    3404763181,
+    3404763177,
+    3404763172,
+    3404763166,
+    3404763168,
+    3404763163,
+    3404763162,
+    3404763167,
+    3404763165,
+    3404763170,
+    3404763169,
+    3404763171,
+    3404763164,
+    3404763161,
+    3404763185,
+    3404763187,
+    3404763186,
+    3404763183,
+    3404763182,
+    3404763160,
+    3404763159,
+    3404763158,
+    3404763155,
+    3404763154,
+    3404763152,
+    3404763151,
+    3404763150,
+    3404763149,
+    3404763146,
+    13327687569
+  ],
+  "geometry": [
+    { "lat": 1.4274486, "lon": 103.9200435 },
+    { "lat": 1.4282500, "lon": 103.9233333 },
+    { "lat": 1.4304167, "lon": 103.9334167 },
+    { "lat": 1.4304722, "lon": 103.9376944 },
+    { "lat": 1.4278333, "lon": 103.9425278 },
+    { "lat": 1.4253611, "lon": 103.9525278 },
+    { "lat": 1.4244167, "lon": 103.9575556 },
+    { "lat": 1.4243639, "lon": 103.9606667 },
+    { "lat": 1.4221667, "lon": 103.9668056 },
+    { "lat": 1.4224807, "lon": 103.9724811 },
+    { "lat": 1.4244167, "lon": 103.9799167 },
+    { "lat": 1.4247283, "lon": 103.9835404 },
+    { "lat": 1.4249167, "lon": 103.9861667 },
+    { "lat": 1.4249494, "lon": 103.9891136 },
+    { "lat": 1.4250000, "lon": 103.9929167 },
+    { "lat": 1.4256035, "lon": 103.9950354 },
+    { "lat": 1.4276959, "lon": 103.9998864 },
+    { "lat": 1.4421652, "lon": 104.0221913 },
+    { "lat": 1.4465999, "lon": 104.0406831 },
+    { "lat": 1.4402268, "lon": 104.0576472 },
+    { "lat": 1.4355694, "lon": 104.0713923 },
+    { "lat": 1.4313394, "lon": 104.0776756 },
+    { "lat": 1.4177335, "lon": 104.0892266 },
+    { "lat": 1.4156502, "lon": 104.0902119 },
+    { "lat": 1.4126160, "lon": 104.0915225 },
+    { "lat": 1.4060731, "lon": 104.0931817 },
+    { "lat": 1.3998700, "lon": 104.0936715 },
+    { "lat": 1.3940140, "lon": 104.0931803 },
+    { "lat": 1.3845657, "lon": 104.0900491 },
+    { "lat": 1.3686427, "lon": 104.0838408 },
+    { "lat": 1.3576073, "lon": 104.0814389 },
+    { "lat": 1.3468930, "lon": 104.0864243 },
+    { "lat": 1.2726318, "lon": 104.1290145 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Malaysia",
+    "name:es": "Singapur - Malasia",
+    "name:fr": "Singapour - Malaisie",
+    "name:lt": "Singapūras - Malaizija",
+    "name:ms": "Singapura - Malaysia",
+    "name:pl": "Singapur - Malezja",
+    "name:pt": "Singapura - Malásia",
+    "name:zh": "新加坡 － 马来西亚",
+    "name:zh-Hans": "新加坡 － 马来西亚",
+    "name:zh-Hant": "新加坡 － 馬來西亞",
+    "source": "Agreement between the Government of Malaysia and the Government of the Republic of Singapore to delimit precisely the territorial waters boundary in accordance with the Straits Settlement and Johore Territorial Waters Agreement 2025"
+  }
+},
+{
+  "type": "way",
+  "id": 288680802,
+  "bounds": {
+    "minlat": 1.4273531,
+    "minlon": 103.9021275,
+    "maxlat": 1.4278250,
+    "maxlon": 103.9200435
+  },
+  "nodes": [
+    3404763176,
+    3404763175,
+    3404763173,
+    3404763174
+  ],
+  "geometry": [
+    { "lat": 1.4278250, "lon": 103.9021275 },
+    { "lat": 1.4275278, "lon": 103.9127500 },
+    { "lat": 1.4273531, "lon": 103.9168333 },
+    { "lat": 1.4274486, "lon": 103.9200435 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "source": "Agreement between the Government of Malaysia and the Government of the Republic of Singapore to delimit precisely the territorial waters boundary in accordance with the Straits Settlement and Johore Territorial Waters Agreement 2025"
+  }
+},
+{
+  "type": "way",
+  "id": 288680803,
+  "bounds": {
+    "minlat": 1.4278250,
+    "minlon": 103.8778899,
+    "maxlat": 1.4454088,
+    "maxlon": 103.9021275
+  },
+  "nodes": [
+    2922323909,
+    3404763184,
+    3404763178,
+    3404763176
+  ],
+  "geometry": [
+    { "lat": 1.4454088, "lon": 103.8778899 },
+    { "lat": 1.4351389, "lon": 103.8861389 },
+    { "lat": 1.4284163, "lon": 103.8982473 },
+    { "lat": 1.4278250, "lon": 103.9021275 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "source": "Agreement between the Government of Malaysia and the Government of the Republic of Singapore to delimit precisely the territorial waters boundary in accordance with the Straits Settlement and Johore Territorial Waters Agreement 2025"
+  }
+},
+{
+  "type": "way",
+  "id": 333364475,
+  "bounds": {
+    "minlat": 1.2726318,
+    "minlon": 104.1290145,
+    "maxlat": 1.3186175,
+    "maxlon": 104.4024464
+  },
+  "nodes": [
+    13327687569,
+    10680295683,
+    10680296755,
+    10680296117,
+    10680296422,
+    13327692904
+  ],
+  "geometry": [
+    { "lat": 1.2726318, "lon": 104.1290145 },
+    { "lat": 1.2954559, "lon": 104.3610466 },
+    { "lat": 1.2994090, "lon": 104.3714723 },
+    { "lat": 1.3042977, "lon": 104.3824078 },
+    { "lat": 1.3111413, "lon": 104.3925899 },
+    { "lat": 1.3186175, "lon": 104.4024464 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "note": "equidistant median line",
+    "source": "Badan Informasi Geospasial, year 2017 agreement"
+  }
+},
+{
+  "type": "way",
+  "id": 333364480,
+  "bounds": {
+    "minlat": 1.2693120,
+    "minlon": 103.5856950,
+    "maxlat": 1.4599673,
+    "maxlon": 103.7400951
+  },
+  "nodes": [
+    2872820107,
+    1925161368,
+    1925161384,
+    10686033172,
+    6402524820,
+    1925161420,
+    1925161447,
+    1925161516,
+    1925161547,
+    1925161613,
+    2872820106,
+    1925161641,
+    9309285631,
+    2872820105,
+    6387810539,
+    2872820104,
+    7443755973,
+    6970178344,
+    6970178345,
+    7443755974,
+    6387810536,
+    2872820101,
+    6402524810,
+    2872818800,
+    1836120943,
+    1836120944,
+    1836120946,
+    1836120949,
+    1836120956,
+    1836120971,
+    1836120972,
+    1836120974,
+    1836120975,
+    1836120981,
+    1836120988,
+    1836120985,
+    1836120978,
+    1836120976,
+    2872713246
+  ],
+  "geometry": [
+    { "lat": 1.2693120, "lon": 103.5856950 },
+    { "lat": 1.2804432, "lon": 103.6016091 },
+    { "lat": 1.2828957, "lon": 103.6033258 },
+    { "lat": 1.2830821, "lon": 103.6033913 },
+    { "lat": 1.2864360, "lon": 103.6045709 },
+    { "lat": 1.2929567, "lon": 103.6067734 },
+    { "lat": 1.3008003, "lon": 103.6094227 },
+    { "lat": 1.3059031, "lon": 103.6111462 },
+    { "lat": 1.3090707, "lon": 103.6122161 },
+    { "lat": 1.3135668, "lon": 103.6135445 },
+    { "lat": 1.3145919, "lon": 103.6138680 },
+    { "lat": 1.3167548, "lon": 103.6146270 },
+    { "lat": 1.3179048, "lon": 103.6150063 },
+    { "lat": 1.3215682, "lon": 103.6164063 },
+    { "lat": 1.3380349, "lon": 103.6261594 },
+    { "lat": 1.3442879, "lon": 103.6295657 },
+    { "lat": 1.3504685, "lon": 103.6331044 },
+    { "lat": 1.3506631, "lon": 103.6332025 },
+    { "lat": 1.3507535, "lon": 103.6332482 },
+    { "lat": 1.3508234, "lon": 103.6332834 },
+    { "lat": 1.3553195, "lon": 103.6351992 },
+    { "lat": 1.3631867, "lon": 103.6397302 },
+    { "lat": 1.3740192, "lon": 103.6462478 },
+    { "lat": 1.3801078, "lon": 103.6484186 },
+    { "lat": 1.3872120, "lon": 103.6519637 },
+    { "lat": 1.3912778, "lon": 103.6535000 },
+    { "lat": 1.4005454, "lon": 103.6565444 },
+    { "lat": 1.4105795, "lon": 103.6632944 },
+    { "lat": 1.4161361, "lon": 103.6683501 },
+    { "lat": 1.4283963, "lon": 103.6729018 },
+    { "lat": 1.4374002, "lon": 103.6820888 },
+    { "lat": 1.4409744, "lon": 103.6922336 },
+    { "lat": 1.4440633, "lon": 103.6970401 },
+    { "lat": 1.4508851, "lon": 103.7034281 },
+    { "lat": 1.4579441, "lon": 103.7138107 },
+    { "lat": 1.4599673, "lon": 103.7283333 },
+    { "lat": 1.4551668, "lon": 103.7389366 },
+    { "lat": 1.4545963, "lon": 103.7394872 },
+    { "lat": 1.4538716, "lon": 103.7400951 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Malaysia",
+    "name:be": "Сінгапур - Малайзія",
+    "name:en": "Singapore - Malaysia",
+    "name:es": "Singapur - Malasia",
+    "name:fr": "Singapour - Malaisie",
+    "name:id": "Singapura - Malaysia",
+    "name:lt": "Singapūras - Malaizija",
+    "name:lv": "Singapūra - Malaizija",
+    "name:ms": "Singapura - Malaysia",
+    "name:pl": "Singapur - Malezja",
+    "name:pt": "Singapur - Malásia",
+    "name:ru": "Сингапур - Малайзия"
+  }
+},
+{
+  "type": "way",
+  "id": 333364481,
+  "bounds": {
+    "minlat": 1.2654096,
+    "minlon": 104.0259210,
+    "maxlat": 1.2726318,
+    "maxlon": 104.1290145
+  },
+  "nodes": [
+    13327687570,
+    13327687569
+  ],
+  "geometry": [
+    { "lat": 1.2654096, "lon": 104.0259210 },
+    { "lat": 1.2726318, "lon": 104.1290145 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Indonesia",
+    "name:es": "Singapur - Indonesia",
+    "name:fr": "Singapour - Indonésie",
+    "name:id": "Singapura - Indonesia",
+    "name:lt": "Singapūras - Indonezija",
+    "name:pl": "Singapur - Indonezja",
+    "name:pt": "Singapura - Indonesia",
+    "note": "Treaty between the Republic of Singapore and the Republic of Indonesia relating to the delimitation of the territorial seas of the two countries in the eastern part of the Strait of Singapore",
+    "source": "Badan Informasi Geospasial, year 2017 agreement"
+  }
+},
+{
+  "type": "way",
+  "id": 333364485,
+  "bounds": {
+    "minlat": 1.1956685,
+    "minlon": 103.3800000,
+    "maxlat": 1.2500000,
+    "maxlon": 103.5655797
+  },
+  "nodes": [
+    3404763120,
+    10680295360,
+    13327687573
+  ],
+  "geometry": [
+    { "lat": 1.2500000, "lon": 103.3800000 },
+    { "lat": 1.2154728, "lon": 103.4378394 },
+    { "lat": 1.1956685, "lon": 103.5655797 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "disputed": "yes",
+    "maritime": "yes",
+    "name": "Malaysia - Indonesia",
+    "name:es": "Malasia - Indonesia",
+    "name:fr": "Malaisie - Indonésie",
+    "name:lt": "Malaizija - Indonezija",
+    "name:pl": "Malezja - Indonezja",
+    "name:pt": "Malásia - Indonésia",
+    "note": "equidistant median line",
+    "source": "Badan Informasi Geospasial, year 2017 agreement"
+  }
+},
+{
+  "type": "way",
+  "id": 727301316,
+  "bounds": {
+    "minlat": 1.4454088,
+    "minlon": 103.7693966,
+    "maxlat": 1.4787511,
+    "maxlon": 103.8778899
+  },
+  "nodes": [
+    5097279857,
+    3404763190,
+    8647772472,
+    3404763699,
+    3404763701,
+    3404763700,
+    3404763697,
+    3404763696,
+    7445001170,
+    3404763693,
+    3404763192,
+    3404763191,
+    3404763188,
+    2922323909
+  ],
+  "geometry": [
+    { "lat": 1.4526701, "lon": 103.7693966 },
+    { "lat": 1.4534428, "lon": 103.7709394 },
+    { "lat": 1.4597707, "lon": 103.7804204 },
+    { "lat": 1.4770312, "lon": 103.8033899 },
+    { "lat": 1.4787511, "lon": 103.8126238 },
+    { "lat": 1.4766944, "lon": 103.8221667 },
+    { "lat": 1.4730000, "lon": 103.8341667 },
+    { "lat": 1.4661667, "lon": 103.8520000 },
+    { "lat": 1.4651069, "lon": 103.8541927 },
+    { "lat": 1.4629444, "lon": 103.8586667 },
+    { "lat": 1.4588611, "lon": 103.8649722 },
+    { "lat": 1.4565278, "lon": 103.8681667 },
+    { "lat": 1.4489722, "lon": 103.8750278 },
+    { "lat": 1.4454088, "lon": 103.8778899 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Malaysia",
+    "name:es": "Singapur - Malasia",
+    "name:fr": "Singapour - Malaisie",
+    "name:lt": "Singapūras - Malaizija",
+    "name:ms": "Singapura - Malaysia",
+    "name:pl": "Singapur - Malezja",
+    "name:pt": "Singapura - Malásia",
+    "name:zh": "新加波 - 马来西亚",
+    "source": "Agreement between the Government of Malaysia and the Government of the Republic of Singapore to delimit precisely the territorial waters boundary in accordance with the Straits Settlement and Johore Territorial Waters Agreement 2025"
+  }
+},
+{
+  "type": "way",
+  "id": 1414078048,
+  "bounds": {
+    "minlat": 1.1809141,
+    "minlon": 103.8261698,
+    "maxlat": 1.2210595,
+    "maxlon": 103.9170735
+  },
+  "nodes": [
+    13327687572,
+    1879216359,
+    13327687594,
+    13327687571
+  ],
+  "geometry": [
+    { "lat": 1.1809141, "lon": 103.8261698 },
+    { "lat": 1.1959722, "lon": 103.8598333 },
+    { "lat": 1.2059736, "lon": 103.8817371 },
+    { "lat": 1.2210595, "lon": 103.9170735 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Indonesia",
+    "name:de": "Singapur - Indonesien",
+    "name:en": "Singapore - Indonesia",
+    "name:es": "Singapur - Indonesia",
+    "name:fr": "Singapour - Indonésie",
+    "name:id": "Singapura - Indonesia",
+    "name:lt": "Singapūras - Indonezija",
+    "name:pl": "Singapur - Indonezja",
+    "name:pt": "Singapura - Indonésia",
+    "source": "Badan Informasi Geospasial, year 2017 agreement"
+  }
+},
+{
+  "type": "way",
+  "id": 1455785333,
+  "bounds": {
+    "minlat": 1.4525463,
+    "minlon": 103.7689724,
+    "maxlat": 1.4526701,
+    "maxlon": 103.7693966
+  },
+  "nodes": [
+    6815495504,
+    5097279856,
+    5097279853,
+    5097279854,
+    5097279857
+  ],
+  "geometry": [
+    { "lat": 1.4525463, "lon": 103.7689724 },
+    { "lat": 1.4525660, "lon": 103.7690553 },
+    { "lat": 1.4525798, "lon": 103.7691160 },
+    { "lat": 1.4526275, "lon": 103.7692542 },
+    { "lat": 1.4526701, "lon": 103.7693966 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Malaysia",
+    "name:es": "Singapur - Malasia",
+    "name:fr": "Singapour - Malaisie",
+    "name:lt": "Singapūras - Malaizija",
+    "name:ms": "Singapura - Malaysia",
+    "name:pl": "Singapur - Malezja",
+    "name:pt": "Singapura - Malásia",
+    "name:zh": "新加波 - 马来西亚",
+    "source": "Agreement between the Government of Malaysia and the Government of the Republic of Singapore to delimit precisely the territorial waters boundary in accordance with the Straits Settlement and Johore Territorial Waters Agreement 2025"
+  }
+},
+{
+  "type": "way",
+  "id": 1455785334,
+  "bounds": {
+    "minlat": 1.4488536,
+    "minlon": 103.7400951,
+    "maxlat": 1.4538716,
+    "maxlon": 103.7689724
+  },
+  "nodes": [
+    2872713246,
+    7990406418,
+    7990406419,
+    2872713245,
+    5097279858,
+    6815495504
+  ],
+  "geometry": [
+    { "lat": 1.4538716, "lon": 103.7400951 },
+    { "lat": 1.4522383, "lon": 103.7428572 },
+    { "lat": 1.4510385, "lon": 103.7447632 },
+    { "lat": 1.4488536, "lon": 103.7604043 },
+    { "lat": 1.4525248, "lon": 103.7688817 },
+    { "lat": 1.4525463, "lon": 103.7689724 }
+  ],
+  "tags": {
+    "admin_level": "2",
+    "border_type": "territorial",
+    "boundary": "administrative",
+    "maritime": "yes",
+    "name": "Singapore - Malaysia",
+    "name:es": "Singapur - Malasia",
+    "name:fr": "Singapour - Malaisie",
+    "name:lt": "Singapūras - Malaizija",
+    "name:ms": "Singapura - Malaysia",
+    "name:pl": "Singapur - Malezja",
+    "name:pt": "Singapura - Malásia",
+    "name:zh": "新加波 - 马来西亚",
+    "source": "Agreement between the Government of Malaysia and the Government of the Republic of Singapore to delimit precisely the territorial waters boundary in accordance with the Straits Settlement and Johore Territorial Waters Agreement 2025"
+  }
+},
+{
+  "type": "relation",
+  "id": 304751,
+  "members": [
+    {
+      "type": "way",
+      "ref": 1181737324,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904616,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904548,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363476,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 541046960,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766149851,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904634,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904262,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766149852,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904291,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904328,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1511167252,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904307,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115538,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904434,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766145999,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904316,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1510928290,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904703,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363488,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363494,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115537,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904721,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363499,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766128431,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904614,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904477,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904583,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 349225220,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115536,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363502,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904379,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766121405,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904352,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363501,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904613,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904285,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115535,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904277,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904449,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904418,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766126310,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904341,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904254,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904256,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 231704463,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993484416,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865295,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1453274360,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865283,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865296,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364475,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364481,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680799,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1414078048,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 190681125,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364485,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1453274361,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195794,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195791,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195792,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195793,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222121885,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751573378,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222123237,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751573379,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751572774,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 221718045,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 548451585,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222314813,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751237491,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364482,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865285,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865288,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865286,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865287,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865292,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865289,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865290,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865291,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286428595,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286428598,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 611998163,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 611998165,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286428599,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286428593,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286271268,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286325660,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286335110,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286335106,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 287574136,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286335108,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286335102,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286271266,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286339173,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1301948275,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1301948277,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286339322,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222314809,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1146032881,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893984,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 818495877,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 669620682,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893982,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893980,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 910852256,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893978,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 330381229,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 910852352,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893979,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893977,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893981,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204893983,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1453274358,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1146032884,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1146032877,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 231691140,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1146032879,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147941019,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147941018,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147941021,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147941020,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 281898544,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 231691134,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 181368695,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 541982372,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 27773742,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1428944313,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 43895607,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1428944312,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 542420646,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1115458890,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 43895273,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 205222323,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 542420632,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 43856205,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 205210119,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1428928822,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 205210118,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 181368694,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 27773739,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 324503640,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 399032516,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1118426758,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286423242,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286423240,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286425790,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 699379033,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286425796,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 286337046,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 366449994,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 231704467,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 231704464,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 28285984,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 705988335,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 705988334,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904463,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737230,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904405,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904391,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 541039940,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904602,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737260,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904733,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 292112371,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904729,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904672,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904493,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737270,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904731,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904652,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904730,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737326,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 541039941,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904507,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1067013692,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 366449995,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904529,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904735,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1067012527,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766149850,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904268,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904734,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904299,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1067012528,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904563,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1146032885,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 1146032883,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 204895422,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 1453274355,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 818495876,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 1453274354,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 204895416,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 204895424,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 204895417,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 204895423,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 910852248,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 204895421,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 280202419,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 1146032882,
+      "role": "inner"
+    },
+    {
+      "type": "way",
+      "ref": 1453274362,
+      "role": "inner"
+    },
+    {
+      "type": "node",
+      "ref": 29939632,
+      "role": "admin_centre"
+    },
+    {
+      "type": "node",
+      "ref": 6677037562,
+      "role": "label"
+    },
+    {
+      "type": "relation",
+      "ref": 2390836,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2390843,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2390841,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2390840,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3797244,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2390838,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2390842,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3797243,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2390837,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2390839,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388356,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 6362934,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388361,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388357,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 5616105,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3438227,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388616,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388613,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388615,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 5449459,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 5449460,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388666,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388665,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388664,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388669,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388667,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2388668,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 1615622,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2396778,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 1615621,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2396796,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2396795,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 14905625,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4521145,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4521144,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 14309178,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 14309176,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 14309177,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 9676651,
+      "role": "subarea"
+    }
+  ],
+  "tags": {
+    "ISO3166-1": "ID",
+    "ISO3166-1:alpha2": "ID",
+    "ISO3166-1:alpha3": "IDN",
+    "ISO3166-1:numeric": "360",
+    "admin_level": "2",
+    "alt_name": "Negara Kesatuan Republik Indonesia",
+    "alt_name:as": "ইণ্ডোনেছিয়া",
+    "alt_name:ha": "Indunusiya",
+    "alt_name:quz": "Inrunisya",
+    "alt_name:ti": "ኢንዶኔዢያ",
+    "alt_name:vi": "Nam Dương",
+    "boundary": "administrative",
+    "check_date": "2026-04-13",
+    "driving_side": "left",
+    "name": "Indonesia",
+    "name:ace": "Indonesia",
+    "name:af": "Indonesië",
+    "name:ak": "Indonesia",
+    "name:als": "Indonesien",
+    "name:am": "ኢንዶኔዥያ",
+    "name:an": "Indonesia",
+    "name:ang": "Indonesia",
+    "name:aqm": "Indonesia",
+    "name:ar": "إندونيسيا",
+    "name:arz": "اندونيسيا",
+    "name:as": "ইণ্ডোনেচিয়া",
+    "name:ast": "Indonesia",
+    "name:ay": "Indunisya",
+    "name:az": "İndoneziya",
+    "name:azb": "Indonesia",
+    "name:ba": "Индонезия",
+    "name:ban": "Indonesia",
+    "name:bar": "Indonesien",
+    "name:bat-smg": "Induonezėjė",
+    "name:bcl": "Indonesya",
+    "name:be": "Інданезія",
+    "name:be-tarask": "Інданэзія",
+    "name:bg": "Индонезия",
+    "name:bgv": "Indonesia",
+    "name:bgz": "Indonesia",
+    "name:bi": "Indonesia",
+    "name:bjn": "Indunisia",
+    "name:bn": "ইন্দোনেশিয়া",
+    "name:bo": "ཨིན་རྡུ་ནི་ཤིས་ཡ།",
+    "name:bpv": "Indonesia",
+    "name:bpy": "ইন্দোনেশিয়া",
+    "name:br": "Indonezia",
+    "name:bs": "Indonezija",
+    "name:btx": "Indonesia",
+    "name:bug": "Indonesia",
+    "name:bxr": "Индонези",
+    "name:ca": "Indonèsia",
+    "name:cbk-zam": "Indonesia",
+    "name:ce": "Индонези",
+    "name:ceb": "Indonesia",
+    "name:ch": "Indonesia",
+    "name:chr": "ᎢᏂᏙᏂᏍᏯ",
+    "name:cia": "인도네시아",
+    "name:ckb": "ئیندۆنیزیا",
+    "name:co": "Indunesia",
+    "name:crh": "İndoneziya",
+    "name:cs": "Indonésie",
+    "name:csb": "Jindonezjô",
+    "name:cu": "Їндонисїꙗ",
+    "name:cv": "Индонези",
+    "name:cy": "Indonesia",
+    "name:da": "Indonesien",
+    "name:de": "Indonesien",
+    "name:diq": "İndonezya",
+    "name:dsb": "Indoneziska",
+    "name:dv": "އިންޑޮނޭޝިޔާ",
+    "name:el": "Ινδονησία",
+    "name:en": "Indonesia",
+    "name:eo": "Indonezio",
+    "name:es": "Indonesia",
+    "name:et": "Indoneesia",
+    "name:eu": "Indonesia",
+    "name:ext": "Indonésia",
+    "name:fa": "اندونزی",
+    "name:fi": "Indonesia",
+    "name:fo": "Indonesia",
+    "name:fr": "Indonésie",
+    "name:frp": "Endonèsie",
+    "name:frr": "Indoneesien",
+    "name:fur": "Indonesie",
+    "name:fy": "Yndoneezje",
+    "name:ga": "An Indinéis",
+    "name:gag": "İndoneziya",
+    "name:gan": "印度尼西亞",
+    "name:gd": "An Innd-Innse",
+    "name:gl": "Indonesia",
+    "name:gn": "Indonesia",
+    "name:gu": "ઈંડોનેશિયા",
+    "name:gv": "Yn Indoneesh",
+    "name:ha": "Indonesiya",
+    "name:hak": "Yin-thu-nì-sî-â",
+    "name:haw": "‘Inidonesia",
+    "name:he": "אינדונזיה",
+    "name:hi": "इंडोनेशिया",
+    "name:hif": "Indonesia",
+    "name:hr": "Indonezija",
+    "name:hsb": "Indoneska",
+    "name:ht": "Endonezi",
+    "name:hu": "Indonézia",
+    "name:hy": "Ինդոնեզիա",
+    "name:ia": "Indonesia",
+    "name:id": "Indonesia",
+    "name:ie": "Indonesia",
+    "name:ig": "Indọnisia",
+    "name:ilo": "Indonesia",
+    "name:io": "Indonezia",
+    "name:is": "Indónesía",
+    "name:it": "Indonesia",
+    "name:iu": "ᐄᓅᓯᐊ",
+    "name:ja": "インドネシア",
+    "name:jaq": "Indonesia",
+    "name:jbo": "bidgu'e",
+    "name:jei": "Indonesia",
+    "name:jel": "Indonesia",
+    "name:jv": "ꦆꦤ꧀ꦢꦺꦴꦤꦺꦱꦶꦪ",
+    "name:ka": "ინდონეზია",
+    "name:kab": "Indunisya",
+    "name:kbd": "Индонезиэ",
+    "name:kcd": "Indonesia",
+    "name:khd": "Indonesia",
+    "name:ki": "Indonesia",
+    "name:kig": "Indonesia",
+    "name:kk": "Индонезия",
+    "name:kl": "Indonesia",
+    "name:km": "ឥណ្ឌូនេស៊ី",
+    "name:kn": "ಇಂಡೋನೇಷ್ಯಾ",
+    "name:ko": "인도네시아",
+    "name:kok": "इंडोनेशीया",
+    "name:krz": "Indonesia",
+    "name:ku": "Îndonezya",
+    "name:kv": "Индонезия",
+    "name:kw": "Indonesi",
+    "name:kxq": "Indonesia",
+    "name:ky": "Индонезия",
+    "name:kyt": "Indonesia",
+    "name:la": "Indonesia",
+    "name:lb": "Indonesien",
+    "name:lez": "Индонезия",
+    "name:li": "Indonesië",
+    "name:lij": "Indonexia",
+    "name:lmo": "Indunesia",
+    "name:ln": "Indonezí",
+    "name:lo": "ປະເທດອິນໂດເນເຊຍ",
+    "name:lrc": "ٱندونزی",
+    "name:lt": "Indonezija",
+    "name:lv": "Indonēzija",
+    "name:lzh": "印度尼西亞",
+    "name:map-bms": "Indonesia",
+    "name:mg": "Indonezia",
+    "name:mgf": "Indonesia",
+    "name:mhr": "Индонезий",
+    "name:mi": "Initonīhia",
+    "name:min": "Indonesia",
+    "name:mk": "Индонезија",
+    "name:ml": "ഇന്തോനേഷ്യ",
+    "name:mn": "Индонез",
+    "name:mr": "इंडोनेशिया",
+    "name:mrj": "Индонези",
+    "name:mrz": "Indonesia",
+    "name:ms": "Indonesia",
+    "name:ms-Arab": "إندؤنيسيا",
+    "name:mt": "Indoneżja",
+    "name:my": "အင်ဒိုနီးရှားနိုင်ငံ",
+    "name:mzn": "اندونزی",
+    "name:na": "Indonitsiya",
+    "name:nah": "Indonesia",
+    "name:nan": "Ìn-nî",
+    "name:nap": "Indonesia",
+    "name:nds": "Indonesien",
+    "name:nds-nl": "Indonezie",
+    "name:ne": "इन्डोनेसिया",
+    "name:new": "इन्दोनेसिया",
+    "name:nl": "Indonesië",
+    "name:nn": "Indonesia",
+    "name:no": "Indonesia",
+    "name:nov": "Indonesia",
+    "name:nqm": "Indonesia",
+    "name:nv": "Indoníízha",
+    "name:oc": "Indonesia",
+    "name:om": "Indoneeshiyaa",
+    "name:or": "ଇଣ୍ଡୋନେସିଆ",
+    "name:os": "Индонези",
+    "name:pa": "ਇੰਡੋਨੇਸ਼ੀਆ",
+    "name:pag": "Indonesiya",
+    "name:pam": "Indonesia",
+    "name:pap": "Indonesia",
+    "name:pih": "Endonesya",
+    "name:pl": "Indonezja",
+    "name:pms": "Indonesia",
+    "name:pnb": "انڈونیشیا",
+    "name:ps": "اندونيزيا",
+    "name:pt": "Indonésia",
+    "name:qu": "Indunisya",
+    "name:quz": "Indunisya",
+    "name:ran": "Indonesia",
+    "name:rm": "Indonesia",
+    "name:ro": "Indonezia",
+    "name:roa-tara": "Indonesie",
+    "name:ru": "Индонезия",
+    "name:rue": "Індонезія",
+    "name:rw": "Indonesiya",
+    "name:sa": "इण्डोनेशिया",
+    "name:sah": "Индонезия",
+    "name:scn": "Indunesia",
+    "name:sco": "Indonesie",
+    "name:sd": "انڊونيشيا",
+    "name:se": "Indonesia",
+    "name:sg": "Ênndonezïi",
+    "name:sh": "Indonezija",
+    "name:si": "ඉන්දුනීසියාව",
+    "name:simple": "Indonesia",
+    "name:sk": "Indonézia",
+    "name:sl": "Indonezija",
+    "name:sm": "Indyunisia",
+    "name:smn": "Indonesia",
+    "name:sms": "Indonesia",
+    "name:so": "Indunisiya",
+    "name:sq": "Indonezia",
+    "name:sr": "Индонезија",
+    "name:srn": "Indonesikondre",
+    "name:ss": "INdonesiya",
+    "name:stq": "Indonesien",
+    "name:su": "Indonésia",
+    "name:sv": "Indonesien",
+    "name:sw": "Indonesia",
+    "name:szl": "Indōnezyjŏ",
+    "name:ta": "இந்தோனேசியா",
+    "name:tcg": "Indonesia",
+    "name:te": "ఇండోనేషియా",
+    "name:tet": "Indonézia",
+    "name:tg": "Индонезия",
+    "name:th": "ประเทศอินโดนีเซีย",
+    "name:ti": "ኢንዶኔዥያ",
+    "name:tk": "Indoneziýa",
+    "name:tl": "Indonesya",
+    "name:to": "ʻInitonēsia",
+    "name:tok": "ma Intonesija",
+    "name:tpi": "Indonisia",
+    "name:tr": "Endonezya",
+    "name:tt": "Индонезия",
+    "name:tzl": "Indonesía",
+    "name:udm": "Индонезия",
+    "name:ug": "ھىندونېزىيە",
+    "name:uk": "Індонезія",
+    "name:ur": "انڈونیشیا",
+    "name:uz": "Indoneziya",
+    "name:vec": "Indonexia",
+    "name:vep": "Indonezii",
+    "name:vi": "Indonesia",
+    "name:vlca": "Indonèsia",
+    "name:vo": "Lindäna-Seänuäns",
+    "name:vro": "Indoneesiä",
+    "name:wa": "Indonezeye",
+    "name:war": "Indonesia",
+    "name:wo": "Endoneesi",
+    "name:wuu": "印度尼西亚",
+    "name:xal": "Эндонесин Орн",
+    "name:yi": "אינדאנעזיע",
+    "name:yo": "Indonésíà",
+    "name:yue": "印尼",
+    "name:za": "Yindunizsihya",
+    "name:zea": "Indonesië",
+    "name:zh": "印度尼西亚 / 印度尼西亞",
+    "name:zh-Hans": "印度尼西亚",
+    "name:zh-Hant": "印度尼西亞",
+    "name:zu": "I-Indonesia",
+    "official_name": "Negara Kesatuan Republik Indonesia",
+    "official_name:ar": "جمهورية إندونيسيا",
+    "official_name:bjn": "Ripublik Indunisia",
+    "official_name:ca": "República d'Indonèsia",
+    "official_name:ckb": "کۆماری ئیندۆنیزیا",
+    "official_name:cs": "Indonéská republika",
+    "official_name:de": "Republik Indonesien",
+    "official_name:en": "Republic of Indonesia",
+    "official_name:es": "República de Indonesia",
+    "official_name:fa": "جمهوری اندونزی",
+    "official_name:hu": "Indonéz Köztársaság",
+    "official_name:id": "Negara Kesatuan Republik Indonesia",
+    "official_name:ku": "Komara Îndonezya",
+    "official_name:ru": "Республика Индонезия",
+    "official_name:ur": "جمہوریہ انڈونیشیا",
+    "official_name:zh": "印度尼西亚共和国 / 印度尼西亞共和國",
+    "official_name:zh-Hans": "印度尼西亚共和国",
+    "official_name:zh-Hant": "印度尼西亞共和國",
+    "population": "270203917",
+    "population:date": "2020",
+    "ref": "ID",
+    "short_name": "NKRI",
+    "source:population": "https://sensus.bps.go.id/main/index/sp2020",
+    "type": "boundary",
+    "wikidata": "Q252",
+    "wikimedia_commons": "Category:Indonesia",
+    "wikipedia": "id:Indonesia"
+  }
+},
+{
+  "type": "relation",
+  "id": 536780,
+  "members": [
+    {
+      "type": "way",
+      "ref": 1147865296,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1453274362,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865303,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865283,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865302,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 190681125,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1414078048,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680799,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364481,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680800,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680802,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680803,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 727301316,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1455785333,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1455785334,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364480,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 53549914,
+      "role": "outer"
+    },
+    {
+      "type": "node",
+      "ref": 531668011,
+      "role": "admin_centre"
+    },
+    {
+      "type": "node",
+      "ref": 424313428,
+      "role": "label"
+    },
+    {
+      "type": "relation",
+      "ref": 3831712,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3831714,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3831716,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3831715,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3831713,
+      "role": "subarea"
+    }
+  ],
+  "tags": {
+    "ISO3166-1": "SG",
+    "ISO3166-1:alpha2": "SG",
+    "ISO3166-1:alpha3": "SGP",
+    "ISO3166-1:numeric": "702",
+    "admin_level": "2",
+    "alt_name:cy": "Singapore",
+    "alt_name:ha": "Singapur",
+    "alt_name:ig": "Singapore",
+    "alt_name:sd": "سنگاپور",
+    "border_type": "nation",
+    "boundary": "administrative",
+    "driving_side": "left",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg",
+    "name": "Singapore",
+    "name:ace": "Singapura",
+    "name:af": "Singapoer",
+    "name:als": "Singapur",
+    "name:am": "ሲንጋፖር",
+    "name:an": "Singapur",
+    "name:ar": "سنغافورة",
+    "name:arz": "سينجابوره",
+    "name:as": "ছিংগাপুৰ",
+    "name:ast": "Singapur",
+    "name:az": "Sinqapur",
+    "name:az-Arab": "سنقاپور",
+    "name:azb": "سنقاپور",
+    "name:ba": "Сингапур",
+    "name:bar": "Singapur",
+    "name:bat-smg": "Singapūrs",
+    "name:bcl": "Singapore",
+    "name:be": "Сінгапур",
+    "name:be-tarask": "Сынгапур",
+    "name:bg": "Сингапур",
+    "name:bi": "Singapore",
+    "name:bjn": "Singapura",
+    "name:bn": "সিঙ্গাপুর",
+    "name:bo": "སེང་ག་ཕོར།",
+    "name:bpy": "সিঙ্গাপুর",
+    "name:br": "Singapoura",
+    "name:bs": "Singapur",
+    "name:bug": "Singapura",
+    "name:bxr": "Сингапур",
+    "name:ca": "Singapur",
+    "name:cdo": "Sĭng-gă-pŏ̤",
+    "name:ce": "Сингапур",
+    "name:ceb": "Singgapura",
+    "name:ckb": "سینگاپور",
+    "name:crh": "Singapur",
+    "name:cs": "Singapur",
+    "name:csb": "Singapùr",
+    "name:cv": "Сингапур",
+    "name:cy": "Singapôr",
+    "name:da": "Singapore",
+    "name:de": "Singapur",
+    "name:diq": "Singapur",
+    "name:dsb": "Singapur",
+    "name:dv": "ސިންގަޕޫރު",
+    "name:el": "Σιγκαπούρη",
+    "name:en": "Singapore",
+    "name:eo": "Singapuro",
+    "name:es": "Singapur",
+    "name:et": "Singapur",
+    "name:eu": "Singapur",
+    "name:ext": "Singapul",
+    "name:fa": "سنگاپور",
+    "name:ff": "Sinngapuur",
+    "name:fi": "Singapore",
+    "name:fo": "Singapor",
+    "name:fr": "Singapour",
+    "name:frp": "Singapor",
+    "name:fy": "Singapoer",
+    "name:ga": "Singeapór",
+    "name:gag": "Singapur",
+    "name:gan": "新加坡",
+    "name:gd": "Singeapòr",
+    "name:gl": "Singapur",
+    "name:gn": "Singapur",
+    "name:gu": "સિંગાપુર",
+    "name:gv": "Singapore",
+    "name:ha": "Singafora",
+    "name:hak": "Sîn-kâ-po",
+    "name:haw": "Sinapoa",
+    "name:he": "סינגפור",
+    "name:hi": "सिंगापुर",
+    "name:hif": "Singapore",
+    "name:hr": "Singapur",
+    "name:ht": "Sengapou",
+    "name:hu": "Szingapúr",
+    "name:hy": "Սինգապուրի Հանրապետություն",
+    "name:ia": "Singapur",
+    "name:id": "Singapura",
+    "name:ie": "Singapor",
+    "name:ig": "Siṅgapọ",
+    "name:ilo": "Singapur",
+    "name:io": "Singapur",
+    "name:is": "Singapúr",
+    "name:it": "Singapore",
+    "name:iu": "Singapuuri",
+    "name:ja": "シンガポール",
+    "name:jbo": "singapura",
+    "name:jv": "Singapura",
+    "name:ka": "სინგაპური",
+    "name:kab": "Singapur",
+    "name:ki": "Singapore",
+    "name:kk": "Сингапур",
+    "name:kk-Arab": "سىينگاپۋر",
+    "name:kl": "Singapore",
+    "name:km": "សិង្ហបុរី",
+    "name:kn": "ಸಿಂಗಾಪುರ್",
+    "name:ko": "싱가포르",
+    "name:kok": "सिंगापूर",
+    "name:ku": "Singapûr",
+    "name:kv": "Сингапур",
+    "name:kw": "Singapour",
+    "name:ky": "Сингапур",
+    "name:la": "Singapura",
+    "name:lb": "Singapur",
+    "name:lez": "Сингапур",
+    "name:li": "Singapore",
+    "name:lij": "Scingapô",
+    "name:lmo": "Singapur",
+    "name:ln": "Singapur",
+    "name:lt": "Singapūras",
+    "name:lv": "Singapūra",
+    "name:lzh": "新加坡",
+    "name:map-bms": "Singapura",
+    "name:mg": "Singapaoro",
+    "name:mhr": "Сингапур",
+    "name:mi": "Hingapoa",
+    "name:min": "Singapura",
+    "name:mk": "Сингапур",
+    "name:ml": "സിംഗപ്പൂർ",
+    "name:mn": "Сингапур",
+    "name:mr": "सिंगापूर",
+    "name:ms": "Singapura",
+    "name:ms-Arab": "سيڠاڤورا",
+    "name:mt": "Singapor",
+    "name:my": "စင်ကာပူနိုင်ငံ",
+    "name:mzn": "سنگاپور(شهر)",
+    "name:na": "Tsingapoar",
+    "name:nah": "Singapur",
+    "name:nan": "Sin-ka-pho",
+    "name:nan-Hans": "新加坡",
+    "name:nan-Latn-pehoeji": "Sin-ka-pho",
+    "name:nan-Latn-tailo": "Sin-ka-pho",
+    "name:nds": "Singapur",
+    "name:ne": "सिंगापुर",
+    "name:nl": "Singapore",
+    "name:nn": "Singapore",
+    "name:no": "Singapore",
+    "name:nov": "Singapore",
+    "name:nv": "Sį́ʼgaboo",
+    "name:oc": "Singapor",
+    "name:or": "ସିଙ୍ଗାପୁର",
+    "name:os": "Сингапур",
+    "name:pa": "ਸਿੰਘਾਪੁਰ",
+    "name:pam": "Singapur",
+    "name:pih": "Singapur",
+    "name:pl": "Singapur",
+    "name:pms": "Singapor",
+    "name:pnb": "سنگاپور",
+    "name:ps": "سينګاپور",
+    "name:pt": "Singapura",
+    "name:qu": "Singapur",
+    "name:quz": "Singapur",
+    "name:ro": "Singapore",
+    "name:roa-rup": "Singapore",
+    "name:roa-tara": "Singapore",
+    "name:ru": "Сингапур",
+    "name:rue": "Сінґапур",
+    "name:rw": "Singapore",
+    "name:sa": "सिङ्गापुरम्",
+    "name:sah": "Сингапур",
+    "name:scn": "Singapura",
+    "name:sco": "Singapore",
+    "name:sd": "سينگاپور",
+    "name:se": "Singapore",
+    "name:sg": "Sïngäpûru",
+    "name:sh": "Singapur",
+    "name:simple": "Singapore",
+    "name:sk": "Singapur",
+    "name:sl": "Singapur",
+    "name:sm": "Sigapoa",
+    "name:smn": "Singapore",
+    "name:sms": "Singapore",
+    "name:so": "Singabuur",
+    "name:sq": "Singapori",
+    "name:sr": "Сингапур",
+    "name:ss": "ISingapholo",
+    "name:su": "Singapura",
+    "name:sv": "Singapore",
+    "name:sw": "Singapuri",
+    "name:szl": "Singapur",
+    "name:ta": "சிங்கப்பூர்",
+    "name:te": "సింగపూరు",
+    "name:tg": "Сингапур",
+    "name:th": "ประเทศสิงคโปร์",
+    "name:tk": "Singapur",
+    "name:tl": "Singapore",
+    "name:tr": "Singapur",
+    "name:tt": "Сингапур",
+    "name:tzl": "Singapura",
+    "name:udm": "Сингапур",
+    "name:ug": "سىنگاپور",
+    "name:uk": "Сінгапур",
+    "name:ur": "سنگاپور",
+    "name:uz": "Singapur",
+    "name:vec": "Singapore",
+    "name:vep": "Singapur",
+    "name:vi": "Singapore",
+    "name:vlca": "Singapur",
+    "name:vls": "Singapore",
+    "name:vo": "Singapurän",
+    "name:vro": "Singapur",
+    "name:war": "Singgapura",
+    "name:wo": "Singapoor",
+    "name:wuu": "新加坡",
+    "name:xal": "Сингапурмудин Орн",
+    "name:yi": "סינגאפור",
+    "name:yo": "Singapore",
+    "name:yue": "星架坡",
+    "name:zh": "新加坡",
+    "name:zh-Hans": "新加坡",
+    "name:zh-Hant": "新加坡",
+    "official_name": "Republic of Singapore",
+    "official_name:ar": "جمهورية سنغافورة",
+    "official_name:ca": "República de Singapur",
+    "official_name:cs": "Singapurská republika",
+    "official_name:de": "Republik Singapur",
+    "official_name:en": "Republic of Singapore",
+    "official_name:fr": "République de Singapour",
+    "official_name:gn": "Tavakuairetã Singapur",
+    "official_name:hu": "Szingapúri Köztársaság",
+    "official_name:pt": "República de Singapura",
+    "official_name:ur": "جمہوریہ سنگاپور",
+    "official_name:vls": "Republiek Singapore",
+    "population": "4839400",
+    "ref:LOCODE": "SGSIN",
+    "route": "horse",
+    "timezone": "Asia/Singapore",
+    "type": "boundary",
+    "wikidata": "Q334",
+    "wikimedia_commons": "Category:Singapore",
+    "wikipedia": "en:Singapore"
+  }
+},
+{
+  "type": "relation",
+  "id": 2108121,
+  "members": [
+    {
+      "type": "way",
+      "ref": 1149528896,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 699046688,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 699046687,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 699046686,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149683818,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528899,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149683819,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528893,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 825181677,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 825181679,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 287313213,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 825181680,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 825181678,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 699046683,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528898,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528888,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528897,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528891,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1374464143,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1374464142,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 287313206,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993490990,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528900,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 231704464,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 28285984,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 705988335,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 705988334,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904463,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737230,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904405,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904391,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 541039940,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904602,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737260,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904733,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 292112371,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904729,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904672,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904493,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737270,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904731,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904652,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904730,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737326,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 541039941,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904507,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1067013692,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 366449995,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904529,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904735,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1067012527,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766149850,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904268,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904734,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904299,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1067012528,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904563,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737324,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904616,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904548,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363476,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 541046960,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766149851,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904634,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904262,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766149852,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904291,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904328,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1511167252,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904307,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115538,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904434,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766145999,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904316,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1510928290,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904703,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363488,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363494,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115537,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904721,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363499,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766128431,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904614,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904477,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904583,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 349225220,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115536,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363502,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904379,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766121405,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904352,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181363501,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904613,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904285,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766115535,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904277,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904449,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904418,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 766126310,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904341,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904254,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204904256,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 231704463,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1149528904,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993479103,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 629208427,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737277,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 629208697,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900319,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900316,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900323,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 692702937,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1181737276,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1246350427,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900324,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 290080815,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900325,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 844351641,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900326,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 629433276,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 629395534,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 629393358,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900317,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628590996,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628588318,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628185160,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628174569,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628174570,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628181248,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628180363,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628180364,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628746575,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628747432,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 628748445,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900320,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993479112,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993479113,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 48948235,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 445219817,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 157653216,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 204900318,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 28285035,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 445219816,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 429790855,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 405955843,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 382864824,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993479110,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993479104,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 993479107,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195793,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222121885,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751573378,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222123237,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751573379,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751572774,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 221718045,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 548451585,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222314813,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 751237491,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364482,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865285,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865293,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865284,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865300,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 222314815,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 148897802,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1317062779,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 888242272,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1317062785,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 28238054,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1317062788,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1317062791,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1317062796,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1317062800,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1317062802,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319617528,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795553,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319618664,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319618666,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 206957351,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 675081665,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319713399,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 888242279,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 244973761,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319618668,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795554,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 675089713,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 351469409,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 554666382,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 888597522,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319618667,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 550150852,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795555,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 550150850,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319618665,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 550152747,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319618669,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1368696337,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 141064581,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 675089709,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 351469408,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795556,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319619373,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1373611287,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795557,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319619370,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1373615191,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795558,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319619374,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 675089707,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 888242297,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1373615189,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 413075383,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 888242298,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319619375,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 675672928,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 635393188,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 635393187,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319712224,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319619372,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319620063,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 636472914,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319620062,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 888242295,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 141064616,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795609,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319620914,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 677421215,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1318999815,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319620915,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795608,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1370832226,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 888242293,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319620916,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 677434276,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319667590,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 677434275,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319667589,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795607,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319665812,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1370830813,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1369795606,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 677434274,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 319665813,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1370830620,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 533715998,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 149877155,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865297,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865281,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865298,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147865302,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364475,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680800,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680802,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 288680803,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 727301316,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1455785333,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1455785334,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364480,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 53549914,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 333364485,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1453274361,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195794,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195791,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1147195792,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1120240920,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 1120240919,
+      "role": "outer"
+    },
+    {
+      "type": "node",
+      "ref": 249399394,
+      "role": "label"
+    },
+    {
+      "type": "node",
+      "ref": 1889910974,
+      "role": "admin_centre"
+    },
+    {
+      "type": "relation",
+      "ref": 2939653,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4444908,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4443571,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2939672,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2939673,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2939674,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4444595,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4445131,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4445076,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4443881,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3879783,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 3879784,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 2932285,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4444411,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4444918,
+      "role": "subarea"
+    },
+    {
+      "type": "relation",
+      "ref": 4521286,
+      "role": "subarea"
+    }
+  ],
+  "tags": {
+    "ISO3166-1": "MY",
+    "ISO3166-1:alpha2": "MY",
+    "ISO3166-1:alpha3": "MYS",
+    "ISO3166-1:numeric": "458",
+    "admin_level": "2",
+    "alt_name:as": "মালয়েছিয়া",
+    "alt_name:cy": "Malaysia",
+    "alt_name:ig": "Malaysia",
+    "alt_name:vi": "Mã Lai (Ma-lay-xi-a)",
+    "border_type": "nation",
+    "boundary": "administrative",
+    "driving_side": "left",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg",
+    "name": "Malaysia",
+    "name:als": "Malaysia",
+    "name:am": "ማሌዢያ",
+    "name:an": "Malaisia",
+    "name:ar": "ماليزيا",
+    "name:arz": "ماليزيا",
+    "name:as": "মালয়েচিয়া",
+    "name:ast": "Malasia",
+    "name:az": "Malayziya",
+    "name:ba": "Малайзия",
+    "name:bar": "Malaysia",
+    "name:bat-smg": "Malaizėjė",
+    "name:bcl": "Malasya",
+    "name:be": "Малайзія",
+    "name:be-tarask": "Малайзія",
+    "name:bg": "Малайзия",
+    "name:bjn": "Malaysia",
+    "name:bn": "মালয়েশিয়া",
+    "name:bo": "མ་ལ་ཤི་ཡ།",
+    "name:bpy": "মালয়েশিয়া",
+    "name:br": "Malaysia",
+    "name:bs": "Malezija",
+    "name:bug": "Malaysia",
+    "name:bxr": "Малайзи",
+    "name:ca": "Malàisia",
+    "name:cbk-zam": "Malasia",
+    "name:cdo": "Mā-lài-să̤-ā",
+    "name:ce": "Малайзи",
+    "name:ceb": "Malasya",
+    "name:ckb": "مالیزیا",
+    "name:crh": "Malayziya",
+    "name:cs": "Malajsie",
+    "name:csb": "Malezjô",
+    "name:cv": "Малайзи",
+    "name:cy": "Maleisia",
+    "name:da": "Malaysia",
+    "name:de": "Malaysia",
+    "name:diq": "Malêzya",
+    "name:dsb": "Malayzija",
+    "name:dv": "މެލޭޝިޔާ",
+    "name:dz": "མ་ལེ་ཤི་ཡ་",
+    "name:el": "Μαλαισία",
+    "name:en": "Malaysia",
+    "name:eo": "Malajzio",
+    "name:es": "Malasia",
+    "name:et": "Malaisia",
+    "name:eu": "Malaysia",
+    "name:ext": "Malásia",
+    "name:fa": "مالزی",
+    "name:fi": "Malesia",
+    "name:fo": "Maleisia",
+    "name:fr": "Malaisie",
+    "name:frp": "Malèsie",
+    "name:fy": "Maleizje",
+    "name:ga": "An Mhalaeisia",
+    "name:gag": "Malayziya",
+    "name:gan": "馬來西亞",
+    "name:gd": "Malaidhsia",
+    "name:gl": "Malaisia",
+    "name:gn": "Malásia",
+    "name:gu": "મલેશિયા",
+    "name:gv": "Yn Valaysia",
+    "name:hak": "Mâ-lòi-sî-â",
+    "name:haw": "Malaisia",
+    "name:he": "מלזיה",
+    "name:hi": "मलेशिया",
+    "name:hif": "Malaysia",
+    "name:hr": "Malezija",
+    "name:hsb": "Malajzija",
+    "name:ht": "Malezi",
+    "name:hu": "Malajzia",
+    "name:hy": "Մալազիա",
+    "name:ia": "Malaysia",
+    "name:id": "Malaysia",
+    "name:ie": "Malaysia",
+    "name:ig": "Malesia",
+    "name:ilo": "Malaysia",
+    "name:io": "Malaizia",
+    "name:is": "Malasía",
+    "name:it": "Malesia",
+    "name:iu": "Malaisia",
+    "name:ja": "マレーシア",
+    "name:jbo": "mejgu'e",
+    "name:jv": "Malaysia",
+    "name:ka": "მალაიზია",
+    "name:kbd": "Мэлайзиэ",
+    "name:ki": "Malaysia",
+    "name:kk": "Малайзия",
+    "name:km": "ម៉ាឡេស៊ី",
+    "name:kn": "ಮಲೇಶಿಯ",
+    "name:ko": "말레이시아",
+    "name:kok": "मलेशिया",
+    "name:ku": "Malezya",
+    "name:kv": "Малайзия",
+    "name:kw": "Malaysi",
+    "name:ky": "Малайзия",
+    "name:la": "Malaesia",
+    "name:lb": "Malaysia",
+    "name:li": "Maleisië",
+    "name:lij": "Malaysia",
+    "name:lmo": "Malaysia",
+    "name:lo": "ປະເທດມາເລເຊຍ",
+    "name:lt": "Malaizija",
+    "name:lv": "Malaizija",
+    "name:lzh": "馬來西亞",
+    "name:map-bms": "Malaysia",
+    "name:mhr": "Малайзий",
+    "name:mi": "Marēhia",
+    "name:min": "Malaysia",
+    "name:mk": "Малезија",
+    "name:ml": "മലേഷ്യ",
+    "name:mn": "Малайз",
+    "name:mr": "मलेशिया",
+    "name:ms": "Malaysia",
+    "name:ms-Arab": "مليسيا",
+    "name:mt": "Malażja",
+    "name:my": "မလေးရှားနိုင်ငံ",
+    "name:na": "Maraidja",
+    "name:nah": "Malasia",
+    "name:nan": "Má-lâi-se-a",
+    "name:nan-Hans": "马来西亚",
+    "name:nan-Latn-pehoeji": "Má-lâi-se-a",
+    "name:nan-Latn-tailo": "Má-lâi-se-a",
+    "name:nds": "Malaysia",
+    "name:ne": "मलेशिया",
+    "name:new": "मलेसिया",
+    "name:nl": "Maleisië",
+    "name:nn": "Malaysia",
+    "name:no": "Malaysia",
+    "name:nov": "Malaysia",
+    "name:nv": "Maléízha",
+    "name:oc": "Malàisia",
+    "name:or": "ମାଲେସିଆ",
+    "name:os": "Малайзи",
+    "name:pa": "ਮਲੇਸ਼ੀਆ",
+    "name:pag": "Malasia",
+    "name:pam": "Malasya",
+    "name:pap": "Malaysia",
+    "name:pih": "Melasya",
+    "name:pl": "Malezja",
+    "name:pms": "Malaysia",
+    "name:pnb": "ملائشیا",
+    "name:pt": "Malásia",
+    "name:qu": "Malasya",
+    "name:quz": "Malasya",
+    "name:ro": "Malaysia",
+    "name:ru": "Малайзия",
+    "name:rw": "Malesiya",
+    "name:sa": "मलयेशिया",
+    "name:sah": "Малайзия",
+    "name:scn": "Malesia",
+    "name:sco": "Malaysie",
+    "name:sd": "ملائيشيا",
+    "name:se": "Malesia",
+    "name:sg": "Malezïi",
+    "name:sh": "Malezija",
+    "name:simple": "Malaysia",
+    "name:sk": "Malajzia",
+    "name:sl": "Malezija",
+    "name:smn": "Malesia",
+    "name:sms": "Malesia",
+    "name:so": "Malaysiya",
+    "name:sq": "Malajzia",
+    "name:sr": "Малезија",
+    "name:ss": "IMaleshiya",
+    "name:su": "Malaysia",
+    "name:sv": "Malaysia",
+    "name:sw": "Malaysia",
+    "name:szl": "Malezyjŏ",
+    "name:ta": "மலேசியா",
+    "name:te": "మలేషియా",
+    "name:tet": "Malázia",
+    "name:tg": "Малайзия",
+    "name:th": "ประเทศมาเลเซีย",
+    "name:tk": "Malaýziýa",
+    "name:tl": "Malasya",
+    "name:tr": "Malezya",
+    "name:tt": "Малайзия",
+    "name:tw": "Malaysia",
+    "name:tzl": "Malaiçía",
+    "name:udm": "Малайзия",
+    "name:ug": "مالايسىيا",
+    "name:uk": "Малайзія",
+    "name:ur": "ملائیشیا",
+    "name:uz": "Malayziya",
+    "name:vi": "Malaysia",
+    "name:vlca": "Malàisia",
+    "name:vo": "Malaysiyän",
+    "name:vro": "Malaisia",
+    "name:war": "Malaysia",
+    "name:wo": "Maleesi",
+    "name:wuu": "马来西亚",
+    "name:xal": "Малаймудин Орн",
+    "name:yi": "מאלייזיע",
+    "name:yo": "Malaysia",
+    "name:yue": "馬來西亞",
+    "name:za": "Majlaizsihya",
+    "name:zh": "马来西亚",
+    "name:zh-Hans": "马来西亚",
+    "name:zh-Hant": "馬來西亞",
+    "note": "Please connect Malaysia with W. P in KL then connect W.P to Labuan, Putrajaya and KL",
+    "official_name:ru": "Федерация Малайзия",
+    "old_name:ro": "Malaezia",
+    "population": "28334135",
+    "type": "boundary",
+    "wikidata": "Q833",
+    "wikimedia_commons": "Category:Malaysia",
+    "wikipedia": "en:Malaysia"
+  }
+}
+
+  ]
+}
