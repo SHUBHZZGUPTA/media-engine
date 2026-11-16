@@ -1,0 +1,78 @@
+{
+ "id": "tc-p3",
+ "delay": 0.3,
+ "files": [
+  {
+   "name": "NY_ne_naip__r0c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.94665625697078,40.846009521484376,-73.9,40.885&bboxSR=4326&imageSR=4326&size=1494,1638&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r1c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-74.04,40.80699523925781,-73.99334374302923,40.846009521484376&bboxSR=4326&imageSR=4326&size=1494,1639&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r1c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.99334374302923,40.80699523925781,-73.94665625697078,40.846009521484376&bboxSR=4326&imageSR=4326&size=1495,1639&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r1c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.94665625697078,40.80699523925781,-73.9,40.846009521484376&bboxSR=4326&imageSR=4326&size=1494,1639&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r2c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-74.04,40.76800476074219,-73.99334374302923,40.80699523925781&bboxSR=4326&imageSR=4326&size=1494,1638&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r2c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.99334374302923,40.76800476074219,-73.94665625697078,40.80699523925781&bboxSR=4326&imageSR=4326&size=1495,1638&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r3c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.99334374302923,40.72899047851562,-73.94665625697078,40.76800476074219&bboxSR=4326&imageSR=4326&size=1495,1639&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_cls_naip__r3c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.95250367755222,40.7689988786444,-73.94,40.77799775728881&bboxSR=4326&imageSR=4326&size=1700,1605&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_cls_naip__r4c0.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.99,40.76,-73.97749632244778,40.7689988786444&bboxSR=4326&imageSR=4326&size=1700,1605&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_cls_naip__r4c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.97749632244778,40.76,-73.965,40.7689988786444&bboxSR=4326&imageSR=4326&size=1699,1605&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_cls_naip__r4c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.965,40.76,-73.95250367755222,40.7689988786444&bboxSR=4326&imageSR=4326&size=1699,1605&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_cls_naip__r4c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.95250367755222,40.76,-73.94,40.7689988786444&bboxSR=4326&imageSR=4326&size=1700,1605&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "MC_pal_ign12__r0c0.jpg",
+   "url": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS2012&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.729,7.4165,43.7335,7.422&WIDTH=1053&HEIGHT=1185"
+  },
+  {
+   "name": "osm_SM_rel.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%5B%22ISO3166-1%22%3D%22SM%22%5D%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coast_SM.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2843.86%2C12.33%2C44.08%2C12.62%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NY.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bnwr%5B%22leisure%22%3D%22park%22%5D%5B%22name%22%3D%22Central%20Park%22%5D%2840.76%2C-73.99%2C40.81%2C-73.94%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NR.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3B%28way%5B%22highway%22~%22%5E%28primary%7Csecondary%7Ctrunk%7Ctertiary%29%24%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bnwr%5B%22aeroway%22~%22aerodrome%7Crunway%22%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3Bnwr%5B%22name%22~%22Buada%22%2Ci%5D%28-0.60%2C166.85%2C-0.45%2C167.00%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_NY_isl.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bnwr%5B%22place%22%3D%22island%22%5D%5B%22name%22%3D%22Manhattan%22%5D%2840.68%2C-74.05%2C40.89%2C-73.90%29%3Bout%20geom%3B"
+  }
+ ]
+}
