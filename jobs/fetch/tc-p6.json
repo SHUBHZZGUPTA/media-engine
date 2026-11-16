@@ -1,0 +1,22 @@
+{
+ "id": "tc-p6",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "TV_ne_wide__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/179.0,-8.540045217391304,179.125,-8.41/1376x1438.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_wide__r0c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/179.125,-8.540045217391304,179.25,-8.41/1376x1438.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_wide__r1c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/179.0,-8.67,179.125,-8.540045217391304/1376x1437.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_wide__r1c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/179.125,-8.67,179.25,-8.540045217391304/1376x1437.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  }
+ ]
+}
