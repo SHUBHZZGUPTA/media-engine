@@ -12,11 +12,16 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
+          # repo is large: fetch only what this job needs (full checkout took >5 min)
+          sparse-checkout: |
+            tools
+            jobs/ytupdate
+            outputs/ytupdate
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
