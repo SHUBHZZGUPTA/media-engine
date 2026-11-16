@@ -1,0 +1,90 @@
+{
+ "params": {
+  "name": "tiny-hi-v1",
+  "src_parts": [
+   "tiny.tgz.part00",
+   "tiny.tgz.part01",
+   "tiny.tgz.part02"
+  ],
+  "src_sha256": "8f15d5493b67a5f074b6c64bd107c5da0d58a97ec72b941b35805d2a1e67fdcc",
+  "dur": 61.921,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   30,
+   129,
+   300,
+   480,
+   600,
+   720,
+   840,
+   900,
+   1080,
+   1260,
+   1410,
+   1560,
+   1680,
+   1800
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "tiny",
+  "page_dir": "hf_hi"
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4",
+  "apt": 0,
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "x265": true,
+  "source": {
+   "sha256": "8f15d5493b67a5f074b6c64bd107c5da0d58a97ec72b941b35805d2a1e67fdcc",
+   "ok": true,
+   "bytes": 106507988
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n\nchrome-headless-shell@157.0.8103.78 /tmp/chs/chrome-headless-shell/linux-157.0.8103.78/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "codes": [
+    0,
+    0,
+    0
+   ],
+   "secs": 363.2,
+   "frames": 1858,
+   "workers": 3
+  },
+  "concat": {
+   "exit": 0,
+   "secs": 0.7,
+   "tail": ""
+  }
+ },
+ "renderer": [
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ ],
+ "final": {
+  "bytes": 259841878,
+  "sha256": "6fc6cda95f4081d82a96b50d15e023b23e4578ae08c3f36a5b66c8ea7f3e051b",
+  "probe": "1080,1920,1858\n61.933333"
+ },
+ "parts": [
+  "tiny-hi-v1.mp4.part00",
+  "tiny-hi-v1.mp4.part01",
+  "tiny-hi-v1.mp4.part02",
+  "tiny-hi-v1.mp4.part03",
+  "tiny-hi-v1.mp4.part04",
+  "tiny-hi-v1.mp4.part05",
+  "tiny-hi-v1.mp4.part06"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
