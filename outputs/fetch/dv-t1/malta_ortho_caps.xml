@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<WMS_Capabilities xmlns="http://www.opengis.net/wms" xmlns:sld="http://www.opengis.net/sld" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" version="1.3.0" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd">
+<Service>
+  <Name>WMS</Name>
+  <Title>Malta Orthoimagery 2012 (INSPIRE harmonized)</Title>
+  <Abstract>Malta Orthoimagery 2012 (INSPIRE harmonized)</Abstract>
+  <KeywordList>
+    <Keyword vocabulary="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_KeywordTypeCode">Orthoimagery</Keyword>
+    <Keyword>infoMapAccessService</Keyword>
+    <Keyword>WMS</Keyword>
+    <Keyword>Malta</Keyword>
+    <Keyword>Orthoimagery 2012</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.pa.org.mt"/>
+  <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson></ContactPerson>
+        <ContactOrganization>Malta Planning Authority</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition></ContactPosition>
+      <ContactAddress>
+        <AddressType>postal</AddressType>
+        <Address>St Francis Ravelin</Address>
+        <City>Floriana</City>
+        <StateOrProvince></StateOrProvince>
+        <PostCode>FRN1230</PostCode>
+        <Country>Malta</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone></ContactVoiceTelephone>
+      <ContactFacsimileTelephone></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress>inspire@pa.org.mt</ContactElectronicMailAddress>
+  </ContactInformation>
+    <Fees></Fees>
+    <AccessConstraints>noLimitations</AccessConstraints>
+    <MaxWidth>4000</MaxWidth>
+    <MaxHeight>4000</MaxHeight>
+</Service>
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?"/></Get>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/gif</Format>
+      <Format>image/GeoTIFF</Format>
+      <Format>image/tiff</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?"/></Get>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/plain</Format>
+      <Format>text/html</Format>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?"/></Get>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <sld:GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/gif</Format>
+      <Format>image/GeoTIFF</Format>
+      <Format>image/tiff</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xlink:href="https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?"/></Get>
+        </HTTP>
+      </DCPType>
+    </sld:GetLegendGraphic>
+  </Request>
+  <Exception>
+    <Format>XML</Format>
+    <Format>INIMAGE</Format>
+    <Format>BLANK</Format>
+  </Exception>
+  <inspire_vs:ExtendedCapabilities>
+    <inspire_common:MetadataUrl>
+      <inspire_common:URL>https://malta.coverage.wetransform.eu/metadata/org.1261.7c061629-6542-42ca-a667-dd4f3bca1b2a.xml</inspire_common:URL>
+      <inspire_common:MediaType>application/vnd.iso.19139+xml</inspire_common:MediaType>
+    </inspire_common:MetadataUrl>
+    <inspire_common:SupportedLanguages>
+      <inspire_common:DefaultLanguage>
+        <inspire_common:Language>eng</inspire_common:Language>
+      </inspire_common:DefaultLanguage>
+    </inspire_common:SupportedLanguages>
+    <inspire_common:ResponseLanguage>
+      <inspire_common:Language>eng</inspire_common:Language>
+    </inspire_common:ResponseLanguage>
+  </inspire_vs:ExtendedCapabilities>
+  <Layer>
+    <Title>INSPIRE WMS Malta Orthoimagery 2012 (INSPIRE harmonized)</Title>
+    <CRS>EPSG:4258</CRS>
+    <CRS>EPSG:4326</CRS>
+    <CRS>ESPG:3045</CRS>
+    <CRS>EPSG:3035</CRS>
+    <CRS>EPSG:25833</CRS>
+    <CRS>CRS:84</CRS>
+    <EX_GeographicBoundingBox>
+      <westBoundLongitude>13.92320575277286</westBoundLongitude>
+      <eastBoundLongitude>14.828279146040844</eastBoundLongitude>
+      <southBoundLatitude>35.59836565817237</southBoundLatitude>
+      <northBoundLatitude>36.28991096934965</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+    <BoundingBox CRS="CRS:84" minx="13.92320575277286" miny="35.59836565817237" maxx="14.828279146040844" maxy="36.28991096934965" />
+    <BoundingBox CRS="EPSG:4258" minx="35.59836565817237" miny="13.92320575277286" maxx="36.28991096934965" maxy="14.828279146040844" />
+    <BoundingBox CRS="EPSG:4326" minx="35.59836565817237" miny="13.92320575277286" maxx="36.28991096934965" maxy="14.828279146040844" />
+    <BoundingBox CRS="ESPG:3045" minx="3939927.241340944" miny="403299.9983321247" maxx="4016118.5124906213" maxy="484445.99692600226" />
+    <BoundingBox CRS="EPSG:3035" minx="1402720.1394179226" miny="4676512.408367025" maxx="1483266.5431239356" maxy="4762561.680584668" />
+    <BoundingBox CRS="EPSG:25833" minx="403299.9983321247" miny="3939927.241340944" maxx="484445.99692600226" maxy="4016118.5124906213" />
+    <Layer>
+      <Name>OI.OrthoimageCoverage</Name>
+      <Title>Orthoimage Coverage</Title>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>13.92320575277286</westBoundLongitude>
+        <eastBoundLongitude>14.828279146040844</eastBoundLongitude>
+        <southBoundLatitude>35.59836565817237</southBoundLatitude>
+        <northBoundLatitude>36.28991096934965</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="13.92320575277286" miny="35.59836565817237" maxx="14.828279146040844" maxy="36.28991096934965" />
+      <BoundingBox CRS="EPSG:4258" minx="35.59836565817237" miny="13.92320575277286" maxx="36.28991096934965" maxy="14.828279146040844" />
+      <BoundingBox CRS="EPSG:4326" minx="35.59836565817237" miny="13.92320575277286" maxx="36.28991096934965" maxy="14.828279146040844" />
+      <BoundingBox CRS="ESPG:3045" minx="3939927.241340944" miny="403299.9983321247" maxx="4016118.5124906213" maxy="484445.99692600226" />
+      <BoundingBox CRS="EPSG:3035" minx="1402720.1394179226" miny="4676512.408367025" maxx="1483266.5431239356" maxy="4762561.680584668" />
+      <BoundingBox CRS="EPSG:25833" minx="403299.9983321247" miny="3939927.241340944" maxx="484445.99692600226" maxy="4016118.5124906213" />
+      <MetadataURL type="ISO19115:2003">
+        <Format>text/xml</Format>
+        <OnlineResource xlink:type="simple" xlink:href="https://malta.coverage.wetransform.eu/metadata/org.1261.434810b6-1500-4dbf-8054-406f8efb995e.xml"/>
+      </MetadataURL>
+      <Style>
+        <Name>inspire_common:DEFAULT</Name>
+        <Title>default</Title>
+        <LegendURL width="1" height="1">
+          <Format>image/png</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?format=image%2Fpng&amp;layer=OI.OrthoimageCoverage&amp;sld_version=1.1.0&amp;request=GetLegendGraphic&amp;service=WMS&amp;version=1.1.1&amp;styles=" />
+        </LegendURL>
+      </Style>
+    </Layer>
+  </Layer>
+</Capability>
+</WMS_Capabilities>
