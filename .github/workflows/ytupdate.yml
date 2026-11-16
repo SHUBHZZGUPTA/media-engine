@@ -1,5 +1,5 @@
 name: ytupdate
-# Changes status fields (e.g. the synthetic-content label) of a channel's own video. Runs when a job file is pushed to jobs/ytupdate/
+# Changes status fields (e.g. the synthetic-content label) or the title/description/tags of a channel's own video. Runs when a job file is pushed to jobs/ytupdate/
 on:
   push:
     branches: [main]
