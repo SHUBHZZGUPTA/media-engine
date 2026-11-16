@@ -66,9 +66,9 @@ B=["Okay. Now the six people around them. And this is where it gets good.",
 "Tell me in the comments. Are you playing as Jason first, or Lucia? And who don't you trust?",
 "If this helped, subscribe to Five Star Intel. We're covering this game every week. See you in Leonida!"]
 D=("Narrate this as a high-energy, feel-good gaming YouTube video introducing the two main characters of the game GTA 6, Jason and Lucia, and the people around them. "
-"The Narrator is EXCITED and HAPPY the whole time: a thrilled, grinning friend who has studied every trailer and is bursting to tell you who these characters are. "
+"The Narrator is THRILLED and grinning the whole time: an excited, fun friend who has studied every trailer and can't wait to tell you who these characters are. "
 "A huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. "
-"Wide, lively pitch movement; real delight on every reveal; playful laughter in the voice on the funny bits (a private browser tab, Rockstar wrote that not me, the landlord). A sly, teasing, conspiratorial grin on the theory about Brian. "
+"Wide, lively pitch movement; real amazement on every number and reveal; playful laughter in the voice on the funny bits (a private browser tab, Rockstar wrote that not me, the landlord). A sly, teasing, conspiratorial grin on the theory about Brian. "
 "Punch the key words with energy. Short lines like 'Jason and Lucia.', 'Number one. Cal Hampton.', 'Other people. Like Jason.' are crisp labels with a beat after them. "
 "Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Keep exactly the same pace and energy in the last minute as in the first. "
 "Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. "
@@ -76,9 +76,8 @@ D=("Narrate this as a high-energy, feel-good gaming YouTube video introducing th
 "Pronounce 'Leonida' as 'lee-oh-NEE-dah', 'Lucia' as 'loo-SEE-ah', 'Caminos' as 'kah-MEE-nohs', 'Duval' as 'doo-VAHL', 'Dre'Quan' as 'DRAY-kwahn', 'Raul Bautista' as 'rah-OOL bow-TEES-tah', 'Heder' as 'HEE-der', 'Boobie Ike' as 'BOO-bee eyek', 'Real Dimez' as 'real dimes', 'Bae-Luxe' as 'bay lux', 'DWNPLY' as the single word 'downplay'. "
 "Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. "
 "The text is given one sentence group per line: read every line in order, do not skip any line.")
-job={"id":"fsi-duo-en","models":["gemini-3.8-flash-tts"],"try":2,"key":"longform",
- "items":[{"name":n,"direction":D,"speakers":{"Narrator":"Fenrir"},"lines":[["Narrator",t] for t in L]} for n,L in (("pA",A),("pB",B))]}
-json.dump(job,open("../../jobs/tts/fsi-duo-en.json","w"),indent=1,ensure_ascii=False)
-json.dump({"pA":A,"pB":B},open("lines_en.json","w"),indent=1,ensure_ascii=False)
-w=[sum(len(t.split()) for t in L) for L in (A,B)]
-print(w,sum(w),"words ->", round(sum(w)/174,2),"min @174wpm", [len(L) for L in (A,B)])
+job={"id":"fsi-duo-en-full","models":["gemini-3.8-flash-tts"],"try":2,
+ "items":[{"name":"full","direction":D,"speakers":{"Narrator":"Fenrir"},"lines":[["Narrator",t] for t in A+B]}]}
+json.dump(job,open("../../jobs/tts/fsi-duo-en-full.json","w"),indent=1,ensure_ascii=False)
+json.dump({"full":A+B},open("lines_en.json","w"),indent=1,ensure_ascii=False)
+print(sum(len(t.split()) for t in A+B),"words, one take")
