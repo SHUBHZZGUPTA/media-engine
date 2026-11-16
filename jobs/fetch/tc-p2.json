@@ -1,0 +1,322 @@
+{
+ "id": "tc-p2",
+ "delay": 0.3,
+ "files": [
+  {
+   "name": "SM_ne_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=12.33,43.97004521167283,12.475062419285406,44.08&WIDTH=1162&HEIGHT=1216"
+  },
+  {
+   "name": "SM_ne_s2__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=12.475062419285406,43.97004521167283,12.62,44.08&WIDTH=1161&HEIGHT=1216"
+  },
+  {
+   "name": "SM_ne_s2__r1c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=12.33,43.86,12.475062419285406,43.97004521167283&WIDTH=1162&HEIGHT=1217"
+  },
+  {
+   "name": "SM_ne_s2__r1c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=12.475062419285406,43.86,12.62,43.97004521167283&WIDTH=1161&HEIGHT=1217"
+  },
+  {
+   "name": "SM_cls_er__r0c0.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.395,43.995,12.427490738102023&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r0c1.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.427490738102023,43.995,12.46&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r0c2.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.46,43.995,12.492509261897977&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r0c3.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.492509261897977,43.995,12.525&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r1c0.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.395,43.97300537109375,12.427490738102023&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r1c1.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.427490738102023,43.97300537109375,12.46&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r1c2.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.46,43.97300537109375,12.492509261897977&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r1c3.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.492509261897977,43.97300537109375,12.525&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r2c0.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.395,43.950997314453126,12.427490738102023&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r2c1.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.427490738102023,43.950997314453126,12.46&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r2c2.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.46,43.950997314453126,12.492509261897977&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r2c3.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.492509261897977,43.950997314453126,12.525&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r3c0.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.395,43.92900268554687,12.427490738102023&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r3c1.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.427490738102023,43.92900268554687,12.46&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r3c2.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.46,43.92900268554687,12.492509261897977&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r3c3.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.492509261897977,43.92900268554687,12.525&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_er__r4c0.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.395,43.90699462890625,12.427490738102023&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r4c1.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.427490738102023,43.90699462890625,12.46&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r4c2.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.46,43.90699462890625,12.492509261897977&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_er__r4c3.jpg",
+   "url": "https://servizigis.regione.emilia-romagna.it/wms/agea2020_rgb?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=Agea2020_RGB&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.492509261897977,43.90699462890625,12.525&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r0c0.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.395,43.995,12.427490738102023&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r0c1.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.427490738102023,43.995,12.46&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r0c2.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.46,43.995,12.492509261897977&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r0c3.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.97300537109375,12.492509261897977,43.995,12.525&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r1c0.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.395,43.97300537109375,12.427490738102023&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r1c1.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.427490738102023,43.97300537109375,12.46&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r1c2.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.46,43.97300537109375,12.492509261897977&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r1c3.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.950997314453126,12.492509261897977,43.97300537109375,12.525&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r2c0.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.395,43.950997314453126,12.427490738102023&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r2c1.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.427490738102023,43.950997314453126,12.46&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r2c2.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.46,43.950997314453126,12.492509261897977&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r2c3.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.92900268554687,12.492509261897977,43.950997314453126,12.525&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r3c0.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.395,43.92900268554687,12.427490738102023&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r3c1.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.427490738102023,43.92900268554687,12.46&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r3c2.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.46,43.92900268554687,12.492509261897977&WIDTH=1755&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r3c3.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.90699462890625,12.492509261897977,43.92900268554687,12.525&WIDTH=1754&HEIGHT=1639"
+  },
+  {
+   "name": "SM_cls_pcn06__r4c0.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.395,43.90699462890625,12.427490738102023&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r4c1.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.427490738102023,43.90699462890625,12.46&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r4c2.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.46,43.90699462890625,12.492509261897977&WIDTH=1755&HEIGHT=1638"
+  },
+  {
+   "name": "SM_cls_pcn06__r4c3.jpg",
+   "url": "http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.ORTOIMMAGINI.2006.33&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=43.885,12.492509261897977,43.90699462890625,12.525&WIDTH=1754&HEIGHT=1638"
+  },
+  {
+   "name": "MC_ne_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=7.38,43.715,7.46,43.765&WIDTH=643&HEIGHT=553"
+  },
+  {
+   "name": "VA_ne_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=12.4,41.86,12.52,41.94&WIDTH=994&HEIGHT=885"
+  },
+  {
+   "name": "NR_ne_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=166.88,-0.565,166.97,-0.485&WIDTH=1002&HEIGHT=885"
+  },
+  {
+   "name": "TVR_base_s2__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=175.8,-8.150904474769915,177.9,-5.3&WIDTH=1157&HEIGHT=1576"
+  },
+  {
+   "name": "TVR_base_s2__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=177.9,-8.150904474769915,180.0,-5.3&WIDTH=1157&HEIGHT=1576"
+  },
+  {
+   "name": "TVR_base_s2__r1c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=175.8,-11.0,177.9,-8.150904474769915&WIDTH=1157&HEIGHT=1575"
+  },
+  {
+   "name": "TVR_base_s2__r1c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=177.9,-11.0,180.0,-8.150904474769915&WIDTH=1157&HEIGHT=1575"
+  },
+  {
+   "name": "TV_ne_pc0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.05,-8.54504522217853,179.15,-8.43/1101x1272.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20221117T222801_R072_T60LYR_20221118T111520&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc0__r0c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.15,-8.54504522217853,179.25,-8.43/1101x1272.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20221117T222801_R072_T60LYR_20221118T111520&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc0__r1c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.05,-8.66,179.15,-8.54504522217853/1101x1271.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20221117T222801_R072_T60LYR_20221118T111520&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc0__r1c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.15,-8.66,179.25,-8.54504522217853/1101x1271.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20221117T222801_R072_T60LYR_20221118T111520&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.05,-8.54504522217853,179.15,-8.43/1101x1272.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc1__r0c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.15,-8.54504522217853,179.25,-8.43/1101x1272.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc1__r1c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.05,-8.66,179.15,-8.54504522217853/1101x1271.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc1__r1c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.15,-8.66,179.25,-8.54504522217853/1101x1271.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60LYR_20220507T204010&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc2__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.05,-8.54504522217853,179.15,-8.43/1101x1272.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20200501T222801_R072_T60LYR_20200920T015436&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc2__r0c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.15,-8.54504522217853,179.25,-8.43/1101x1272.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20200501T222801_R072_T60LYR_20200920T015436&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc2__r1c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.05,-8.66,179.15,-8.54504522217853/1101x1271.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20200501T222801_R072_T60LYR_20200920T015436&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_ne_pc2__r1c1.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.15,-8.66,179.25,-8.54504522217853/1101x1271.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20200501T222801_R072_T60LYR_20200920T015436&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "TV_bboxvariant_test.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/179.18,-8.54,179.21,-8.51/330x330.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20221117T222801_R072_T60LYR_20221118T111520&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nanumea_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/176.02,-5.75,176.19,-5.59/942x885.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20221120T223641_R115_T60MVU_20221121T075327&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Niutao_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/177.29,-6.16,177.39000000000001,-6.06/553x553.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20201205T223639_R115_T60MWU_20201206T135522&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Niutao_1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/177.29,-6.16,177.39000000000001,-6.06/553x553.png?collection=sentinel-2-l2a&item=S2C_MSIL2A_20251224T223641_R115_T60MWU_20251225T003514&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nanumanga_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/176.27,-6.34,176.37,-6.239999999999999/553x553.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20210807T223641_R115_T60MVU_20210808T075902&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nanumanga_1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/176.27,-6.34,176.37,-6.239999999999999/553x553.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20200921T223641_R115_T60MVU_20200924T093508&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nui_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/177.1,-7.3,177.21,-7.16/607x774.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20221006T223639_R115_T60MWT_20240722T231825&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nui_1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/177.1,-7.3,177.21,-7.16/607x774.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20210822T223639_R115_T60MWT_20210823T071824&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Vaitupu_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/178.63,-7.53,178.73,-7.42/552x608.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60MXS_20220507T182843&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Vaitupu_1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/178.63,-7.53,178.73,-7.42/552x608.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20220809T222811_R072_T60MXS_20220811T075141&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nukufetau_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/178.27,-8.11,178.45,-7.92/992x1050.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20220506T222749_R072_T60MXS_20220507T182843&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nukufetau_1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/178.27,-8.11,178.45,-7.92/992x1050.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20220809T222811_R072_T60MXS_20220811T075141&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nukulaelae_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.77,-9.45,179.89000000000001,-9.33/659x663.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20240803T222759_R072_T60LYQ_20240803T235012&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Nukulaelae_1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.77,-9.45,179.89000000000001,-9.33/659x663.png?collection=sentinel-2-l2a&item=S2B_MSIL2A_20210908T222759_R072_T60LYQ_20210909T085317&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Niulakita_0__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.43,-10.83,179.51,-10.75/437x442.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20220928T222801_R072_T60LYP_20240717T130950&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  },
+  {
+   "name": "AT_Niulakita_1__r0c0.png",
+   "url": "https://planetarycomputer.microsoft.com/api/data/v1/item/crop/179.43,-10.83,179.51,-10.75/437x442.png?collection=sentinel-2-l2a&item=S2A_MSIL2A_20200720T222801_R072_T60LYP_20200816T205733&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0"
+  }
+ ]
+}
