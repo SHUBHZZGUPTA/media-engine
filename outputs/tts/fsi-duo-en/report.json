@@ -1,0 +1,21 @@
+{
+ "job": "fsi-duo-en",
+ "items": [
+  {
+   "name": "pA",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 205.72,
+   "took": 17.1
+  },
+  {
+   "name": "pB",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 194.04,
+   "took": 14.8
+  }
+ ]
+}
