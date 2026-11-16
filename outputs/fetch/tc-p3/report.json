@@ -1,0 +1,92 @@
+[
+ {
+  "name": "NY_ne_naip__r0c2.jpg",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "NY_ne_naip__r1c0.jpg",
+  "ok": true,
+  "bytes": 438102
+ },
+ {
+  "name": "NY_ne_naip__r1c1.jpg",
+  "ok": true,
+  "bytes": 457469
+ },
+ {
+  "name": "NY_ne_naip__r1c2.jpg",
+  "ok": true,
+  "bytes": 725671
+ },
+ {
+  "name": "NY_ne_naip__r2c0.jpg",
+  "ok": true,
+  "bytes": 499791
+ },
+ {
+  "name": "NY_ne_naip__r2c1.jpg",
+  "ok": true,
+  "bytes": 558790
+ },
+ {
+  "name": "NY_ne_naip__r3c1.jpg",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "NY_cls_naip__r3c3.jpg",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "NY_cls_naip__r4c0.jpg",
+  "ok": true,
+  "bytes": 412383
+ },
+ {
+  "name": "NY_cls_naip__r4c1.jpg",
+  "ok": true,
+  "bytes": 450148
+ },
+ {
+  "name": "NY_cls_naip__r4c2.jpg",
+  "ok": true,
+  "bytes": 466425
+ },
+ {
+  "name": "NY_cls_naip__r4c3.jpg",
+  "ok": true,
+  "bytes": 357511
+ },
+ {
+  "name": "MC_pal_ign12__r0c0.jpg",
+  "ok": true,
+  "bytes": 272570
+ },
+ {
+  "name": "osm_SM_rel.json",
+  "ok": true,
+  "bytes": 63266
+ },
+ {
+  "name": "osm_coast_SM.json",
+  "ok": true,
+  "bytes": 18237
+ },
+ {
+  "name": "osm_NY.json",
+  "ok": true,
+  "bytes": 16100
+ },
+ {
+  "name": "osm_NR.json",
+  "ok": true,
+  "bytes": 129382
+ },
+ {
+  "name": "osm_NY_isl.json",
+  "ok": true,
+  "bytes": 287
+ }
+]
