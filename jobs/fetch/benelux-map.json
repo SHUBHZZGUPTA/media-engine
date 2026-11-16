@@ -1,0 +1,30 @@
+{
+ "id": "benelux-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "rb_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=48,0.5,51.4,5&WIDTH=2400&HEIGHT=1800"
+  },
+  {
+   "name": "rb_01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=51.4,0.5,54.8,5&WIDTH=2400&HEIGHT=1800"
+  },
+  {
+   "name": "rb_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=48,5,51.4,9.5&WIDTH=2400&HEIGHT=1800"
+  },
+  {
+   "name": "rb_11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=51.4,5,54.8,9.5&WIDTH=2400&HEIGHT=1800"
+  },
+  {
+   "name": "gb_NLD.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NLD/ADM0/geoBoundaries-NLD-ADM0.geojson"
+  },
+  {
+   "name": "gb_BEL.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BEL/ADM0/geoBoundaries-BEL-ADM0.geojson"
+  }
+ ]
+}
