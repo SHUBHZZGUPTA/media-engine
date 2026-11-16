@@ -1,6 +1,6 @@
 import json, re, subprocess, os, sys, difflib
 ME="/home/claude/media-engine"
-L=json.load(open(f"{ME}/longform/fsi-duo/lines_en.json")); parts=["pA","pB"]
+L=json.load(open(f"{ME}/longform/fsi-duo/lines_en.json")); parts=["full"]
 SH=json.load(open("shots.json")); GAP=0.45
 def dur(f): return float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",f],capture_output=True,text=True).stdout)
 norm=lambda w: re.sub(r"[^a-z0-9]","",w.lower())
@@ -169,8 +169,8 @@ def ass(t0,t1,path):
     open(path,"w").write(hdr+"\n".join(ev)+"\n")
 def audio(music="eighties_action"):
     T=json.load(open("timing.json")); total=T["total"]
-    fc=f"[0:a][2:a][1:a]concat=n=3:v=0:a=1,loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000,apad=whole_dur={total:.3f},asplit=2[v1][v2];[3:a]aresample=48000,volume=0.16,afade=t=in:d=1.5,afade=t=out:st={total-3:.2f}:d=3[m];[m][v1]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=350[md];[md][v2]amix=inputs=2:normalize=0:duration=longest,atrim=duration={total:.3f}[a]"
-    cmd=["ffmpeg","-v","error","-y","-i","audio/pA.wav","-i","audio/pB.wav","-f","lavfi","-t",str(GAP),"-i","anullsrc=r=24000:cl=mono","-stream_loop","-1","-i",f"audio/{music}.mp3","-filter_complex",fc,"-map","[a]","-c:a","aac","-b:a","192k","mix.m4a"]
+    fc=f"[0:a]loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000,apad=whole_dur={total:.3f},asplit=2[v1][v2];[1:a]aresample=48000,volume=0.16,afade=t=in:d=1.5,afade=t=out:st={total-3:.2f}:d=3[m];[m][v1]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=350[md];[md][v2]amix=inputs=2:normalize=0:duration=longest,atrim=duration={total:.3f}[a]"
+    cmd=["ffmpeg","-v","error","-y","-i","audio/full.wav","-stream_loop","-1","-i",f"audio/{music}.mp3","-filter_complex",fc,"-map","[a]","-c:a","aac","-b:a","192k","mix.m4a"]
     subprocess.run(cmd,check=True); print("audio",dur("mix.m4a"))
 if __name__=="__main__":
     for st in sys.argv[1:]:
