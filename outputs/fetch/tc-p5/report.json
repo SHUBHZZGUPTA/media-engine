@@ -1,0 +1,32 @@
+[
+ {
+  "name": "NY_ne_naip__r0c2.jpg",
+  "ok": false,
+  "error": "<HTTPError 504: 'Gateway Time-out'>"
+ },
+ {
+  "name": "NY_ne_naip__r3c1.jpg",
+  "ok": true,
+  "bytes": 583884
+ },
+ {
+  "name": "NY_cls_naip__r3c3.jpg",
+  "ok": false,
+  "error": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ {
+  "name": "NY_ne_naip__r0c2_b.jpg",
+  "ok": true,
+  "bytes": 548126
+ },
+ {
+  "name": "NY_ne_naip__r3c1_b.jpg",
+  "ok": true,
+  "bytes": 583884
+ },
+ {
+  "name": "NY_cls_naip__r3c3_b.jpg",
+  "ok": true,
+  "bytes": 428146
+ }
+]
