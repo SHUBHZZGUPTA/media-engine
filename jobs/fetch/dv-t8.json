@@ -1,0 +1,30 @@
+{
+ "id": "dv-t8",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "LI_ne_s2b__r0c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=9.38,47.20330318895764,9.555,47.33&WIDTH=1325&HEIGHT=1401"
+  },
+  {
+   "name": "LI_ne_s2b__r0c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=9.555,47.20330318895764,9.73,47.33&WIDTH=1325&HEIGHT=1401"
+  },
+  {
+   "name": "LI_ne_s2b__r1c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=9.38,47.07669681104236,9.555,47.20330318895764&WIDTH=1325&HEIGHT=1400"
+  },
+  {
+   "name": "LI_ne_s2b__r1c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=9.555,47.07669681104236,9.73,47.20330318895764&WIDTH=1325&HEIGHT=1400"
+  },
+  {
+   "name": "LI_ne_s2b__r2c0.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=9.38,46.95,9.555,47.07669681104236&WIDTH=1325&HEIGHT=1401"
+  },
+  {
+   "name": "LI_ne_s2b__r2c1.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=9.555,46.95,9.73,47.07669681104236&WIDTH=1325&HEIGHT=1401"
+  }
+ ]
+}
