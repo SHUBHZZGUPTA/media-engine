@@ -1,0 +1,270 @@
+{
+ "id": "dv-t6",
+ "delay": 1,
+ "files": [
+  {
+   "name": "osm_coastGM_0a_0.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2815.0%2C-17.6%2C16.0%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0a_1.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2815.0%2C-17.6%2C16.0%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0a_2.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2815.0%2C-17.6%2C16.0%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b_0.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.0%2C-17.6%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b_1.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.0%2C-17.6%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coastGM_0b_2.json",
+   "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A100%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2816.0%2C-17.6%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "MT_cls_mt12__r0c1__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=36.00700561523438,14.368732782369147,36.03,14.40309917355372&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c1__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=36.00700561523438,14.40309917355372,36.03,14.4375&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c1__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.98401123046875,14.368732782369147,36.00700561523438,14.40309917355372&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c1__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.98401123046875,14.40309917355372,36.00700561523438,14.4375&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c2__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=36.00700561523438,14.4375,36.03,14.471866391184573&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c2__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=36.00700561523438,14.471866391184573,36.03,14.506267217630853&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c2__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.98401123046875,14.4375,36.00700561523438,14.471866391184573&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c2__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.98401123046875,14.471866391184573,36.00700561523438,14.506267217630853&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c3__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=36.00700561523438,14.506267217630853,36.03,14.540633608815426&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c3__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=36.00700561523438,14.540633608815426,36.03,14.575&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c3__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.98401123046875,14.506267217630853,36.00700561523438,14.540633608815426&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r0c3__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.98401123046875,14.540633608815426,36.00700561523438,14.575&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r1c1__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.96098876953125,14.368732782369147,35.98401123046875,14.40309917355372&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r1c1__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.96098876953125,14.40309917355372,35.98401123046875,14.4375&WIDTH=999&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r1c1__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.937994384765624,14.368732782369147,35.96098876953125,14.40309917355372&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r1c1__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.937994384765624,14.40309917355372,35.96098876953125,14.4375&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r1c2__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.96098876953125,14.4375,35.98401123046875,14.471866391184573&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r1c2__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.96098876953125,14.471866391184573,35.98401123046875,14.506267217630853&WIDTH=999&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r1c2__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.937994384765624,14.4375,35.96098876953125,14.471866391184573&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r1c2__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.937994384765624,14.471866391184573,35.96098876953125,14.506267217630853&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r1c3__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.96098876953125,14.506267217630853,35.98401123046875,14.540633608815426&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r1c3__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.96098876953125,14.540633608815426,35.98401123046875,14.575&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r1c3__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.937994384765624,14.506267217630853,35.96098876953125,14.540633608815426&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r1c3__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.937994384765624,14.540633608815426,35.96098876953125,14.575&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c0__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.915,14.3,35.937994384765624,14.334366391184574&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c0__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.915,14.334366391184574,35.937994384765624,14.368732782369147&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c0__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.892005615234375,14.3,35.915,14.334366391184574&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c0__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.892005615234375,14.334366391184574,35.915,14.368732782369147&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c3__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.915,14.506267217630853,35.937994384765624,14.540633608815426&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c3__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.915,14.540633608815426,35.937994384765624,14.575&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c3__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.892005615234375,14.506267217630853,35.915,14.540633608815426&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r2c3__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.892005615234375,14.540633608815426,35.915,14.575&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c0__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.3,35.892005615234375,14.334366391184574&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c0__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.334366391184574,35.892005615234375,14.368732782369147&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c0__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.3,35.86898315429687,14.334366391184574&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c0__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.334366391184574,35.86898315429687,14.368732782369147&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c1__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.368732782369147,35.892005615234375,14.40309917355372&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c1__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.40309917355372,35.892005615234375,14.4375&WIDTH=999&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c1__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.368732782369147,35.86898315429687,14.40309917355372&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c1__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.40309917355372,35.86898315429687,14.4375&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c2__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.4375,35.892005615234375,14.471866391184573&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c2__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.471866391184573,35.892005615234375,14.506267217630853&WIDTH=999&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c2__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.4375,35.86898315429687,14.471866391184573&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c2__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.471866391184573,35.86898315429687,14.506267217630853&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c3__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.506267217630853,35.892005615234375,14.540633608815426&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c3__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.86898315429687,14.540633608815426,35.892005615234375,14.575&WIDTH=998&HEIGHT=820"
+  },
+  {
+   "name": "MT_cls_mt12__r3c3__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.506267217630853,35.86898315429687,14.540633608815426&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r3c3__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.845988769531246,14.540633608815426,35.86898315429687,14.575&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c0__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.82299438476562,14.3,35.845988769531246,14.334366391184574&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c0__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.82299438476562,14.334366391184574,35.845988769531246,14.368732782369147&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c0__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.8,14.3,35.82299438476562,14.334366391184574&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c0__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.8,14.334366391184574,35.82299438476562,14.368732782369147&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c1__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.82299438476562,14.368732782369147,35.845988769531246,14.40309917355372&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c1__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.82299438476562,14.40309917355372,35.845988769531246,14.4375&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c1__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.8,14.368732782369147,35.82299438476562,14.40309917355372&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c1__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.8,14.40309917355372,35.82299438476562,14.4375&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c2__s00.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.82299438476562,14.4375,35.845988769531246,14.471866391184573&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c2__s01.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.82299438476562,14.471866391184573,35.845988769531246,14.506267217630853&WIDTH=999&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c2__s10.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.8,14.4375,35.82299438476562,14.471866391184573&WIDTH=998&HEIGHT=819"
+  },
+  {
+   "name": "MT_cls_mt12__r4c2__s11.jpg",
+   "url": "https://malta.coverage.wetransform.eu/wms/ortho_2012/ows?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&FORMAT=image/jpeg&BBOX=35.8,14.471866391184573,35.82299438476562,14.506267217630853&WIDTH=999&HEIGHT=819"
+  }
+ ]
+}
