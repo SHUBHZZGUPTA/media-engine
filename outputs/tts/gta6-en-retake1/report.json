@@ -1,0 +1,32 @@
+{
+ "job": "gta6-en-retake1",
+ "items": [
+  {
+   "name": "pB2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 97.32,
+   "took": 9.5
+  },
+  {
+   "name": "pC2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 93.36,
+   "took": 9.1
+  },
+  {
+   "name": "pD2",
+   "ok": false,
+   "attempts": [
+    {
+     "model": "gemini-3.8-flash-tts",
+     "status": 429,
+     "error": "{\"error\":{\"message\":\"Rate limit exceeded for model gemini-3.8-flash-tts (limit: 10 requests per day on Free Tier). Please retry in 19h16m22s or upgrade your tier at https://ai.dev/rate-limit.\",\"code\":\"too_many_requests\"}}"
+    }
+   ]
+  }
+ ]
+}
