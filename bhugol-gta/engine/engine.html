@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="__LANG__">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>BHUGOL GTA 6 vs Miami</title>
+<script src="./gsap.min.js"></script>
+<style>
+@font-face { font-family: 'BSD'; font-weight: 800; src: url(assets/bsd800.woff2) format('woff2'); }
+@font-face { font-family: 'BSD'; font-weight: 900; src: url(assets/bsd900.woff2) format('woff2'); }
+@font-face { font-family: 'Arch'; font-weight: 800; src: url(assets/arch800.woff2) format('woff2'); }
+@font-face { font-family: 'Muk'; font-weight: 800; src: url(assets/mukta800.woff2) format('woff2'); }
+@font-face { font-family: 'Emo'; src: url(assets/emoji.ttf); }
+@font-face { font-family: 'Fr'; font-weight: 600; src: url(assets/fr600.woff2) format('woff2'); }
+@font-face { font-family: 'Fr'; font-weight: 700; src: url(assets/fr700.woff2) format('woff2'); }
+@font-face { font-family: 'In'; font-weight: 800; src: url(assets/in800.woff2) format('woff2'); }
+:root { --y: #FFD21A; --w: #F6F9FC; --ink: #07121D; --red: #FF3B30; --pink: #FF4FA3; --teal: #22D3C5;
+  --disp: 'BSD', 'Muk', 'Emo', sans-serif; --ui: 'Arch', 'Muk', 'Emo', sans-serif; }
+html[lang="hi"] { --disp: 'Muk', 'BSD', 'Emo', sans-serif; }
+body { margin: 0; background: #02070D; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #02070D; }
+.L { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+.shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; opacity: 0; overflow: hidden; }
+.mv { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 960px 540px; }
+.mv video, .mv > img.full { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; display: block; }
+.bgblur { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; object-fit: cover; filter: blur(34px) brightness(.5) saturate(1.2); }
+.cardimg { position: absolute; object-fit: contain; border: 10px solid #fff; border-radius: 6px; box-shadow: 0 24px 60px rgba(0,0,0,.6); background: #fff; }
+.ov { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.paper { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.paper img { position: absolute; left: 0; top: 0; display: block; }
+.lbl { position: absolute; left: 0; top: 0; font-family: var(--disp); font-weight: 900; color: var(--w); -webkit-text-stroke: 9px var(--ink); paint-order: stroke fill; letter-spacing: .04em; white-space: nowrap; opacity: 0; }
+.pin { position: absolute; left: 0; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; background: var(--pink); border: 6px solid #fff; box-shadow: 0 0 0 4px rgba(7,18,29,.6), 0 0 28px rgba(255,79,163,.9); opacity: 0; }
+.pnl { position: absolute; top: 230px; width: 860px; height: 484px; overflow: hidden; border-radius: 14px; box-shadow: 0 22px 60px rgba(0,0,0,.65); background: #000; }
+.pnl video, .pnl img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.pnl.l { left: 80px; border: 6px solid var(--pink); } .pnl.r { left: 968px; border: 6px solid var(--teal); }
+.plab { position: absolute; top: 172px; font: 800 26px 'In', sans-serif; letter-spacing: .28em; white-space: nowrap; }
+.plab.l { left: 86px; color: var(--pink); } .plab.r { left: 974px; color: var(--teal); }
+.pname { position: absolute; top: 742px; width: 872px; text-align: center; font: 700 64px 'Fr', Georgia, serif; color: #fff; white-space: nowrap; text-shadow: 0 3px 14px rgba(0,0,0,.8); }
+.pname.l { left: 80px; } .pname.r { left: 968px; }
+.arrow { position: absolute; left: 920px; top: 440px; width: 80px; text-align: center; font: 900 80px var(--disp); color: var(--y); -webkit-text-stroke: 8px var(--ink); paint-order: stroke fill; }
+.tag { position: absolute; right: 50px; top: 178px; display: flex; flex-direction: column; align-items: flex-end; white-space: nowrap; }
+.tag .rule { height: 3px; width: 120px; border-radius: 2px; background: #FFC23A; box-shadow: 0 1px 8px rgba(0,0,0,.6); }
+.tag.real .rule { background: #4FD3F2; }
+.tag .k { font: 800 18px 'In', sans-serif; letter-spacing: .3em; margin-right: -.3em; color: #fff; margin-top: 11px; text-shadow: 0 1px 2px rgba(0,0,0,.85), 0 1px 12px rgba(0,0,0,.9); }
+.tag .c { font: 600 13px 'In', sans-serif; letter-spacing: .08em; color: rgba(255,255,255,.78); margin-top: 7px; text-shadow: 0 1px 3px rgba(0,0,0,.95), 0 0 10px rgba(0,0,0,.7); }
+.credit { position: absolute; right: 50px; top: 178px; font: 600 13px 'In', sans-serif; letter-spacing: .08em; color: rgba(255,255,255,.78); text-shadow: 0 1px 3px rgba(0,0,0,.95), 0 0 10px rgba(0,0,0,.7); white-space: nowrap; text-align: right; }
+.cap { position: absolute; left: 160px; width: 1600px; top: 900px; text-align: center; font-family: var(--disp); font-weight: 900; font-size: 64px; line-height: 1.12; color: var(--w);
+  -webkit-text-stroke: 12px var(--ink); paint-order: stroke fill; opacity: 0; }
+html[lang="hi"] .cap { font-size: 66px; font-weight: 800; }
+.cap span { display: inline-block; white-space: pre; }
+.cap span.k { color: var(--y); }
+.cap span.on { transform: scale(1.06); }
+.num { position: absolute; left: 0; width: 1920px; text-align: center; font-family: var(--disp); font-weight: 900; color: var(--y); -webkit-text-stroke: 16px var(--ink); paint-order: stroke fill; white-space: nowrap; opacity: 0; font-variant-numeric: tabular-nums; }
+.card { position: absolute; font-family: var(--ui); font-weight: 800; font-size: 44px; color: var(--ink); background: var(--y); padding: 14px 30px; border-radius: 14px; box-shadow: 0 10px 0 rgba(7,18,29,.6); white-space: nowrap; opacity: 0; letter-spacing: .03em; }
+.kick { position: absolute; opacity: 0; white-space: nowrap; }
+.kick .r1 { height: 4px; width: 160px; background: #FFC23A; border-radius: 2px; box-shadow: 0 1px 8px rgba(0,0,0,.6); }
+.kick .k1 { font: 800 26px 'In', sans-serif; letter-spacing: .3em; color: #FFC23A; margin-top: 14px; text-shadow: 0 2px 10px rgba(0,0,0,.8); }
+.kick .k2 { font: 700 96px 'Fr', Georgia, serif; color: #fff; line-height: 1; margin-top: 6px; text-shadow: 0 4px 10px rgba(0,0,0,.55), 0 8px 40px rgba(0,0,0,.55); }
+.chap { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; opacity: 0; }
+.chap .c1 { position: absolute; left: 150px; top: 340px; font: 800 30px 'In', sans-serif; letter-spacing: .3em; color: #FFC23A; text-shadow: 0 2px 10px rgba(0,0,0,.7); }
+.chap .c3 { position: absolute; left: 150px; top: 610px; width: 220px; height: 5px; background: #FFC23A; border-radius: 2px; transform-origin: 0 50%; box-shadow: 0 1px 8px rgba(0,0,0,.5); }
+.chap .c2 { position: absolute; left: 140px; top: 390px; font: 700 180px 'Fr', Georgia, serif; line-height: .95; color: #fff; white-space: nowrap; text-shadow: 0 4px 8px rgba(0,0,0,.45), 0 8px 50px rgba(0,0,0,.5); }
+#tracker { position: absolute; left: 64px; top: 46px; opacity: 0; white-space: nowrap; }
+#tracker .rule { height: 3px; width: 150px; background: #FFC23A; border-radius: 2px; box-shadow: 0 1px 8px rgba(0,0,0,.6); }
+#tracker .k { font: 800 18px 'In', sans-serif; letter-spacing: .3em; color: #fff; margin-top: 12px; text-shadow: 0 1px 2px rgba(0,0,0,.8), 0 1px 10px rgba(0,0,0,.9); }
+#tracker .v { font: 600 46px 'Fr', Georgia, serif; color: #fff; margin-top: 2px; text-shadow: 0 1px 2px rgba(0,0,0,.75), 0 2px 8px rgba(0,0,0,.6), 0 4px 26px rgba(0,0,0,.6); }
+#tracker .v b { font-weight: 700; color: #FFD86A; }
+#sub { position: absolute; left: 610px; top: 470px; width: 700px; height: 140px; opacity: 0; }
+#sub .btn { position: absolute; inset: 0; border-radius: 70px; background: #4FD3F2; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+#sub .t1, #sub .t2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'BSD', sans-serif; font-weight: 900; font-size: 72px; letter-spacing: .05em; color: #03101A; }
+#sub .t2 { color: #fff; opacity: 0; }
+#sub .tap { position: absolute; left: 520px; top: 70px; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: rgba(255,255,255,.9); border: 3px solid rgba(3,16,26,.5); opacity: 0; }
+#badge { position: absolute; right: 44px; top: 34px; width: 120px; height: 120px; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="__DUR__">
+  <div id="stage" class="L">
+    <div id="shots" class="L"></div>
+    <div id="fx" class="L"></div>
+    <div id="hud" class="L"><div id="tracker"></div><img id="badge" src="assets/bhugol_badge.png" alt="" /></div>
+    <div id="caps" class="L"></div>
+  </div>
+</div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const mk = (tag, attrs, parent) => { const e = document.createElement(tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const EZ = {}; const ease = n => EZ[n || 'sine.inOut'] || (EZ[n || 'sine.inOut'] = gsap.parseEase(n || 'sine.inOut'));
+function Track(base) { return { base, last: base, keys: [] }; }
+function key(T, to, at, dur, e) { const from = (typeof T.last === 'object') ? Object.assign({}, T.last) : T.last;
+  const tgt = (typeof to === 'object') ? Object.assign({}, from, to) : to; T.keys.push({ a: at, d: Math.max(.04, dur), from, to: tgt, e: ease(e) }); T.last = tgt; }
+function valAt(T, t) { let v = T.base;
+  for (const k of T.keys) { if (t < k.a) break; const p = k.e(Math.min(1, (t - k.a) / k.d));
+    if (typeof k.to === 'object') { v = {}; for (const q in k.to) v[q] = k.from[q] + (k.to[q] - k.from[q]) * p; } else v = k.from + (k.to - k.from) * p; }
+  return v; }
+function fromKeys(base, ks) { const T = Track(base); for (const k of (ks || [])) key(T, k[1], k[0], k[2] || .8, k[3]); T.keys.sort((a, b) => a.a - b.a); return T; }
+const READY = [];
+const imgReady = im => READY.push(new Promise(r => { if (im.complete && im.naturalWidth) r(); else { im.onload = r; im.onerror = r; } }));
+const vidReady = v => READY.push(new Promise(r => { if (v.readyState >= 2) r(); else { v.addEventListener('loadeddata', r, { once: true }); v.onerror = r; setTimeout(r, 15000); } }));
+function vid(parent, src, t0, ms, dur, rate) { const v = mk('video', { src: 'assets/' + src, muted: '', playsinline: '', preload: 'auto' }, parent); v.muted = true;
+  v.dataset.start = t0; v.dataset.duration = dur / (rate || 1); v.dataset.mediaStart = ms || 0; v.dataset.rate = rate || 1; vidReady(v); return v; }
+function img(parent, src, cls) { const im = mk('img', { src: 'assets/' + src, class: cls || '' }, parent); imgReady(im); return im; }
+
+const SH = [];
+function build() {
+  const tl = gsap.timeline({ paused: true });
+  const IR = { immediateRender: false };
+  D.shots.forEach((o, i) => {
+    const el = mk('div', { class: 'shot', id: 'shot' + i }, $('shots'));
+    const mv = mk('div', { class: 'mv' }, el);
+    const s = { o, el, mv, i, t0: o.t0, t1: o.t1, items: [] };
+    const lead = i === 0 ? 0 : .3;
+    if (o.type === 'vid') { const im = mk('img', { class: 'full seq' }, mv); s.seq = im; s.seqA = o.t0 - (i === 0 ? 0 : (o.fade || .5) / 2); s.seqN = o.nFrames; s.seqDir = 'assets/' + o.frames + '/'; }
+    if (o.type === 'photo') { if (o.mode === 'card') { img(mv, o.src, 'bgblur'); const c = img(mv, o.src, 'cardimg'); Object.assign(c.style, { left: o.box[0] + 'px', top: o.box[1] + 'px', width: o.box[2] + 'px', height: o.box[3] + 'px' }); }
+      else { const im = img(mv, o.src, 'full'); if (o.pos) im.style.objectPosition = o.pos; } }
+    if (o.type === 'split') { img(mv, o.bg, 'bgblur');
+      for (const side of ['l', 'r']) { const P = o[side]; const pn = mk('div', { class: 'pnl ' + side }, el);
+        if (P.vid) vid(pn, P.vid, o.t0 - (o.fade || .5) / 2, P.ms || 0, P.clipDur - (P.ms || 0) - .04); else { const im = img(pn, P.img); if (P.pos) im.style.objectPosition = P.pos; }
+        const lb = mk('div', { class: 'plab ' + side }, el); lb.textContent = P.lab; if (P.name) { const nm = mk('div', { class: 'pname ' + side }, el); nm.textContent = P.name; s['nm' + side] = nm; }
+        s['pn' + side] = pn; }
+      const ar = mk('div', { class: 'arrow' }, el); ar.textContent = '→'; s.ar = ar;
+      // reveal: right panel (real) and names come in on cue
+      if (o.revL != null) { tl.fromTo([s.pnl], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .5, ease: 'sine.out', ...IR }, o.revL); }
+      if (o.revR != null) { tl.fromTo([s.pnr], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .5, ease: 'sine.out', ...IR }, o.revR); }
+      for (const side of ['l', 'r']) if (s['nm' + side]) tl.fromTo(s['nm' + side], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .4, ease: 'sine.out', ...IR }, o['name' + side.toUpperCase() + 'at'] != null ? o['name' + side.toUpperCase() + 'at'] : o.t0 + .3);
+      tl.fromTo(ar, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .4, ease: 'sine.out', ...IR }, o.arAt != null ? o.arAt : o.t0 + .4);
+    }
+    if (o.type === 'paper') { if (o.bgc) el.style.background = o.bgc; const pp = mk('div', { class: 'paper' }, mv); const im = img(pp, o.tex); if (o.bgc) { const mg = 'linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%), linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%)'; im.style.webkitMaskImage = mg; im.style.maskImage = mg; im.style.webkitMaskComposite = 'source-in'; im.style.maskComposite = 'intersect'; } im.style.width = o.pw + 'px'; s.pp = pp; s.cam = fromKeys({ x: o.pw / 2, y: o.ph / 2, z: 1 }, o.cam); }
+    s.zk = fromKeys(o.zoom ? o.zoom[0] : 1, [[o.t0, o.zoom ? o.zoom[1] : 1, o.t1 - o.t0 + .6, 'none']]);
+    s.pan = fromKeys(0, [[o.t0, o.panX || 0, o.t1 - o.t0 + .6, 'none']]);
+    const ov = mk('div', { class: 'ov' }, el); s.ov = ov;
+    if (o.tag) { const tg = mk('div', { class: 'tag ' + o.tag }, ov); mk('div', { class: 'rule' }, tg); mk('div', { class: 'k' }, tg).textContent = o.tag === 'game' ? 'IN THE GAME' : 'IN REAL LIFE'; if (o.credit) mk('div', { class: 'c' }, tg).textContent = o.credit; }
+    else if (o.credit) { const cr = mk('div', { class: 'credit' }, ov); cr.textContent = o.credit; }
+    for (const it of (o.items || [])) { const rec = Object.assign({}, it, { a: fromKeys(0, it.a) });
+      if (it.k === 'pin') rec.e = mk('div', { class: 'pin' }, ov);
+      if (it.k === 'lbl') { rec.e = mk('div', { class: 'lbl' }, ov); rec.e.textContent = it.txt; rec.e.style.fontSize = (it.fs || 56) + 'px'; if (it.col) rec.e.style.color = it.col; }
+      s.items.push(rec); }
+    SH.push(s);
+    const at = o.t0;
+    if (i === 0) tl.set(el, { opacity: 1 }, at);
+    else tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: o.fade || .5, ease: 'sine.inOut', ...IR }, at - (o.fade || .5) / 2);
+    tl.set(el, { opacity: 0 }, o.t1 + .6);
+  });
+  const fx = $('fx');
+  const hide = (e, at, to) => tl.fromTo(e, { opacity: 1 }, Object.assign({ opacity: 0, duration: .28, ease: 'power2.in', immediateRender: false }, to || {}), at);
+  for (const b of D.beats) { if (b.until != null && b.until < b.at + .9) b.until = b.at + .9;
+    if (b.k === 'count') { const e = mk('div', { class: 'num' }, fx); e.style.top = (b.y || 260) + 'px'; e.style.fontSize = (b.fs || 210) + 'px'; const pr = { v: b.from || 0 };
+      const fmt = v => (b.prefix || '') + Math.round(v).toLocaleString('en-US') + (b.unit || ''); e.textContent = fmt(b.from || 0);
+      tl.fromTo(e, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .45, ease: 'sine.out', ...IR }, b.at);
+      tl.fromTo(pr, { v: b.from || 0 }, { v: b.to, duration: b.dur || 1.2, ease: 'power3.out', onUpdate: () => { e.textContent = fmt(pr.v); }, ...IR }, b.at); hide(e, b.until, {}); }
+    if (b.k === 'card') { const e = mk('div', { class: 'card' }, fx); e.textContent = b.txt; e.style.left = (b.x || 120) + 'px'; e.style.top = (b.y || 160) + 'px'; if (b.fs) e.style.fontSize = b.fs + 'px';
+      tl.fromTo(e, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: .4, ease: 'sine.out', ...IR }, b.at); hide(e, b.until, { y: -16 }); }
+    if (b.k === 'kick') { const e = mk('div', { class: 'kick' }, fx); mk('div', { class: 'r1' }, e); mk('div', { class: 'k1' }, e).textContent = b.top; const k2 = mk('div', { class: 'k2' }, e); k2.innerHTML = b.txt; e.style.left = (b.x || 120) + 'px'; e.style.top = (b.y || 300) + 'px'; if (b.fs) k2.style.fontSize = b.fs + 'px';
+      tl.fromTo(e, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .5, ease: 'sine.out', ...IR }, b.at); hide(e, b.until, { duration: .35, ease: 'sine.in' }); }
+    if (b.k === 'sub') { const e = mk('div', { id: 'sub' }, fx); const bt = mk('div', { class: 'btn' }, e); mk('div', { class: 't1' }, e).textContent = 'SUBSCRIBE'; const t2 = mk('div', { class: 't2' }, e); t2.textContent = 'SUBSCRIBED ✓'; const tp = mk('div', { class: 'tap' }, e); const t1 = e.children[1];
+      tl.fromTo(e, { opacity: 0, scale: .9 }, { opacity: 1, scale: 1, duration: .45, ease: 'back.out(1.6)', ...IR }, b.at);
+      tl.fromTo(tp, { opacity: 0, scale: 1.8, x: 120, y: 80 }, { opacity: 1, scale: 1, x: 0, y: 0, duration: .5, ease: 'power2.out', ...IR }, b.at + .7);
+      tl.fromTo(tp, { scale: 1 }, { scale: .7, duration: .12, yoyo: true, repeat: 1, ...IR }, b.at + 1.2);
+      tl.fromTo(bt, { backgroundColor: '#4FD3F2' }, { backgroundColor: '#E8231C', duration: .2, ...IR }, b.at + 1.3);
+      tl.fromTo(t1, { opacity: 1 }, { opacity: 0, duration: .15, ...IR }, b.at + 1.3); tl.fromTo(t2, { opacity: 0 }, { opacity: 1, duration: .2, ...IR }, b.at + 1.35);
+      tl.fromTo(tp, { opacity: 1 }, { opacity: 0, duration: .3, ...IR }, b.at + 1.7); hide(e, b.until, {}); }
+    if (b.k === 'chap') { const e = mk('div', { class: 'chap' }, fx); mk('div', { class: 'c1' }, e).textContent = b.top; const c2 = mk('div', { class: 'c2' }, e); c2.textContent = b.txt; const c3 = mk('div', { class: 'c3' }, e);
+      tl.fromTo(e, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: .55, ease: 'sine.out', ...IR }, b.at);
+      tl.fromTo(c3, { scaleX: 0 }, { scaleX: 1, duration: .6, ease: 'power2.out', ...IR }, b.at + .1); hide(e, b.until, { duration: .4, ease: 'sine.in' }); }
+  }
+  tl.fromTo($('badge'), { opacity: 0 }, { opacity: .95, duration: .4, ...IR }, .3);
+  const capEls = D.caps.map(c => { const e = mk('div', { class: 'cap' }, $('caps')); c.w.forEach((w, j) => { const sp = mk('span', { class: w[3] ? 'k' : '' }, e); sp.textContent = (j ? ' ' : '') + w[2]; }); return e; });
+  const clk = { t: 0 };
+  const renderAll = t => {
+    for (const s of SH) if (s.seq) s.seq.dataset.live = '0';
+    for (const s of SH) { const live = t >= s.t0 - .7 && t <= s.t1 + .65; if (!live) continue; renderShot(s, t); }
+    D.caps.forEach((c, i) => { const e = capEls[i]; const nx = D.caps[i + 1]; const on = t >= c.a - .05 && t < Math.min(c.b, nx ? nx.a - .05 : 1e9); e.style.opacity = on ? 1 : 0; if (!on) return;
+      c.w.forEach((w, j) => { const sp = e.children[j]; sp.style.opacity = t >= w[0] ? 1 : .55; sp.className = (w[3] ? 'k' : '') + (t >= w[0] && t < w[1] + .05 ? ' on' : ''); }); });
+    const tr = $('tracker'); const chapOn = D.beats.some(b => b.k === 'chap' && t >= b.at - .1 && t < b.until + .4); const st = chapOn ? null : D.stops.filter(f => t >= f[0] && t < f[1])[0]; tr.style.opacity = st ? 1 : 0;
+    if (st && tr._n !== st[2]) { tr._n = st[2]; tr.innerHTML = '<div class="rule"></div><div class="k">STOP</div><div class="v"><b>' + st[2] + '</b> of ' + D.nStops + '</div>'; }
+  };
+  tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => renderAll(clk.t) }, 0);
+  window.__render = renderAll;
+  return tl;
+}
+function renderShot(s, t) {
+  const o = s.o; const z = valAt(s.zk, t), px = valAt(s.pan, t);
+  if (s.seq) { const k = clamp(Math.round(t * 30) - Math.round(s.seqA * 30), 0, s.seqN - 1); const src = s.seqDir + String(k + 1).padStart(4, '0') + '.jpg'; if (s.seq._k !== k) { s.seq._k = k; s.seq.src = src; } s.seq.dataset.live = '1'; }
+  s.mv.style.transform = `translateX(${px.toFixed(1)}px) scale(${z.toFixed(4)})`;
+  if (o.type === 'paper') { const c = valAt(s.cam, t); const sc = c.z * Math.max(1920 / o.pw, 1080 / o.ph);
+    const cx = o.pw * sc <= 1920 ? o.pw / 2 : clamp(c.x, 960 / sc, o.pw - 960 / sc), cy = o.ph * sc <= 1080 ? o.ph / 2 : clamp(c.y, 540 / sc, o.ph - 540 / sc);
+    s.pp.style.transform = `translate(${(960 - cx * sc).toFixed(1)}px,${(540 - cy * sc).toFixed(1)}px) scale(${sc.toFixed(4)})`;
+    s.proj = (x, y) => ({ x: 960 + (x - cx) * sc, y: 540 + (y - cy) * sc }); }
+  for (const it of s.items) { const a = valAt(it.a, t); it.e.style.opacity = clamp(a, 0, 1); if (a <= 0 || !s.proj) continue; const q = s.proj(it.p[0], it.p[1]);
+    if (it.k === 'pin') it.e.style.transform = `translate(${q.x.toFixed(1)}px,${q.y.toFixed(1)}px) scale(${(.4 + .6 * Math.min(1, a)).toFixed(3)})`;
+    else { const w = it.e.offsetWidth, h = it.e.offsetHeight; it.e.style.transform = `translate(${(q.x - w / 2 + (it.dx || 0)).toFixed(1)}px,${(q.y - h / 2 + (it.dy || 0)).toFixed(1)}px) scale(${(.6 + .4 * Math.min(1, a * 1.4)).toFixed(3)})`; } }
+}
+window.__ready = () => Promise.all([...document.querySelectorAll('img.seq')].filter(i => i.dataset.live === '1' && i.getAttribute('src')).map(i => i.decode().catch(() => {})));
+window.__timelines = window.__timelines || {};
+document.fonts.ready.then(() => { const tl0 = build(); return Promise.all(READY).then(() => ({ tl: tl0 })); }).then(({ tl }) => { window.__timelines['main'] = tl; window.__seek = t => { tl.seek(t, false); window.__render(t); }; window.__seek(0); }).catch(e => { window.__err = String(e && e.stack || e); });
+</script>
+</body>
+</html>
