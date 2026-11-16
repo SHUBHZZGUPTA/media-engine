@@ -1,0 +1,66 @@
+{
+ "id": "dv-t2",
+ "delay": 12,
+ "files": [
+  {
+   "name": "osm_adm2_AD.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2842.183%2C1.324%2C42.902%2C1.87%29%3Bout%20geom%2842.183%2C1.324%2C42.902%2C1.87%29%3B"
+  },
+  {
+   "name": "osm_adm2_SG.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%280.691%2C103.499%2C1.939%2C104.196%29%3Bout%20geom%280.691%2C103.499%2C1.939%2C104.196%29%3B"
+  },
+  {
+   "name": "osm_adm2_LI.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2847.0%2C9.4%2C47.319%2C9.71%29%3Bout%20geom%2847.0%2C9.4%2C47.319%2C9.71%29%3B"
+  },
+  {
+   "name": "osm_coast_MT.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2835.525%2C14.098%2C36.344%2C14.662%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coast_GM0.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2814.3%2C-17.6%2C16.95%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coast_GM1.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2812.9%2C-17.6%2C14.3%2C-13.3%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_coast_GM2.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2812.2%2C-17.6%2C12.9%2C-15.8%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_roads_AD.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%28way%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%29%28_link%29%3F%24%22%5D%2842.37%2C1.38%2C42.62%2C1.82%29%3Bnode%5B%22barrier%22%3D%22border_control%22%5D%2842.37%2C1.38%2C42.62%2C1.82%29%3Bnwr%5B%22name%22~%22Envalira%22%2Ci%5D%2842.50%2C1.65%2C42.58%2C1.78%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_roads_LI.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%28way%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%29%28_link%29%3F%24%22%5D%2846.98%2C9.42%2C47.32%2C9.68%29%3Bnode%5B%22barrier%22%3D%22border_control%22%5D%2846.98%2C9.42%2C47.32%2C9.68%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_roads_GM.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%28way%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%29%28_link%29%3F%24%22%5D%2812.95%2C-16.95%2C13.95%2C-13.55%29%3Bnwr%5B%22name%22~%22Senegambia%22%2Ci%5D%2813.4%2C-15.7%2C13.65%2C-15.4%29%3Bnode%5B%22barrier%22%3D%22border_control%22%5D%2812.95%2C-16.95%2C13.95%2C-13.55%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "osm_places_AD.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bnwr%5B%22place%22%5D%5B%22name%22~%22Sant%20Juli%7CAndorra%20la%20Vella%7CPas%20de%20la%20Casa%7CEncamp%7CCanillo%7CSoldeu%7CEnvalira%7CEscaldes%22%2Ci%5D%2842.183%2C1.324%2C42.902%2C1.87%29%3Bout%20center%20tags%3B"
+  },
+  {
+   "name": "osm_places_MT.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bnwr%5B%22place%22%5D%5B%22name%22~%22Cirkewwa%7C%C4%8Airkewwa%7CMarsaxlokk%7CValletta%7CMellie%C4%A7a%7CMellieha%22%2Ci%5D%2835.525%2C14.098%2C36.344%2C14.662%29%3Bout%20center%20tags%3B"
+  },
+  {
+   "name": "osm_places_SG.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bnwr%5B%22place%22%5D%5B%22name%22~%22Tuas%7CChangi%7CMarina%20Bay%7CJurong%22%2Ci%5D%280.691%2C103.499%2C1.939%2C104.196%29%3Bout%20center%20tags%3B"
+  },
+  {
+   "name": "osm_places_LI.json",
+   "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bnwr%5B%22place%22%5D%5B%22name%22~%22Balzers%7CVaduz%7CSchaanwald%7CRuggell%7CBuchs%7CSchaan%7CTriesen%7CNendeln%7CTr%C3%BCbbach%22%2Ci%5D%2847.0%2C9.4%2C47.319%2C9.71%29%3Bout%20center%20tags%3B"
+  },
+  {
+   "name": "osm_places_GM.json",
+   "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Bnwr%5B%22place%22%5D%5B%22name%22~%22Farafenni%7CSoma%7CBanjul%7CBrikama%7CJanjanbureh%7CBasse%7CFatoto%7CBansang%7CKeur%20Ayib%7CKerr%20Ayib%7CNioro%22%2Ci%5D%2812.9%2C-16.95%2C14.0%2C-13.5%29%3Bout%20center%20tags%3B"
+  }
+ ]
+}
