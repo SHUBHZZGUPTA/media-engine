@@ -1,0 +1,29 @@
+{
+ "job": "fsi-police-en",
+ "items": [
+  {
+   "name": "pA",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 142.2,
+   "took": 12.5
+  },
+  {
+   "name": "pB",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 146.12,
+   "took": 12.2
+  },
+  {
+   "name": "pC",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 131.88,
+   "took": 13.3
+  }
+ ]
+}
