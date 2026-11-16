@@ -1,0 +1,30 @@
+{
+ "id": "tc-p5",
+ "delay": 2,
+ "files": [
+  {
+   "name": "NY_ne_naip__r0c2.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.94665625697078,40.846009521484376,-73.9,40.885&bboxSR=4326&imageSR=4326&size=1494,1638&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r3c1.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.99334374302923,40.72899047851562,-73.94665625697078,40.76800476074219&bboxSR=4326&imageSR=4326&size=1495,1639&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_cls_naip__r3c3.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.95250367755222,40.7689988786444,-73.94,40.77799775728881&bboxSR=4326&imageSR=4326&size=1700,1605&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r0c2_b.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.94665625697078,40.846009521484376,-73.9,40.885&bboxSR=4326&imageSR=4326&size=1494,1638&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_ne_naip__r3c1_b.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.99334374302923,40.72899047851562,-73.94665625697078,40.76800476074219&bboxSR=4326&imageSR=4326&size=1495,1639&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  },
+  {
+   "name": "NY_cls_naip__r3c3_b.jpg",
+   "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-73.95250367755222,40.7689988786444,-73.94,40.77799775728881&bboxSR=4326&imageSR=4326&size=1700,1605&format=jpgpng&adjustAspectRatio=false&f=image&interpolation=RSP_BilinearInterpolation"
+  }
+ ]
+}
