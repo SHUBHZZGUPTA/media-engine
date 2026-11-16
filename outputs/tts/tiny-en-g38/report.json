@@ -1,0 +1,13 @@
+{
+ "job": "tiny-en-g38",
+ "items": [
+  {
+   "name": "narration_en",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 74.08,
+   "took": 13.2
+  }
+ ]
+}
