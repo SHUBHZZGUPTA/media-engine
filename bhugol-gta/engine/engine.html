@@ -131,7 +131,7 @@ function build() {
     s.zk = fromKeys(o.zoom ? o.zoom[0] : 1, [[o.t0, o.zoom ? o.zoom[1] : 1, o.t1 - o.t0 + .6, 'none']]);
     s.pan = fromKeys(0, [[o.t0, o.panX || 0, o.t1 - o.t0 + .6, 'none']]);
     const ov = mk('div', { class: 'ov' }, el); s.ov = ov;
-    if (o.tag) { const tg = mk('div', { class: 'tag ' + o.tag }, ov); mk('div', { class: 'rule' }, tg); mk('div', { class: 'k' }, tg).textContent = o.tag === 'game' ? 'IN THE GAME' : 'IN REAL LIFE'; if (o.credit) mk('div', { class: 'c' }, tg).textContent = o.credit; }
+    if (o.tag) { const tg = mk('div', { class: 'tag ' + o.tag }, ov); mk('div', { class: 'rule' }, tg); mk('div', { class: 'k' }, tg).textContent = o.label || (o.tag === 'game' ? 'IN THE GAME' : 'IN REAL LIFE'); if (o.credit) mk('div', { class: 'c' }, tg).textContent = o.credit; }
     else if (o.credit) { const cr = mk('div', { class: 'credit' }, ov); cr.textContent = o.credit; }
     for (const it of (o.items || [])) { const rec = Object.assign({}, it, { a: fromKeys(0, it.a) });
       if (it.k === 'pin') rec.e = mk('div', { class: 'pin' }, ov);
@@ -174,7 +174,7 @@ function build() {
     D.caps.forEach((c, i) => { const e = capEls[i]; const nx = D.caps[i + 1]; const on = t >= c.a - .05 && t < Math.min(c.b, nx ? nx.a - .05 : 1e9); e.style.opacity = on ? 1 : 0; if (!on) return;
       c.w.forEach((w, j) => { const sp = e.children[j]; sp.style.opacity = t >= w[0] ? 1 : .55; sp.className = (w[3] ? 'k' : '') + (t >= w[0] && t < w[1] + .05 ? ' on' : ''); }); });
     const tr = $('tracker'); const chapOn = D.beats.some(b => b.k === 'chap' && t >= b.at - .1 && t < b.until + .4); const st = chapOn ? null : D.stops.filter(f => t >= f[0] && t < f[1])[0]; tr.style.opacity = st ? 1 : 0;
-    if (st && tr._n !== st[2]) { tr._n = st[2]; tr.innerHTML = '<div class="rule"></div><div class="k">STOP</div><div class="v"><b>' + st[2] + '</b> of ' + D.nStops + '</div>'; }
+    if (st && tr._n !== st[2]) { tr._n = st[2]; tr.innerHTML = '<div class="rule"></div><div class="k">' + (D.trkWord || 'STOP') + '</div><div class="v">' + (D.countdown ? '<b>#' + st[2] + '</b>' : '<b>' + st[2] + '</b> of ' + D.nStops) + '</div>'; }
   };
   tl.fromTo(clk, { t: 0 }, { t: D.dur, duration: D.dur, ease: 'none', ...IR, onUpdate: () => renderAll(clk.t) }, 0);
   window.__render = renderAll;
