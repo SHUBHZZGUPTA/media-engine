@@ -1,0 +1,913 @@
+{
+ "id": "romania-en-full",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "try": 2,
+ "key": "longform",
+ "items": [
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full1",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Romania facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about Romania and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (the cemetery poems that roast the mother-in-law, Dracula's castle having a landlord, bear spray for the trash, bowling inside a salt shaker). The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Bucharest' as 'BOO-kuh-rest', 'Săpânța' as 'suh-PUN-tsah', 'Stan Ioan Pătraș' as 'stahn yoh-AHN puh-TRASH', 'Bran' as 'brahn', 'Vlad' as 'vlahd', 'Transfăgărășan' as 'trans-fuh-guh-ruh-SHAHN', 'Nicolae Ceaușescu' as 'nee-koh-LAH-yeh chow-SHES-koo', 'Carpathian' as 'kar-PAY-thee-un', 'Brașov' as 'brah-SHOV', 'Salina Turda' as 'sah-LEE-nah TOOR-dah', 'Movile' as 'moh-VEE-leh', 'Mangalia' as 'man-GAH-lee-ah', 'Arc de Triomphe' the French way, 'ark duh tree-OMF'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars that at least one of these facts about Romania sounds completely fake."
+    ],
+    [
+     "Narrator",
+     "A cave that was sealed off from the world for five and a half million years."
+    ],
+    [
+     "Narrator",
+     "A theme park, with a Ferris wheel, at the bottom of a salt mine."
+    ],
+    [
+     "Narrator",
+     "The heaviest building on the planet."
+    ],
+    [
+     "Narrator",
+     "A road built because a dictator was scared."
+    ],
+    [
+     "Narrator",
+     "And a castle that everyone calls Dracula's... except Dracula."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of Romania. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. Romania's capital, Bucharest, once wanted to be Paris."
+    ],
+    [
+     "Narrator",
+     "Around a hundred years ago, people called it Little Paris. Grand boulevards, French-style palaces, cafés everywhere."
+    ],
+    [
+     "Narrator",
+     "And then Bucharest went one step further. It built its own Arc de Triomphe."
+    ],
+    [
+     "Narrator",
+     "The first one was made of wood, in 1878, just so the army could march under it after independence."
+    ],
+    [
+     "Narrator",
+     "Today's stone arch was finished in 1936, and it's twenty-seven metres tall. Paris has the original. Bucharest has the copy."
+    ],
+    [
+     "Narrator",
+     "But copying Paris is normal. Number seven is a cemetery that tells jokes."
+    ],
+    [
+     "Narrator",
+     "Number seven. The Merry Cemetery, in the village of Săpânța."
+    ],
+    [
+     "Narrator",
+     "In 1935, a local artist named Stan Ioan Pătraș carved a wooden cross for a grave and painted it bright blue."
+    ],
+    [
+     "Narrator",
+     "Then he added a painting of the person's life. And a short poem about them."
+    ],
+    [
+     "Narrator",
+     "And the poems are funny. Some of them roast the person who died. Some of them roast their mother-in-law."
+    ],
+    [
+     "Narrator",
+     "Today there are more than eight hundred of these crosses. A cemetery where people go to laugh."
+    ],
+    [
+     "Narrator",
+     "Which is a pretty Romanian way to deal with death. And speaking of the undead..."
+    ],
+    [
+     "Narrator",
+     "Number six. Bran Castle, in Transylvania. Sold all over the world as Dracula's Castle."
+    ],
+    [
+     "Narrator",
+     "Here's the problem. Bram Stoker, who wrote Dracula, never visited Romania."
+    ],
+    [
+     "Narrator",
+     "There's no evidence he ever saw this castle. It isn't even in the book."
+    ],
+    [
+     "Narrator",
+     "And the real Vlad the Impaler, the prince behind the name? Most historians say he never lived here."
+    ],
+    [
+     "Narrator",
+     "So the most famous vampire castle on Earth has almost nothing to do with the vampire."
+    ],
+    [
+     "Narrator",
+     "Today it belongs to an Austrian archduke, and it's Romania's first private museum. Dracula's castle has a landlord."
+    ],
+    [
+     "Narrator",
+     "Now, from a fake vampire to a real dictator. Number five is a road."
+    ],
+    [
+     "Narrator",
+     "Number five. The Transfăgărășan."
+    ],
+    [
+     "Narrator",
+     "In 1968, the Soviet Union invaded Czechoslovakia. And Romania's leader, Nicolae Ceaușescu, got nervous."
+    ],
+    [
+     "Narrator",
+     "What if the Soviets came for Romania next? His army needed a fast way across the Carpathian Mountains."
+    ],
+    [
+     "Narrator",
+     "So from 1970, they blasted a road straight over them. Hairpin after hairpin, up to two thousand and forty-two metres."
+    ],
+    [
+     "Narrator",
+     "The invasion never came. But the road is still there. And in 2009, Top Gear called it the best road in the world."
+    ],
+    [
+     "Narrator",
+     "One catch. Snow closes it for most of the year, usually from late October to late June."
+    ],
+    [
+     "Narrator",
+     "And those mountains have residents who don't care about any of this. Big ones. With claws."
+    ],
+    [
+     "Narrator",
+     "Number four. Romania has more brown bears than any country in Europe outside Russia."
+    ],
+    [
+     "Narrator",
+     "Scientists counted them with DNA, from more than twenty-four thousand samples of hair and droppings."
+    ],
+    [
+     "Narrator",
+     "Their estimate: between ten thousand six hundred and almost thirteen thousand bears."
+    ],
+    [
+     "Narrator",
+     "In Brașov County alone, there are around thirteen hundred."
+    ],
+    [
+     "Narrator",
+     "And they don't always stay in the forest. Bears wander into towns, through streets, and straight into people's bins."
+    ],
+    [
+     "Narrator",
+     "So yes, in Romania, you might need bear spray to take out the trash."
+    ],
+    [
+     "Narrator",
+     "But number three is a building so big, the bears could get lost in it."
+    ],
+    [
+     "Narrator",
+     "Number three. The Palace of the Parliament, in Bucharest."
+    ],
+    [
+     "Narrator",
+     "Guinness World Records lists it as the heaviest building in the world. About four million tonnes."
+    ],
+    [
+     "Narrator",
+     "It has around eleven hundred rooms. In 2013, only about four hundred were actually in use."
+    ],
+    [
+     "Narrator",
+     "Ceaușescu ordered it in 1984. To make room, about seven square kilometres of old Bucharest were knocked down."
+    ],
+    [
+     "Narrator",
+     "Forty thousand people had to move out."
+    ],
+    [
+     "Narrator",
+     "And it cost so much to heat and light that the bills run to over six million dollars a year."
+    ],
+    [
+     "Narrator",
+     "And the dictator who ordered it never saw it finished. He was overthrown in 1989."
+    ],
+    [
+     "Narrator",
+     "Number two goes the other way. Not up. Down."
+    ],
+    [
+     "Narrator",
+     "Number two. Salina Turda, a salt mine in Transylvania."
+    ],
+    [
+     "Narrator",
+     "People have been digging salt here since at least 1271."
+    ],
+    [
+     "Narrator",
+     "By hand, the miners carved out chambers almost a hundred metres tall."
+    ],
+    [
+     "Narrator",
+     "The mine closed in 1932. And then Romania did something wild with it."
+    ],
+    [
+     "Narrator",
+     "It turned the bottom of the mine into a theme park. Deep underground."
+    ],
+    [
+     "Narrator",
+     "There's a Ferris wheel. Bowling. Mini golf. Table tennis. An amphitheatre."
+    ],
+    [
+     "Narrator",
+     "And in the deepest chamber, an underground lake, where you can rent a rowing boat."
+    ],
+    [
+     "Narrator",
+     "It's the only place I know where you can go bowling inside a salt shaker."
+    ],
+    [
+     "Narrator",
+     "And number one is the place on this list you can never visit."
+    ],
+    [
+     "Narrator",
+     "Number one. Movile Cave, near the Black Sea."
+    ],
+    [
+     "Narrator",
+     "In 1986, workers were digging near the town of Mangalia, and they broke into a cave nobody knew existed."
+    ],
+    [
+     "Narrator",
+     "Scientists found that it had been cut off from the outside world for about five and a half million years."
+    ],
+    [
+     "Narrator",
+     "No sunlight. Almost no fresh air. The air inside has only about seven to ten percent oxygen. Ours has twenty-one."
+    ],
+    [
+     "Narrator",
+     "And yet it's full of life."
+    ],
+    [
+     "Narrator",
+     "Fifty-seven animal species. And thirty-seven of them exist nowhere else on Earth."
+    ],
+    [
+     "Narrator",
+     "Spiders, leeches, water scorpions, all living in total darkness on bacteria that eat chemicals instead of sunlight."
+    ],
+    [
+     "Narrator",
+     "It's a tiny world that evolved completely on its own."
+    ],
+    [
+     "Narrator",
+     "And to protect it, only a few scientists a year are allowed inside."
+    ],
+    [
+     "Narrator",
+     "So Romania has the heaviest building on Earth, and a cave almost nobody will ever see."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  },
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full2",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Romania facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about Romania and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (the cemetery poems that roast the mother-in-law, Dracula's castle having a landlord, bear spray for the trash, bowling inside a salt shaker). The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Bucharest' as 'BOO-kuh-rest', 'Săpânța' as 'suh-PUN-tsah', 'Stan Ioan Pătraș' as 'stahn yoh-AHN puh-TRASH', 'Bran' as 'brahn', 'Vlad' as 'vlahd', 'Transfăgărășan' as 'trans-fuh-guh-ruh-SHAHN', 'Nicolae Ceaușescu' as 'nee-koh-LAH-yeh chow-SHES-koo', 'Carpathian' as 'kar-PAY-thee-un', 'Brașov' as 'brah-SHOV', 'Salina Turda' as 'sah-LEE-nah TOOR-dah', 'Movile' as 'moh-VEE-leh', 'Mangalia' as 'man-GAH-lee-ah', 'Arc de Triomphe' the French way, 'ark duh tree-OMF'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars that at least one of these facts about Romania sounds completely fake."
+    ],
+    [
+     "Narrator",
+     "A cave that was sealed off from the world for five and a half million years."
+    ],
+    [
+     "Narrator",
+     "A theme park, with a Ferris wheel, at the bottom of a salt mine."
+    ],
+    [
+     "Narrator",
+     "The heaviest building on the planet."
+    ],
+    [
+     "Narrator",
+     "A road built because a dictator was scared."
+    ],
+    [
+     "Narrator",
+     "And a castle that everyone calls Dracula's... except Dracula."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of Romania. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. Romania's capital, Bucharest, once wanted to be Paris."
+    ],
+    [
+     "Narrator",
+     "Around a hundred years ago, people called it Little Paris. Grand boulevards, French-style palaces, cafés everywhere."
+    ],
+    [
+     "Narrator",
+     "And then Bucharest went one step further. It built its own Arc de Triomphe."
+    ],
+    [
+     "Narrator",
+     "The first one was made of wood, in 1878, just so the army could march under it after independence."
+    ],
+    [
+     "Narrator",
+     "Today's stone arch was finished in 1936, and it's twenty-seven metres tall. Paris has the original. Bucharest has the copy."
+    ],
+    [
+     "Narrator",
+     "But copying Paris is normal. Number seven is a cemetery that tells jokes."
+    ],
+    [
+     "Narrator",
+     "Number seven. The Merry Cemetery, in the village of Săpânța."
+    ],
+    [
+     "Narrator",
+     "In 1935, a local artist named Stan Ioan Pătraș carved a wooden cross for a grave and painted it bright blue."
+    ],
+    [
+     "Narrator",
+     "Then he added a painting of the person's life. And a short poem about them."
+    ],
+    [
+     "Narrator",
+     "And the poems are funny. Some of them roast the person who died. Some of them roast their mother-in-law."
+    ],
+    [
+     "Narrator",
+     "Today there are more than eight hundred of these crosses. A cemetery where people go to laugh."
+    ],
+    [
+     "Narrator",
+     "Which is a pretty Romanian way to deal with death. And speaking of the undead..."
+    ],
+    [
+     "Narrator",
+     "Number six. Bran Castle, in Transylvania. Sold all over the world as Dracula's Castle."
+    ],
+    [
+     "Narrator",
+     "Here's the problem. Bram Stoker, who wrote Dracula, never visited Romania."
+    ],
+    [
+     "Narrator",
+     "There's no evidence he ever saw this castle. It isn't even in the book."
+    ],
+    [
+     "Narrator",
+     "And the real Vlad the Impaler, the prince behind the name? Most historians say he never lived here."
+    ],
+    [
+     "Narrator",
+     "So the most famous vampire castle on Earth has almost nothing to do with the vampire."
+    ],
+    [
+     "Narrator",
+     "Today it belongs to an Austrian archduke, and it's Romania's first private museum. Dracula's castle has a landlord."
+    ],
+    [
+     "Narrator",
+     "Now, from a fake vampire to a real dictator. Number five is a road."
+    ],
+    [
+     "Narrator",
+     "Number five. The Transfăgărășan."
+    ],
+    [
+     "Narrator",
+     "In 1968, the Soviet Union invaded Czechoslovakia. And Romania's leader, Nicolae Ceaușescu, got nervous."
+    ],
+    [
+     "Narrator",
+     "What if the Soviets came for Romania next? His army needed a fast way across the Carpathian Mountains."
+    ],
+    [
+     "Narrator",
+     "So from 1970, they blasted a road straight over them. Hairpin after hairpin, up to two thousand and forty-two metres."
+    ],
+    [
+     "Narrator",
+     "The invasion never came. But the road is still there. And in 2009, Top Gear called it the best road in the world."
+    ],
+    [
+     "Narrator",
+     "One catch. Snow closes it for most of the year, usually from late October to late June."
+    ],
+    [
+     "Narrator",
+     "And those mountains have residents who don't care about any of this. Big ones. With claws."
+    ],
+    [
+     "Narrator",
+     "Number four. Romania has more brown bears than any country in Europe outside Russia."
+    ],
+    [
+     "Narrator",
+     "Scientists counted them with DNA, from more than twenty-four thousand samples of hair and droppings."
+    ],
+    [
+     "Narrator",
+     "Their estimate: between ten thousand six hundred and almost thirteen thousand bears."
+    ],
+    [
+     "Narrator",
+     "In Brașov County alone, there are around thirteen hundred."
+    ],
+    [
+     "Narrator",
+     "And they don't always stay in the forest. Bears wander into towns, through streets, and straight into people's bins."
+    ],
+    [
+     "Narrator",
+     "So yes, in Romania, you might need bear spray to take out the trash."
+    ],
+    [
+     "Narrator",
+     "But number three is a building so big, the bears could get lost in it."
+    ],
+    [
+     "Narrator",
+     "Number three. The Palace of the Parliament, in Bucharest."
+    ],
+    [
+     "Narrator",
+     "Guinness World Records lists it as the heaviest building in the world. About four million tonnes."
+    ],
+    [
+     "Narrator",
+     "It has around eleven hundred rooms. In 2013, only about four hundred were actually in use."
+    ],
+    [
+     "Narrator",
+     "Ceaușescu ordered it in 1984. To make room, about seven square kilometres of old Bucharest were knocked down."
+    ],
+    [
+     "Narrator",
+     "Forty thousand people had to move out."
+    ],
+    [
+     "Narrator",
+     "And it cost so much to heat and light that the bills run to over six million dollars a year."
+    ],
+    [
+     "Narrator",
+     "And the dictator who ordered it never saw it finished. He was overthrown in 1989."
+    ],
+    [
+     "Narrator",
+     "Number two goes the other way. Not up. Down."
+    ],
+    [
+     "Narrator",
+     "Number two. Salina Turda, a salt mine in Transylvania."
+    ],
+    [
+     "Narrator",
+     "People have been digging salt here since at least 1271."
+    ],
+    [
+     "Narrator",
+     "By hand, the miners carved out chambers almost a hundred metres tall."
+    ],
+    [
+     "Narrator",
+     "The mine closed in 1932. And then Romania did something wild with it."
+    ],
+    [
+     "Narrator",
+     "It turned the bottom of the mine into a theme park. Deep underground."
+    ],
+    [
+     "Narrator",
+     "There's a Ferris wheel. Bowling. Mini golf. Table tennis. An amphitheatre."
+    ],
+    [
+     "Narrator",
+     "And in the deepest chamber, an underground lake, where you can rent a rowing boat."
+    ],
+    [
+     "Narrator",
+     "It's the only place I know where you can go bowling inside a salt shaker."
+    ],
+    [
+     "Narrator",
+     "And number one is the place on this list you can never visit."
+    ],
+    [
+     "Narrator",
+     "Number one. Movile Cave, near the Black Sea."
+    ],
+    [
+     "Narrator",
+     "In 1986, workers were digging near the town of Mangalia, and they broke into a cave nobody knew existed."
+    ],
+    [
+     "Narrator",
+     "Scientists found that it had been cut off from the outside world for about five and a half million years."
+    ],
+    [
+     "Narrator",
+     "No sunlight. Almost no fresh air. The air inside has only about seven to ten percent oxygen. Ours has twenty-one."
+    ],
+    [
+     "Narrator",
+     "And yet it's full of life."
+    ],
+    [
+     "Narrator",
+     "Fifty-seven animal species. And thirty-seven of them exist nowhere else on Earth."
+    ],
+    [
+     "Narrator",
+     "Spiders, leeches, water scorpions, all living in total darkness on bacteria that eat chemicals instead of sunlight."
+    ],
+    [
+     "Narrator",
+     "It's a tiny world that evolved completely on its own."
+    ],
+    [
+     "Narrator",
+     "And to protect it, only a few scientists a year are allowed inside."
+    ],
+    [
+     "Narrator",
+     "So Romania has the heaviest building on Earth, and a cave almost nobody will ever see."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  },
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full3",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Romania facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about Romania and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (the cemetery poems that roast the mother-in-law, Dracula's castle having a landlord, bear spray for the trash, bowling inside a salt shaker). The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Bucharest' as 'BOO-kuh-rest', 'Săpânța' as 'suh-PUN-tsah', 'Stan Ioan Pătraș' as 'stahn yoh-AHN puh-TRASH', 'Bran' as 'brahn', 'Vlad' as 'vlahd', 'Transfăgărășan' as 'trans-fuh-guh-ruh-SHAHN', 'Nicolae Ceaușescu' as 'nee-koh-LAH-yeh chow-SHES-koo', 'Carpathian' as 'kar-PAY-thee-un', 'Brașov' as 'brah-SHOV', 'Salina Turda' as 'sah-LEE-nah TOOR-dah', 'Movile' as 'moh-VEE-leh', 'Mangalia' as 'man-GAH-lee-ah', 'Arc de Triomphe' the French way, 'ark duh tree-OMF'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars that at least one of these facts about Romania sounds completely fake."
+    ],
+    [
+     "Narrator",
+     "A cave that was sealed off from the world for five and a half million years."
+    ],
+    [
+     "Narrator",
+     "A theme park, with a Ferris wheel, at the bottom of a salt mine."
+    ],
+    [
+     "Narrator",
+     "The heaviest building on the planet."
+    ],
+    [
+     "Narrator",
+     "A road built because a dictator was scared."
+    ],
+    [
+     "Narrator",
+     "And a castle that everyone calls Dracula's... except Dracula."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of Romania. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. Romania's capital, Bucharest, once wanted to be Paris."
+    ],
+    [
+     "Narrator",
+     "Around a hundred years ago, people called it Little Paris. Grand boulevards, French-style palaces, cafés everywhere."
+    ],
+    [
+     "Narrator",
+     "And then Bucharest went one step further. It built its own Arc de Triomphe."
+    ],
+    [
+     "Narrator",
+     "The first one was made of wood, in 1878, just so the army could march under it after independence."
+    ],
+    [
+     "Narrator",
+     "Today's stone arch was finished in 1936, and it's twenty-seven metres tall. Paris has the original. Bucharest has the copy."
+    ],
+    [
+     "Narrator",
+     "But copying Paris is normal. Number seven is a cemetery that tells jokes."
+    ],
+    [
+     "Narrator",
+     "Number seven. The Merry Cemetery, in the village of Săpânța."
+    ],
+    [
+     "Narrator",
+     "In 1935, a local artist named Stan Ioan Pătraș carved a wooden cross for a grave and painted it bright blue."
+    ],
+    [
+     "Narrator",
+     "Then he added a painting of the person's life. And a short poem about them."
+    ],
+    [
+     "Narrator",
+     "And the poems are funny. Some of them roast the person who died. Some of them roast their mother-in-law."
+    ],
+    [
+     "Narrator",
+     "Today there are more than eight hundred of these crosses. A cemetery where people go to laugh."
+    ],
+    [
+     "Narrator",
+     "Which is a pretty Romanian way to deal with death. And speaking of the undead..."
+    ],
+    [
+     "Narrator",
+     "Number six. Bran Castle, in Transylvania. Sold all over the world as Dracula's Castle."
+    ],
+    [
+     "Narrator",
+     "Here's the problem. Bram Stoker, who wrote Dracula, never visited Romania."
+    ],
+    [
+     "Narrator",
+     "There's no evidence he ever saw this castle. It isn't even in the book."
+    ],
+    [
+     "Narrator",
+     "And the real Vlad the Impaler, the prince behind the name? Most historians say he never lived here."
+    ],
+    [
+     "Narrator",
+     "So the most famous vampire castle on Earth has almost nothing to do with the vampire."
+    ],
+    [
+     "Narrator",
+     "Today it belongs to an Austrian archduke, and it's Romania's first private museum. Dracula's castle has a landlord."
+    ],
+    [
+     "Narrator",
+     "Now, from a fake vampire to a real dictator. Number five is a road."
+    ],
+    [
+     "Narrator",
+     "Number five. The Transfăgărășan."
+    ],
+    [
+     "Narrator",
+     "In 1968, the Soviet Union invaded Czechoslovakia. And Romania's leader, Nicolae Ceaușescu, got nervous."
+    ],
+    [
+     "Narrator",
+     "What if the Soviets came for Romania next? His army needed a fast way across the Carpathian Mountains."
+    ],
+    [
+     "Narrator",
+     "So from 1970, they blasted a road straight over them. Hairpin after hairpin, up to two thousand and forty-two metres."
+    ],
+    [
+     "Narrator",
+     "The invasion never came. But the road is still there. And in 2009, Top Gear called it the best road in the world."
+    ],
+    [
+     "Narrator",
+     "One catch. Snow closes it for most of the year, usually from late October to late June."
+    ],
+    [
+     "Narrator",
+     "And those mountains have residents who don't care about any of this. Big ones. With claws."
+    ],
+    [
+     "Narrator",
+     "Number four. Romania has more brown bears than any country in Europe outside Russia."
+    ],
+    [
+     "Narrator",
+     "Scientists counted them with DNA, from more than twenty-four thousand samples of hair and droppings."
+    ],
+    [
+     "Narrator",
+     "Their estimate: between ten thousand six hundred and almost thirteen thousand bears."
+    ],
+    [
+     "Narrator",
+     "In Brașov County alone, there are around thirteen hundred."
+    ],
+    [
+     "Narrator",
+     "And they don't always stay in the forest. Bears wander into towns, through streets, and straight into people's bins."
+    ],
+    [
+     "Narrator",
+     "So yes, in Romania, you might need bear spray to take out the trash."
+    ],
+    [
+     "Narrator",
+     "But number three is a building so big, the bears could get lost in it."
+    ],
+    [
+     "Narrator",
+     "Number three. The Palace of the Parliament, in Bucharest."
+    ],
+    [
+     "Narrator",
+     "Guinness World Records lists it as the heaviest building in the world. About four million tonnes."
+    ],
+    [
+     "Narrator",
+     "It has around eleven hundred rooms. In 2013, only about four hundred were actually in use."
+    ],
+    [
+     "Narrator",
+     "Ceaușescu ordered it in 1984. To make room, about seven square kilometres of old Bucharest were knocked down."
+    ],
+    [
+     "Narrator",
+     "Forty thousand people had to move out."
+    ],
+    [
+     "Narrator",
+     "And it cost so much to heat and light that the bills run to over six million dollars a year."
+    ],
+    [
+     "Narrator",
+     "And the dictator who ordered it never saw it finished. He was overthrown in 1989."
+    ],
+    [
+     "Narrator",
+     "Number two goes the other way. Not up. Down."
+    ],
+    [
+     "Narrator",
+     "Number two. Salina Turda, a salt mine in Transylvania."
+    ],
+    [
+     "Narrator",
+     "People have been digging salt here since at least 1271."
+    ],
+    [
+     "Narrator",
+     "By hand, the miners carved out chambers almost a hundred metres tall."
+    ],
+    [
+     "Narrator",
+     "The mine closed in 1932. And then Romania did something wild with it."
+    ],
+    [
+     "Narrator",
+     "It turned the bottom of the mine into a theme park. Deep underground."
+    ],
+    [
+     "Narrator",
+     "There's a Ferris wheel. Bowling. Mini golf. Table tennis. An amphitheatre."
+    ],
+    [
+     "Narrator",
+     "And in the deepest chamber, an underground lake, where you can rent a rowing boat."
+    ],
+    [
+     "Narrator",
+     "It's the only place I know where you can go bowling inside a salt shaker."
+    ],
+    [
+     "Narrator",
+     "And number one is the place on this list you can never visit."
+    ],
+    [
+     "Narrator",
+     "Number one. Movile Cave, near the Black Sea."
+    ],
+    [
+     "Narrator",
+     "In 1986, workers were digging near the town of Mangalia, and they broke into a cave nobody knew existed."
+    ],
+    [
+     "Narrator",
+     "Scientists found that it had been cut off from the outside world for about five and a half million years."
+    ],
+    [
+     "Narrator",
+     "No sunlight. Almost no fresh air. The air inside has only about seven to ten percent oxygen. Ours has twenty-one."
+    ],
+    [
+     "Narrator",
+     "And yet it's full of life."
+    ],
+    [
+     "Narrator",
+     "Fifty-seven animal species. And thirty-seven of them exist nowhere else on Earth."
+    ],
+    [
+     "Narrator",
+     "Spiders, leeches, water scorpions, all living in total darkness on bacteria that eat chemicals instead of sunlight."
+    ],
+    [
+     "Narrator",
+     "It's a tiny world that evolved completely on its own."
+    ],
+    [
+     "Narrator",
+     "And to protect it, only a few scientists a year are allowed inside."
+    ],
+    [
+     "Narrator",
+     "So Romania has the heaviest building on Earth, and a cave almost nobody will ever see."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  }
+ ]
+}
