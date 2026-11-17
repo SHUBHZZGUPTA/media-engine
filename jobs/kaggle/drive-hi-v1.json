@@ -1,0 +1,41 @@
+{
+ "id": "drive-hi-v1",
+ "script": "gpu/hf3d_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 150,
+ "params": {
+  "name": "drive-hi-v1",
+  "src_parts": [
+   "drive.tgz.part00",
+   "drive.tgz.part01",
+   "drive.tgz.part02"
+  ],
+  "src_sha256": "432fe6eb3636032a65c7790a327f302a94ee91d63ed0250dbe6ff6ebba9a85d3",
+  "dur": 69.448,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   30,
+   180,
+   330,
+   600,
+   750,
+   900,
+   1140,
+   1290,
+   1380,
+   1530,
+   1650,
+   1800,
+   1950
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "drive",
+  "page_dir": "hf_hi"
+ },
+ "requested": "2026-11-17T14:46+05:30"
+}
