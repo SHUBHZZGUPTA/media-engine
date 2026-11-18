@@ -11,9 +11,11 @@ for spec in sys.argv[1].split(','):
 L0, L1 = PARTS[0][2], PARTS[-1][3]; GAP = .45
 OUT = f'{B}/out/hf'; A = OUT + '/assets'
 os.makedirs(A + '/clips', exist_ok=True)
-norm = lambda w: re.sub(r"[^a-z0-9]", "", w.lower())
+import unicodedata
+LANG = os.environ.get('LANG_V', 'en')
+norm = lambda w: ''.join(c for c in w.lower() if unicodedata.category(c)[0] in 'LMN' and (c.isascii() is False or c.isalnum()))
 lines = {}
-for l in open(PROJ + '/script_en.txt'):
+for l in open(PROJ + f'/script_{LANG}.txt'):
     m = re.match(r'^(\d+) (.*)', l.strip())
     if m: lines[int(m.group(1))] = m.group(2)
 S = [lines[i] for i in range(L0, L1 + 1)]
@@ -51,9 +53,33 @@ for i, l in enumerate(S):
         disp.append((i, wd, key, len([x for x in sp.split() if norm(x)]) or 1))
         if re.search(r'\*[.,?!…]*$', w): key = False
 wn = [norm(w[2]) for w in W]
-sm = difflib.SequenceMatcher(None, sw, wn, autojunk=False); M = {}
-for a, b, n in sm.get_matching_blocks():
-    for k in range(n): M[a + k] = b + k
+if LANG == 'en':
+    sm = difflib.SequenceMatcher(None, sw, wn, autojunk=False); M = {}
+    for a, b, n in sm.get_matching_blocks():
+        for k in range(n): M[a + k] = b + k
+else:
+    # non-English: ASR spells words its own way (and writes English words in Devanagari), so match on a
+    # romanised, phonetically squashed form, then pair the leftovers inside each gap by character similarity
+    from indic_transliteration import sanscript as _sc
+    from indic_transliteration.sanscript import transliterate as _tr
+    def _rom(x):
+        x = re.sub(r'[^a-z0-9]', '', _tr(x, _sc.DEVANAGARI, _sc.ITRANS).lower())
+        for p, q in [('aa','a'),('ee','i'),('ii','i'),('oo','u'),('uu','u'),('w','v'),('ph','f'),('sh','s'),('chh','c'),('ch','c'),('y','i'),('e','i'),('o','u'),('h',''),('n','m')]: x = x.replace(p, q)
+        return x
+    swr = [_rom(x) for x in sw]; wnr = [_rom(w[2]) for w in W]
+    sm = difflib.SequenceMatcher(None, swr, wnr, autojunk=False); M = {}
+    for a, b, n in sm.get_matching_blocks():
+        for k in range(n): M[a + k] = b + k
+    ka = sorted(M)
+    bounds = [(-1, -1)] + [(k, M[k]) for k in ka] + [(len(sw), len(wn))]
+    for (a0, b0), (a1, b1) in zip(bounds, bounds[1:]):
+        bj = b0 + 1
+        for k in range(a0 + 1, a1):
+            best, bi = 0.0, None
+            for j in range(bj, min(b1, bj + 4)):
+                r = difflib.SequenceMatcher(None, swr[k], wnr[j]).ratio()
+                if r > best: best, bi = r, j
+            if bi is not None and best >= .55: M[k] = bi; bj = bi + 1
 tt = [None] * len(sw)
 for k in range(len(sw)):
     if k in M: tt[k] = (W[M[k]][0], W[M[k]][1])
@@ -146,7 +172,7 @@ def vids(t0, t1, names, zoom=(1, 1)):
         n = seq[k]; k += 1
         if shots and shots[-1]['type'] == 'vid' and shots[-1].get('clip') == n: continue
         l = CLIPLEN.get(C(n)); MS = CLIPUSE.get(n, .03)
-        if l - MS < min(t1 - t, 2.0) + .4: MS = .03          # not enough left in this clip: start it from the top again
+        if l - MS < max(min(t1 - t, 2.0) + .4, (t1 - t) + .1): MS = .03          # not enough left in this clip: start it from the top again
         prev_vid = bool(shots) and shots[-1]['type'] == 'vid' and abs(shots[-1]['t1'] - t) < .01
         fade = .12 if prev_vid else (0 if t == 0 else .5)
         cap = l - MS - .04 - fade / 2 - .08
@@ -194,8 +220,8 @@ used = {u for u in used if u[0] != 'c'}
 for kind, f in used:
     if kind == 'p': os.makedirs(A + '/p', exist_ok=True); shutil.copy(f'{PH}/{f}', f'{A}/p/{f}')
     else: shutil.copy(f'{CL}/{f}.webm', f'{A}/clips/{f}.webm')
-DATA = {'lang': 'en', 'dur': DUR, 'shots': shots, 'beats': beats, 'caps': CAPS, 'stops': [[a_, b_, n_] for (a_, n_), (b_, _) in zip(sorted(STOPS_T), sorted(STOPS_T)[1:] + [(END_STOPS, 0)])], 'nStops': NSTOPS, 'countdown': COUNTDOWN, 'trkWord': TRKWORD}
-html = open(f'{B}/engine.html').read().replace('__DATA__', json.dumps(DATA, ensure_ascii=False)).replace('__DUR__', str(DUR)).replace('__LANG__', 'en')
+DATA = {'lang': LANG, 'dur': DUR, 'shots': shots, 'beats': beats, 'caps': CAPS, 'stops': [[a_, b_, n_] for (a_, n_), (b_, _) in zip(sorted(STOPS_T), sorted(STOPS_T)[1:] + [(END_STOPS, 0)])], 'nStops': NSTOPS, 'countdown': COUNTDOWN, 'trkWord': TRKWORD}
+html = open(f'{B}/engine.html').read().replace('__DATA__', json.dumps(DATA, ensure_ascii=False)).replace('__DUR__', str(DUR)).replace('__LANG__', LANG)
 open(f'{OUT}/index.html', 'w').write(html)
 shutil.copy(os.environ.get('GSAP', '/home/claude/hfwork/node_modules/gsap/dist/gsap.min.js'), OUT)
 json.dump({'ST': ST, 'DUR': DUR}, open(f'{B}/times.json', 'w'))

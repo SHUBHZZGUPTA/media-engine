@@ -5,6 +5,10 @@ MAPSRC = {'ro': 'eox'}
 STOPS_T = []
 RO = 'ROMANIA'
 
+_EN = {}
+for _l in open(PROJ + '/script_en.txt'):
+    _m = re.match(r'^(\d+) (.*)', _l.strip())
+    if _m: _EN[int(_m.group(1))] = [norm(x) for x in _m.group(2).replace('*', '').replace('$100', 'a hundred dollars').split() if norm(x)]
 def WT(n, *words, occ=1, end=False):
     """start (or end) time of a word in line n: exact token match first, then substring; tries each candidate"""
     for word in words:
@@ -15,6 +19,14 @@ def WT(n, *words, occ=1, end=False):
                 if sl[k] == n - L0 and ((sw[k] == w) if exact else (w in sw[k])):
                     c += 1
                     if c == occ: return tt[k][1] if end else tt[k][0]
+    # not in this language's line (e.g. the Hindi version): place it at the same relative position it has in the English line
+    en = _EN.get(n, [])
+    for word in words:
+        w = norm(word)
+        for k, t in enumerate(en):
+            if t == w or w in t:
+                f = k / max(1, len(en)); t0, t1 = st(n), (st(n + 1) if n < L1 else DUR)
+                return t0 + f * (t1 - t0) + (.25 if end else 0)
     raise SystemExit(f'none of {words} in line {n}')
 def K(at, until, top, txt, fs=None, **kw):
     b = dict(k='kick', at=at, until=until, top=top, txt=txt, x=110, y=650); b.update(kw)
@@ -40,7 +52,7 @@ def MIX(t0, t1, items):
     n = len(items); d = (t1 - t0) / n
     for i, it in enumerate(items):
         a, b = t0 + i * d, t0 + (i + 1) * d
-        if isinstance(it, str): vids(a, b, [it])
+        if isinstance(it, str): vids(a, b, [it] + [c for c in items if isinstance(c, str) and c != it])
         elif len(it) > 3: photo(a, b, it[0], label=it[1], mode=it[3])
         else: photo(a, b, it[0], label=it[1], zoom=it[2] if len(it) > 2 else (1, 1.08))
 
@@ -144,7 +156,7 @@ MIX(st(20), st(21), ['merry_close3', 'merry_tower2'])
 # ================= #6 FAKE DRACULA (21-27) =================
 romap(st(21), WT(21, 'sold'), focus='bran', items=place_pin('bran', WT(21, 'sold') - .6, WT(21, 'sold') + .3), zf=1.1)
 CHAP(6, 'Fake Dracula', st(21), WT(21, 'sold') - .2)
-vids(WT(21, 'sold'), st(22), ['bran_a'])
+vids(WT(21, 'sold'), st(22), ['bran_a', 'bran_c'])
 K(WT(21, 'dracula'), st(22) - .15, 'SOLD AS', 'Dracula’s Castle', fs=90)
 MIX(st(22), st(23), ['bran_c', P_B1])
 K(WT(22, 'never'), st(23) - .15, 'BRAM STOKER', 'Never visited Romania', fs=80)
@@ -189,7 +201,7 @@ MIX(st(41), st(42), ['palace_c', P_PB])
 # ================= #3 HEAVIEST BUILDING (42-49) =================
 romap(st(42), WT(42, 'bucharest'), focus='bucharest', items=place_pin('bucharest', WT(42, 'bucharest') - .6, st(43) + .3), zf=1.1)
 CHAP(3, 'Heaviest building', st(42), WT(42, 'bucharest') - .1)
-vids(WT(42, 'bucharest'), st(43), ['palace_a'])
+vids(WT(42, 'bucharest'), st(43), ['palace_a', 'palace_c'])
 MIX(st(43), st(44), ['palace_b', P_PA, 'palace_c'])
 CNT(WT(43, 'four'), st(44) - .1, 4000000, unit=' TONNES', y=240, fs=150, dur=1.5)
 K(WT(43, 'guinness') - .1, WT(43, 'four') - .15, 'GUINNESS WORLD RECORDS', 'Heaviest building', fs=86)
@@ -259,9 +271,8 @@ beat(k='sub', at=WT(72, 'subscribe') - .2, until=st(73) - .1)
 MIX(st(73), DUR, ['merry_aerial2', 'transf_lake'])
 END_STOPS = st(69)
 
-MUS = ME + '/outputs/fetch/gta6-music/'
-MUSIC_SECTIONS = [
-    {'file': MUS + 'eighties_action.mp3', 'from': 0, 'to': st(28), 'gain_db': -18},
-    {'file': MUS + 'cyborg_ninja.mp3', 'from': st(28) - .75, 'to': st(50), 'gain_db': -18},
-    {'file': MUS + 'ouroboros.mp3', 'from': st(50) - .75, 'to': st(69), 'gain_db': -18},
-    {'file': MUS + 'eighties_action.mp3', 'from': st(69) - .75, 'to': DUR, 'gain_db': -18}]
+KM = ME + '/outputs/fetch/bhugol-music/'; YT = ME + '/music-library/ytal/'
+_ms = [(None, 9, KM + 'mischief_maker.mp3'), (9, 15, KM + 'life_of_riley.mp3'), (15, 21, KM + 'march_of_the_spoons.mp3'),
+       (21, 28, KM + 'mysterioso_march.mp3'), (28, 35, YT + 'scale_the_mountain.mp3'), (35, 42, KM + 'marty_gots_a_plan.mp3'),
+       (42, 50, KM + 'crusade.mp3'), (50, 59, KM + 'hidden_wonders.mp3'), (59, 69, YT + 'false_vacuum_decay.mp3'), (69, None, KM + 'chipper_doodle_v2.mp3')]
+MUSIC_SECTIONS = [{'file': f, 'from': 0 if a is None else st(a) - .75, 'to': DUR if b is None else st(b), 'gain_db': -18} for a, b, f in _ms]
