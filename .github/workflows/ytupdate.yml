@@ -34,6 +34,7 @@ jobs:
           YT_RT_MM_HI: ${{ secrets.YT_RT_MM_HI }}
           YT_RT_BHUGOL_EN: ${{ secrets.YT_RT_BHUGOL_EN }}
           YT_RT_BHUGOL_HI: ${{ secrets.YT_RT_BHUGOL_HI }}
+          YT_RT_FSI_EN: ${{ secrets.YT_RT_FSI_EN }}
         run: |
           CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'jobs/ytupdate/*.json' || true)
           for f in $CHANGED; do [ -f "$f" ] && python3 tools/yt_update.py "$f"; done

@@ -38,6 +38,7 @@ jobs:
           YT_RT_MM_HI: ${{ secrets.YT_RT_MM_HI }}
           YT_RT_BHUGOL_EN: ${{ secrets.YT_RT_BHUGOL_EN }}
           YT_RT_BHUGOL_HI: ${{ secrets.YT_RT_BHUGOL_HI }}
+          YT_RT_FSI_EN: ${{ secrets.YT_RT_FSI_EN }}
         run: |
           ID=$(python3 -c "import json;print(json.load(open('q/publish.json'))['id'])")
           mkdir -p main/outputs/publish

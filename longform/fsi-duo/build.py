@@ -115,7 +115,7 @@ P={
 64:dict(shots=[I("t2",31),I("t3",10),I("t2",37),I("t3",19)],own=1),
 65:dict(shots=[I("t1",21),I("t3",42),I("t1",17)]),
 }
-POOL=[I("t1",10),I("t2",11),I("t1",13),I("t1",17),I("t2",68),I("t1",19),I("t3",42),I("t1",16),X(512),X(520),X(752),X(776),I("t2",69),I("t1",43),I("t1",11),I("t1",12)]
+POOL=[I("t1",8),I("t3",8),I("t1",20),I("t3",27),I("t1",35),I("t2",14),I("t1",47),I("t3",18),I("t1",9),I("t3",23),I("t1",10),I("t2",11),I("t1",13),I("t1",17),I("t2",68),I("t1",19),I("t3",42),I("t1",16),X(512),X(520),X(752),X(776),I("t2",69),I("t1",43),I("t1",11),I("t1",12)]
 FPS=30
 def spans():
     T=json.load(open("timing.json")); ls=T["lines"]; out=[]
@@ -129,25 +129,29 @@ def crop_of(k):
         c=re.findall(r"crop=([0-9:]+)",o); from collections import Counter
         _crop[k]=Counter(c).most_common(1)[0][0] if c else "1920:1080:0:0"
     return _crop[k]
+MI=",minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1,setpts=PTS-STARTPTS"
+ONLY=set(int(x) for x in os.environ.get("BGONLY","").split(",") if x)
 def bg():
     T,sp=spans(); os.makedirs("bg",exist_ok=True); pool=list(POOL); pi=0; files=[]
     for i,(a,b) in enumerate(sp):
         need=b-a; shots=list(P[i]["shots"])
         own=P[i].get("own")
-        while (not own) and sum(s[2] for s in shots)/0.6 < need: shots.append(pool[pi%len(pool)]); pi+=1
+        while (not own) and sum(s[2] for s in shots) < need+0.05*len(shots): shots.append(pool[pi%len(pool)]); pi+=1
         tot=sum(s[2] for s in shots); acc=0
         for j,(k,ss,ln) in enumerate(shots):
             d=round((need*ln/tot)*FPS)/FPS if j<len(shots)-1 else round((need-acc)*FPS)/FPS
             acc+=d
             if d<=0: continue
-            sp_=min(1.0,max(0.5,ln/d)); f=f"bg/l{i:02d}_{j}.mp4"; files.append(f)
+            r_=ln/d; sp_=1.0 if r_>=0.97 else max(0.5,r_); interp=sp_<1.0; f=f"bg/l{i:02d}_{j}.mp4"; files.append(f)
             if os.path.exists(f): continue
-            vf=f"crop={crop_of(k)},scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,setpts=PTS/{sp_:.4f},fps={FPS},tpad=stop_mode=clone:stop_duration=12,trim=duration={d:.4f},setsar=1,format=yuv420p"
-            if own and ln/sp_<d-0.3: vf=vf.replace(",setsar=1",",scale=2880:1620,zoompan=z='1+0.0007*on':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30,setsar=1")
+            if ONLY and i not in ONLY: continue
+            vf=f"crop={crop_of(k)},scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,setpts=PTS/{sp_:.4f},fps={FPS}{MI if interp else ""},tpad=stop_mode=clone:stop_duration=12,trim=duration={d:.4f},setsar=1,format=yuv420p"
+            if own and ln/sp_<d-0.3: vf=vf.replace(",setsar=1",",scale=3840:2160,zoompan=z='1+0.0006*on':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30,setsar=1")
             r=subprocess.run(["ffmpeg","-v","error","-y","-ss",f"{ss:.3f}","-t",f"{ln:.3f}","-i",f"src/{k}.mp4","-an","-vf",vf,"-frames:v",str(round(d*FPS)),"-c:v","libx264","-preset","veryfast","-crf","17","-g","30",f+".tmp.mp4"])
             if r.returncode==0: os.rename(f+".tmp.mp4",f)
             else: print("FAIL",f)
     open("bg/list.txt","w").write("".join(f"file '{os.path.abspath(x)}'\n" for x in files))
+    if ONLY: return
     subprocess.run(["ffmpeg","-v","error","-y","-f","concat","-safe","0","-i","bg/list.txt","-c","copy","bg_all.mp4"],check=True)
     print("bg",dur("bg_all.mp4"),"target",T["total"],len(files))
 KEY=set("jason lucia duval caminos thirteen hundred leaks spoilers six couple trust easy harder army keys rent boss fight penitentiary luck ankle smart liberty history first conspiracy darkest sunniest hold hands hurry apartment texts relationship muscle cal hampton conspiracies boobie ike empire business drequan priest hustler raw hit dimez bae-luxe roxy dwnply raul bautista risks recklessness brian heder landlord dirty theory leash wrong ends controller subscribe leonida rockstar vice".split())
