@@ -1,0 +1,29 @@
+{
+ "job": "romania-hi-full",
+ "items": [
+  {
+   "name": "full1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 421.08,
+   "took": 34.7
+  },
+  {
+   "name": "full2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 426.12,
+   "took": 32.0
+  },
+  {
+   "name": "full3",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 432.04,
+   "took": 31.6
+  }
+ ]
+}
