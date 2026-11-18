@@ -6,7 +6,7 @@ FB=lambda s: ImageFont.truetype("fonts/BebasNeue-Regular.ttf",s)
 FA=lambda s: ImageFont.truetype("fonts/Anton-Regular.ttf",s)
 FS=lambda s: ImageFont.truetype("fonts/DMSerifDisplay-Regular.ttf",s)
 FI=lambda s: ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-Bold.otf",s)
-FE=ImageFont.truetype("/home/claude/media-engine/money-mirage/mm3/library/fonts/emoji.ttf",109)
+FE=None
 def new(): return Image.new("RGBA",(W,H),(0,0,0,0))
 def save(im,name): im.save(f"gfx/{name}.png"); return name
 def emoji(ch,size):
