@@ -1,0 +1,38 @@
+{
+ "id": "auhu-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "rb_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=45,9,47.4,16.25&WIDTH=3600&HEIGHT=1200"
+  },
+  {
+   "name": "rb_01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=47.4,9,49.8,16.25&WIDTH=3600&HEIGHT=1200"
+  },
+  {
+   "name": "rb_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=45,16.25,47.4,23.5&WIDTH=3600&HEIGHT=1200"
+  },
+  {
+   "name": "rb_11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=47.4,16.25,49.8,23.5&WIDTH=3600&HEIGHT=1200"
+  },
+  {
+   "name": "gisco_AT.geojson",
+   "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/distribution/AT-region-01m-4326-2020.geojson"
+  },
+  {
+   "name": "gisco_HU.geojson",
+   "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/distribution/HU-region-01m-4326-2020.geojson"
+  },
+  {
+   "name": "gb_AUT.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AUT/ADM0/geoBoundaries-AUT-ADM0.geojson"
+  },
+  {
+   "name": "gb_HUN.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/HUN/ADM0/geoBoundaries-HUN-ADM0.geojson"
+  }
+ ]
+}
