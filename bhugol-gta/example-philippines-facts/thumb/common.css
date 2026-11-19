@@ -1,0 +1,7 @@
+@font-face{font-family:BSD;font-weight:900;src:url(bsd900.woff2)}@font-face{font-family:Arch;font-weight:800;src:url(arch800.woff2)}
+html,body{margin:0;width:1280px;height:720px;overflow:hidden;font-family:BSD;background:#000}
+.bg{position:absolute;inset:0;background-size:cover}
+.t{position:absolute;font-weight:900;color:#fff;-webkit-text-stroke:14px #07121D;paint-order:stroke fill;line-height:1.02;white-space:nowrap}
+.hl{display:inline-block;background:#FFD21A;color:#07121D;-webkit-text-stroke:0;padding:2px 18px 6px;border-radius:12px;transform:rotate(-3deg);box-shadow:0 8px 0 #07121D}
+.cut{position:absolute;filter:drop-shadow(0 0 0 #07121D) drop-shadow(9px 0 0 #07121D) drop-shadow(-9px 0 0 #07121D) drop-shadow(0 -9px 0 #07121D) drop-shadow(0 9px 0 #07121D) saturate(1.2)}
+.flag{position:absolute;width:132px;height:66px;border:5px solid #07121D;border-radius:8px;overflow:hidden;box-shadow:0 6px 0 #07121D}
