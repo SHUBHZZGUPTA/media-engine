@@ -1,0 +1,925 @@
+{
+ "id": "ph-en-full",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "try": 2,
+ "key": "longform",
+ "items": [
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full1",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Philippines facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about the Philippines and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (a country named after a guy who never visited, someone singing Feliz Navidad in September, the skull that can't keep up with the eyes, sadly not actually chocolate, trash at the bottom of the ocean, the whole Earth needing a jacket, the fish that forgot it lives in the sea). The island-inside-a-lake list near the end is said slowly and deliberately, building up, like walking a friend through a puzzle. The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Philippines' as 'FIL-ih-peenz', 'Ruy López de Villalobos' as 'roo-EE LOH-pez deh vee-yah-LOH-bohs', 'parols' as 'pah-ROHLZ', 'Feliz Navidad' as 'feh-LEEZ nah-vee-DAHD', 'Manila' as 'muh-NIL-uh', 'tarsier' as 'TAR-see-er', 'Bohol' as 'boh-HOHL', 'Pinatubo' as 'pee-nah-TOO-boh', 'Taal' as 'tah-AHL', 'Luzon' as 'loo-ZON', 'Vulcan' as 'VUL-kun'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars you can't guess how many islands the Philippines has."
+    ],
+    [
+     "Narrator",
+     "It's seven thousand, six hundred and forty-one. And more than five hundred of them were only added to the count in the last ten years."
+    ],
+    [
+     "Narrator",
+     "And that's the normal fact."
+    ],
+    [
+     "Narrator",
+     "This country has a fish that forgot it lives in the sea."
+    ],
+    [
+     "Narrator",
+     "A volcano that cooled down the whole planet."
+    ],
+    [
+     "Narrator",
+     "And an island, in a lake, on an island, in a lake, on an island."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of the Philippines. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. The Philippines is named after a Spanish prince."
+    ],
+    [
+     "Narrator",
+     "In 1543, a Spanish explorer named Ruy López de Villalobos named two of the islands after the crown prince, Philip."
+    ],
+    [
+     "Narrator",
+     "Philip was a teenager. He later became King Philip the Second of Spain."
+    ],
+    [
+     "Narrator",
+     "And over time, his name spread from those two islands to the entire country."
+    ],
+    [
+     "Narrator",
+     "One small problem. Philip never set foot in the Philippines. Not once."
+    ],
+    [
+     "Narrator",
+     "A whole country of seven thousand islands, named after a guy who never visited."
+    ],
+    [
+     "Narrator",
+     "But at least he'd recognise number seven. Because it's about Christmas."
+    ],
+    [
+     "Narrator",
+     "Number seven. In the Philippines, Christmas starts in September."
+    ],
+    [
+     "Narrator",
+     "Not December. Not November. The moment the \"ber\" months begin, Christmas songs start playing in malls."
+    ],
+    [
+     "Narrator",
+     "Seriously. September, October, November, December. Four months of jingle bells."
+    ],
+    [
+     "Narrator",
+     "And it doesn't stop on Christmas Day. It keeps going into January."
+    ],
+    [
+     "Narrator",
+     "They even hang giant star lanterns called parols. The biggest ones are six metres wide, and some carry twelve thousand light bulbs."
+    ],
+    [
+     "Narrator",
+     "So while you're still at the beach in September, someone in Manila is already singing Feliz Navidad."
+    ],
+    [
+     "Narrator",
+     "And speaking of Manila, number six is about how crowded it is."
+    ],
+    [
+     "Narrator",
+     "Number six. Manila, the capital."
+    ],
+    [
+     "Narrator",
+     "The city itself has about one point eight million people."
+    ],
+    [
+     "Narrator",
+     "Now, that's a lot of people. But here's the crazy part. They're packed into just forty-two square kilometres."
+    ],
+    [
+     "Narrator",
+     "That's more people than Manhattan, squeezed into less than three-quarters of the space."
+    ],
+    [
+     "Narrator",
+     "Count it out, and it's more than forty thousand people in every single square kilometre."
+    ],
+    [
+     "Narrator",
+     "That makes Manila one of the most crowded cities on the planet."
+    ],
+    [
+     "Narrator",
+     "And number five is a tiny creature that needs the exact opposite. Peace and quiet. And it has the biggest eyes you've ever seen."
+    ],
+    [
+     "Narrator",
+     "Number five. The Philippine tarsier."
+    ],
+    [
+     "Narrator",
+     "It's one of the smallest primates on Earth. Small enough to fit in your hand."
+    ],
+    [
+     "Narrator",
+     "But look at those eyes. Each one is about sixteen millimetres wide."
+    ],
+    [
+     "Narrator",
+     "That means each eye is about as big as its entire brain."
+    ],
+    [
+     "Narrator",
+     "And they're so big, they can't even move in their sockets. So when a tarsier wants to look around, it turns its whole head. Almost all the way backwards."
+    ],
+    [
+     "Narrator",
+     "Imagine having eyes so big that your own skull can't keep up."
+    ],
+    [
+     "Narrator",
+     "And Bohol, the island where people go to see tarsiers, has something even stranger. Hills made of chocolate."
+    ],
+    [
+     "Narrator",
+     "Number four. The Chocolate Hills of Bohol."
+    ],
+    [
+     "Narrator",
+     "At least twelve hundred hills. Maybe almost eighteen hundred."
+    ],
+    [
+     "Narrator",
+     "And they're almost all the same shape. Round. Smooth. Like someone dropped a giant box of chocolates on the island."
+    ],
+    [
+     "Narrator",
+     "They're covered in grass. And in the dry season, the grass dries out and every hill turns chocolate brown."
+    ],
+    [
+     "Narrator",
+     "Sadly, they're not actually chocolate. They're made of limestone."
+    ],
+    [
+     "Narrator",
+     "But they're so famous, they're on Bohol's flag."
+    ],
+    [
+     "Narrator",
+     "And number three goes the other way. Not up. Down. Way down."
+    ],
+    [
+     "Narrator",
+     "Number three. The Philippine Trench, off the east coast."
+    ],
+    [
+     "Narrator",
+     "Its deepest point is about ten thousand five hundred metres down."
+    ],
+    [
+     "Narrator",
+     "That's so deep that if you dropped Mount Everest into it, the peak would still be almost two kilometres underwater."
+    ],
+    [
+     "Narrator",
+     "For a while in the twentieth century, it was the deepest place anyone had ever measured."
+    ],
+    [
+     "Narrator",
+     "In 2021, a Filipino scientist made the first crewed dive into its deepest part. And what was waiting down there?"
+    ],
+    [
+     "Narrator",
+     "Trash. Plastic, at the bottom of one of the deepest holes on Earth."
+    ],
+    [
+     "Narrator",
+     "But number two didn't need a submarine. Because number two changed the weather of the whole world."
+    ],
+    [
+     "Narrator",
+     "Number two. Mount Pinatubo."
+    ],
+    [
+     "Narrator",
+     "In June 1991, it exploded. The second-biggest volcanic eruption of the twentieth century."
+    ],
+    [
+     "Narrator",
+     "The ash cloud shot about forty kilometres into the sky."
+    ],
+    [
+     "Narrator",
+     "And as if that wasn't enough, a typhoon hit the same island on the same day."
+    ],
+    [
+     "Narrator",
+     "The eruption pumped millions of tonnes of gas into the atmosphere, and it spread around the entire planet."
+    ],
+    [
+     "Narrator",
+     "It blocked so much sunlight that the whole world cooled by about half a degree Celsius."
+    ],
+    [
+     "Narrator",
+     "One volcano in the Philippines, and the whole Earth needed a jacket."
+    ],
+    [
+     "Narrator",
+     "And the mountain lost about two hundred and sixty metres of its own height. Today, there's a lake where the top used to be."
+    ],
+    [
+     "Narrator",
+     "But number one is the place that breaks your brain."
+    ],
+    [
+     "Narrator",
+     "Number one. Taal Volcano. And you'll need to follow this slowly."
+    ],
+    [
+     "Narrator",
+     "First, there's Luzon, the biggest island in the Philippines."
+    ],
+    [
+     "Narrator",
+     "On Luzon, there's a lake. Taal Lake."
+    ],
+    [
+     "Narrator",
+     "In the middle of that lake, there's an island. Volcano Island."
+    ],
+    [
+     "Narrator",
+     "On that island, there's another lake. The crater lake."
+    ],
+    [
+     "Narrator",
+     "And in the middle of that crater lake, there's one more island. Vulcan Point."
+    ],
+    [
+     "Narrator",
+     "An island, in a lake, on an island, in a lake, on an island."
+    ],
+    [
+     "Narrator",
+     "And Taal Lake used to be connected to the sea. In 1754, an eruption blocked the way out, and the water slowly turned fresh."
+    ],
+    [
+     "Narrator",
+     "The sardines that got trapped inside never left. Today they're the only freshwater sardine on Earth."
+    ],
+    [
+     "Narrator",
+     "So the Philippines has a fish that forgot it lives in the sea, and an island hiding inside five layers of geography."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  },
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full2",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Philippines facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about the Philippines and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (a country named after a guy who never visited, someone singing Feliz Navidad in September, the skull that can't keep up with the eyes, sadly not actually chocolate, trash at the bottom of the ocean, the whole Earth needing a jacket, the fish that forgot it lives in the sea). The island-inside-a-lake list near the end is said slowly and deliberately, building up, like walking a friend through a puzzle. The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Philippines' as 'FIL-ih-peenz', 'Ruy López de Villalobos' as 'roo-EE LOH-pez deh vee-yah-LOH-bohs', 'parols' as 'pah-ROHLZ', 'Feliz Navidad' as 'feh-LEEZ nah-vee-DAHD', 'Manila' as 'muh-NIL-uh', 'tarsier' as 'TAR-see-er', 'Bohol' as 'boh-HOHL', 'Pinatubo' as 'pee-nah-TOO-boh', 'Taal' as 'tah-AHL', 'Luzon' as 'loo-ZON', 'Vulcan' as 'VUL-kun'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars you can't guess how many islands the Philippines has."
+    ],
+    [
+     "Narrator",
+     "It's seven thousand, six hundred and forty-one. And more than five hundred of them were only added to the count in the last ten years."
+    ],
+    [
+     "Narrator",
+     "And that's the normal fact."
+    ],
+    [
+     "Narrator",
+     "This country has a fish that forgot it lives in the sea."
+    ],
+    [
+     "Narrator",
+     "A volcano that cooled down the whole planet."
+    ],
+    [
+     "Narrator",
+     "And an island, in a lake, on an island, in a lake, on an island."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of the Philippines. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. The Philippines is named after a Spanish prince."
+    ],
+    [
+     "Narrator",
+     "In 1543, a Spanish explorer named Ruy López de Villalobos named two of the islands after the crown prince, Philip."
+    ],
+    [
+     "Narrator",
+     "Philip was a teenager. He later became King Philip the Second of Spain."
+    ],
+    [
+     "Narrator",
+     "And over time, his name spread from those two islands to the entire country."
+    ],
+    [
+     "Narrator",
+     "One small problem. Philip never set foot in the Philippines. Not once."
+    ],
+    [
+     "Narrator",
+     "A whole country of seven thousand islands, named after a guy who never visited."
+    ],
+    [
+     "Narrator",
+     "But at least he'd recognise number seven. Because it's about Christmas."
+    ],
+    [
+     "Narrator",
+     "Number seven. In the Philippines, Christmas starts in September."
+    ],
+    [
+     "Narrator",
+     "Not December. Not November. The moment the \"ber\" months begin, Christmas songs start playing in malls."
+    ],
+    [
+     "Narrator",
+     "Seriously. September, October, November, December. Four months of jingle bells."
+    ],
+    [
+     "Narrator",
+     "And it doesn't stop on Christmas Day. It keeps going into January."
+    ],
+    [
+     "Narrator",
+     "They even hang giant star lanterns called parols. The biggest ones are six metres wide, and some carry twelve thousand light bulbs."
+    ],
+    [
+     "Narrator",
+     "So while you're still at the beach in September, someone in Manila is already singing Feliz Navidad."
+    ],
+    [
+     "Narrator",
+     "And speaking of Manila, number six is about how crowded it is."
+    ],
+    [
+     "Narrator",
+     "Number six. Manila, the capital."
+    ],
+    [
+     "Narrator",
+     "The city itself has about one point eight million people."
+    ],
+    [
+     "Narrator",
+     "Now, that's a lot of people. But here's the crazy part. They're packed into just forty-two square kilometres."
+    ],
+    [
+     "Narrator",
+     "That's more people than Manhattan, squeezed into less than three-quarters of the space."
+    ],
+    [
+     "Narrator",
+     "Count it out, and it's more than forty thousand people in every single square kilometre."
+    ],
+    [
+     "Narrator",
+     "That makes Manila one of the most crowded cities on the planet."
+    ],
+    [
+     "Narrator",
+     "And number five is a tiny creature that needs the exact opposite. Peace and quiet. And it has the biggest eyes you've ever seen."
+    ],
+    [
+     "Narrator",
+     "Number five. The Philippine tarsier."
+    ],
+    [
+     "Narrator",
+     "It's one of the smallest primates on Earth. Small enough to fit in your hand."
+    ],
+    [
+     "Narrator",
+     "But look at those eyes. Each one is about sixteen millimetres wide."
+    ],
+    [
+     "Narrator",
+     "That means each eye is about as big as its entire brain."
+    ],
+    [
+     "Narrator",
+     "And they're so big, they can't even move in their sockets. So when a tarsier wants to look around, it turns its whole head. Almost all the way backwards."
+    ],
+    [
+     "Narrator",
+     "Imagine having eyes so big that your own skull can't keep up."
+    ],
+    [
+     "Narrator",
+     "And Bohol, the island where people go to see tarsiers, has something even stranger. Hills made of chocolate."
+    ],
+    [
+     "Narrator",
+     "Number four. The Chocolate Hills of Bohol."
+    ],
+    [
+     "Narrator",
+     "At least twelve hundred hills. Maybe almost eighteen hundred."
+    ],
+    [
+     "Narrator",
+     "And they're almost all the same shape. Round. Smooth. Like someone dropped a giant box of chocolates on the island."
+    ],
+    [
+     "Narrator",
+     "They're covered in grass. And in the dry season, the grass dries out and every hill turns chocolate brown."
+    ],
+    [
+     "Narrator",
+     "Sadly, they're not actually chocolate. They're made of limestone."
+    ],
+    [
+     "Narrator",
+     "But they're so famous, they're on Bohol's flag."
+    ],
+    [
+     "Narrator",
+     "And number three goes the other way. Not up. Down. Way down."
+    ],
+    [
+     "Narrator",
+     "Number three. The Philippine Trench, off the east coast."
+    ],
+    [
+     "Narrator",
+     "Its deepest point is about ten thousand five hundred metres down."
+    ],
+    [
+     "Narrator",
+     "That's so deep that if you dropped Mount Everest into it, the peak would still be almost two kilometres underwater."
+    ],
+    [
+     "Narrator",
+     "For a while in the twentieth century, it was the deepest place anyone had ever measured."
+    ],
+    [
+     "Narrator",
+     "In 2021, a Filipino scientist made the first crewed dive into its deepest part. And what was waiting down there?"
+    ],
+    [
+     "Narrator",
+     "Trash. Plastic, at the bottom of one of the deepest holes on Earth."
+    ],
+    [
+     "Narrator",
+     "But number two didn't need a submarine. Because number two changed the weather of the whole world."
+    ],
+    [
+     "Narrator",
+     "Number two. Mount Pinatubo."
+    ],
+    [
+     "Narrator",
+     "In June 1991, it exploded. The second-biggest volcanic eruption of the twentieth century."
+    ],
+    [
+     "Narrator",
+     "The ash cloud shot about forty kilometres into the sky."
+    ],
+    [
+     "Narrator",
+     "And as if that wasn't enough, a typhoon hit the same island on the same day."
+    ],
+    [
+     "Narrator",
+     "The eruption pumped millions of tonnes of gas into the atmosphere, and it spread around the entire planet."
+    ],
+    [
+     "Narrator",
+     "It blocked so much sunlight that the whole world cooled by about half a degree Celsius."
+    ],
+    [
+     "Narrator",
+     "One volcano in the Philippines, and the whole Earth needed a jacket."
+    ],
+    [
+     "Narrator",
+     "And the mountain lost about two hundred and sixty metres of its own height. Today, there's a lake where the top used to be."
+    ],
+    [
+     "Narrator",
+     "But number one is the place that breaks your brain."
+    ],
+    [
+     "Narrator",
+     "Number one. Taal Volcano. And you'll need to follow this slowly."
+    ],
+    [
+     "Narrator",
+     "First, there's Luzon, the biggest island in the Philippines."
+    ],
+    [
+     "Narrator",
+     "On Luzon, there's a lake. Taal Lake."
+    ],
+    [
+     "Narrator",
+     "In the middle of that lake, there's an island. Volcano Island."
+    ],
+    [
+     "Narrator",
+     "On that island, there's another lake. The crater lake."
+    ],
+    [
+     "Narrator",
+     "And in the middle of that crater lake, there's one more island. Vulcan Point."
+    ],
+    [
+     "Narrator",
+     "An island, in a lake, on an island, in a lake, on an island."
+    ],
+    [
+     "Narrator",
+     "And Taal Lake used to be connected to the sea. In 1754, an eruption blocked the way out, and the water slowly turned fresh."
+    ],
+    [
+     "Narrator",
+     "The sardines that got trapped inside never left. Today they're the only freshwater sardine on Earth."
+    ],
+    [
+     "Narrator",
+     "So the Philippines has a fish that forgot it lives in the sea, and an island hiding inside five layers of geography."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  },
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full3",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Philippines facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about the Philippines and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (a country named after a guy who never visited, someone singing Feliz Navidad in September, the skull that can't keep up with the eyes, sadly not actually chocolate, trash at the bottom of the ocean, the whole Earth needing a jacket, the fish that forgot it lives in the sea). The island-inside-a-lake list near the end is said slowly and deliberately, building up, like walking a friend through a puzzle. The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Philippines' as 'FIL-ih-peenz', 'Ruy López de Villalobos' as 'roo-EE LOH-pez deh vee-yah-LOH-bohs', 'parols' as 'pah-ROHLZ', 'Feliz Navidad' as 'feh-LEEZ nah-vee-DAHD', 'Manila' as 'muh-NIL-uh', 'tarsier' as 'TAR-see-er', 'Bohol' as 'boh-HOHL', 'Pinatubo' as 'pee-nah-TOO-boh', 'Taal' as 'tah-AHL', 'Luzon' as 'loo-ZON', 'Vulcan' as 'VUL-kun'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars you can't guess how many islands the Philippines has."
+    ],
+    [
+     "Narrator",
+     "It's seven thousand, six hundred and forty-one. And more than five hundred of them were only added to the count in the last ten years."
+    ],
+    [
+     "Narrator",
+     "And that's the normal fact."
+    ],
+    [
+     "Narrator",
+     "This country has a fish that forgot it lives in the sea."
+    ],
+    [
+     "Narrator",
+     "A volcano that cooled down the whole planet."
+    ],
+    [
+     "Narrator",
+     "And an island, in a lake, on an island, in a lake, on an island."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of the Philippines. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. The Philippines is named after a Spanish prince."
+    ],
+    [
+     "Narrator",
+     "In 1543, a Spanish explorer named Ruy López de Villalobos named two of the islands after the crown prince, Philip."
+    ],
+    [
+     "Narrator",
+     "Philip was a teenager. He later became King Philip the Second of Spain."
+    ],
+    [
+     "Narrator",
+     "And over time, his name spread from those two islands to the entire country."
+    ],
+    [
+     "Narrator",
+     "One small problem. Philip never set foot in the Philippines. Not once."
+    ],
+    [
+     "Narrator",
+     "A whole country of seven thousand islands, named after a guy who never visited."
+    ],
+    [
+     "Narrator",
+     "But at least he'd recognise number seven. Because it's about Christmas."
+    ],
+    [
+     "Narrator",
+     "Number seven. In the Philippines, Christmas starts in September."
+    ],
+    [
+     "Narrator",
+     "Not December. Not November. The moment the \"ber\" months begin, Christmas songs start playing in malls."
+    ],
+    [
+     "Narrator",
+     "Seriously. September, October, November, December. Four months of jingle bells."
+    ],
+    [
+     "Narrator",
+     "And it doesn't stop on Christmas Day. It keeps going into January."
+    ],
+    [
+     "Narrator",
+     "They even hang giant star lanterns called parols. The biggest ones are six metres wide, and some carry twelve thousand light bulbs."
+    ],
+    [
+     "Narrator",
+     "So while you're still at the beach in September, someone in Manila is already singing Feliz Navidad."
+    ],
+    [
+     "Narrator",
+     "And speaking of Manila, number six is about how crowded it is."
+    ],
+    [
+     "Narrator",
+     "Number six. Manila, the capital."
+    ],
+    [
+     "Narrator",
+     "The city itself has about one point eight million people."
+    ],
+    [
+     "Narrator",
+     "Now, that's a lot of people. But here's the crazy part. They're packed into just forty-two square kilometres."
+    ],
+    [
+     "Narrator",
+     "That's more people than Manhattan, squeezed into less than three-quarters of the space."
+    ],
+    [
+     "Narrator",
+     "Count it out, and it's more than forty thousand people in every single square kilometre."
+    ],
+    [
+     "Narrator",
+     "That makes Manila one of the most crowded cities on the planet."
+    ],
+    [
+     "Narrator",
+     "And number five is a tiny creature that needs the exact opposite. Peace and quiet. And it has the biggest eyes you've ever seen."
+    ],
+    [
+     "Narrator",
+     "Number five. The Philippine tarsier."
+    ],
+    [
+     "Narrator",
+     "It's one of the smallest primates on Earth. Small enough to fit in your hand."
+    ],
+    [
+     "Narrator",
+     "But look at those eyes. Each one is about sixteen millimetres wide."
+    ],
+    [
+     "Narrator",
+     "That means each eye is about as big as its entire brain."
+    ],
+    [
+     "Narrator",
+     "And they're so big, they can't even move in their sockets. So when a tarsier wants to look around, it turns its whole head. Almost all the way backwards."
+    ],
+    [
+     "Narrator",
+     "Imagine having eyes so big that your own skull can't keep up."
+    ],
+    [
+     "Narrator",
+     "And Bohol, the island where people go to see tarsiers, has something even stranger. Hills made of chocolate."
+    ],
+    [
+     "Narrator",
+     "Number four. The Chocolate Hills of Bohol."
+    ],
+    [
+     "Narrator",
+     "At least twelve hundred hills. Maybe almost eighteen hundred."
+    ],
+    [
+     "Narrator",
+     "And they're almost all the same shape. Round. Smooth. Like someone dropped a giant box of chocolates on the island."
+    ],
+    [
+     "Narrator",
+     "They're covered in grass. And in the dry season, the grass dries out and every hill turns chocolate brown."
+    ],
+    [
+     "Narrator",
+     "Sadly, they're not actually chocolate. They're made of limestone."
+    ],
+    [
+     "Narrator",
+     "But they're so famous, they're on Bohol's flag."
+    ],
+    [
+     "Narrator",
+     "And number three goes the other way. Not up. Down. Way down."
+    ],
+    [
+     "Narrator",
+     "Number three. The Philippine Trench, off the east coast."
+    ],
+    [
+     "Narrator",
+     "Its deepest point is about ten thousand five hundred metres down."
+    ],
+    [
+     "Narrator",
+     "That's so deep that if you dropped Mount Everest into it, the peak would still be almost two kilometres underwater."
+    ],
+    [
+     "Narrator",
+     "For a while in the twentieth century, it was the deepest place anyone had ever measured."
+    ],
+    [
+     "Narrator",
+     "In 2021, a Filipino scientist made the first crewed dive into its deepest part. And what was waiting down there?"
+    ],
+    [
+     "Narrator",
+     "Trash. Plastic, at the bottom of one of the deepest holes on Earth."
+    ],
+    [
+     "Narrator",
+     "But number two didn't need a submarine. Because number two changed the weather of the whole world."
+    ],
+    [
+     "Narrator",
+     "Number two. Mount Pinatubo."
+    ],
+    [
+     "Narrator",
+     "In June 1991, it exploded. The second-biggest volcanic eruption of the twentieth century."
+    ],
+    [
+     "Narrator",
+     "The ash cloud shot about forty kilometres into the sky."
+    ],
+    [
+     "Narrator",
+     "And as if that wasn't enough, a typhoon hit the same island on the same day."
+    ],
+    [
+     "Narrator",
+     "The eruption pumped millions of tonnes of gas into the atmosphere, and it spread around the entire planet."
+    ],
+    [
+     "Narrator",
+     "It blocked so much sunlight that the whole world cooled by about half a degree Celsius."
+    ],
+    [
+     "Narrator",
+     "One volcano in the Philippines, and the whole Earth needed a jacket."
+    ],
+    [
+     "Narrator",
+     "And the mountain lost about two hundred and sixty metres of its own height. Today, there's a lake where the top used to be."
+    ],
+    [
+     "Narrator",
+     "But number one is the place that breaks your brain."
+    ],
+    [
+     "Narrator",
+     "Number one. Taal Volcano. And you'll need to follow this slowly."
+    ],
+    [
+     "Narrator",
+     "First, there's Luzon, the biggest island in the Philippines."
+    ],
+    [
+     "Narrator",
+     "On Luzon, there's a lake. Taal Lake."
+    ],
+    [
+     "Narrator",
+     "In the middle of that lake, there's an island. Volcano Island."
+    ],
+    [
+     "Narrator",
+     "On that island, there's another lake. The crater lake."
+    ],
+    [
+     "Narrator",
+     "And in the middle of that crater lake, there's one more island. Vulcan Point."
+    ],
+    [
+     "Narrator",
+     "An island, in a lake, on an island, in a lake, on an island."
+    ],
+    [
+     "Narrator",
+     "And Taal Lake used to be connected to the sea. In 1754, an eruption blocked the way out, and the water slowly turned fresh."
+    ],
+    [
+     "Narrator",
+     "The sardines that got trapped inside never left. Today they're the only freshwater sardine on Earth."
+    ],
+    [
+     "Narrator",
+     "So the Philippines has a fish that forgot it lives in the sea, and an island hiding inside five layers of geography."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  }
+ ]
+}
