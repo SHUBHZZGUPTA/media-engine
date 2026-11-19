@@ -1,0 +1,27 @@
+{
+ "id": "mus-kI5HquCFFHQ",
+ "url": "https://www.youtube.com/watch?v=kI5HquCFFHQ",
+ "models": [
+  "gemini-3.7-flash",
+  "gemini-3.6-flash",
+  "gemini-3.5-flash",
+  "gemini-flash-latest"
+ ],
+ "media_resolution": "MEDIA_RESOLUTION_LOW",
+ "items": [
+  {
+   "name": "intro",
+   "start": "0s",
+   "end": "90s",
+   "fps": 0.5,
+   "prompt": "You are a music supervisor analysing the BACKGROUND MUSIC of a YouTube geography/facts video. Ignore the visuals except to note chapter changes. For this time window, list every distinct music cue in order with: start-end timestamps; genre/style; lead instruments; tempo (estimate BPM); key mood words; energy 1-5; how loud it sits under the narration (e.g. barely audible / clearly present / competing); whether it loops or evolves; how it changes at chapter/fact boundaries (hard cut, crossfade, stinger/whoosh, drop-out, swell); any sound effects used. Then: (1) does it sound like stock library music (Epidemic Sound, Artlist, YouTube Audio Library, Kevin MacLeod/incompetech, Envato), and which library it most resembles and why; (2) if you genuinely recognise the exact track, give title and artist with a confidence %, otherwise say 'not recognised' (do NOT invent titles); (3) summarise the music strategy of this window in 3 bullet points (what it does for pacing and retention). Be concrete and concise. This window is the OPENING (hook + intro) of the video."
+  },
+  {
+   "name": "mid",
+   "start": "240s",
+   "end": "420s",
+   "fps": 0.2,
+   "prompt": "You are a music supervisor analysing the BACKGROUND MUSIC of a YouTube geography/facts video. Ignore the visuals except to note chapter changes. For this time window, list every distinct music cue in order with: start-end timestamps; genre/style; lead instruments; tempo (estimate BPM); key mood words; energy 1-5; how loud it sits under the narration (e.g. barely audible / clearly present / competing); whether it loops or evolves; how it changes at chapter/fact boundaries (hard cut, crossfade, stinger/whoosh, drop-out, swell); any sound effects used. Then: (1) does it sound like stock library music (Epidemic Sound, Artlist, YouTube Audio Library, Kevin MacLeod/incompetech, Envato), and which library it most resembles and why; (2) if you genuinely recognise the exact track, give title and artist with a confidence %, otherwise say 'not recognised' (do NOT invent titles); (3) summarise the music strategy of this window in 3 bullet points (what it does for pacing and retention). Be concrete and concise. This window is from the MIDDLE of the video (main fact segments)."
+  }
+ ]
+}
