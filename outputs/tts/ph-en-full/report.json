@@ -1,0 +1,29 @@
+{
+ "job": "ph-en-full",
+ "items": [
+  {
+   "name": "full1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 402.68,
+   "took": 28.9
+  },
+  {
+   "name": "full2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 401.36,
+   "took": 42.8
+  },
+  {
+   "name": "full3",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 397.28,
+   "took": 31.1
+  }
+ ]
+}
