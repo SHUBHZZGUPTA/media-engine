@@ -1,0 +1,15 @@
+{
+ "id": "marke-osm",
+ "ua": "media-engine/1.0 (BHUGOL maps; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "delay": 1,
+ "files": [
+  {
+   "name": "island.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%28way%5B%22natural%22%3D%22coastline%22%5D%2860.296%2C19.120%2C60.306%2C19.142%29%3Bway%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2860.296%2C19.120%2C60.306%2C19.142%29%3Brelation%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2860.296%2C19.120%2C60.306%2C19.142%29%3Bway%5B%22man_made%22%3D%22lighthouse%22%5D%2860.296%2C19.120%2C60.306%2C19.142%29%3Bnode%5B%22man_made%22%3D%22lighthouse%22%5D%2860.296%2C19.120%2C60.306%2C19.142%29%3Bway%2860.296%2C19.120%2C60.306%2C19.142%29%3Bnode%2860.296%2C19.120%2C60.306%2C19.142%29%3B%29%3Bout%20geom%3B"
+  },
+  {
+   "name": "border_sea.json",
+   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%28way%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%2859.6%2C18.2%2C60.9%2C20.2%29%3B%29%3Bout%20geom%3B"
+  }
+ ]
+}
