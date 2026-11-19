@@ -1,0 +1,13 @@
+{
+ "job": "copa-hi-g38",
+ "items": [
+  {
+   "name": "narration_hi",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 65.72,
+   "took": 8.3
+  }
+ ]
+}
