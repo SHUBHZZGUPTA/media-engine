@@ -1,0 +1,41 @@
+{
+ "id": "marke-en-v4",
+ "script": "gpu/hf3d_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 150,
+ "params": {
+  "name": "marke-en-v4",
+  "src_parts": [
+   "marke4.tgz.part00",
+   "marke4.tgz.part01"
+  ],
+  "src_sha256": "48bb7ceca2eef3360ee477d9329fb470b70a205c4610a6276cf7c919d87369fe",
+  "dur": 78.649,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   3,
+   6,
+   446,
+   564,
+   658,
+   720,
+   884,
+   1238,
+   1360,
+   1500,
+   1567,
+   1948,
+   2353,
+   2358
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "marke",
+  "page_dir": "hf_en"
+ }
+}
