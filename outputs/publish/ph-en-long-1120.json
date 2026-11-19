@@ -1,0 +1,55 @@
+{
+ "id": "ph-en-long-1120",
+ "video_id": "T1x1IcGokJo",
+ "url": "https://youtube.com/shorts/T1x1IcGokJo",
+ "channel": "BhuGolYT",
+ "channel_id": "UC6Uc7hcy5EWXpNW6aTaWOlg",
+ "requested": {
+  "containsSyntheticMedia": false,
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "private",
+  "publishAt": "2026-11-19T21:45:00Z"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-19T21:45:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-19T21:45:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-19T21:45:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "locked_private": false,
+ "ok": true
+}
