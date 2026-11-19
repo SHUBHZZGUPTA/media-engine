@@ -1,0 +1,31 @@
+{
+ "sfx_dir": "money-mirage/mm3/library/sfx",
+ "below_voice_db": 19,
+ "swell_db": 4,
+ "sections": [
+  {
+   "file": "music-library/ytal/level.mp3",
+   "from": 0,
+   "to": 122.58,
+   "gain_db": -18
+  },
+  {
+   "file": "music-library/ytal/oumuamua.mp3",
+   "from": 121.83,
+   "to": 238.28,
+   "gain_db": -18
+  },
+  {
+   "file": "music-library/ytal/pelagic.mp3 (start 20 s)",
+   "from": 237.53,
+   "to": 325.56,
+   "gain_db": -18
+  },
+  {
+   "file": "music-library/ytal/risen.mp3 (start 20 s)",
+   "from": 324.81,
+   "to": 403.18,
+   "gain_db": -18
+  }
+ ]
+}
