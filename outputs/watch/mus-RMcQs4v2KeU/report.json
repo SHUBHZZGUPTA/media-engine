@@ -1,0 +1,50 @@
+{
+ "id": "mus-RMcQs4v2KeU",
+ "url": "https://www.youtube.com/watch?v=RMcQs4v2KeU",
+ "items": {
+  "intro": {
+   "ok": true,
+   "model": "gemini-3.7-flash",
+   "usage": {
+    "promptTokenCount": 5466,
+    "candidatesTokenCount": 1162,
+    "totalTokenCount": 7244,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 245
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 5221
+     }
+    ],
+    "thoughtsTokenCount": 616,
+    "serviceTier": "standard"
+   },
+   "errors": []
+  },
+  "mid": {
+   "ok": true,
+   "model": "gemini-3.7-flash",
+   "usage": {
+    "promptTokenCount": 7121,
+    "candidatesTokenCount": 1124,
+    "totalTokenCount": 8729,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 244
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 6877
+     }
+    ],
+    "thoughtsTokenCount": 484,
+    "serviceTier": "standard"
+   },
+   "errors": []
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "id": "mus-BXcY27H8icU",
+ "url": "https://www.youtube.com/watch?v=BXcY27H8icU",
+ "items": {
+  "intro": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 5466,
+    "candidatesTokenCount": 1189,
+    "totalTokenCount": 7627,
+    "promptTokensDetails": [
+     {
+      "modality": "VIDEO",
+      "tokenCount": 5221
+     },
+     {
+      "modality": "TEXT",
+      "tokenCount": 245
+     }
+    ],
+    "thoughtsTokenCount": 972,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  },
+  "mid": {
+   "ok": true,
+   "model": "gemini-3.6-flash",
+   "usage": {
+    "promptTokenCount": 7121,
+    "candidatesTokenCount": 1534,
+    "totalTokenCount": 9654,
+    "promptTokensDetails": [
+     {
+      "modality": "TEXT",
+      "tokenCount": 244
+     },
+     {
+      "modality": "VIDEO",
+      "tokenCount": 6877
+     }
+    ],
+    "thoughtsTokenCount": 999,
+    "serviceTier": "standard"
+   },
+   "errors": [
+    "gemini-3.7-flash HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+   ]
+  }
+ }
+}
