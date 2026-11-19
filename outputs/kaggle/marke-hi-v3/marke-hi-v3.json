@@ -1,0 +1,88 @@
+{
+ "params": {
+  "name": "marke-hi-v3",
+  "src_parts": [
+   "marke3.tgz.part00",
+   "marke3.tgz.part01"
+  ],
+  "src_sha256": "b2ec53539d319d51d40643f8e473ae76d77205a1d3f8001aaf06b0fef3f1f776",
+  "dur": 76.753,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   3,
+   6,
+   427,
+   547,
+   643,
+   690,
+   855,
+   1217,
+   1355,
+   1446,
+   1511,
+   1880,
+   2297,
+   2302
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "marke",
+  "page_dir": "hf_hi"
+ },
+ "steps": {
+  "hardware": "Tesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04",
+  "node": "v22.23.4",
+  "apt": 0,
+  "nvidia_debs": [
+   "libnvidia-egl-wayland1_1%3a1.1.23-1ubuntu1_amd64.deb",
+   "libnvidia-gl-580_580.178.04-1ubuntu1_amd64.deb",
+   "libnvidia-gpucomp-580_580.178.04-1ubuntu1_amd64.deb"
+  ],
+  "x265": true,
+  "source": {
+   "sha256": "b2ec53539d319d51d40643f8e473ae76d77205a1d3f8001aaf06b0fef3f1f776",
+   "ok": true,
+   "bytes": 37080496
+  },
+  "npm": {
+   "exit": 0,
+   "tail": "npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3\nnpm notice To update run: npm install -g npm@12.2.3\nnpm notice\n\nchrome-headless-shell@158.0.8127.36 /tmp/chs/chrome-headless-shell/linux-158.0.8127.36/chrome-headless-shell-linux64/chrome-headless-shell\n"
+  },
+  "render": {
+   "codes": [
+    0,
+    0,
+    0
+   ],
+   "secs": 357.2,
+   "frames": 2303,
+   "workers": 3
+  },
+  "concat": {
+   "exit": 0,
+   "secs": 0.5,
+   "tail": ""
+  }
+ },
+ "renderer": [
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)",
+  "ANGLE (NVIDIA Corporation, Tesla T4/PCIe/SSE2, OpenGL ES 3.2)"
+ ],
+ "final": {
+  "bytes": 179229573,
+  "sha256": "069a3fb0216e5c7495acb93712d15f9f890c75d1360f71bd1612610ad737aac4",
+  "probe": "1080,1920,2303\n76.766667"
+ },
+ "parts": [
+  "marke-hi-v3.mp4.part00",
+  "marke-hi-v3.mp4.part01",
+  "marke-hi-v3.mp4.part02",
+  "marke-hi-v3.mp4.part03",
+  "marke-hi-v3.mp4.part04"
+ ],
+ "verdict": "GPU RENDER COMPLETE"
+}
