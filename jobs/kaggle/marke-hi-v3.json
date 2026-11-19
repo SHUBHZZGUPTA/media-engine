@@ -1,0 +1,41 @@
+{
+ "id": "marke-hi-v3",
+ "script": "gpu/hf3d_render.py",
+ "accelerator": "NvidiaTeslaT4",
+ "internet": true,
+ "timeout_minutes": 60,
+ "wait_minutes": 150,
+ "params": {
+  "name": "marke-hi-v3",
+  "src_parts": [
+   "marke3.tgz.part00",
+   "marke3.tgz.part01"
+  ],
+  "src_sha256": "b2ec53539d319d51d40643f8e473ae76d77205a1d3f8001aaf06b0fef3f1f776",
+  "dur": 76.753,
+  "fps": 30,
+  "workers": 3,
+  "jpeg_q": 95,
+  "stills": [
+   0,
+   3,
+   6,
+   427,
+   547,
+   643,
+   690,
+   855,
+   1217,
+   1355,
+   1446,
+   1511,
+   1880,
+   2297,
+   2302
+  ],
+  "still_every_s": 5,
+  "render_timeout_s": 16000,
+  "src_dir": "marke",
+  "page_dir": "hf_hi"
+ }
+}
