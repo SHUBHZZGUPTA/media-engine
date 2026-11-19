@@ -1,0 +1,34 @@
+{
+ "id": "copa-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "rb_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-5,-84,4,-75&WIDTH=2700&HEIGHT=2700"
+  },
+  {
+   "name": "rb_01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=4,-84,13,-75&WIDTH=2700&HEIGHT=2700"
+  },
+  {
+   "name": "rb_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-5,-75,4,-66&WIDTH=2700&HEIGHT=2700"
+  },
+  {
+   "name": "rb_11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=4,-75,13,-66&WIDTH=2700&HEIGHT=2700"
+  },
+  {
+   "name": "rb_mid.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-30,-110,40,-40&WIDTH=4200&HEIGHT=4200"
+  },
+  {
+   "name": "gisco_CO.geojson",
+   "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/distribution/CO-region-01m-4326-2020.geojson"
+  },
+  {
+   "name": "gisco_PA.geojson",
+   "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/distribution/PA-region-01m-4326-2020.geojson"
+  }
+ ]
+}
