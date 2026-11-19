@@ -30,7 +30,7 @@ Drone and travel footage (YouTube, Creative Commons Attribution):
 - ForFilm Creation: https://youtu.be/nqxhZbvBzm8 (CC BY)
 Photos via Wikimedia Commons: LemuelSalibio (CC BY-SA 4.0); Emmigren (CC BY-SA 4.0); shankar s. (CC BY 2.0); rogel tura (CC0); Charles J. Sharp (CC BY-SA 4.0); Titian (Public domain); E911a (CC BY-SA 4.0); Dave Harlow, United States Geological Survey (Public domain); Ralff Nestor Nacor (CC BY-SA 4.0); Ramon FVelasquez (CC BY-SA 3.0); Wolfgang Hägele (CC BY-SA 4.0); Vyacheslav Argenberg (CC BY 4.0); Mount Everest photo (Wikimedia Commons) (CC BY-SA 2.0); SebastianBlumeArt (CC BY-SA 4.0); Matthew Gan (CC BY-SA 4.0); Dave Harlow, USGS (Public domain); USGS / Cascade Volcano Observatory (Public domain); USN photo by R. L. Rieger (Public domain); Andre Lloyd Torres (CC BY-SA 4.0); Parizfranz (CC BY-SA 4.0); Judgefloro (CC0); TheCoffee (Mike Gonzalez) (CC BY-SA 3.0); Dan Lundberg (CC BY-SA 2.0); Inkfish LLC (CC BY-SA 4.0); Leone Leoni (CC0); Lady01v (CC BY-SA 4.0); Patrickroque01 (CC BY-SA 4.0).
 Satellite: Sentinel-2 cloudless by EOX (CC BY 4.0).
-Music by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0: "Vivacity", "Gaslamp Funworks", "Wholesome", "Meatball Parade", "Sneaky Snitch", "Carefree", "Mystery Bazaar", "Ave Marimba". Additional music from the YouTube Audio Library.
+Music from the YouTube Audio Library.
 
 ## Tags
 philippines, philippines facts, facts about the philippines, taal volcano, vulcan point, chocolate hills, bohol, tarsier, mount pinatubo, philippine trench, manila, christmas in the philippines, el nido, palawan, geography, geography facts, bhugol
