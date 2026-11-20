@@ -1,0 +1,71 @@
+{
+ "id": "eg-commons-vid",
+ "delay": 1,
+ "ua": "media-engine/1.0 (BHUGOL maps; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "files": [
+  {
+   "name": "v_giza.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+pyramids+giza&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_sphinx.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+sphinx+giza&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_cairo.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+cairo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_nile.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+nile+river&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_abusimbel.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+abu+simbel&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_suez.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+suez+canal&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_sinai.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+sinai&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_whale.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+wadi+al-hitan&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_desert.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+egypt+desert&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_luxor.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+luxor&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_aswan.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+aswan&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_alexandria.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+alexandria+egypt&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_redsea.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+red+sea+egypt&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_karnak.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+karnak&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_evergiven.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+ever+given&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  },
+  {
+   "name": "v_qarafa.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Avideo+city+of+the+dead+cairo&gsrnamespace=6&gsrlimit=50&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&format=json"
+  }
+ ]
+}
