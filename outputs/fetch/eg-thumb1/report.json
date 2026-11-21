@@ -1,0 +1,62 @@
+[
+ {
+  "name": "tut_mask1.jpg",
+  "ok": true,
+  "bytes": 1362621
+ },
+ {
+  "name": "tut_mask2.jpg",
+  "ok": true,
+  "bytes": 102191
+ },
+ {
+  "name": "nefertiti1.jpg",
+  "ok": true,
+  "bytes": 364729
+ },
+ {
+  "name": "mummy_g1.jpg",
+  "ok": false,
+  "error": "<HTTPError 404: 'Not Found'>"
+ },
+ {
+  "name": "s_tut.json",
+  "ok": true,
+  "bytes": 53700
+ },
+ {
+  "name": "s_mummy.json",
+  "ok": true,
+  "bytes": 61318
+ },
+ {
+  "name": "s_mummy2.json",
+  "ok": true,
+  "bytes": 66730
+ },
+ {
+  "name": "s_sphinx.json",
+  "ok": true,
+  "bytes": 59645
+ },
+ {
+  "name": "s_pyramid.json",
+  "ok": true,
+  "bytes": 63751
+ },
+ {
+  "name": "s_anubis.json",
+  "ok": true,
+  "bytes": 67519
+ },
+ {
+  "name": "s_nefertiti.json",
+  "ok": true,
+  "bytes": 55542
+ },
+ {
+  "name": "s_ramesses.json",
+  "ok": true,
+  "bytes": 129011
+ }
+]
