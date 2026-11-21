@@ -1,0 +1,21 @@
+{
+ "job": "eg-hi-full",
+ "items": [
+  {
+   "name": "full1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 433.04,
+   "took": 31.4
+  },
+  {
+   "name": "full2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 428.32,
+   "took": 31.6
+  }
+ ]
+}
