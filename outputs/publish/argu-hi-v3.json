@@ -1,0 +1,55 @@
+{
+ "id": "argu-hi-v3",
+ "video_id": "E2UgWA7TSgc",
+ "url": "https://youtube.com/shorts/E2UgWA7TSgc",
+ "channel": "Bhugol Hindi",
+ "channel_id": "UCJMYXEUkRvGmE2N8zoWmAMg",
+ "requested": {
+  "containsSyntheticMedia": false,
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "private",
+  "publishAt": "2026-11-22T11:30:00Z"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-22T11:30:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-22T11:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-22T11:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "locked_private": false,
+ "ok": true
+}
