@@ -1,0 +1,55 @@
+{
+ "id": "eg-thumb1",
+ "delay": 1,
+ "ua": "media-engine/1.0 (BHUGOL thumbnails; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "files": [
+  {
+   "name": "tut_mask1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CairoEgMuseumTaaMaskMostlyPhotographed.jpg?width=2560"
+  },
+  {
+   "name": "tut_mask2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tutanchamun%20Maske.jpg?width=2560"
+  },
+  {
+   "name": "nefertiti1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nofretete%20Neues%20Museum.jpg?width=2560"
+  },
+  {
+   "name": "mummy_g1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramesses%20II%20mummy%20head.jpg?width=2560"
+  },
+  {
+   "name": "s_tut.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=Tutankhamun+golden+mask&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  },
+  {
+   "name": "s_mummy.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=Egyptian+mummy&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  },
+  {
+   "name": "s_mummy2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=mummy+wrapped+museum+Egypt&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  },
+  {
+   "name": "s_sphinx.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=Great+Sphinx+of+Giza&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  },
+  {
+   "name": "s_pyramid.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=Great+Pyramid+of+Giza&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  },
+  {
+   "name": "s_anubis.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=Anubis+statue&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  },
+  {
+   "name": "s_nefertiti.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=Nefertiti+bust&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  },
+  {
+   "name": "s_ramesses.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=40&gsrsearch=Ramesses+II+statue&prop=imageinfo&iiprop=size%7Curl%7Cextmetadata&iiurlwidth=2560&iiextmetadatafilter=LicenseShortName%7CArtist%7CObjectName&format=json"
+  }
+ ]
+}
