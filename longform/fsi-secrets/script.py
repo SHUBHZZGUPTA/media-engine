@@ -1,0 +1,71 @@
+import json
+A=["GTA 6 made three point seven nine billion dollars in a single day. Thirty-two and a half million copies were sold before it even launched.",
+"And all of those players went straight to work. Hunting secrets.",
+"In just three days, they found a UFO, Bigfoot, a dog on a jet ski, and one mystery that nobody can solve.",
+"These are the ten wildest secrets found in GTA 6 so far. No story spoilers. I promise.",
+"One more thing. I didn't find these. Players did. Their names are on screen, and I'm just your tour guide. Let's go!",
+"Number one. The Easter egg that is literally an egg.",
+"Remember that giant radio tower from the very first trailer? You can climb it. All the way up. It takes about seven minutes of ladders.",
+"At the top, there's a bird's nest. And inside it are big, colorful eggs. Actual Easter eggs.",
+"Pick one up, throw it at the road below, and you trigger a hidden cutscene. I won't spoil what that egg hits.",
+"A player called xGarbett found it on day one. Rockstar hid an Easter egg, and it's an egg. I respect that so much.",
+"Number two. Cool Dog.",
+"Swim way out to sea, until you're completely stranded. Then listen. You'll hear barking.",
+"And a dog, wearing goggles, pulls up on a jet ski. Players call him Cool Dog. He gives you a ride back to shore.",
+"But here's the secret inside the secret. Don't get off. Stay on the jet ski, and he takes you to a tiny island full of dogs.",
+"Then he digs up about twelve hundred dollars, just for you. Best boy in Leonida.",
+"Number three. Bigfoot is back.",
+"In Leonida, he's called the Skunk Ape. That's a real legend from Florida folklore.",
+"Deep in the southern swamps, players caught him on a dirt road, eating a deer. Chase him with Focus Mode, and you lose him in the trees.",
+"But you find a strange figure tied to a tree. Touch it, and your character blacks out.",
+"And it goes deeper. Flyers around the map lead you to a cryptid hunter called Kirk, and a full side mission. It only starts at night. Of course it does.",
+"Number four. The UFO abduction.",
+"After chapter two, drive out to the country roads east of Port Gellhorn. Get there around two in the morning.",
+"Look for a car on the roadside with its lights still on. Then follow a trail of clothes into the woods.",
+"You'll find a woman, floating in a beam of light. The ship lets her go, and she asks you to fetch her car.",
+"So you walk back to the car. And the UFO takes you instead.",
+"You wake up three days later, with a brand new trophy. It's called The Truth Is Out There.",
+"Number five. It doesn't end there. You can rescue the alien.",
+"Keep playing as the character who got abducted. Keep sleeping. Eventually, you dream of a white room inside the ship.",
+"There's a puzzle in there. Solve it, and it points to a real facility hidden in the south of the map.",
+"Players who cracked it say you can free a live alien, and its ship comes back to collect it.",
+"The reward? A permanent boost to your health, your stamina, and your Focus. And no, I'm not giving you the code. Go earn it.",
+"Number six. The house Rockstar teased five years ago.",
+"Back in 2021, the San Andreas remaster had a strange photo of a house hanging on a bar wall. Fans said, that's GTA 6. Everybody laughed.",
+"They were right. That exact house is in a town called Belville.",
+"Break into the garage, and you find a conspiracy theorist's den. And his notes are wild.",
+"He can't buy a plane ticket to Los Santos. He can't drive past the state line. Some people around him look identical.",
+"And two people, called J and L, don't seem to follow the same rules as everyone else. This man has figured out he's inside a video game.",
+"Number seven. Michael's missing yacht.",
+"Look at the boat parked in Jason's yard. Now check its GPS. It's showing a map of Los Santos.",
+"Players think it's the yacht that was stolen from Michael in GTA 5. Thirteen years later, we finally know where it went.",
+"Number eight. Arthur Morgan's hat.",
+"Somewhere in Leonida, there's a yard sale. And on the table, for five dollars, is a very familiar cowboy hat.",
+"It's Arthur Morgan's hat, from Red Dead Redemption 2. Five dollars. For a legend.",
+"Number nine. Two movie stars are hiding in Vice City.",
+"First, Dexter's apartment. The building from the TV show is on Washington Island. And players report a toolbox on the roof, with a syringe, a knife, and tape inside.",
+"Second, on Vespucci Island, a villa garage hides a bright green tuner car. It's a near copy of the hero car from the first Fast and Furious. And you can just drive it away.",
+"And number ten. The mystery nobody can solve.",
+"In Manifest Canyon, there's a monument. A pillar, a globe, and four stallions.",
+"The plaque says the horses stand for the four pillars of Leonida. Wildlife. Corruption. Humanity. And yeyo.",
+"The player who found it says the controller vibrates when you get close. The statue beeps, in what could be Morse code. And each horse carries a different symbol.",
+"So far, nobody has decoded it. It could be the next Mount Chiliad. Or it could be Rockstar trolling us for another ten years.",
+"So that's three days of secrets. Imagine what they'll find in three months.",
+"Tell me in the comments. Which of these have you found yourself? And if you crack that monument, I want to be the first to know.",
+"Subscribe to Five Star Intel. We're digging through this game every week. See you in Leonida!"]
+D=("Narrate this as a high-energy, feel-good gaming YouTube video about the ten wildest secrets players have found in the new game GTA 6. "
+"The Narrator is THRILLED and grinning the whole time: an excited, fun friend who can't wait to tell you each secret. "
+"A huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. "
+"Wide, lively pitch movement; real amazement on every number and reveal; playful laughter in the voice on the funny bits (and it's an egg, Best boy in Leonida, Of course it does, Five dollars. For a legend, And yeyo). A hushed, delighted, spooky-fun tone on the UFO and the unsolved monument, never actually scary. "
+"Punch the key words with energy. Short lines like 'Number two. Cool Dog.' are crisp labels with a beat after them. "
+"Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Keep exactly the same pace and energy in the last minute as in the first. "
+"Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. "
+"Say 'GTA 6' as the letters G, T, A then 'six', and 'GTA 5' as the letters G, T, A then 'five'. Say 'UFO' as the letters U, F, O. Say '2021' as 'twenty twenty-one'. "
+"Pronounce 'Leonida' as 'lee-oh-NEE-dah', 'xGarbett' as 'ex GAR-bit', 'Port Gellhorn' as 'port GELL-horn', 'Belville' as 'BELL-vill', 'Vespucci' as 'ves-POO-chee', 'yeyo' as 'YAY-yo', 'Chiliad' as 'CHILL-ee-ad', 'cryptid' as 'CRIP-tid'. "
+"Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. "
+"The text is given one sentence group per line: read every line in order, do not skip any line.")
+job={"id":"fsi-secrets-en-full","models":["gemini-3.8-flash-tts"],"try":2,"key":"longform",
+ "items":[{"name":"full","direction":D,"speakers":{"Narrator":"Fenrir"},"lines":[["Narrator",t] for t in A]}]}
+json.dump(job,open("../../jobs/tts/fsi-secrets-en-full.json","w"),indent=1,ensure_ascii=False)
+json.dump({"full":A},open("lines_en.json","w"),indent=1,ensure_ascii=False)
+w=sum(len(t.split()) for t in A); print(w,"words,",len(A),"lines ->",round(w/172,2),"min")
