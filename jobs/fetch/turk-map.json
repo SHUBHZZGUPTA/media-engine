@@ -1,0 +1,22 @@
+{
+ "id": "turk-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "w_0.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-25,-125.0,60,-62.5&WIDTH=2500&HEIGHT=3400"
+  },
+  {
+   "name": "w_1.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-25,-62.5,60,0.0&WIDTH=2500&HEIGHT=3400"
+  },
+  {
+   "name": "w_2.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-25,0.0,60,62.5&WIDTH=2500&HEIGHT=3400"
+  },
+  {
+   "name": "w_3.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-25,62.5,60,125.0&WIDTH=2500&HEIGHT=3400"
+  }
+ ]
+}
