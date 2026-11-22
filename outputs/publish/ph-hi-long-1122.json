@@ -1,0 +1,59 @@
+{
+ "id": "ph-hi-long-1122",
+ "video_id": "0-fLDcLnSYg",
+ "url": "https://youtube.com/shorts/0-fLDcLnSYg",
+ "channel": "Bhugol Hindi",
+ "channel_id": "UCJMYXEUkRvGmE2N8zoWmAMg",
+ "requested": {
+  "containsSyntheticMedia": false,
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "private",
+  "publishAt": "2026-11-22T14:30:00Z"
+ },
+ "returned_status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-22T14:30:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "checks": [
+  {
+   "after_s": 60,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-22T14:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  },
+  {
+   "after_s": 180,
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "publishAt": "2026-11-22T14:30:00Z",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+   },
+   "processing": "succeeded"
+  }
+ ],
+ "thumbnail": {
+  "ok": true,
+  "url": "https://i9.ytimg.com/vi/0-fLDcLnSYg/maxresdefault.jpg?sqp=CNjGitgG&rs=AOn4CLAFFEej8tPDlfhFT4rx6tjXswieHw"
+ },
+ "locked_private": false,
+ "ok": true
+}
