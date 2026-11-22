@@ -1,0 +1,38 @@
+{
+ "id": "cap-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "c_0.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,-125,60,-90&WIDTH=1400&HEIGHT=4200"
+  },
+  {
+   "name": "c_1.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,-90,60,-55&WIDTH=1400&HEIGHT=4200"
+  },
+  {
+   "name": "c_2.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,-55,60,-20&WIDTH=1400&HEIGHT=4200"
+  },
+  {
+   "name": "c_3.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,-20,60,15&WIDTH=1400&HEIGHT=4200"
+  },
+  {
+   "name": "c_4.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,15,60,50&WIDTH=1400&HEIGHT=4200"
+  },
+  {
+   "name": "c_5.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,50,60,85&WIDTH=1400&HEIGHT=4200"
+  },
+  {
+   "name": "c_6.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,85,60,120&WIDTH=1400&HEIGHT=4200"
+  },
+  {
+   "name": "c_7.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-45,120,60,155&WIDTH=1400&HEIGHT=4200"
+  }
+ ]
+}
