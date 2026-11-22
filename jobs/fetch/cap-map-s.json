@@ -1,0 +1,14 @@
+{
+ "id": "cap-map-s",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "s_0.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-60,85,-45,120&WIDTH=1400&HEIGHT=600"
+  },
+  {
+   "name": "s_1.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-60,120,-45,155&WIDTH=1400&HEIGHT=600"
+  }
+ ]
+}
