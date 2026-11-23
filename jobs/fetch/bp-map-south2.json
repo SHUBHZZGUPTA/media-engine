@@ -1,0 +1,14 @@
+{
+ "id": "bp-map-south2",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "sy_0.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-78,-80,-62,-30&WIDTH=2000&HEIGHT=640"
+  },
+  {
+   "name": "sy_1.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-78,-30,-62,20&WIDTH=2000&HEIGHT=640"
+  }
+ ]
+}
