@@ -1,0 +1,131 @@
+{
+ "id": "vn-commons",
+ "delay": 1,
+ "ua": "media-engine/1.0 (BHUGOL maps; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "files": [
+  {
+   "name": "p_golden.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Golden+Bridge+Da+Nang&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_golden2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Cau+Vang+Ba+Na+Hills&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_bana.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Ba+Na+Hills&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_saola.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Saola+Pseudoryx&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_saola2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Pseudoryx+nghetinhensis&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_eggc.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+egg+coffee+Hanoi&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_eggc2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Ca+phe+trung&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_metro.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Sofitel+Legend+Metropole+Hanoi&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_sign.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hanoi+street+sign&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_sign2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hanoi+Old+Quarter+street&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_dict.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Dictionarium+Annamiticum+Lusitanum&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_rhodes.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Alexandre+de+Rhodes&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_nom.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Chu+Nom&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_hanmoto.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hanoi+motorbikes+traffic&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_hcmmoto.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Ho+Chi+Minh+City+motorbikes+traffic&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_moto3.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Vietnam+motorbike+family&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_coffee.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Vietnam+coffee+plantation&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_coffee2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+robusta+coffee+cherries&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_phin.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Vietnamese+coffee+phin&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_halong.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Ha+Long+Bay+aerial&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_halong2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Ha+Long+Bay&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_sondoong.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Son+Doong+cave&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_sondoong2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hang+Son+Doong&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_hangen.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hang+En+cave&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_phong.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Phong+Nha+Ke+Bang&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_donghoi.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Dong+Hoi+Quang+Binh&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_b747.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Boeing+747+in+flight&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_hanoi.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hanoi+aerial&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_hcmc.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Ho+Chi+Minh+City+skyline&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "vnm_adm0.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VNM/ADM0/geoBoundaries-VNM-ADM0_simplified.geojson"
+  },
+  {
+   "name": "vietnam_flag.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Vietnam.svg?width=1600"
+  }
+ ]
+}
