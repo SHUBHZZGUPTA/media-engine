@@ -1,0 +1,50 @@
+{
+ "id": "baltic-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "rb_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=52.5,19,56.75,24.5&WIDTH=3600&HEIGHT=2782"
+  },
+  {
+   "name": "rb_01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=56.75,19,61.0,24.5&WIDTH=3600&HEIGHT=2782"
+  },
+  {
+   "name": "rb_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=52.5,24.5,56.75,30.0&WIDTH=3600&HEIGHT=2782"
+  },
+  {
+   "name": "rb_11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=56.75,24.5,61.0,30.0&WIDTH=3600&HEIGHT=2782"
+  },
+  {
+   "name": "rb_w00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=44,8,56,24&WIDTH=3600&HEIGHT=2700"
+  },
+  {
+   "name": "rb_w01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=56,8,68,24&WIDTH=3600&HEIGHT=2700"
+  },
+  {
+   "name": "rb_w10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=44,24,56,40&WIDTH=3600&HEIGHT=2700"
+  },
+  {
+   "name": "rb_w11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=56,24,68,40&WIDTH=3600&HEIGHT=2700"
+  },
+  {
+   "name": "gb_EST.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/EST/ADM0/geoBoundaries-EST-ADM0.geojson"
+  },
+  {
+   "name": "gb_LVA.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LVA/ADM0/geoBoundaries-LVA-ADM0.geojson"
+  },
+  {
+   "name": "gb_LTU.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LTU/ADM0/geoBoundaries-LTU-ADM0.geojson"
+  }
+ ]
+}
