@@ -1,0 +1,77 @@
+[
+ {
+  "name": "s2_00.jpg",
+  "ok": true,
+  "bytes": 2203420
+ },
+ {
+  "name": "weld_00.jpg",
+  "ok": true,
+  "bytes": 2495172
+ },
+ {
+  "name": "s2_10.jpg",
+  "ok": true,
+  "bytes": 747527
+ },
+ {
+  "name": "weld_10.jpg",
+  "ok": true,
+  "bytes": 1858416
+ },
+ {
+  "name": "s2_01.jpg",
+  "ok": true,
+  "bytes": 2992185
+ },
+ {
+  "name": "weld_01.jpg",
+  "ok": true,
+  "bytes": 2918340
+ },
+ {
+  "name": "s2_11.jpg",
+  "ok": true,
+  "bytes": 2356329
+ },
+ {
+  "name": "weld_11.jpg",
+  "ok": true,
+  "bytes": 2856342
+ },
+ {
+  "name": "s2_galv.jpg",
+  "ok": true,
+  "bytes": 1485809
+ },
+ {
+  "name": "s2_chan.jpg",
+  "ok": false,
+  "error": "IncompleteRead(2019173 bytes read, 758616 more expected)"
+ },
+ {
+  "name": "rb_mid.jpg",
+  "ok": true,
+  "bytes": 2718398
+ },
+ {
+  "name": "s2_mid.jpg",
+  "ok": true,
+  "bytes": 1706825
+ },
+ {
+  "name": "tx_places.zip",
+  "ok": true,
+  "bytes": 1707999
+ },
+ {
+  "name": "osm_houston.geojson",
+  "ok": true,
+  "bytes": 269945
+ },
+ {
+  "name": "osm_galveston.geojson",
+  "ok": true,
+  "bytes": 123650
+ }
+]
