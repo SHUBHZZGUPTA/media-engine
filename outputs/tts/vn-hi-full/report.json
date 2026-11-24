@@ -1,0 +1,29 @@
+{
+ "job": "vn-hi-full",
+ "items": [
+  {
+   "name": "full1",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 447.68,
+   "took": 31.7
+  },
+  {
+   "name": "full2",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 442.76,
+   "took": 31.4
+  },
+  {
+   "name": "full3",
+   "ok": true,
+   "model": "gemini-3.8-flash-tts",
+   "mime": "audio/wav",
+   "seconds": 446.16,
+   "took": 31.0
+  }
+ ]
+}
