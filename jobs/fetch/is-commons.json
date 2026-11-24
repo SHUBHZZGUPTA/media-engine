@@ -1,0 +1,107 @@
+{
+ "id": "is-commons",
+ "delay": 1,
+ "ua": "media-engine/1.0 (BHUGOL maps; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "files": [
+  {
+   "name": "p_eyja.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Eyjafjallaj%C3%B6kull+eruption+2010&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_eyja2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Eyjafjallajokull+ash+plume&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_ashsat.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Eyjafjallajokull+ash+cloud+satellite&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_airport.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+2010+air+travel+disruption+airport&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_surtsey.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Surtsey+eruption+1963&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_surtsey2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Surtsey+island&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_burger.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+last+McDonalds+Iceland+burger&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_mcd.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+McDonalds+Reykjavik&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_elf.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+%C3%93feigskirkja+G%C3%A1lgahraun&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_elf2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Icelandic+elf+house&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_beer.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Beer+Day+Iceland+1989&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_beer2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Icelandic+beer+bar+Reykjavik&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_geo.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hellishei%C3%B0i+power+station&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_geo2.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Nesjavellir+geothermal&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_pool.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Reykjavik+geothermal+swimming+pool&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_silfra.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Silfra+fissure&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_thing.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+%C3%9Eingvellir+rift&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_mosq.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Culiseta+annulata&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_names.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Mannanafnanefnd&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_antarc.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Antarctica+landscape&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_reyk.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Reykjavik+aerial&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_hallg.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Hallgr%C3%ADmskirkja&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_bluel.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Blue+Lagoon+Iceland&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_aurora.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+aurora+Iceland&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_vik.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Reynisfjara&gsrnamespace=6&gsrlimit=25&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  }
+ ]
+}
