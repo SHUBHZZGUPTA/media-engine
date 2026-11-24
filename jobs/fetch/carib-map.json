@@ -1,0 +1,98 @@
+{
+ "id": "carib-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "rb_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=8.5,-79.5,14.25,-74.25&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=14.25,-79.5,20.0,-74.25&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=8.5,-74.25,14.25,-69.0&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=14.25,-74.25,20.0,-69.0&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_20.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=8.5,-69,14.25,-63.75&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_21.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=14.25,-69,20.0,-63.75&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_30.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=8.5,-63.75,14.25,-58.5&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_31.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=14.25,-63.75,20.0,-58.5&WIDTH=1800&HEIGHT=1971"
+  },
+  {
+   "name": "rb_ctx.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-8,-95,38,-45&WIDTH=4500&HEIGHT=4140"
+  },
+  {
+   "name": "s2_jam.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-78.6,17.6,-76.0,18.7&WIDTH=2400&HEIGHT=1015"
+  },
+  {
+   "name": "s2_la_n.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-63.5,14.15,-59.3,18.4&WIDTH=2000&HEIGHT=2024"
+  },
+  {
+   "name": "s2_la_s.jpg",
+   "url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=s2cloudless&STYLES=&SRS=EPSG:4326&FORMAT=image/jpeg&BBOX=-63.5,9.9,-59.3,14.15&WIDTH=2000&HEIGHT=2024"
+  },
+  {
+   "name": "gb_JAM.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/JAM/ADM0/geoBoundaries-JAM-ADM0.geojson"
+  },
+  {
+   "name": "gb_TTO.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TTO/ADM0/geoBoundaries-TTO-ADM0.geojson"
+  },
+  {
+   "name": "gb_BRB.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BRB/ADM0/geoBoundaries-BRB-ADM0.geojson"
+  },
+  {
+   "name": "gb_GRD.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GRD/ADM0/geoBoundaries-GRD-ADM0.geojson"
+  },
+  {
+   "name": "gb_VCT.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VCT/ADM0/geoBoundaries-VCT-ADM0.geojson"
+  },
+  {
+   "name": "gb_LCA.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LCA/ADM0/geoBoundaries-LCA-ADM0.geojson"
+  },
+  {
+   "name": "gb_DMA.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/DMA/ADM0/geoBoundaries-DMA-ADM0.geojson"
+  },
+  {
+   "name": "gb_ATG.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ATG/ADM0/geoBoundaries-ATG-ADM0.geojson"
+  },
+  {
+   "name": "gb_KNA.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KNA/ADM0/geoBoundaries-KNA-ADM0.geojson"
+  },
+  {
+   "name": "gb_MSR.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MSR/ADM0/geoBoundaries-MSR-ADM0.geojson"
+  },
+  {
+   "name": "gb_AIA.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AIA/ADM0/geoBoundaries-AIA-ADM0.geojson"
+  }
+ ]
+}
