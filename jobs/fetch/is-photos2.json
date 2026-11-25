@@ -1,0 +1,71 @@
+{
+ "id": "is-photos2",
+ "delay": 1.5,
+ "ua": "media-engine/1.0 (BHUGOL maps; https://github.com/SHUBHZZGUPTA/media-engine)",
+ "files": [
+  {
+   "name": "sur63a.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Surtsey_eruption_1963.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  {
+   "name": "sur63b.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Surtsey_eruption_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  {
+   "name": "sur63c.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Surtsey_eruption_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  {
+   "name": "sur_bg.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Surtsey_by_Brian_Gratwicke.jpg/3840px-Surtsey_by_Brian_Gratwicke.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "name": "sur_bg14.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Surtsey_by_Brian_Gratwicke_in_2014.jpg/3840px-Surtsey_by_Brian_Gratwicke_in_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "name": "beer_viking.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Ill_have_a_viking_please%21_%288214883446%29.jpg/3840px-Ill_have_a_viking_please%21_%288214883446%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "name": "beer_bar.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Sport_Bar_%285745194635%29.jpg/3840px-Sport_Bar_%285745194635%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "name": "beer_einstok.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Einstok_Olgero_Icelandic_Toasted_Porter.jpg/1920px-Einstok_Olgero_Icelandic_Toasted_Porter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "name": "sur_sat.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Surtsey%2C_Iceland-_a_63_years-old_volcanic_island_%28Copernicus_2026-11-15%29.webp/3840px-Surtsey%2C_Iceland-_a_63_years-old_volcanic_island_%28Copernicus_2026-11-15%29.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "name": "sur_brandur.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Islas_Brandur%2C_%C3%81lsey_y_Surtsey%2C_Islas_Vestman%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_046.JPG/3840px-Islas_Brandur%2C_%C3%81lsey_y_Surtsey%2C_Islas_Vestman%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_046.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+   "name": "p_beerg.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+glasses+of+beer+toast&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_flag.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Flag+of+Iceland+waving&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_heimaey.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Heimaey+aerial&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_reykst.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+Laugavegur+Reykjavik+street&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_baby.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+newborn+baby+sleeping&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  },
+  {
+   "name": "p_fries.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=filetype%3Abitmap+McDonalds+hamburger+and+fries&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&iiurlwidth=2560&format=json"
+  }
+ ]
+}
