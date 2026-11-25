@@ -1,0 +1,853 @@
+{
+ "id": "is-en-full",
+ "models": [
+  "gemini-3.8-flash-tts"
+ ],
+ "try": 2,
+ "key": "longform",
+ "items": [
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full1",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Iceland facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about Iceland and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (beer banned while wine and vodka were totally fine, the burger that refuses to rot, names like Harriet, Duncan and Zoe getting rejected, no letter C, three mosquitoes in a trap, the burger getting its own livestream so the whole world could watch it not rot, elves stopping a road, the rock lifted so the elves could keep their church, the elves approving a bridge, not even a stray seed from your shoes, a volcano name almost nobody can say). The Surtsey story in number two is told with real wonder, like watching an island being born. Number one builds like a disaster movie, then lands softly on 'and the whole sky went quiet'. The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Iceland' as 'ICE-lund', 'Icelandic' as 'ice-LAN-dik', 'Icelanders' as 'ICE-lun-derz', 'Reykjavik' as 'RAKE-yah-vik', 'dottir' as 'DOH-teer', 'Hjortur Smarason' as 'HYUR-tur SMOW-rah-son', 'Surtsey' as 'SURT-say', 'Silfra' as 'SIL-frah', 'Eurasian' as 'yoo-RAY-zhun', 'Eyjafjallajokull' as 'AY-yah-fyat-lah-YOH-kutl', said slowly and playfully, 'Zoe' as 'ZOH-ee', 'Harriet' as 'HAIR-ee-ut', 'Antarctica' as 'ant-ARK-tih-kuh'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars you can't guess what was illegal in Iceland until nineteen eighty-nine."
+    ],
+    [
+     "Narrator",
+     "Not guns. Not gambling. Beer. For seventy-four years, beer was banned, while wine and vodka were totally fine."
+    ],
+    [
+     "Narrator",
+     "And that's the normal fact."
+    ],
+    [
+     "Narrator",
+     "This country has a burger that refuses to rot."
+    ],
+    [
+     "Narrator",
+     "An island so new, only scientists are allowed to walk on it."
+    ],
+    [
+     "Narrator",
+     "And a volcano that shut down the skies of an entire continent."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of Iceland. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. In Iceland, you can't just name your baby anything."
+    ],
+    [
+     "Narrator",
+     "There's an official list of approved names. If both parents are Icelandic, the baby's first name has to come from that list."
+    ],
+    [
+     "Narrator",
+     "Want something new? You have to apply to the Naming Committee. And they can say no."
+    ],
+    [
+     "Narrator",
+     "Over the years, they've rejected names like Harriet, Duncan, and Zoe."
+    ],
+    [
+     "Narrator",
+     "Part of the reason? The Icelandic alphabet doesn't even have the letter C."
+    ],
+    [
+     "Narrator",
+     "And there are no family surnames either. Your last name is just your dad's or your mum's first name, plus son or dottir."
+    ],
+    [
+     "Narrator",
+     "So a whole country without surnames. But that's nothing compared to what Iceland didn't have until last year."
+    ],
+    [
+     "Narrator",
+     "Number seven. For all of human history, Iceland had no mosquitoes."
+    ],
+    [
+     "Narrator",
+     "None. Zero. Along with Antarctica, it was one of the only places on Earth without a single one living there."
+    ],
+    [
+     "Narrator",
+     "Then, in October twenty twenty-five, an insect collector north of Reykjavik found something strange in his trap."
+    ],
+    [
+     "Narrator",
+     "Three mosquitoes. The first ones ever recorded in Iceland's wild."
+    ],
+    [
+     "Narrator",
+     "So now, Antarctica is believed to be the last mosquito-free place on the planet."
+    ],
+    [
+     "Narrator",
+     "And if you think a bug arriving is strange, wait till you hear what left."
+    ],
+    [
+     "Narrator",
+     "Number six. Iceland has no McDonald's."
+    ],
+    [
+     "Narrator",
+     "All three restaurants closed in twenty oh nine, when the country's economy crashed."
+    ],
+    [
+     "Narrator",
+     "On the very last day, a man named Hjortur Smarason bought one last burger and fries. Just to see if it would ever rot."
+    ],
+    [
+     "Narrator",
+     "Years later, he opened the bag. And it looked almost exactly the same."
+    ],
+    [
+     "Narrator",
+     "Today, that meal sits in a glass case at a guesthouse in south Iceland. It even got its own livestream, so the whole world could watch it… not rot."
+    ],
+    [
+     "Narrator",
+     "A burger frozen in time. And speaking of things that stay warm, Iceland has a very hot secret."
+    ],
+    [
+     "Narrator",
+     "Number five. Iceland heats its homes with volcanoes."
+    ],
+    [
+     "Narrator",
+     "Well, with the heat underneath them. Boiling water from deep underground is piped straight into houses."
+    ],
+    [
+     "Narrator",
+     "Around ninety percent of Icelandic homes are heated this way. No gas. No oil."
+    ],
+    [
+     "Narrator",
+     "In parts of Reykjavik, the same hot water runs under the sidewalks, so the snow just melts."
+    ],
+    [
+     "Narrator",
+     "And almost all of the country's electricity comes from renewable sources. Rivers and steam."
+    ],
+    [
+     "Narrator",
+     "So the ground is literally keeping Iceland warm. Which is good news for everyone living there. Including the ones you can't see."
+    ],
+    [
+     "Narrator",
+     "Number four. In Iceland, elves can stop a road."
+    ],
+    [
+     "Narrator",
+     "Folk stories say \"hidden people\" live in rocks and hills. And many Icelanders take those stories seriously."
+    ],
+    [
+     "Narrator",
+     "A few years ago, a new road was planned through an old lava field near Reykjavik. Right through a rock believed to be an elf church."
+    ],
+    [
+     "Narrator",
+     "After years of protests, the road went ahead. But the rock wasn't destroyed. In twenty fifteen, it was carefully lifted and moved, so the elves could keep their church."
+    ],
+    [
+     "Narrator",
+     "And just last year, Iceland's road authority said a bridge project went ahead only after the island's elves approved it."
+    ],
+    [
+     "Narrator",
+     "Elves blocking roads is strange. But in number three, the ground itself is splitting apart."
+    ],
+    [
+     "Narrator",
+     "Number three. Iceland sits right on top of the crack between two continents."
+    ],
+    [
+     "Narrator",
+     "The North American plate and the Eurasian plate are pulling apart, about two centimetres every single year."
+    ],
+    [
+     "Narrator",
+     "So Iceland is slowly stretching."
+    ],
+    [
+     "Narrator",
+     "And at a place called Silfra, that crack is filled with crystal clear glacier water."
+    ],
+    [
+     "Narrator",
+     "You can actually swim in it. One hand touching America's plate, the other touching Europe's."
+    ],
+    [
+     "Narrator",
+     "The water is just two to four degrees. But it's so clear, it feels like flying."
+    ],
+    [
+     "Narrator",
+     "Continents being made in real time. And number two is a piece of land that didn't exist when your grandparents were born."
+    ],
+    [
+     "Narrator",
+     "Number two. In November nineteen sixty-three, fishermen off Iceland's south coast saw smoke rising out of the sea."
+    ],
+    [
+     "Narrator",
+     "A volcano was erupting, one hundred thirty metres under the water."
+    ],
+    [
+     "Narrator",
+     "The next day, a brand new island appeared."
+    ],
+    [
+     "Narrator",
+     "They named it Surtsey, after a fire giant from Norse myth. And it kept erupting for almost four years."
+    ],
+    [
+     "Narrator",
+     "But here's the crazy part. Almost nobody is allowed to visit."
+    ],
+    [
+     "Narrator",
+     "Since nineteen sixty-five, only a few scientists can land there, to study how life arrives on a brand new piece of Earth."
+    ],
+    [
+     "Narrator",
+     "No tourists. No sheep. Not even a stray seed from your shoes."
+    ],
+    [
+     "Narrator",
+     "An island too young for people. And number one is the day Iceland made the whole of Europe stop."
+    ],
+    [
+     "Narrator",
+     "Number one. In April twenty ten, a volcano erupted under a glacier with a name almost nobody can say. Eyjafjallajokull."
+    ],
+    [
+     "Narrator",
+     "It wasn't even a giant eruption. But the ash shot about nine kilometres into the sky."
+    ],
+    [
+     "Narrator",
+     "And the wind blew it straight towards Europe."
+    ],
+    [
+     "Narrator",
+     "Volcanic ash can destroy jet engines. So country after country closed its airspace."
+    ],
+    [
+     "Narrator",
+     "More than three hundred airports shut down."
+    ],
+    [
+     "Narrator",
+     "Around one hundred thousand flights were cancelled in about a week."
+    ],
+    [
+     "Narrator",
+     "Up to ten million passengers were stuck. Some took trains, buses, even taxis across the continent to get home."
+    ],
+    [
+     "Narrator",
+     "It was the biggest shutdown of European air travel since World War Two."
+    ],
+    [
+     "Narrator",
+     "One small country. One volcano. And the whole sky went quiet."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  },
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full2",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Iceland facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about Iceland and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (beer banned while wine and vodka were totally fine, the burger that refuses to rot, names like Harriet, Duncan and Zoe getting rejected, no letter C, three mosquitoes in a trap, the burger getting its own livestream so the whole world could watch it not rot, elves stopping a road, the rock lifted so the elves could keep their church, the elves approving a bridge, not even a stray seed from your shoes, a volcano name almost nobody can say). The Surtsey story in number two is told with real wonder, like watching an island being born. Number one builds like a disaster movie, then lands softly on 'and the whole sky went quiet'. The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Iceland' as 'ICE-lund', 'Icelandic' as 'ice-LAN-dik', 'Icelanders' as 'ICE-lun-derz', 'Reykjavik' as 'RAKE-yah-vik', 'dottir' as 'DOH-teer', 'Hjortur Smarason' as 'HYUR-tur SMOW-rah-son', 'Surtsey' as 'SURT-say', 'Silfra' as 'SIL-frah', 'Eurasian' as 'yoo-RAY-zhun', 'Eyjafjallajokull' as 'AY-yah-fyat-lah-YOH-kutl', said slowly and playfully, 'Zoe' as 'ZOH-ee', 'Harriet' as 'HAIR-ee-ut', 'Antarctica' as 'ant-ARK-tih-kuh'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars you can't guess what was illegal in Iceland until nineteen eighty-nine."
+    ],
+    [
+     "Narrator",
+     "Not guns. Not gambling. Beer. For seventy-four years, beer was banned, while wine and vodka were totally fine."
+    ],
+    [
+     "Narrator",
+     "And that's the normal fact."
+    ],
+    [
+     "Narrator",
+     "This country has a burger that refuses to rot."
+    ],
+    [
+     "Narrator",
+     "An island so new, only scientists are allowed to walk on it."
+    ],
+    [
+     "Narrator",
+     "And a volcano that shut down the skies of an entire continent."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of Iceland. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. In Iceland, you can't just name your baby anything."
+    ],
+    [
+     "Narrator",
+     "There's an official list of approved names. If both parents are Icelandic, the baby's first name has to come from that list."
+    ],
+    [
+     "Narrator",
+     "Want something new? You have to apply to the Naming Committee. And they can say no."
+    ],
+    [
+     "Narrator",
+     "Over the years, they've rejected names like Harriet, Duncan, and Zoe."
+    ],
+    [
+     "Narrator",
+     "Part of the reason? The Icelandic alphabet doesn't even have the letter C."
+    ],
+    [
+     "Narrator",
+     "And there are no family surnames either. Your last name is just your dad's or your mum's first name, plus son or dottir."
+    ],
+    [
+     "Narrator",
+     "So a whole country without surnames. But that's nothing compared to what Iceland didn't have until last year."
+    ],
+    [
+     "Narrator",
+     "Number seven. For all of human history, Iceland had no mosquitoes."
+    ],
+    [
+     "Narrator",
+     "None. Zero. Along with Antarctica, it was one of the only places on Earth without a single one living there."
+    ],
+    [
+     "Narrator",
+     "Then, in October twenty twenty-five, an insect collector north of Reykjavik found something strange in his trap."
+    ],
+    [
+     "Narrator",
+     "Three mosquitoes. The first ones ever recorded in Iceland's wild."
+    ],
+    [
+     "Narrator",
+     "So now, Antarctica is believed to be the last mosquito-free place on the planet."
+    ],
+    [
+     "Narrator",
+     "And if you think a bug arriving is strange, wait till you hear what left."
+    ],
+    [
+     "Narrator",
+     "Number six. Iceland has no McDonald's."
+    ],
+    [
+     "Narrator",
+     "All three restaurants closed in twenty oh nine, when the country's economy crashed."
+    ],
+    [
+     "Narrator",
+     "On the very last day, a man named Hjortur Smarason bought one last burger and fries. Just to see if it would ever rot."
+    ],
+    [
+     "Narrator",
+     "Years later, he opened the bag. And it looked almost exactly the same."
+    ],
+    [
+     "Narrator",
+     "Today, that meal sits in a glass case at a guesthouse in south Iceland. It even got its own livestream, so the whole world could watch it… not rot."
+    ],
+    [
+     "Narrator",
+     "A burger frozen in time. And speaking of things that stay warm, Iceland has a very hot secret."
+    ],
+    [
+     "Narrator",
+     "Number five. Iceland heats its homes with volcanoes."
+    ],
+    [
+     "Narrator",
+     "Well, with the heat underneath them. Boiling water from deep underground is piped straight into houses."
+    ],
+    [
+     "Narrator",
+     "Around ninety percent of Icelandic homes are heated this way. No gas. No oil."
+    ],
+    [
+     "Narrator",
+     "In parts of Reykjavik, the same hot water runs under the sidewalks, so the snow just melts."
+    ],
+    [
+     "Narrator",
+     "And almost all of the country's electricity comes from renewable sources. Rivers and steam."
+    ],
+    [
+     "Narrator",
+     "So the ground is literally keeping Iceland warm. Which is good news for everyone living there. Including the ones you can't see."
+    ],
+    [
+     "Narrator",
+     "Number four. In Iceland, elves can stop a road."
+    ],
+    [
+     "Narrator",
+     "Folk stories say \"hidden people\" live in rocks and hills. And many Icelanders take those stories seriously."
+    ],
+    [
+     "Narrator",
+     "A few years ago, a new road was planned through an old lava field near Reykjavik. Right through a rock believed to be an elf church."
+    ],
+    [
+     "Narrator",
+     "After years of protests, the road went ahead. But the rock wasn't destroyed. In twenty fifteen, it was carefully lifted and moved, so the elves could keep their church."
+    ],
+    [
+     "Narrator",
+     "And just last year, Iceland's road authority said a bridge project went ahead only after the island's elves approved it."
+    ],
+    [
+     "Narrator",
+     "Elves blocking roads is strange. But in number three, the ground itself is splitting apart."
+    ],
+    [
+     "Narrator",
+     "Number three. Iceland sits right on top of the crack between two continents."
+    ],
+    [
+     "Narrator",
+     "The North American plate and the Eurasian plate are pulling apart, about two centimetres every single year."
+    ],
+    [
+     "Narrator",
+     "So Iceland is slowly stretching."
+    ],
+    [
+     "Narrator",
+     "And at a place called Silfra, that crack is filled with crystal clear glacier water."
+    ],
+    [
+     "Narrator",
+     "You can actually swim in it. One hand touching America's plate, the other touching Europe's."
+    ],
+    [
+     "Narrator",
+     "The water is just two to four degrees. But it's so clear, it feels like flying."
+    ],
+    [
+     "Narrator",
+     "Continents being made in real time. And number two is a piece of land that didn't exist when your grandparents were born."
+    ],
+    [
+     "Narrator",
+     "Number two. In November nineteen sixty-three, fishermen off Iceland's south coast saw smoke rising out of the sea."
+    ],
+    [
+     "Narrator",
+     "A volcano was erupting, one hundred thirty metres under the water."
+    ],
+    [
+     "Narrator",
+     "The next day, a brand new island appeared."
+    ],
+    [
+     "Narrator",
+     "They named it Surtsey, after a fire giant from Norse myth. And it kept erupting for almost four years."
+    ],
+    [
+     "Narrator",
+     "But here's the crazy part. Almost nobody is allowed to visit."
+    ],
+    [
+     "Narrator",
+     "Since nineteen sixty-five, only a few scientists can land there, to study how life arrives on a brand new piece of Earth."
+    ],
+    [
+     "Narrator",
+     "No tourists. No sheep. Not even a stray seed from your shoes."
+    ],
+    [
+     "Narrator",
+     "An island too young for people. And number one is the day Iceland made the whole of Europe stop."
+    ],
+    [
+     "Narrator",
+     "Number one. In April twenty ten, a volcano erupted under a glacier with a name almost nobody can say. Eyjafjallajokull."
+    ],
+    [
+     "Narrator",
+     "It wasn't even a giant eruption. But the ash shot about nine kilometres into the sky."
+    ],
+    [
+     "Narrator",
+     "And the wind blew it straight towards Europe."
+    ],
+    [
+     "Narrator",
+     "Volcanic ash can destroy jet engines. So country after country closed its airspace."
+    ],
+    [
+     "Narrator",
+     "More than three hundred airports shut down."
+    ],
+    [
+     "Narrator",
+     "Around one hundred thousand flights were cancelled in about a week."
+    ],
+    [
+     "Narrator",
+     "Up to ten million passengers were stuck. Some took trains, buses, even taxis across the continent to get home."
+    ],
+    [
+     "Narrator",
+     "It was the biggest shutdown of European air travel since World War Two."
+    ],
+    [
+     "Narrator",
+     "One small country. One volcano. And the whole sky went quiet."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  },
+  {
+   "speakers": {
+    "Narrator": "Fenrir"
+   },
+   "name": "full3",
+   "direction": "Narrate this as a high-energy, feel-good YouTube video counting down eight Iceland facts that sound fake but are real. The Narrator is THRILLED and grinning the whole time: an excited, fun friend who just found out these facts about Iceland and is bursting to tell you. Huge smile you can hear in every line, bright and upbeat, warm and natural like real excited conversation, never like reading a script. Wide, lively pitch movement; real amazement on every number and reveal; playful delighted laughter in the voice on the funny bits (beer banned while wine and vodka were totally fine, the burger that refuses to rot, names like Harriet, Duncan and Zoe getting rejected, no letter C, three mosquitoes in a trap, the burger getting its own livestream so the whole world could watch it not rot, elves stopping a road, the rock lifted so the elves could keep their church, the elves approving a bridge, not even a stray seed from your shoes, a volcano name almost nobody can say). The Surtsey story in number two is told with real wonder, like watching an island being born. Number one builds like a disaster movie, then lands softly on 'and the whole sky went quiet'. The opening bet is a cheeky, confident challenge with a grin, and so is the closing 'do you owe me a hundred dollars'. Punch the key words with energy. Pace quick and bouncy, about 170 words per minute, short crisp pauses; never flat, calm, sleepy, monotone or documentary-serious, and never shouty or fake. Accent: native General American English, neutral American accent from first word to last. VOICE IDENTITY: the same person and the same high energy from the first line to the last. Pronounce 'Iceland' as 'ICE-lund', 'Icelandic' as 'ice-LAN-dik', 'Icelanders' as 'ICE-lun-derz', 'Reykjavik' as 'RAKE-yah-vik', 'dottir' as 'DOH-teer', 'Hjortur Smarason' as 'HYUR-tur SMOW-rah-son', 'Surtsey' as 'SURT-say', 'Silfra' as 'SIL-frah', 'Eurasian' as 'yoo-RAY-zhun', 'Eyjafjallajokull' as 'AY-yah-fyat-lah-YOH-kutl', said slowly and playfully, 'Zoe' as 'ZOH-ee', 'Harriet' as 'HAIR-ee-ut', 'Antarctica' as 'ant-ARK-tih-kuh'. Read ONLY the text provided, word for word: stop right after the final sentence and never add, invent or continue with any words of your own. The text is given one sentence group per line: read every line in order, do not skip any line.",
+   "lines": [
+    [
+     "Narrator",
+     "I bet you a hundred dollars you can't guess what was illegal in Iceland until nineteen eighty-nine."
+    ],
+    [
+     "Narrator",
+     "Not guns. Not gambling. Beer. For seventy-four years, beer was banned, while wine and vodka were totally fine."
+    ],
+    [
+     "Narrator",
+     "And that's the normal fact."
+    ],
+    [
+     "Narrator",
+     "This country has a burger that refuses to rot."
+    ],
+    [
+     "Narrator",
+     "An island so new, only scientists are allowed to walk on it."
+    ],
+    [
+     "Narrator",
+     "And a volcano that shut down the skies of an entire continent."
+    ],
+    [
+     "Narrator",
+     "Every single one is real. And they get crazier as we go."
+    ],
+    [
+     "Narrator",
+     "Grab a map of Iceland. Here are eight facts nobody believes. Starting with number eight."
+    ],
+    [
+     "Narrator",
+     "Number eight. In Iceland, you can't just name your baby anything."
+    ],
+    [
+     "Narrator",
+     "There's an official list of approved names. If both parents are Icelandic, the baby's first name has to come from that list."
+    ],
+    [
+     "Narrator",
+     "Want something new? You have to apply to the Naming Committee. And they can say no."
+    ],
+    [
+     "Narrator",
+     "Over the years, they've rejected names like Harriet, Duncan, and Zoe."
+    ],
+    [
+     "Narrator",
+     "Part of the reason? The Icelandic alphabet doesn't even have the letter C."
+    ],
+    [
+     "Narrator",
+     "And there are no family surnames either. Your last name is just your dad's or your mum's first name, plus son or dottir."
+    ],
+    [
+     "Narrator",
+     "So a whole country without surnames. But that's nothing compared to what Iceland didn't have until last year."
+    ],
+    [
+     "Narrator",
+     "Number seven. For all of human history, Iceland had no mosquitoes."
+    ],
+    [
+     "Narrator",
+     "None. Zero. Along with Antarctica, it was one of the only places on Earth without a single one living there."
+    ],
+    [
+     "Narrator",
+     "Then, in October twenty twenty-five, an insect collector north of Reykjavik found something strange in his trap."
+    ],
+    [
+     "Narrator",
+     "Three mosquitoes. The first ones ever recorded in Iceland's wild."
+    ],
+    [
+     "Narrator",
+     "So now, Antarctica is believed to be the last mosquito-free place on the planet."
+    ],
+    [
+     "Narrator",
+     "And if you think a bug arriving is strange, wait till you hear what left."
+    ],
+    [
+     "Narrator",
+     "Number six. Iceland has no McDonald's."
+    ],
+    [
+     "Narrator",
+     "All three restaurants closed in twenty oh nine, when the country's economy crashed."
+    ],
+    [
+     "Narrator",
+     "On the very last day, a man named Hjortur Smarason bought one last burger and fries. Just to see if it would ever rot."
+    ],
+    [
+     "Narrator",
+     "Years later, he opened the bag. And it looked almost exactly the same."
+    ],
+    [
+     "Narrator",
+     "Today, that meal sits in a glass case at a guesthouse in south Iceland. It even got its own livestream, so the whole world could watch it… not rot."
+    ],
+    [
+     "Narrator",
+     "A burger frozen in time. And speaking of things that stay warm, Iceland has a very hot secret."
+    ],
+    [
+     "Narrator",
+     "Number five. Iceland heats its homes with volcanoes."
+    ],
+    [
+     "Narrator",
+     "Well, with the heat underneath them. Boiling water from deep underground is piped straight into houses."
+    ],
+    [
+     "Narrator",
+     "Around ninety percent of Icelandic homes are heated this way. No gas. No oil."
+    ],
+    [
+     "Narrator",
+     "In parts of Reykjavik, the same hot water runs under the sidewalks, so the snow just melts."
+    ],
+    [
+     "Narrator",
+     "And almost all of the country's electricity comes from renewable sources. Rivers and steam."
+    ],
+    [
+     "Narrator",
+     "So the ground is literally keeping Iceland warm. Which is good news for everyone living there. Including the ones you can't see."
+    ],
+    [
+     "Narrator",
+     "Number four. In Iceland, elves can stop a road."
+    ],
+    [
+     "Narrator",
+     "Folk stories say \"hidden people\" live in rocks and hills. And many Icelanders take those stories seriously."
+    ],
+    [
+     "Narrator",
+     "A few years ago, a new road was planned through an old lava field near Reykjavik. Right through a rock believed to be an elf church."
+    ],
+    [
+     "Narrator",
+     "After years of protests, the road went ahead. But the rock wasn't destroyed. In twenty fifteen, it was carefully lifted and moved, so the elves could keep their church."
+    ],
+    [
+     "Narrator",
+     "And just last year, Iceland's road authority said a bridge project went ahead only after the island's elves approved it."
+    ],
+    [
+     "Narrator",
+     "Elves blocking roads is strange. But in number three, the ground itself is splitting apart."
+    ],
+    [
+     "Narrator",
+     "Number three. Iceland sits right on top of the crack between two continents."
+    ],
+    [
+     "Narrator",
+     "The North American plate and the Eurasian plate are pulling apart, about two centimetres every single year."
+    ],
+    [
+     "Narrator",
+     "So Iceland is slowly stretching."
+    ],
+    [
+     "Narrator",
+     "And at a place called Silfra, that crack is filled with crystal clear glacier water."
+    ],
+    [
+     "Narrator",
+     "You can actually swim in it. One hand touching America's plate, the other touching Europe's."
+    ],
+    [
+     "Narrator",
+     "The water is just two to four degrees. But it's so clear, it feels like flying."
+    ],
+    [
+     "Narrator",
+     "Continents being made in real time. And number two is a piece of land that didn't exist when your grandparents were born."
+    ],
+    [
+     "Narrator",
+     "Number two. In November nineteen sixty-three, fishermen off Iceland's south coast saw smoke rising out of the sea."
+    ],
+    [
+     "Narrator",
+     "A volcano was erupting, one hundred thirty metres under the water."
+    ],
+    [
+     "Narrator",
+     "The next day, a brand new island appeared."
+    ],
+    [
+     "Narrator",
+     "They named it Surtsey, after a fire giant from Norse myth. And it kept erupting for almost four years."
+    ],
+    [
+     "Narrator",
+     "But here's the crazy part. Almost nobody is allowed to visit."
+    ],
+    [
+     "Narrator",
+     "Since nineteen sixty-five, only a few scientists can land there, to study how life arrives on a brand new piece of Earth."
+    ],
+    [
+     "Narrator",
+     "No tourists. No sheep. Not even a stray seed from your shoes."
+    ],
+    [
+     "Narrator",
+     "An island too young for people. And number one is the day Iceland made the whole of Europe stop."
+    ],
+    [
+     "Narrator",
+     "Number one. In April twenty ten, a volcano erupted under a glacier with a name almost nobody can say. Eyjafjallajokull."
+    ],
+    [
+     "Narrator",
+     "It wasn't even a giant eruption. But the ash shot about nine kilometres into the sky."
+    ],
+    [
+     "Narrator",
+     "And the wind blew it straight towards Europe."
+    ],
+    [
+     "Narrator",
+     "Volcanic ash can destroy jet engines. So country after country closed its airspace."
+    ],
+    [
+     "Narrator",
+     "More than three hundred airports shut down."
+    ],
+    [
+     "Narrator",
+     "Around one hundred thousand flights were cancelled in about a week."
+    ],
+    [
+     "Narrator",
+     "Up to ten million passengers were stuck. Some took trains, buses, even taxis across the continent to get home."
+    ],
+    [
+     "Narrator",
+     "It was the biggest shutdown of European air travel since World War Two."
+    ],
+    [
+     "Narrator",
+     "One small country. One volcano. And the whole sky went quiet."
+    ],
+    [
+     "Narrator",
+     "So, did you believe all eight? Or do you owe me a hundred dollars?"
+    ],
+    [
+     "Narrator",
+     "And which country should we do next? Tell us in the comments."
+    ],
+    [
+     "Narrator",
+     "On this channel, we take the places you think you know and show you what's really there."
+    ],
+    [
+     "Narrator",
+     "So if you want the next one, subscribe. It costs a lot less than a hundred dollars."
+    ],
+    [
+     "Narrator",
+     "See you in the next country."
+    ]
+   ]
+  }
+ ]
+}
