@@ -1,0 +1,54 @@
+{
+ "id": "cam-map",
+ "delay": 0.5,
+ "files": [
+  {
+   "name": "rb_00.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=6,-93.5,12.5,-85.0&WIDTH=4000&HEIGHT=3059"
+  },
+  {
+   "name": "rb_01.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=12.5,-93.5,19.0,-85.0&WIDTH=4000&HEIGHT=3059"
+  },
+  {
+   "name": "rb_10.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=6,-85,12.5,-76.5&WIDTH=4000&HEIGHT=3059"
+  },
+  {
+   "name": "rb_11.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=12.5,-85,19.0,-76.5&WIDTH=4000&HEIGHT=3059"
+  },
+  {
+   "name": "rb_ctx.jpg",
+   "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&CRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=BlueMarble_ShadedRelief_Bathymetry&BBOX=-14,-118,40,-52&WIDTH=5400&HEIGHT=4418"
+  },
+  {
+   "name": "gb_GTM.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GTM/ADM0/geoBoundaries-GTM-ADM0.geojson"
+  },
+  {
+   "name": "gb_BLZ.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BLZ/ADM0/geoBoundaries-BLZ-ADM0.geojson"
+  },
+  {
+   "name": "gb_SLV.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLV/ADM0/geoBoundaries-SLV-ADM0.geojson"
+  },
+  {
+   "name": "gb_HND.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/HND/ADM0/geoBoundaries-HND-ADM0.geojson"
+  },
+  {
+   "name": "gb_NIC.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NIC/ADM0/geoBoundaries-NIC-ADM0.geojson"
+  },
+  {
+   "name": "gb_CRI.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CRI/ADM0/geoBoundaries-CRI-ADM0.geojson"
+  },
+  {
+   "name": "gb_PAN.geojson",
+   "url": "https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PAN/ADM0/geoBoundaries-PAN-ADM0.geojson"
+  }
+ ]
+}
