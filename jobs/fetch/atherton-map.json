@@ -1,0 +1,87 @@
+{
+ "id": "atherton-map",
+ "delay": 1.0,
+ "ua": "media-engine/1.0 (BHUGOL map fetch)",
+ "files": [
+  {
+   "name": "s2_00.jpg",
+   "url": "https://tiles.maps.eox.at/wms?service=WMS&request=GetMap&version=1.1.1&layers=s2cloudless&styles=&srs=EPSG:4326&format=image/jpeg&bbox=-122.75,37.0,-122.2,37.5&width=4096&height=4096"
+  },
+  {
+   "name": "s2_10.jpg",
+   "url": "https://tiles.maps.eox.at/wms?service=WMS&request=GetMap&version=1.1.1&layers=s2cloudless&styles=&srs=EPSG:4326&format=image/jpeg&bbox=-122.2,37.0,-121.65,37.5&width=4096&height=4096"
+  },
+  {
+   "name": "s2_01.jpg",
+   "url": "https://tiles.maps.eox.at/wms?service=WMS&request=GetMap&version=1.1.1&layers=s2cloudless&styles=&srs=EPSG:4326&format=image/jpeg&bbox=-122.75,37.5,-122.2,38.0&width=4096&height=4096"
+  },
+  {
+   "name": "s2_11.jpg",
+   "url": "https://tiles.maps.eox.at/wms?service=WMS&request=GetMap&version=1.1.1&layers=s2cloudless&styles=&srs=EPSG:4326&format=image/jpeg&bbox=-122.2,37.5,-121.65,38.0&width=4096&height=4096"
+  },
+  {
+   "name": "s2_ath.jpg",
+   "url": "https://tiles.maps.eox.at/wms?service=WMS&request=GetMap&version=1.1.1&layers=s2cloudless&styles=&srs=EPSG:4326&format=image/jpeg&bbox=-122.27,37.41,-122.13,37.51&width=2800&height=2520"
+  },
+  {
+   "name": "s2_mid.jpg",
+   "url": "https://tiles.maps.eox.at/wms?service=WMS&request=GetMap&version=1.1.1&layers=s2cloudless&styles=&srs=EPSG:4326&format=image/jpeg&bbox=-124.5,35.5,-119.5,39.5&width=4096&height=4096"
+  },
+  {
+   "name": "aw_06081.zip",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2023/AREAWATER/tl_2023_06081_areawater.zip"
+  },
+  {
+   "name": "aw_06085.zip",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2023/AREAWATER/tl_2023_06085_areawater.zip"
+  },
+  {
+   "name": "aw_06001.zip",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2023/AREAWATER/tl_2023_06001_areawater.zip"
+  },
+  {
+   "name": "aw_06075.zip",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2023/AREAWATER/tl_2023_06075_areawater.zip"
+  },
+  {
+   "name": "aw_06041.zip",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2023/AREAWATER/tl_2023_06041_areawater.zip"
+  },
+  {
+   "name": "aw_06013.zip",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2023/AREAWATER/tl_2023_06013_areawater.zip"
+  },
+  {
+   "name": "aw_06087.zip",
+   "url": "https://www2.census.gov/geo/tiger/TIGER2023/AREAWATER/tl_2023_06087_areawater.zip"
+  },
+  {
+   "name": "osm_atherton.geojson",
+   "url": "https://nominatim.openstreetmap.org/search?q=Atherton%2C+San+Mateo+County%2C+California&format=geojson&polygon_geojson=1&limit=1"
+  },
+  {
+   "name": "cm_atherton.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&iiextmetadatafilter=LicenseShortName%7CArtist&format=json&gsrsearch=Atherton%20California"
+  },
+  {
+   "name": "cm_station.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&iiextmetadatafilter=LicenseShortName%7CArtist&format=json&gsrsearch=Atherton%20station%20Caltrain"
+  },
+  {
+   "name": "cm_park.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&iiextmetadatafilter=LicenseShortName%7CArtist&format=json&gsrsearch=Holbrook-Palmer%20Park%20Atherton"
+  },
+  {
+   "name": "cm_stanford.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&iiextmetadatafilter=LicenseShortName%7CArtist&format=json&gsrsearch=Stanford%20University%20Main%20Quad%20Hoover%20Tower%20aerial"
+  },
+  {
+   "name": "cm_meta.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&iiextmetadatafilter=LicenseShortName%7CArtist&format=json&gsrsearch=Meta%20headquarters%20Menlo%20Park%20Hacker%20Way%20sign"
+  },
+  {
+   "name": "cm_google.json",
+   "url": "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=1280&iiextmetadatafilter=LicenseShortName%7CArtist&format=json&gsrsearch=Googleplex%20Mountain%20View"
+  }
+ ]
+}
